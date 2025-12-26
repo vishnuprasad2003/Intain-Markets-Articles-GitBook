@@ -1,160 +1,75 @@
-# Status + Qualifiers Explained
+---
+title: Status Qualifiers Explained
+description: Understand status qualifiers that provide additional context about item states
+---
+
+# Status Qualifiers Explained
 
 ## Overview
 
 Statuses in Intain Markets often include qualifiers that provide additional context about the state of an item. Understanding these qualifiers helps you better understand what a status means and what actions are available.
 
-## Common Status Qualifiers
+## Who Can Use This
 
-### Status + "Pending"
+- All platform users
 
-**Examples:**
-- "Mandate Pending"
-- "PendingLenderApproval"
-- "PENDING_TOKEN_GENERATION"
+## When This Is Used
 
-**What it means:**
-- Status indicates waiting state
-- Waiting for someone to act
-- Action required from another party
-- Process is paused until action taken
+Understanding status qualifiers helps when:
+- You see statuses with qualifiers like "Pending" or "Requested"
+- You want to understand what a status means
+- You need to know what actions are available
+- You want to understand workflow context
 
-**What you can do:**
-- View item (read-only usually)
-- See what's pending
-- Wait for action
-- Limited actions available
+## Step-by-Step Process
 
----
+### Common Qualifiers
 
-### Status + "Review"
+1. **"Pending" Qualifier**
+   - Examples: Mandate Pending, Pending Lender Approval
+   - Means: Waiting for someone to act
+   - What you can do: View item, wait for action
+   - What you cannot do: Usually limited actions
 
-**Examples:**
-- "FAReview"
-- "Under Review"
+2. **"Review" Qualifier**
+   - Examples: FAReview, Under Review
+   - Means: Item is being reviewed
+   - What you can do: View item, see review status
+   - What you cannot do: Cannot edit while under review
 
-**What it means:**
-- Item is being reviewed
-- Reviewer is evaluating
-- Decision pending
-- Waiting for review outcome
+3. **"Requested" Qualifier**
+   - Examples: Changes Requested
+   - Means: Changes have been requested
+   - What you can do: Edit item, make changes, resubmit
+   - What you cannot do: Must address requested changes
 
-**What you can do:**
-- View item (read-only)
-- See review status
-- Wait for decision
-- Cannot edit (submitted)
+4. **"Approved" Qualifier**
+   - Examples: Approved, Accepted, Token Approved
+   - Means: Item has been approved
+   - What you can do: Proceed to next phase
+   - What you cannot do: Usually cannot edit after approval
 
----
+5. **"Rejected" Qualifier**
+   - Examples: Rejected
+   - Means: Item has been rejected
+   - What you can do: View rejection reason, create new item
+   - What you cannot do: Cannot resubmit same item
 
-### Status + "Requested"
+## Rules & Validations
 
-**Examples:**
-- "CHANGES_REQUESTED"
-- "Changes Requested"
+- Qualifiers provide context about status meaning
+- They help you understand what actions are available
+- They indicate what needs to happen next
+- They show workflow progression
+- They help you understand why actions are disabled
 
-**What it means:**
-- Changes have been requested
-- Item needs modification
-- Can be edited again
-- Iterative improvement process
+## What Happens Next
 
-**What you can do:**
-- Edit item
-- Make requested changes
-- Resubmit when ready
-- Save multiple times
+After understanding status qualifiers:
+- You better understand what each status means
+- You know what actions are available
+- You understand why certain actions are disabled
+- You know what needs to happen next
+- You can navigate workflows more effectively
 
----
-
-### Status + "Approved"
-
-**Examples:**
-- "APPROVED"
-- "Accepted"
-- "TOKEN_APPROVED"
-
-**What it means:**
-- Item has been approved
-- Can proceed to next phase
-- May trigger automatic actions
-- Positive outcome
-
-**What happens:**
-- May trigger automatic creation
-- Enables next workflow steps
-- Status progression continues
-
----
-
-### Status + "Rejected"
-
-**Examples:**
-- "REJECTED"
-- "Rejected"
-
-**What it means:**
-- Item has been rejected
-- Will not proceed
-- This is a final state
-- Negative outcome
-
-**What happens:**
-- No further action possible
-- Process stops here
-- May need to create new item
-
----
-
-## Status Combinations
-
-### Multiple Status Indicators
-
-**Some items show:**
-- Primary status (e.g., "Draft")
-- Qualifier (e.g., "In Progress")
-- Additional context (e.g., "Needs Attention")
-
-**Understanding combinations:**
-- Primary status shows main state
-- Qualifiers provide additional context
-- Together they give complete picture
-
----
-
-## Status Messages
-
-### Contextual Messages
-
-**Status messages provide:**
-- Why status is what it is
-- What needs to happen next
-- Who needs to act
-- What actions are available
-
-**Examples:**
-- "Waiting for facility agent review"
-- "Pending lender approval"
-- "Changes requested - please update"
-
----
-
-## Best Practices
-
-1. **Read qualifiers**: Understand additional context
-2. **Check messages**: Read status messages for details
-3. **Understand combinations**: See how statuses work together
-4. **Look for patterns**: Recognize common qualifier meanings
-5. **Use context**: Qualifiers help understand situation
-
----
-
-## Key Takeaways
-
-1. **Qualifiers add context**: Provide additional information about status
-2. **Common patterns**: Pending, Review, Requested, Approved, Rejected
-3. **Status messages**: Explain why and what's needed
-4. **Combinations**: Multiple indicators work together
-5. **Complete picture**: Status + qualifiers = full understanding
-
-Understanding status qualifiers helps you better interpret statuses and know what they mean in context.
+Understanding status qualifiers helps you better interpret statuses and know what to expect at each stage of your workflow.

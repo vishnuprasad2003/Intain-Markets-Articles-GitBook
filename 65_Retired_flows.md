@@ -1,161 +1,91 @@
+---
+title: Retired Flows
+description: Learn about workflows and features that have been retired or deprecated
+---
+
 # Retired Flows
 
 ## Overview
 
 This document tracks workflows, processes, and features that have been retired or deprecated. Understanding retired flows helps you know what's no longer available and what to use instead.
 
-## What Are Retired Flows?
+## Who Can Use This
 
-### Definition
+- All platform users
 
-**Retired flows:**
-- Workflows no longer supported
-- Processes replaced by new methods
-- Features removed from platform
-- Old ways of doing things
-- Deprecated functionality
+## When This Is Used
 
-**Why flows are retired:**
-- Replaced by better methods
-- No longer needed
-- Improved processes available
-- Platform evolution
-- Better alternatives exist
+Use this guide when:
+- You're looking for features that no longer exist
+- You want to know what replaced old workflows
+- You need to understand deprecated functionality
+- You're migrating to new processes
 
----
+## Step-by-Step Process
 
-## Common Retirement Reasons
+### Understanding Retired Flows
 
-### Replaced by Better Method
+1. **What Are Retired Flows**
+   - Workflows no longer supported
+   - Processes replaced by new methods
+   - Features removed from platform
+   - Old ways of doing things
+   - Deprecated functionality
 
-**Why retired:**
-- New method is better
-- Improved workflow available
-- Enhanced functionality
-- Better user experience
-- More efficient process
+2. **Why Flows Are Retired**
+   - Replaced by better methods
+   - No longer needed
+   - Improved processes available
+   - Platform evolution
+   - Better alternatives exist
 
-**What to do:**
-- Use new method instead
-- Learn new workflow
-- Adapt to new process
-- Stop using old method
+### Finding Alternatives
 
----
+1. **Replacement Methods**
+   - Check release notes for replacements
+   - Review documentation for new methods
+   - Contact support for guidance
+   - Check migration guides
+   - Look for new features
 
-### No Longer Needed
+2. **Migration Path**
+   - Understand new method
+   - Learn new workflow
+   - Adapt to new process
+   - Update practices
+   - Use new approach
 
-**Why retired:**
-- Feature not used
-- Redundant functionality
-- Simplified process
-- Consolidated workflows
-- Streamlined platform
+### Identifying Retired Flows
 
-**What to do:**
-- Use alternative method
-- Adapt to new approach
-- Learn replacement
-- Update practices
+1. **Indicators**
+   - Feature no longer available
+   - Button or option removed
+   - Documentation marked deprecated
+   - Error message indicates retirement
+   - Support confirms retirement
 
----
+2. **What to Look For**
+   - Missing features
+   - Removed options
+   - Deprecated labels
+   - Retirement notices
+   - Migration guides
 
-## How to Identify Retired Flows
+## Rules & Validations
 
-### Indicators
+- Retired flows are documented when retired
+- Alternatives are provided when available
+- Migration guides explain how to transition
+- Support is available for questions
+- Documentation is updated with retirement information
 
-**Signs a flow is retired:**
-- Feature no longer available
-- Button or option removed
-- Documentation marked deprecated
-- Error message indicates retirement
-- Support confirms retirement
+## What Happens Next
 
-**What to look for:**
-- Missing features
-- Removed options
-- Deprecated labels
-- Retirement notices
-- Migration guides
+After understanding retired flows:
+- You know what's no longer available
+- You understand what to use instead
+- You can migrate to new methods
+   - You understand platform evolution
+- You can use current features effectively
 
----
-
-## Finding Alternatives
-
-### Replacement Methods
-
-**How to find:**
-- Check release notes
-- Review documentation
-- Contact support
-- Check migration guides
-- Look for new features
-
-**What to expect:**
-- New method explained
-- Migration path provided
-- Training available
-- Support assistance
-- Updated documentation
-
----
-
-## Best Practices
-
-1. **Check before using**: Verify flow is still available
-2. **Use current methods**: Prefer new workflows
-3. **Read updates**: Stay informed about retirements
-4. **Migrate promptly**: Move to new methods
-5. **Ask for help**: Get assistance with migration
-
----
-
-## Common Retired Flow Scenarios
-
-### Scenario 1: Manual Process Retired
-
-**Old way:**
-- Manual creation process
-- Multiple steps required
-- Time-consuming
-
-**New way:**
-- Automatic creation
-- Streamlined process
-- Faster and easier
-
-**Migration:**
-- Learn automatic process
-- Use new method
-- Enjoy improved workflow
-
----
-
-### Scenario 2: Old Workflow Retired
-
-**Old way:**
-- Complex multi-step process
-- Manual interventions
-- Error-prone
-
-**New way:**
-- Simplified workflow
-- Automatic steps
-- More reliable
-
-**Migration:**
-- Learn new workflow
-- Adapt to new process
-- Use improved method
-
----
-
-## Key Takeaways
-
-1. **Flows evolve**: Old methods replaced by better ones
-2. **Stay current**: Use latest workflows
-3. **Check documentation**: Verify what's available
-4. **Migrate promptly**: Move to new methods
-5. **Get help**: Ask for assistance with migration
-
-Understanding retired flows helps you know what's no longer available and what to use instead, ensuring you use current and supported methods.
+Understanding retired flows helps you know what's no longer available and what to use instead, ensuring you use current platform features effectively.

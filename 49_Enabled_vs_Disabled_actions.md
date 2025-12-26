@@ -1,229 +1,95 @@
+---
+title: Enabled vs Disabled Actions
+description: Understand why actions are enabled or disabled and what you can do about it
+---
+
 # Enabled vs Disabled Actions
 
 ## Overview
 
 Understanding why actions are enabled or disabled helps you know what you can do and why certain actions aren't available. This guide explains the logic behind enabled and disabled buttons and actions.
 
-## Why Actions Are Enabled
+## Who Can Use This
 
-### You Have Permission
+- All platform users
 
-**Enabled when:**
-- Your role allows the action
-- You have access to the item
-- You're assigned to the item
-- Permissions are granted
+## When This Is Used
 
-**Examples:**
-- Issuers can create pools (they have permission)
-- Facility agents can approve term sheets (they have permission)
-- Lenders can approve master commitments (they have permission)
+Understanding enabled vs disabled actions helps when:
+- You see disabled buttons and want to know why
+- You need to know what actions are available
+- You want to understand workflow requirements
+- You need to know what to do to enable actions
 
----
+## Step-by-Step Process
 
-### Status Allows It
+### Why Actions Are Enabled
 
-**Enabled when:**
-- Item is in correct status for action
-- Workflow permits this action
-- Status progression allows it
-- Not blocked by current status
+1. **You Have Permission**
+   - Your role allows the action
+   - You have access to the item
+   - You're assigned to the item
+   - Permissions are granted
 
-**Examples:**
-- Can submit term sheet when status is BorrowerSigned
-- Can approve funding request when status is FAReview
-- Can create funding request when master commitment is ACTIVE
+2. **Status Allows It**
+   - Item is in correct status for action
+   - Workflow permits this action
+   - Status progression allows it
+   - Not blocked by current status
 
----
+3. **Prerequisites Met**
+   - Required information is present
+   - Previous steps completed
+   - Dependencies satisfied
+   - All requirements met
 
-### Prerequisites Met
+### Why Actions Are Disabled
 
-**Enabled when:**
-- Required information is present
-- Previous steps completed
-- Dependencies satisfied
-- All requirements met
+1. **Wrong Status**
+   - Item isn't in right status for action
+   - Workflow doesn't permit action
+   - Status blocks the action
+   - Wrong stage in workflow
 
-**Examples:**
-- Can submit term sheet after DocuSign completed
-- Can approve funding request after review complete
-- Can create funding request after master commitment ACTIVE
+2. **Missing Information**
+   - Required fields not filled
+   - Documents not uploaded
+   - Information incomplete
+   - Prerequisites missing
 
----
+3. **Waiting for Others**
+   - Another party needs to act first
+   - Previous step not completed
+   - Dependency not satisfied
+   - Waiting for action
 
-## Why Actions Are Disabled
+4. **Already Completed**
+   - Action was already taken
+   - Cannot repeat action
+   - Already in final state
+   - Process complete
 
-### Wrong Status
+5. **No Permission**
+   - Your role doesn't allow this action
+   - You don't have access
+   - Not assigned to item
+   - Permissions not granted
 
-**Disabled when:**
-- Item isn't in right status for action
-- Workflow doesn't permit action
-- Status blocks the action
-- Wrong stage in workflow
+## Rules & Validations
 
-**Examples:**
-- Can't submit term sheet when status is Draft (must sign first)
-- Can't approve funding request when status is DRAFT (must be FAReview)
-- Can't create funding request when master commitment is Draft (must be ACTIVE)
+- Enabled buttons mean you can use them
+- Disabled buttons usually show reasons why
+- Status controls what actions are available
+- Prerequisites must be met before actions enabled
+- Permissions determine what you can do
 
----
+## What Happens Next
 
-### Missing Information
+After understanding enabled vs disabled actions:
+- You know what actions are available to you
+- You understand why certain actions are disabled
+- You know what needs to happen to enable actions
+- You can plan your workflow accordingly
+- You can take appropriate actions when available
 
-**Disabled when:**
-- Required fields not filled
-- Documents not uploaded
-- Information incomplete
-- Prerequisites missing
-
-**Examples:**
-- Can't submit term sheet without required fields
-- Can't approve funding request without documentation
-- Can't create funding request without active facility
-
----
-
-### Waiting for Others
-
-**Disabled when:**
-- Another party needs to act first
-- Previous step not completed
-- Dependency not satisfied
-- Waiting for action
-
-**Examples:**
-- Can't approve funding request until borrower submits
-- Can't create funding request until lender approves master commitment
-- Can't approve tokens until facility agent signs
-
----
-
-### Already Completed
-
-**Disabled when:**
-- Action already taken
-- Status already changed
-- Process already done
-- No need to repeat
-
-**Examples:**
-- Can't submit again if already submitted
-- Can't approve again if already approved
-- Can't sign again if already signed
-
----
-
-### No Permission
-
-**Disabled when:**
-- Your role doesn't allow action
-- You don't have access
-- Not assigned to item
-- Permissions not granted
-
-**Examples:**
-- Borrowers can't approve their own term sheets
-- Lenders can't create funding requests
-- Issuers can't approve master commitments
-
----
-
-## Understanding Disabled Actions
-
-### Check Tooltips
-
-**Hover over disabled buttons:**
-- Often shows tooltip explaining why
-- Provides specific reason
-- Tells you what's needed
-- Guides you on next steps
-
-### Check Status Messages
-
-**Look for messages:**
-- Status messages explain situation
-- Show what's blocking action
-- Indicate what needs to happen
-- Provide guidance
-
-### Check Requirements
-
-**Review requirements:**
-- Check if all fields filled
-- Verify documents uploaded
-- Ensure prerequisites met
-- Confirm status is correct
-
----
-
-## Common Patterns
-
-### Pattern 1: Status-Based
-
-**Enabled:**
-- Action available at specific status
-- Status progression allows it
-
-**Disabled:**
-- Wrong status for action
-- Workflow doesn't permit
-
-### Pattern 2: Permission-Based
-
-**Enabled:**
-- Your role allows action
-- You have permission
-
-**Disabled:**
-- Your role doesn't allow
-- No permission
-
-### Pattern 3: Prerequisite-Based
-
-**Enabled:**
-- All prerequisites met
-- Requirements satisfied
-
-**Disabled:**
-- Missing prerequisites
-- Requirements not met
-
----
-
-## Best Practices
-
-1. **Check tooltips**: Hover over disabled buttons for explanations
-2. **Read messages**: Check status messages for guidance
-3. **Verify status**: Ensure item is in correct status
-4. **Check requirements**: Verify all prerequisites met
-5. **Understand workflow**: Know what needs to happen first
-
----
-
-## Troubleshooting
-
-### "Action is disabled but I think it should be enabled"
-- Check current status
-- Verify you have permission
-- Check if prerequisites met
-- Review tooltip or message
-- Contact support if unclear
-
-### "Tooltip says I need X but I have X"
-- Verify X is actually present
-- Check if X meets requirements
-- Ensure X is in correct format
-- Refresh page
-- Contact support if issue persists
-
----
-
-## Key Takeaways
-
-1. **Enabled = Available**: You can use enabled actions
-2. **Disabled = Reason**: Disabled actions have clear reasons
-3. **Check tooltips**: Hover for explanations
-4. **Read messages**: Status messages provide guidance
-5. **Understand workflow**: Know what enables actions
-
-Understanding enabled vs disabled actions helps you know what you can do and why certain actions aren't available, making the platform easier to navigate.
+Understanding enabled vs disabled actions helps you navigate the platform effectively and know what you can do at each stage of your workflow.

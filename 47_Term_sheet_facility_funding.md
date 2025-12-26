@@ -1,339 +1,138 @@
-# Term Sheet, Facility, Funding Statuses
+---
+title: Term Sheet, Facility, and Funding Statuses
+description: Understand all statuses for credit facility components
+---
+
+# Term Sheet, Facility, and Funding Statuses
 
 ## Overview
 
-This comprehensive guide explains all statuses for credit facility components: Term Sheets, Master Commitments (Facilities), Funding Requests, and Funding Notices. Understanding these statuses helps you navigate the credit facility workflow.
-
-## Term Sheet Statuses
-
-### Draft
-
-**What it means:**
-- Term sheet has been created
-- Can be edited freely
-- Has not been signed yet
-- Has not been submitted
-
-**What you can do:**
-- Edit all term sheet fields
-- Upload documents
-- Save changes (auto-save enabled)
-- Make multiple revisions
-
-**Next status:**
-- BorrowerSigned (after DocuSign)
-
----
-
-### BorrowerSigned
-
-**What it means:**
-- Borrower has completed DocuSign signing
-- Term sheet is electronically signed
-- Ready for submission to facility agent
-
-**What you can do:**
-- Preview the signed term sheet
-- Submit for facility agent review
-- View signed documents
-
-**Next status:**
-- FAReview (when submitted)
-
----
-
-### FAReview
-
-**What it means:**
-- Term sheet submitted to facility agent
-- Facility agent is reviewing
-- Waiting for facility agent decision
-
-**What you can do:**
-- ✅ View term sheet (read-only)
-- ✅ See review status
-- ✅ Wait for facility agent decision
-
-**Next status:**
-- Accepted (if approved)
-- Rejected (if rejected)
-- CHANGES_REQUESTED (if changes requested)
-
----
-
-### Accepted
-
-**What it means:**
-- Facility agent has approved the term sheet
-- Master commitment automatically created
-- Facility setup can begin
-
-**What happens:**
-- Master commitment created automatically
-- Master commitment starts in Draft status
-- Term sheet phase complete
-
-**This is final:**
-- Term sheet cannot be edited after acceptance
-
----
-
-### Rejected
-
-**What it means:**
-- Facility agent has rejected the term sheet
-- Facility will not proceed
-- This is a final state
-
-**What happens:**
-- No master commitment created
-- Term sheet stops here
-
-**This is final:**
-- Cannot resubmit same term sheet
-
----
-
-### CHANGES_REQUESTED
-
-**What it means:**
-- Facility agent wants modifications
-- Borrower can edit and resubmit
-- Not a final state
-
-**What you can do:**
-- Edit term sheet fields
-- Make requested changes
-- Upload new documents
-- Resubmit after changes
-
-**Next status:**
-- FAReview (when resubmitted)
-
----
-
-## Master Commitment (Facility) Statuses
-
-### Draft
-
-**What it means:**
-- Master commitment auto-created from approved term sheet
-- Facility agent can configure it
-- Not yet submitted for lender approval
-
-**What facility agent can do:**
-- ✅ Configure all facility rules
-- ✅ Set up lender groups
-- ✅ Define borrowing base calculations
-- ✅ Save multiple times
-
-**Next status:**
-- PendingLenderApproval (when submitted)
-
----
-
-### PendingLenderApproval
-
-**What it means:**
-- Facility agent has completed configuration
-- Submitted for lender approval
-- Waiting for lender decision
-
-**What lenders can do:**
-- Review master commitment
-- Approve via DocuSign
-- Any lender approval activates facility
-
-**Next status:**
-- ACTIVE (when any lender approves)
-
----
-
-### ACTIVE
-
-**What it means:**
-- Facility is operational
-- Approved by at least one lender
-- Ready for funding requests
-
-**What borrowers can do:**
-- Create funding requests
-- Request drawdowns
-
-**This is operational:**
-- Facility fully functional
-- Funding requests can be created
-
----
-
-## Funding Request Statuses
-
-### DRAFT
-
-**What it means:**
-- Funding request has been created
-- Can be edited freely
-- Not yet submitted for review
-
-**What borrower can do:**
-- Edit all fields
-- Upload documents
-- Save changes multiple times
-- Submit when ready
-
-**Next status:**
-- FAReview (when submitted)
-
----
-
-### FAReview
-
-**What it means:**
-- Funding request submitted to facility agent
-- Facility agent is reviewing
-- Waiting for facility agent decision
-
-**What facility agent can do:**
-- Review request details
-- Approve, reject, or request changes
-
-**Next status:**
-- APPROVED (if approved)
-- REJECTED (if rejected)
-- CHANGES_REQUESTED (if changes requested)
-
----
-
-### APPROVED
-
-**What it means:**
-- Facility agent has approved the request
-- Funding notice automatically generated
-- Drawdown can proceed
-
-**What happens:**
-- Funding notice created automatically
-- Funding notice status: PENDING_TOKEN_GENERATION
-
-**This triggers:**
-- Funding notice generation
-- Token creation process
-
----
-
-### REJECTED
-
-**What it means:**
-- Facility agent has rejected the request
-- Drawdown will not proceed
-- This is a final state
-
-**What happens:**
-- No funding notice created
-- Request remains rejected
-
-**This is final:**
-- Cannot resubmit same request
-
----
-
-### CHANGES_REQUESTED
-
-**What it means:**
-- Facility agent wants modifications
-- Borrower can edit and resubmit
-
-**What borrower can do:**
-- Edit funding request
-- Make requested changes
-- Resubmit after changes
-
-**Next status:**
-- FAReview (when resubmitted)
-
----
-
-## Funding Notice Statuses
-
-### PENDING_TOKEN_GENERATION
-
-**What it means:**
-- Funding notice automatically created
-- Waiting for token generation
-- Tokens not yet created
-
-**What happens:**
-- Funding notice created when request approved
-- Token distribution initialized
-- Each lender has `esignatureStatus: 'pending'`
-
-**Next status:**
-- TOKEN_GENERATED (when tokens created)
-
----
-
-### TOKEN_GENERATED
-
-**What it means:**
-- FT tokens have been created for borrower
-- Token distribution updated
-- Facility agent can sign for lenders
-
-**What facility agent can do:**
-- Sign funding notice for each lender individually
-- Complete DocuSign for each lender
-
-**What borrower can do:**
-- View funding notice
-- Approve token transfer when ready
-
-**Next status:**
-- TOKEN_APPROVED (when borrower approves)
-
----
-
-### TOKEN_APPROVED
-
-**What it means:**
-- Borrower has approved token transfer
-- Funding notice visible to lenders
-- Lenders can review and approve
-
-**What lenders can do:**
-- View funding notice
-- Review drawdown details
-- Approve or reject drawdown
-- Confirm fund transfers
-
-**This enables:**
-- Lender review and approval
-- Individual lender participation
-- Fund transfer confirmations
-
----
-
-## Status Flow Summary
-
-### Complete Credit Facility Flow
-
-```
-Term Sheet: Draft → BorrowerSigned → FAReview → Accepted
-                                                      ↓
-Master Commitment: Draft → PendingLenderApproval → ACTIVE
-                                                          ↓
-Funding Request: DRAFT → FAReview → APPROVED
-                                            ↓
-Funding Notice: PENDING_TOKEN_GENERATION → TOKEN_GENERATED → TOKEN_APPROVED
-```
-
----
-
-## Key Takeaways
-
-1. Term sheets: Six statuses from creation to acceptance/rejection
-2. Master commitments: Three statuses from creation to activation
-3. Funding requests: Five statuses from creation to approval/rejection
-4. Funding notices: Three statuses from creation to lender visibility
-5. Status progression: Clear workflow from start to finish
-
-Understanding all credit facility statuses helps you navigate the complete workflow from term sheet creation through funding notice completion.
+This guide explains all statuses for credit facility components: Term Sheets, Master Commitments (Facilities), Funding Requests, and Funding Notices. Understanding these statuses helps you navigate the credit facility workflow.
+
+## Who Can Use This
+
+- Borrowers who create term sheets and funding requests
+- Facility Agents who review and manage facilities
+- Lenders who approve facilities and drawdowns
+
+## When This Is Used
+
+Understanding credit facility statuses helps when:
+- You need to track facility progress
+- You want to know what actions are available
+- You need to understand why actions are disabled
+- You want to navigate the workflow effectively
+
+## Step-by-Step Process
+
+### Term Sheet Statuses
+
+1. **Draft**
+   - Term sheet created
+   - Can be edited freely
+   - Not yet signed
+
+2. **BorrowerSigned**
+   - Borrower has signed
+   - Ready for submission
+   - Can preview signed version
+
+3. **FAReview**
+   - Submitted for facility agent review
+   - Waiting for decision
+   - Cannot edit
+
+4. **Accepted**
+   - Approved by facility agent
+   - Master commitment automatically created
+   - Term sheet phase complete
+
+5. **Rejected**
+   - Rejected by facility agent
+   - Cannot be resubmitted
+   - Must create new term sheet
+
+6. **Changes Requested**
+   - Facility agent wants modifications
+   - Can edit and resubmit
+   - Iterative improvement process
+
+### Master Commitment Statuses
+
+1. **Draft**
+   - Automatically created from approved term sheet
+   - Facility agent can configure
+   - Can be edited freely
+
+2. **Pending Lender Approval**
+   - Submitted for lender approval
+   - Waiting for lender decision
+   - Any lender can approve
+
+3. **Active**
+   - Approved by lender
+   - Facility is operational
+   - Borrowers can create funding requests
+
+### Funding Request Statuses
+
+1. **Draft**
+   - Request created
+   - Can be edited freely
+   - Not yet submitted
+
+2. **FAReview**
+   - Submitted for facility agent review
+   - Waiting for decision
+   - Cannot edit
+
+3. **Approved**
+   - Approved by facility agent
+   - Funding notice automatically created
+   - Drawdown can proceed
+
+4. **Rejected**
+   - Rejected by facility agent
+   - Must create new request
+   - Cannot be resubmitted
+
+5. **Changes Requested**
+   - Facility agent wants modifications
+   - Can edit and resubmit
+   - Iterative improvement
+
+### Funding Notice Statuses
+
+1. **Pending Token Generation**
+   - Automatically created from approved request
+   - Waiting for token generation
+   - Initial state
+
+2. **Token Generated**
+   - Tokens have been created
+   - Facility agent can sign
+   - Ready for borrower approval
+
+3. **Token Approved**
+   - Borrower approved token transfer
+   - Visible to lenders
+   - Lenders can review and approve
+
+## Rules & Validations
+
+- Statuses control what actions are available
+- You can only take actions allowed by current status
+- Some statuses trigger automatic actions
+- Status progression ensures proper workflow order
+- Status history tracks all changes
+
+## What Happens Next
+
+After understanding credit facility statuses:
+- You know what actions are available at each status
+- You can track progress through workflow stages
+- You understand why certain actions are disabled
+- You know what to expect at each stage
+- You can navigate the workflow effectively
+
+Understanding credit facility statuses helps you navigate the platform effectively and know what to expect at each stage of the credit facility workflow.
