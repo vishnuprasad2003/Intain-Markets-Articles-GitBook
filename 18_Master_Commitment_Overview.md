@@ -7,62 +7,89 @@ description: Learn what master commitments are and how they work
 
 ## Overview
 
-A master commitment is the finalized credit facility agreement that defines the complete facility structure. It's automatically created when a term sheet is approved and contains all the rules, parameters, and lender information needed to operate the facility.
+A master commitment is the finalized credit facility agreement that defines the complete facility structure. It's automatically created when a term sheet is approved and contains all the rules, parameters, lender information, borrowing base calculations, and other configurations needed to operate the facility. Master commitments serve as the foundation for all facility operations.
 
-## Who Can Use This
+## What This Means for the User
 
-- Facility Agents who configure master commitments
-- Borrowers who monitor facility setup
-- Lenders who approve facilities
+When your term sheet is approved, a master commitment is automatically created for you. This master commitment:
 
-## When This Is Used
+- **Pre-populates with Term Sheet Data**: Information from your approved term sheet is automatically transferred to the master commitment, so you don't need to re-enter everything.
 
-Use master commitments when:
-- Your term sheet has been approved
-- You need to set up the complete facility structure
-- You want to understand how facilities are configured
-- You need to approve a facility as a lender
+- **Requires Facility Agent Configuration**: Facility agents must configure the complete facility structure, including facility rules, borrowing base calculations, lender groups, and other parameters.
 
-## Step-by-Step Process
+- **Must Be Approved by Lenders**: After configuration, lenders must review and approve the master commitment. Any lender approval activates the facility.
 
-### Master Commitment Creation
+- **Defines Facility Rules**: All rules that govern the facility are defined in the master commitment, including borrowing limits, collateral eligibility, drawdown frequency, and other requirements.
 
-1. **Automatic Creation**
-   - Master commitment is automatically created when term sheet is approved
-   - Pre-populated with term sheet data
-   - Ready for facility agent configuration
+- **Becomes Active When Approved**: Once at least one lender approves, the facility becomes active, and you can create funding requests.
 
-2. **Facility Agent Configuration**
-   - Facility agent sets up facility rules
-   - Configures borrowing base calculations
-   - Defines collateral eligibility rules
-   - Adds and configures lender groups
+## Key Concepts Explained
 
-3. **Submission for Approval**
-   - Facility agent completes all required fields
-   - Submits for lender approval
-   - Status changes to show it's pending approval
+### Automatic Creation
 
-4. **Lender Approval**
-   - Lenders review master commitment
-   - Any lender approval activates the facility
-   - Facility becomes active and operational
+Master commitments are automatically created when term sheets are approved. You don't need to create them manually. The system:
 
-## Rules & Validations
+- Takes information from your approved term sheet
+- Pre-populates the master commitment with that data
+- Makes it available for facility agent configuration
+- Ensures continuity from term sheet to facility
 
-- Master commitments are automatically created from approved term sheets
-- Facility agents must complete all required fields before submission
-- At least one lender must be configured
-- Any lender approval activates the facility
-- Once active, borrowers can create funding requests
+### Facility Agent Configuration
 
-## What Happens Next
+Facility agents configure master commitments by setting up:
 
-After master commitment is created:
-- Facility agent configures facility rules and lenders
-- Facility agent submits for lender approval
-- Lenders review and approve
-- Facility becomes active when approved
-- Borrowers can create funding requests against active facilities
+- **Facility Rules**: Rules that govern how the facility operates, including borrowing limits, repayment terms, interest rates, and other conditions.
 
-Understanding master commitments helps you know how facilities are structured and what happens after your term sheet is approved.
+- **Borrowing Base Calculations**: Formulas and rules that determine how much you can borrow based on collateral, financial metrics, or other factors.
+
+- **Collateral Eligibility Rules**: Criteria that define what assets can be used as collateral and how they're valued.
+
+- **Lender Groups**: Configuration of lenders who will participate in the facility, including their participation percentages and roles.
+
+- **Other Parameters**: Any other settings needed to operate the facility properly.
+
+### Lender Approval
+
+After facility agents complete configuration, master commitments are submitted for lender approval:
+
+- **Lenders Review**: Lenders review the complete facility structure, rules, and terms.
+
+- **Electronic Signature**: Lenders approve master commitments via electronic signature, making their approval legally binding.
+
+- **Any Approval Activates**: Any lender approval activates the facility. You don't need all lenders to approve before the facility becomes active.
+
+- **Facility Becomes Active**: Once approved, the facility status changes to Active, and you can create funding requests.
+
+### Facility Status
+
+Master commitments progress through statuses:
+
+- **Draft**: Facility agent is configuring the master commitment. All fields can be edited.
+
+- **Pending Lender Approval**: Configuration is complete, and facility agent has submitted for lender approval. Waiting for lender decision.
+
+- **Active**: At least one lender has approved, and the facility is operational. Borrowers can create funding requests.
+
+## Important Points to Know
+
+- Master commitments are automatically created - you don't need to create them manually when your term sheet is approved.
+
+- Facility agents configure everything - they set up all facility rules, calculations, and lender groups. You don't need to do this configuration.
+
+- Pre-populated with term sheet data - information from your approved term sheet is automatically transferred, so you don't need to re-enter it.
+
+- Lenders must approve - facilities don't become active until at least one lender approves the master commitment.
+
+- Any lender approval activates - you don't need all lenders to approve before the facility becomes active.
+
+- Defines all facility rules - borrowing limits, collateral eligibility, drawdown frequency, and other rules are all defined in master commitments.
+
+- Cannot be edited after activation - once active, master commitments typically cannot be edited. Make sure configuration is correct before submission.
+
+- Complete facility structure - master commitments contain everything needed to operate the facility, not just basic terms.
+
+- Status controls actions - facility status determines what actions are available and when you can create funding requests.
+
+- Complete audit trail - all configuration changes and approvals are recorded with who did what and when.
+
+Understanding master commitments helps you know how facilities are structured, what happens after your term sheet is approved, and how facilities become active and operational.

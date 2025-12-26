@@ -7,84 +7,104 @@ description: Understand how the platform tracks all actions and changes for comp
 
 ## Overview
 
-End-to-end traceability means you can track every action, status change, and decision from the beginning to the end of any transaction. Intain Markets provides complete traceability through audit trails, status history, and comprehensive logging.
+End-to-end traceability means you can track every action, status change, and decision from the beginning to the end of any transaction. Intain Markets provides complete traceability through audit trails, status history, and comprehensive logging, ensuring full transparency and accountability for all platform activities.
 
-## Who Can Use This
+## What This Means for the User
 
-- All platform users
+When you use the platform, everything you do is tracked:
 
-## When This Is Used
+- **Complete History**: Every action, status change, and decision is recorded with who did it and when.
 
-Understanding traceability helps when:
-- You need to track transaction history
-- You want to see who did what and when
-- You need audit information
-- You want to understand process flow
-- You need compliance documentation
+- **Audit Trail**: Complete audit trails are maintained for compliance, accountability, and transparency.
 
-## Step-by-Step Process
+- **Status Tracking**: You can see the complete progression of items through their workflows, including all status changes.
 
-### What Gets Tracked
+- **Action Tracking**: All actions are logged, showing what was done, who did it, and when it happened.
 
-1. **Status Changes**
-   - Every status change is recorded
-   - Shows who changed it and when
-   - Includes previous and new status
-   - May include reason for change
-   - Complete history maintained
+- **Document History**: Document uploads and changes are tracked, maintaining complete document trails.
 
-2. **Actions Taken**
-   - Every action is logged
-   - Shows who took the action
-   - Records when action occurred
-   - Includes what was affected
-   - Tracks results of actions
+- **Transparency**: All parties can see relevant history, ensuring transparency in transactions.
 
-3. **Document Changes**
-   - Document uploads tracked
-   - Changes to documents recorded
-   - Previous versions saved
-   - Change history maintained
-   - Complete document trail
+This traceability ensures accountability, supports compliance, and provides complete visibility into all platform activities.
 
-### Viewing Traceability
+## Key Concepts Explained
 
-1. **Status History**
-   - View on item details page
-   - See all status changes
-   - Check who changed what
-   - Review when changes occurred
-   - Understand progression
+### Status Changes Are Tracked
 
-2. **Action History**
-   - View on item details page
-   - See all actions taken
-   - Check who took actions
-   - Review action results
-   - Understand process flow
+Every time an item's status changes:
 
-3. **Activity Logs**
-   - Combined view of history
-   - Chronological listing
-   - Complete audit trail
-   - Easy to review
-   - Comprehensive tracking
+- **Who Changed It**: The system records which user changed the status.
 
-## Rules & Validations
+- **When It Changed**: Precise timestamps show exactly when the change occurred.
 
-- All changes are tracked automatically
-- History cannot be deleted or modified
-- Complete audit trail is maintained
-- Timestamps are accurate and consistent
-- User information is recorded for all actions
+- **What Changed**: Both the previous status and new status are recorded.
 
-## What Happens Next
+- **Why It Changed**: Reasons or comments may be included explaining the change.
 
-After understanding traceability:
-- You know how to view transaction history
-- You can track who did what and when
-- You understand the audit trail
-- You can use history for compliance
-- You can review process flow
+- **Complete History**: All status changes are maintained in chronological order.
 
-Understanding end-to-end traceability helps you track transactions, maintain compliance, and understand the complete history of any item in the platform.
+### Actions Are Logged
+
+Every action you take is logged:
+
+- **Action Type**: What action was taken (approve, reject, create, update, etc.).
+
+- **Who Took Action**: Which user performed the action.
+
+- **When Action Occurred**: Timestamp showing when the action happened.
+
+- **What Was Affected**: Which item or items were affected by the action.
+
+- **Result**: What happened as a result of the action.
+
+### Document Changes Are Tracked
+
+All document-related activities are tracked:
+
+- **Document Uploads**: When documents are uploaded and by whom.
+
+- **Document Changes**: Any modifications to documents are recorded.
+
+- **Previous Versions**: Previous versions of documents are saved for reference.
+
+- **Change History**: Complete history of document changes is maintained.
+
+- **Access Tracking**: Who accessed documents and when may be tracked.
+
+### Audit Trails Are Complete
+
+Complete audit trails provide:
+
+- **Chronological Records**: All activities are recorded in chronological order.
+
+- **User Attribution**: Every action is attributed to specific users.
+
+- **Timestamp Accuracy**: Precise timestamps ensure accurate timing of events.
+
+- **Complete Context**: Full context is maintained for all activities.
+
+- **Compliance Support**: Audit trails support compliance and regulatory requirements.
+
+## Important Points to Know
+
+- All changes are tracked automatically - you don't need to do anything special - tracking happens automatically.
+
+- History cannot be deleted or modified - audit trails are permanent and cannot be altered.
+
+- Complete audit trail is maintained - every action and change is recorded for complete transparency.
+
+- Timestamps are accurate and consistent - all timestamps use consistent time standards for accuracy.
+
+- User information is recorded for all actions - every action is attributed to the user who performed it.
+
+- Status history shows progression - you can see how items progressed through their workflows.
+
+- Action history shows what happened - you can see all actions taken on items.
+
+- Document history maintains versions - previous versions are saved for reference.
+
+- Complete transparency - all relevant parties can see relevant history.
+
+- Compliance support - audit trails support compliance and regulatory requirements.
+
+Understanding end-to-end traceability helps you appreciate how the platform ensures accountability, supports compliance, provides transparency, and maintains complete records of all activities for audit and regulatory purposes.

@@ -7,60 +7,66 @@ description: Learn about the Intain Markets platform and its capabilities for st
 
 ## Overview
 
-Intain Markets is a digital platform that brings transparency, efficiency, and security to structured finance transactions. It connects all parties involved in financial deals through a secure, digital environment.
+Intain Markets is a digital platform that brings transparency, efficiency, and security to structured finance transactions. It connects all parties involved in financial deals through a secure, digital environment where loans can be organized into pools, presented to investors, and managed through the entire transaction lifecycle.
 
-## Who Can Use This
+## What This Means for the User
 
-- Issuers and Borrowers
-- Market Makers and Facility Agents
-- Investors and Lenders
-- Servicers
-- Paying Agents
-- Rating Agencies
+Intain Markets simplifies complex structured finance processes by providing a single platform where:
 
-## When This Is Used
+- **Issuers and Borrowers** can organize their loans into pools, present them to potential investors, and manage the entire transaction process from creation to completion.
 
-Use Intain Markets when you need to:
-- Create and manage loan pools for securitization or whole loan sales
-- Set up and manage credit facilities
-- Review investment opportunities
-- Structure financial transactions
-- Manage ongoing loan servicing and payments
+- **Market Makers and Facility Agents** can review pool opportunities, accept mandates to structure deals, provide feedback, and help move transactions forward.
 
-## Step-by-Step Process
+- **Investors and Lenders** can discover investment opportunities, review pool characteristics and loan details, approve funding requests, and track their investments.
 
-### Understanding the Platform
+- **Servicers** can manage ongoing loan administration, track payments, and handle loan servicing activities.
 
-1. **Access the Platform**
-   - Log in using your email, password, and role
-   - View your role-based dashboard
+- **Paying Agents** can manage payment distributions and ensure funds are properly allocated to all parties.
 
-2. **Navigate Your Workspace**
-   - See items pending your action
-   - Access your active pools, loans, or credit facilities
-   - Review notifications about status changes
+- **Rating Agencies** can access pool information for analysis and rating purposes.
 
-3. **Use Platform Features**
-   - Create new pools, loans, or credit facility requests
-   - Share previews with other parties for review
-   - Review and approve submissions based on your role
-   - Monitor status changes and view complete audit trails
-   - Complete transactions with digital signatures
+The platform handles the complexity of coordinating multiple parties, managing approvals, tracking status changes, and maintaining complete audit trails - all while ensuring proper security and compliance.
 
-## Rules & Validations
+## Key Concepts Explained
 
-- You must log in with the correct role matching your account
-- Your view shows only items relevant to your role
-- Action buttons are enabled when you have permission and the item status allows it
-- Disabled buttons indicate waiting for another party or missing required information
+### Pools
 
-## What Happens Next
+Pools are collections of loans grouped together for securitization, whole loan sales, or credit facilities. When you create a pool, you select loans, assign organizations to participate, and the platform automatically calculates aggregate metrics like total balance, loan count, weighted averages, and other characteristics. Pools progress through statuses from creation to final deal completion.
 
-After logging in, you can:
-- View your dashboard with pending actions and recent activity
-- Create new pools, loans, or credit facility requests
-- Review items shared with you
-- Take actions based on your role and permissions
-- Track the progress of your transactions through status updates
+### Loans
 
-The platform guides you through each step of your financial transactions, ensuring proper approvals happen in the right order and maintaining complete transparency throughout the process.
+Loans are individual credit agreements representing money lent to borrowers. You upload loan data into the platform, and these loans become the building blocks for pools. Each loan contains borrower information, financial details, and characteristics that contribute to pool-level metrics.
+
+### Credit Facilities
+
+Credit facilities are arrangements where lenders provide funding to borrowers through structured credit agreements. The platform supports term sheets, master commitments, facility setup, and funding requests - all managed through a collaborative workflow involving issuers, facility agents, and lenders.
+
+### Statuses and Approvals
+
+Every item in the platform has a status that shows where it is in its workflow. Statuses control what actions are available and ensure proper workflow progression. Approvals act as gates, ensuring quality and compliance before items proceed to the next stage.
+
+### Digital Signatures
+
+The platform supports electronic signatures for term sheets, master commitments, funding notices, and other documents. Signatures are legally binding and provide complete traceability of who signed what and when.
+
+### Role-Based Access
+
+Your role determines what you can see and do in the platform. The system automatically shows you only relevant information and appropriate actions based on your role, making navigation simpler and more focused.
+
+## Important Points to Know
+
+- The platform maintains complete audit trails, recording who changed what and when, ensuring full transparency and accountability.
+
+- All calculations happen automatically - pool metrics update when loans are added or removed, and you can see real-time statistics.
+
+- Status changes are controlled by workflow rules - you can only take actions that are allowed by the current status, ensuring proper order and approvals.
+
+- Sharing and collaboration are built-in - you can share pools with multiple parties, set permissions, and work together through feedback and change requests.
+
+- The platform handles complex multi-party workflows automatically, coordinating approvals, managing status transitions, and ensuring all parties stay informed.
+
+- Security is built into every aspect - from login authentication to role-based permissions to digital signatures, ensuring your transactions are protected.
+
+- The platform supports both securitization transactions (where loans are packaged into securities) and whole loan sales (where loans are sold directly to investors).
+
+Understanding Intain Markets helps you navigate the platform effectively and use its features to complete structured finance transactions efficiently and securely.

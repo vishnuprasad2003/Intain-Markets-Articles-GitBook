@@ -7,73 +7,110 @@ description: Understand how statuses and approvals work in the platform
 
 ## Overview
 
-Statuses represent where items are in their workflow. Approvals ensure quality and compliance before items proceed. Understanding statuses and approvals helps you know what actions are available and what needs to happen next.
+Statuses represent where items are in their workflow, and approvals ensure quality and compliance before items proceed. Understanding statuses and approvals helps you know what actions are available, why some actions are disabled, and what needs to happen next in your workflow.
 
-## Who Can Use This
+## What This Means for the User
 
-- All platform users
+Every pool, loan, term sheet, funding request, and other item in the platform has a status. The status is displayed as a badge or label, and it controls:
 
-## When This Is Used
+- What actions you can take
+- What buttons are enabled or disabled
+- What stage the item is at in its workflow
+- What needs to happen next
 
-Understanding statuses and approvals helps when:
-- You need to know what actions are available
-- You want to understand why actions are disabled
-- You need to track workflow progression
-- You want to understand approval requirements
+When you see a disabled button, it's usually because the item's status doesn't allow that action yet, or you don't have the right role or permissions. The platform typically shows a reason why actions are disabled, helping you understand what needs to happen.
 
-## Step-by-Step Process
+Approvals act as gates in the workflow - certain actions require approval before they can proceed. Different roles can approve different items, and approvals must happen in the correct order.
 
-### Understanding Statuses
+## Key Concepts Explained
 
-1. **Check Current Status**
-   - View the status badge on any item
-   - Status shows where the item is in its workflow
-   - Different statuses allow different actions
+### Statuses
 
-2. **Understand Status Meaning**
-   - Draft means the item is being prepared
-   - Under Review means it's waiting for review
-   - Approved means it can proceed
-   - Rejected means it's stopped
+Statuses are labels that show where an item is in its journey. Common statuses include:
 
-3. **See Status History**
-   - View who changed the status and when
-   - See the complete progression of status changes
-   - Understand how the item reached its current state
+- **Draft or Created**: The item is being prepared and can be edited freely.
 
-### Understanding Approvals
+- **Preview or Shared**: The item has been shared with other parties for review.
 
-1. **Identify Approval Requirements**
-   - Some items require approval before proceeding
-   - Different roles can approve different items
-   - Approvals act as gates in the workflow
+- **Under Review**: The item is waiting for someone to review and make a decision.
 
-2. **Submit for Approval**
-   - Complete all required information
-   - Submit the item for review
-   - Status changes to indicate it's under review
+- **Approved**: The item has been approved and can proceed to the next stage.
 
-3. **Review and Approve**
-   - Reviewers see items requiring their approval
-   - They can approve, reject, or request changes
-   - Status updates based on their decision
+- **Rejected**: The item has been rejected and cannot proceed without changes.
 
-## Rules & Validations
+- **Pending**: The item is waiting for something - approval, action, or information.
 
-- Status controls what actions are available
-- You can only take actions allowed by the current status
-- Approvals must happen in the correct order
-- Some approvals require specific roles
-- Rejection usually stops the workflow
-- Change requests allow items to be edited and resubmitted
+- **Completed or Deal**: The item has reached its final state and is completed.
 
-## What Happens Next
+Statuses progress in a logical order, and you typically cannot skip stages or go backwards without proper permissions.
 
-After understanding statuses and approvals:
-- You know what actions are available based on status
-- You understand why some actions are disabled
-- You know what approvals are needed before proceeding
-- You can track workflow progression through status changes
-- You understand the approval process for your role
+### Status Changes
 
-Statuses guide you through workflows, ensuring proper order and approvals. When actions are disabled, the platform usually shows a reason, helping you understand what needs to happen next.
+Status changes happen automatically when you take actions, or they can be changed manually by authorized users. Every status change is recorded with:
+
+- Who changed it
+- When it was changed
+- What the previous status was
+- What the new status is
+
+This creates a complete audit trail showing how items progressed through their workflow.
+
+### Approvals
+
+Approvals are required checkpoints where authorized users must review and approve items before they can proceed. Approvals ensure:
+
+- Quality standards are met
+- Compliance requirements are satisfied
+- All parties agree before proceeding
+- Proper authorization is obtained
+
+Different items require different approvals. For example, term sheets might need facility agent approval, funding requests might need lender approval, and pools might need market maker approval.
+
+### Approval Workflow
+
+The approval workflow typically follows this pattern:
+
+1. **Submission**: Someone submits an item for approval (for example, an issuer submits a term sheet).
+
+2. **Review**: The approver (for example, a facility agent) reviews the item.
+
+3. **Decision**: The approver can:
+   - **Approve**: The item proceeds to the next stage.
+   - **Reject**: The item is stopped and cannot proceed without changes.
+   - **Request Changes**: The item needs modifications before approval.
+
+4. **Action**: Based on the decision, the item's status updates, and the workflow continues or stops.
+
+### Rejection vs. Feedback
+
+When reviewers provide input, there are two types:
+
+- **Rejection**: The item is formally rejected and cannot proceed. The submitter must make changes and resubmit.
+
+- **Feedback or Change Request**: The reviewer requests changes but doesn't reject the item. The submitter can make changes and resubmit without starting over.
+
+Understanding the difference helps you know whether you need to start fresh or can make changes and continue.
+
+## Important Points to Know
+
+- Status controls what actions are available - you can only take actions that are allowed by the current status.
+
+- Approvals must happen in the correct order - you cannot skip approval steps or proceed without required approvals.
+
+- Some approvals require specific roles - only facility agents can approve term sheets, only lenders can approve funding requests, etc.
+
+- Rejection usually stops the workflow - rejected items cannot proceed until changes are made and they're resubmitted.
+
+- Change requests allow items to be edited and resubmitted - this is less severe than rejection and allows for iterative improvement.
+
+- Status changes are permanent and recorded - you cannot easily undo status changes, and all changes are tracked in the audit trail.
+
+- The platform shows reasons for disabled actions - when buttons are disabled, hover over them or check tooltips to see why.
+
+- Status badges are color-coded - green often means approved or completed, yellow means pending or under review, red means rejected or blocked.
+
+- You can view status history - see who changed statuses and when by viewing the item's history or audit trail.
+
+- Different item types have different statuses - pools have different statuses than loans, term sheets have different statuses than funding requests, etc.
+
+Understanding statuses and approvals helps you navigate workflows effectively, know what actions are available, understand why actions are disabled, and track progress through the structured finance transaction process.

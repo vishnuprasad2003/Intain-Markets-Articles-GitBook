@@ -7,73 +7,102 @@ description: Learn what funding requests are and how to create them
 
 ## Overview
 
-A funding request is when a borrower requests to draw down funds from an active credit facility. Each request specifies the amount needed, the purpose, and includes supporting documentation. Funding requests must be reviewed and approved by the facility agent before funds can be disbursed.
+A funding request is when a borrower requests to draw down funds from an active credit facility. Each request specifies the amount needed, the purpose, includes supporting documentation, and must be reviewed and approved by the facility agent before funds can be disbursed. Funding requests allow borrowers to access their approved facility limit flexibly, drawing down funds as needed rather than receiving everything upfront.
 
-## Who Can Use This
+## What This Means for the User
 
-- Borrowers who need to draw down funds from active facilities
+When you have an active credit facility, you can create funding requests to access funds:
 
-## When This Is Used
+- **Request Specific Amounts**: You can request any amount up to your available borrowing capacity, not necessarily the full facility limit.
 
-Use funding requests when:
-- You have an active credit facility
-- You need to borrow funds
-- You want to draw down a portion of your approved limit
-- You need to request specific amounts for specific purposes
+- **Specify Purpose**: Each request includes the purpose of the funds, helping facility agents and lenders understand how funds will be used.
 
-## Step-by-Step Process
+- **Provide Documentation**: Supporting documents are required to justify the request and demonstrate compliance with facility rules.
 
-### Creating a Funding Request
+- **Individual Review**: Each funding request is reviewed individually by facility agents to ensure compliance with facility rules and available borrowing capacity.
 
-1. **Access Funding Requests**
-   - Navigate to your active facility
-   - Click "Create Funding Request"
-   - Funding request form opens
+- **Automatic Notice Generation**: When approved, funding notices are automatically generated and sent to lenders for review and approval.
 
-2. **Enter Request Details**
-   - Specify the amount you want to borrow
-   - Enter the purpose of the funds
-   - Select the funding date
-   - Upload supporting documentation
+- **Multiple Requests Over Time**: You can create multiple funding requests over time as long as you stay within your facility limits and available borrowing capacity.
 
-3. **Add Collateral Information** (if applicable)
-   - Specify loans to be used as collateral
-   - Provide collateral details
-   - Include collateral valuation
+This structure provides flexibility while maintaining proper oversight and control.
 
-4. **Save and Submit**
-   - Save your request as draft
-   - Review all information
-   - Submit for facility agent review
+## Key Concepts Explained
 
-### Review and Approval
+### Creating Funding Requests
 
-1. **Facility Agent Reviews**
-   - Facility agent evaluates your request
-   - Checks compliance with facility rules
-   - Verifies borrowing capacity
-   - Reviews documentation
+To create a funding request, you:
 
-2. **Receive Decision**
-   - Approved: Funding notice is automatically created
-   - Rejected: Request is declined with reason
-   - Changes Requested: You can update and resubmit
+- **Select Active Facility**: Choose the active credit facility you want to draw down from.
 
-## Rules & Validations
+- **Specify Amount**: Enter the amount you want to borrow. This must be within your available borrowing capacity.
 
-- You can only create funding requests against active facilities
-- Facility must have available borrowing capacity
-- You can have only one draft request per facility at a time
-- Approved requests automatically generate funding notices
-- Rejected requests cannot be resubmitted - you must create a new request
+- **Enter Purpose**: Describe what the funds will be used for. This helps facility agents evaluate the request.
 
-## What Happens Next
+- **Select Funding Date**: Choose when you need the funds. This helps coordinate timing.
 
-After creating a funding request:
-- Request is submitted for facility agent review
-- Facility agent evaluates and makes a decision
-- If approved, funding notice is automatically created
-- If rejected, you receive a reason and can create a new request
-- If changes are requested, you can update and resubmit
+- **Upload Documentation**: Provide supporting documents that justify the request and demonstrate compliance.
 
-Understanding funding requests helps you effectively request drawdowns from your credit facilities and manage your borrowing needs.
+- **Add Collateral** (if applicable): If the facility requires collateral, specify which loans or assets will be used.
+
+- **Submit for Review**: Submit the request to facility agents for evaluation.
+
+### Facility Agent Review
+
+Facility agents review funding requests to:
+
+- **Check Compliance**: Verify the request complies with all facility rules, including borrowing limits, drawdown frequency, and other requirements.
+
+- **Verify Capacity**: Ensure sufficient borrowing capacity is available. The request amount cannot exceed available capacity.
+
+- **Review Documentation**: Check that all required documents are provided and meet quality standards.
+
+- **Assess Collateral** (if applicable): Verify collateral eligibility, valuation, and that it's not already pledged.
+
+- **Make Decision**: Approve, reject, or request changes based on the evaluation.
+
+### Approval Outcomes
+
+When facility agents review funding requests, there are three possible outcomes:
+
+- **Approved**: The request meets all requirements, and a funding notice is automatically generated.
+
+- **Rejected**: The request doesn't meet requirements, and you receive a reason. You must create a new request if you want to try again.
+
+- **Changes Requested**: The facility agent needs modifications. You can update the request and resubmit.
+
+### Funding Notices
+
+When funding requests are approved, funding notices are automatically generated:
+
+- **Automatic Creation**: You don't need to create funding notices manually - they're created automatically upon approval.
+
+- **Sent to Lenders**: Funding notices are sent to lenders for review and approval.
+
+- **Lender Approval Required**: Each lender reviews and approves or rejects individual drawdowns.
+
+- **Fund Transfer**: After lender approval, funds are transferred to you.
+
+## Important Points to Know
+
+- You can only create funding requests against active facilities - facilities must be approved by lenders and in Active status before you can request funds.
+
+- Facility must have available borrowing capacity - you can only request amounts up to your available capacity, which may be less than your total facility limit.
+
+- You can have only one draft request per facility at a time - you must submit or delete draft requests before creating new ones.
+
+- Approved requests automatically generate funding notices - you don't need to create notices manually.
+
+- Rejected requests cannot be resubmitted - if a request is rejected, you must create a new request addressing the issues.
+
+- Change requests allow editing - if changes are requested, you can update the request and resubmit without creating a new one.
+
+- Multiple requests over time - you can create multiple funding requests as long as you stay within limits.
+
+- Each request is reviewed individually - facility agents evaluate each request separately, ensuring proper oversight.
+
+- Documentation is required - supporting documents must be provided to justify requests and demonstrate compliance.
+
+- Complete audit trail - all requests, reviews, and approvals are recorded with who did what and when.
+
+Understanding funding requests helps you effectively request drawdowns from your credit facilities, provide proper documentation, and work within the approval process to access funds when needed.

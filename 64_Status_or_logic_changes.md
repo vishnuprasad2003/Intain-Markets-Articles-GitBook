@@ -7,85 +7,88 @@ description: Learn about changes to status workflows and business logic
 
 ## Overview
 
-This document tracks changes to status workflows, business logic, and process flows. Understanding these changes helps you adapt to platform updates and know what to expect.
+This document tracks changes to status workflows, business logic, and process flows. Understanding these changes helps you adapt to platform updates, know what to expect, and use updated workflows effectively.
 
-## Who Can Use This
+## What This Means for the User
 
-- All platform users
+When status or logic changes occur:
 
-## When This Is Used
+- **Workflow Updates**: Status workflows may change, affecting how items progress.
 
-Use this guide when:
-- You want to learn about workflow changes
-- You need to understand logic updates
-- You want to stay current with changes
-- You're adapting to platform updates
+- **Process Improvements**: Business logic changes may improve processes and efficiency.
 
-## Step-by-Step Process
+- **New Requirements**: Changes may introduce new requirements or modify existing ones.
 
-### Types of Changes
+- **Better Functionality**: Changes often improve functionality and user experience.
 
-1. **Status Workflow Changes**
-   - Status values may change
-   - Status transitions may be updated
-   - Status flow may be modified
-   - Status meanings may be updated
-   - Status rules may be revised
+- **Adaptation Needed**: You may need to adapt to new workflows or processes.
 
-2. **Business Logic Changes**
-   - Approval processes may change
-   - Validation rules may be updated
-   - Calculation methods may be revised
-   - Workflow steps may be modified
-   - Business rules may be updated
+Understanding these changes helps you stay current and use the platform effectively.
+
+## Key Concepts Explained
+
+### Status Workflow Changes
+
+Status workflows may change in several ways:
+
+- **Status Values**: New status values may be added, or existing ones may be modified or removed.
+
+- **Status Transitions**: How items move between statuses may change, with new transitions added or existing ones modified.
+
+- **Status Flow**: The overall flow of statuses may be updated to improve workflows.
+
+- **Status Meanings**: What each status means may be clarified or updated.
+
+- **Status Rules**: Rules governing status changes may be updated.
+
+### Business Logic Changes
+
+Business logic changes may affect:
+
+- **Approval Processes**: How approvals work may change, with new requirements or modified processes.
+
+- **Validation Rules**: Data validation rules may be updated or new validations added.
+
+- **Calculation Methods**: How calculations are performed may be updated or improved.
+
+- **Workflow Steps**: Steps in workflows may be added, removed, or modified.
+
+- **Business Rules**: Business rules governing operations may be updated.
 
 ### Understanding Changes
 
-1. **What Changed**
-   - Review what specifically changed
-   - Understand how it affects you
-   - Know what you need to do
-   - Understand impact on workflow
-   - Learn new requirements
+When changes occur:
 
-2. **Why Changed**
-   - Understand reason for change
-   - Know benefits of change
-   - Understand improvement provided
-   - See problem solved
-   - Appreciate enhancement
+- **What Changed**: Review what specifically changed and how it affects you.
 
-### Staying Informed
+- **Why Changed**: Understand the reason for the change and benefits it provides.
 
-1. **Release Notes**
-   - Check release notes regularly
-   - Read change descriptions
-   - Understand impact
-   - Review migration notes
-   - Stay current
+- **Impact Assessment**: Assess how the change affects your workflow.
 
-2. **Documentation Updates**
-   - Review updated documentation
-   - Check revision history
-   - Read change logs
-   - Review updated guides
-   - Stay informed
+- **New Requirements**: Learn any new requirements introduced by the change.
 
-## Rules & Validations
+- **Migration Path**: Understand how to adapt to the change.
 
-- Changes are documented when implemented
-- Release notes explain what changed
-- Documentation is updated with changes
-- Training may be available for changes
-- Support is available for questions
+## Important Points to Know
 
-## What Happens Next
+- **Changes are documented when implemented** - Release notes and documentation explain what changed.
 
-After understanding status or logic changes:
-- You're aware of workflow updates
-- You can adapt to changes
-- You understand new requirements
-- You can use updated processes
-- You stay current with platform
+- **Release notes explain what changed** - Check release notes for details about changes.
 
-Understanding status or logic changes helps you adapt to platform updates and use updated workflows effectively.
+- **Documentation is updated** - Documentation is updated to reflect changes.
+
+- **Training may be available** - Training may be offered for significant changes.
+
+- **Support is available** - Support can help you understand and adapt to changes.
+
+- **Changes improve functionality** - Most changes are designed to improve functionality and user experience.
+
+- **Gradual adaptation** - You can adapt to changes gradually as you encounter them.
+
+- **Feedback welcome** - Provide feedback about changes to help improve the platform.
+
+- **Stay informed** - Regularly check for updates and changes.
+
+- **Ask questions** - Don't hesitate to ask questions about changes if unclear.
+
+Understanding status or logic changes helps you stay current with platform updates, adapt to new workflows, understand new requirements, use updated processes effectively, and continue working efficiently as the platform evolves.

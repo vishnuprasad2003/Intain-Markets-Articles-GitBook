@@ -7,90 +7,176 @@ description: Understand all possible loan statuses and what each means
 
 ## Overview
 
-This guide explains all possible loan statuses across different status fields. Loans have multiple status fields that track different aspects of their lifecycle.
+This reference guide explains all possible loan statuses across different status fields. Loans have multiple status fields that track different aspects of their lifecycle, including mapping status, workflow status, and pool status.
 
-## Who Can Use This
-
-- Issuers who manage loans
-- Market Makers who review loan data
-- Servicers who manage loan administration
-
-## When This Is Used
-
-Understanding loan states helps when:
-- You need to track loan progress
-- You want to know what actions are available
-- You need to understand why certain actions are disabled
-- You want to manage loans effectively
-
-## Step-by-Step Process
+## Reference Details
 
 ### Mapping Status
 
-1. **Unmapped**
-   - Loan is not assigned to any pool
-   - Available for mapping
-   - Can be mapped to a pool
+#### Unmapped Status
 
-2. **Mapped**
-   - Loan is assigned to a pool
-   - Shows which pool it belongs to
-   - Included in pool calculations
+**What It Means**: The loan has been uploaded into the system but is not yet assigned to any pool.
+
+**What You Can Do**:
+- View loan details
+- Map the loan to a pool
+- Edit loan information (if allowed)
+- Delete the loan (if allowed)
+
+**What Happens Next**: Loan is ready to be mapped to a pool.
+
+**Typical Duration**: This status lasts until you map the loan to a pool.
+
+#### Mapped Status
+
+**What It Means**: The loan has been assigned to a pool and is included in pool calculations.
+
+**What You Can Do**:
+- View loan details
+- Unmap the loan from the pool
+- Update loan status (if allowed)
+- View pool metrics that include this loan
+
+**What Happens Next**: Loan can proceed to Submitted status if included in a batch, or remain mapped until pool progresses.
+
+**Typical Duration**: This status lasts until the loan is removed, unmapped, or progresses to Submitted status.
 
 ### Workflow Status
 
-1. **Standardized**
-   - Loan has been processed
-   - Data quality validated
-   - Ready for mapping
+#### Standardized Status
 
-2. **Submitted**
-   - Loan is included in a batch
-   - Submitted for verification
-   - Waiting for verification
+**What It Means**: The loan has been processed and standardized, and data quality has been validated.
 
-3. **Verified**
-   - Loan has been verified
-   - Verification source recorded
-   - Ready for next stages
+**What You Can Do**:
+- View loan details
+- Map loan to a pool
+- Review standardized data
+- Verify data accuracy
 
-### Pool Status
+**What Happens Next**: Loan is ready for mapping to a pool.
 
-1. **Normal**
-   - Loan is active in pool
-   - Included in pool calculations
-   - Standard status
+**Typical Duration**: This status lasts until loan is mapped or progresses further.
 
-2. **Reconsider**
-   - Loan needs review
-   - Flagged for attention
-   - Under review
+#### Submitted Status
 
-3. **Removed**
-   - Loan removed from pool calculations
-   - Still visible but excluded
-   - Can be reinstated
+**What It Means**: The loan has been included in a batch for verification or other processing.
 
-4. **Reinstated**
-   - Loan was removed but put back
-   - Now included in pool again
-   - Active status restored
+**What You Can Do**:
+- View loan details
+- Track submission status
+- Wait for verification
 
-## Rules & Validations
+**What Happens Next**: Loan proceeds to Verified status after verification is complete.
 
-- Loans can only belong to one pool at a time
-- You must unmap a loan from one pool before mapping to another
-- Removed loans are excluded from pool calculations
-- Verified loans can proceed to tokenization
-- Some statuses restrict certain actions
+**Typical Duration**: This status lasts until verification is complete.
 
-## What Happens Next
+#### Verified Status
 
-After understanding loan states:
-- You can track loans through their entire journey
-- You know what actions are available at each status
-- You understand why certain actions are disabled
-- You can manage loans effectively throughout their lifecycle
-- You know when loans are ready for next stages
+**What It Means**: The loan has been verified and can proceed to next stages (such as tokenization).
 
-Understanding loan states helps you effectively manage loans and track their progress through the platform workflow.
+**What You Can Do**:
+- View loan details
+- Proceed to tokenization (if applicable)
+- Track loan progress
+
+**What Happens Next**: Loan can proceed to Minted status if tokenization is required.
+
+**Typical Duration**: This status lasts until loan is tokenized or reaches final state.
+
+#### Minted Status
+
+**What It Means**: An NFT (non-fungible token) has been created for the loan, and the loan is tokenized.
+
+**What You Can Do**:
+- View loan and token details
+- Track token information
+- Manage tokenized loan
+
+**What Happens Next**: Loan is tokenized and can be used in transactions.
+
+**Typical Duration**: This is typically a final status for tokenized loans.
+
+**Note**: Not all loans are tokenized. This status only applies if tokenization is part of your workflow.
+
+### Pool Status (Within Pool)
+
+#### Normal Status
+
+**What It Means**: The loan is active in the pool and included in all calculations.
+
+**What You Can Do**:
+- View loan details
+- Loan contributes to pool metrics
+- Manage loan normally
+- Update loan information (if allowed)
+
+**What Happens Next**: Loan continues to be active unless removed or pool progresses.
+
+**Typical Duration**: This is the normal status for active loans in pools.
+
+#### Reconsider Status
+
+**What It Means**: The loan needs review or has been flagged for attention.
+
+**What You Can Do**:
+- Review loan details
+- Investigate why it's flagged
+- Take appropriate action
+- Resolve the issue
+
+**What Happens Next**: Loan can return to Normal status after review, or be removed if issues are found.
+
+**Typical Duration**: This status lasts until the issue is resolved.
+
+#### Removed Status
+
+**What It Means**: The loan has been removed from pool calculations but remains visible in the pool.
+
+**What You Can Do**:
+- View loan details
+- Reinstate the loan (put it back)
+- See why it was removed
+- Track removed loans
+
+**What You Cannot Do**:
+- Loan doesn't contribute to pool calculations
+- Loan is excluded from metrics
+
+**What Happens Next**: Loan can be reinstated if needed, or remain removed.
+
+**Typical Duration**: This status lasts until loan is reinstated or permanently removed.
+
+#### Reinstated Status
+
+**What It Means**: The loan was previously removed but has been put back into the pool and is included in calculations again.
+
+**What You Can Do**:
+- View loan details
+- Loan contributes to pool calculations again
+- Manage loan normally
+
+**What Happens Next**: Loan returns to active status and fully participates in the pool.
+
+**Typical Duration**: This status may transition to Normal or Active status, or remain as Reinstated.
+
+## Important Notes
+
+- **Multiple Status Fields**: Loans have multiple status fields (mapping status, workflow status, pool status) that track different aspects independently.
+
+- **Status Progression**: Loans typically progress from Unmapped → Mapped → Submitted → Verified → Minted (if applicable). Status can also change to Removed and back to Reinstated.
+
+- **Status Controls Actions**: The current status determines what actions are available. Some statuses restrict certain actions.
+
+- **Removed Loans Are Excluded**: Removed loans don't affect pool calculations but remain visible for tracking.
+
+- **Status Changes Are Recorded**: Every status change is recorded with who changed it and when, creating a complete audit trail.
+
+- **Status Badges**: Statuses are displayed as badges or labels, often color-coded for easy identification.
+
+- **Pool Status Affects Loan Status**: Some loan statuses depend on pool status. For example, you may not be able to map loans if the pool is in Deal status.
+
+- **Status History**: You can view the complete history of status changes, including who changed them and when, by viewing the loan's audit trail or history.
+
+- **Not All Statuses Apply**: Some statuses (like Minted) only apply if certain features are enabled or workflows are used.
+
+Understanding all loan states helps you effectively manage loans, track their progress through different aspects of their lifecycle, and know what actions are available at each stage.

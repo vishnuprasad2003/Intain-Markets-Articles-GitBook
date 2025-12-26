@@ -7,85 +7,102 @@ description: Understand the difference between change requests and rejections
 
 ## Overview
 
-Understanding the difference between feedback (change requests) and rejection helps you know how to respond and what to expect. Both are part of the review process but have different implications.
+Understanding the difference between feedback (change requests) and rejection helps you know how to respond and what to expect. Both are part of the review process but have different implications for your workflow and how you proceed.
 
-## Who Can Use This
+## What This Means for the User
 
-- Borrowers who receive change requests or rejections
-- Issuers who receive feedback or rejections
-- All users who want to understand review outcomes
+When reviewers provide input, there are two types:
 
-## When This Is Used
+- **Change Requests (Feedback)**: Less severe - reviewers want modifications but the item can be improved and resubmitted. This is an iterative improvement process.
 
-Understanding feedback vs rejection helps when:
-- You receive a change request
-- Your submission is rejected
-- You want to know how to respond
-- You need to understand the difference
+- **Rejection**: More severe - reviewers have decided the item cannot proceed, and you must create a new item to try again.
 
-## Step-by-Step Process
+Understanding the difference helps you respond appropriately and know what to expect.
+
+## Key Concepts Explained
 
 ### Change Requests (Feedback)
 
-1. **What They Are**
-   - Request for modifications
-   - Issues can be fixed
-   - Iterative improvement process
-   - Not a final state
-   - Opportunity to improve
+**What They Are**:
+- Requests for modifications to improve the item
+- Issues can be fixed through editing
+- Iterative improvement process
+- Not a final state - item can proceed after changes
+- Opportunity to refine and improve
 
-2. **What Happens**
-   - Status changes to show changes requested
-   - Item becomes editable again
-   - You can make modifications
-   - You can save multiple times
-   - You can resubmit when ready
+**What Happens**:
+- Status changes to show changes are requested (e.g., "CHANGES_REQUESTED")
+- Item becomes editable again
+- You can make modifications
+- You can save multiple times while working
+- You can resubmit when changes are complete
 
-3. **How to Respond**
-   - Read change request carefully
-   - Understand what needs to change
-   - Make all requested modifications
-   - Address all items thoroughly
-   - Resubmit when complete
+**How to Respond**:
+- Read change request carefully
+- Understand what specific modifications are needed
+- Make all requested changes thoroughly
+- Address all requested items
+- Review your changes before resubmitting
+- Resubmit when complete
+
+**Outcome**:
+- Item can be improved and resubmitted
+- Process can continue after changes
+- Iterative improvement is possible
+- Multiple rounds of changes are allowed
+- Item can eventually be approved
 
 ### Rejection
 
-1. **What It Is**
-   - Final decision
-   - Item will not proceed
-   - Cannot be fixed
-   - Final state
-   - Must create new item
+**What It Is**:
+- Final decision that item will not proceed
+- Item cannot be fixed through editing
+- Final state - process stops here
+- Must create new item to try again
+- More severe than change requests
 
-2. **What Happens**
-   - Status changes to rejected
-   - Item becomes read-only
-   - Cannot be edited
-   - Cannot be resubmitted
-   - Process stops here
+**What Happens**:
+- Status changes to "Rejected" or "REJECTED"
+- Item becomes read-only
+- Cannot be edited
+- Cannot be resubmitted
+- Process stops for this item
 
-3. **How to Respond**
-   - Review rejection reason
-   - Understand why rejected
-   - Create new item
-   - Address issues identified
-   - Try again with improvements
+**How to Respond**:
+- Review rejection reason carefully
+- Understand why item was rejected
+- Learn from rejection feedback
+- Create completely new item
+- Address issues identified in rejection
+- Try again with improvements
 
-## Rules & Validations
+**Outcome**:
+- Item cannot proceed
+- Must create new item to try again
+- New item goes through full review process
+- Can try again with improvements
+- Process starts over with new item
 
-- Change requests allow you to edit and resubmit
-- Rejections are final and cannot be resubmitted
-- You can go through multiple rounds of changes
-- Rejected items must be replaced with new items
-- Both help improve quality through different approaches
+## Important Points to Know
 
-## What Happens Next
+- **Change requests allow you to edit and resubmit** - This is less severe and allows iterative improvement without starting over.
 
-After understanding feedback vs rejection:
-- You know how to respond to change requests
-- You understand what to do after rejection
-- You can improve items through iterative changes
-- You know when to create new items
-- You can navigate review processes effectively
+- **Rejections are final and cannot be resubmitted** - Rejected items are final, and you must create new items.
 
-Understanding feedback vs rejection helps you respond appropriately and improve your submissions through the review process.
+- **You can go through multiple rounds of changes** - Change requests allow iterative improvement until approved or rejected.
+
+- **Rejected items must be replaced with new items** - You cannot resubmit rejected items - new items are required.
+
+- **Both help improve quality** - Both change requests and rejections help improve quality, but through different approaches.
+
+- **Change requests are faster** - You can update and resubmit quickly without creating new items.
+
+- **Rejections require starting over** - You must create new items, which takes more time.
+
+- **Rejection reasons are important** - Pay attention to reasons to understand what needs to be fixed in new items.
+
+- **Change request details guide improvements** - Specific change requests tell you exactly what to modify.
+
+- **Both provide learning opportunities** - Both help you understand requirements and improve future submissions.
+
+Understanding feedback vs rejection helps you know how to respond to change requests, understand what to do after rejection, improve items through iterative changes, know when to create new items, and navigate review processes effectively to achieve approval.
