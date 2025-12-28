@@ -6,297 +6,525 @@ Below is the final, MNC-standard documentation model, mapped to your platform.
 
 (Appear once, at the beginning)
 
-Purpose
+Purpose:
+Orient users, set mental models, explain philosophy, establish foundational understanding
 
-Orient users, set mental models, explain philosophy
+Used For:
+- What is Intain Markets
+- Status & approval philosophy
+- End-to-end traceability
+- Controls & accountability
+- Why approvals exist
 
-Used For
+Structure (Fixed):
+1. Title
+2. Overview
+   - Brief introduction to the concept
+   - Why this matters to users
+   - Context and importance
+3. How the Platform Is Designed
+   - Platform-level design principles
+   - Architectural approach
+   - System-wide considerations
+4. What This Enables for Users
+   - Benefits and capabilities enabled
+   - User value proposition
+   - How users benefit from this design
+5. Key Principles to Understand
+   - Core principles users should know
+   - Important concepts to grasp
+   - Foundational knowledge
 
-What is Intain Markets
-
-Status & approval philosophy
-
-End-to-end traceability
-
-Controls & accountability
-
-Why approvals exist
-
-Structure (Fixed)
-Title
-Overview
-How the Platform Is Designed
-What This Enables for Users
-Key Principles to Understand
-
-📌 No steps
-📌 No features
+Writing Guidelines:
+📌 No steps or procedures
+📌 No feature lists
 📌 Strategic explanation only
+📌 Natural, user-friendly language
+📌 Focus on "why" and "what" not "how"
+📌 Detailed explanations for complete understanding
 
 🟩 DOCUMENT TYPE B — Role & Access Documents
 
-Used For
+Purpose:
+Explain roles, permissions, and access capabilities
 
-User Roles & Responsibilities
+Used For:
+- User Roles & Responsibilities
+- Who can do what
+- Enabled vs Disabled actions
+- Roles in Credit Facilities
 
-Who can do what
+Structure:
+1. Title
+2. Overview
+   - Introduction to roles and access
+   - Why understanding roles matters
+   - Context for role-based access
+3. Roles Covered
+   - List of roles explained
+   - Role descriptions
+   - Role context
+4. What Each Role Can Do
+   - Detailed capabilities for each role
+   - Actions available to each role
+   - Permissions and limitations
+   - Clear explanations of capabilities
+5. Important Access Notes
+   - Key points about access control
+   - Important restrictions or considerations
+   - How access works in practice
+   - Additional context about permissions
 
-Enabled vs Disabled actions
-
-Roles in Credit Facilities
-
-Structure
-Title
-Overview
-Roles Covered
-What Each Role Can Do
-Important Access Notes
+Writing Guidelines:
+📌 Clear role descriptions
+📌 Detailed capability explanations
+📌 Natural language, non-technical
+📌 Focus on what users can do, not technical implementation
 
 🟨 DOCUMENT TYPE C — Navigation & Usage Documents
 
-Used For
+Purpose:
+Guide users on how to navigate and use platform features
 
-Login & Navigation
+Used For:
+- Login & Navigation
+- Role-based views
+- Signature visibility
 
-Role-based views
+Structure:
+1. Title
+2. Overview
+   - Introduction to navigation/feature
+   - Why this matters
+   - Context for usage
+3. How to Navigate the Platform
+   - Navigation instructions
+   - How to access features
+   - Navigation patterns
+   - Clear guidance on movement
+4. What You Will See
+   - Visual descriptions
+   - What appears on screen
+   - Interface elements
+   - What to expect
+5. Helpful Tips
+   - Best practices
+   - Useful shortcuts
+   - Common patterns
+   - Efficiency tips
 
-Signature visibility
-
-Structure
-Title
-Overview
-How to Navigate the Platform
-What You Will See
-Helpful Tips
+Writing Guidelines:
+📌 Clear, step-by-step navigation guidance
+📌 Visual descriptions
+📌 User-friendly explanations
+📌 Practical tips and best practices
 
 🟧 DOCUMENT TYPE D — Process / How-To Documents
 
-(Already validated)
+Purpose:
+Provide step-by-step instructions for completing tasks
 
-Used For
+Used For:
+- Pool creation & sharing
+- Loan management
+- Approvals, submissions, reviews
+- Term sheet submission
+- Funding requests creation
+- Token approval
+- Facility creation
 
-Pool creation & sharing
+Structure:
+1. Title
+2. Overview
+   - What this process accomplishes
+   - Why users need this
+   - Context for the process
+3. Who Can Use This
+   - Roles that can perform this process
+   - Who should use this guide
+   - Role-specific considerations
+4. When This Is Used
+   - Situations requiring this process
+   - When to use this guide
+   - Appropriate contexts
+5. Step-by-Step Process
+   - Detailed step-by-step instructions
+   - Clear action items
+   - What to do at each step
+   - Expected outcomes
+6. Rules & Validations
+   - Business rules that apply
+   - Validation requirements
+   - Constraints and limitations
+   - Important restrictions
+7. What Happens Next
+   - Outcomes after completion
+   - Next steps in workflow
+   - What to expect
+   - Follow-up actions
 
-Loan management
-
-Approvals, submissions, reviews
-
-Term sheet submission
-
-Funding requests creation
-
-Token approval
-
-Facility creation
-
-Structure
-Title
-Overview
-Who Can Use This
-When This Is Used
-Step-by-Step Process
-Rules & Validations
-What Happens Next
+Writing Guidelines:
+📌 Clear, actionable steps
+📌 Detailed explanations for each step
+📌 Natural language instructions
+📌 Complete coverage of the process
+📌 User-friendly guidance
 
 🟪 DOCUMENT TYPE E — Lifecycle & Status Explanation Documents
 
-Used For
+Purpose:
+Explain statuses and lifecycle progression
 
-Pool lifecycle & statuses
+Used For:
+- Pool lifecycle & statuses
+- Loan lifecycle & statuses
+- Facility setup status
+- All pool states explained
+- All loan states explained
+- Master commitment statuses
+- Term sheet, facility, and funding statuses
 
-Loan lifecycle & statuses
+Structure:
+1. Title
+2. Overview
+   - Introduction to statuses/lifecycle
+   - Why understanding statuses matters
+   - Context for status tracking
+3. Lifecycle Overview
+   - Overall progression through statuses
+   - Typical flow and sequence
+   - How items move through lifecycle
+   - Complete lifecycle explanation
+4. Status Meanings
+   - Each status explained clearly
+   - What each status represents
+   - Status descriptions
+   - Clear status definitions
+5. What Each Status Indicates
+   - What status tells users
+   - Implications of each status
+   - What users should know
+   - Actions available at each status
+   - Detailed status explanations
 
-Facility setup status
-
-All pool states explained
-
-All loan states explained
-
-Master commitment statuses
-
-Term sheet, facility, and funding statuses
-
-Structure
-Title
-Overview
-Lifecycle Overview
-Status Meanings
-What Each Status Indicates
-
-📌 This is very common in MNC portals
+Writing Guidelines:
 📌 Avoid procedural tone
+📌 Focus on explanation, not instruction
+📌 Clear status descriptions
+📌 Natural language explanations
+📌 Detailed coverage of all statuses
+📌 This is very common in MNC portals
 
 🟫 DOCUMENT TYPE F — Outcome & Decision Documents
 
-Used For
+Purpose:
+Explain possible outcomes and their implications
 
-What happens after rejection
+Used For:
+- What happens after rejection
+- Feedback vs rejection
+- Funding request outcomes
+- Loan rejection and reinstatement
 
-Feedback vs rejection
+Structure:
+1. Title
+2. Overview
+   - Introduction to outcomes
+   - Why understanding outcomes matters
+   - Context for decision outcomes
+3. Possible Outcomes
+   - List of all possible outcomes
+   - What can happen
+   - Outcome descriptions
+4. What Each Outcome Means
+   - Detailed explanation of each outcome
+   - Implications and consequences
+   - What happens with each outcome
+   - Clear outcome descriptions
+5. Next Steps for Users
+   - What to do for each outcome
+   - How to proceed
+   - Actions to take
+   - Guidance for moving forward
 
-Funding request outcomes
-
-Loan rejection and reinstatement
-
-Structure
-Title
-Overview
-Possible Outcomes
-What Each Outcome Means
-Next Steps for Users
+Writing Guidelines:
+📌 Clear outcome explanations
+📌 Detailed implications
+📌 Actionable next steps
+📌 Natural language descriptions
+📌 Complete coverage of all outcomes
 
 🟦 DOCUMENT TYPE G — Reference / Lookup Documents
 
-(Already validated)
+Purpose:
+Provide reference information for lookup and understanding
 
-Used For
+Used For:
+- Status + qualifiers explained
+- Token IDs, timestamps
+- Who changed what and when
+- Removed loans and calculations
 
-Status + qualifiers explained
+Structure:
+1. Title
+2. Overview
+   - Introduction to reference topic
+   - Why this information matters
+   - Context for reference
+3. Reference Details
+   - Detailed reference information
+   - Comprehensive explanations
+   - All relevant details
+   - Complete reference data
+4. Important Notes
+   - Key points to remember
+   - Important considerations
+   - Critical information
+   - Additional context
 
-Token IDs, timestamps
-
-Who changed what and when
-
-Removed loans and calculations
-
-Structure
-Title
-Overview
-Reference Details
-Important Notes
+Writing Guidelines:
+📌 Comprehensive reference information
+📌 Detailed explanations
+📌 Clear organization
+📌 Easy to lookup and understand
+📌 Complete coverage of topic
 
 🟥 DOCUMENT TYPE H — FAQ / Support Documents
 
-Used For
+Purpose:
+Answer common questions and provide troubleshooting guidance
 
-Common user questions
+Used For:
+- Common user questions
+- "Why can't I act?"
+- Why actions are blocked
+- Funding & approval questions
 
-"Why can't I act?"
+Structure:
+1. Title
+2. Overview
+   - Introduction to FAQs
+   - Purpose of this guide
+   - How to use this document
+3. Frequently Asked Questions
+   - Q: [Question]
+   - A: [Detailed Answer]
+   - Organized by topic/category
+   - Comprehensive coverage
 
-Why actions are blocked
-
-Funding & approval questions
-
-Structure
-Title
-Overview
-Frequently Asked Questions
+Writing Guidelines:
+📌 Clear, concise questions
+📌 Detailed, helpful answers
+📌 Organized by topic
+📌 Natural language
+📌 Comprehensive coverage
+📌 User-friendly format
 
 🧠 DOCUMENT TYPE I — Change & Release Information
 
-Used For
+Purpose:
+Document platform changes and their impact
 
-New features
+Used For:
+- New features
+- Status or logic changes
+- Retired flows
 
-Status or logic changes
+Structure:
+1. Title
+2. Overview
+   - Introduction to changes
+   - Purpose of change documentation
+   - How to use this information
+3. What Changed
+   - Detailed description of changes
+   - What was modified
+   - New capabilities or features
+   - Complete change description
+4. Impact on Existing Users
+   - How changes affect users
+   - What users need to know
+   - Adaptation requirements
+   - Migration guidance
+   - Learning requirements
 
-Retired flows
-
-Structure
-Title
-Overview
-What Changed
-Impact on Existing Users
+Writing Guidelines:
+📌 Clear change descriptions
+📌 Detailed impact explanations
+📌 User-focused impact analysis
+📌 Migration and adaptation guidance
+📌 Natural language descriptions
 
 🟨 DOCUMENT TYPE J — Concept / Module Overview Documents
 
-Used For
-
-Pools Overview
-
-Loans Overview
-
-Credit Facilities Overview
-
-Master Commitment Overview
-
-Funding Requests Overview
-
-Funding Notices Overview
-
-Purpose
-
+Purpose:
 Explain what a concept/module is, its purpose, key components, and how it works
 
-Structure
-Title
-Overview
-What [Concept] Is
-Purpose and Use Cases
-Key Components
-How [Concept] Works
-Important Points to Know
+Used For:
+- Pools Overview
+- Loans Overview
+- Credit Facilities Overview
+- Master Commitment Overview
+- Funding Requests Overview
+- Funding Notices Overview
 
+Structure:
+1. Title
+2. Overview
+   - Introduction to the concept
+   - Why this concept matters
+   - Context and importance
+3. What [Concept] Is
+   - Clear definition
+   - What it represents
+   - Core nature of the concept
+   - Detailed explanation
+4. Purpose and Use Cases
+   - Why this concept exists
+   - What it's used for
+   - Common use cases
+   - When it's needed
+5. Key Components
+   - Main elements of the concept
+   - Important parts
+   - Component descriptions
+   - How components relate
+6. How [Concept] Works
+   - How the concept functions
+   - Operational mechanics
+   - Process flow
+   - How it operates
+7. Important Points to Know
+   - Key information users should know
+   - Important considerations
+   - Critical points
+   - Additional context
+
+Writing Guidelines:
 📌 Explains the concept itself, not platform design
 📌 Focus on what it is and how it functions
 📌 Natural, user-friendly explanation
+📌 Detailed concept explanations
+📌 Module-specific context, not platform-wide design
 
 🟧 DOCUMENT TYPE K — Workflow Overview Documents
 
-Used For
-
-Term Sheet Workflow
-
-E-Signature Workflow
-
-Token Generation and Issuance
-
-Purpose
-
+Purpose:
 Explain complete workflows from start to finish
 
-Structure
-Title
-Overview
-Workflow Overview
-Key Stages
-How the Workflow Progresses
-Important Points to Know
+Used For:
+- Token Generation and Issuance
+- E-Signature Workflow
 
+Structure:
+1. Title
+2. Overview
+   - Introduction to the workflow
+   - Why this workflow matters
+   - Context and importance
+3. Workflow Overview
+   - Overall workflow description
+   - Complete flow explanation
+   - How the workflow operates
+   - End-to-end process
+4. Key Stages
+   - Main stages in the workflow
+   - Stage descriptions
+   - What happens at each stage
+   - Stage progression
+5. How the Workflow Progresses
+   - Progression through stages
+   - How stages connect
+   - Flow between stages
+   - Complete progression explanation
+6. Important Points to Know
+   - Key information about the workflow
+   - Important considerations
+   - Critical points
+   - Additional context
+
+Writing Guidelines:
 📌 Explains complete workflows
 📌 Shows progression through stages
 📌 Avoids step-by-step instructions (use Type D for that)
+📌 Focus on workflow understanding, not task execution
+📌 Natural language explanations
 
 🟩 DOCUMENT TYPE L — Review and Decision Documents
 
-Used For
-
-Pool Mandate Review
-
-Term Sheet Review
-
-Funding Request Review
-
-Funding Notice Review
-
-Facility Approval
-
-Pool and Loan Review
-
-Purpose
-
+Purpose:
 Explain how reviewers evaluate and make decisions
 
-Structure
-Title
-Overview
-Who Can Use This
-When This Is Used
-Review Process
-Evaluation Criteria
-Making Decisions
-Rules & Validations
-What Happens Next
+Used For:
+- Pool Mandate Review
+- Term Sheet Review
+- Funding Request Review
+- Funding Notice Review
+- Facility Approval
+- Pool and Loan Review
 
+Structure:
+1. Title
+2. Overview
+   - Introduction to review process
+   - Why reviews matter
+   - Context for reviews
+3. Who Can Use This
+   - Roles that perform reviews
+   - Who should use this guide
+   - Reviewer roles
+4. When This Is Used
+   - Situations requiring review
+   - When reviews occur
+   - Appropriate contexts
+5. Review Process
+   - How reviews are conducted
+   - Review steps and approach
+   - Process flow
+   - How reviews work
+6. Evaluation Criteria
+   - What reviewers look for
+   - Criteria used in evaluation
+   - Standards and requirements
+   - Evaluation factors
+7. Making Decisions
+   - How decisions are made
+   - Decision options (approve/reject/changes requested)
+   - Decision process
+   - What influences decisions
+8. Rules & Validations
+   - Business rules for reviews
+   - Validation requirements
+   - Constraints and limitations
+   - Review rules
+9. What Happens Next
+   - Outcomes after review
+   - Next steps based on decision
+   - What to expect
+   - Follow-up actions
+
+Writing Guidelines:
 📌 Focus on evaluation and decision-making
 📌 Explains what reviewers look for
 📌 Covers approval/rejection/changes requested
+📌 Detailed evaluation criteria
+📌 Natural language explanations
 
 Final Guidance (Very Important)
-Golden MNC Rule
 
+Golden MNC Rule:
 Not all pages are "how-to".
 Mature platforms explain, orient, and justify — not just instruct.
+
+Key Principles:
+1. Use natural, user-friendly language throughout
+2. Provide detailed explanations for complete understanding
+3. Focus on user needs and understanding
+4. Avoid technical jargon unless necessary
+5. Ensure consistency across all document types
+6. Maintain clear structure and organization
+7. Provide comprehensive coverage of topics
+8. Use clear, descriptive titles and headings
 
 Document Type Mapping:
 
@@ -323,6 +551,9 @@ Type D (Process/How-To):
 - 09_Pool_Feedback_Workflow.md
 - 16_Term_Sheet_Workflow.md
 - 17_Term_Sheet_Change_Requests.md
+- 27_Borrower_Token_Approval.md
+- 28_Lender_Approval_and_Rejection.md
+- 29_Funds_Transfer_Confirmation.md
 - 30_Pool_Creation_and_Sharing.md
 - 31_Loan_Management.md
 - 32_Term_Sheet_Submission.md
@@ -332,8 +563,6 @@ Type D (Process/How-To):
 - 38_Deal_Setup_and_Calculations.md
 - 40_Token_Generation_and_E-Sign.md
 - 44_Funds_Transfer_Confirmation.md
-- 27_Borrower_Token_Approval.md
-- 29_Funds_Transfer_Confirmation.md
 
 Type E (Lifecycle & Status):
 - 06_Pool_Lifecycle_and_Statuses.md
@@ -387,3 +616,5 @@ Type L (Review and Decision):
 - 41_Pool_and_Loan_Review.md
 - 42_Facility_Approval.md
 - 43_Funding_Notice_Review.md
+
+Total Documents: 65
