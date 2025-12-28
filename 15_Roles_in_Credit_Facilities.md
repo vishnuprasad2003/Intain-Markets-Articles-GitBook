@@ -7,96 +7,80 @@ description: Understand the different roles and responsibilities in credit facil
 
 ## Overview
 
-Credit facilities involve three main parties, each with distinct responsibilities and permissions. Understanding these roles helps you know what you can do, what's expected of you, and how different parties collaborate to make credit facilities work.
+Credit facilities involve three main parties, each with distinct responsibilities and permissions. Understanding these roles helps you know what you can do, what's expected of you, and how different parties collaborate to make credit facilities work. The platform automatically shows you only relevant information and appropriate actions based on your role, making it easier to focus on your responsibilities.
 
-## What This Means for the User
+## Roles Covered
 
-Your role in a credit facility determines:
+Credit facilities involve three primary roles:
+- **Borrower** - Organizations that need funding and create credit facility requests
+- **Facility Agent** - Organizations that structure and manage credit facilities
+- **Lender** - Organizations that provide capital for credit facilities
 
-- What actions you can take (create term sheets, review requests, approve facilities, etc.)
-- What information you can see (your own requests, facilities you're involved with, etc.)
-- What you're responsible for (creating proposals, reviewing submissions, providing capital, etc.)
-- Who you collaborate with (borrowers work with facility agents, facility agents work with lenders, etc.)
-
-The platform automatically shows you only relevant information and appropriate actions based on your role, making it easier to focus on your responsibilities.
-
-## Key Concepts Explained
+## What Each Role Can Do
 
 ### Borrower Role
 
-Borrowers are organizations that need funding and create credit facility requests. Borrowers can:
+Borrowers are organizations that need funding and create credit facility requests. They can:
+- Create term sheets proposing new credit facilities with facility terms
+- Sign term sheets electronically
+- Submit term sheets for facility agent review
+- Respond to change requests by updating term sheets and resubmitting
+- Create funding requests to draw down funds from active facilities
+- Approve token transfers when funding notices are generated
+- Monitor facility status and track term sheet and funding request status
+- View facility details and monitor borrowing capacity
 
-- **Create Term Sheets**: Propose new credit facilities by creating term sheets with facility terms, signing them electronically, and submitting them for facility agent review.
-
-- **Respond to Change Requests**: When facility agents request changes to term sheets, borrowers can update them and resubmit.
-
-- **Create Funding Requests**: Once facilities are active, borrowers can create funding requests to draw down funds, specifying amounts, purposes, and providing documentation.
-
-- **Approve Token Transfers**: When funding notices are generated, borrowers must approve token transfers before lenders can approve and funds are disbursed.
-
-- **Monitor Facility Status**: Track term sheet and funding request status, view facility details, and monitor borrowing capacity.
-
-**What Borrowers Cannot Do**:
-- Cannot approve their own term sheets or funding requests
-- Cannot configure master commitments (this is the facility agent's responsibility)
-- Cannot approve funding notices (this is the lender's responsibility)
+Borrowers cannot approve their own term sheets or funding requests, cannot configure master commitments (this is the facility agent's responsibility), and cannot approve funding notices (this is the lender's responsibility).
 
 ### Facility Agent Role
 
-Facility agents structure and manage credit facilities. They act as intermediaries between borrowers and lenders. Facility agents can:
+Facility agents structure and manage credit facilities, acting as intermediaries between borrowers and lenders. They can:
+- Review term sheets submitted by borrowers
+- Approve, reject, or request changes to term sheets
+- Configure master commitments after they're auto-created from approved term sheets
+- Set up complete facility structures including facility rules, borrowing base calculations, lender groups, and other parameters
+- Review funding requests for compliance with facility rules
+- Verify borrowing capacity and review documentation
+- Approve or reject funding requests
+- Sign funding notices on behalf of lenders before sending them to lenders for approval
+- Monitor facility status and track borrowing capacity
+- Manage lender groups and ensure facilities operate according to rules
 
-- **Review Term Sheets**: Evaluate borrower proposals, approve them, reject them, or request changes to ensure they meet requirements.
-
-- **Configure Master Commitments**: When term sheets are approved, facility agents set up complete facility structures including facility rules, borrowing base calculations, lender groups, and other parameters.
-
-- **Review Funding Requests**: Evaluate borrower funding requests for compliance with facility rules, verify borrowing capacity, review documentation, and approve or reject requests.
-
-- **Sign Funding Notices**: When funding requests are approved, facility agents sign funding notices on behalf of lenders before sending them to lenders for approval.
-
-- **Manage Facilities**: Monitor facility status, track borrowing capacity, manage lender groups, and ensure facilities operate according to rules.
-
-**What Facility Agents Cannot Do**:
-- Cannot create term sheets or funding requests (these are borrower responsibilities)
-- Cannot approve master commitments or funding notices (these are lender responsibilities)
-- Cannot provide capital (this is the lender's role)
+Facility agents cannot create term sheets or funding requests (these are borrower responsibilities), cannot approve master commitments or funding notices (these are lender responsibilities), and cannot provide capital (this is the lender's role).
 
 ### Lender Role
 
-Lenders provide capital for credit facilities. They review and approve facilities and individual drawdowns. Lenders can:
+Lenders provide capital for credit facilities. They review and approve facilities and individual drawdowns. They can:
+- Review master commitments when facility agents configure them
+- Approve facilities via electronic signature (any lender approval activates the facility)
+- Review funding notices when they're generated after funding request approval
+- Approve or reject individual drawdowns
+- Confirm fund transfers after approving funding notices
+- Monitor facilities they're involved with
+- View borrowing activity and monitor facility performance
 
-- **Review Master Commitments**: When facility agents configure master commitments, lenders review them and approve facilities via electronic signature. Any lender approval activates the facility.
+Lenders cannot create term sheets or funding requests (these are borrower responsibilities), cannot configure master commitments (this is the facility agent's responsibility), and cannot review funding requests directly (facility agents do this first).
 
-- **Review Funding Notices**: When funding requests are approved and funding notices are generated, lenders review individual drawdowns and approve or reject them.
+## Important Access Notes
 
-- **Approve Fund Transfers**: After approving funding notices, lenders confirm fund transfers, and funds are disbursed to borrowers.
+**Role-Specific Permissions** - Each role has specific permissions—you can only take actions appropriate for your role. The platform enforces these restrictions automatically.
 
-- **Monitor Facilities**: Track facilities they're involved with, view borrowing activity, and monitor facility performance.
+**Borrower Restrictions** - Borrowers cannot approve their own submissions—term sheets and funding requests must be reviewed by facility agents, and facilities must be approved by lenders.
 
-**What Lenders Cannot Do**:
-- Cannot create term sheets or funding requests (these are borrower responsibilities)
-- Cannot configure master commitments (this is the facility agent's responsibility)
-- Cannot review funding requests directly (facility agents do this first)
+**Facility Agent Role** - Facility agents facilitate the process—they don't create proposals or provide capital, but they structure facilities and coordinate between borrowers and lenders.
 
-## Important Points to Know
+**Lender Authority** - Lenders make funding decisions—they approve facilities and individual drawdowns, and they provide the capital.
 
-- Each role has specific permissions - you can only take actions appropriate for your role. The platform enforces these restrictions automatically.
+**Collaboration Required** - Collaboration is essential—borrowers create proposals, facility agents structure facilities, and lenders provide capital. All parties must work together.
 
-- Borrowers cannot approve their own submissions - term sheets and funding requests must be reviewed by facility agents, and facilities must be approved by lenders.
+**Role-Based Views** - The platform shows you only relevant information based on your role, making navigation simpler and more focused.
 
-- Facility agents facilitate the process - they don't create proposals or provide capital, but they structure facilities and coordinate between borrowers and lenders.
+**Multiple Lenders** - Multiple lenders can participate in facilities, and any lender approval activates the facility.
 
-- Lenders make funding decisions - they approve facilities and individual drawdowns, and they provide the capital.
+**Electronic Signatures** - Electronic signatures are required for term sheets, master commitments, and funding notices for legal validity.
 
-- Collaboration is essential - borrowers create proposals, facility agents structure facilities, and lenders provide capital. All parties must work together.
+**Status Affects Actions** - Facility status determines what actions are available to each role. You can only take actions that are allowed by both your role and the current status.
 
-- Role-based views - the platform shows you only relevant information based on your role, making navigation simpler.
-
-- Multiple lenders can participate - facilities can have multiple lenders, and any lender approval activates the facility.
-
-- Electronic signatures are required - term sheets, master commitments, and funding notices require electronic signatures for legal validity.
-
-- Status affects what you can do - facility status determines what actions are available to each role.
-
-- Complete transparency - all actions are recorded, and you can see who did what and when through audit trails.
+**Complete Transparency** - All actions are recorded, and you can see who did what and when through audit trails.
 
 Understanding roles in credit facilities helps you know what you can do, what's expected of you, how to collaborate with other parties, and how to effectively participate in the credit facility workflow.

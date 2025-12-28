@@ -9,129 +9,54 @@ description: Understand how different users see pools based on their role
 
 Different users see pools differently based on their role. The platform automatically filters information and shows you only relevant items and appropriate actions for your role, making navigation simpler and more focused. Understanding role-based views helps you know what pools you can see, what actions are available, and why some pools aren't visible to you.
 
-## What This Means for the User
+## How to Navigate the Platform
 
-When you log in with a specific role, the platform automatically shows you:
+**Accessing Pool Lists** - When you navigate to the Pools section, the platform automatically shows you only pools relevant to your role. As an issuer, you'll see pools you've created. As a market maker, you'll see pools shared with you. As an investor, you'll see investment opportunities. This filtering happens automatically—you don't need to manually filter.
 
-- Only pools where you have a role or where pools are shared with you
-- Only actions that are appropriate for your role
-- Only information relevant to your responsibilities
-- A dashboard tailored to your role
+**Viewing Pool Details** - Clicking on a pool takes you to its detail page, where you can see all information, metrics, loan details, status, history, and available actions. The information and actions shown are automatically filtered based on your role.
 
-This filtering happens automatically - you don't need to search through irrelevant information or wonder why you can't see certain pools. The platform presents you with exactly what you need for your role.
+**Understanding Visibility** - Pools are visible to you if you created them, if they're shared with your organization, or if you have an assigned role in them. If you can't see a pool, it's likely not shared with you or you don't have a role in it.
 
-## Key Concepts Explained
+**Role Selection Matters** - The role you select during login determines what pools you can see. If you have multiple roles, you'll see different pools when you log in with different roles. Make sure you're using the correct role for what you want to do.
 
-### Issuer View
+**Status Affects Visibility** - Some statuses affect visibility. For example, pools in Created status are only visible to the issuer who created them until they're shared. Once shared, they become visible to shared parties.
 
-As an issuer, you see:
+## What You Will See
 
-- **Pools You Created**: All pools you've created, regardless of status
-- **Your Active Pools**: Pools you're currently working on
-- **Pending Actions**: Pools waiting for your action (for example, responding to feedback)
-- **All Statuses**: You can see your pools in Created, Preview, Mandate Pending, and Deal statuses
+**As an Issuer** - You'll see all pools you've created, regardless of status. You'll see pools in Created, Preview, Mandate Pending, and Deal statuses. You'll see pending actions requiring your attention, such as responding to feedback. Your dashboard shows your active pools and items waiting for your action.
 
-**Available Actions**:
-- Create new pools
-- Edit pools (while in Created or Preview status)
-- Share pools with other organizations
-- Map loans to pools
-- Submit pools for mandate review
-- Respond to feedback
-- View pool metrics and details
+**As a Market Maker** - You'll see pools shared with you for review, pools submitted to you for mandate review, pools where you've accepted the mandate, and deals you've helped structure. You'll see actions like reviewing pool details, accepting or rejecting mandates, providing feedback, and structuring deals.
 
-**What You Don't See**: Pools created by other issuers that aren't shared with you.
+**As an Investor** - You'll see investment opportunities (pools shared with you for investment review), your investments (deals where you've invested or committed), funding requests waiting for your approval, and active deals you're involved with. You'll see actions like reviewing opportunities, expressing interest, and approving or rejecting funding requests.
 
-### Market Maker View
+**As a Servicer** - You'll see pools assigned to you for servicing, active loans you're servicing, servicing tasks requiring your attention, and deal information for deals you're servicing. You'll see actions related to loan servicing, updating loan statuses, and tracking payments.
 
-As a market maker, you see:
+**As a Rating Agency** - You'll see pools shared with you for rating analysis, pool data needed for rating purposes, and access to analysis tools. You'll typically have read-only access—you can view and analyze but cannot make changes or approvals.
 
-- **Shared Pools**: Pools shared with you for review
-- **Mandate Requests**: Pools submitted to you for mandate review
-- **Accepted Mandates**: Pools where you've accepted the mandate
-- **Structured Deals**: Deals you've helped structure
+**Action Availability** - Action buttons are automatically enabled or disabled based on your role and the pool's status. You'll only see actions you can actually take. Disabled buttons typically show tooltips explaining why they're disabled.
 
-**Available Actions**:
-- Review pool details and metrics
-- Accept or reject mandates
-- Provide feedback and request changes
-- Structure deals
-- View pool and loan information
+**Status Indicators** - Pools display status badges showing where they are in their workflow. These indicators help you quickly understand what stage pools are at and what actions might be available.
 
-**What You Don't See**: Pools not shared with you or pools created by issuers who haven't shared with you.
+## Helpful Tips
 
-### Investor View
+**Check Sharing Settings** - If you're an issuer and want others to see your pool, make sure you've shared it with the right organizations. If you're a market maker or investor and can't see a pool, check if it's been shared with your organization.
 
-As an investor, you see:
+**Understand Status Visibility** - Pools in Created status are only visible to the issuer until shared. Once shared, they become visible to shared parties. Understanding status visibility helps you know when pools become visible to others.
 
-- **Investment Opportunities**: Pools shared with you for investment review
-- **Your Investments**: Deals where you've invested or committed
-- **Funding Requests**: Requests waiting for your approval
-- **Active Deals**: Deals you're involved with
+**Use the Correct Role** - Make sure you're logged in with the correct role for what you want to do. If you want to create pools, use the Issuer role. If you want to review opportunities, use the Investor role.
 
-**Available Actions**:
-- Review pool opportunities
-- Express interest in pools
-- Approve or reject funding requests
-- Review term sheets and facilities
-- View investment details
+**Check Action Tooltips** - When actions are disabled, hover over buttons or check tooltips to see why they're disabled. This helps you understand what needs to happen to enable actions.
 
-**What You Don't See**: Pools not shared with you or pools where you're not involved.
+**Multiple Roles** - If you have multiple roles, you can log in with different roles at different times to see different views. Each role shows you a different set of pools and actions.
 
-### Servicer View
+**Dashboard First** - Check your dashboard first—it shows items relevant to your role, pending actions, and recent activity. This helps you quickly see what needs your attention.
 
-As a servicer, you see:
+**Status Affects Actions** - Remember that both your role and the pool's status determine what actions are available. Even if you have permission, the status must allow the action.
 
-- **Assigned Pools**: Pools assigned to you for servicing
-- **Active Loans**: Loans you're servicing
-- **Servicing Tasks**: Tasks requiring your attention
-- **Deal Information**: Deals you're servicing
+**Collaboration Through Sharing** - Different roles collaborate through sharing. Issuers share pools with market makers and investors, who then see the pools in their views. Understanding this helps you know how to collaborate effectively.
 
-**Available Actions**:
-- View pool and loan details
-- Manage loan servicing
-- Update loan statuses
-- Track payments
-- Handle servicing activities
+**Filtering Is Automatic** - The platform filters information automatically—you don't need to manually filter or search through irrelevant items. Trust that you're seeing what's relevant to your role.
 
-**What You Don't See**: Pools not assigned to you for servicing.
+**Read-Only Access** - Some roles, like Rating Agency, have read-only access. You can view and analyze but cannot make changes or approvals. Understanding your access level helps you know what you can do.
 
-### Rating Agency View
-
-As a rating agency, you see:
-
-- **Shared Pools**: Pools shared with you for rating analysis
-- **Pool Data**: Information needed for rating purposes
-- **Analysis Tools**: Access to pool and loan data
-
-**Available Actions**:
-- View pool details and metrics
-- Access loan data
-- Download information (if permissions allow)
-- Perform rating analysis
-
-**What You Don't See**: Pools not shared with you or pools where you're not involved.
-
-**Note**: Rating agencies typically have read-only access - they can view and analyze but cannot make changes or approvals.
-
-## Important Points to Know
-
-- **Visibility Based on Role**: You only see pools where you have a role or where pools are shared with you. If you can't see a pool, it's likely not shared with you or you don't have a role in it.
-
-- **Status Affects Visibility**: Some statuses restrict visibility. For example, pools in Created status are only visible to the issuer who created them until they're shared.
-
-- **Sharing Controls Visibility**: When issuers share pools, they control who can see them. You'll only see pools shared with your organization.
-
-- **Role Determines Actions**: Your role determines what actions are available. Even if you can see a pool, you may not be able to take certain actions if they're not appropriate for your role.
-
-- **Multiple Roles**: If you have multiple roles, you can log in with different roles at different times to see different views. Each role shows you a different set of pools and actions.
-
-- **Dashboard Tailored to Role**: Your dashboard shows items relevant to your role - pending actions, recent activity, and items requiring your attention.
-
-- **Filtering Is Automatic**: The platform filters information automatically - you don't need to manually filter or search through irrelevant items.
-
-- **Action Buttons Are Role-Aware**: Action buttons are enabled or disabled based on your role and the pool's status. You'll only see actions you can actually take.
-
-- **Collaboration Through Sharing**: Different roles collaborate through sharing - issuers share with market makers and investors, who then see the pools in their views.
-
-Understanding role-based views helps you navigate the platform effectively, know what pools you can see and why, understand what actions are available to your role, and work efficiently within your responsibilities.
+Understanding role-based pool views helps you navigate the platform effectively, know what pools you can see and why, understand what actions are available to your role, and work efficiently within your responsibilities.

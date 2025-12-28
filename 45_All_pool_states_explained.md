@@ -7,120 +7,32 @@ description: Understand all possible pool statuses and what each means
 
 ## Overview
 
-This reference guide explains all possible pool statuses in the platform. Understanding these statuses helps you know where your pool is in the workflow, what actions are available, and what to expect at each stage.
+This reference guide explains all possible pool statuses in the platform. Understanding these statuses helps you know where your pool is in the workflow, what actions are available, and what to expect at each stage. Each status represents a specific stage in the pool's journey from creation to deal completion.
 
-## Reference Details
+## Lifecycle Overview
 
-### Created Status
+Pools progress through a structured sequence: they begin as **Created** when you first create them, move to **Preview** when shared with other parties, advance to **Mandate Pending** when submitted to a market maker, and finally reach **Deal** status when the market maker accepts the mandate and finalizes the transaction. This progression ensures that pools move through proper stages with appropriate reviews and approvals at each step.
 
-**What It Means**: The pool has been created with basic information and is visible only to you, the creator.
+The lifecycle is designed to support collaboration—you create and prepare pools, share them for review, submit them for structuring, and finalize them as completed deals. Each stage has specific purposes and allows different types of actions, ensuring that pools progress correctly through the structured finance workflow.
 
-**What You Can Do**:
-- Add or remove loans
-- Edit pool information
-- Configure sharing settings
-- Assign organizations
-- Map loans to the pool
-- Review pool metrics
+## Status Meanings
 
-**What You Cannot Do**:
-- Share with other parties (you can prepare for sharing)
-- Submit for mandate (pool must be shared first)
+**Created** - The pool has been created with basic information and is visible only to you, the creator. This is the initial stage where you prepare the pool, add loans, and configure settings before sharing.
 
-**Who Can See It**: Only you, the issuer who created it.
+**Preview** - The pool has been shared with other organizations for review. Recipients can view and analyze the pool, and you can continue making changes based on feedback.
 
-**Typical Duration**: This status lasts until you share the pool or submit it for review.
+**Mandate Pending** - The pool has been submitted to a market maker for mandate review. The market maker is deciding whether to accept the mandate to structure the deal.
 
-**What Happens Next**: Pool moves to Preview status when shared, or to Mandate Pending when submitted for mandate.
+**Deal** - The market maker has accepted the mandate, and the pool is finalized and structured. The transaction is committed, and editing is restricted.
 
-### Preview Status
+## What Each Status Indicates
 
-**What It Means**: The pool has been shared with other organizations for review. Recipients can view and analyze the pool.
+**Created Status** indicates that you're still preparing the pool privately. You can edit freely, add or remove loans, configure sharing settings, and make changes as needed. The pool is not yet visible to other parties. This status tells you that the pool is in its early stages and not yet ready for external review or collaboration.
 
-**What You Can Do**:
-- Continue adding or removing loans
-- Edit pool information
-- Respond to feedback
-- Make changes based on feedback
-- Share with additional parties
-- Submit for mandate review
+**Preview Status** indicates that the pool is being reviewed by other parties. Recipients can view and analyze, provide feedback, and request changes. You can continue editing and responding to feedback. The pool is visible to shared parties. This status tells you that collaboration has begun and the pool is moving toward structuring.
 
-**What Recipients Can Do**:
-- View pool details and metrics
-- Analyze loan characteristics
-- Provide feedback
-- Request changes (if permissions allow)
-- Download data (if permissions allow)
+**Mandate Pending Status** indicates that a formal request has been made to a market maker to structure the deal. The market maker is evaluating whether to accept. You're waiting for the market maker's decision. This status tells you that the pool is at a critical decision point and you're waiting for the market maker's response.
 
-**Who Can See It**: You (the issuer) and organizations the pool is shared with (market makers, investors, rating agencies, etc.).
+**Deal Status** indicates that the transaction is finalized and committed. The pool is structured, editing is restricted, and ongoing activities are managed separately. This status tells you that the pool has reached its final state and the deal is complete.
 
-**Typical Duration**: This status lasts until you submit for mandate or the pool progresses to Deal status.
-
-**What Happens Next**: Pool moves to Mandate Pending when submitted to market maker, or to Deal status when mandate is accepted.
-
-### Mandate Pending Status
-
-**What It Means**: The pool has been submitted to a market maker for mandate review. The market maker is deciding whether to accept the mandate to structure the deal.
-
-**What You Can Do**:
-- View the pool
-- Wait for market maker decision
-- Limited editing (depends on platform configuration)
-
-**What Market Maker Can Do**:
-- Review pool details and metrics
-- Accept the mandate
-- Reject the mandate
-- Request changes or provide feedback
-
-**Who Can See It**: You (the issuer) and the assigned market maker.
-
-**Typical Duration**: This status lasts until the market maker makes a decision (accept or reject).
-
-**Possible Outcomes**:
-- **Accepted**: Pool moves to Deal status, and market maker proceeds with structuring.
-- **Rejected**: Pool may return to Preview status, and you can submit to another market maker.
-
-**What Happens Next**: Pool moves to Deal status if mandate is accepted, or returns to Preview if rejected.
-
-### Deal Status
-
-**What It Means**: The market maker has accepted the mandate, and the pool is finalized and structured. The transaction is committed.
-
-**What You Can Do**:
-- View the pool
-- Track the deal
-- Limited or no editing (pool is finalized)
-
-**What Other Parties Can Do**:
-- View the finalized deal
-- Access deal information
-- Manage ongoing activities (servicing, payments, etc.)
-
-**Who Can See It**: All relevant parties based on organization assignments (issuer, market maker, investors, servicers, paying agents, etc.).
-
-**Typical Duration**: This is typically the final status for the pool. The deal is complete, and ongoing activities are managed separately.
-
-**Note**: Once a pool reaches Deal status, it's difficult or impossible to revert to earlier statuses. The pool is considered finalized.
-
-**What Happens Next**: Deal is complete, and ongoing activities (servicing, payments) are managed separately.
-
-## Important Notes
-
-- **Status Progression**: Pools typically progress from Created → Preview → Mandate Pending → Deal. You cannot skip stages or go backwards easily.
-
-- **Status Changes Are Recorded**: Every status change is recorded with who changed it and when, creating a complete audit trail.
-
-- **Status Controls Actions**: The current status determines what actions are available. Disabled buttons usually indicate the status doesn't allow that action.
-
-- **Status Badges**: Statuses are displayed as badges or labels, often color-coded (green for completed, yellow for pending, etc.).
-
-- **Cannot Edit After Deal**: Once a pool becomes a Deal, editing is restricted. Make sure all information is correct before finalizing.
-
-- **Market Maker Rejection**: If a market maker rejects a mandate, the pool may return to Preview status, allowing you to submit to another market maker.
-
-- **Status History**: You can view the complete history of status changes, including who changed them and when, by viewing the pool's audit trail or history.
-
-- **Multiple Statuses Possible**: Depending on the transaction type and workflow, pools may have additional statuses or qualifiers (for example, "Preview - Under Review" or "Deal - Active").
-
-Understanding all pool states helps you track your pool's progress, know what actions are available at each stage, and understand why certain actions are disabled.
+Understanding all pool states helps you navigate the platform effectively, know what actions are available at each stage, track your pool's progress from creation to deal completion, and understand what each status means for your workflow.

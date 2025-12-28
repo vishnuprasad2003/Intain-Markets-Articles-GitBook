@@ -7,102 +7,24 @@ description: Understand the difference between change requests and rejections
 
 ## Overview
 
-Understanding the difference between feedback (change requests) and rejection helps you know how to respond and what to expect. Both are part of the review process but have different implications for your workflow and how you proceed.
+Understanding the difference between feedback (change requests) and rejection helps you know how to respond and what to expect. Both are part of the review process but have different implications for your workflow and how you proceed. Change requests allow improvement and resubmission, while rejection is a final decision requiring a new item.
 
-## What This Means for the User
+## Possible Outcomes
 
-When reviewers provide input, there are two types:
+When reviewers provide input, there are two types: **Change Requests (Feedback)** - less severe, reviewers want modifications but the item can be improved and resubmitted, and **Rejection** - more severe, reviewers have decided the item cannot proceed, and you must create a new item to try again.
 
-- **Change Requests (Feedback)**: Less severe - reviewers want modifications but the item can be improved and resubmitted. This is an iterative improvement process.
+## What Each Outcome Means
 
-- **Rejection**: More severe - reviewers have decided the item cannot proceed, and you must create a new item to try again.
+**Change Requests (Feedback)** are requests for modifications to improve the item. Issues can be fixed through editing, it's an iterative improvement process, it's not a final state—the item can proceed after changes, and it's an opportunity to refine and improve. When changes are requested, status changes to show changes are requested (e.g., "CHANGES_REQUESTED"), the item becomes editable again, you can make modifications, you can save multiple times while working, and you can resubmit when changes are complete. The outcome is that the item can be improved and resubmitted, the process can continue after changes, iterative improvement is possible, multiple rounds of changes are allowed, and the item can eventually be approved.
 
-Understanding the difference helps you respond appropriately and know what to expect.
+**Rejection** is a final decision that the item will not proceed. The item cannot be fixed through editing, it's a final state—the process stops here, you must create a new item to try again, and it's more severe than change requests. When an item is rejected, status changes to "Rejected" or "REJECTED," the item becomes read-only, it cannot be edited, it cannot be resubmitted, and the process stops for this item. The outcome is that the item cannot proceed, you must create a new item to try again, the rejected item remains as a record, and you can learn from rejection feedback for future submissions.
 
-## Key Concepts Explained
+## Next Steps for Users
 
-### Change Requests (Feedback)
+**When Changes Are Requested** - Read the change request carefully to understand what specific modifications are needed. Make all requested changes thoroughly and address all requested items. Review your changes before resubmitting to ensure everything is complete. Resubmit when changes are complete—the item will go back to review status. Be prepared for multiple rounds of changes if needed, as iterative improvement is part of the process.
 
-**What They Are**:
-- Requests for modifications to improve the item
-- Issues can be fixed through editing
-- Iterative improvement process
-- Not a final state - item can proceed after changes
-- Opportunity to refine and improve
+**When an Item Is Rejected** - Review the rejection reason carefully to understand why the item was rejected. Learn from rejection feedback to improve future submissions. Create a completely new item that addresses the issues identified in the rejection. Ensure the new item complies with all requirements and has all necessary information. Try again with improvements, incorporating lessons learned from the rejection.
 
-**What Happens**:
-- Status changes to show changes are requested (e.g., "CHANGES_REQUESTED")
-- Item becomes editable again
-- You can make modifications
-- You can save multiple times while working
-- You can resubmit when changes are complete
+**Understanding the Difference** - Change requests mean the reviewer sees potential but needs improvements—you can fix and resubmit. Rejection means the reviewer has decided the item cannot proceed—you must start fresh with a new item. Change requests allow iterative improvement, while rejection requires starting over. Both provide valuable feedback, but they require different responses.
 
-**How to Respond**:
-- Read change request carefully
-- Understand what specific modifications are needed
-- Make all requested changes thoroughly
-- Address all requested items
-- Review your changes before resubmitting
-- Resubmit when complete
-
-**Outcome**:
-- Item can be improved and resubmitted
-- Process can continue after changes
-- Iterative improvement is possible
-- Multiple rounds of changes are allowed
-- Item can eventually be approved
-
-### Rejection
-
-**What It Is**:
-- Final decision that item will not proceed
-- Item cannot be fixed through editing
-- Final state - process stops here
-- Must create new item to try again
-- More severe than change requests
-
-**What Happens**:
-- Status changes to "Rejected" or "REJECTED"
-- Item becomes read-only
-- Cannot be edited
-- Cannot be resubmitted
-- Process stops for this item
-
-**How to Respond**:
-- Review rejection reason carefully
-- Understand why item was rejected
-- Learn from rejection feedback
-- Create completely new item
-- Address issues identified in rejection
-- Try again with improvements
-
-**Outcome**:
-- Item cannot proceed
-- Must create new item to try again
-- New item goes through full review process
-- Can try again with improvements
-- Process starts over with new item
-
-## Important Points to Know
-
-- **Change requests allow you to edit and resubmit** - This is less severe and allows iterative improvement without starting over.
-
-- **Rejections are final and cannot be resubmitted** - Rejected items are final, and you must create new items.
-
-- **You can go through multiple rounds of changes** - Change requests allow iterative improvement until approved or rejected.
-
-- **Rejected items must be replaced with new items** - You cannot resubmit rejected items - new items are required.
-
-- **Both help improve quality** - Both change requests and rejections help improve quality, but through different approaches.
-
-- **Change requests are faster** - You can update and resubmit quickly without creating new items.
-
-- **Rejections require starting over** - You must create new items, which takes more time.
-
-- **Rejection reasons are important** - Pay attention to reasons to understand what needs to be fixed in new items.
-
-- **Change request details guide improvements** - Specific change requests tell you exactly what to modify.
-
-- **Both provide learning opportunities** - Both help you understand requirements and improve future submissions.
-
-Understanding feedback vs rejection helps you know how to respond to change requests, understand what to do after rejection, improve items through iterative changes, know when to create new items, and navigate review processes effectively to achieve approval.
+Understanding the difference between feedback and rejection helps you respond appropriately, know what to expect from each outcome, understand how to proceed based on the type of feedback received, and take appropriate next steps to move your submissions forward.

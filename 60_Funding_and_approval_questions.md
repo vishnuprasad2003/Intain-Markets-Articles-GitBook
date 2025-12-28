@@ -7,7 +7,7 @@ description: Answers to frequently asked questions about credit facilities, fund
 
 ## Overview
 
-This guide answers common questions about credit facilities, funding requests, approvals, and the funding process. These FAQs help you understand the funding workflow and know what to expect at each stage.
+This guide answers common questions about credit facilities, funding requests, approvals, and the funding process. These FAQs help you understand the funding workflow and know what to expect at each stage. Use this guide when you have questions about credit facility processes and funding operations.
 
 ## Frequently Asked Questions
 
@@ -99,26 +99,4 @@ A: Yes, you can see which lenders have approved or rejected drawdowns. Each lend
 
 A: Fund transfer timing depends on lender processes. After lenders approve drawdowns, they transfer funds and confirm transfers. Transfer timing varies by lender. You'll receive funds as lenders confirm transfers.
 
-**Q: What happens if a lender rejects a drawdown?**
-
-A: If a lender rejects a drawdown, that lender doesn't participate in that drawdown. Other lenders make independent decisions. You receive funds only from lenders who approve. Rejected lenders don't fund their portion.
-
-### Approval Process Questions
-
-**Q: Why do approvals take time?**
-
-A: Approvals require careful review to ensure quality, compliance, and proper evaluation. Reviewers need time to evaluate submissions thoroughly. Review time varies based on complexity and workload.
-
-**Q: Can I speed up approvals?**
-
-A: You can ensure your submissions are complete and accurate, which helps reviewers evaluate quickly. However, review time depends on reviewer workload and cannot be controlled by submitters.
-
-**Q: What if I disagree with a rejection?**
-
-A: Rejections are final decisions. You cannot appeal rejections, but you can create new submissions addressing the rejection reasons. Use rejection feedback to improve future submissions.
-
-**Q: Can I see approval history?**
-
-A: Yes, you can view approval history on item details pages. History shows who approved or rejected, when decisions were made, and any comments or reasons provided.
-
-Understanding funding and approval questions helps you navigate credit facility workflows, understand the funding process, know what to expect at each stage, and work effectively within the approval workflow.
+Understanding funding and approval questions helps you navigate the credit facility workflow effectively, know what to expect at each stage, understand approval processes, and work efficiently within the funding workflow.

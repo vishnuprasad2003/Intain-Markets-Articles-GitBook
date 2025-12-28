@@ -7,136 +7,40 @@ description: Understand common reasons actions are blocked and how to resolve th
 
 ## Overview
 
-Understanding why actions are blocked helps you know what needs to happen before you can proceed. This guide explains common reasons actions are blocked and how to resolve them, helping you work effectively within workflow requirements.
+Understanding why actions are blocked helps you know what needs to happen before you can proceed. This guide explains common reasons actions are blocked and how to resolve them, helping you work effectively within workflow requirements. Actions are blocked when certain conditions aren't met.
 
-## Applicable Users
+## Frequently Asked Questions
 
-- All platform users who encounter disabled action buttons
+**Q: Why is my action button disabled?**
 
-## Rules Explained
+A: Action buttons are disabled when the item isn't in the right status, required information is missing, you're waiting for another party to act, you don't have permission for your role, or the action was already completed. Hover over disabled buttons to see tooltips explaining why they're disabled.
 
-### Common Blocking Reasons
+**Q: What does "wrong status" mean?**
 
-Actions are blocked when any of these conditions apply:
+A: Wrong status means the item isn't in the correct status for this action. Workflow doesn't permit the action at the current status, and you must progress through statuses in order. You cannot skip workflow steps, and status progression is required before the action becomes available.
 
-1. **Wrong Status**
-   - Item isn't in the right status for this action
-   - Workflow doesn't permit the action at current status
-   - Must progress through statuses in order
-   - Cannot skip workflow steps
-   - Status progression is required
+**Q: What information might be missing?**
 
-2. **Missing Information**
-   - Required fields not filled
-   - Documents not uploaded
-   - Information incomplete
-   - Prerequisites missing
-   - Required data not provided
+A: Missing information could include required fields that aren't filled, documents that aren't uploaded, incomplete information, missing prerequisites, or required data that hasn't been provided. Check the item details to see what's required.
 
-3. **Waiting for Others**
-   - Another party needs to act first
-   - Previous step not completed
-   - Dependency not satisfied
-   - Waiting for action from another role
-   - Workflow is blocked by another party
+**Q: Why am I waiting for others?**
 
-4. **No Permission**
-   - Your role doesn't allow this action
-   - You don't have access to this item
-   - Not assigned to item
-   - Permissions not granted
-   - Role restrictions apply
+A: You're waiting for others when another party needs to act first, a previous step hasn't been completed, a dependency isn't satisfied, you're waiting for action from another role, or the workflow is blocked by another party. Check the item status to see what's pending.
 
-5. **Already Completed**
-   - Action already taken
-   - Cannot repeat action
-   - Already in final state
-   - Process complete for this action
-   - Action cannot be repeated
+**Q: How do I check if I have permission?**
 
-### How to Resolve Blocking Issues
+A: Verify you're logged in with the correct role, check if your role has permission for this action, ensure you're assigned to this item, verify you have access to this item, and confirm your role allows this action. Different roles have different permissions.
 
-1. **Check Status**
-   - Verify current status of the item
-   - Complete required steps first
-   - Progress through workflow properly
-   - Wait for status to change if needed
-   - Ensure status allows the action
+**Q: What if the action was already completed?**
 
-2. **Complete Information**
-   - Fill all required fields
-   - Upload required documents
-   - Complete all information
-   - Meet all prerequisites
-   - Ensure data is complete
+A: If the action was already completed, you cannot repeat it. The item may already be in a final state, the process may be complete for this action, or the action cannot be repeated. Check the item status to see if the action was already taken.
 
-3. **Wait for Others**
-   - Wait for other party to act
-   - Check what's pending
-   - Monitor status changes
-   - Follow up if needed
-   - Understand workflow dependencies
+**Q: How do I resolve blocking issues?**
 
-4. **Verify Permissions**
-   - Ensure your role allows this action
-   - Check that you have access
-   - Verify you're assigned to the item
-   - Confirm permissions are granted
-   - Check role requirements
+A: Check the item status and ensure it allows the action, complete all required information and upload required documents, wait for other parties if needed, verify your role has permission, and review requirements to ensure everything is complete. The platform typically provides guidance on what's needed.
 
-5. **Review Requirements**
-   - Check what's needed for the action
-   - Verify all requirements are met
-   - Review error messages or tooltips
-   - Understand what's blocking the action
-   - Address all blocking issues
+**Q: Can I see why an action is blocked?**
 
-## Impact on Users
+A: Yes, hover over disabled buttons to see tooltips explaining why they're disabled. Check status messages nearby, look for error or warning messages, review the item status badge, and check requirements sections for guidance.
 
-### When Actions Are Blocked
-
-- **You Cannot Proceed**: Blocked actions prevent you from proceeding until issues are resolved.
-
-- **Requirements Not Met**: Some condition prevents the action - identify and address it.
-
-- **Workflow Is Blocked**: Something needs to happen before you can proceed.
-
-- **Check Tooltips or Messages**: Disabled buttons usually show reasons why they're disabled.
-
-- **Plan Accordingly**: Understanding blocking reasons helps you plan your workflow.
-
-### How Blocking Protects You
-
-- **Prevents Errors**: Blocking prevents actions that would cause errors or problems.
-
-- **Ensures Proper Order**: Blocking ensures workflow progresses in proper order.
-
-- **Maintains Quality**: Blocking ensures quality standards are met before proceeding.
-
-- **Protects All Parties**: Blocking protects all parties by ensuring proper process.
-
-- **Ensures Compliance**: Blocking ensures compliance with rules and requirements.
-
-## Important Notes
-
-- **Actions are blocked for valid reasons** - Blocking prevents errors and ensures proper workflow.
-
-- **Status controls what actions are available** - The current status is the primary factor determining action availability.
-
-- **Prerequisites must be met** - Required information, documents, or previous steps must be complete.
-
-- **Permissions determine access** - Your role and permissions control what actions you can take.
-
-- **Workflow progression ensures proper order** - Actions must happen in the correct order according to workflow rules.
-
-- **Tooltips explain blocking** - Hover over disabled buttons to see tooltips explaining why they're disabled.
-
-- **Messages provide guidance** - Error messages or status messages often explain what's needed.
-
-- **Complete requirements** - All requirements must be met before actions are enabled.
-
-- **Check systematically** - Check status, permissions, prerequisites, and dependencies systematically.
-
-- **Resolve issues to proceed** - Address blocking issues to enable actions and proceed.
-
-Understanding why actions are blocked helps you know what needs to happen to enable actions, understand workflow requirements, resolve blocking issues, work effectively within workflow constraints, and ensure proper process progression.
+Understanding why actions are blocked helps you know what needs to happen before you can proceed, resolve blocking issues effectively, work within workflow requirements, and take appropriate actions when they become available.

@@ -7,96 +7,52 @@ description: Understand the purpose and importance of approvals in the platform
 
 ## Overview
 
-Approvals are a fundamental part of the Intain Markets platform. They act as gates in workflows, ensuring quality, compliance, and proper authorization before items proceed to next stages. Understanding why approvals exist helps you appreciate the workflow structure and know what to expect at each approval stage.
+Approvals are fundamental to how Intain Markets operates. They serve as quality gates, compliance checkpoints, and authorization mechanisms that ensure transactions progress correctly while protecting all parties involved. Understanding why approvals exist helps you appreciate their value and work effectively within the approval-driven workflow structure.
 
-## What This Means for the User
+## How the Platform Is Designed
 
-Approvals affect your workflow in several ways:
+The platform is designed with the understanding that structured finance transactions involve significant commitments, financial risk, and regulatory requirements. Approvals are built into the workflow architecture as required checkpoints where authorized parties must review and authorize items before they can proceed to the next stage.
 
-- **They ensure quality** - Items are reviewed before proceeding, maintaining standards and catching issues early.
+Approvals are not optional suggestions—they are mandatory gates that:
+- **Enforce quality standards** - Items are reviewed by qualified parties before proceeding, ensuring they meet quality requirements
+- **Maintain compliance** - Regulatory requirements and business rules are verified before commitment
+- **Protect all parties** - Approvals ensure all parties agree before proceeding, reducing risk and ensuring alignment
+- **Create accountability** - Approval decisions are documented and attributed to specific reviewers
+- **Enable improvement** - Reviewers can request changes before approval, allowing iterative improvement
+- **Control workflow progression** - Approvals act as gates that control when items can proceed
 
-- **They provide oversight** - Authorized parties review submissions, ensuring they meet requirements before commitment.
+The platform enforces approvals automatically, ensuring that required approvals happen before items can progress. This structure protects all parties while maintaining workflow efficiency.
 
-- **They protect all parties** - Approvals ensure all parties agree before proceeding, reducing risk and ensuring alignment.
+## What This Enables for Users
 
-- **They maintain compliance** - Approvals ensure regulatory requirements and business rules are followed.
+For **Submitters**, approvals ensure that your submissions are reviewed by qualified parties before commitment, protect you by requiring authorization before proceeding, and provide opportunities for feedback and improvement. You can be confident that approved items meet standards and have proper authorization.
 
-- **They create transparency** - Approval processes are visible, with clear decision points and documented decisions.
+For **Reviewers**, approvals give you clear decision points where your review is required, ensure you review items at the appropriate stage, and provide tools to request improvements before approval. You can make informed decisions and ensure quality and compliance.
 
-- **They enable collaboration** - Approvals facilitate communication between parties, allowing feedback and improvement.
+For **All Parties**, approvals provide transparency into the review process, ensure quality through structured review, maintain compliance through verification, and create accountability through documented decisions. Everyone can see that items have been properly reviewed and authorized.
 
-Understanding approvals helps you work effectively within the structured workflow and know what to expect.
+The approval structure enables efficient collaboration while maintaining quality, compliance, and proper authorization throughout transactions.
 
-## Key Concepts Explained
+## Key Principles to Understand
 
-### Quality Assurance
+**Quality Assurance** - Approvals ensure quality by requiring review before proceeding. Qualified parties examine items to ensure they meet standards, identify issues early, and provide opportunities for improvement before final commitment.
 
-Approvals ensure quality by:
+**Compliance and Risk Management** - Approvals ensure compliance by verifying that transactions meet regulatory requirements and business rules. Reviewers assess risk before commitment, protecting all parties and ensuring proper authorization.
 
-- **Review Before Proceeding**: Items are reviewed by qualified parties before they can proceed, ensuring they meet quality standards.
+**Transparency and Accountability** - Approvals provide transparency by creating visible decision points in workflows. All approval decisions are documented with who approved, when, and why, creating accountability and supporting audit requirements.
 
-- **Standards Maintenance**: Approvals maintain consistent quality standards across all transactions.
+**Workflow Control** - Approvals control workflow progression by acting as gates that ensure proper order and sequence. Items cannot proceed without required approvals, ensuring that important steps aren't skipped and prerequisites are met.
 
-- **Issue Identification**: Reviewers identify issues early, before they become problems.
+**Protection for All Parties** - Approvals protect all parties by ensuring agreement before commitment. Submitters know their items are reviewed, reviewers can ensure quality, and all parties benefit from structured review processes.
 
-- **Improvement Opportunity**: Approvals provide opportunities for feedback and improvement before final commitment.
+**Collaboration Enablement** - Approvals enable collaboration by creating structured opportunities for feedback and improvement. Reviewers can request changes, submitters can respond, and items can be improved iteratively before final approval.
 
-### Compliance and Risk Management
+**Role-Based Authority** - Different roles have authority to approve different items at different stages. This ensures proper authorization and maintains workflow integrity by ensuring the right people review the right items at the right time.
 
-Approvals ensure compliance and manage risk by:
+**Documented Decisions** - All approval decisions are recorded with timestamps, reviewer information, and any comments or reasons. This creates complete audit trails for compliance and accountability purposes.
 
-- **Regulatory Compliance**: Approvals ensure transactions comply with regulations and legal requirements.
+**Sequential Requirements** - Approvals must happen in the correct order. You cannot skip approval steps or proceed without required approvals. This ensures that items progress through proper review sequences.
 
-- **Business Rules**: Approvals verify that business rules and policies are followed.
+**Change Requests vs. Rejection** - Reviewers can request changes (allowing improvement) or reject items (stopping the workflow). This distinction enables iterative improvement while maintaining quality standards.
 
-- **Risk Assessment**: Reviewers assess risk before commitment, protecting all parties.
-
-- **Authorization**: Approvals ensure proper authorization is obtained before proceeding.
-
-### Transparency and Accountability
-
-Approvals provide transparency and accountability by:
-
-- **Clear Decision Points**: Approval stages create clear decision points in workflows.
-
-- **Visible Process**: Approval processes are visible to all relevant parties.
-
-- **Documented Decisions**: All approval decisions are documented with who approved, when, and why.
-
-- **Audit Trail**: Complete audit trails show all approvals and decisions for compliance and accountability.
-
-### Workflow Control
-
-Approvals control workflow by:
-
-- **Gates in Process**: Approvals act as gates, ensuring proper order and progression.
-
-- **Sequential Progression**: Approvals ensure workflow progresses in the correct order.
-
-- **Dependency Management**: Approvals manage dependencies, ensuring prerequisites are met.
-
-- **Process Integrity**: Approvals maintain process integrity, preventing skipping of important steps.
-
-## Important Points to Know
-
-- **Approvals ensure quality** - Items are reviewed before proceeding, maintaining standards and catching issues early.
-
-- **They act as gates in workflows** - Approvals control when items can proceed to next stages.
-
-- **Some approvals require specific roles** - Only authorized roles can approve certain items (for example, only facility agents can approve term sheets).
-
-- **Approvals can be one-way or allow changes** - Some approvals are final, while others allow change requests for improvement.
-
-- **Approval history is maintained** - All approvals are recorded with timestamps and details for audit purposes.
-
-- **Approvals protect all parties** - They ensure all parties agree before commitment, reducing risk.
-
-- **They enable collaboration** - Approval processes facilitate communication and feedback between parties.
-
-- **They maintain compliance** - Approvals ensure regulatory and business rule compliance.
-
-- **They create accountability** - All approval decisions are tracked and attributed to specific users.
-
-- **They guide workflow** - Approvals show what needs to happen next and who needs to act.
-
-Understanding why approvals exist helps you appreciate the workflow structure, know what to expect at approval stages, understand the importance of review processes, and work effectively within the structured approval workflow that protects all parties and ensures quality and compliance.
+Understanding why approvals exist helps you appreciate their value in ensuring quality, maintaining compliance, protecting all parties, and creating accountability throughout structured finance transactions.

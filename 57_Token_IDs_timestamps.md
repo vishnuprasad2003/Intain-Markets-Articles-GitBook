@@ -7,104 +7,32 @@ description: Understand how tokens are tracked with unique identifiers and times
 
 ## Overview
 
-Tokens created for funding notices have unique identifiers and timestamps that enable complete tracking and auditability. Understanding token IDs and timestamps helps you track token creation, distribution, and transfers, ensuring complete transparency in the token-based drawdown process.
+Tokens created for funding notices have unique identifiers and timestamps that enable complete tracking and auditability. Understanding token IDs and timestamps helps you track token creation, distribution, and transfers, ensuring complete transparency in the token-based drawdown process. Each token has a unique ID and all token events are timestamped.
 
-## What This Means for the User
+## Reference Details
 
-When tokens are generated for funding notices:
+**Token IDs** - Token IDs are unique identifiers that distinguish each token from other tokens. Each token has a unique ID that enables tracking of individual tokens through their lifecycle. Token IDs link to blockchain records and platform records, helping maintain complete audit trails and enabling token transfers and tracking.
 
-- **Unique Identification**: Each token has a unique ID that enables tracking and verification.
+**Timestamps** - Timestamps record exactly when events occurred, creating complete chronological records of token activities. Timestamps are essential components of audit trails, help track process progression, and enable verification of when events occurred. Various token events are timestamped, including token creation, token distribution to lenders, borrower approval of token transfer, lender receipt of tokens, token transfers, and all other significant token events.
 
-- **Timestamp Tracking**: Every token event is timestamped, showing exactly when things happened.
+**Where Token Information Appears** - Token IDs and timestamps appear in funding notice details, token distribution information showing token allocation with IDs and timestamps, blockchain records linking to token IDs, audit trails showing complete token history, and reports and exports that include token tracking information.
 
-- **Complete Audit Trail**: Token IDs and timestamps create complete audit trails.
+**How to Access Token Information** - You can access token information by navigating to funding notice details and looking for token information sections. Token distribution arrays show token IDs and allocation details. Blockchain records can be accessed using token IDs for verification. Audit trails show complete token history with timestamps.
 
-- **Verification**: You can verify token information using IDs and timestamps.
+**Token Tracking** - Token IDs enable tracking of individual tokens through their entire lifecycle from creation to transfer. Timestamps show when each event occurred, creating a complete timeline of token activities. Combined, token IDs and timestamps provide complete traceability and auditability for all token-related activities.
 
-- **Transparency**: Complete tracking ensures transparency in token distribution and transfers.
+## Important Notes
 
-Understanding token IDs and timestamps helps you track tokens throughout their lifecycle and verify token information.
+**Unique Identification** - Each token has a unique ID that enables tracking and verification. Token IDs are permanent and cannot be changed, ensuring consistent tracking throughout the token lifecycle.
 
-## Key Concepts Explained
+**Complete Timestamping** - All significant token events are timestamped, creating complete chronological records. Timestamps are accurate and consistent, using standardized time formats for reliability.
 
-### Token IDs
+**Complete Audit Trail** - Token IDs and timestamps create complete audit trails for all token activities. This supports compliance requirements and enables complete transparency in token operations.
 
-Token IDs are unique identifiers:
+**Verification Capability** - Token IDs and timestamps enable verification of token information and activities. You can verify when tokens were created, distributed, and transferred using this information.
 
-- **Unique Identifiers**: Each token has a unique ID that distinguishes it from other tokens.
+**Blockchain Integration** - Token IDs link to blockchain records, enabling verification on the blockchain. This provides additional security and transparency for token operations.
 
-- **Enable Tracking**: Token IDs enable tracking of individual tokens through their lifecycle.
+**Permanent Records** - Token IDs and timestamps are permanent records that cannot be modified. This ensures that token history remains accurate and available for audit and compliance purposes.
 
-- **Link to Records**: Token IDs link to blockchain records and platform records.
-
-- **Maintain Audit Trail**: IDs help maintain complete audit trails.
-
-- **Enable Transfers**: Token IDs enable token transfers and tracking.
-
-### Timestamps
-
-Timestamps record when events occurred:
-
-- **Precise Time Recording**: Timestamps record exactly when events happened.
-
-- **Complete Chronology**: Timestamps create complete chronological records of token activities.
-
-- **Audit Trail Component**: Timestamps are essential components of audit trails.
-
-- **Process Tracking**: Timestamps help track process progression.
-
-- **Verification**: Timestamps enable verification of when events occurred.
-
-### What Gets Timestamped
-
-Various token events are timestamped:
-
-- **Token Creation**: When tokens are created is recorded.
-
-- **Token Distribution**: When tokens are distributed to lenders is recorded.
-
-- **Borrower Approval**: When borrower approves token transfer is recorded.
-
-- **Lender Receipt**: When lenders receive tokens is recorded.
-
-- **Token Transfer**: When tokens are transferred is recorded.
-
-- **All Events**: All significant token events are timestamped.
-
-### Where Token IDs and Timestamps Appear
-
-Token IDs and timestamps appear in:
-
-- **Funding Notice Details**: Token information is shown in funding notice details.
-
-- **Token Distribution Information**: Token allocation shows IDs and timestamps.
-
-- **Blockchain Records**: Token IDs link to blockchain records.
-
-- **Transaction History**: Token activities are recorded in transaction history.
-
-- **Audit Trails**: Complete audit trails include IDs and timestamps.
-
-## Important Points to Know
-
-- Token IDs are unique and cannot be changed - each token has a permanent unique identifier.
-
-- Timestamps are accurate and consistent - all timestamps use consistent time standards.
-
-- All token events are timestamped - every significant token event includes a timestamp.
-
-- Complete history is maintained - all token activities are recorded with IDs and timestamps.
-
-- Audit trail is preserved - complete audit trails are maintained for compliance.
-
-- Token IDs enable verification - you can verify token information using IDs.
-
-- Timestamps show progression - timestamps show how tokens progressed through the process.
-
-- Complete transparency - all token activities are tracked and visible to authorized parties.
-
-- Blockchain integration - Token IDs link to blockchain records for additional verification.
-
-- Easy to track - Token IDs and timestamps make it easy to track tokens throughout their lifecycle.
-
-Understanding token IDs and timestamps helps you track tokens throughout their lifecycle, verify token information, maintain complete audit trails, understand token distribution timing, and ensure transparency in the token-based drawdown process.
+Understanding token IDs and timestamps helps you track tokens throughout their lifecycle, verify token information, ensure complete auditability, support compliance requirements, and maintain transparency in token-based operations.

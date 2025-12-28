@@ -7,96 +7,54 @@ description: Understand who can see signatures and when they're visible
 
 ## Overview
 
-E-signatures are used throughout the platform for document signing. Understanding signature visibility helps you know who can see signatures, when they're visible, and how to access signed documents. This ensures you understand how signatures are tracked and who has access to signed documents.
+Electronic signatures are used throughout Intain Markets for document signing, providing legal validity and complete traceability. Understanding signature visibility helps you know who can see signatures, when they're visible, and how to access signed documents. This ensures you understand how signatures are tracked and who has access to signed documents throughout the workflow.
 
-## What This Means for the User
+## How to Navigate the Platform
 
-When you sign documents or review signed documents:
+**Accessing Signed Documents** - To view signed documents, navigate to the item (term sheet, master commitment, funding notice) and go to the Documents section. You'll see signed documents listed there, and you can click to view or download them. The platform shows you signed documents based on your role and permissions.
 
-- **Signatures Are Visible After Completion**: Once you complete a signature, it becomes visible to authorized parties.
+**Finding Signature Information** - When viewing signed documents, you can see signature details including who signed, when they signed, and signature information. The platform displays this information clearly, showing the complete signature history for the document.
 
-- **Signed Documents Are Stored Securely**: All signed documents are stored securely and can be accessed when needed.
+**Understanding Visibility Rules** - Signature visibility is controlled by your role and the workflow stage. Different roles can see different signatures at different stages. The platform automatically shows you signatures you're authorized to see based on your role and the document's workflow stage.
 
-- **Authorized Parties Can View**: Only authorized parties can view signatures and signed documents.
+**Checking Signature Status** - You can check whether signatures are complete by viewing the document's status and signature information. The platform shows you which parties have signed and which signatures are still pending.
 
-- **Complete Tracking**: Signature completion is tracked with timestamps and signer information.
+**Accessing Signature Details** - When viewing signed documents, you can see complete signature details including signer name, organization, timestamp, and signature information. This provides complete transparency about who signed what and when.
 
-- **Audit Trail**: Complete audit trail shows who signed what and when.
+## What You Will See
 
-Understanding signature visibility helps you know who can see your signatures and how to access signed documents.
+**After You Sign** - Once you complete a signature, it becomes visible immediately to authorized parties. The signed document is stored securely, and signature completion is tracked with timestamp and signer information. You'll see confirmation that your signature was recorded.
 
-## Key Concepts Explained
+**Authorized Party Views** - Authorized parties can see signatures based on document type and workflow. For term sheets, borrowers and facility agents can see the borrower's signature. For master commitments, lenders, facility agents, and borrowers can see lender signatures. For funding notices, facility agents, borrowers, and lenders can see relevant signatures.
 
-### Where Signatures Are Used
+**Signature Status Indicators** - The platform shows signature status through indicators and badges. You'll see which signatures are complete and which are pending. Status indicators help you understand where documents are in the signing process.
 
-Signatures are used in several places:
+**Complete Documents** - When viewing signed documents, you'll see the complete document with all signatures. The platform displays signatures clearly, showing who signed and when. You can view the full document with all signatures included.
 
-- **Term Sheets**: Borrowers sign term sheets electronically before submission.
+**Signature History** - The platform maintains complete signature history, showing all signatures on a document with timestamps and signer information. You can see the complete signing history for transparency and audit purposes.
 
-- **Master Commitments**: Lenders sign master commitments to approve facilities.
+**Role-Based Visibility** - Signature visibility is controlled by role and workflow stage. You'll only see signatures you're authorized to see based on your role. Different roles see different signatures at different stages of the workflow.
 
-- **Funding Notices**: Facility agents sign funding notices for each lender individually.
+## Helpful Tips
 
-- **Other Documents**: Various other documents may require electronic signatures.
+**Signatures Are Permanent** - Once you sign a document, the signature is permanent and cannot be easily undone. Make sure you're ready to sign before completing the signature process.
 
-### Signature Visibility After Signing
+**Check Signature Status** - Before taking actions that depend on signatures, check the signature status to ensure all required signatures are complete. The platform shows you which signatures are pending and which are complete.
 
-After you complete a signature:
+**Understand Role-Based Visibility** - Signature visibility depends on your role and the workflow stage. Different roles can see different signatures at different times. Understanding this helps you know what signatures you can see and when.
 
-- **Immediately Visible**: Signature becomes visible immediately after completion.
+**Access Signed Documents** - Signed documents are stored securely and can be accessed through the item's Documents section. Navigate to the item and look for the Documents section to find signed documents.
 
-- **Authorized Parties**: Only authorized parties can see the signature.
+**Complete Audit Trail** - All signatures are recorded with complete information—who signed, when they signed, and signature details. This creates a complete audit trail for compliance and accountability purposes.
 
-- **Stored Securely**: Signed document is stored securely.
+**Legal Validity** - Electronic signatures are legally valid and enforceable. Signatures provide legal validity to documents and create binding commitments.
 
-- **Tracked**: Signature completion is tracked with timestamp and signer information.
+**Authorized Access Only** - Only authorized parties can view signatures and signed documents. The platform controls access based on roles and workflow stages, ensuring appropriate security.
 
-- **Cannot Be Undone**: Signatures are permanent and cannot be easily undone.
+**Check Before Acting** - If an action depends on signatures being complete, check the signature status first. The platform shows you which signatures are required and which are complete.
 
-### Who Can See Signatures
+**Signature Notifications** - The platform may notify you when signatures are required or when signatures are completed. Check notifications to stay informed about signature status.
 
-Signature visibility depends on document type and workflow:
-
-- **Term Sheets**: Borrower and facility agent can see borrower's signature.
-
-- **Master Commitments**: Lenders, facility agents, and borrowers can see lender signatures.
-
-- **Funding Notices**: Facility agents, borrowers, and lenders can see relevant signatures.
-
-- **Role-Based Access**: Signature visibility is controlled by role and workflow stage.
-
-### Accessing Signed Documents
-
-You can access signed documents by:
-
-- **Item Details Page**: Navigate to the item (term sheet, master commitment, funding notice) and go to Documents section.
-
-- **Signed Document View**: Click to view or download signed documents.
-
-- **Signature Details**: See signature details including signer, timestamp, and signature information.
-
-- **Complete Document**: View the complete signed document with all signatures.
-
-## Important Points to Know
-
-- Signatures are visible after completion - once you sign, authorized parties can see your signature.
-
-- Signed documents are stored securely - all signed documents are stored securely and can be retrieved when needed.
-
-- Authorized parties can view signatures - only parties authorized by workflow and role can view signatures.
-
-- Signatures are tracked with timestamps - every signature includes timestamp and signer information.
-
-- Complete audit trail is maintained - all signatures are recorded for audit and compliance purposes.
-
-- Signatures are legally binding - electronic signatures are legally valid and enforceable.
-
-- Cannot be undone easily - once signed, signatures are permanent and cannot be easily reversed.
-
-- Role-based visibility - signature visibility is controlled by role and workflow stage.
-
-- Document access is controlled - access to signed documents is controlled by permissions and workflow.
-
-- Complete transparency - authorized parties can see all relevant signatures for transparency.
+**Multiple Signatures** - Some documents require multiple signatures from different parties. The platform tracks all signatures and shows you which are complete and which are pending.
 
 Understanding signature visibility helps you know who can see your signatures, when signatures are visible, how to access signed documents, understand signature security, and know how signatures are tracked throughout the platform.

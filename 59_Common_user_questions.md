@@ -7,7 +7,7 @@ description: Answers to frequently asked questions about pools, loans, and platf
 
 ## Overview
 
-This guide answers common questions users have about pools, loans, and general platform usage. These FAQs help you quickly find answers to typical questions and understand how the platform works.
+This guide answers common questions users have about pools, loans, and general platform usage. These FAQs help you quickly find answers to typical questions and understand how the platform works. Use this guide when you need quick answers to common questions about using the platform.
 
 ## Frequently Asked Questions
 

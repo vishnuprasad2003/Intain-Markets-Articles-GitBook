@@ -7,102 +7,72 @@ description: Understand the controls and accountability measures in the platform
 
 ## Overview
 
-Intain Markets implements comprehensive controls and accountability measures to ensure security, compliance, and proper governance. Understanding these controls helps you understand how the platform protects all parties, maintains integrity, and ensures proper workflow execution.
+Intain Markets implements comprehensive controls and accountability measures throughout the platform to ensure security, compliance, proper governance, and protection for all parties. These controls are built into the platform's architecture, working together to maintain integrity, enforce proper workflows, and ensure that transactions proceed correctly while protecting all participants.
 
-## What This Means for the User
+## How the Platform Is Designed
 
-The platform implements various controls:
+The platform is designed with multiple layers of controls that work together to ensure security, compliance, and proper operation. These controls are not optional features—they are fundamental design elements that operate automatically to protect all parties and maintain platform integrity.
 
-- **Access Controls**: Your access is controlled by your role and permissions, ensuring you can only see and do what's appropriate.
+**Access Controls** ensure that users can only see and do what's appropriate for their role:
+- Role-based permissions determine what actions are available
+- Authentication ensures only authorized users can access the platform
+- Session management provides secure access with automatic expiration
+- Visibility controls ensure users only see items where they have appropriate roles or permissions
 
-- **Workflow Controls**: Workflow steps cannot be skipped, ensuring proper order and progression.
+**Workflow Controls** ensure that transactions progress correctly:
+- Status-based controls prevent actions that aren't allowed at the current stage
+- Sequential progression ensures steps happen in proper order
+- Dependency management ensures prerequisites are met before actions are enabled
+- Process integrity prevents skipping important steps or improper progression
 
-- **Approval Controls**: Approvals are required at appropriate stages, ensuring quality and compliance.
+**Data Controls** ensure data quality and accuracy:
+- Data validation checks format and quality before acceptance
+- Business rules are enforced automatically
+- Format requirements ensure consistency
+- Error prevention catches issues before they become problems
 
-- **Data Controls**: Data is validated before acceptance, ensuring quality and accuracy.
+**Audit Controls** ensure accountability and transparency:
+- All actions are tracked with attribution and timestamps
+- Complete history is maintained for all items
+- Status changes are recorded with who changed them and when
+- Document changes are tracked with version history
 
-- **Audit Controls**: All actions are tracked, ensuring accountability and transparency.
+These controls work together automatically, ensuring that the platform operates securely and correctly while maintaining accountability and transparency.
 
-These controls protect all parties, ensure compliance, and maintain platform integrity.
+## What This Enables for Users
 
-## Key Concepts Explained
+For **All Users**, controls provide confidence that the platform operates securely, that workflows progress correctly, and that data quality is maintained. You can trust that the platform enforces proper processes and protects your information.
 
-### Access Controls
+For **Submitters**, controls ensure that your submissions are reviewed properly, that approvals happen in the correct sequence, and that your data is validated before acceptance. You can be confident that approved items have met quality and compliance standards.
 
-Access is controlled through:
+For **Reviewers**, controls ensure that you review items at the appropriate stage, that you have proper authorization to make decisions, and that your decisions are documented and attributed. You can make decisions knowing that proper processes are followed.
 
-- **Role-Based Access**: Each role has specific permissions - you can only perform actions allowed by your role.
+For **Compliance and Governance**, controls provide assurance that regulatory requirements are met, that business rules are enforced, and that complete audit trails are maintained. You can demonstrate that transactions followed proper processes.
 
-- **Authentication**: You must authenticate to access the platform, ensuring only authorized users can access.
+For **Security**, controls protect sensitive information, ensure proper access, and maintain platform integrity. You can trust that your data and transactions are secure.
 
-- **Session Management**: Sessions are managed securely, with automatic expiration for security.
+The control structure enables secure, compliant, and accountable operation while maintaining usability and efficiency.
 
-- **Permission Enforcement**: The platform automatically enforces permissions, preventing unauthorized actions.
+## Key Principles to Understand
 
-- **Visibility Control**: You only see items where you have a role or where items are shared with you.
+**Layered Protection** - Controls operate at multiple levels—access, workflow, data, and audit—providing comprehensive protection. These layers work together to ensure security and integrity.
 
-### Workflow Controls
+**Automatic Enforcement** - Controls are enforced automatically by the platform. You don't need to remember to follow rules—the platform ensures proper operation automatically.
 
-Workflow is controlled through:
+**Role-Based Access** - Access is controlled by roles and permissions. You can only see and do what's appropriate for your role, ensuring proper separation of duties and security.
 
-- **Status-Based Controls**: Status controls what actions are available - you can only take actions allowed by current status.
+**Workflow Integrity** - Workflow controls ensure that steps happen in proper order and that prerequisites are met. You cannot skip steps or proceed improperly—the platform enforces correct progression.
 
-- **Sequential Progression**: Workflow steps must happen in order - you cannot skip steps.
+**Data Quality** - Data controls ensure that information is validated before acceptance, maintaining quality and consistency. Invalid or incomplete data is rejected, preventing errors.
 
-- **Dependency Management**: Prerequisites must be met before actions are enabled.
+**Complete Accountability** - Audit controls ensure that all actions are tracked and attributed. You can see who did what and when, creating accountability for all activities.
 
-- **Process Integrity**: Workflow integrity is maintained, preventing improper progression.
+**Compliance Support** - Controls ensure that regulatory requirements and business rules are followed. The platform enforces compliance automatically, reducing the risk of violations.
 
-- **Gate Controls**: Approvals act as gates, ensuring proper review before proceeding.
+**Transparency** - While controls protect security, they also provide transparency through audit trails. Authorized parties can see what happened, when, and who was responsible.
 
-### Data Controls
+**Protection for All Parties** - Controls protect all parties by ensuring proper processes, maintaining data quality, and enforcing security. Everyone benefits from the protection that controls provide.
 
-Data quality is controlled through:
+**Permanent Records** - Audit controls create permanent records that cannot be deleted or modified. This ensures that accountability and compliance records remain accurate and available.
 
-- **Data Validation**: Data is validated before acceptance, ensuring format and quality standards.
-
-- **Format Checks**: Format requirements are enforced, ensuring data consistency.
-
-- **Business Rules**: Business rules are enforced, ensuring compliance with requirements.
-
-- **Quality Maintenance**: Data quality is maintained through validation and checks.
-
-- **Error Prevention**: Validation prevents errors before they occur.
-
-### Audit Controls
-
-Accountability is ensured through:
-
-- **Action Tracking**: All actions are tracked with who did what and when.
-
-- **Complete History**: Complete history is maintained for all items.
-
-- **Status Tracking**: All status changes are tracked with attribution.
-
-- **Document Tracking**: Document uploads and changes are tracked.
-
-- **Audit Trails**: Complete audit trails support compliance and accountability.
-
-## Important Points to Know
-
-- Access is controlled by role and permissions - you can only access what your role allows.
-
-- Workflow steps cannot be skipped - you must progress through workflows in proper order.
-
-- Approvals are required at appropriate stages - approvals ensure quality and compliance before proceeding.
-
-- All actions are tracked and auditable - complete audit trails ensure accountability.
-
-- Data is validated before acceptance - validation ensures data quality and accuracy.
-
-- Controls protect all parties - controls ensure security and protect all parties involved.
-
-- Compliance is maintained - controls ensure regulatory and business rule compliance.
-
-- Integrity is protected - controls maintain platform and transaction integrity.
-
-- Transparency is provided - audit trails provide transparency into all activities.
-
-- Accountability is ensured - all actions are attributed to specific users.
-
-Understanding controls and accountability helps you appreciate how the platform ensures security, compliance, proper governance, protects all parties, maintains integrity, and provides complete transparency and accountability for all platform activities.
+Understanding controls and accountability helps you appreciate how the platform ensures security, maintains compliance, enforces proper governance, protects all parties, and provides complete transparency and accountability for all platform activities.

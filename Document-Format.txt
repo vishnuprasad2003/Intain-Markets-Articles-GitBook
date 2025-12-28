@@ -1,0 +1,184 @@
+Enterprise-Grade Document Types (Final, Expanded)
+
+Below is the final, MNC-standard documentation model, mapped to your platform.
+
+🟦 DOCUMENT TYPE A — Platform Foundation Documents
+
+(Appear once, at the beginning)
+
+Purpose
+
+Orient users, set mental models, explain philosophy
+
+Used For
+
+What is Intain Markets
+
+Status & approval philosophy
+
+End-to-end traceability
+
+Controls & accountability
+
+Structure (Fixed)
+Title
+Overview
+How the Platform Is Designed
+What This Enables for Users
+Key Principles to Understand
+
+
+📌 No steps
+📌 No features
+📌 Strategic explanation only
+
+🟩 DOCUMENT TYPE B — Role & Access Documents
+Used For
+
+User Roles & Responsibilities
+
+Who can do what
+
+Enabled vs Disabled actions
+
+Structure
+Title
+Overview
+Roles Covered
+What Each Role Can Do
+Important Access Notes
+
+🟨 DOCUMENT TYPE C — Navigation & Usage Documents
+Used For
+
+Login & Navigation
+
+Role-based views
+
+Signature visibility
+
+Structure
+Title
+Overview
+How to Navigate the Platform
+What You Will See
+Helpful Tips
+
+🟧 DOCUMENT TYPE D — Process / How-To Documents
+
+(Already validated)
+
+Used For
+
+Pool creation & sharing
+
+Loan management
+
+Approvals, submissions, reviews
+
+Structure
+Title
+Overview
+Who Can Use This
+When This Is Used
+Step-by-Step Process
+Rules & Validations
+What Happens Next
+
+🟪 DOCUMENT TYPE E — Lifecycle & Status Explanation Documents
+Used For
+
+Pool lifecycle & statuses
+
+Loan lifecycle & statuses
+
+Facility setup status
+
+All pool states explained
+
+All loan states explained
+
+Structure
+Title
+Overview
+Lifecycle Overview
+Status Meanings
+What Each Status Indicates
+
+
+📌 This is very common in MNC portals
+📌 Avoid procedural tone
+
+🟫 DOCUMENT TYPE F — Outcome & Decision Documents
+Used For
+
+What happens after rejection
+
+Feedback vs rejection
+
+Funding request outcomes
+
+Structure
+Title
+Overview
+Possible Outcomes
+What Each Outcome Means
+Next Steps for Users
+
+🟦 DOCUMENT TYPE G — Reference / Lookup Documents
+
+(Already validated)
+
+Used For
+
+Status + qualifiers explained
+
+Token IDs, timestamps
+
+Who changed what and when
+
+Structure
+Title
+Overview
+Reference Details
+Important Notes
+
+🟥 DOCUMENT TYPE H — FAQ / Support Documents
+Used For
+
+Common user questions
+
+“Why can’t I act?”
+
+Why actions are blocked
+
+Funding & approval questions
+
+Structure
+Title
+Overview
+Frequently Asked Questions
+
+🧠 DOCUMENT TYPE I — Change & Release Information
+Used For
+
+New features
+
+Status or logic changes
+
+Retired flows
+
+Structure
+Title
+Overview
+What Changed
+Impact on Existing Users
+
+
+
+
+Final Guidance (Very Important)
+Golden MNC Rule
+
+Not all pages are “how-to”.
+Mature platforms explain, orient, and justify — not just instruct.

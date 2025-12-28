@@ -7,124 +7,46 @@ description: Understand why actions are enabled or disabled and what you can do 
 
 ## Overview
 
-Understanding why actions are enabled or disabled helps you know what you can do and why certain actions aren't available. This guide explains the logic behind enabled and disabled buttons and actions, helping you understand workflow requirements and what needs to happen to enable actions.
+Understanding why actions are enabled or disabled helps you know what you can do and why certain actions aren't available. The platform automatically enables or disables actions based on your role, the item's status, and whether prerequisites are met. This guide explains the logic behind enabled and disabled buttons and actions, helping you understand workflow requirements and what needs to happen to enable actions.
 
-## Applicable Users
+## Roles Covered
 
-- All platform users who see enabled or disabled action buttons
+This applies to all platform users who see enabled or disabled action buttons, regardless of role. The same logic applies to all roles, though specific actions vary by role.
 
-## Rules Explained
+## What Each Role Can Do
 
-### Why Actions Are Enabled
+All roles follow the same principles for enabled and disabled actions:
 
-Actions are enabled when all of the following conditions are met:
+**When Actions Are Enabled** - Actions are enabled when you have permission, the status allows it, and all prerequisites are met. Enabled buttons mean you can take the action now, workflow can progress, all requirements are satisfied, and you have permission for the action.
 
-1. **You Have Permission**
-   - Your role allows the action
-   - You have access to the item
-   - You're assigned to the item
-   - Permissions are granted for this action
+**When Actions Are Disabled** - Actions are disabled when the status doesn't allow it, required information is missing, you're waiting for another party to act, the action was already completed, or you don't have permission. Disabled buttons mean you cannot take the action yet, some requirement prevents the action, workflow is blocked, and you should check tooltips or messages for reasons.
 
-2. **Status Allows It**
-   - Item is in correct status for this action
-   - Workflow permits this action at this stage
-   - Status progression allows it
-   - Not blocked by current status
+**How to Enable Actions** - To enable actions, ensure the item is in the correct status, complete all prerequisites (fill required fields, upload documents, complete previous steps), wait for other parties if needed, verify your role allows the action and you have access, and review requirements to ensure everything is complete.
 
-3. **Prerequisites Met**
-   - Required information is present
-   - Previous steps completed
-   - Dependencies satisfied
-   - All requirements met
+## Important Access Notes
 
-### Why Actions Are Disabled
+**Enabled Buttons Mean You Can Use Them** - If a button is enabled, you can click it and the action will proceed. Enabled buttons indicate that all conditions are met.
 
-Actions are disabled when any of the following conditions apply:
+**Disabled Buttons Show Reasons** - Hover over disabled buttons or check tooltips to see why they're disabled. The platform typically provides explanations for disabled actions.
 
-1. **Wrong Status**
-   - Item isn't in right status for this action
-   - Workflow doesn't permit action at this stage
-   - Status blocks the action
-   - Wrong stage in workflow
+**Status Controls Availability** - The current status is the primary factor determining action availability. Status must allow the action for it to be enabled.
 
-2. **Missing Information**
-   - Required fields not filled
-   - Documents not uploaded
-   - Information incomplete
-   - Prerequisites missing
+**Prerequisites Must Be Met** - Required information, documents, or previous steps must be complete before actions are enabled. Missing prerequisites disable actions.
 
-3. **Waiting for Others**
-   - Another party needs to act first
-   - Previous step not completed
-   - Dependency not satisfied
-   - Waiting for action from another role
+**Permissions Determine Access** - Your role and permissions control what actions you can take. Even if status allows an action, you may not have permission.
 
-4. **Already Completed**
-   - Action was already taken
-   - Cannot repeat action
-   - Already in final state
-   - Process complete for this action
+**Workflow Order Matters** - Actions must happen in the correct order according to workflow rules. You cannot skip steps or proceed out of sequence.
 
-5. **No Permission**
-   - Your role doesn't allow this action
-   - You don't have access to this item
-   - Not assigned to item
-   - Permissions not granted
+**Complete Requirements** - All requirements must be met before actions are enabled. Partial completion keeps actions disabled.
 
-## Impact on Users
+**Check Messages** - The platform often shows messages explaining why actions are disabled. Look for notifications or messages that explain restrictions.
 
-### When Actions Are Enabled
+**Status Changes Enable Actions** - When status changes, new actions may become available. Status progression enables new capabilities.
 
-- **You can proceed** - Enabled buttons mean you can take the action now.
+**Individual Tracking** - Each user's permissions and access are tracked individually. Your enabled/disabled actions reflect your specific role and access.
 
-- **Workflow can progress** - Taking enabled actions moves the workflow forward.
+**Role and Status Together** - Both your role and the item's status determine what actions are available. You need both permission and appropriate status.
 
-- **Requirements are met** - All conditions for the action are satisfied.
-
-- **You have permission** - Your role allows this action.
-
-### When Actions Are Disabled
-
-- **You need to wait** - Disabled buttons mean you cannot take the action yet.
-
-- **Requirements not met** - Some condition prevents the action.
-
-- **Workflow is blocked** - Something needs to happen before you can proceed.
-
-- **Check tooltips or messages** - Disabled buttons usually show reasons why they're disabled.
-
-### How to Enable Actions
-
-1. **Check Status** - Ensure item is in correct status for the action.
-
-2. **Complete Prerequisites** - Fill required fields, upload documents, complete previous steps.
-
-3. **Wait for Others** - If waiting for another party, wait for them to complete their action.
-
-4. **Verify Permissions** - Ensure your role allows this action and you have access.
-
-5. **Review Requirements** - Check what's needed and ensure everything is complete.
-
-## Important Notes
-
-- **Enabled buttons mean you can use them** - If a button is enabled, you can click it and the action will proceed.
-
-- **Disabled buttons usually show reasons** - Hover over disabled buttons or check tooltips to see why they're disabled.
-
-- **Status controls what actions are available** - The current status is the primary factor determining action availability.
-
-- **Prerequisites must be met** - Required information, documents, or previous steps must be complete.
-
-- **Permissions determine access** - Your role and permissions control what actions you can take.
-
-- **Workflow order matters** - Actions must happen in the correct order according to workflow rules.
-
-- **Complete requirements** - All requirements must be met before actions are enabled.
-
-- **Check messages** - The platform often shows messages explaining why actions are disabled.
-
-- **Status changes enable actions** - When status changes, new actions may become available.
-
-- **Individual tracking** - Each user's permissions and access are tracked individually.
+**Waiting for Others** - Some actions require other parties to act first. You may need to wait for approvals, submissions, or other actions before you can proceed.
 
 Understanding enabled vs disabled actions helps you know what you can do, why certain actions aren't available, what needs to happen to enable actions, and how to work effectively within workflow requirements.
