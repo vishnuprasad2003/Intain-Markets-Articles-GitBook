@@ -69,7 +69,7 @@ Use token approval when:
 3. **Complete Approval**
    - Confirm your approval action
    - Approval is processed
-   - Status updates to show token approval
+   - Status updates to TOKEN_APPROVED
    - Funding notice becomes visible to lenders
 
 4. **Verify Approval Completion**
@@ -100,25 +100,25 @@ Use token approval when:
 
 ## Rules & Validations
 
-- You can only approve tokens after they've been generated - tokens must be created by facility agent before you can approve.
+- You can only approve tokens after they've been generated. Tokens must be created by facility agent before you can approve.
 
-- You must review allocation before approving - take time to verify token amounts and distribution are correct.
+- You must review allocation before approving. Take time to verify token amounts and distribution are correct.
 
-- Approval makes funding notice visible to lenders - once approved, lenders can see and review the notice.
+- Approval makes funding notice visible to lenders. Once approved, lenders can see and review the notice.
 
-- Once approved, you cannot easily undo the approval - approval is a significant step, so verify everything before approving.
+- Once approved, you cannot easily undo the approval. Approval is a significant step, so verify everything before approving.
 
-- Lenders can then review and approve drawdowns - after your approval, lenders make their own decisions.
+- Lenders can then review and approve drawdowns. After your approval, lenders make their own decisions.
 
-- Token amounts must match funding request - the total token amount should equal your approved funding request amount.
+- Token amounts must match funding request. The total token amount should equal your approved funding request amount.
 
-- Lender distribution is based on facility participation - allocations are calculated from lender participation percentages.
+- Lender distribution is based on facility participation. Allocations are calculated from lender participation percentages.
 
-- Approval is required for process to continue - the drawdown process cannot proceed until you approve token transfer.
+- Approval is required for process to continue. The drawdown process cannot proceed until you approve token transfer.
 
-- Status updates after approval - funding notice status changes to reflect your approval.
+- Status updates after approval. Funding notice status changes to TOKEN_APPROVED to reflect your approval.
 
-- Complete audit trail - your approval is recorded with timestamp and details.
+- Complete audit trail. Your approval is recorded with timestamp and details.
 
 ## What Happens Next
 

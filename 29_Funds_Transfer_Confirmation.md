@@ -7,7 +7,7 @@ description: Learn how lenders confirm fund transfers to complete drawdowns
 
 ## Overview
 
-Funds transfer confirmation is the final step where lenders confirm that they have transferred funds to the borrower. This completes the drawdown process for each individual lender and provides official confirmation that funds have been disbursed. Each lender confirms their transfer independently, allowing for flexible timing and individual tracking.
+Funds transfer confirmation is the final step where lenders confirm they have transferred funds to borrowers, completing the drawdown process for each individual lender. This provides official confirmation that funds have been disbursed and marks lender participation as complete.
 
 ## Who Can Use This
 
@@ -16,7 +16,7 @@ Funds transfer confirmation is the final step where lenders confirm that they ha
 ## When This Is Used
 
 Use fund transfer confirmation when:
-- You have approved a drawdown and want to proceed
+- You have approved a drawdown
 - You have transferred funds to the borrower
 - You want to mark the transfer as complete
 - You need to finalize your participation in the drawdown
@@ -103,25 +103,25 @@ Use fund transfer confirmation when:
 
 ## Rules & Validations
 
-- You can only confirm after you've approved the drawdown - you must approve before you can confirm transfer.
+- You can only confirm after you've approved the drawdown. You must approve before you can confirm transfer.
 
-- You should transfer funds before confirming - confirm only after you've actually transferred funds to the borrower.
+- You should transfer funds before confirming. Confirm only after you've actually transferred funds to the borrower.
 
-- Confirmation marks your participation as complete - once confirmed, your participation in this drawdown is finalized.
+- Confirmation marks your participation as complete. Once confirmed, your participation in this drawdown is finalized.
 
-- Each lender confirms independently - you confirm your own transfer, and other lenders confirm theirs separately.
+- Each lender confirms independently. You confirm your own transfer, and other lenders confirm theirs separately.
 
-- Your confirmation doesn't affect other lenders - other lenders confirm their transfers independently.
+- Your confirmation doesn't affect other lenders. Other lenders confirm their transfers independently.
 
-- Confirmation is final - once confirmed, you cannot easily undo the confirmation.
+- Confirmation is final. Once confirmed, you cannot easily undo the confirmation.
 
-- Transfer details should be accurate - provide correct transfer information for proper documentation.
+- Transfer details should be accurate. Provide correct transfer information for proper documentation.
 
-- Status updates after confirmation - funding notice status reflects your confirmation.
+- Status updates after confirmation. Funding notice status reflects your confirmation.
 
-- Complete audit trail - your confirmation is recorded with timestamp and transfer details.
+- Complete audit trail. Your confirmation is recorded with timestamp and transfer details.
 
-- Borrower visibility - borrowers can see which lenders have confirmed transfers.
+- Borrower visibility. Borrowers can see which lenders have confirmed transfers.
 
 ## What Happens Next
 
@@ -142,4 +142,4 @@ After all lenders confirm:
 - Facility utilization is updated
 - Drawdown is fully documented
 
-Understanding funds transfer confirmation helps you complete the drawdown process, finalize your participation in credit facility drawdowns, and provide proper documentation that funds have been disbursed to borrowers.
+Understanding funds transfer confirmation helps you complete the drawdown process, finalize your participation in credit facility drawdowns, provide proper documentation that funds have been disbursed, and ensure complete transparency in the fund transfer process.

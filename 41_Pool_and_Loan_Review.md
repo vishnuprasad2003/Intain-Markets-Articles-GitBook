@@ -7,7 +7,7 @@ description: Learn how investors review pools and loans shared with them
 
 ## Overview
 
-This guide covers how investors and lenders review pools and loans shared with them. Learn how to evaluate investment opportunities, analyze pool characteristics, assess loan quality, and make informed investment decisions based on thorough review and analysis.
+Pool and loan review is the process where investors and lenders review pools and loans shared with them to evaluate investment opportunities, analyze pool characteristics, assess loan quality, and make informed investment decisions. This guide covers how investors evaluate opportunities and assess risk-return profiles.
 
 ## Who Can Use This
 
@@ -23,122 +23,67 @@ Use pool and loan review when:
 - You're making investment decisions
 - You need to assess risk and return profiles
 
-## Step-by-Step Process
+## Review Process
 
-### Reviewing Pools
+**Accessing Shared Pools** - When issuers share pools with you, you receive notifications. Check notifications for new pool shares, navigate to shared pools or preview queue, open pool details, and review complete pool information.
 
-1. **Access Pool**
-   - Check notifications for new pool shares
-   - Navigate to shared pools or preview queue
-   - Open pool details
-   - Review complete pool information
+**Reviewing Pool Information** - Review complete pool information including pool name, asset class, transaction type, description, mapped loans, pool metrics, organization assignments, and current status. Understand the full context of the investment opportunity.
 
-2. **Analyze Pool Metrics**
-   - **Total Balance**: Review total pool balance and size
-   - **Loan Count**: Check number of loans in pool
-   - **Weighted Average Coupon**: Evaluate interest rate characteristics
-   - **Weighted Average FICO**: Assess credit quality and borrower credit scores
-   - **Loan-to-Value Ratios**: Assess collateral characteristics for secured loans
-   - **Debt Service Metrics**: Review payment capacity and service coverage
-   - **Geographic Distribution**: Review borrower locations and geographic risk
-   - **Other Metrics**: Review all relevant pool statistics and characteristics
+**Analyzing Pool Metrics** - Review total pool balance and size, check number of loans in pool, evaluate weighted average coupon (interest rate characteristics), assess weighted average FICO (credit quality and borrower credit scores), review loan-to-value ratios (collateral characteristics for secured loans), check debt service metrics (payment capacity and service coverage), review geographic distribution (borrower locations and geographic risk), and review all relevant pool statistics and characteristics.
 
-3. **Review Loan Characteristics**
-   - View individual loan details
-   - Assess loan distribution and diversity
-   - Evaluate risk characteristics
-   - Review performance metrics if available
-   - Check loan quality indicators
-   - Assess loan composition
+**Reviewing Loan Characteristics** - View individual loan details, assess loan distribution and diversity, evaluate risk characteristics, review performance metrics if available, check loan quality indicators, and assess loan composition.
 
-4. **Evaluate Investment Opportunity**
-   - Assess investment attractiveness
-   - Evaluate risk-return profile
-   - Consider return potential
-   - Determine fit with your investment criteria
-   - Assess marketability and liquidity
-   - Evaluate competitive positioning
+**Evaluating Investment Opportunity** - Assess investment attractiveness, evaluate risk-return profile, consider return potential, determine fit with your investment criteria, assess marketability and liquidity, and evaluate competitive positioning.
 
-5. **Review Pool Documentation**
-   - Check pool documentation completeness
-   - Review loan data quality
-   - Assess supporting materials
-   - Verify compliance information
-   - Check data accuracy
+**Reviewing Pool Documentation** - Check pool documentation completeness, review loan data quality, assess supporting materials, verify compliance information, and check data accuracy.
 
-### Reviewing Individual Loans
+## Evaluation Criteria
 
-1. **Access Loan Details**
-   - Navigate to loan list within pool
-   - Open individual loan details
-   - Review complete loan information
+**Pool Quality Assessment** - Evaluate overall pool quality, assess loan characteristics and diversity, review pool metrics and statistics, check loan quality indicators, and assess pool composition and structure.
 
-2. **Analyze Loan Characteristics**
-   - Review borrower information
-   - Assess loan amount and terms
-   - Evaluate credit scores and risk indicators
-   - Check loan-to-value ratios
-   - Review payment history if available
-   - Assess loan performance
+**Risk Profile Evaluation** - Evaluate credit risk, assess concentration risk, review geographic risk, check industry or sector risk, evaluate overall risk-return profile, and determine if risk is acceptable for your investment criteria.
 
-3. **Evaluate Loan Quality**
-   - Assess loan quality indicators
-   - Review risk factors
-   - Check compliance with standards
-   - Evaluate loan eligibility
-   - Assess overall loan quality
+**Investment Attractiveness** - Assess investment appeal, evaluate return potential, review competitive positioning, check marketability and liquidity, and determine if opportunity fits your investment strategy.
 
-### Making Decisions
+**Loan Quality Assessment** - Review individual loan characteristics, assess loan distribution and diversity, evaluate risk characteristics, check loan performance data, and assess overall loan quality.
 
-1. **Express Interest**
-   - If pool meets your investment criteria
-   - Provide feedback or questions to issuer
-   - Indicate interest level
-   - Request additional information if needed
-   - Communicate your interest to issuer
+**Documentation Quality** - Check documentation completeness, verify data quality, review supporting materials, assess compliance information, and ensure documentation meets requirements.
 
-2. **Provide Feedback**
-   - Share observations about pool quality
-   - Provide suggestions for improvements
-   - Ask questions about pool characteristics
-   - Request clarifications if needed
-   - Help issuer improve pool quality
+**Overall Opportunity Assessment** - Consider all factors together, evaluate opportunity attractiveness, assess fit with your investment criteria, determine if opportunity should be pursued, and make informed decision.
 
-3. **Download Information** (if permitted)
-   - Download pool data if sharing permissions allow
-   - Export loan details for further analysis
-   - Save information for decision making
-   - Use downloaded data for evaluation
-   - Perform additional analysis offline
+## Making Decisions
 
-4. **Track Pools of Interest**
-   - Mark pools you're interested in
-   - Track pool status changes
-   - Monitor pool progress
-   - Stay informed about updates
-   - Follow pools through workflow
+**Express Interest** - Express interest when pool meets your investment criteria: pool quality is acceptable, risk-return profile is attractive, opportunity fits your investment strategy, and you want to pursue the opportunity. Provide feedback or questions to issuer, indicate interest level, request additional information if needed, and communicate your interest to issuer.
+
+**Provide Feedback** - Provide feedback to help issuers improve pools: share observations about pool quality, provide suggestions for improvements, ask questions about pool characteristics, request clarifications if needed, and help issuer improve pool quality.
+
+**Download Information** (if permitted) - Download pool data if sharing permissions allow: export loan details for further analysis, save information for decision making, use downloaded data for evaluation, and perform additional analysis offline.
+
+**Track Pools of Interest** - Mark pools you're interested in, track pool status changes, monitor pool progress, stay informed about updates, and follow pools through workflow.
+
+**Make Investment Decision** - Based on your review, decide whether to pursue the investment opportunity, participate in the deal when it becomes available, or pass on the opportunity. Your review helps inform your investment decision.
 
 ## Rules & Validations
 
-- You can only see pools shared with you - you cannot see pools that aren't shared with your organization.
+- You can only see pools shared with you. You cannot see pools that aren't shared with your organization.
 
-- Download permissions are controlled by issuer - issuers set whether you can download pool data.
+- Download permissions are controlled by issuer. Issuers set whether you can download pool data.
 
-- Feedback permissions are controlled by issuer - issuers control whether you can provide feedback.
+- Feedback permissions are controlled by issuer. Issuers control whether you can provide feedback.
 
-- You can review but cannot modify pools - you have read-only access to shared pools.
+- You can review but cannot modify pools. You have read-only access to shared pools.
 
-- Your review doesn't affect pool status - your review doesn't change pool workflow status.
+- Your review doesn't affect pool status. Your review doesn't change pool workflow status.
 
-- You can express interest without commitment - expressing interest doesn't obligate you to invest.
+- You can express interest without commitment. Expressing interest doesn't obligate you to invest.
 
-- Complete transparency - you can see all pool information that's shared with you.
+- Complete transparency. You can see all pool information that's shared with you.
 
-- Individual decisions - you make your own investment decisions independently.
+- Individual decisions. You make your own investment decisions independently.
 
-- Multiple pools can be reviewed - you can review multiple pools simultaneously.
+- Multiple pools can be reviewed. You can review multiple pools simultaneously.
 
-- Review history is maintained - your reviews and feedback are tracked.
+- Review history is maintained. Your reviews and feedback are tracked.
 
 ## What Happens Next
 

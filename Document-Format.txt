@@ -20,6 +20,8 @@ End-to-end traceability
 
 Controls & accountability
 
+Why approvals exist
+
 Structure (Fixed)
 Title
 Overview
@@ -27,12 +29,12 @@ How the Platform Is Designed
 What This Enables for Users
 Key Principles to Understand
 
-
 📌 No steps
 📌 No features
 📌 Strategic explanation only
 
 🟩 DOCUMENT TYPE B — Role & Access Documents
+
 Used For
 
 User Roles & Responsibilities
@@ -40,6 +42,8 @@ User Roles & Responsibilities
 Who can do what
 
 Enabled vs Disabled actions
+
+Roles in Credit Facilities
 
 Structure
 Title
@@ -49,6 +53,7 @@ What Each Role Can Do
 Important Access Notes
 
 🟨 DOCUMENT TYPE C — Navigation & Usage Documents
+
 Used For
 
 Login & Navigation
@@ -76,6 +81,14 @@ Loan management
 
 Approvals, submissions, reviews
 
+Term sheet submission
+
+Funding requests creation
+
+Token approval
+
+Facility creation
+
 Structure
 Title
 Overview
@@ -86,6 +99,7 @@ Rules & Validations
 What Happens Next
 
 🟪 DOCUMENT TYPE E — Lifecycle & Status Explanation Documents
+
 Used For
 
 Pool lifecycle & statuses
@@ -98,6 +112,10 @@ All pool states explained
 
 All loan states explained
 
+Master commitment statuses
+
+Term sheet, facility, and funding statuses
+
 Structure
 Title
 Overview
@@ -105,11 +123,11 @@ Lifecycle Overview
 Status Meanings
 What Each Status Indicates
 
-
 📌 This is very common in MNC portals
 📌 Avoid procedural tone
 
 🟫 DOCUMENT TYPE F — Outcome & Decision Documents
+
 Used For
 
 What happens after rejection
@@ -117,6 +135,8 @@ What happens after rejection
 Feedback vs rejection
 
 Funding request outcomes
+
+Loan rejection and reinstatement
 
 Structure
 Title
@@ -137,6 +157,8 @@ Token IDs, timestamps
 
 Who changed what and when
 
+Removed loans and calculations
+
 Structure
 Title
 Overview
@@ -144,11 +166,12 @@ Reference Details
 Important Notes
 
 🟥 DOCUMENT TYPE H — FAQ / Support Documents
+
 Used For
 
 Common user questions
 
-“Why can’t I act?”
+"Why can't I act?"
 
 Why actions are blocked
 
@@ -160,6 +183,7 @@ Overview
 Frequently Asked Questions
 
 🧠 DOCUMENT TYPE I — Change & Release Information
+
 Used For
 
 New features
@@ -174,11 +198,192 @@ Overview
 What Changed
 Impact on Existing Users
 
+🟨 DOCUMENT TYPE J — Concept / Module Overview Documents
 
+Used For
 
+Pools Overview
+
+Loans Overview
+
+Credit Facilities Overview
+
+Master Commitment Overview
+
+Funding Requests Overview
+
+Funding Notices Overview
+
+Purpose
+
+Explain what a concept/module is, its purpose, key components, and how it works
+
+Structure
+Title
+Overview
+What [Concept] Is
+Purpose and Use Cases
+Key Components
+How [Concept] Works
+Important Points to Know
+
+📌 Explains the concept itself, not platform design
+📌 Focus on what it is and how it functions
+📌 Natural, user-friendly explanation
+
+🟧 DOCUMENT TYPE K — Workflow Overview Documents
+
+Used For
+
+Term Sheet Workflow
+
+E-Signature Workflow
+
+Token Generation and Issuance
+
+Purpose
+
+Explain complete workflows from start to finish
+
+Structure
+Title
+Overview
+Workflow Overview
+Key Stages
+How the Workflow Progresses
+Important Points to Know
+
+📌 Explains complete workflows
+📌 Shows progression through stages
+📌 Avoids step-by-step instructions (use Type D for that)
+
+🟩 DOCUMENT TYPE L — Review and Decision Documents
+
+Used For
+
+Pool Mandate Review
+
+Term Sheet Review
+
+Funding Request Review
+
+Funding Notice Review
+
+Facility Approval
+
+Pool and Loan Review
+
+Purpose
+
+Explain how reviewers evaluate and make decisions
+
+Structure
+Title
+Overview
+Who Can Use This
+When This Is Used
+Review Process
+Evaluation Criteria
+Making Decisions
+Rules & Validations
+What Happens Next
+
+📌 Focus on evaluation and decision-making
+📌 Explains what reviewers look for
+📌 Covers approval/rejection/changes requested
 
 Final Guidance (Very Important)
 Golden MNC Rule
 
-Not all pages are “how-to”.
+Not all pages are "how-to".
 Mature platforms explain, orient, and justify — not just instruct.
+
+Document Type Mapping:
+
+Type A (Platform Foundation):
+- 01_What_is_Intain_Markets.md
+- 04_Status_and_Approval_Philosophy.md
+- 50_Why_approvals_exist.md
+- 54_End-to-end_traceability.md
+- 58_Controls_and_accountability.md
+
+Type B (Role & Access):
+- 02_User_Roles_and_Responsibilities.md
+- 15_Roles_in_Credit_Facilities.md
+- 49_Enabled_vs_Disabled_actions.md
+- 53_Who_can_do_what.md
+
+Type C (Navigation & Usage):
+- 03_Login_and_Navigation.md
+- 07_Role_Based_Pool_Views.md
+- 56_Signature_visibility.md
+
+Type D (Process/How-To):
+- 08_Pool_Sharing_and_Mandates.md
+- 09_Pool_Feedback_Workflow.md
+- 16_Term_Sheet_Workflow.md
+- 17_Term_Sheet_Change_Requests.md
+- 30_Pool_Creation_and_Sharing.md
+- 31_Loan_Management.md
+- 32_Term_Sheet_Submission.md
+- 33_Funding_Requests.md
+- 34_Token_Approval.md
+- 37_Facility_Creation.md
+- 38_Deal_Setup_and_Calculations.md
+- 40_Token_Generation_and_E-Sign.md
+- 44_Funds_Transfer_Confirmation.md
+- 27_Borrower_Token_Approval.md
+- 29_Funds_Transfer_Confirmation.md
+
+Type E (Lifecycle & Status):
+- 06_Pool_Lifecycle_and_Statuses.md
+- 11_Loan_Lifecycle_and_Statuses.md
+- 19_Master_Commitment_Statuses.md
+- 20_Facility_Setup_Status.md
+- 45_All_pool_states_explained.md
+- 46_All_loan_states_explained.md
+- 47_Term_sheet_facility_funding.md
+
+Type F (Outcome & Decision):
+- 12_Loan_Rejection_and_Reinstatement.md
+- 23_Funding_Request_Outcomes.md
+- 51_What_happens_after_rejection.md
+- 52_Feedback_vs_rejection.md
+
+Type G (Reference):
+- 13_Removed_Loans_and_Calculations.md
+- 48_Status__qualifiers_explained.md
+- 55_Who_changed_what_and_when.md
+- 57_Token_IDs_timestamps.md
+
+Type H (FAQ):
+- 59_Common_user_questions.md
+- 60_Funding_and_approval_questions.md
+- 61_Why_actions_are_blocked.md
+- 62_Why_cant_I_act.md
+
+Type I (Change & Release):
+- 63_New_features.md
+- 64_Status_or_logic_changes.md
+- 65_Retired_flows.md
+
+Type J (Concept/Module Overview):
+- 05_Pools_Overview.md
+- 10_Loans_Overview.md
+- 14_Credit_Facilities_Overview.md
+- 18_Master_Commitment_Overview.md
+- 21_Funding_Requests_Overview.md
+- 24_Funding_Notices_Overview.md
+
+Type K (Workflow Overview):
+- 25_Token_Generation_and_Issuance.md
+- 26_E-Signature_Workflow.md
+
+Type L (Review and Decision):
+- 22_Funding_Request_Review.md
+- 35_Pool_Mandate_Review.md
+- 36_Term_Sheet_Review.md
+- 39_Funding_Request_Review.md
+- 41_Pool_and_Loan_Review.md
+- 42_Facility_Approval.md
+- 43_Funding_Notice_Review.md

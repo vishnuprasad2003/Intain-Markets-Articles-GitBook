@@ -22,85 +22,63 @@ Use funding notice review when:
 - You're making drawdown decisions
 - You need to evaluate individual funding requests
 
-## Step-by-Step Process
+## Review Process
 
-### Reviewing Funding Notices
+**Accessing Funding Notices** - When borrowers approve token transfers, funding notices become visible to lenders. Check notifications for new funding notices, navigate to funding notices section, open funding notice details, and review all information provided.
 
-1. **Access Funding Notice**
-   - Check notifications for new funding notices
-   - Navigate to funding notices section
-   - Open funding notice details
-   - Review all information provided
+**Reviewing Funding Notice Information** - Review complete funding notice information including request amount, purpose, funding date, facility details, borrower information, token allocation, borrowing base impact, and supporting documentation.
 
-2. **Evaluate Drawdown Request**
-   - **Request Amount**: Review total drawdown amount
-   - **Purpose**: Check what funds will be used for
-   - **Funding Date**: Verify when funds are needed
-   - **Facility Details**: Review facility information and terms
-   - **Borrower Information**: Assess borrower details
+**Evaluating Drawdown Request** - Review total drawdown amount, check what funds will be used for, verify when funds are needed, review facility information and terms, and assess borrower details.
 
-3. **Review Token Allocation**
-   - Check your allocated token amount
-   - Verify your participation percentage
-   - Review total drawdown amount
-   - Confirm distribution details
-   - Check other lenders' allocations
+**Reviewing Token Allocation** - Check your allocated token amount, verify your participation percentage, review total drawdown amount, confirm distribution details, and check other lenders' allocations.
 
-4. **Assess Facility Impact**
-   - Evaluate borrowing base impact
-   - Check utilization after drawdown
-   - Review remaining capacity
-   - Assess facility health
-   - Evaluate risk factors
+**Assessing Facility Impact** - Evaluate borrowing base impact, check utilization after drawdown, review remaining capacity, assess facility health, and evaluate risk factors.
 
-5. **Review Supporting Information**
-   - Check any supporting documentation
-   - Review borrower's justification
-   - Assess drawdown appropriateness
-   - Evaluate overall request quality
+**Reviewing Supporting Information** - Check any supporting documentation, review borrower's justification, assess drawdown appropriateness, and evaluate overall request quality.
 
-### Making Approval Decisions
+## Evaluation Criteria
 
-1. **Approve Drawdown**
-   - Review thoroughly and evaluate drawdown request
-   - Assess that request meets your criteria
-   - Click "Approve" button or similar
-   - Confirm approval
-   - Your participation is confirmed
-   - You can proceed with fund transfer
-   - Your portion of the drawdown is committed
+**Drawdown Request Assessment** - Evaluate request amount and purpose, check funding date appropriateness, review facility details and terms, assess borrower information, and verify request justification.
 
-2. **Reject Drawdown**
-   - Review and identify concerns or issues
-   - Determine drawdown doesn't meet your criteria
-   - Click "Reject" button or similar
-   - Provide rejection reason if required
-   - Enter comments explaining rejection
-   - Confirm rejection
-   - Your portion will not be funded
-   - Other lenders make independent decisions
+**Token Allocation Review** - Verify your allocated token amount, check your participation percentage, review total drawdown amount, confirm distribution details, and check other lenders' allocations.
+
+**Facility Impact Evaluation** - Assess borrowing base impact, check utilization after drawdown, review remaining capacity, assess facility health, and evaluate risk factors.
+
+**Supporting Documentation** - Check supporting documentation completeness, review borrower's justification, assess drawdown appropriateness, and evaluate overall request quality.
+
+**Overall Request Quality** - Assess whether request is well-justified, evaluate if purpose is appropriate, check if timing is reasonable, verify borrower's track record, and consider facility utilization impact.
+
+**Risk Assessment** - Evaluate risk factors, assess borrower creditworthiness, review facility health, check utilization levels, and determine if risk is acceptable.
+
+## Making Decisions
+
+**Approve Drawdown** - Approve when request meets your criteria: request is well-justified, purpose is appropriate, timing is reasonable, facility health is good, and risk is acceptable. Click Approve button, confirm approval, your participation is confirmed, you can proceed with fund transfer, your portion of the drawdown is committed, and parties receive notifications.
+
+**Reject Drawdown** - Reject when request doesn't meet your criteria: request concerns, purpose issues, timing problems, facility health concerns, or risk unacceptable. Click Reject button, provide rejection reason if required, enter comments explaining rejection, confirm rejection, your portion will not be funded, other lenders make independent decisions, and parties receive notifications.
+
+**Decision Documentation** - Ensure all decisions are properly documented, provide clear reasons for decisions, include relevant comments or explanations, and maintain complete audit trail of decisions.
 
 ## Rules & Validations
 
-- Each lender makes independent decision - your decision doesn't affect other lenders' choices.
+- Each lender makes independent decision. Your decision doesn't affect other lenders' choices.
 
-- Your decision doesn't affect other lenders - other lenders can approve or reject independently.
+- Your decision doesn't affect other lenders. Other lenders can approve or reject independently.
 
-- You can approve or reject based on your evaluation - make decisions based on your own criteria and risk tolerance.
+- You can approve or reject based on your evaluation. Make decisions based on your own criteria and risk tolerance.
 
-- Approved lenders can proceed with fund transfer - if you approve, you can transfer your allocated portion.
+- Approved lenders can proceed with fund transfer. If you approve, you can transfer your allocated portion.
 
-- Rejected lenders don't participate in that drawdown - if you reject, you won't fund your portion, but other lenders can still participate.
+- Rejected lenders don't participate in that drawdown. If you reject, you won't fund your portion, but other lenders can still participate.
 
-- Decisions are final once submitted - you cannot easily change your decision after submitting.
+- Decisions are final once submitted. You cannot easily change your decision after submitting.
 
-- Rejection reasons help borrowers understand - providing reasons helps borrowers understand lender concerns.
+- Rejection reasons help borrowers understand. Providing reasons helps borrowers understand lender concerns.
 
-- Individual tracking - each lender's decision is tracked separately with timestamps and details.
+- Individual tracking. Each lender's decision is tracked separately with timestamps and details.
 
-- Borrower visibility - borrowers can see which lenders approved and which rejected.
+- Borrower visibility. Borrowers can see which lenders approved and which rejected.
 
-- Complete audit trail - all decisions are recorded with who made what decision and when.
+- Complete audit trail. All decisions are recorded with who made what decision and when.
 
 ## What Happens Next
 

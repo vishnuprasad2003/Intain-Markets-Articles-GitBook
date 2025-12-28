@@ -30,7 +30,7 @@ Use change requests when:
 1. **Receive Notification**
    - You receive notification that a change request has been made
    - Notification includes details about what needs to change
-   - Term sheet status changes to "Changes Requested"
+   - Term sheet status changes to "CHANGES_REQUESTED"
    - You can view the change request details
 
 2. **Review Change Request Details**
@@ -53,7 +53,7 @@ Use change requests when:
 
 1. **Access Term Sheet for Editing**
    - Navigate to your term sheet
-   - Status shows "Changes Requested" which allows editing
+   - Status shows "CHANGES_REQUESTED" which allows editing
    - Click to edit the term sheet
    - Editing interface opens
 
@@ -81,7 +81,7 @@ Use change requests when:
 
 5. **Save Your Changes**
    - Save your progress (you can save multiple times)
-   - Status remains "Changes Requested" while you work
+   - Status remains "CHANGES_REQUESTED" while you work
    - You can return later to complete changes if needed
    - Changes are saved and preserved
 
@@ -116,7 +116,7 @@ Use change requests when:
 2. **Resubmit for Facility Agent Review**
    - Click "Resubmit" or "Submit for Review" button
    - Confirm the resubmission action
-   - Status changes back to "Under Review" or "Pending Facility Agent Review"
+   - Status changes back to "FAReview"
    - Facility agent receives notification
 
 3. **Wait for Review Again**
@@ -126,15 +126,15 @@ Use change requests when:
    - You can monitor review progress
 
 4. **Handle Subsequent Decisions**
-   - **If Approved**: Term sheet is approved, master commitment is created
+   - **If Approved**: Term sheet is approved, master commitment is automatically created
    - **If Rejected**: Term sheet is rejected, you must create a new one
    - **If More Changes Requested**: Process repeats - you make changes and resubmit again
 
 ## Rules & Validations
 
-- You can only edit term sheets when status is "Changes Requested". Once resubmitted, editing is restricted until another change request is made.
+- You can only edit term sheets when status is "CHANGES_REQUESTED". Once resubmitted, editing is restricted until another change request is made.
 
-- Status remains "Changes Requested" while you work on changes. It doesn't change until you resubmit.
+- Status remains "CHANGES_REQUESTED" while you work on changes. It doesn't change until you resubmit.
 
 - You must address all requested changes before resubmitting. Incomplete changes may result in another change request.
 

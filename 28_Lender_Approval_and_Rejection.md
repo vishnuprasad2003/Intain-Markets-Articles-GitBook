@@ -114,25 +114,25 @@ Use lender approval when:
 
 ## Rules & Validations
 
-- Each lender makes independent decision - your decision doesn't affect other lenders' choices.
+- Each lender makes independent decision. Your decision doesn't affect other lenders' choices.
 
-- Your decision doesn't affect other lenders - other lenders can approve or reject independently.
+- Your decision doesn't affect other lenders. Other lenders can approve or reject independently.
 
-- You can approve or reject based on your evaluation - make decisions based on your own criteria and risk tolerance.
+- You can approve or reject based on your evaluation. Make decisions based on your own criteria and risk tolerance.
 
-- Approved lenders can proceed with fund transfer - if you approve, you can transfer your portion of funds.
+- Approved lenders can proceed with fund transfer. If you approve, you can transfer your portion of funds.
 
-- Rejected lenders don't participate in that drawdown - if you reject, you won't fund your portion, but other lenders can still participate.
+- Rejected lenders don't participate in that drawdown. If you reject, you won't fund your portion, but other lenders can still participate.
 
-- Decisions are final once submitted - you cannot easily change your decision after submitting.
+- Decisions are final once submitted. You cannot easily change your decision after submitting.
 
-- Rejection reasons help borrowers understand - providing reasons helps borrowers understand lender concerns.
+- Rejection reasons help borrowers understand. Providing reasons helps borrowers understand lender concerns.
 
-- Individual tracking - each lender's decision is tracked separately with timestamps and details.
+- Individual tracking. Each lender's decision is tracked separately with timestamps and details.
 
-- Borrower visibility - borrowers can see which lenders approved and which rejected.
+- Borrower visibility. Borrowers can see which lenders approved and which rejected.
 
-- Complete audit trail - all decisions are recorded with who made what decision and when.
+- Complete audit trail. All decisions are recorded with who made what decision and when.
 
 ## What Happens Next
 

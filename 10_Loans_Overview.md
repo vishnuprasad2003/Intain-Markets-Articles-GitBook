@@ -9,34 +9,66 @@ description: Learn what loans are and how they work in the platform
 
 Loans are individual credit agreements representing money lent to borrowers. In Intain Markets, loans are the building blocks of pools—you group multiple loans together to create pools for securitization, whole loan sales, or credit facilities. Understanding loans helps you effectively manage your loan portfolios and create successful pools.
 
-## How the Platform Is Designed
+## What Loans Are
 
-The platform is designed around the principle that loans are the fundamental units that make up larger transactions. Each loan contains borrower information, financial details, loan characteristics, and status information that contribute to pool-level metrics. When you upload loans, the system processes and standardizes the data, making loans available for mapping to pools.
+A loan represents a single credit agreement where money has been lent to a borrower. Each loan contains detailed information about the borrower, the loan amount, interest rates, payment terms, loan characteristics, and performance data. Loans are the fundamental units that make up larger transactions—you organize multiple loans into pools to present them to investors or use them in credit facilities.
 
-The platform recognizes that loans have lifecycles—they're uploaded, mapped to pools, processed, verified, potentially tokenized, and may be removed or reinstated as needed. Each stage has specific purposes and allows different types of actions, ensuring that loans progress correctly through the structured finance workflow with appropriate processing and validation at each step.
+Loans have their own lifecycle within the platform. They start as uploaded data, get processed and standardized, can be mapped to pools, go through verification and processing, may be tokenized, and can be removed or reinstated as needed. Each loan contributes its characteristics to pool-level metrics when mapped to a pool.
 
-## What This Enables for Users
+## Purpose and Use Cases
 
-For **Issuers**, loans enable you to manage individual credit agreements, organize loans into pools for transactions, track loan status and lifecycle, remove or reinstate loans as needed, and maintain complete loan portfolios—all while ensuring data quality and proper organization.
+Loans serve as the foundation for structured finance transactions:
 
-For **Investors and Market Makers**, loans provide visibility into individual loan characteristics, the ability to analyze loan quality and composition, tools to evaluate risk and return, and data needed for investment decisions—enabling informed evaluation of opportunities.
+**For Pool Creation** - Loans are the building blocks of pools. You map multiple loans to a pool to create investment opportunities or transaction packages. Pool metrics aggregate individual loan characteristics.
 
-For **Servicers**, loans provide access to assigned loans for servicing, tools to manage loan administration, tracking of payments and performance, and ongoing management capabilities—ensuring loans are properly serviced after deals are completed.
+**For Investment Analysis** - Investors and market makers review individual loan details to assess quality, evaluate risk, and make investment decisions. Loan characteristics help determine pool quality and attractiveness.
 
-For **All Parties**, loans provide complete transparency into loan characteristics, automatic aggregation into pool metrics, tracking of loan status and lifecycle, and complete audit trails—ensuring accountability and supporting decision-making.
+**For Loan Servicing** - After deals are completed, servicers manage individual loans, tracking payments, updating statuses, and handling ongoing administration. Each loan requires individual attention for servicing.
 
-## Key Principles to Understand
+**For Quality Management** - Loans can be removed from pools if they don't meet quality standards or have data issues. Removed loans are excluded from calculations but can be reinstated when issues are resolved.
+
+**For Portfolio Management** - Issuers manage loan portfolios, organizing loans into pools, tracking loan status, and ensuring data quality throughout the transaction lifecycle.
+
+## Key Components
+
+**Borrower Information** - Details about the borrower including name, contact information, and other identifying information. This helps understand who the loan is with and enables borrower-level analysis.
+
+**Financial Details** - Loan amount, interest rate (coupon), payment terms, maturity date, and other financial characteristics. These details determine the loan's financial profile and contribution to pool metrics.
+
+**Loan Characteristics** - FICO scores, loan-to-value ratios, geographic location, loan type, and other characteristics that help assess loan quality and risk. These characteristics aggregate to create pool-level statistics.
+
+**Status Information** - Current status showing where the loan is in its lifecycle, such as Unmapped, Mapped, Submitted, Verified, Minted, Removed, or Reinstated. Status tracks loan progression through the workflow.
+
+**Performance Data** - Payment history, current balance, outstanding amounts, and other performance metrics. This data helps assess loan quality and track performance over time.
+
+**Pool Assignment** - Which pool the loan is mapped to (if any). Loans can only belong to one pool at a time, ensuring clear ownership and preventing conflicts.
+
+## How Loans Work
+
+**Upload and Processing** - You upload loan data into the platform, typically through file upload. The system processes and standardizes the data, validates loan information, and makes loans available for mapping to pools or individual management.
+
+**Mapping to Pools** - You assign loans to pools by mapping them. When loans are mapped, they contribute their balance and characteristics to pool metrics. Pool metrics calculate automatically to include the mapped loan.
+
+**Status Progression** - Loans progress through statuses from Unmapped to Mapped to Submitted to Verified, and potentially to Minted if tokenization is required. Status shows where each loan is in its lifecycle and what actions are available.
+
+**Removal and Reinstatement** - Loans can be removed from pools if they don't meet criteria or have issues. Removed loans are excluded from pool calculations but remain visible. They can be reinstated when issues are resolved, and metrics recalculate to include them.
+
+**Contribution to Pool Metrics** - Individual loan characteristics aggregate to create pool-level statistics. Loan balances sum to total pool balance, loan counts aggregate, and weighted averages calculate from individual loan rates and scores.
+
+**Individual Management** - Each loan can be managed individually—you can view loan details, update information, track status, and manage loans independently of pools when needed.
+
+## Important Points to Know
 
 **One Pool Per Loan** - Loans can only belong to one pool at a time. If you want to move a loan to a different pool, you must unmap it from the current pool first. This ensures clear ownership and prevents conflicts.
 
 **Automatic Pool Calculations** - When you map loans to pools, pool metrics calculate automatically. Total balance, loan count, weighted averages, and other statistics update immediately to reflect the mapped loans.
 
-**Removed Loans Are Excluded** - Removed loans don't affect pool calculations but remain visible for tracking purposes. This allows you to maintain pool quality while preserving complete records.
+**Removed Loans Are Excluded** - Removed loans don't affect pool calculations but remain visible for tracking purposes. This allows you to maintain pool quality while preserving complete records. Removed loans can be reinstated when issues are resolved.
 
-**Loan Characteristics Aggregate** - Individual loan characteristics (FICO scores, interest rates, etc.) aggregate to create pool-level statistics that help investors assess opportunities.
+**Loan Characteristics Aggregate** - Individual loan characteristics (FICO scores, interest rates, etc.) aggregate to create pool-level statistics that help investors assess opportunities. Understanding loan characteristics helps you create better pools.
 
-**Status Tracks Lifecycle** - Loan status shows where each loan is in its lifecycle, from upload through mapping, processing, verification, and potentially tokenization.
+**Status Tracks Lifecycle** - Loan status shows where each loan is in its lifecycle, from upload through mapping, processing, verification, and potentially tokenization. Understanding status helps you track loan progress.
 
-**Complete History** - The platform maintains history of loan status changes, mappings, and other actions, ensuring complete traceability.
+**Complete History** - The platform maintains history of loan status changes, mappings, and other actions, ensuring complete traceability. You can see how loans have progressed and who made changes.
 
-Understanding loans helps you effectively manage loan portfolios, create successful pools, ensure loan data quality, and track loans throughout the structured finance transaction process.
+Understanding loans helps you effectively manage loan portfolios, create successful pools, ensure loan data quality, track loans throughout their lifecycle, and understand how individual loans contribute to pool-level metrics and transactions.

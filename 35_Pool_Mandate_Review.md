@@ -22,111 +22,72 @@ Use pool mandate review when:
 - You want to decide whether to accept a mandate
 - You're reviewing pools for structuring potential
 
-## Step-by-Step Process
+## Review Process
 
-### Reviewing Pools
+**Accessing Pool Mandates** - When issuers share pools with you for mandate consideration, you receive notifications. Navigate to shared pools or mandate queue to see pools waiting for your review. Open pool details to review complete information.
 
-1. **Access Pool**
-   - Check notifications for new pool mandates
-   - Navigate to shared pools or mandate queue
-   - Open pool details
-   - Review complete pool information
+**Reviewing Pool Information** - Review complete pool information including pool name, asset class, transaction type, description, mapped loans, pool metrics, organization assignments, and current status. Understand the full context of the pool opportunity.
 
-2. **Analyze Pool Metrics**
-   - **Total Balance**: Review total pool balance
-   - **Loan Count**: Check number of loans in pool
-   - **Weighted Average Coupon**: Evaluate interest rate characteristics
-   - **Weighted Average FICO**: Assess credit quality
-   - **Geographic Distribution**: Review borrower locations
-   - **Loan-to-Value Ratios**: Assess collateral characteristics
-   - **Other Metrics**: Review all relevant pool statistics
+**Analyzing Pool Metrics** - Review total pool balance, check number of loans in pool, evaluate weighted average coupon (interest rate characteristics), assess weighted average FICO (credit quality), review geographic distribution, check loan-to-value ratios, and review all relevant pool statistics.
 
-3. **Evaluate Loan Quality and Composition**
-   - Review individual loan characteristics
-   - Assess loan distribution and diversity
-   - Evaluate risk profile of loans
-   - Check loan performance data if available
-   - Assess overall loan quality
+**Evaluating Loan Quality** - Review individual loan characteristics, assess loan distribution and diversity, evaluate risk profile of loans, check loan performance data if available, assess overall loan quality, and understand loan composition.
 
-4. **Assess Risk Profile**
-   - Evaluate credit risk
-   - Assess concentration risk
-   - Review geographic risk
-   - Check industry or sector risk
-   - Evaluate overall risk-return profile
+**Assessing Marketability** - Evaluate investor appeal, assess market conditions, review competitive positioning, check structuring feasibility, assess deal potential, and determine if pool meets market requirements.
 
-5. **Evaluate Marketability**
-   - Assess investor appeal
-   - Evaluate market conditions
-   - Review competitive positioning
-   - Check structuring feasibility
-   - Assess deal potential
+**Reviewing Documentation** - Check pool documentation completeness, verify loan data quality, review supporting materials, assess compliance information, and check data accuracy.
 
-6. **Review Documentation**
-   - Check pool documentation completeness
-   - Verify loan data quality
-   - Review supporting materials
-   - Assess compliance information
-   - Check data accuracy
+## Evaluation Criteria
 
-### Making Mandate Decisions
+**Pool Quality Assessment** - Evaluate overall pool quality, assess loan characteristics and diversity, review pool metrics and statistics, check loan quality indicators, and assess pool composition and structure.
 
-1. **Accept Mandate**
-   - Review pool thoroughly
-   - Evaluate pool quality and marketability
-   - Assess structuring potential
-   - Click "Accept Mandate" button or similar
-   - Confirm acceptance
-   - Pool status updates to "Deal" or similar
-   - You become the market maker for the pool
+**Risk Profile Evaluation** - Evaluate credit risk, assess concentration risk, review geographic risk, check industry or sector risk, evaluate overall risk-return profile, and determine if risk is acceptable.
 
-2. **Reject Mandate**
-   - Review pool and identify concerns
-   - Decide not to accept the mandate
-   - Click "Reject Mandate" button or similar
-   - Provide rejection reason if required
-   - Enter comments explaining your decision
-   - Confirm rejection
-   - Pool may return to "Preview" status
-   - Issuer can share with other market makers
+**Marketability Assessment** - Assess investor appeal, evaluate market conditions, review competitive positioning, check structuring feasibility, assess deal potential, and determine market readiness.
 
-3. **Request Changes**
-   - Identify needed improvements
-   - Provide feedback to issuer
-   - Request specific changes or modifications
-   - Enter change request details
-   - Submit change request
-   - Wait for issuer to update pool
-   - Review updated pool and decide again
+**Structuring Potential** - Evaluate structuring feasibility, assess deal complexity, review structuring requirements, check if pool can be structured effectively, and determine structuring potential.
+
+**Documentation Quality** - Check documentation completeness, verify data quality, review supporting materials, assess compliance information, and ensure documentation meets requirements.
+
+**Overall Opportunity Assessment** - Consider all factors together, evaluate opportunity attractiveness, assess fit with your capabilities, determine if mandate should be accepted, and make informed decision.
+
+## Making Decisions
+
+**Accept Mandate** - Accept when pool quality and marketability meet your criteria: pool quality is acceptable, structuring potential is good, marketability is strong, documentation is adequate, and opportunity fits your capabilities. When accepted, pool status updates to Deal, you become the market maker for the pool, and issuer receives notification.
+
+**Reject Mandate** - Reject when pool doesn't meet your criteria: pool quality concerns, insufficient structuring potential, marketability issues, documentation problems, or opportunity doesn't fit. Provide rejection reason if required, enter comments explaining decision, pool may return to Preview status, issuer can share with other market makers, and issuer receives notification.
+
+**Request Changes** - Request changes when improvements are needed: minor issues that can be addressed, additional documentation needed, clarifications required, or modifications needed to improve pool. Provide specific change request details, issuer receives feedback, issuer can update pool based on feedback, issuer may resubmit for your review, and process can repeat until accepted or rejected.
+
+**Decision Documentation** - Ensure all decisions are properly documented, provide clear reasons for decisions, include relevant comments or explanations, and maintain complete audit trail of decisions.
 
 ## Rules & Validations
 
-- You can accept or reject mandates based on your evaluation - make decisions based on your assessment of pool quality and marketability.
+- You can accept or reject mandates based on your evaluation. Make decisions based on your assessment of pool quality and marketability.
 
-- You can request changes if improvements are needed - provide feedback to help issuers improve pools before acceptance.
+- You can request changes if improvements are needed. Provide feedback to help issuers improve pools before acceptance.
 
-- Acceptance makes you the market maker for the pool - once accepted, you're committed to structuring the deal.
+- Acceptance makes you the market maker for the pool. Once accepted, you're committed to structuring the deal.
 
-- Rejection allows issuer to share with other market makers - rejection doesn't prevent issuer from finding another market maker.
+- Rejection allows issuer to share with other market makers. Rejection doesn't prevent issuer from finding another market maker.
 
-- Your decision affects pool workflow progression - acceptance moves pool toward deal status, rejection may return it to preview.
+- Your decision affects pool workflow progression. Acceptance moves pool toward deal status, rejection may return it to preview.
 
-- Mandate decisions are tracked - all decisions are recorded with timestamps and reasons.
+- Mandate decisions are tracked. All decisions are recorded with timestamps and reasons.
 
-- You can only accept one mandate per pool - once accepted, pool is committed to you.
+- You can only accept one mandate per pool. Once accepted, pool is committed to you.
 
-- Status controls what actions are available - pool status determines what you can do.
+- Status controls what actions are available. Pool status determines what you can do.
 
-- Complete audit trail - all mandate decisions are recorded for audit purposes.
+- Complete audit trail. All mandate decisions are recorded for audit purposes.
 
-- Issuer is notified of your decision - issuers receive notifications when you make decisions.
+- Issuer is notified of your decision. Issuers receive notifications when you make decisions.
 
 ## What Happens Next
 
 After making a mandate decision:
-- **If Accepted**: You become the market maker and can structure the deal, pool moves to "Deal" status, you proceed with deal structuring activities, and pool progresses toward completion.
+- **If Accepted**: You become the market maker and can structure the deal, pool moves to Deal status, you proceed with deal structuring activities, and pool progresses toward completion.
 
-- **If Rejected**: Pool may return to "Preview" status, issuer receives notification with reason, issuer can share with other market makers, and pool remains available for other opportunities.
+- **If Rejected**: Pool may return to Preview status, issuer receives notification with reason, issuer can share with other market makers, and pool remains available for other opportunities.
 
 - **If Changes Requested**: Issuer receives your feedback, issuer can update pool based on feedback, issuer may resubmit for your review, and process can repeat until accepted or rejected.
 
