@@ -31,6 +31,12 @@ Different users see pools differently based on their role. The platform automati
 
 **As an Investor** - You'll see investment opportunities (pools shared with you for investment review), your investments (deals where you've invested or committed), funding requests waiting for your approval, and active deals you're involved with. You'll see actions like reviewing opportunities, expressing interest, and approving or rejecting funding requests. You have visibility into investment opportunities and your investments.
 
+![Opportunities Table - Table View](images/opportunities_table_table_view_95.png)
+
+**Opportunities Card View** - You can also view opportunities in a card format, which provides a different perspective on available investment opportunities.
+
+![Opportunities Table - Card View](images/opportunities_table_card_view_96.png)
+
 **As a Servicer** - You'll see pools assigned to you for servicing, active loans you're servicing, servicing tasks requiring your attention, and deal information for deals you're servicing. You'll see actions related to loan servicing, updating loan statuses, and tracking payments. You have visibility into pools and loans assigned to you for servicing.
 
 **As a Rating Agency** - You'll see pools shared with you for rating analysis, pool data needed for rating purposes, and access to analysis tools. You'll typically have read-only access—you can view and analyze but cannot make changes or approvals. You have visibility into pools shared with you for rating purposes.

@@ -58,6 +58,8 @@ Use pool creation and sharing when:
    - Pool is visible only to you initially
    - Pool is ready for loan mapping
 
+![Preview Pools View](images/preview_pools_97.png)
+
 ### Adding Loans to Pool
 
 1. **Navigate to Pool Details**

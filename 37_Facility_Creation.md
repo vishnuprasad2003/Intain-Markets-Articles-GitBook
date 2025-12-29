@@ -38,6 +38,8 @@ Use facility creation when:
    - Check that information is correct
    - Understand what needs to be configured
 
+![Master Commitment Creation - Initial View](images/scroll_state_a_73.png)
+
 ### Configuring Facility Rules
 
 1. **Set Up Borrowing Base Calculations**

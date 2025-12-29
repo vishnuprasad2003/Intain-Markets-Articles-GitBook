@@ -9,6 +9,8 @@ description: Learn how to approve token transfers for funding notices
 
 Borrower token approval is the step where the borrower approves the transfer of tokens, making the funding notice visible to lenders and enabling the drawdown process to proceed. This approval step ensures borrowers verify token allocation before lenders can review and approve drawdowns.
 
+![Funding Notice Details - Wire Funds](images/wire_funds_cta_link_on_click_funding_notice_details_modal_104.png)
+
 ## Who Can Use This
 
 - Borrowers who have funding notices with generated tokens

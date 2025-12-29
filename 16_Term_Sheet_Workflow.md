@@ -9,6 +9,8 @@ description: Understand the term sheet process from creation to approval
 
 The term sheet is the first step in creating a credit facility. It's the borrower's proposal outlining the key terms of the facility they want, including maximum facility amount, interest rates, repayment terms, and other conditions. Understanding the term sheet workflow helps you navigate this critical first phase from creation through approval.
 
+![Term Sheet Review Modal](images/term_sheet_review_modal_102.png)
+
 ## Who Can Use This
 
 - Borrowers who create term sheets and want to propose new credit facilities

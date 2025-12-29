@@ -51,6 +51,12 @@ Pools serve several important purposes in structured finance:
 
 **Sharing** - You share pools with other organizations for review and collaboration. When shared, pools become visible to those organizations, and recipients can view, analyze, and provide feedback based on sharing permissions.
 
+![Preview Pools View](images/preview_pools_97.png)
+
+**Pool Details** - When viewing pools, you can access detailed information including pool metrics, loan composition, and available actions. The pool details view provides comprehensive information for decision-making.
+
+![Preview Pool Details](images/preview_pools_pool_id_cta_on_click_preview_pool_details_98.png)
+
 **Status Progression** - Pools progress through statuses from Created to Preview to Mandate Pending to Deal. Each status represents a specific stage and determines what actions are available. Status changes happen when you take actions like sharing, submitting for mandate, or when market makers accept mandates.
 
 **Collaboration** - Multiple parties can work together on pools. Issuers create and share, market makers review and structure, investors evaluate opportunities, and rating agencies analyze for ratings. Feedback and change requests enable iterative improvement.

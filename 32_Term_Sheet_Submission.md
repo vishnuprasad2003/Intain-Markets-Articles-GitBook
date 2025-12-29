@@ -9,6 +9,8 @@ description: Learn how to prepare, sign, and submit term sheets for facility age
 
 Term sheet submission is the process where borrowers submit their term sheets to facility agents for review. This guide covers how to prepare term sheets, complete electronic signatures, and submit them effectively to move forward with credit facility setup.
 
+![Term Sheet Review Modal](images/term_sheet_review_modal_102.png)
+
 ## Who Can Use This
 
 - Borrowers who create term sheets and want to propose credit facilities

@@ -47,6 +47,8 @@ Use mandates when you:
    - Find the sharing or organization assignment section
    - Click to add or modify sharing settings
 
+![Preview Pool Details](images/preview_pools_pool_id_cta_on_click_preview_pool_details_98.png)
+
 3. **Select Recipient Organizations**
    - Choose which organizations to share with from available options
    - Select market makers for structuring and mandate review

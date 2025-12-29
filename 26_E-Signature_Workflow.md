@@ -9,6 +9,8 @@ description: Learn how electronic signatures work throughout credit facilities
 
 E-signatures are used throughout the credit facility workflow to digitally sign important documents, enabling a complete digital process without paper documents. Electronic signatures are legally binding and provide complete traceability of who signed what and when. Understanding the e-signature workflow helps you navigate the signing process for term sheets, master commitments, and funding notices.
 
+![Funding Notice Details - Wire Funds](images/wire_funds_cta_link_on_click_funding_notice_details_modal_104.png)
+
 ## Workflow Overview
 
 The e-signature workflow spans multiple stages of the credit facility process. Borrowers sign term sheets before submission, lenders sign master commitments to approve facilities, and facility agents sign funding notices for each lender. Each signing stage has specific requirements and outcomes, and signatures are tracked individually with complete audit trails. The workflow ensures proper authorization and documentation at each critical stage.

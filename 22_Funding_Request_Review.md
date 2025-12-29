@@ -27,6 +27,16 @@ Use funding request review when:
 
 **Accessing Requests** - When borrowers submit funding requests, they appear in your review queue. You can access requests through notifications or by navigating to the funding requests section. Each request shows the borrower, facility, amount, purpose, and current status.
 
+![Funding Request Review Modal](images/review_funding_request_modal_scroll_state_a_78.png)
+
+**Review Interface** - The review modal provides a comprehensive view of the funding request, including all details, documentation, and facility context. You can scroll through the complete request information to make informed decisions.
+
+![Funding Request Review - Scroll View](images/review_funding_request_modal_scroll_state_b_79.png)
+
+**E-Signature Process** - When approving funding requests, you may need to complete e-signature requirements. The system guides you through the signing process to ensure proper documentation.
+
+![E-Signature Required Modal](images/review_funding_request_modal_approve_e_sign_cta_on_click_e_signature_required_modal_80.png)
+
 **Reviewing Request Details** - Open each request to review complete information including request amount, purpose, funding date, supporting documentation, collateral information (if applicable), and facility context. Review all information provided by the borrower to understand the full request.
 
 **Checking Facility Context** - Review which facility the request is against, view facility rules and parameters, check borrower's borrowing history, verify available borrowing capacity, and understand request timing and frequency. This context helps you evaluate requests appropriately.

@@ -26,6 +26,12 @@ Use facility approval when:
 
 **Accessing Master Commitments** - When facility agents submit master commitments for lender approval, you receive notifications. Navigate to master commitments for approval, open master commitment details, and review all information provided.
 
+![Facilities Table - Review Master Commitment](images/facilities_table_review_approve_cta_link_on_click_review_master_commitment_modal_scroll_state_a_102.png)
+
+**Review Interface** - The review modal provides comprehensive information about the master commitment, including all facility terms, rules, and lender configuration. You can scroll through the complete facility structure to make informed decisions.
+
+![Review Master Commitment - Scroll View](images/review_master_commitment_modal_scroll_state_b_103.png)
+
 **Reviewing Facility Information** - Review complete facility information including facility terms (amount, interest rates, maturity), facility rules and parameters, borrowing base configuration and calculations, collateral eligibility and valuation methods, lender configuration, and overall facility structure.
 
 **Evaluating Facility Structure** - Review facility amount, interest rates, and maturity, assess facility rules and parameters, review borrowing base configuration and calculations, evaluate collateral eligibility and valuation methods, and assess overall facility structure and complexity.

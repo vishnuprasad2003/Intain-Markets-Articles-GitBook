@@ -9,6 +9,12 @@ description: Learn what credit facilities are and how they work in the platform
 
 A credit facility is a lending arrangement where a borrower can draw down funds as needed, up to a pre-approved limit. Think of it like a line of credit—you get approved for a maximum amount, and you can borrow portions of it when you need them, rather than receiving all funds at once. Credit facilities provide flexibility for borrowers while giving lenders control over fund disbursement.
 
+![Credit Facility Dashboard](images/portfolio_credit_facility_dashboard_101.png)
+
+**Active Facilities View** - The credit facility dashboard shows all active facilities, allowing you to view facility details, check borrowing capacity, and access funding request options.
+
+![Active Facilities Tab](images/active_facilities_tab_76.png)
+
 ## What Credit Facilities Are
 
 A credit facility is a flexible borrowing arrangement that allows borrowers to access funds incrementally rather than receiving everything upfront. Unlike traditional loans where you receive the full amount at once, credit facilities give you a pre-approved borrowing limit that you can draw from as needed. Each drawdown is a separate funding request that must be reviewed and approved before funds are disbursed.

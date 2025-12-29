@@ -57,6 +57,18 @@ The traceability structure enables complete transparency while maintaining secur
 
 **Action Logging** - All actions are logged with action type, who performed the action, when it occurred, what was affected, and what the result was. This provides complete action history. You can see all actions taken on items and understand what happened and when.
 
+![Activities Tab](images/activities_tab_90.png)
+
+**Activity Details** - You can view detailed activity information by clicking on specific activities, which shows complete context about what happened, who was involved, and when it occurred.
+
+![Activities Tab - View Details](images/activities_tab_view_cta_on_click_91.png)
+
+**Audit Trail** - The audit tab provides comprehensive audit trail information, showing all changes, approvals, and actions with complete attribution and timestamps.
+
+![Audit Tab](images/audit_tab_92.png)
+
+![Audit Tab - Detailed View](images/audit_tab_107.png)
+
 **Document Versioning** - Previous versions of documents are saved when changes are made. This maintains complete document history and enables you to see how documents evolved over time. You can compare versions, see what changed, and understand how documents progressed.
 
 **Permanent Records** - Audit trails are permanent and cannot be deleted or modified. This ensures that historical records remain accurate and available for compliance and accountability purposes. This permanence ensures that audit trails remain available for future reference.

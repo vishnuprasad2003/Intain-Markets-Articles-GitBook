@@ -9,6 +9,8 @@ description: Learn what funding requests are and how to create them
 
 A funding request is when a borrower requests to draw down funds from an active credit facility. Each request specifies the amount needed, the purpose, includes supporting documentation, and must be reviewed and approved by the facility agent before funds can be disbursed. Funding requests allow borrowers to access their approved facility limit flexibly, drawing down funds as needed rather than receiving everything upfront.
 
+![Funding Approval Flow](images/funding_approval_flow_103.png)
+
 ## What Funding Requests Are
 
 A funding request is a specific request to borrow a portion of your approved facility limit. Think of it as asking to withdraw money from your line of credit—you specify how much you need, what you'll use it for, and provide documentation to support your request. Each funding request is reviewed individually by facility agents to ensure it complies with facility rules and that sufficient borrowing capacity is available.

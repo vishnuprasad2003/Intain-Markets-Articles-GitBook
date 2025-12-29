@@ -26,6 +26,12 @@ Use term sheet review when:
 
 **Accessing Term Sheets** - When borrowers submit term sheets, they appear in your review queue. Check notifications for new term sheet submissions, navigate to term sheets for review, and open term sheet details to review all information provided.
 
+![Term Sheet Review Modal](images/setup_table_review_term_sheet_modal_scroll_state_a_71.png)
+
+**Review Interface** - The term sheet review modal provides a comprehensive view of all term sheet information, including facility terms, borrower details, and supporting documentation. You can scroll through the complete proposal to evaluate all aspects.
+
+![Term Sheet Review - Scroll View](images/setup_table_review_term_sheet_modal_scroll_state_b_72.png)
+
 **Reviewing Term Sheet Information** - Review complete term sheet information including facility amount, interest rates, repayment terms, facility term, purpose, borrower information, supporting documentation, and all facility terms and conditions.
 
 **Evaluating Facility Terms** - Assess if facility amount is appropriate and reasonable, evaluate interest rate or rate structure, review how repayments are structured, check duration and maturity, understand what funds will be used for, and review all facility terms and conditions.

@@ -57,6 +57,12 @@ Funding notices serve several important purposes:
 
 **Borrower Token Approval** - Borrowers review token allocation and approve token transfers. Approval makes funding notices visible to lenders and enables lender review. Status changes to TOKEN_APPROVED.
 
+![Funding Notice Issued Successfully](images/funding_notice_issued_successfully_modal_81.png)
+
+**Funding Notice Details** - After approval, you can view complete funding notice details including token distribution, lender allocations, and fund transfer instructions. This provides complete visibility into the drawdown process.
+
+![Funding Notice Details Modal](images/wire_funds_cta_link_on_click_funding_notice_details_modal_104.png)
+
 **Lender Review and Approval** - Lenders review funding notices and approve or reject their participation. Each lender makes independent decisions, and participation is tracked individually. Lenders can see their allocated portion and make decisions accordingly.
 
 **Fund Transfer Confirmation** - After approving, lenders transfer funds and confirm transfers. Each lender confirms their transfer independently, completing their participation in the drawdown.

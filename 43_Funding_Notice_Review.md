@@ -26,6 +26,8 @@ Use funding notice review when:
 
 **Accessing Funding Notices** - When borrowers approve token transfers, funding notices become visible to lenders. Check notifications for new funding notices, navigate to funding notices section, open funding notice details, and review all information provided.
 
+![Funding Notice Details - Wire Funds](images/wire_funds_cta_link_on_click_funding_notice_details_modal_104.png)
+
 **Reviewing Funding Notice Information** - Review complete funding notice information including request amount, purpose, funding date, facility details, borrower information, token allocation, borrowing base impact, and supporting documentation.
 
 **Evaluating Drawdown Request** - Review total drawdown amount, check what funds will be used for, verify when funds are needed, review facility information and terms, and assess borrower details.

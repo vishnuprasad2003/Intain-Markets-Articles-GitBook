@@ -9,6 +9,8 @@ description: Learn what loans are and how they work in the platform
 
 Loans are individual credit agreements representing money lent to borrowers. In Intain Markets, loans are the building blocks of pools—you group multiple loans together to create pools for securitization, whole loan sales, or credit facilities. Understanding loans helps you effectively manage your loan portfolios and create successful pools.
 
+![Loans Table View](images/loans_table_view_101.png)
+
 ## What Loans Are
 
 A loan represents a single credit agreement where money has been lent to a borrower. Each loan contains detailed information about the borrower, the loan amount, interest rates, payment terms, loan characteristics, and performance data. Loans are the fundamental units that make up larger transactions—you organize multiple loans into pools to present them to investors or use them in credit facilities.
