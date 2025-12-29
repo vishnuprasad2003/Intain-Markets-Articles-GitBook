@@ -23,11 +23,7 @@ The platform tracks every change with complete details about who made the change
 
 **Viewing Change History** - You can view change history by navigating to an item's detail page and looking for history, audit trail, or activity sections. Change history is typically organized chronologically, showing the most recent changes first or in chronological order. You can see complete details about each change, including who made it, when it happened, and what changed. This access helps you understand item progression and track activities.
 
-![Activities Tab](images/activities_tab_105.png)
-
 **Activity View Details** - Clicking on specific activities shows detailed information about what happened, who was involved, and when it occurred.
-
-![Activities Tab - View Details](images/activities_tab_view_cta_on_click_106.png)
 
 **Field-Level Changes** - Some systems track field-level changes, showing which specific fields were modified. This provides detailed information about what changed within items. Field-level tracking helps you understand exactly what was modified and how items evolved over time.
 

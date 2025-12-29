@@ -27,13 +27,19 @@ Logging into Intain Markets and navigating the platform is designed to be straig
 
 ## What You Will See
 
+**Login Page** - When you access the platform, you'll see the login page where you enter your credentials to access your account.
+
+![Intain Markets Login Page](imagesByMdFilesFolder/03/IntainMarketsLoginPage.png)
+
 **Your Dashboard** - After login, you'll see a dashboard showing items relevant to your role. As an issuer, you'll see pools you've created. As a market maker, you'll see pools shared with you. As an investor, you'll see investment opportunities. The dashboard helps you quickly see what needs your attention and provides an overview of your activities.
 
-![Dashboard View](images/dashboard_93.png)
+![Dashboard - Investor View](imagesByMdFilesFolder/03/Dashboard_Investor.png)
+
+![Dashboard - Market Maker View](imagesByMdFilesFolder/03/Dashboard_MarketMaker.jpg)
 
 **Dashboard Notifications** - The dashboard includes notifications and alerts for items requiring your attention. You can click on notifications to view details in the context panel, which appears as a right drawer with relevant information.
 
-![Dashboard Notification Panel](images/dashboard_notification_cta_on_click_context_panel_right_drawer_94.png)
+![Dashboard Notification Panel](imagesByMdFilesFolder/03/Dashboard_Notification_Panel.png)
 
 **Filtered Lists** - When you navigate to sections like Pools or Credit Facilities, you'll see lists automatically filtered for your role. You won't see items where you don't have a role or that aren't shared with you. This filtering happens automatically—you don't need to manually filter. This automatic filtering ensures you only see relevant items.
 

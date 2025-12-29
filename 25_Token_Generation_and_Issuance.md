@@ -9,7 +9,15 @@ description: Understand how tokens are generated and distributed for funding not
 
 Token generation and issuance is the complete workflow for creating and distributing tokens that represent drawdown amounts in funding notices. These tokens serve as digital representations of the drawdown that enable tracking, distribution, and management of funds across multiple lenders. Understanding this workflow helps you navigate the token-based drawdown process from creation through distribution to lender visibility.
 
-![Funding Notice Details - Wire Funds](images/wire_funds_cta_link_on_click_funding_notice_details_modal_104.png)
+![FA - Funding Notice Save - Token Generation](imagesByMdFilesFolder/25/FA_FundingNotice_Save_TokenGeneration.png)
+
+![Funding Notice Details - FA](imagesByMdFilesFolder/25/FundingNoticeDetailsFA.png)
+
+![Issuer - Token Approval](imagesByMdFilesFolder/25/Issuer_Token_Approval.png)
+
+![Lender Approval - Funding Notice](imagesByMdFilesFolder/25/LenderApprovalFundingNotice.png)
+
+![Fund Transfer Confirmation](imagesByMdFilesFolder/25/Fund Transfer Confirmation.png)
 
 ## Workflow Overview
 

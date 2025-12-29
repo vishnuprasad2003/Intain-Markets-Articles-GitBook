@@ -47,7 +47,9 @@ Use mandates when you:
    - Find the sharing or organization assignment section
    - Click to add or modify sharing settings
 
-![Preview Pool Details](images/preview_pools_pool_id_cta_on_click_preview_pool_details_98.png)
+![Pool Share - Issuer](imagesByMdFilesFolder/08/Pool_Share_Issuer.png)
+
+![Pools Sharing Settings](imagesByMdFilesFolder/08/Pools_Sharing_Settings.png)
 
 3. **Select Recipient Organizations**
    - Choose which organizations to share with from available options
@@ -56,6 +58,8 @@ Use mandates when you:
    - Select rating agencies for analysis
    - Select other parties as needed (servicers, paying agents, etc.)
    - You can share with multiple organizations simultaneously
+
+![Pool Share - Select Recipient Organization](imagesByMdFilesFolder/08/Pool_Share_Select_recipient_org.png)
 
 4. **Set Sharing Permissions**
    - Control what recipients can see and do with the pool

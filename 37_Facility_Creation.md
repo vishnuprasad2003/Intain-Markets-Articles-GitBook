@@ -37,8 +37,23 @@ Use facility creation when:
    - Verify facility name, amount, and basic terms
    - Check that information is correct
    - Understand what needs to be configured
+   - **Check Contract Type** - Review whether the facility uses a single contract or multiple contracts. This determines whether you'll configure one master commitment or create sub-commitments for different lenders.
 
-![Master Commitment Creation - Initial View](images/scroll_state_a_73.png)
+![Create Facility - FA](imagesByMdFilesFolder/37/CreateFacility_FA.png)
+
+### Understanding Contract Types
+
+**Single Contract Type** - When the facility uses a single contract, all lenders participate under one master commitment. You configure one set of lender groups, and all lenders review and approve the same master commitment. This is the standard approach for most facilities where all lenders work together under a single agreement.
+
+**Multiple Contract Type** - When the facility uses multiple contracts, you can create separate sub-commitments from the parent master commitment. This is useful when different lenders need separate legal contracts or when the facility needs to be split into multiple sub-facilities under one master facility. Each sub-commitment inherits all terms from the parent but starts with empty lender groups, allowing you to configure different lenders for each sub-commitment. Each sub-commitment can be independently submitted to lenders and activated.
+
+**When to Use Multiple Contracts** - Use multiple contracts when:
+- Different lenders require separate legal contracts
+- The facility structure needs to be split into multiple sub-facilities
+- Different lender groups need separate agreements under one master facility
+- Legal or regulatory requirements necessitate separate contracts
+
+**Working with Multiple Contracts** - If the contract type is "multiple", you'll first configure the parent master commitment with all facility rules and parameters. Then you can create sub-commitments from the parent, each with its own lender groups. When you submit the parent master commitment, all associated sub-commitments are also submitted for lender approval.
 
 ### Configuring Facility Rules
 
@@ -99,6 +114,34 @@ Use facility creation when:
    - Ensure all lenders are included
    - Confirm configuration is complete
 
+### Creating Sub-Commitments (Multiple Contract Type Only)
+
+1. **Create Sub-Commitment**
+   - If contract type is "multiple", navigate to create sub-commitment option
+   - Click "Create Sub-Commitment" or similar button
+   - System creates a new sub-commitment from the parent
+   - Sub-commitment inherits all facility rules and parameters
+   - Sub-commitment starts with empty lender groups
+
+2. **Configure Sub-Commitment Lender Groups**
+   - Navigate to the sub-commitment you created
+   - Add lenders specific to this sub-commitment
+   - Configure commitment amounts and participation percentages
+   - Set lender-specific terms if applicable
+   - Complete lender configuration for this sub-commitment
+
+3. **Repeat for Additional Sub-Commitments**
+   - Create additional sub-commitments as needed
+   - Configure lender groups for each sub-commitment
+   - Each sub-commitment can have different lenders
+   - All sub-commitments share the same facility rules from parent
+
+4. **Review All Sub-Commitments**
+   - Review all sub-commitments you've created
+   - Verify lender groups are correctly configured
+   - Ensure all sub-commitments are ready for submission
+   - Check that all required fields are complete
+
 ### Completing Facility Setup
 
 1. **Review All Configuration**
@@ -107,6 +150,7 @@ Use facility creation when:
    - Verify collateral eligibility rules
    - Review lender group configuration
    - Ensure all required fields are complete
+   - If multiple contract type, review all sub-commitments
 
 2. **Validate Configuration**
    - Check that validation passes
@@ -119,6 +163,7 @@ Use facility creation when:
    - Click "Submit" or "Create" button
    - Confirm submission action
    - Status changes to "Pending Lender Approval"
+   - If multiple contract type, all sub-commitments are also submitted
    - Lenders receive notifications
    - Facility is ready for lender review
 
@@ -143,6 +188,14 @@ Use facility creation when:
 - Status controls actions - you can only edit while status is "Draft".
 
 - Complete audit trail - all configuration changes are recorded with timestamps.
+
+- Contract type determines structure - single contract type uses one master commitment, multiple contract type allows sub-commitments.
+
+- Sub-commitments require parent - you can only create sub-commitments if the parent master commitment has contract type "multiple".
+
+- Sub-commitments inherit parent rules - all facility rules and parameters are inherited from parent, but lender groups start empty.
+
+- All sub-commitments submit together - when you submit a parent master commitment with multiple contract type, all associated sub-commitments are also submitted.
 
 ## What Happens Next
 

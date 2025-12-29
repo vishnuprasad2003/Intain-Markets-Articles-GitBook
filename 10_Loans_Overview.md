@@ -9,7 +9,9 @@ description: Learn what loans are and how they work in the platform
 
 Loans are individual credit agreements representing money lent to borrowers. In Intain Markets, loans are the building blocks of pools—you group multiple loans together to create pools for securitization, whole loan sales, or credit facilities. Understanding loans helps you effectively manage your loan portfolios and create successful pools.
 
-![Loans Table View](images/loans_table_view_101.png)
+![Loans Onboarding - Uploading - Issuer](imagesByMdFilesFolder/10/Loans_Onboarding_Uploading_Issuer.png)
+
+![Loan Map to Pool - Issuer](imagesByMdFilesFolder/10/LoanMapToPoolIssuer.png)
 
 ## What Loans Are
 
@@ -50,6 +52,8 @@ Loans serve as the foundation for structured finance transactions:
 **Upload and Processing** - You upload loan data into the platform, typically through file upload. The system processes and standardizes the data, validates loan information, and makes loans available for mapping to pools or individual management.
 
 **Mapping to Pools** - You assign loans to pools by mapping them. When loans are mapped, they contribute their balance and characteristics to pool metrics. Pool metrics calculate automatically to include the mapped loan.
+
+**Batch Verification and NFT Minting** - After mapping loans to pools, loans are added to batches for verification and NFT minting. Batches group multiple loans together for efficient processing. During verification, the system validates loan data and ensures everything is correct. Once verified, loans can be minted as NFTs (Non-Fungible Tokens) on the blockchain, creating a digital representation of each loan that enables secure tracking, ownership, and transfer. The batch process ensures loans are properly verified and tokenized before they can be used in transactions.
 
 **Status Progression** - Loans progress through statuses from Unmapped to Mapped to Submitted to Verified, and potentially to Minted if tokenization is required. Status shows where each loan is in its lifecycle and what actions are available.
 

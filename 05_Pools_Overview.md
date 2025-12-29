@@ -49,13 +49,21 @@ Pools serve several important purposes in structured finance:
 
 **Loan Mapping** - You map loans to the pool by selecting individual loans and assigning them to the pool. When loans are mapped, pool metrics calculate automatically. You can add or remove loans while the pool is in Created or Preview status.
 
+**Pool Creation** - As an issuer, you create pools to group loans together for structured finance transactions. The pool creation process allows you to set up pools with all necessary information.
+
+![Pool Creation - Issuer](imagesByMdFilesFolder/05/PoolCreation_Issuer.png)
+
 **Sharing** - You share pools with other organizations for review and collaboration. When shared, pools become visible to those organizations, and recipients can view, analyze, and provide feedback based on sharing permissions.
 
-![Preview Pools View](images/preview_pools_97.png)
+![Pool Sharing - Issuer](imagesByMdFilesFolder/05/PoolSharing_Issuer.png)
 
 **Pool Details** - When viewing pools, you can access detailed information including pool metrics, loan composition, and available actions. The pool details view provides comprehensive information for decision-making.
 
-![Preview Pool Details](images/preview_pools_pool_id_cta_on_click_preview_pool_details_98.png)
+![Pool Details - Issuer](imagesByMdFilesFolder/05/Pool_Details_Issuer.png)
+
+**Loan Mapping** - You map loans to pools to include them in the pool. Once mapped, loans contribute their characteristics to pool metrics.
+
+![Loan Map to Pool - Issuer](imagesByMdFilesFolder/05/LoanMapToPoolIssuer.png)
 
 **Status Progression** - Pools progress through statuses from Created to Preview to Mandate Pending to Deal. Each status represents a specific stage and determines what actions are available. Status changes happen when you take actions like sharing, submitting for mandate, or when market makers accept mandates.
 

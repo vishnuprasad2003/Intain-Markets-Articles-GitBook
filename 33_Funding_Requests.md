@@ -32,7 +32,7 @@ Use funding requests when:
    - Click "Create Funding Request" or similar button
    - Funding request form opens
 
-![Credit Facility Dashboard - Funding Approval Flow](images/transactions_credit_facility_dashboard_funding_approval_flow_77.png)
+![Funding Request Creation - Issuer](imagesByMdFilesFolder/33/FundingRequest_Creation_Issuer.png)
 
 2. **Enter Request Details**
    - **Drawdown Amount**: Specify the amount you want to borrow (must be within available borrowing capacity)

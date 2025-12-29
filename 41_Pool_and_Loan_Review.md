@@ -27,14 +27,6 @@ Use pool and loan review when:
 
 **Accessing Shared Pools** - When issuers share pools with you, you receive notifications. Check notifications for new pool shares, navigate to shared pools or preview queue, open pool details, and review complete pool information.
 
-![Agreements Table View](images/agreements_table_view_details_cta_on_click_deal_details_84.png)
-
-**Agreements Table** - The agreements table provides a comprehensive view of all agreements, allowing you to scroll through and review deal details.
-
-![Agreements Table - Scroll State A](images/agreements_table_scroll_state_a_82.png)
-
-![Agreements Table - Scroll State B](images/agreements_table_scroll_state_b_83.png)
-
 **Reviewing Pool Information** - Review complete pool information including pool name, asset class, transaction type, description, mapped loans, pool metrics, organization assignments, and current status. Understand the full context of the investment opportunity.
 
 **Analyzing Pool Metrics** - Review total pool balance and size, check number of loans in pool, evaluate weighted average coupon (interest rate characteristics), assess weighted average FICO (credit quality and borrower credit scores), review loan-to-value ratios (collateral characteristics for secured loans), check debt service metrics (payment capacity and service coverage), review geographic distribution (borrower locations and geographic risk), and review all relevant pool statistics and characteristics.

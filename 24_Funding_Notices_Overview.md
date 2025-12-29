@@ -55,13 +55,29 @@ Funding notices serve several important purposes:
 
 **Per-Lender E-Signature** - Facility agents sign funding notices for each lender individually. Each lender's signature status is tracked separately, and the system tracks overall completion. Status remains TOKEN_GENERATED during this process.
 
+**Token Generation** - Facility agents generate tokens and configure distribution to lenders. The system creates tokens representing the drawdown amount and allocates them based on lender participation percentages.
+
+![FA - Funding Notice Save - Token Generation](imagesByMdFilesFolder/24/FA_FundingNotice_Save_TokenGeneration.png)
+
 **Borrower Token Approval** - Borrowers review token allocation and approve token transfers. Approval makes funding notices visible to lenders and enables lender review. Status changes to TOKEN_APPROVED.
 
-![Funding Notice Issued Successfully](images/funding_notice_issued_successfully_modal_81.png)
+![Issuer - Token Approval](imagesByMdFilesFolder/24/Issuer_Token_Approval.png)
 
 **Funding Notice Details** - After approval, you can view complete funding notice details including token distribution, lender allocations, and fund transfer instructions. This provides complete visibility into the drawdown process.
 
-![Funding Notice Details Modal](images/wire_funds_cta_link_on_click_funding_notice_details_modal_104.png)
+![Funding Notice Details - FA](imagesByMdFilesFolder/24/FundingNoticeDetailsFA.png)
+
+**Lender Approval** - Lenders review funding notices and approve or reject their participation. Each lender makes independent decisions based on their allocated portion.
+
+![Lender Approval - Funding Notice](imagesByMdFilesFolder/24/LenderApprovalFundingNotice.png)
+
+**Fund Transfer Confirmation** - Lenders confirm when they've transferred funds, completing their participation in the drawdown.
+
+![Fund Transfer Confirmation](imagesByMdFilesFolder/24/Fund Transfer Confirmation.png)
+
+**Process Completion** - Once all lenders confirm transfers, the drawdown process is complete and funds have been disbursed.
+
+![Process Completion](imagesByMdFilesFolder/24/ProcessCompletion.png)
 
 **Lender Review and Approval** - Lenders review funding notices and approve or reject their participation. Each lender makes independent decisions, and participation is tracked individually. Lenders can see their allocated portion and make decisions accordingly.
 

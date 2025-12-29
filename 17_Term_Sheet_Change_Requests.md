@@ -9,8 +9,6 @@ description: Learn how to respond to change requests on term sheets
 
 When a facility agent reviews a term sheet and needs modifications, they can request changes. This allows borrowers to update the term sheet and resubmit it for review, creating an iterative improvement process that helps refine proposals before approval. Understanding change requests helps you effectively respond to facility agent feedback and improve your term sheets.
 
-![Term Sheet Review Modal](images/term_sheet_review_modal_102.png)
-
 ## Who Can Use This
 
 - Borrowers who receive change requests and need to update their term sheets

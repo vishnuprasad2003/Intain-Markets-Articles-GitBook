@@ -9,11 +9,17 @@ description: Learn what credit facilities are and how they work in the platform
 
 A credit facility is a lending arrangement where a borrower can draw down funds as needed, up to a pre-approved limit. Think of it like a line of credit—you get approved for a maximum amount, and you can borrow portions of it when you need them, rather than receiving all funds at once. Credit facilities provide flexibility for borrowers while giving lenders control over fund disbursement.
 
-![Credit Facility Dashboard](images/portfolio_credit_facility_dashboard_101.png)
-
 **Active Facilities View** - The credit facility dashboard shows all active facilities, allowing you to view facility details, check borrowing capacity, and access funding request options.
 
-![Active Facilities Tab](images/active_facilities_tab_76.png)
+![Credit Facility - Active Facilities Tab - Issuer](imagesByMdFilesFolder/14/credit_facility_active_facilities_tab_issuer.png)
+
+**Facility Configuration** - Facility agents configure master commitments with all facility rules, including collateral eligibility rules that determine which assets qualify for borrowing.
+
+![Create Master Commitment - Configure Collateral Eligibility Rules Modal](imagesByMdFilesFolder/14/create_master_commitment_modal_create_on_click_configure_collateral_eligibility_rules_modal_75.png)
+
+**Lender Approval** - Lenders review and approve master commitments to activate facilities. Once approved, facilities become active and available for funding requests.
+
+![Credit Facility - Lender Approve](imagesByMdFilesFolder/14/CreditFacility_Lender_Approve.png)
 
 ## What Credit Facilities Are
 

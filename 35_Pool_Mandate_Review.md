@@ -28,21 +28,11 @@ Use pool mandate review when:
 
 **Reviewing Pool Information** - Review complete pool information including pool name, asset class, transaction type, description, mapped loans, pool metrics, organization assignments, and current status. Understand the full context of the pool opportunity.
 
-![Deal Details - Review Deal Modal](images/deal_details_review_deal_cta_on_click_review_deal_modal_deal_review_tab_85.png)
-
-**Deal Review Interface** - The deal review modal provides comprehensive information about the pool, including allocation distribution, forward flow controls, and deal structure details.
-
-![Review Deal - Allocation Distribution Tab](images/review_deal_modal_allocation_distribution_tab_86.png)
+**Deal Review Interface** - The deal review interface provides comprehensive information about the pool, including allocation distribution, forward flow controls, and deal structure details.
 
 **Forward Flow Controls** - Review forward flow controls including revolving and discretionary settings that govern how the deal operates.
 
-![Review Deal - Forward Flow Controls - Revolving](images/review_deal_modal_forward_flow_controls_tab_revolving_87.png)
-
-![Review Deal - Forward Flow Controls - Discretionary](images/review_deal_modal_forward_flow_controls_tab_discretionary_88.png)
-
 **Publish Tab** - Review the publish tab to understand how deals are published and made available to investors.
-
-![Review Deal - Publish Tab](images/review_deal_modal_publish_tab_89.png)
 
 **Analyzing Pool Metrics** - Review total pool balance, check number of loans in pool, evaluate weighted average coupon (interest rate characteristics), assess weighted average FICO (credit quality), review geographic distribution, check loan-to-value ratios, and review all relevant pool statistics.
 

@@ -58,7 +58,13 @@ Use pool creation and sharing when:
    - Pool is visible only to you initially
    - Pool is ready for loan mapping
 
-![Preview Pools View](images/preview_pools_97.png)
+![Pool Creation - Issuer](imagesByMdFilesFolder/30/PoolCreation_Issuer.png)
+
+![Pool Details - Issuer](imagesByMdFilesFolder/30/Pool_Details_Issuer.png)
+
+![Pool Sharing - Issuer](imagesByMdFilesFolder/30/PoolSharing_Issuer.png)
+
+![Loan Map to Pool - Issuer](imagesByMdFilesFolder/30/LoanMapToPoolIssuer.png)
 
 ### Adding Loans to Pool
 

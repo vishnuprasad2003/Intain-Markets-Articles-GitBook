@@ -9,6 +9,8 @@ description: Learn how to remove loans from pools and put them back when needed
 
 Sometimes loans need to be removed from pools temporarily or permanently, and later reinstated when appropriate. Understanding loan rejection and reinstatement helps you maintain pool quality, address data issues, and adjust pool composition as needed. This process allows you to manage pool composition flexibly while maintaining data integrity and ensuring pools meet quality standards.
 
+![Loan Rejection Request - From Market Maker](imagesByMdFilesFolder/12/Loan_Rejection_Request_From_MarketMaker.png)
+
 ## Possible Outcomes
 
 When you remove a loan from a pool, the loan enters a "Removed" status. When you reinstate a loan, it returns to active participation in the pool. These are the two main outcomes for loan status management within pools. Understanding these outcomes helps you know what happens when you remove or reinstate loans and how these actions affect pool metrics and composition.

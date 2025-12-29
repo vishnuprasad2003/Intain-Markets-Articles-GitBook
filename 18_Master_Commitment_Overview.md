@@ -51,11 +51,15 @@ Master commitments serve as the operational foundation for credit facilities:
 
 **Facility Agent Configuration** - Facility agents configure the complete facility structure by setting up facility rules, borrowing base calculations, collateral eligibility rules, lender groups, and other parameters. This configuration happens while the master commitment is in Draft status.
 
-![Create Master Commitment Modal](images/create_master_commitment_modal_scroll_state_b_74.png)
+![Create Master Commitment Modal - Scroll State B](imagesByMdFilesFolder/18/create_master_commitment_modal_scroll_state_b_74.png)
 
 **Collateral Eligibility Configuration** - Facility agents configure collateral eligibility rules that define what assets can be used as collateral and how they're valued. This ensures proper collateral management throughout the facility lifecycle.
 
-![Configure Collateral Eligibility Rules](images/create_master_commitment_modal_create_on_click_configure_collateral_eligibility_rules_modal_75.png)
+![Create Master Commitment - Configure Collateral Eligibility Rules Modal](imagesByMdFilesFolder/18/create_master_commitment_modal_create_on_click_configure_collateral_eligibility_rules_modal_75.png)
+
+**Lender Approval** - After configuration, lenders review and approve master commitments. Once approved, the facility becomes active.
+
+![Lender Approval - Master Commitment](imagesByMdFilesFolder/18/LenderApproval_MasterCommitment.png)
 
 **Lender Approval** - After configuration, facility agents submit master commitments for lender approval. Lenders review the complete facility structure and approve or reject. Any lender approval activates the facility.
 
