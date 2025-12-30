@@ -9,18 +9,6 @@ description: Learn what credit facilities are and how they work in the platform
 
 A credit facility is a lending arrangement where a borrower can draw down funds as needed, up to a pre-approved limit. Think of it like a line of credit—you get approved for a maximum amount, and you can borrow portions of it when you need them, rather than receiving all funds at once. Credit facilities provide flexibility for borrowers while giving lenders control over fund disbursement.
 
-**Active Facilities View** - The credit facility dashboard shows all active facilities, allowing you to view facility details, check borrowing capacity, and access funding request options.
-
-![Credit Facility - Active Facilities Tab - Issuer](imagesByMdFilesFolder/14/credit_facility_active_facilities_tab_issuer.png)
-
-**Facility Configuration** - Facility agents configure master commitments with all facility rules, including collateral eligibility rules that determine which assets qualify for borrowing.
-
-![Create Master Commitment - Configure Collateral Eligibility Rules Modal](imagesByMdFilesFolder/14/create_master_commitment_modal_create_on_click_configure_collateral_eligibility_rules_modal_75.png)
-
-**Lender Approval** - Lenders review and approve master commitments to activate facilities. Once approved, facilities become active and available for funding requests.
-
-![Credit Facility - Lender Approve](imagesByMdFilesFolder/14/CreditFacility_Lender_Approve.png)
-
 ## What Credit Facilities Are
 
 A credit facility is a flexible borrowing arrangement that allows borrowers to access funds incrementally rather than receiving everything upfront. Unlike traditional loans where you receive the full amount at once, credit facilities give you a pre-approved borrowing limit that you can draw from as needed. Each drawdown is a separate funding request that must be reviewed and approved before funds are disbursed.
@@ -61,7 +49,11 @@ Credit facilities serve several important purposes:
 
 **Master Commitment Creation** - When term sheets are approved, master commitments are automatically created. Facility agents configure the complete facility structure, including facility rules, borrowing base calculations, lender groups, and other parameters.
 
+![Create Master Commitment - Configure Collateral Eligibility Rules Modal](imagesByMdFilesFolder/14/create_master_commitment_modal_create_on_click_configure_collateral_eligibility_rules_modal_75.png)
+
 **Lender Approval** - After facility agents configure master commitments, lenders review and approve them. Any lender approval activates the facility, making it operational for funding requests.
+
+![Credit Facility - Lender Approve](imagesByMdFilesFolder/14/CreditFacility_Lender_Approve.png)
 
 **Funding Requests** - Once facilities are active, borrowers can create funding requests to draw down funds. Each request specifies the amount, purpose, and includes supporting documentation. Facility agents review requests for compliance and available capacity.
 
@@ -70,6 +62,10 @@ Credit facilities serve several important purposes:
 **Lender Review and Approval** - Lenders review funding notices and approve or reject individual drawdowns. Each lender makes independent decisions, and participation is tracked individually.
 
 **Fund Disbursement** - After lenders approve, they transfer funds and confirm transfers. Funds are disbursed to borrowers, completing the drawdown process.
+
+**Active Facilities View** - The credit facility dashboard shows all active facilities, allowing you to view facility details, check borrowing capacity, and access funding request options.
+
+![Credit Facility - Active Facilities Tab - Issuer](imagesByMdFilesFolder/14/credit_facility_active_facilities_tab_issuer.png)
 
 ## Important Points to Know
 

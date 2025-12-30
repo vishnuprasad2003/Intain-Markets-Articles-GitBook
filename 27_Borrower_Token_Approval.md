@@ -9,8 +9,6 @@ description: Learn how to approve token transfers for funding notices
 
 Borrower token approval is the step where the borrower approves the transfer of tokens, making the funding notice visible to lenders and enabling the drawdown process to proceed. This approval step ensures borrowers verify token allocation before lenders can review and approve drawdowns.
 
-![Issuer - Token Approval](imagesByMdFilesFolder/27/Issuer_Token_Approval.png)
-
 ## Who Can Use This
 
 - Borrowers who have funding notices with generated tokens
@@ -67,6 +65,8 @@ Use token approval when:
    - Review any confirmation messages
    - Understand that approval makes notice visible to lenders
    - Confirm you want to proceed
+
+![Issuer - Token Approval](imagesByMdFilesFolder/27/Issuer_Token_Approval.png)
 
 3. **Complete Approval**
    - Confirm your approval action

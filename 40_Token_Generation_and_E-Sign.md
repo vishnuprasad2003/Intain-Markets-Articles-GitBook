@@ -9,8 +9,6 @@ description: Learn how facility agents generate tokens and complete e-signatures
 
 This guide covers how facility agents generate tokens for funding notices and complete the e-signature process for each lender. Learn how to create tokens, distribute them to lenders, sign funding notices individually for each lender, and track per-lender e-signature status to enable the drawdown process.
 
-![FA - Funding Notice Save - Token Generation](imagesByMdFilesFolder/40/FA_FundingNotice_Save_TokenGeneration.png)
-
 ## Who Can Use This
 
 - Facility Agents who manage funding notices and complete e-signature processes
@@ -47,6 +45,8 @@ Use token generation and e-sign when:
    - Each lender is set with esignatureStatus: 'pending'
    - Tokens are created for borrower (FT tokens)
    - Status updates to "TOKEN_GENERATED"
+
+![FA - Funding Notice Save - Token Generation](imagesByMdFilesFolder/40/FA_FundingNotice_Save_TokenGeneration.png)
 
 4. **Verify Token Generation**
    - Confirm tokens are created successfully

@@ -60,12 +60,6 @@ Use pool creation and sharing when:
 
 ![Pool Creation - Issuer](imagesByMdFilesFolder/30/PoolCreation_Issuer.png)
 
-![Pool Details - Issuer](imagesByMdFilesFolder/30/Pool_Details_Issuer.png)
-
-![Pool Sharing - Issuer](imagesByMdFilesFolder/30/PoolSharing_Issuer.png)
-
-![Loan Map to Pool - Issuer](imagesByMdFilesFolder/30/LoanMapToPoolIssuer.png)
-
 ### Adding Loans to Pool
 
 1. **Navigate to Pool Details**
@@ -85,6 +79,8 @@ Use pool creation and sharing when:
    - Loans are assigned to the pool
    - Loan status changes to "Mapped"
 
+![Loan Map to Pool - Issuer](imagesByMdFilesFolder/30/LoanMapToPoolIssuer.png)
+
 4. **Review Pool Metrics**
    - Pool metrics calculate automatically
    - **Total Balance**: Sum of all mapped loan balances
@@ -93,6 +89,8 @@ Use pool creation and sharing when:
    - **Weighted Average FICO**: Credit score weighted by loan balance
    - **Other Metrics**: Geographic distribution, average loan size, etc.
    - Verify metrics are accurate and meet your requirements
+
+![Pool Details - Issuer](imagesByMdFilesFolder/30/Pool_Details_Issuer.png)
 
 5. **Add or Remove Loans**
    - Continue adding loans as needed
@@ -131,6 +129,8 @@ Use pool creation and sharing when:
    - Recipients receive notifications
    - Pool becomes visible to shared parties
    - Pool status may change to "Preview"
+
+![Pool Sharing - Issuer](imagesByMdFilesFolder/30/PoolSharing_Issuer.png)
 
 6. **Verify Sharing**
    - Confirm recipients can see the pool

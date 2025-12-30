@@ -9,8 +9,6 @@ description: Learn how lenders confirm fund transfers to complete drawdowns
 
 Funds transfer confirmation is the final step where lenders confirm they have transferred funds to borrowers, completing the drawdown process for each individual lender. This provides official confirmation that funds have been disbursed and marks lender participation as complete.
 
-![Fund Transfer Confirmation](imagesByMdFilesFolder/29/Fund Transfer Confirmation.png)
-
 ## Who Can Use This
 
 - Lenders who have approved funding notice drawdowns and transferred funds
@@ -76,6 +74,8 @@ Use fund transfer confirmation when:
    - Confirm the confirmation action
    - Submit your confirmation
    - Status updates to show transfer confirmed
+
+![Fund Transfer Confirmation](imagesByMdFilesFolder/29/Fund Transfer Confirmation.png)
 
 5. **Verify Confirmation**
    - Confirm status shows transfer is confirmed

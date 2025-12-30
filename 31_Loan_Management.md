@@ -9,10 +9,6 @@ description: Learn how to manage loans including uploading, mapping, and updatin
 
 Loan management covers all the tasks issuers perform to manage loans in the platform, including uploading loans, mapping them to pools, updating loan information, managing loan statuses, and tracking loans through their lifecycle. Effective loan management ensures loan data quality and enables successful pool creation.
 
-![Loans Onboarding - Uploading - Issuer](imagesByMdFilesFolder/31/Loans_Onboarding_Uploading_Issuer.png)
-
-![Loan Map to Pool - Issuer](imagesByMdFilesFolder/31/LoanMapToPoolIssuer.png)
-
 ## Who Can Use This
 
 - Issuers who manage loans and create pools
@@ -55,6 +51,8 @@ Use loan management when:
    - Loans are stored in the system
    - Processing status is displayed
 
+![Loans Onboarding - Uploading - Issuer](imagesByMdFilesFolder/31/Loans_Onboarding_Uploading_Issuer.png)
+
 5. **Review Standardized Loans**
    - Review standardized loans after processing
    - Check that data mapped correctly
@@ -88,6 +86,8 @@ Use loan management when:
    - Confirm the mapping action
    - Click "Map to Pool" or similar button
    - Mapping is processed
+
+![Loan Map to Pool - Issuer](imagesByMdFilesFolder/31/LoanMapToPoolIssuer.png)
 
 5. **Verify Mapping**
    - Loans are mapped to the pool

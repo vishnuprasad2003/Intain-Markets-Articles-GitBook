@@ -27,10 +27,6 @@ Different users see pools differently based on their role. The platform automati
 
 **As an Issuer** - You'll see all pools you've created, regardless of status. You'll see pools in Created, Preview, Mandate Pending, and Deal statuses. You'll see pending actions requiring your attention, such as responding to feedback. Your dashboard shows your active pools and items waiting for your action. You have full visibility into pools you've created and can manage them throughout their lifecycle.
 
-**As a Market Maker** - You'll see pools shared with you for review, pools submitted to you for mandate review, pools where you've accepted the mandate, and deals you've helped structure. You'll see actions like reviewing pool details, accepting or rejecting mandates, providing feedback, and structuring deals. You have visibility into pools where you're involved in structuring or reviewing.
-
-**As an Issuer** - You'll see all pools you've created, regardless of status. You'll see pools in Created, Preview, Mandate Pending, and Deal statuses. You'll see pending actions requiring your attention, such as responding to feedback. Your dashboard shows your active pools and items waiting for your action. You have full visibility into pools you've created and can manage them throughout their lifecycle.
-
 ![Pools Screen - Issuer](imagesByMdFilesFolder/07/Pools_Screen_Issuer.png)
 
 **As a Market Maker** - You'll see pools shared with you for review, pools submitted to you for mandate review, pools where you've accepted the mandate, and deals you've helped structure. You'll see actions like reviewing pool details, accepting or rejecting mandates, providing feedback, and structuring deals. You have visibility into pools where you're involved in structuring or reviewing.
@@ -48,8 +44,6 @@ Different users see pools differently based on their role. The platform automati
 **As a Rating Agency** - You'll see pools shared with you for rating analysis, pool data needed for rating purposes, and access to analysis tools. You'll typically have read-only access—you can view and analyze but cannot make changes or approvals. You have visibility into pools shared with you for rating purposes.
 
 ![Pools Screen - Rating Agency](imagesByMdFilesFolder/07/Pools_Screen_RatingAgency.png)
-
-**As a Rating Agency** - You'll see pools shared with you for rating analysis, pool data needed for rating purposes, and access to analysis tools. You'll typically have read-only access—you can view and analyze but cannot make changes or approvals. You have visibility into pools shared with you for rating purposes.
 
 **Action Availability** - Action buttons are automatically enabled or disabled based on your role and the pool's status. You'll only see actions you can actually take. Disabled buttons typically show tooltips explaining why they're disabled. Understanding action availability helps you know what you can do and why certain actions might not be available.
 
@@ -73,11 +67,11 @@ Different users see pools differently based on their role. The platform automati
 
 **Status Affects Actions** - Remember that both your role and the pool's status determine what actions are available. Even if you have permission, the status must allow the action. Understanding how status affects actions helps you know what you can do and why certain actions might not be available.
 
-**Collaboration Through Sharing** - Different roles collaborate through sharing. Issuers share pools with market makers and investors, who then see the pools in their views. Understanding this helps you know how to collaborate effectively. Understanding collaboration helps you work effectively with other parties.
+**Collaboration Through Sharing** - Different roles collaborate through sharing. Issuers share pools with market makers and investors, who then see the pools in their views. Understanding this helps you know how to collaborate effectively with other parties.
 
 **Filtering Is Automatic** - The platform filters information automatically—you don't need to manually filter or search through irrelevant items. Trust that you're seeing what's relevant to your role. Understanding automatic filtering helps you navigate the platform efficiently.
 
-**Read-Only Access** - Some roles, like Rating Agency, have read-only access. You can view and analyze but cannot make changes or approvals. Understanding your access level helps you know what you can do. Understanding read-only access helps you know what actions are available to your role.
+**Read-Only Access** - Some roles, like Rating Agency, have read-only access. You can view and analyze but cannot make changes or approvals. Understanding your access level helps you know what you can do and what actions are available to your role.
 
 **Track Status Changes** - Monitor pool status changes to understand where pools are in their workflow. Status changes indicate progression and may affect what actions are available. Understanding status changes helps you track pool progression and know what actions are available.
 

@@ -9,10 +9,6 @@ description: Understand the term sheet process from creation to approval
 
 The term sheet is the first step in creating a credit facility. It's the borrower's proposal outlining the key terms of the facility they want, including maximum facility amount, interest rates, repayment terms, and other conditions. Understanding the term sheet workflow helps you navigate this critical first phase from creation through approval.
 
-![Issuer - Term Sheet Creation](imagesByMdFilesFolder/16/Issuer_TermSheetCreation.png)
-
-![Review Term Sheet - FA](imagesByMdFilesFolder/16/review_term_sheet_FA.png)
-
 ## Who Can Use This
 
 - Borrowers who create term sheets and want to propose new credit facilities
@@ -62,6 +58,8 @@ Use term sheet workflow when:
    - You can return later to complete or edit
    - Draft status allows you to work on it over time
    - Status shows as "Draft"
+
+![Issuer - Term Sheet Creation](imagesByMdFilesFolder/16/Issuer_TermSheetCreation.png)
 
 ### Signing the Term Sheet
 
@@ -115,6 +113,8 @@ Use term sheet workflow when:
    - Reviews facility terms, amounts, and conditions
    - Checks supporting documentation
    - Assesses feasibility and compliance
+
+![Review Term Sheet - FA](imagesByMdFilesFolder/16/review_term_sheet_FA.png)
 
 2. **Facility Agent Makes Decision**
    - **Approve**: Term sheet meets requirements

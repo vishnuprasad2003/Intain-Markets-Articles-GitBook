@@ -9,12 +9,6 @@ description: Learn what funding requests are and how to create them
 
 A funding request is when a borrower requests to draw down funds from an active credit facility. Each request specifies the amount needed, the purpose, includes supporting documentation, and must be reviewed and approved by the facility agent before funds can be disbursed. Funding requests allow borrowers to access their approved facility limit flexibly, drawing down funds as needed rather than receiving everything upfront.
 
-![Funding Request Creation - Issuer](imagesByMdFilesFolder/21/FundingRequest_Creation_Issuer.png)
-
-![Funding Request Submit - By Issuer](imagesByMdFilesFolder/21/funding_request_Submit_By_Issuer.jpg)
-
-![Review Funding Request - FA Review](imagesByMdFilesFolder/21/review_funding_request_FAReview.png)
-
 ## What Funding Requests Are
 
 A funding request is a specific request to borrow a portion of your approved facility limit. Think of it as asking to withdraw money from your line of credit—you specify how much you need, what you'll use it for, and provide documentation to support your request. Each funding request is reviewed individually by facility agents to ensure it complies with facility rules and that sufficient borrowing capacity is available.
@@ -55,9 +49,15 @@ Funding requests enable flexible access to approved facility limits:
 
 **Creation** - You create funding requests against active facilities by specifying the amount, purpose, funding date, and uploading supporting documentation. Requests start in DRAFT status, allowing you to work on them before submission.
 
+![Funding Request Creation - Issuer](imagesByMdFilesFolder/21/FundingRequest_Creation_Issuer.png)
+
 **Submission** - When ready, you submit funding requests to facility agents for review. Status changes to FAReview, and facility agents evaluate the request for compliance with facility rules and available borrowing capacity.
 
+![Funding Request Submit - By Issuer](imagesByMdFilesFolder/21/funding_request_Submit_By_Issuer.jpg)
+
 **Facility Agent Review** - Facility agents review requests to ensure they comply with facility rules, verify sufficient borrowing capacity is available, review documentation, and assess overall request quality. They can approve, reject, or request changes.
+
+![Review Funding Request - FA Review](imagesByMdFilesFolder/21/review_funding_request_FAReview.png)
 
 **Approval Outcomes** - When approved, funding notices are automatically created. When rejected, you receive a reason and can create new requests. When changes are requested, you can update and resubmit.
 

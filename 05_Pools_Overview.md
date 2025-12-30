@@ -47,11 +47,11 @@ Pools serve several important purposes in structured finance:
 
 **Creation** - You create a pool by providing basic information like pool name, asset class, and transaction type. The pool starts in Created status, visible only to you, ready for loan mapping and configuration.
 
+![Pool Creation - Issuer](imagesByMdFilesFolder/05/PoolCreation_Issuer.png)
+
 **Loan Mapping** - You map loans to the pool by selecting individual loans and assigning them to the pool. When loans are mapped, pool metrics calculate automatically. You can add or remove loans while the pool is in Created or Preview status.
 
-**Pool Creation** - As an issuer, you create pools to group loans together for structured finance transactions. The pool creation process allows you to set up pools with all necessary information.
-
-![Pool Creation - Issuer](imagesByMdFilesFolder/05/PoolCreation_Issuer.png)
+![Loan Map to Pool - Issuer](imagesByMdFilesFolder/05/LoanMapToPoolIssuer.png)
 
 **Sharing** - You share pools with other organizations for review and collaboration. When shared, pools become visible to those organizations, and recipients can view, analyze, and provide feedback based on sharing permissions.
 
@@ -60,10 +60,6 @@ Pools serve several important purposes in structured finance:
 **Pool Details** - When viewing pools, you can access detailed information including pool metrics, loan composition, and available actions. The pool details view provides comprehensive information for decision-making.
 
 ![Pool Details - Issuer](imagesByMdFilesFolder/05/Pool_Details_Issuer.png)
-
-**Loan Mapping** - You map loans to pools to include them in the pool. Once mapped, loans contribute their characteristics to pool metrics.
-
-![Loan Map to Pool - Issuer](imagesByMdFilesFolder/05/LoanMapToPoolIssuer.png)
 
 **Status Progression** - Pools progress through statuses from Created to Preview to Mandate Pending to Deal. Each status represents a specific stage and determines what actions are available. Status changes happen when you take actions like sharing, submitting for mandate, or when market makers accept mandates.
 

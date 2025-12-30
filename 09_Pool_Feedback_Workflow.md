@@ -9,8 +9,6 @@ description: Learn how to provide and respond to feedback on pools
 
 The feedback workflow allows market makers, investors, and other parties to provide input on pools shared with them. This collaborative process helps improve pool quality, ensures all parties are aligned before finalizing deals, and enables effective communication between issuers and reviewers. Feedback can be provided at both pool-level and loan-level, allowing for detailed and specific input.
 
-![Pools Feedback - Market Maker](imagesByMdFilesFolder/09/Pools_Feedback_MarketMaker.png)
-
 ## Who Can Use This
 
 - Market Makers who review pools and want to request changes or provide comments
@@ -51,6 +49,8 @@ Use feedback workflow when:
    - Click to add new feedback
    - Select whether this is pool-level or loan-level feedback
    - If loan-level, select the specific loan(s) you're providing feedback on
+
+![Pools Feedback - Market Maker](imagesByMdFilesFolder/09/Pools_Feedback_MarketMaker.png)
 
 4. **Enter Feedback Details**
    - Type your feedback message clearly and specifically

@@ -9,16 +9,6 @@ description: Understand how tokens are generated and distributed for funding not
 
 Token generation and issuance is the complete workflow for creating and distributing tokens that represent drawdown amounts in funding notices. These tokens serve as digital representations of the drawdown that enable tracking, distribution, and management of funds across multiple lenders. Understanding this workflow helps you navigate the token-based drawdown process from creation through distribution to lender visibility.
 
-![FA - Funding Notice Save - Token Generation](imagesByMdFilesFolder/25/FA_FundingNotice_Save_TokenGeneration.png)
-
-![Funding Notice Details - FA](imagesByMdFilesFolder/25/FundingNoticeDetailsFA.png)
-
-![Issuer - Token Approval](imagesByMdFilesFolder/25/Issuer_Token_Approval.png)
-
-![Lender Approval - Funding Notice](imagesByMdFilesFolder/25/LenderApprovalFundingNotice.png)
-
-![Fund Transfer Confirmation](imagesByMdFilesFolder/25/Fund Transfer Confirmation.png)
-
 ## Workflow Overview
 
 The token generation and issuance workflow begins when a funding request is approved and a funding notice is automatically created. Facility agents generate tokens representing the drawdown amount, configure distribution to lenders based on their participation percentages, and sign funding notices. Borrowers then approve token transfers, making funding notices visible to lenders who can review and approve their participation. The workflow ensures proper documentation, tracking, and coordination throughout the drawdown process.
@@ -29,17 +19,27 @@ The token generation and issuance workflow begins when a funding request is appr
 
 **Stage 2: Token Generation** - Facility agents generate tokens for the borrower, representing the total drawdown amount. Tokens are created digitally and linked to the funding notice. The system updates the funding notice status to TOKEN_GENERATED.
 
+![FA - Funding Notice Save - Token Generation](imagesByMdFilesFolder/25/FA_FundingNotice_Save_TokenGeneration.png)
+
 **Stage 3: Token Distribution Configuration** - Facility agents configure how tokens are distributed to lenders based on their participation percentages in the facility. Each lender's allocation is calculated automatically, showing their portion of the drawdown. Distribution is set up in the tokenDistribution array.
+
+![Funding Notice Details - FA](imagesByMdFilesFolder/25/FundingNoticeDetailsFA.png)
 
 **Stage 4: Per-Lender E-Signature** - Facility agents sign funding notices for each lender individually. Each lender's signature status is tracked separately in the tokenDistribution array. The system tracks overall completion, and status remains TOKEN_GENERATED during this process.
 
 **Stage 5: Borrower Token Approval** - Borrowers review the token allocation to verify amounts and distribution are correct. Once verified, borrowers approve the token transfer, which changes the funding notice status to TOKEN_APPROVED and makes the notice visible to lenders.
 
+![Issuer - Token Approval](imagesByMdFilesFolder/25/Issuer_Token_Approval.png)
+
 **Stage 6: Lender Visibility** - After borrower approval, funding notices become visible to lenders. Lenders can see their allocated token portions and review drawdown details. This enables lender review and decision-making.
 
 **Stage 7: Lender Review and Approval** - Lenders review funding notices and approve or reject their participation. Each lender makes independent decisions, and participation is tracked individually. Lenders can see their allocated portion and make decisions accordingly.
 
+![Lender Approval - Funding Notice](imagesByMdFilesFolder/25/LenderApprovalFundingNotice.png)
+
 **Stage 8: Fund Transfer Confirmation** - After approving, lenders transfer funds and confirm transfers. Each lender confirms their transfer independently, completing their participation in the drawdown. The system tracks individual lender confirmations.
+
+![Fund Transfer Confirmation](imagesByMdFilesFolder/25/Fund Transfer Confirmation.png)
 
 ## How the Workflow Progresses
 

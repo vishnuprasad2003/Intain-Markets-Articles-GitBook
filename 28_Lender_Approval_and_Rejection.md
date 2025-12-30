@@ -9,8 +9,6 @@ description: Learn how lenders approve or reject funding notice drawdowns
 
 Lenders review funding notices and can approve or reject individual drawdowns. Each lender makes their own independent decision, and the system tracks individual lender participation separately. This allows lenders to evaluate each drawdown based on their own criteria and participate or decline as they see fit.
 
-![Lender Approval - Funding Notice](imagesByMdFilesFolder/28/LenderApprovalFundingNotice.png)
-
 ## Who Can Use This
 
 - Lenders who receive funding notices after borrower token approval
@@ -70,6 +68,8 @@ Use lender approval when:
    - Review any confirmation messages
    - Confirm your approval decision
    - Your approval is recorded
+
+![Lender Approval - Funding Notice](imagesByMdFilesFolder/28/LenderApprovalFundingNotice.png)
 
 3. **After Approval**
    - Your participation is confirmed

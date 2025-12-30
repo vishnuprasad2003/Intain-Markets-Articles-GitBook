@@ -53,11 +53,9 @@ Funding notices serve several important purposes:
 
 **Token Generation** - Facility agents generate tokens for the drawdown and configure distribution to lenders. Tokens represent the drawdown amount and are allocated to lenders based on their participation percentages. Status changes to TOKEN_GENERATED.
 
-**Per-Lender E-Signature** - Facility agents sign funding notices for each lender individually. Each lender's signature status is tracked separately, and the system tracks overall completion. Status remains TOKEN_GENERATED during this process.
-
-**Token Generation** - Facility agents generate tokens and configure distribution to lenders. The system creates tokens representing the drawdown amount and allocates them based on lender participation percentages.
-
 ![FA - Funding Notice Save - Token Generation](imagesByMdFilesFolder/24/FA_FundingNotice_Save_TokenGeneration.png)
+
+**Per-Lender E-Signature** - Facility agents sign funding notices for each lender individually. Each lender's signature status is tracked separately, and the system tracks overall completion. Status remains TOKEN_GENERATED during this process.
 
 **Borrower Token Approval** - Borrowers review token allocation and approve token transfers. Approval makes funding notices visible to lenders and enables lender review. Status changes to TOKEN_APPROVED.
 
@@ -67,23 +65,17 @@ Funding notices serve several important purposes:
 
 ![Funding Notice Details - FA](imagesByMdFilesFolder/24/FundingNoticeDetailsFA.png)
 
-**Lender Approval** - Lenders review funding notices and approve or reject their participation. Each lender makes independent decisions based on their allocated portion.
+**Lender Review and Approval** - Lenders review funding notices and approve or reject their participation. Each lender makes independent decisions, and participation is tracked individually. Lenders can see their allocated portion and make decisions accordingly.
 
 ![Lender Approval - Funding Notice](imagesByMdFilesFolder/24/LenderApprovalFundingNotice.png)
 
-**Fund Transfer Confirmation** - Lenders confirm when they've transferred funds, completing their participation in the drawdown.
+**Fund Transfer Confirmation** - After approving, lenders transfer funds and confirm transfers. Each lender confirms their transfer independently, completing their participation in the drawdown.
 
 ![Fund Transfer Confirmation](imagesByMdFilesFolder/24/Fund Transfer Confirmation.png)
 
-**Process Completion** - Once all lenders confirm transfers, the drawdown process is complete and funds have been disbursed.
+**Process Completion** - Once lenders confirm transfers, the drawdown process is complete. Funds have been disbursed, and the drawdown is documented with complete audit trails.
 
 ![Process Completion](imagesByMdFilesFolder/24/ProcessCompletion.png)
-
-**Lender Review and Approval** - Lenders review funding notices and approve or reject their participation. Each lender makes independent decisions, and participation is tracked individually. Lenders can see their allocated portion and make decisions accordingly.
-
-**Fund Transfer Confirmation** - After approving, lenders transfer funds and confirm transfers. Each lender confirms their transfer independently, completing their participation in the drawdown.
-
-**Process Completion** - Once lenders confirm transfers, the drawdown process is complete. Funds have been disbursed, and the drawdown is documented with complete audit trails.
 
 ## Important Points to Know
 
