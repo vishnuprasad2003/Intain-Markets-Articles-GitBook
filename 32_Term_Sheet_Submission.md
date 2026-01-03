@@ -26,7 +26,14 @@ Use term sheet submission when:
 
 ### Preparing for Submission
 
-1. **Complete Term Sheet Information**
+1. **Access Term Sheet Creation**
+   - Navigate to the Term Sheets section
+   - Click "Create New Term Sheet" or similar button
+   - Term sheet creation form opens
+
+![Accessing Term Sheet - Create New Term Sheet](imagesByMdFilesFolder/32/AccessingTermsheetCreateNewTermSheet.png)
+
+2. **Complete Term Sheet Information**
    - Fill in all required fields
    - **Facility Name**: Enter unique facility name
    - **Maximum Facility Amount**: Specify total borrowing limit
@@ -36,14 +43,20 @@ Use term sheet submission when:
    - **Purpose**: Describe the purpose of the facility
    - **Other Terms**: Fill in any other required facility terms
 
-2. **Upload Required Documents**
+![Add Term Sheet Details](imagesByMdFilesFolder/32/2_AddTermSheetDetails.png)
+
+![Term Sheet Creation - Issuer](imagesByMdFilesFolder/32/Issuer_TermSheetCreation.png)
+
+3. **Upload Required Documents**
    - Upload supporting documents that justify the request
    - Include financial statements, business plans, or other required documentation
    - Ensure documents meet quality and format requirements
    - Verify all required documents are included
    - Check document quality and readability
 
-3. **Review All Information**
+![Upload Documents](imagesByMdFilesFolder/32/UploadDocuments.png)
+
+4. **Review All Information**
    - Review all term sheet details carefully
    - Verify amounts and rates are correct
    - Check dates and terms are accurate
@@ -51,11 +64,13 @@ Use term sheet submission when:
    - Verify documents are attached correctly
    - Confirm everything is ready for submission
 
-4. **Save Your Work**
+5. **Save Your Work**
    - Save term sheet as draft if not ready to submit
    - You can return later to complete or edit
    - Draft status allows you to work on it over time
    - Status shows as "Draft"
+
+![Save as Draft](imagesByMdFilesFolder/32/SaveAsDraft.png)
 
 ### Signing the Term Sheet
 
@@ -78,6 +93,8 @@ Use term sheet submission when:
    - Complete all required signature fields
    - Confirm your signature
    - Verify signature is recorded
+
+![Term Sheet Signing](imagesByMdFilesFolder/32/TermSheetSigning.png)
 
 4. **Verify Signature Completion**
    - Confirm signature is complete
@@ -123,6 +140,8 @@ Use term sheet submission when:
    - **If Approved**: Master commitment is automatically created, you receive notification
    - **If Rejected**: You receive rejection reason, you can create a new term sheet
    - **If Changes Requested**: You receive change request details, you can update and resubmit
+
+![Review Term Sheet - FA](imagesByMdFilesFolder/32/review_term_sheet_FA.png)
 
 ## Rules & Validations
 

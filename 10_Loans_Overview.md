@@ -55,6 +55,10 @@ Loans serve as the foundation for structured finance transactions:
 
 **Batch Verification and NFT Minting** - After mapping loans to pools, loans are added to batches for verification and NFT minting. Batches group multiple loans together for efficient processing. During verification, the system validates loan data and ensures everything is correct. Once verified, loans can be minted as NFTs (Non-Fungible Tokens) on the blockchain, creating a digital representation of each loan that enables secure tracking, ownership, and transfer. The batch process ensures loans are properly verified and tokenized before they can be used in transactions.
 
+![Batch Verification](imagesByMdFilesFolder/10/BatchVerification.png)
+
+![NFT Minting](imagesByMdFilesFolder/10/NftMinting.png)
+
 **Status Progression** - Loans progress through statuses from Unmapped to Mapped to Submitted to Verified, and potentially to Minted if tokenization is required. Status shows where each loan is in its lifecycle and what actions are available.
 
 **Removal and Reinstatement** - Loans can be removed from pools if they don't meet criteria or have issues. Removed loans are excluded from pool calculations but remain visible. They can be reinstated when issues are resolved, and metrics recalculate to include them.

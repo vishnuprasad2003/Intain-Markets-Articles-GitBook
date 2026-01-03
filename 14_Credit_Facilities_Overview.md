@@ -49,7 +49,7 @@ Credit facilities serve several important purposes:
 
 **Master Commitment Creation** - When term sheets are approved, master commitments are automatically created. Facility agents configure the complete facility structure, including facility rules, borrowing base calculations, lender groups, and other parameters.
 
-![Create Master Commitment - Configure Collateral Eligibility Rules Modal](imagesByMdFilesFolder/14/create_master_commitment_modal_create_on_click_configure_collateral_eligibility_rules_modal_75.png)
+![Term Sheet Creation - Issuer](imagesByMdFilesFolder/14/Issuer_TermSheetCreation.png)
 
 **Lender Approval** - After facility agents configure master commitments, lenders review and approve them. Any lender approval activates the facility, making it operational for funding requests.
 
@@ -57,11 +57,19 @@ Credit facilities serve several important purposes:
 
 **Funding Requests** - Once facilities are active, borrowers can create funding requests to draw down funds. Each request specifies the amount, purpose, and includes supporting documentation. Facility agents review requests for compliance and available capacity.
 
+![Funding Request Creation - Issuer](imagesByMdFilesFolder/14/FundingRequest_Creation_Issuer.png)
+
 **Funding Notice Generation** - When funding requests are approved, funding notices are automatically generated. Facility agents generate tokens and sign notices for lenders. Borrowers approve token transfers, making notices visible to lenders.
+
+![Funding Notice Details - FA](imagesByMdFilesFolder/14/FundingNoticeDetailsFA.png)
 
 **Lender Review and Approval** - Lenders review funding notices and approve or reject individual drawdowns. Each lender makes independent decisions, and participation is tracked individually.
 
+![Lender Approval - Funding Notice](imagesByMdFilesFolder/14/LenderApprovalFundingNotice.png)
+
 **Fund Disbursement** - After lenders approve, they transfer funds and confirm transfers. Funds are disbursed to borrowers, completing the drawdown process.
+
+![Fund Transfer Confirmation](imagesByMdFilesFolder/14/Fund Transfer Confirmation.png)
 
 **Active Facilities View** - The credit facility dashboard shows all active facilities, allowing you to view facility details, check borrowing capacity, and access funding request options.
 

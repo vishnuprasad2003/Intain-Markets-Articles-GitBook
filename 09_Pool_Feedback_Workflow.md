@@ -45,10 +45,12 @@ Use feedback workflow when:
    - Choose the appropriate type and level for your feedback
 
 3. **Access Feedback Function**
-   - Navigate to the pool's feedback section
+   - Navigate to the pool's details page
    - Click to add new feedback
    - Select whether this is pool-level or loan-level feedback
    - If loan-level, select the specific loan(s) you're providing feedback on
+
+![Pool Detail](imagesByMdFilesFolder/09/PoolDetail.png)
 
 ![Pools Feedback - Market Maker](imagesByMdFilesFolder/09/Pools_Feedback_MarketMaker.png)
 
@@ -66,11 +68,9 @@ Use feedback workflow when:
    - Issuer receives notification about the feedback
    - Feedback is recorded and tracked
 
-6. **Track Feedback Status**
-   - View your submitted feedback
-   - See if issuer has viewed or responded to it
-   - Monitor whether changes have been made based on your feedback
-   - Follow up if needed
+![Enter Feedback](imagesByMdFilesFolder/09/EnterFeedback.png)
+
+![View Entered Feedback](imagesByMdFilesFolder/09/ViewEnteredFeedback.png)
 
 ### Responding to Feedback (Issuers)
 
@@ -96,7 +96,7 @@ Use feedback workflow when:
    - Resolve flagged items
    - Make all changes requested in change requests
 
-4. **Communicate Your Response**
+4. **Respond to Feedback**
    - Respond to feedback messages with your actions
    - Explain changes you made
    - Answer questions that were asked
@@ -104,13 +104,7 @@ Use feedback workflow when:
    - Confirm when you've completed requested changes
    - Provide updates on your progress
 
-5. **Mark Feedback as Addressed**
-   - Indicate when you've addressed feedback
-   - Mark change requests as completed after making changes
-   - Update feedback status to show it's been handled
-   - Notify reviewers that changes have been made
-
-6. **Resubmit if Needed**
+5. **Resubmit if Needed**
    - When changes are complete, resubmit the pool for review
    - Status may update to reflect resubmission
    - Reviewers are notified of changes
@@ -122,19 +116,7 @@ Use feedback workflow when:
    - Access the pool's feedback section
    - See all feedback messages in chronological order
    - View who provided feedback and when
-   - See feedback status (unread, read, addressed)
-
-2. **Filter and Search Feedback**
-   - Filter by feedback type (change request vs. general feedback)
-   - Filter by level (pool-level vs. loan-level)
-   - Search for specific feedback messages
-   - View feedback from specific reviewers
-
-3. **Track Feedback Resolution**
-   - See which feedback has been addressed
-   - Track which change requests are completed
-   - Monitor outstanding feedback that needs attention
-   - Ensure all critical feedback is resolved
+   - Review feedback responses and status
 
 ## Rules & Validations
 

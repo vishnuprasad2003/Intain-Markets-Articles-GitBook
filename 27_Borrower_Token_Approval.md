@@ -62,6 +62,8 @@ Use token approval when:
 
 2. **Initiate Approval**
    - Click the "Approve Token Transfer" button or similar
+   - Enter your C-chain private key or upload a JSON file format
+   - This approves the FT tokens to the Intain admin wallet so they can transfer those FTs to investors after payment is completed
    - Review any confirmation messages
    - Understand that approval makes notice visible to lenders
    - Confirm you want to proceed

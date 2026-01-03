@@ -69,7 +69,7 @@ Funding notices serve several important purposes:
 
 ![Lender Approval - Funding Notice](imagesByMdFilesFolder/24/LenderApprovalFundingNotice.png)
 
-**Fund Transfer Confirmation** - After approving, lenders transfer funds and confirm transfers. Each lender confirms their transfer independently, completing their participation in the drawdown.
+**Fund Transfer Confirmation** - After approving, lenders transfer funds and confirm transfers. Each lender confirms their transfer independently, completing their participation in the drawdown. The system tracks individual lender confirmations.
 
 ![Fund Transfer Confirmation](imagesByMdFilesFolder/24/Fund Transfer Confirmation.png)
 

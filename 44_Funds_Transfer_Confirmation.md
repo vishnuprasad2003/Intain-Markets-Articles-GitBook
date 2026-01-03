@@ -61,21 +61,16 @@ Use fund transfer confirmation when:
    - Review transfer date and time
    - Verify transfer reference information
 
-3. **Enter Confirmation Details**
-   - Enter transfer confirmation details if required
-   - Add transfer reference number or transaction ID
-   - Include any relevant transfer information
-   - Add confirmation note if needed
-   - Verify all details are accurate
-
-4. **Submit Confirmation**
+3. **Submit Confirmation**
    - Click "Confirm Fund Transfer" button or similar
    - Review your confirmation details
    - Confirm the confirmation action
    - Submit your confirmation
    - Status updates to show transfer confirmed
 
-5. **Verify Confirmation**
+![Fund Transfer Confirmation](imagesByMdFilesFolder/44/confirmfundstransfer.png)
+
+4. **Verify Confirmation**
    - Confirm status shows transfer is confirmed
    - Verify your participation is marked complete
    - Check that confirmation is recorded

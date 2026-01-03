@@ -9,6 +9,8 @@ description: Understand what happens after your funding request is reviewed
 
 When a facility agent reviews a funding request, there are three possible outcomes: Approval, Rejection, or Changes Requested. Understanding these outcomes helps borrowers know what to expect, how to proceed, and what happens next in the funding process. Each outcome has different implications for your workflow and next steps, and understanding them helps you navigate the funding request process effectively.
 
+![Funding Request Review - FA](imagesByMdFilesFolder/23/review_funding_request_FAReview.png)
+
 ## Possible Outcomes
 
 After you submit a funding request, the facility agent reviews it and makes a decision. There are three possible outcomes: **Approved** - your request meets all requirements and is approved, **Rejected** - your request doesn't meet requirements and is declined, or **Changes Requested** - your request needs modifications before it can be approved. Understanding these outcomes helps you know what to expect and how to proceed.

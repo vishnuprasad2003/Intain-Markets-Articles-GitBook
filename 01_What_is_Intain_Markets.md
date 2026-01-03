@@ -7,41 +7,37 @@ description: Learn about the Intain Markets platform and its capabilities for st
 
 ## Overview
 
-Intain Markets is a comprehensive digital infrastructure platform designed to bring transparency, efficiency, and security to structured finance transactions. It serves as a unified ecosystem where all parties involved in financial deals—from issuers and borrowers to investors and lenders, market makers and facility agents to servicers and rating agencies—can collaborate seamlessly through secure, workflow-driven processes. The platform handles the complexity of coordinating multiple parties, managing status transitions, tracking approvals, and maintaining relationships, allowing you to focus on your business decisions rather than the mechanics of transaction management.
+Intain Markets is a digital infrastructure platform for structured finance transactions. It provides transparency, efficiency, and security for all parties—issuers, borrowers, investors, lenders, market makers, facility agents, servicers, and rating agencies—through secure, workflow-driven processes. The platform manages coordination between parties, status transitions, approvals, and relationships, so you can focus on business decisions rather than transaction mechanics.
 
-## How the Platform Is Designed
+## Platform Design
 
-Intain Markets is built on the fundamental principle that structured finance transactions require careful coordination between multiple parties, each with distinct roles and responsibilities. The platform recognizes that these transactions are not simple one-time exchanges, but complex workflows that progress through defined stages, require approvals at critical points, and must maintain complete transparency throughout their lifecycle.
+Intain Markets is built on the principle that structured finance transactions require careful coordination between multiple parties with distinct roles. These transactions progress through defined stages, require approvals at critical points, and maintain transparency throughout their lifecycle.
 
-The platform is architected as a collaborative environment where:
+The platform provides:
 
-**Workflows Guide Progression** - Every transaction type follows a structured path from creation to completion, with clear stages and decision points. Whether you're creating pools for securitization, submitting term sheets for credit facilities, or managing loan portfolios, the platform guides you through the appropriate sequence of steps, ensuring that important stages aren't skipped and prerequisites are met before proceeding.
+**Workflow-Driven Progression** - Transactions follow structured paths from creation to completion with clear stages and decision points. The platform guides you through proper sequences, preventing skipped stages and ensuring prerequisites are met.
 
-**Statuses Reflect Position** - Each item in the platform has a status that indicates where it is in its journey and what can happen next. Statuses are not just labels—they actively control what actions are available, ensure proper progression, and prevent skipping important steps. Understanding statuses helps you know what to expect and what you can do at each stage.
+**Status-Based Control** - Each item has a status indicating its position and available actions. Statuses actively control what's possible, ensure proper progression, and prevent improper steps.
 
-**Approvals Ensure Quality** - Critical stages require review and approval from authorized parties before proceeding. Approvals are not obstacles but quality checkpoints that ensure items meet standards, comply with requirements, and have proper authorization before commitment. This protects all parties involved and maintains quality throughout the process.
+**Quality Approval Gates** - Critical stages require review and approval from authorized parties. These checkpoints ensure items meet standards, comply with requirements, and have proper authorization.
 
-**Roles Define Capabilities** - Each user's role determines what they can see, what actions they can take, and what responsibilities they have. The platform automatically filters information and actions based on your role, showing you only what's relevant and appropriate for your responsibilities. This role-based approach ensures proper separation of duties and maintains workflow integrity.
+**Role-Based Access** - Your role determines visibility, available actions, and responsibilities. The platform filters information and actions automatically based on your role.
 
-**Sharing Enables Collaboration** - Items can be shared with multiple parties simultaneously, allowing parallel review and input. Issuers can share pools with market makers and investors, borrowers can submit term sheets to facility agents, and multiple parties can collaborate on transactions without conflicts. This sharing capability enables efficient multi-party collaboration.
+**Multi-Party Collaboration** - Share items with multiple parties for parallel review. Issuers share pools with market makers and investors; borrowers submit term sheets to facility agents.
 
-**Traceability Provides Accountability** - Every action, status change, and decision is recorded with who did what and when. This complete traceability ensures accountability, supports compliance, and provides transparency for all parties. You can see the complete history of any item, understand how it progressed, and identify who was responsible for specific actions or decisions.
+**Complete Traceability** - Every action, status change, and decision is recorded with attribution and timestamps, providing accountability, compliance support, and transparency.
 
-The platform handles the complexity of coordinating these elements automatically, ensuring that workflows progress correctly, approvals happen in the right order, and all parties stay informed of relevant changes. This automation reduces errors, ensures consistency, and allows you to focus on your business decisions rather than managing process mechanics.
+## Capabilities by Role
 
-## What This Enables for Users
+**Issuers and Borrowers** - Organize loan portfolios into pools, present investment opportunities, submit credit facility requests, and manage transactions from creation to completion. Track submissions, respond to feedback, and see when approvals occur.
 
-**For Issuers and Borrowers**, the platform enables you to organize your loan portfolios into pools, present investment opportunities to potential investors, submit credit facility requests, and manage transactions from initial creation through final completion—all while maintaining control over your data and visibility into the process. You can track where your submissions are in the workflow, respond to feedback, make changes when requested, and see when approvals occur. The platform ensures your submissions are reviewed by qualified parties and protects you by requiring approvals before commitment.
+**Market Makers and Facility Agents** - Review opportunities, accept mandates, provide feedback, request changes, approve submissions, and facilitate transactions. Clear decision points ensure you review items at the appropriate stage.
 
-**For Market Makers and Facility Agents**, the platform provides tools to review opportunities, accept mandates to structure deals, provide feedback and request changes, review and approve submissions, and facilitate transactions—helping you add value through structuring and coordination. You can see pools and term sheets submitted for your review, make informed decisions about mandates and approvals, request improvements when needed, and track transactions through to completion. The platform gives you clear decision points and ensures you review items at the appropriate stage.
+**Investors and Lenders** - View investment opportunities, review pool characteristics and loan details, approve or reject funding requests, and track investments. Make independent decisions with complete information.
 
-**For Investors and Lenders**, the platform offers visibility into investment opportunities, the ability to review pool characteristics and loan details, tools to approve or reject funding requests, and tracking of your investments—enabling informed decision-making and efficient capital deployment. You can evaluate opportunities thoroughly, make independent decisions about participation, track your investments, and see complete information about opportunities you're considering. The platform ensures you have the information you need to make informed decisions.
+**Servicers and Paying Agents** - Access assigned pools and facilities, manage loan servicing and payment distributions, and track ongoing activities for smooth post-deal operations.
 
-**For Servicers and Paying Agents**, the platform supports ongoing administration by providing access to assigned pools and facilities, tools to manage loan servicing and payment distributions, and tracking of ongoing activities—ensuring smooth post-deal operations. You can manage loan portfolios, track payments, update loan statuses, handle payment distributions, and ensure proper ongoing administration. The platform provides the tools you need for effective post-deal management.
-
-**For Rating Agencies**, the platform provides read-only access to pool information for analysis and rating purposes, enabling thorough evaluation while maintaining appropriate access controls. You can access pool data, analyze characteristics, review loan details, and perform rating analysis while maintaining appropriate security and access controls.
-
-**Across All Roles**, the platform enables collaboration without confusion, maintains security through role-based access, ensures compliance through structured workflows, and provides complete transparency through comprehensive audit trails. Everyone benefits from the structured approach, quality assurance, compliance support, and transparency that the platform provides.
+**Rating Agencies** - Read-only access to pool information for analysis and rating purposes with appropriate security controls.
 
 ## Key Principles to Understand
 

@@ -11,6 +11,8 @@ Deal setup and calculations involve configuring the financial modeling, borrowin
 
 **Deals Management** - The deals table provides a comprehensive view of all deals, allowing you to review deal details, track progress, and manage deal-related activities.
 
+![Set Up Deal](imagesByMdFilesFolder/38/SetUpDeal.png)
+
 ## Who Can Use This
 
 - Facility Agents who configure facility calculations and parameters
@@ -34,6 +36,8 @@ Use deal setup and calculations when:
    - Define how borrowing base is calculated
    - Set calculation parameters
    - Configure calculation logic
+
+![Set Up Borrowing Base Calculation](imagesByMdFilesFolder/38/setUpBorrowingBaseCalculation.png)
 
 2. **Define Collateral Eligibility**
    - Set what types of collateral qualify
@@ -66,6 +70,8 @@ Use deal setup and calculations when:
    - Define payment terms and schedules
    - Set drawdown limits and restrictions
    - Configure other financial parameters
+
+![Configure Parameters](imagesByMdFilesFolder/38/ConfigureParameters.png)
 
 2. **Configure Utilization Tracking**
    - Set up utilization calculations
@@ -108,6 +114,8 @@ Use deal setup and calculations when:
    - Check that validation passes
    - Ensure setup status shows "Completed"
    - Review everything one final time
+
+![Validating Calculations](imagesByMdFilesFolder/38/ValidatingCalculations.png)
 
 ## Rules & Validations
 

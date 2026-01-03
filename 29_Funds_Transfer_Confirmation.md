@@ -32,14 +32,20 @@ Use fund transfer confirmation when:
    - Verify your allocated amount
    - Confirm you're ready to transfer funds
 
-2. **Complete Fund Transfer**
-   - Transfer your allocated portion to the borrower
-   - Use the transfer method specified in the facility
+2. **Select Payment Transfer Method**
+   - Choose from available payment methods:
+     - **Kinexys Payment Transfer Method** - Use Kinexys payment system for fund transfer
+     - **Circle Payment Transfer Method** - Use Circle payment system for fund transfer
+     - **Offline Payment Transfer Method** - Use offline payment method for fund transfer
+   - Select the appropriate method based on your preference and facility requirements
+
+3. **Complete Fund Transfer**
+   - Transfer your allocated portion to the borrower using the selected method
    - Transfer the exact amount of your allocation
    - Ensure transfer is successful
    - Keep transfer confirmation details (transaction ID, reference number, etc.)
 
-3. **Verify Transfer Success**
+4. **Verify Transfer Success**
    - Confirm funds were transferred successfully
    - Verify transfer amount matches your allocation
    - Check that transfer was completed
@@ -61,23 +67,16 @@ Use fund transfer confirmation when:
    - Review transfer date and time
    - Verify transfer reference information
 
-3. **Enter Confirmation Details**
-   - Enter transfer confirmation details if required
-   - Add transfer reference number or transaction ID
-   - Include any relevant transfer information
-   - Add confirmation note if needed
-   - Verify all details are accurate
-
-4. **Submit Confirmation**
+3. **Submit Confirmation**
    - Click "Confirm Fund Transfer" button or similar
    - Review your confirmation details
    - Confirm the confirmation action
    - Submit your confirmation
    - Status updates to show transfer confirmed
 
-![Fund Transfer Confirmation](imagesByMdFilesFolder/29/Fund Transfer Confirmation.png)
+![Fund Transfer Confirmation](imagesByMdFilesFolder/29/confirmfundstransfer.png)
 
-5. **Verify Confirmation**
+4. **Verify Confirmation**
    - Confirm status shows transfer is confirmed
    - Verify your participation is marked complete
    - Check that confirmation is recorded

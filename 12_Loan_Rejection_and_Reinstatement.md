@@ -21,6 +21,8 @@ When you remove a loan from a pool, the loan enters a "Removed" status. When you
 
 **Reinstated Status** means a previously removed loan has been put back into the pool and is included in calculations again. Pool metrics automatically recalculate to include the reinstated loan—total balance increases, loan count increases, and weighted averages recalculate with the reinstated loan included. The loan fully participates in the pool again, and you can track that it was reinstated. This status is useful when issues with removed loans have been resolved, data has been corrected, pool requirements change, or you decide to include loans that were removed earlier. Reinstated loans fully participate in pool metrics and calculations.
 
+![Reinstate Loan](imagesByMdFilesFolder/12/ReinstateLoan.png)
+
 ## Next Steps for Users
 
 **After Removing a Loan** - Review the updated pool metrics to ensure they reflect the removal correctly. Verify that the loan shows as "Removed" in the pool list. If the loan was removed due to data issues, correct the data. If it was removed because it doesn't meet criteria, determine if criteria can be adjusted or if the loan should remain removed. Consider whether other loans should also be removed for similar reasons. Track why loans were removed for future reference and audit purposes.

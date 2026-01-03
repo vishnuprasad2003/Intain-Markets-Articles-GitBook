@@ -73,6 +73,8 @@ Use facility creation when:
    - Configure other eligibility criteria
    - Define valuation methods
 
+![Configure Rules](imagesByMdFilesFolder/37/ConfigureRules.png)
+
 3. **Configure Facility Parameters**
    - Go to Facility Parameters section
    - Set operational parameters
@@ -99,6 +101,8 @@ Use facility creation when:
    - Add lender to group
    - Repeat for all lenders
 
+![Set Up Lenders](imagesByMdFilesFolder/37/setUpLenders.png)
+
 2. **Configure Lender Details**
    - Set commitment amount for each lender
    - Configure voting percentages
@@ -122,6 +126,10 @@ Use facility creation when:
    - System creates a new sub-commitment from the parent
    - Sub-commitment inherits all facility rules and parameters
    - Sub-commitment starts with empty lender groups
+
+![Create Sub Facility](imagesByMdFilesFolder/37/CreateSubFacility.png)
+
+![Create Sub Facility - Additional](imagesByMdFilesFolder/37/CreateSubFacility (copy).png)
 
 2. **Configure Sub-Commitment Lender Groups**
    - Navigate to the sub-commitment you created

@@ -40,33 +40,32 @@ Use mandates when you:
    - Map loans to the pool and verify loan data
    - Review pool metrics for accuracy (total balance, loan count, weighted averages)
    - Verify all details are correct before sharing
-   - Ensure pool is in Created or Preview status (you can only share pools in these statuses)
+   - Ensure pool is in Created or Preview status
+
+![Prepare Pool](imagesByMdFilesFolder/08/PreparePool.png)
 
 2. **Access Sharing Settings**
    - Navigate to your pool's details page
-   - Find the sharing or organization assignment section
-   - Click to add or modify sharing settings
+   - Click the **Share** button at the top right
+   - A pop-up window appears for sharing configuration
 
 ![Pool Share - Issuer](imagesByMdFilesFolder/08/Pool_Share_Issuer.png)
 
-![Pools Sharing Settings](imagesByMdFilesFolder/08/Pools_Sharing_Settings.png)
-
 3. **Select Recipient Organizations**
-   - Choose which organizations to share with from available options
-   - Select market makers for structuring and mandate review
-   - Select investors for investment opportunities
-   - Select rating agencies for analysis
-   - Select other parties as needed (servicers, paying agents, etc.)
+   - In the pop-up, select the recipient organization type
+   - Based on the selected recipient, the system displays organizations that were added to this pool during creation or editing
+   - Choose which organizations to share with from the available options
    - You can share with multiple organizations simultaneously
 
 ![Pool Share - Select Recipient Organization](imagesByMdFilesFolder/08/Pool_Share_Select_recipient_org.png)
 
 4. **Set Sharing Permissions**
+   - Configure access settings for each organization
    - Control what recipients can see and do with the pool
-   - Allow or restrict feedback capabilities
-   - Allow or restrict download permissions
-   - Set appropriate access levels for each organization type
-   - Configure whether recipients can request changes
+   - Set appropriate access levels based on organization type
+   - Review and confirm your sharing configuration
+
+![Pools Sharing Settings](imagesByMdFilesFolder/08/Pools_Sharing_Settings.png)
 
 5. **Complete the Sharing Process**
    - Review your sharing selections
@@ -75,10 +74,12 @@ Use mandates when you:
    - Pool becomes visible to shared parties in their views
    - Pool status may change to Preview if it was in Created status
 
-6. **Verify Sharing**
-   - Confirm that recipients can see the pool
-   - Check that sharing permissions are set correctly
-   - Verify notifications were sent
+6. **Manage Shared Organizations**
+   - Navigate to the pool details page
+   - Below the main table, find the **Sharing** tab
+   - View all shared organizations and their access settings
+   - As the issuer, you can edit accessibility settings for each shared organization
+   - Modify permissions as needed to control what each organization can access
 
 ### Managing Mandates
 

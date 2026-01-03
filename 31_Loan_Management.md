@@ -34,16 +34,20 @@ Use loan management when:
    - Check data format matches system requirements
    - Include borrower information, financial details, and loan characteristics
 
-2. **Access Loan Upload**
+2. **Access Imports**
    - Navigate to the Loans section
-   - Click "Upload Loans" or similar button
-   - Upload interface opens
+   - Click "Access Imports" or similar button
+   - Import interface opens
+
+![Access Imports](imagesByMdFilesFolder/31/AccessImports.png)
 
 3. **Select and Upload File**
    - Click to browse for your loan file
    - Select the file containing loan data
    - Review file selection
    - Click "Upload" to start the upload process
+
+![Select and Upload File](imagesByMdFilesFolder/31/SelectAndUploadFile.png)
 
 4. **System Processing**
    - System processes and standardizes the loan data
@@ -61,13 +65,18 @@ Use loan management when:
    - Correct any issues if needed
    - Loans are ready for mapping to pools
 
+![Review Standardized Loans](imagesByMdFilesFolder/31/ReviewStandardizedLoans.png)
+
 ### Mapping Loans to Pools
 
-1. **Access Loan List**
+1. **Access Loan Registry**
    - Navigate to the Loans section
+   - Click "Access Loan Registry" to view available loans
    - View list of available loans
    - Filter loans if needed (by status, unmapped, etc.)
    - Select loans you want to map
+
+![Access Loan Registry](imagesByMdFilesFolder/31/accessLoanRegistry.png)
 
 2. **Select Loans to Map**
    - Choose individual loans or use bulk selection
@@ -81,13 +90,15 @@ Use loan management when:
    - Verify correct pool is selected
    - Ensure pool is in appropriate status (Created or Preview)
 
+![Choose Pool to Map](imagesByMdFilesFolder/31/ChoosePoolToMap.png)
+
 4. **Confirm Mapping**
    - Review your selection (loans and pool)
    - Confirm the mapping action
    - Click "Map to Pool" or similar button
    - Mapping is processed
 
-![Loan Map to Pool - Issuer](imagesByMdFilesFolder/31/LoanMapToPoolIssuer.png)
+![Confirm Mapping](imagesByMdFilesFolder/31/ConfirmMapping.png)
 
 5. **Verify Mapping**
    - Loans are mapped to the pool

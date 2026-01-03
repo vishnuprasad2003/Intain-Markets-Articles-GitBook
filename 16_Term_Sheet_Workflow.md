@@ -32,6 +32,8 @@ Use term sheet workflow when:
    - Click "Create New Term Sheet" or similar button
    - Term sheet form opens with required fields
 
+![Accessing Term Sheet - Create New Term Sheet](imagesByMdFilesFolder/16/AccessingTermsheetCreateNewTermSheet.png)
+
 2. **Enter Facility Information**
    - **Facility Name**: Enter a unique name for the facility
    - **Maximum Facility Amount**: Specify the total borrowing limit you're requesting
@@ -41,11 +43,15 @@ Use term sheet workflow when:
    - **Purpose**: Describe the purpose of the facility
    - **Other Terms**: Fill in any other required facility terms
 
+![Add Term Sheet Details](imagesByMdFilesFolder/16/2_AddTermSheetDetails.png)
+
 3. **Upload Required Documents**
    - Upload supporting documents that justify the request
    - Include financial statements, business plans, or other required documentation
    - Ensure documents meet quality and format requirements
    - Verify all required documents are included
+
+![Upload Documents](imagesByMdFilesFolder/16/UploadDocuments.png)
 
 4. **Review Your Entry**
    - Check all information for accuracy
@@ -58,6 +64,8 @@ Use term sheet workflow when:
    - You can return later to complete or edit
    - Draft status allows you to work on it over time
    - Status shows as "Draft"
+
+![Save As Draft](imagesByMdFilesFolder/16/SaveAsDraft.png)
 
 ![Issuer - Term Sheet Creation](imagesByMdFilesFolder/16/Issuer_TermSheetCreation.png)
 
@@ -80,6 +88,8 @@ Use term sheet workflow when:
    - Review the signed version
    - Verify all information is still correct
    - Ensure signature is legally binding
+
+![Term Sheet Signing](imagesByMdFilesFolder/16/TermSheetSigning.png)
 
 4. **Status Updates**
    - Status changes to reflect that term sheet is signed
