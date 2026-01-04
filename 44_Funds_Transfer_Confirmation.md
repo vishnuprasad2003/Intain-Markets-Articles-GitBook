@@ -63,6 +63,12 @@ Use fund transfer confirmation when:
 
 3. **Submit Confirmation**
    - Click "Confirm Fund Transfer" button or similar
+   - System calls API: POST /cf/funding-notices/:fundingNoticeId/confirm-fund-transfer
+   - Request body includes: { lenderOrgId: string, userId: string (optional), confirmationNote: string (optional, defaults to 'Fund transfer confirmed') }
+   - System validates lenderOrgId exists in tokenDistribution array
+   - System validates amountTransferred is not already 'transferred'
+   - System updates tokenDistribution array: sets amountTransferred to 'transferred', sets confirmationNote, updates updatedAt and issuedAt
+   - System checks if all lenders have confirmed (all tokenDistribution entries have amountTransferred === 'transferred')
    - Review your confirmation details
    - Confirm the confirmation action
    - Submit your confirmation
@@ -112,7 +118,7 @@ Use fund transfer confirmation when:
 
 - Transfer details should be accurate - provide correct transfer information for proper documentation.
 
-- Status updates after confirmation - funding notice status reflects your confirmation.
+- Status updates after confirmation - System updates amountTransferred field in tokenDistribution array to 'transferred' for your lenderOrgId. System tracks allLendersConfirmed status (all lenders have confirmed).
 
 - Complete audit trail - your confirmation is recorded with timestamp and transfer details.
 

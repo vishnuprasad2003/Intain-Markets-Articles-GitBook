@@ -52,7 +52,7 @@ Use facility approval when:
 
 ## Making Decisions
 
-**Approve Master Commitment** - Approve when facility meets your criteria: facility structure is sound, terms are appropriate, borrower is creditworthy, facility setup is complete, and risk-return profile is acceptable. Click Approve button, initiate electronic signature process, review master commitment document, complete electronic signature, confirm approval, facility becomes active (if first lender approval), status changes to ACTIVE, and parties receive notifications.
+**Approve Master Commitment** - Approve when facility meets your criteria: facility structure is sound, terms are appropriate, borrower is creditworthy, facility setup is complete, and risk-return profile is acceptable. System calls DocuSign endpoint: GET /docusign/signing-complete?envelopeRequest=masterCommitmentSign&envelopeId=123&masterCommitmentId=MC-456&lenderOrgId=LENDER-789. System finds your lenderGroup entry in lenderGroups array matching lenderOrgId. System updates your lenderGroup: sets lenderStatus to 'esignature_completed', sets approvedAt timestamp, updates updatedAt. System checks if master commitment status is not already ACTIVE. If status is not ACTIVE, system updates master commitment: sets status to 'ACTIVE', updates updatedAt and updatedBy, adds entry to statusHistory. System calls sendMasterCommitmentToIA function to send master commitment to IA system. System stores signed PDF in IPFS. Facility becomes active (if first lender approval), and parties receive notifications.
 
 **Reject Master Commitment** - Reject when facility doesn't meet your criteria: facility structure concerns, terms are inappropriate, borrower creditworthiness issues, facility setup problems, or risk-return profile unacceptable. Click Reject button, provide rejection reason if needed, enter comments explaining rejection, confirm rejection, your rejection doesn't prevent other lenders from approving, and parties receive notifications.
 
@@ -60,15 +60,15 @@ Use facility approval when:
 
 ## Rules & Validations
 
-- Any lender approval activates the facility. You don't need all lenders to approve before facility becomes active.
+- Any lender approval activates the facility. System checks if status is not already ACTIVE, and if not, updates status to ACTIVE on first lender approval. You don't need all lenders to approve before facility becomes active.
 
-- You can only approve master commitments pending approval. You cannot approve facilities that are already active or in other statuses.
+- You can only approve master commitments in PendingLenderApproval status. System validates master commitment status before allowing approval.
 
-- Electronic signature is required for approval. Your approval must be signed electronically for legal validity.
+- Electronic signature is required for approval. System calls DocuSign endpoint with envelopeRequest=masterCommitmentSign. Your approval must be signed electronically for legal validity.
 
-- Once approved, facility becomes active. Facility status changes to Active and borrowers can create funding requests.
+- Once approved, facility becomes active. System updates master commitment status from PendingLenderApproval to ACTIVE (if not already ACTIVE). System sends master commitment to IA system via sendMasterCommitmentToIA function. Borrowers can create funding requests.
 
-- Your approval decision is tracked individually. Each lender's approval status is tracked separately.
+- Your approval decision is tracked individually. System updates your lenderGroup entry in lenderGroups array: lenderStatus set to 'esignature_completed', approvedAt timestamp recorded, updatedAt updated. Each lender's approval status is tracked separately.
 
 - Rejection doesn't prevent activation. Other lenders can still approve and activate the facility.
 

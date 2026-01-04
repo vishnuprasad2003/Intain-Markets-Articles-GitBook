@@ -32,10 +32,12 @@ Use deal setup and calculations when:
 
 1. **Configure Calculation Method**
    - Navigate to Borrowing Base section
-   - Select calculation method (formula-based, rule-based, etc.)
-   - Define how borrowing base is calculated
-   - Set calculation parameters
-   - Configure calculation logic
+   - System uses IA (Investment Agent) API for borrowing base calculations
+   - System calls iaBBCalculationReq function with payload: { FacilityName, activity_type: "Funding Date", Funding Notice, CurrentPaymentDate, ServicerName, peers: ["peer0-trustee"], ContractType, requestType: "Funding Request" }
+   - System receives response with calculated values: AvailabilityExcess (availableCapacity), Borrowing Base, UtilisationPercentage, EligibleCollateral (collateralValue)
+   - System extracts values using extractCalculatedValues function
+   - System updates master commitment with: availableCapacity, borrowingBase, utilisationPercentage, collateralValue, lastBBCertificationDate
+   - System adds entry to actionHistory: action: 'UpdateBorrowingBase', userId: 'system', timestamp, comments, details with previous and new values
 
 ![Set Up Borrowing Base Calculation](imagesByMdFilesFolder/38/setUpBorrowingBaseCalculation.png)
 
@@ -103,10 +105,11 @@ Use deal setup and calculations when:
    - Ensure calculations are complete
 
 2. **Test Calculations**
-   - Test borrowing base calculations
-   - Verify advance rates work correctly
-   - Check utilization calculations
-   - Validate all calculation logic
+   - System automatically calls IA API when updateTokenDistribution is called for funding notices
+   - System validates IA API response success
+   - System extracts calculated values: availableCapacity (from AvailabilityExcess), borrowingBase (from Borrowing Base in message), utilisationPercentage (from UtilisationPercentage), collateralValue (from EligibleCollateral)
+   - System updates master commitment with calculated values
+   - System validates all calculation logic
    - Ensure calculations produce expected results
 
 3. **Verify Configuration**

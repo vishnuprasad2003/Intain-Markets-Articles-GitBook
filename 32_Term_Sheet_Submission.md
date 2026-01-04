@@ -36,24 +36,24 @@ Use term sheet submission when:
 ![Accessing Term Sheet - Create New Term Sheet](imagesByMdFilesFolder/32/AccessingTermsheetCreateNewTermSheet.png)
 
 2. **Complete Term Sheet Information**
-   - **Requested Commitment Amount**: Total borrowing limit requested (numeric value in USD)
-   - **Advance Rate**: Percentage of collateral value that can be borrowed (numeric, e.g., 85.0)
-   - **Pricing Index**: Base rate index selection (e.g., SOFR, SOFR 1M)
-   - **Margin**: Spread added to pricing index (numeric, e.g., 2.5)
-   - **Fixed Rate**: Fixed interest rate if applicable (numeric, alternative to index + margin)
-   - **Maturity Date**: Facility maturity date (date format)
-   - **Draw Frequency**: Frequency of allowed drawdowns (e.g., Monthly, Quarterly)
-   - **Covenant Template**: Select applicable covenant template
+   - **requestedCommitmentAmount**: Total borrowing limit requested (numeric value in USD, parsed using parseFloat)
+   - **advanceRate**: Percentage of collateral value that can be borrowed (numeric, e.g., 85.0, parsed using parseFloat)
+   - **pricingIndex**: Base rate index selection (string, e.g., "SOFR", "SOFR 1M")
+   - **margin**: Spread added to pricing index (numeric, e.g., 2.5, parsed using parseFloat)
+   - **fixedRate**: Fixed interest rate if applicable (numeric, parsed using parseFloat, alternative to index + margin)
+   - **maturityDate**: Facility maturity date (date format, converted to UTC using DateUtils.toUTCDate)
+   - **drawFrequency**: Frequency of allowed drawdowns (string, e.g., "Monthly", "Quarterly")
+   - **covenantTemplate**: Select applicable covenant template (string)
 
 ![Add Term Sheet Details](imagesByMdFilesFolder/32/2_AddTermSheetDetails.png)
 
 3. **Upload Required Documents**
-   - **Collateral Profile**: Upload collateral profile document
-   - **Financial Statements**: Upload financial statements
-   - **KYC Documents**: Upload KYC documentation
-   - **Collateral Data**: Upload collateral data files
-   - **Funding Sheet**: Upload funding sheet if applicable
-   - Ensure documents meet quality and format requirements
+   - **collateralProfile**: Upload collateral profile document (fileType: 'collateralProfile', stored in IPFS)
+   - **financialStatements**: Upload financial statements (fileType: 'financialStatements', stored in IPFS)
+   - **kycDocuments**: Upload KYC documentation (fileType: 'kycDocuments', stored in IPFS)
+   - **collateralData**: Upload collateral data files (fileType: 'collateralData', stored in IPFS)
+   - **fundingSheet**: Upload funding sheet if applicable (fileType: 'fundingSheet', stored in IPFS)
+   - Documents can only be uploaded when status is 'DRAFT' or 'CHANGES_REQUESTED'. Documents are uploaded to IPFS and IPFS hashes are stored. Document history arrays track upload history.
 
 ![Upload Documents](imagesByMdFilesFolder/32/UploadDocuments.png)
 
@@ -115,13 +115,18 @@ Use term sheet submission when:
 
 2. **Submit for Facility Agent Review**
    - Click "Submit" button or similar
+   - System calls API: POST /cf/submitTermSheet/:termSheetId
+   - System validates term sheet status is 'DRAFT' or 'BorrowerSigned' (if status is FAReview, returns success without changes)
+   - System updates term sheet: sets status to "FAReview", sets submittedAt timestamp, updates updatedAt and updatedBy
+   - System adds entry to statusHistory array: status: 'FAReview', userId, timestamp, comments: 'Term sheet submitted for facility agent review', sequence, revisionNumber
+   - System adds entry to actionHistory array: action: 'Submit', userId, timestamp, comments: 'Term sheet submitted for facility agent review', details: { previousStatus, newStatus: 'FAReview' }
    - Review any confirmation messages
    - Understand that submission moves term sheet to review
    - Confirm the submission action
 
 3. **Submission Processing**
    - Term sheet is submitted to facility agent
-   - Status changes to "FAReview" or "Under Review"
+   - Status changes to "FAReview"
    - Facility agent receives notification
    - You receive confirmation of submission
 
@@ -140,15 +145,15 @@ Use term sheet submission when:
 
 ## Rules & Validations
 
-- You must sign the term sheet before submitting - unsigned term sheets cannot be submitted.
+- You can submit term sheet in DRAFT or BorrowerSigned status - system validates status is 'DRAFT' or 'BorrowerSigned' before allowing submission.
 
 - All required fields must be filled - incomplete term sheets cannot be submitted.
 
 - Required documents must be uploaded - missing documents may prevent submission or cause rejection.
 
-- You can only submit once term sheet is signed - signature is required before submission.
+- You can submit from DRAFT status without signing - signing is optional, but BorrowerSigned status allows preview before submission.
 
-- Status must be signed before submission - term sheet must be in signed status to allow submission.
+- Status must be DRAFT or BorrowerSigned before submission - system validates status before allowing submission.
 
 - Once submitted, editing is restricted - you cannot edit term sheets while they're under review.
 

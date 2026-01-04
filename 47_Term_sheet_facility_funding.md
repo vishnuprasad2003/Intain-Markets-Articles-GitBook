@@ -11,7 +11,7 @@ This comprehensive reference guide explains all statuses for credit facility com
 
 ## Lifecycle Overview
 
-Credit facilities involve multiple components that progress through their own lifecycles: **Term Sheets** start as Draft, move through BorrowerSigned and FAReview, and reach Accepted (which triggers master commitment creation). **Master Commitments** are auto-created from approved term sheets, progress from Draft through PendingLenderApproval to Active. **Funding Requests** start as DRAFT, move through FAReview, and reach APPROVED (which triggers funding notice creation). **Funding Notices** are auto-created from approved funding requests, progressing from PENDING_TOKEN_GENERATION through TOKEN_GENERATED to TOKEN_APPROVED.
+Credit facilities involve multiple components that progress through their own lifecycles: **Term Sheets** start as Draft, move through BorrowerSigned and FAReview, and reach Accepted (which triggers master commitment creation). **Master Commitments** are auto-created from approved term sheets, progress from Draft through PendingLenderApproval to ACTIVE. **Funding Requests** start as DRAFT, move through FAReview, and reach APPROVED (which triggers funding notice creation). **Funding Notices** are auto-created from approved funding requests, progressing from PENDING_TOKEN_GENERATION through TOKEN_GENERATED to TOKEN_APPROVED.
 
 The lifecycle supports the credit facility workflow—borrowers propose facilities through term sheets, facility agents structure facilities through master commitments, borrowers request funds through funding requests, and the system manages drawdowns through funding notices. Each component has specific purposes and allows different types of actions.
 
@@ -37,7 +37,7 @@ The lifecycle supports the credit facility workflow—borrowers propose faciliti
 
 **PendingLenderApproval** - The facility agent has completed configuration and submitted the master commitment for lender approval. Waiting for at least one lender to approve. Master commitments in PendingLenderApproval status are ready for lender review and decision.
 
-**Active** - At least one lender has approved the master commitment, and the facility is operational. Borrowers can create funding requests. Master commitments in Active status are operational and ready for use.
+**ACTIVE** - At least one lender has approved the master commitment, and the facility is operational. Borrowers can create funding requests. Master commitments in ACTIVE status are operational and ready for use.
 
 ### Funding Request Statuses
 
@@ -63,7 +63,7 @@ The lifecycle supports the credit facility workflow—borrowers propose faciliti
 
 **Term Sheet Statuses** indicate where term sheets are in the proposal and approval process. Draft means you're still preparing, BorrowerSigned means it's ready for submission, FAReview means it's under facility agent review, Accepted means it's approved and triggers master commitment creation, Rejected means it's been declined, and CHANGES_REQUESTED means modifications are needed before approval.
 
-**Master Commitment Statuses** indicate where facilities are in the setup and activation process. Draft means facility agent is configuring, PendingLenderApproval means it's waiting for lender approval, and Active means the facility is operational and ready for funding requests.
+**Master Commitment Statuses** indicate where facilities are in the setup and activation process. Draft means facility agent is configuring, PendingLenderApproval means it's waiting for lender approval, and ACTIVE means the facility is operational and ready for funding requests.
 
 **Funding Request Statuses** indicate where funding requests are in the review and approval process. DRAFT means you're still preparing, FAReview means it's under facility agent review, APPROVED means it's approved and triggers funding notice creation, REJECTED means it's been declined, and CHANGES_REQUESTED means modifications are needed before approval.
 

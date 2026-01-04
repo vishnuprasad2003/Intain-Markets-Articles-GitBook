@@ -53,7 +53,7 @@ A: Yes, you can typically see lender approval status. Each lender's approval sta
 
 **Q: Can I create funding requests before the facility is active?**
 
-A: No, you can only create funding requests against active facilities. Facilities must be approved by at least one lender and in Active status before you can create funding requests. Active status is required for funding request creation.
+A: No, you can only create funding requests against active facilities. Facilities must be approved by at least one lender and in ACTIVE status before you can create funding requests. ACTIVE status is required for funding request creation.
 
 **Q: What happens if all lenders reject the master commitment?**
 

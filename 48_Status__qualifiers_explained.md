@@ -17,7 +17,7 @@ Statuses in Intain Markets often include qualifiers that provide additional cont
 
 **"Requested" Qualifier** - Examples include Changes Requested, Updates Requested. This qualifier means changes or modifications have been requested. The item needs to be updated before it can proceed. Common scenarios include term sheets with "CHANGES_REQUESTED" status where facility agent requests modifications, and funding requests with "CHANGES_REQUESTED" status where facility agent needs changes before approval. When you see "Requested", it means you need to make changes before proceeding.
 
-**"Active" Qualifier** - Examples include Active status for master commitments. This qualifier means the item is operational and ready for use. Common scenarios include master commitments that are "Active" meaning the facility is operational and borrowers can create funding requests. When you see "Active", it means the item is fully operational and ready for use.
+**"ACTIVE" Qualifier** - Examples include ACTIVE status for master commitments. This qualifier means the item is operational and ready for use. Common scenarios include master commitments that are "ACTIVE" meaning the facility is operational and borrowers can create funding requests. When you see "ACTIVE", it means the item is fully operational and ready for use.
 
 **"Approved" Qualifier** - Examples include Approved status for funding requests. This qualifier means the item has been approved and can proceed. Common scenarios include funding requests that are "APPROVED" meaning facility agent has approved and funding notice is created. When you see "Approved", it means the item has passed review and can proceed to the next stage.
 

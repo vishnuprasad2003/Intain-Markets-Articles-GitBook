@@ -13,13 +13,13 @@ When loans are removed from pools, they're excluded from pool calculations but r
 
 ## Reference Details
 
-**Removed Loans Are Excluded** - When a loan is removed from a pool, it's excluded from all pool-level calculations. The loan's balance, characteristics, and data are not included in any pool metrics. Pool metrics recalculate automatically to exclude the removed loan.
+**Removed Loans Are Excluded** - When a loan is removed from a pool, system sets loanPoolStatus field to "Removed" (Status field remains "Mapped", poolid field remains set). The loan is excluded from all pool-level calculations. System calls CalculateNoofLoansAndBalanceRefactored function which filters loans where loanPoolStatus !== "Removed" for metric calculations. The loan's balance, characteristics, and data are not included in any pool metrics. System also calls deleteLoansFromPoolInPostgres function to remove loan from PostgreSQL. Pool metrics recalculate automatically to exclude the removed loan.
 
 **Pool Metrics Recalculate Automatically** - When loans are removed, pool metrics recalculate immediately. Total balance decreases by the removed loan's balance, loan count decreases, weighted averages recalculate using only active loans, and all other metrics update to reflect only active loans.
 
 **Removed Loans Remain Visible** - Removed loans remain visible in the pool's loan list, marked with "Removed" status. This allows you to track what was removed and why, maintaining complete records for audit purposes.
 
-**Reinstatement Recalculates Metrics** - When removed loans are reinstated, pool metrics recalculate again to include them. Total balance increases, loan count increases, weighted averages recalculate with the reinstated loan included, and all metrics update to reflect the reinstated loan.
+**Reinstatement Recalculates Metrics** - When removed loans are reinstated, system sets loanPoolStatus field to "Reinstated" (Status field remains "Mapped", poolid field remains set). System calls CalculateNoofLoansAndBalanceRefactored function which includes loans with loanPoolStatus: "Reinstated" in metric calculations. Pool metrics recalculate again to include them. Total balance increases, loan count increases, weighted averages recalculate with the reinstated loan included, and all metrics update to reflect the reinstated loan.
 
 **Impact on Weighted Averages** - Weighted averages (coupon, FICO, etc.) recalculate using only active loans. Removed loans don't affect these calculations.
 
@@ -37,7 +37,7 @@ When loans are removed from pools, they're excluded from pool calculations but r
 
 **Reinstatement Is Possible** - Removed loans can be reinstated if needed. When reinstated, they're included in calculations again, and metrics update automatically.
 
-**Status Indicates Removal** - Removed loans show "Removed" status, making it clear which loans are excluded from calculations.
+**Status Indicates Removal** - Removed loans show loanPoolStatus: "Removed" (Status field remains "Mapped"), making it clear which loans are excluded from calculations. System filters loans in metric calculations using loanPoolStatus field, excluding loans where loanPoolStatus === "Removed".
 
 **Metrics Reflect Active Loans Only** - All pool metrics reflect only active loans, not removed ones.
 

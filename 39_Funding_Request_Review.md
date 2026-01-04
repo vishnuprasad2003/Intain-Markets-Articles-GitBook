@@ -74,9 +74,16 @@ Use funding request review when:
    - Confirm request complies with facility rules
    - Verify sufficient capacity is available
    - Click "Approve" button or similar
+   - System calls API: POST /cf/:masterCommitmentId/funding-requests/:fundingRequestId/approve
+   - Request body includes: { approvalComments: string (optional) }
+   - System validates funding request status is 'FAReview'
+   - System updates funding request: sets status to 'APPROVED', sets approvedAt timestamp, sets approvedBy (userId), updates updatedAt and updatedBy
+   - System adds entry to statusHistory: status: 'APPROVED', userId, timestamp, comments: approvalComments || 'Approved by market maker, pending e-signature', sequence, revisionNumber
+   - System adds entry to actionHistory: action: 'Approve', userId, timestamp, comments, details: { previousStatus: 'FAReview', newStatus: 'APPROVED', approvalComments }
+   - System automatically calls generateFundingNotice function which creates funding notice with PENDING_TOKEN_GENERATION status
+   - System sends notification to borrower organization via SSE
    - Enter approval comments if needed
    - Confirm approval
-   - Funding notice is automatically created
    - Status changes to "APPROVED"
 
 2. **Reject Request**

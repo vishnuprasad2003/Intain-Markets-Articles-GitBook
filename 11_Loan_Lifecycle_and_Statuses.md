@@ -11,15 +11,15 @@ Loans progress through various statuses as they move through the platform workfl
 
 ## Lifecycle Overview
 
-Loans progress through a sequence: **Unmapped** when first uploaded, **Mapped** when assigned to a pool, **Submitted** when included in a batch, **Verified** after verification, **Minted** if tokenization is required, and may be **Removed** from pool calculations if needed, with the option to be **Reinstated** later.
+Loans progress through a sequence: **Unmapped** when first uploaded (Status: "Unmapped", poolid: null/empty, loanPoolStatus: null/empty), **Mapped** when assigned to a pool (Status: "Mapped", loanPoolStatus: "Pending"), **Submitted** when included in a batch, **Verified** after verification, **Minted** if tokenization is required, and may be **Removed** from pool calculations if needed (loanPoolStatus: "Removed", loan remains in pool but excluded from calculations), with the option to be **Reinstated** later (loanPoolStatus: "Reinstated"). Loans also have a **Reconsider** status (loanPoolStatus: "Reconsider") when market makers or investors reject specific loans.
 
 The lifecycle supports loan management—you upload loans, assign them to pools, they go through verification and processing, and they may be tokenized or removed as needed. Each stage has specific purposes and allows different types of actions.
 
 ## Status Meanings
 
-**Unmapped** - The loan has been uploaded into the system but is not yet assigned to any pool. This is the initial stage where loans are available for mapping. Loans in Unmapped status are available for assignment but don't contribute to any pool metrics.
+**Unmapped** - The loan has been uploaded into the system but is not yet assigned to any pool. Status field: "Unmapped", poolid field: null or empty string, loanPoolStatus field: null or empty string. This is the initial stage where loans are available for mapping. Loans in Unmapped status are available for assignment but don't contribute to any pool metrics. When loans are unmapped from pools, system clears poolid field, sets Status to "Unmapped", clears loanPoolStatus field, and recalculates pool metrics via CalculateNoofLoansAndBalanceRefactored function.
 
-**Mapped** - The loan has been assigned to a pool and is included in pool calculations. The loan contributes to pool metrics and characteristics. Loans in Mapped status are actively participating in pools and affecting pool-level statistics.
+**Mapped** - The loan has been assigned to a pool and is included in pool calculations. Status field: "Mapped", loanPoolStatus field: "Pending", poolid field: poolId. System updates loan via mapLoansToPoolRefactored function: sets poolid to poolId, sets Status to "Mapped", sets loanPoolStatus to "Pending", pushes loan data to PostgreSQL via postgresDataPush function, recalculates pool metrics via CalculateNoofLoansAndBalanceRefactored function. The loan contributes to pool metrics and characteristics. Loans in Mapped status are actively participating in pools and affecting pool-level statistics.
 
 **Submitted** - The loan has been included in a batch for verification or other processing. The loan is being reviewed or processed. Loans in Submitted status are moving through verification or processing workflows.
 
@@ -27,9 +27,9 @@ The lifecycle supports loan management—you upload loans, assign them to pools,
 
 **Minted** - An NFT (non-fungible token) has been created for the loan, and the loan is tokenized. This status only applies if tokenization is part of your workflow. Loans in Minted status are represented on the blockchain and ready for blockchain-based transactions.
 
-**Removed** - The loan has been removed from pool calculations but remains visible in the pool. The loan is excluded from metrics but can be tracked. Loans in Removed status are temporarily or permanently excluded from pool calculations.
+**Removed** - The loan has been removed from pool calculations but remains visible in the pool. loanPoolStatus field: "Removed", Status field remains "Mapped", poolid field remains set (loan stays in pool). System updates loan via updatePreviewLoanStatus function: sets loanPoolStatus to "Removed", recalculates pool metrics via CalculateNoofLoansAndBalanceRefactored function (excludes removed loan), deletes loan from PostgreSQL via deleteLoansFromPoolInPostgres function. The loan is excluded from metrics but can be tracked. Loans in Removed status are temporarily or permanently excluded from pool calculations.
 
-**Reinstated** - A previously removed loan has been put back into the pool and is included in calculations again. The loan fully participates in the pool. Loans in Reinstated status have been restored to active participation in pools.
+**Reinstated** - A previously removed loan has been put back into the pool and is included in calculations again. loanPoolStatus field: "Reinstated", Status field remains "Mapped", poolid field remains set. System updates loan via updatePreviewLoanStatus function: sets loanPoolStatus to "Reinstated", recalculates pool metrics via CalculateNoofLoansAndBalanceRefactored function (includes reinstated loan). The loan fully participates in the pool. Loans in Reinstated status have been restored to active participation in pools.
 
 ## What Each Status Indicates
 

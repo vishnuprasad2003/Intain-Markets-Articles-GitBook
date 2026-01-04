@@ -17,17 +17,15 @@ The token generation and issuance workflow begins when a funding request is appr
 
 **Stage 1: Funding Notice Creation** - When a funding request is approved, a funding notice is automatically created with PENDING_TOKEN_GENERATION status. The notice contains all information from the approved request and is ready for token generation.
 
-**Stage 2: Token Generation** - Facility agents generate tokens for the borrower, representing the total drawdown amount. Tokens are created digitally and linked to the funding notice. The system updates the funding notice status to TOKEN_GENERATED.
+**Stage 2: Token Distribution Configuration and Token Generation** - Facility agents configure tokenDistribution array with lender allocations (lenderOrgId, lenderName, commitmentAmount, tokensAllocated, votingPercentage). System calls API: PATCH /cf/funding-notices/:fundingNoticeId/token-distribution. During this call, system creates FT tokens for borrower via createFTTokensForBorrower function: deploys FT contract, transfers tokens to borrower wallet, transfers ownership to borrower. System also updates borrowing base via IA calculation. Status changes from PENDING_TOKEN_GENERATION to TOKEN_GENERATED. Each lender initialized with esignatureStatus: 'pending' in tokenDistribution array.
 
 ![FA - Funding Notice Save - Token Generation](imagesByMdFilesFolder/25/FA_FundingNotice_Save_TokenGeneration.png)
 
-**Stage 3: Token Distribution Configuration** - Facility agents configure how tokens are distributed to lenders based on their participation percentages in the facility. Each lender's allocation is calculated automatically, showing their portion of the drawdown. Distribution is set up in the tokenDistribution array.
+**Stage 3: Per-Lender E-Signature** - Facility agents sign funding notices for each lender individually AFTER FT tokens are created. System calls DocuSign endpoint: GET /docusign/signing-complete?envelopeRequest=fundingNoticeSign&envelopeId=123&fundingNoticeId=FN-456&lenderOrgId=LENDER-789. Each lender's esignatureStatus in tokenDistribution array is updated to ESIGN_COMPLETED. eSignaturePendingCount decrements by 1. eSignatureStatus set to 'ESIGN_COMPLETED' when all lenders complete (eSignaturePendingCount === 0). Status remains TOKEN_GENERATED during this process (does not change).
 
 ![Funding Notice Details - FA](imagesByMdFilesFolder/25/FundingNoticeDetailsFA.png)
 
-**Stage 4: Per-Lender E-Signature** - Facility agents sign funding notices for each lender individually. Each lender's signature status is tracked separately in the tokenDistribution array. The system tracks overall completion, and status remains TOKEN_GENERATED during this process.
-
-**Stage 5: Borrower Token Approval** - Borrowers review the token allocation to verify amounts and distribution are correct. Once verified, borrowers approve the token transfer, which changes the funding notice status to TOKEN_APPROVED and makes the notice visible to lenders.
+**Stage 5: Borrower Token Approval** - Borrowers review the token allocation to verify amounts and distribution are correct. Borrowers enter C-chain private key or upload JSON file format. System calls API: POST /cf/funding-notices/:fundingNoticeId/approve-token-transfer. System approves FT tokens to Intain admin wallet for transfer to investors after payment. Status changes from TOKEN_GENERATED to TOKEN_APPROVED. Funding notice becomes visible to lenders.
 
 ![Issuer - Token Approval](imagesByMdFilesFolder/25/Issuer_Token_Approval.png)
 
@@ -51,7 +49,7 @@ The token generation and issuance workflow begins when a funding request is appr
 
 **From Lender Review to Fund Transfer** - After lenders review and approve, they transfer funds and confirm transfers. Each lender completes their participation independently, and the system tracks all confirmations. Once all lenders confirm, the drawdown process is complete.
 
-**Status Progression** - The workflow progresses through statuses: PENDING_TOKEN_GENERATION → TOKEN_GENERATED → TOKEN_APPROVED. Each status represents a specific stage and determines what actions are available. Understanding status helps you know where you are in the process.
+**Status Progression** - The workflow progresses through statuses: PENDING_TOKEN_GENERATION (auto-created when funding request approved) → TOKEN_GENERATED (after updateTokenDistribution creates FT tokens) → TOKEN_APPROVED (after borrower approves token transfer). During per-lender DocuSign, status remains TOKEN_GENERATED. Each status represents a specific stage and determines what actions are available. Understanding status helps you know where you are in the process.
 
 **Individual Lender Tracking** - Throughout the workflow, each lender's participation is tracked individually. Token allocations, signature status, approval decisions, and transfer confirmations are all tracked separately, enabling flexible participation and independent decisions.
 
@@ -59,7 +57,7 @@ The token generation and issuance workflow begins when a funding request is appr
 
 **Automatic Notice Creation** - Funding notices are automatically created when funding requests are approved. The system creates them with pre-populated request data.
 
-**Token Generation Required** - Facility agents must generate tokens before borrowers can approve transfers. Tokens represent drawdown amounts digitally and enable tracking and distribution to lenders.
+**Token Generation Required** - Facility agents must call updateTokenDistribution API which creates FT tokens for borrower before borrowers can approve transfers. FT tokens are created during updateTokenDistribution call, NOT during DocuSign completion. Tokens represent drawdown amounts digitally (totalSupply = requestAmount * 10^6 with 6 decimals) and enable tracking and distribution to lenders.
 
 **Distribution Based on Participation** - Token distribution is calculated automatically based on lender participation percentages in the facility. Each lender receives their allocated portion.
 

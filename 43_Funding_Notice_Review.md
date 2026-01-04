@@ -54,9 +54,9 @@ Use funding notice review when:
 
 ## Making Decisions
 
-**Approve Drawdown** - Approve when request meets your criteria: request is well-justified, purpose is appropriate, timing is reasonable, facility health is good, and risk is acceptable. Click Approve button, confirm approval, your participation is confirmed, you can proceed with fund transfer, your portion of the drawdown is committed, and parties receive notifications.
+**Approve Drawdown** - Approve when request meets your criteria: request is well-justified, purpose is appropriate, timing is reasonable, facility health is good, and risk is acceptable. Click Approve button. System calls API endpoint: PATCH /cf/funding-notices/:fundingNoticeId/:lenderOrgId/status. Request body includes: { "status": "APPROVED" }. System validates funding notice exists. System verifies your lenderOrgId exists in tokenDistribution array. System updates your lenderGroup entry in tokenDistribution array: sets lenderApprovalStatus to 'APPROVED', sets updatedAt timestamp, sets updatedBy (userId). System adds entry to actionHistory: action: 'LENDER_STATUS_UPDATED', status: 'APPROVED', lenderOrgId, updatedBy, updatedAt, details: 'Lender status changed to APPROVED'. System adds entry to statusHistory: status: 'APPROVED', lenderOrgId, updatedBy, updatedAt. Confirm approval, your participation is confirmed, you can proceed with fund transfer, your portion of the drawdown is committed, and parties receive notifications.
 
-**Reject Drawdown** - Reject when request doesn't meet your criteria: request concerns, purpose issues, timing problems, facility health concerns, or risk unacceptable. Click Reject button, provide rejection reason if required, enter comments explaining rejection, confirm rejection, your portion will not be funded, other lenders make independent decisions, and parties receive notifications.
+**Reject Drawdown** - Reject when request doesn't meet your criteria: request concerns, purpose issues, timing problems, facility health concerns, or risk unacceptable. Click Reject button. System calls API endpoint: PATCH /cf/funding-notices/:fundingNoticeId/:lenderOrgId/status. Request body includes: { "status": "REJECTED" }. System validates funding notice exists. System verifies your lenderOrgId exists in tokenDistribution array. System updates your lenderGroup entry in tokenDistribution array: sets lenderApprovalStatus to 'REJECTED', sets updatedAt timestamp, sets updatedBy (userId). System adds entry to actionHistory: action: 'LENDER_STATUS_UPDATED', status: 'REJECTED', lenderOrgId, updatedBy, updatedAt, details: 'Lender status changed to REJECTED'. System adds entry to statusHistory: status: 'REJECTED', lenderOrgId, updatedBy, updatedAt. Provide rejection reason if required, enter comments explaining rejection, confirm rejection, your portion will not be funded, other lenders make independent decisions, and parties receive notifications.
 
 **Decision Documentation** - Ensure all decisions are properly documented, provide clear reasons for decisions, include relevant comments or explanations, and maintain complete audit trail of decisions.
 
@@ -76,11 +76,11 @@ Use funding notice review when:
 
 - Rejection reasons help borrowers understand. Providing reasons helps borrowers understand lender concerns.
 
-- Individual tracking. Each lender's decision is tracked separately with timestamps and details.
+- Individual tracking. Each lender's decision is tracked separately in tokenDistribution array: lenderApprovalStatus field (PENDING/APPROVED/REJECTED), updatedAt timestamp, updatedBy (userId), entries in actionHistory and statusHistory arrays.
 
-- Borrower visibility. Borrowers can see which lenders approved and which rejected.
+- Borrower visibility. Borrowers can see which lenders approved and which rejected by viewing tokenDistribution array.
 
-- Complete audit trail. All decisions are recorded with who made what decision and when.
+- Complete audit trail. All decisions are recorded in actionHistory and statusHistory arrays with who made what decision and when.
 
 ## What Happens Next
 

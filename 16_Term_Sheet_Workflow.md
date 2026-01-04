@@ -37,24 +37,24 @@ Use term sheet workflow when:
 ![Accessing Term Sheet - Create New Term Sheet](imagesByMdFilesFolder/16/AccessingTermsheetCreateNewTermSheet.png)
 
 2. **Enter Facility Information**
-   - **Requested Commitment Amount**: Total borrowing limit requested (in USD)
-   - **Advance Rate**: Percentage of collateral value that can be borrowed (e.g., 85%)
-   - **Pricing Index**: Base rate index (e.g., SOFR, SOFR 1M)
-   - **Margin**: Spread added to pricing index (e.g., 2.5%)
-   - **Fixed Rate**: Fixed interest rate (if applicable, alternative to index + margin)
-   - **Maturity Date**: Facility maturity date
-   - **Draw Frequency**: How often drawdowns can be made (e.g., Monthly, Quarterly)
-   - **Covenant Template**: Select applicable covenant template
+   - **requestedCommitmentAmount**: Total borrowing limit requested (numeric value in USD)
+   - **advanceRate**: Percentage of collateral value that can be borrowed (numeric, e.g., 85.0)
+   - **pricingIndex**: Base rate index selection (string, e.g., "SOFR", "SOFR 1M")
+   - **margin**: Spread added to pricing index (numeric, e.g., 2.5)
+   - **fixedRate**: Fixed interest rate if applicable (numeric, alternative to index + margin)
+   - **maturityDate**: Facility maturity date (date format, converted to UTC)
+   - **drawFrequency**: Frequency of allowed drawdowns (string, e.g., "Monthly", "Quarterly")
+   - **covenantTemplate**: Select applicable covenant template (string)
 
 ![Add Term Sheet Details](imagesByMdFilesFolder/16/2_AddTermSheetDetails.png)
 
 3. **Upload Required Documents**
-   - **Collateral Profile**: Upload collateral profile document
-   - **Financial Statements**: Upload financial statements
-   - **KYC Documents**: Upload KYC documentation
-   - **Collateral Data**: Upload collateral data files
-   - **Funding Sheet**: Upload funding sheet if applicable
-   - Ensure documents meet quality and format requirements
+   - **collateralProfile**: Upload collateral profile document (stored in IPFS)
+   - **financialStatements**: Upload financial statements (stored in IPFS)
+   - **kycDocuments**: Upload KYC documentation (stored in IPFS)
+   - **collateralData**: Upload collateral data files (stored in IPFS)
+   - **fundingSheet**: Upload funding sheet if applicable (stored in IPFS)
+   - Documents are uploaded to IPFS and IPFS hashes are stored. Document history is maintained in history arrays.
 
 ![Upload Documents](imagesByMdFilesFolder/16/UploadDocuments.png)
 

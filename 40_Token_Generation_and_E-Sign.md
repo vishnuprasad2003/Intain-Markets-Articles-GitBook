@@ -41,9 +41,16 @@ Use token generation and e-sign when:
 
 3. **Initialize Token Distribution**
    - Click "Update Token Distribution" or similar button
-   - System initializes tokenDistribution array
-   - Each lender is set with esignatureStatus: 'pending'
-   - Tokens are created for borrower (FT tokens)
+   - System calls API: PATCH /cf/funding-notices/:fundingNoticeId/token-distribution
+   - Funding notice must be in PENDING_TOKEN_GENERATION status
+   - System validates tokenDistribution array (lenderOrgId, lenderName, commitmentAmount, tokensAllocated, votingPercentage)
+   - System initializes tokenDistribution array with each lender having esignatureStatus: 'pending'
+   - System calls createFTTokensForBorrower function which:
+     - Deploys FT contract with totalSupply = requestAmount * 10^6 (6 decimals)
+     - Transfers FT tokens to borrower wallet address
+     - Transfers FT contract ownership to borrower
+     - Updates funding notice with ftContractAddress, totalTokensMinted, ftTotalSupply, ftCreatedAt, ftCreationTransactionHash
+   - System updates borrowing base and available capacity via IA calculation
    - Status updates to "TOKEN_GENERATED"
 
 ![FA - Funding Notice Save - Token Generation](imagesByMdFilesFolder/40/FA_FundingNotice_Save_TokenGeneration.png)
@@ -60,11 +67,16 @@ Use token generation and e-sign when:
 1. **Sign for First Lender**
    - Select first lender from lender list
    - Initiate electronic signature process for this lender
+   - System calls DocuSign endpoint: GET /docusign/signing-complete?envelopeRequest=fundingNoticeSign&envelopeId=123&fundingNoticeId=FN-456&lenderOrgId=LENDER-789
    - Review funding notice document
    - Complete electronic signature for this lender
+   - System updates tokenDistribution array: sets this lender's esignatureStatus to 'ESIGN_COMPLETED'
+   - System decrements eSignaturePendingCount by 1
+   - System sets eSignatureStatus to 'ESIGN_COMPLETED' if eSignaturePendingCount === 0, otherwise remains 'pending'
+   - System stores signed PDF in IPFS
+   - System sends notifications to relevant organizations
    - Confirm signature is complete
-   - Lender's esignatureStatus updates to 'ESIGN_COMPLETED'
-   - Status remains "TOKEN_GENERATED"
+   - Status remains "TOKEN_GENERATED" (does not change during DocuSign)
 
 2. **Sign for Remaining Lenders**
    - Select next lender

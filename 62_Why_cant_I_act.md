@@ -21,7 +21,7 @@ A: Possible causes include term sheet not being signed, electronic signature not
 
 **Q: Why can't I create a funding request?**
 
-A: Possible causes include master commitment not being active, facility not being operational, no available borrowing capacity, you don't have access to the facility, or facility status doesn't allow requests. Solutions include waiting for facility to become active, checking facility status, verifying available borrowing capacity, ensuring you have access to the facility, and confirming facility status allows requests. Active facility status is required for funding request creation.
+A: Possible causes include master commitment not being ACTIVE, facility not being operational, no available borrowing capacity, you don't have access to the facility, or facility status doesn't allow requests. Solutions include waiting for facility to become ACTIVE, checking facility status, verifying available borrowing capacity, ensuring you have access to the facility, and confirming facility status allows requests. ACTIVE facility status is required for funding request creation.
 
 **Q: Why can't I approve a term sheet or funding request?**
 

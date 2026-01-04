@@ -32,19 +32,20 @@ Use pool creation and sharing when:
    - Pool creation form opens
 
 2. **Enter Basic Information**
-   - **Pool Name**: Provide a unique name to identify the pool (must be unique)
-   - **Asset Class**: Select the type of loans (auto loans, personal loans, mortgages, etc.)
-   - **Transaction Type**: Choose the transaction type (securitization, whole loan sale, etc.)
-   - **Description**: Add a description if needed to provide context
-   - **Closing Deal Indicator**: Indicate if this is a closing deal
+   - **poolName**: Provide a unique name to identify the pool (string, must be unique - validated against existing poolName)
+   - **assetClass**: Select the type of loans (string, e.g., "auto loans", "personal loans", "mortgages", etc.)
+   - **transactionType**: Choose the transaction type (string, e.g., "securitization", "whole loan sale", etc.)
+   - **description**: Add a description if needed to provide context (string, optional)
+   - **Isclosingdeal**: Indicate if this is a closing deal (string, "Yes" or "No")
 
 3. **Assign Organizations**
-   - **Market Makers**: Select market makers who will structure the deal
-   - **Investors**: Choose investors who will review investment opportunities
-   - **Servicers**: Assign servicers if needed for ongoing loan administration
-   - **Paying Agents**: Add paying agents if needed for payment distributions
-   - **Rating Agencies**: Select rating agencies if needed for analysis
-   - **Other Parties**: Add any other parties as required
+   - **marketMakerOrgId**: Select market maker organization IDs (array of strings) who will structure the deal
+   - **investorOrgId**: Choose investor organization IDs (array of strings) who will review investment opportunities
+   - **servicerOrgId**: Assign servicer organization IDs (array of strings) if needed for ongoing loan administration
+   - **payingAgentOrgId**: Add paying agent organization IDs (array of strings) if needed for payment distributions
+   - **ratingAgencyOrgId**: Select rating agency organization IDs (array of strings) if needed for analysis
+   - **verificationAgentOrgId**: Add verification agent organization IDs (array of strings) if needed
+   - Organizations are stored as arrays of organization IDs
 
 4. **Review Information**
    - Review all entered information for accuracy
@@ -54,7 +55,12 @@ Use pool creation and sharing when:
 
 5. **Create Pool**
    - Click "Create" button or similar
-   - Pool is created with "Created" status
+   - System calls API: POST /pools/createPool
+   - System generates unique poolId using format based on poolName, issuerOrgName, assetClass, date, and count
+   - Pool is created with status: "Created"
+   - Initial metrics set: numberofloans: 0, originalbalance: 0, currentbalance: 0
+   - shareOptions initialized as empty object {}
+   - poolShareOptions initialized as empty object {}
    - Pool is visible only to you initially
    - Pool is ready for loan mapping
 
@@ -82,15 +88,19 @@ Use pool creation and sharing when:
 ![Loan Map to Pool - Issuer](imagesByMdFilesFolder/30/LoanMapToPoolIssuer.png)
 
 4. **Review Pool Metrics**
-   - Pool metrics calculate automatically from mapped loans
-   - **Number of Loans**: Total count of mapped loans
-   - **Original Balance**: Sum of original principal balances from all mapped loans
-   - **Current Balance**: Sum of current principal balances from all mapped loans
-   - **Weighted Average Coupon (WAC)**: Interest rate weighted by current principal balance
-   - **Weighted Average FICO**: Borrower FICO score weighted by current principal balance
-   - **Weighted Average LTV**: Loan-to-value ratio weighted by current principal balance
-   - **DSCR/DTI**: Debt service coverage ratio (Commercial Mortgage) or Debt-to-income ratio (other asset classes), weighted by current principal balance
-   - **Beginning Loan Balance**: Sum of beginning loan balances
+   - Pool metrics calculate automatically from mapped loans via CalculateNoofLoansAndBalanceRefactored function
+   - Metrics stored in pool_detail collection:
+     - **numberofloans**: Total count of mapped loans (calculated from previewstdloantape collection where poolid matches)
+     - **originalbalance**: Sum of "Original Principal Balance" from all mapped loans (converted to numeric, summed)
+     - **currentbalance**: Sum of "Current Principal Balance" from all mapped loans (converted to numeric, summed)
+   - Additional metrics from PostgreSQL (via getBdbTiles function):
+     - **current_principal_balance**: Sum of current principal balances
+     - **wac**: Weighted Average Coupon (Current Interest Rate weighted by Current Principal Balance)
+     - **fico**: Weighted Average FICO (Borrower FICO weighted by Current Principal Balance)
+     - **ltv**: Weighted Average LTV (Current Loan-To-Value weighted by Current Principal Balance)
+     - **dscr/dti**: Debt service coverage ratio (if assetClass is "Commercial Mortgage") or Debt-to-income ratio (other asset classes), weighted by Current Principal Balance
+     - **loan_cnt**: Count of loans with Current Principal Balance > 0
+     - **beginning_loan_balance**: Sum of "Beginning Loan Balance"
    - Metrics update automatically when loans are added or removed
 
 ![Pool Details - Issuer](imagesByMdFilesFolder/30/Pool_Details_Issuer.png)
@@ -104,42 +114,47 @@ Use pool creation and sharing when:
 ### Sharing the Pool
 
 1. **Access Sharing Settings**
-   - Navigate to pool details
-   - Find the Sharing or Organization Assignment section
-   - Click to configure sharing
+   - Navigate to pool details page
+   - Click the **Share** button at the top right
+   - A pop-up window appears for sharing configuration
 
-2. **Select Organizations to Share With**
-   - Choose which organizations to share with
-   - Select from market makers, investors, rating agencies, etc.
+![Pool Share - Issuer](imagesByMdFilesFolder/30/Pool_Share_Issuer.png)
+
+2. **Select Recipient Organizations**
+   - In the pop-up, select the recipient organization type
+   - Based on the selected recipient type, the system displays organizations that were added to this pool during creation or editing (from marketMakerOrgId, investorOrgId, etc. arrays)
+   - Choose which organizations to share with from the available options
    - Can share with multiple organizations simultaneously
-   - Review organization list
+   - System calls API: POST /configureShareOptions
+
+![Pool Share - Select Recipient Organization](imagesByMdFilesFolder/30/Pool_Share_Select_recipient_org.png)
 
 3. **Set Sharing Permissions**
-   - **View Only**: Recipients can view but not provide feedback
-   - **Allow Feedback**: Recipients can provide comments and feedback
-   - **Allow Change Requests**: Recipients can request changes
-   - **Allow Downloads**: Recipients can download pool data
-   - Configure appropriate permissions for each organization type
+   - System configures shareOptions object for selected organizations
+   - Each organization in shareOptions has:
+     - **allowFeedBack**: Boolean (defaults to true) - Recipients can provide comments and feedback
+     - **allowDownload**: Boolean (defaults to true) - Recipients can download pool data
+     - **acceptanceStatus**: String (defaults to 'pending') - Status for market maker mandates
+   - Permissions are set automatically with defaults, can be edited later
 
-4. **Review Sharing Configuration**
-   - Review selected organizations
-   - Verify permissions are set correctly
-   - Ensure sharing is configured as intended
+![Pools Sharing Settings](imagesByMdFilesFolder/30/Pools_Sharing_Settings.png)
 
-5. **Complete Sharing**
+4. **Complete Sharing**
    - Click "Share" or "Save" button
-   - Confirm sharing action
+   - System updates shareOptions object in pool_detail collection
    - Recipients receive notifications
    - Pool becomes visible to shared parties
-   - Pool status may change to "Preview"
+   - Pool status may change to "Preview" if it was in "Created" status
 
 ![Pool Sharing - Issuer](imagesByMdFilesFolder/30/PoolSharing_Issuer.png)
 
-6. **Verify Sharing**
-   - Confirm recipients can see the pool
-   - Check that sharing permissions are working
-   - Verify notifications were sent
-   - Ensure pool is visible to shared parties
+5. **Manage Shared Organizations**
+   - Navigate to pool details page
+   - Below the main table, find the **Sharing** tab
+   - View all shared organizations and their access settings in shareOptions object
+   - As the issuer, you can edit accessibility settings for each shared organization
+   - Modify allowFeedBack and allowDownload permissions as needed
+   - System updates shareOptions object with modified permissions
 
 ## Rules & Validations
 

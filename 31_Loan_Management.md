@@ -101,13 +101,13 @@ Use loan management when:
 ![Confirm Mapping](imagesByMdFilesFolder/31/ConfirmMapping.png)
 
 5. **Verify Mapping**
-   - Loans are mapped to the pool
-   - Loan status changes to "Mapped"
-   - Pool metrics update automatically
-   - Total balance increases
-   - Loan count increases
-   - Weighted averages recalculate
-   - Verify metrics updated correctly
+   - Loans are mapped to the pool (poolid field set in previewstdloantape collection)
+   - Loan Status field changes to "Mapped" in previewstdloantape collection
+   - Pool metrics update automatically via CalculateNoofLoansAndBalanceRefactored
+   - Pool numberofloans increases
+   - Pool originalbalance and currentbalance increase
+   - Additional metrics (wac, fico, ltv, dscr/dti) recalculate from PostgreSQL via getBdbTiles
+   - Verify metrics updated correctly in pool_detail collection
 
 ### Managing Loan Statuses
 
@@ -121,29 +121,30 @@ Use loan management when:
    - Navigate to pool's loan list
    - Find loan you want to remove
    - Select the loan
-   - Update status to "Removed"
+   - Update workflow_status to "Removed" (or similar status field)
    - Confirm removal
-   - Loan is excluded from pool calculations
-   - Pool metrics recalculate automatically
+   - Loan is excluded from pool calculations (removed loans filtered out in metrics calculation)
+   - Pool metrics recalculate automatically via CalculateNoofLoansAndBalanceRefactored
 
 3. **Update Loan Status - Reinstate Loan**
    - Filter to show removed loans
    - Find loan you want to reinstate
    - Select the loan
-   - Update status to "Reinstated" or "Active"
+   - Update workflow_status to "Reinstated" (or active status)
    - Confirm reinstatement
    - Loan is included in pool calculations again
-   - Pool metrics recalculate automatically
+   - Pool metrics recalculate automatically via CalculateNoofLoansAndBalanceRefactored
 
 4. **Update Loan Status - Unmap from Pool**
    - Navigate to pool's loan list
    - Find loan you want to unmap
    - Select the loan
-   - Update status to "Unmapped"
+   - System removes poolid field or sets it to null/empty in previewstdloantape collection
+   - Update Status field to "Unmapped" in previewstdloantape collection
    - Confirm unmapping
    - Loan is removed from pool
-   - Pool metrics recalculate automatically
-   - Loan becomes available for mapping to other pools
+   - Pool metrics recalculate automatically via CalculateNoofLoansAndBalanceRefactored
+   - Loan becomes available for mapping to other pools (poolid field is cleared)
 
 ### Tracking Loan Information
 

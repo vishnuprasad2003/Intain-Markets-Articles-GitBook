@@ -61,9 +61,9 @@ Master commitments serve as the operational foundation for credit facilities:
 
 ![Lender Approval - Master Commitment](imagesByMdFilesFolder/18/LenderApproval_MasterCommitment.png)
 
-**Facility Activation** - Once at least one lender approves, the master commitment becomes Active, and the facility is operational. Borrowers can create funding requests, and the facility is ready for use.
+**Facility Activation** - Once at least one lender approves, the master commitment becomes ACTIVE, and the facility is operational. Borrowers can create funding requests, and the facility is ready for use.
 
-**Ongoing Operations** - Active master commitments govern all facility operations. All funding requests must comply with facility rules defined in the master commitment. Borrowing capacity is calculated based on borrowing base rules, and all operations follow the configured structure.
+**Ongoing Operations** - ACTIVE master commitments govern all facility operations. All funding requests must comply with facility rules defined in the master commitment. Borrowing capacity is calculated based on borrowing base rules, and all operations follow the configured structure.
 
 **Rule Enforcement** - All facility rules defined in master commitments are enforced throughout the facility lifecycle. Funding requests are evaluated against these rules, borrowing capacity is calculated using configured formulas, and all operations must comply with the defined structure.
 
@@ -77,8 +77,8 @@ Master commitments serve as the operational foundation for credit facilities:
 
 **Defines All Facility Rules** - All rules that govern the facility are defined in the master commitment, including borrowing limits, collateral eligibility, drawdown frequency, and other requirements.
 
-**Becomes Active When Approved** - Once at least one lender approves, the facility becomes active, and borrowers can create funding requests.
+**Becomes ACTIVE When Approved** - Once at least one lender approves, the facility becomes ACTIVE, and borrowers can create funding requests.
 
 **Complete Documentation** - Master commitments serve as complete documentation of facility structure and rules, ensuring all parties understand how facilities operate.
 
-**Cannot Edit After Active** - Once a facility is active, the master commitment typically cannot be edited. All facility rules and configurations are locked in.
+**Cannot Edit After ACTIVE** - Once a facility is ACTIVE, the master commitment typically cannot be edited. All facility rules and configurations are locked in.

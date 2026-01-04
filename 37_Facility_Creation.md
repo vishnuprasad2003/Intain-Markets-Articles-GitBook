@@ -33,11 +33,14 @@ Use facility creation when:
    - Master commitment is pre-populated with term sheet data
 
 2. **Review Pre-populated Information**
-   - Review term sheet data that was transferred
+   - Review term sheet data that was auto-transferred from accepted term sheet
+   - **Read-only fields** (pre-populated from term sheet): facilityType, advanceRate, margin, pricingIndex, maturityDate, drawFrequency, covenantTemplate, totalCommitmentAmount (from requestedCommitmentAmount), marketMakerOrgId, issuerOrgId, issuerId
+   - **FA-editable fields** (empty initially): collateralRules: [], lenderGroups: [], servicerOrgId: []
+   - **Status fields**: status: 'DRAFT', facilitySetupModelStatus: 'In Progress', requiredFieldsCompleted: false, contractType: 'single' (default)
    - Verify facility name, amount, and basic terms
    - Check that information is correct
    - Understand what needs to be configured
-   - **Check Contract Type** - Review whether the facility uses a single contract or multiple contracts. This determines whether you'll configure one master commitment or create sub-commitments for different lenders.
+   - **Check Contract Type** - Review whether the facility uses a single contract (contractType: 'single') or multiple contracts (contractType: 'multiple'). This determines whether you'll configure one master commitment or create sub-commitments for different lenders.
 
 ![Create Facility - FA](imagesByMdFilesFolder/37/CreateFacility_FA.png)
 
@@ -67,6 +70,14 @@ Use facility creation when:
 
 2. **Define Collateral Eligibility Rules**
    - Go to Collateral Rules section
+   - Configure **collateralRules** array (array of rule objects)
+   - Each rule object contains:
+     - **ruleId**: Unique identifier (auto-generated UUID if not provided)
+     - **ruleType**: Type of rule (string, defaults to 'checkbox')
+     - **ruleName**: Name of the rule (string)
+     - **isSelected**: Whether rule is selected (boolean, defaults to false)
+     - **createdAt**: Creation timestamp
+     - **updatedAt**: Update timestamp
    - Set eligibility criteria for collateral
    - Define collateral quality requirements
    - Set age and geographic limits
@@ -96,6 +107,16 @@ Use facility creation when:
 1. **Add Lenders**
    - Navigate to Lender Groups section
    - Click "Add Lender" button or similar
+   - Configure **lenderGroups** array (array of lender objects)
+   - Each lender object contains:
+     - **lenderGroupId**: Unique identifier (auto-generated UUID if not provided)
+     - **lenderName**: Name of the lender (string)
+     - **lenderOrgId**: Lender organization ID (string, can be null)
+     - **lenderStatus**: Approval status ('pending_approval' | 'approved' | 'esignature_completed', defaults to 'pending_approval')
+     - **commitmentAmount**: Lender's commitment amount (number, parsed using parseFloat)
+     - **votingPercentage**: Lender's voting percentage (number, parsed using parseFloat)
+     - **createdAt**: Creation timestamp
+     - **updatedAt**: Update timestamp
    - Select lender organization from available options
    - Enter lender details
    - Add lender to group
@@ -104,8 +125,8 @@ Use facility creation when:
 ![Set Up Lenders](imagesByMdFilesFolder/37/setUpLenders.png)
 
 2. **Configure Lender Details**
-   - Set commitment amount for each lender
-   - Configure voting percentages
+   - Set **commitmentAmount** for each lender (numeric value)
+   - Configure **votingPercentage** for each lender (numeric value)
    - Set lender-specific terms if applicable
    - Define participation percentages
    - Complete lender configuration
@@ -169,9 +190,15 @@ Use facility creation when:
 
 3. **Submit for Lender Approval**
    - Click "Submit" or "Create" button
-   - Confirm submission action
-   - Status changes to "Pending Lender Approval"
-   - If multiple contract type, all sub-commitments are also submitted
+   - System calls API: POST /cf/createMasterCommitment
+   - Request body includes: { termSheetId: string (required) }
+   - System validates termSheetId is provided
+   - System queries master commitment: finds master commitment where termSheetId matches and type: 'Master Commitment'
+   - System validates master commitment exists and is in DRAFT status
+   - System creates updateData object: { status: 'PendingLenderApproval', submittedAt: DateUtils.nowUTC(), updatedAt: DateUtils.nowUTC(), updatedBy: userId }
+   - If contractType === 'multiple': System queries all sub-commitments (parentMasterCommitmentId matches, type: 'Sub MasterCommitment', status: 'DRAFT'). System creates lenderToSubCommitmentMap mapping lenderOrgId to subMasterCommitmentId and facilityName. System enriches main lenderGroups with masterCommitmentId, subMasterCommitmentId, subFacilityName. System updates main master commitment and all sub-commitments with updateData.
+   - If contractType !== 'multiple': System updates only main master commitment with updateData.
+   - System adds entry to statusHistory and actionHistory arrays
    - Lenders receive notifications
    - Facility is ready for lender review
 
@@ -217,7 +244,7 @@ After configuring master commitment:
 - Borrowers can create funding requests
 
 After lender approval:
-- Facility status changes to "Active"
+- Facility status changes to "ACTIVE"
 - Facility is operational and ready for use
 - Borrowers can create funding requests
 - Facility agent can manage active facility
