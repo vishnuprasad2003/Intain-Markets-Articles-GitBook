@@ -27,45 +27,42 @@ Use term sheet workflow when:
 
 ### Creating a Term Sheet
 
-1. **Access Term Sheet Creation**
+1. **Access Term Sheet Setup**
    - Navigate to the term sheets section
-   - Click "Create New Term Sheet" or similar button
-   - Term sheet form opens with required fields
+   - Click "Term Sheet Setup" button
+   - Two options appear:
+     - **Create Via Wizard**: Opens a pop-up form to create term sheet step-by-step
+     - **Upload Signed**: Upload a signed term sheet document; the system extracts details and creates a term sheet from the document
 
 ![Accessing Term Sheet - Create New Term Sheet](imagesByMdFilesFolder/16/AccessingTermsheetCreateNewTermSheet.png)
 
 2. **Enter Facility Information**
-   - **Facility Name**: Enter a unique name for the facility
-   - **Maximum Facility Amount**: Specify the total borrowing limit you're requesting
-   - **Interest Rate**: Enter the proposed interest rate or rate structure
-   - **Repayment Terms**: Specify how and when repayments will be made
-   - **Term**: Enter the facility term or duration
-   - **Purpose**: Describe the purpose of the facility
-   - **Other Terms**: Fill in any other required facility terms
+   - **Requested Commitment Amount**: Total borrowing limit requested (in USD)
+   - **Advance Rate**: Percentage of collateral value that can be borrowed (e.g., 85%)
+   - **Pricing Index**: Base rate index (e.g., SOFR, SOFR 1M)
+   - **Margin**: Spread added to pricing index (e.g., 2.5%)
+   - **Fixed Rate**: Fixed interest rate (if applicable, alternative to index + margin)
+   - **Maturity Date**: Facility maturity date
+   - **Draw Frequency**: How often drawdowns can be made (e.g., Monthly, Quarterly)
+   - **Covenant Template**: Select applicable covenant template
 
 ![Add Term Sheet Details](imagesByMdFilesFolder/16/2_AddTermSheetDetails.png)
 
 3. **Upload Required Documents**
-   - Upload supporting documents that justify the request
-   - Include financial statements, business plans, or other required documentation
+   - **Collateral Profile**: Upload collateral profile document
+   - **Financial Statements**: Upload financial statements
+   - **KYC Documents**: Upload KYC documentation
+   - **Collateral Data**: Upload collateral data files
+   - **Funding Sheet**: Upload funding sheet if applicable
    - Ensure documents meet quality and format requirements
-   - Verify all required documents are included
 
 ![Upload Documents](imagesByMdFilesFolder/16/UploadDocuments.png)
 
-4. **Review Your Entry**
-   - Check all information for accuracy
+4. **Review and Save**
+   - Review all entered information for accuracy
    - Verify all required fields are filled
    - Ensure documents are uploaded correctly
-   - Review terms to ensure they're reasonable and complete
-
-5. **Save as Draft**
-   - Save your term sheet as a draft
-   - You can return later to complete or edit
-   - Draft status allows you to work on it over time
-   - Status shows as "Draft"
-
-![Save As Draft](imagesByMdFilesFolder/16/SaveAsDraft.png)
+   - Save as draft to continue later or proceed to signing
 
 ![Issuer - Term Sheet Creation](imagesByMdFilesFolder/16/Issuer_TermSheetCreation.png)
 

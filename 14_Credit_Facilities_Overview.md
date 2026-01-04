@@ -47,9 +47,11 @@ Credit facilities serve several important purposes:
 
 **Term Sheet Proposal** - Borrowers create term sheets proposing credit facilities with key terms. Term sheets are signed electronically and submitted to facility agents for review. Facility agents can approve, reject, or request changes.
 
+![Term Sheet Creation - Issuer](imagesByMdFilesFolder/14/Issuer_TermSheetCreation.png)
+
 **Master Commitment Creation** - When term sheets are approved, master commitments are automatically created. Facility agents configure the complete facility structure, including facility rules, borrowing base calculations, lender groups, and other parameters.
 
-![Term Sheet Creation - Issuer](imagesByMdFilesFolder/14/Issuer_TermSheetCreation.png)
+![Create Master Commitment Facility](imagesByMdFilesFolder/14/CreateMasterCommitmentFacility.png)
 
 **Lender Approval** - After facility agents configure master commitments, lenders review and approve them. Any lender approval activates the facility, making it operational for funding requests.
 

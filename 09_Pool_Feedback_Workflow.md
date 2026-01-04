@@ -35,22 +35,20 @@ Use feedback workflow when:
    - View pool details, metrics, and loan characteristics
    - Analyze loan data and pool composition
    - Identify areas needing attention or improvement
-   - Review pool information thoroughly before providing feedback
+
+![Pool Detail](imagesByMdFilesFolder/09/PoolDetail.png)
 
 2. **Decide Feedback Type and Level**
    - **General Feedback**: Comments, questions, or observations about the pool
    - **Change Request**: Formal request for modifications that need to be addressed
    - **Pool-Level Feedback**: Feedback about the pool overall (metrics, composition, structure)
    - **Loan-Level Feedback**: Feedback about specific loans (data issues, eligibility, characteristics)
-   - Choose the appropriate type and level for your feedback
 
 3. **Access Feedback Function**
    - Navigate to the pool's details page
    - Click to add new feedback
    - Select whether this is pool-level or loan-level feedback
    - If loan-level, select the specific loan(s) you're providing feedback on
-
-![Pool Detail](imagesByMdFilesFolder/09/PoolDetail.png)
 
 ![Pools Feedback - Market Maker](imagesByMdFilesFolder/09/Pools_Feedback_MarketMaker.png)
 
@@ -59,16 +57,14 @@ Use feedback workflow when:
    - Specify if this is a change request (requires action) or general feedback (informational)
    - Provide context and explanation for your feedback
    - Be specific about what needs to change or what your concern is
-   - Include any relevant details that help the issuer understand your feedback
+
+![Enter Feedback](imagesByMdFilesFolder/09/EnterFeedback.png)
 
 5. **Submit Feedback**
    - Review your feedback message
    - Confirm the feedback type and level
    - Submit the feedback
    - Issuer receives notification about the feedback
-   - Feedback is recorded and tracked
-
-![Enter Feedback](imagesByMdFilesFolder/09/EnterFeedback.png)
 
 ![View Entered Feedback](imagesByMdFilesFolder/09/ViewEnteredFeedback.png)
 

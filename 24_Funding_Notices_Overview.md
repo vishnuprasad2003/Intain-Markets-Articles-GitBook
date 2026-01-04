@@ -71,8 +71,6 @@ Funding notices serve several important purposes:
 
 **Fund Transfer Confirmation** - After approving, lenders transfer funds and confirm transfers. Each lender confirms their transfer independently, completing their participation in the drawdown. The system tracks individual lender confirmations.
 
-![Fund Transfer Confirmation](imagesByMdFilesFolder/24/Fund Transfer Confirmation.png)
-
 **Process Completion** - Once lenders confirm transfers, the drawdown process is complete. Funds have been disbursed, and the drawdown is documented with complete audit trails.
 
 ![Process Completion](imagesByMdFilesFolder/24/ProcessCompletion.png)

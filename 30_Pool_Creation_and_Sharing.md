@@ -82,13 +82,16 @@ Use pool creation and sharing when:
 ![Loan Map to Pool - Issuer](imagesByMdFilesFolder/30/LoanMapToPoolIssuer.png)
 
 4. **Review Pool Metrics**
-   - Pool metrics calculate automatically
-   - **Total Balance**: Sum of all mapped loan balances
-   - **Loan Count**: Number of loans in the pool
-   - **Weighted Average Coupon**: Interest rate weighted by loan balance
-   - **Weighted Average FICO**: Credit score weighted by loan balance
-   - **Other Metrics**: Geographic distribution, average loan size, etc.
-   - Verify metrics are accurate and meet your requirements
+   - Pool metrics calculate automatically from mapped loans
+   - **Number of Loans**: Total count of mapped loans
+   - **Original Balance**: Sum of original principal balances from all mapped loans
+   - **Current Balance**: Sum of current principal balances from all mapped loans
+   - **Weighted Average Coupon (WAC)**: Interest rate weighted by current principal balance
+   - **Weighted Average FICO**: Borrower FICO score weighted by current principal balance
+   - **Weighted Average LTV**: Loan-to-value ratio weighted by current principal balance
+   - **DSCR/DTI**: Debt service coverage ratio (Commercial Mortgage) or Debt-to-income ratio (other asset classes), weighted by current principal balance
+   - **Beginning Loan Balance**: Sum of beginning loan balances
+   - Metrics update automatically when loans are added or removed
 
 ![Pool Details - Issuer](imagesByMdFilesFolder/30/Pool_Details_Issuer.png)
 
