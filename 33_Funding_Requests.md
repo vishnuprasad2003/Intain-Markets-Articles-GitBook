@@ -29,26 +29,24 @@ Use funding requests when:
 1. **Access Funding Request Creation**
    - Navigate to your active credit facility
    - Go to Funding Requests section
-   - System calls API: GET /cf/:masterCommitmentId/funding-requests/check-draft?issuerOrgId=YOUR_ORG_ID
-   - System checks if draft funding request exists (status: 'DRAFT', masterCommitmentId, issuerOrgId match)
-   - If draft exists: System returns existing draft with all saved data
-   - If no draft exists: System validates master commitment status is ACTIVE, creates new draft with pre-filled facility data (facilityName, masterCommitmentId, issuerOrgId, marketMakerOrgId, totalCommitmentAmount, availableCapacity, advanceRate, etc.), sets status to 'DRAFT', generates fundingRequestId (format: FR-MMDDYYYY-random), adds entry to statusHistory and actionHistory
-   - Funding request form opens with draft data or new draft
+   - If you have a draft request, it opens with your saved data
+   - If no draft exists, a new draft is created with facility information pre-filled
+   - Funding request form opens ready for you to enter details
 
 ![Funding Request Creation - Issuer](imagesByMdFilesFolder/33/FundingRequest_Creation_Issuer.png)
 
 2. **Enter Request Details**
-   - **drawAmount**: Specify the amount you want to borrow (numeric, must be within available borrowing capacity)
-   - **purposeOfFunds**: Enter detailed description of what funds will be used for (string)
-   - **fundingDate**: Select when you need the funds (date format)
-   - **drawCurrency**: Select currency (defaults to 'USD' if not specified)
-   - **notes**: Add any additional notes or comments (string)
+   - **Draw Amount**: Specify the amount you want to borrow (must be within available borrowing capacity)
+   - **Purpose of Funds**: Enter detailed description of what funds will be used for
+   - **Funding Date**: Select when you need the funds
+   - **Currency**: Select currency (defaults to USD if not specified)
+   - **Notes**: Add any additional notes or comments
 
 3. **Upload Supporting Documentation**
-   - **collateralAddendum**: Upload collateral addendum document (stored in IPFS, tracked in collateralAddendumHistory)
-   - **financialStatements**: Upload financial statements (stored in IPFS, tracked in financialStatementsHistory)
-   - **kycDocuments**: Upload KYC documentation (stored in IPFS, tracked in kycDocumentsHistory)
-   - Documents are uploaded to IPFS and IPFS hashes are stored. Document history arrays maintain upload history.
+   - **Collateral Addendum**: Upload collateral addendum document
+   - **Financial Statements**: Upload financial statements
+   - **KYC Documents**: Upload KYC documentation
+   - Documents are securely stored and tracked with complete history
 
 4. **Add Collateral Information** (if applicable)
    - Collateral information is included in the collateralAddendum document
@@ -65,8 +63,8 @@ Use funding requests when:
    - Confirm all required fields are filled
 
 6. **Save or Submit**
-   - **Save as Draft**: Save to complete later if not ready to submit. Status remains 'DRAFT'. You can save multiple times using auto-save functionality.
-   - **Submit Immediately**: Click "Submit" button. System calls API: POST /cf/:masterCommitmentId/funding-requests/:fundingRequestId/submit. System validates status is DRAFT. System creates currentVersion object and adds to previousVersions array. System updates status from DRAFT to FAReview. System updates submittedAt, submittedBy (userId), submissionCount (incremented). System adds entries to statusHistory and actionHistory. System sends notification to facility agent organization via SSE and email. Status updates to FAReview. You receive confirmation.
+   - **Save as Draft**: Save to complete later if not ready to submit. Status remains Draft. You can save multiple times.
+   - **Submit Immediately**: Click "Submit" button. Request status changes to indicate it's under facility agent review. Facility agent receives notification. You receive confirmation.
 
 ### Managing Funding Requests
 
@@ -96,13 +94,8 @@ Use funding requests when:
    - Update request with requested changes
    - Address all requested items
    - Click "Resubmit" or "Submit for Review" button
-   - System calls API: POST /cf/:masterCommitmentId/funding-requests/:fundingRequestId/submit
-   - System validates funding request status is DRAFT (or CHANGES_REQUESTED if that status allows submission)
-   - System updates status from DRAFT to FAReview
-   - System creates currentVersion and adds to previousVersions array
-   - System updates submittedAt, submittedBy, submissionCount
-   - System adds entries to statusHistory and actionHistory
-   - System sends notification to facility agent
+   - Request status changes to indicate it's under review again
+   - Facility agent receives notification
    - Resubmit for review
 
 5. **View Request Details**
@@ -149,7 +142,7 @@ Use funding requests when:
 
 - Change requests allow editing and resubmission - this is less severe than rejection and allows iterative improvement.
 
-- Request amount cannot exceed available capacity - system validates that amount is within limits.
+- Request amount cannot exceed available capacity - the system ensures amount is within limits.
 
 - Required documentation must be provided - missing documents may result in rejection or change request.
 

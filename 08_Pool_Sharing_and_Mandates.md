@@ -60,11 +60,10 @@ Use mandates when you:
 ![Pool Share - Select Recipient Organization](imagesByMdFilesFolder/08/Pool_Share_Select_recipient_org.png)
 
 4. **Set Sharing Permissions**
-   - System configures shareOptions object for selected organizations
-   - Each organization in shareOptions has:
-     - **allowFeedBack**: Boolean (defaults to true) - Recipients can provide comments and feedback
-     - **allowDownload**: Boolean (defaults to true) - Recipients can download pool data
-     - **acceptanceStatus**: String (defaults to 'pending') - Status for market maker mandates
+   - Configure permissions for selected organizations:
+     - **Allow Feedback**: Recipients can provide comments and feedback (defaults to enabled)
+     - **Allow Download**: Recipients can download pool data (defaults to enabled)
+     - **Acceptance Status**: Status for market maker mandates (defaults to pending)
    - Configure access settings for each organization
    - Control what recipients can see and do with the pool
    - Set appropriate access levels based on organization type
@@ -82,11 +81,10 @@ Use mandates when you:
 6. **Manage Shared Organizations**
    - Navigate to the pool details page
    - Below the main table, find the **Sharing** tab
-   - View all shared organizations and their access settings from shareOptions object
+   - View all shared organizations and their access settings
    - As the issuer, you can edit accessibility settings for each shared organization
-   - Modify allowFeedBack and allowDownload permissions as needed
-   - System updates shareOptions object with modified permissions
-   - Each organization's entry in shareOptions maintains: allowFeedBack, allowDownload, acceptanceStatus
+   - Modify feedback and download permissions as needed
+   - Changes are saved automatically
 
 ### Managing Mandates
 

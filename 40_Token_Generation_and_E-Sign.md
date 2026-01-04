@@ -41,17 +41,16 @@ Use token generation and e-sign when:
 
 3. **Initialize Token Distribution**
    - Click "Update Token Distribution" or similar button
-   - System calls API: PATCH /cf/funding-notices/:fundingNoticeId/token-distribution
-   - Funding notice must be in PENDING_TOKEN_GENERATION status
-   - System validates tokenDistribution array (lenderOrgId, lenderName, commitmentAmount, tokensAllocated, votingPercentage)
-   - System initializes tokenDistribution array with each lender having esignatureStatus: 'pending'
-   - System calls createFTTokensForBorrower function which:
-     - Deploys FT contract with totalSupply = requestAmount * 10^6 (6 decimals)
-     - Transfers FT tokens to borrower wallet address
-     - Transfers FT contract ownership to borrower
-     - Updates funding notice with ftContractAddress, totalTokensMinted, ftTotalSupply, ftCreatedAt, ftCreationTransactionHash
-   - System updates borrowing base and available capacity via IA calculation
-   - Status updates to "TOKEN_GENERATED"
+   - Funding notice must be in pending token generation status
+   - Token distribution is configured
+   - Each lender is initialized with pending signature status
+   - Tokens are created for borrower:
+     - Token contract is deployed
+     - Tokens are transferred to borrower wallet
+     - Contract ownership is transferred to borrower
+     - Token contract details are recorded
+   - Borrowing base and available capacity are updated
+   - Status updates to show tokens are generated
 
 ![FA - Funding Notice Save - Token Generation](imagesByMdFilesFolder/40/FA_FundingNotice_Save_TokenGeneration.png)
 
@@ -67,16 +66,13 @@ Use token generation and e-sign when:
 1. **Sign for First Lender**
    - Select first lender from lender list
    - Initiate electronic signature process for this lender
-   - System calls DocuSign endpoint: GET /docusign/signing-complete?envelopeRequest=fundingNoticeSign&envelopeId=123&fundingNoticeId=FN-456&lenderOrgId=LENDER-789
    - Review funding notice document
    - Complete electronic signature for this lender
-   - System updates tokenDistribution array: sets this lender's esignatureStatus to 'ESIGN_COMPLETED'
-   - System decrements eSignaturePendingCount by 1
-   - System sets eSignatureStatus to 'ESIGN_COMPLETED' if eSignaturePendingCount === 0, otherwise remains 'pending'
-   - System stores signed PDF in IPFS
-   - System sends notifications to relevant organizations
+   - This lender's signature status is updated to completed
+   - Signed document is stored securely
+   - Notifications are sent to relevant organizations
    - Confirm signature is complete
-   - Status remains "TOKEN_GENERATED" (does not change during DocuSign)
+   - Status remains as tokens generated (does not change during signing)
 
 2. **Sign for Remaining Lenders**
    - Select next lender
@@ -89,15 +85,15 @@ Use token generation and e-sign when:
 
 3. **Track Signing Status**
    - View individual lender signing status
-   - See which lenders have completed signatures (ESIGN_COMPLETED)
+   - See which lenders have completed signatures
    - See which lenders are still pending signatures
    - Monitor overall completion progress
    - Verify all signatures are complete
 
 4. **Verify All Signatures Complete**
-   - Check that all lenders have esignatureStatus: 'ESIGN_COMPLETED'
+   - Check that all lenders have completed signatures
    - Confirm all required signatures are done
-   - Verify status shows "TOKEN_GENERATED"
+   - Verify status shows tokens are generated
    - Ensure funding notice is ready for borrower approval
 
 ### After E-Signature Completion
@@ -120,7 +116,7 @@ Use token generation and e-sign when:
 
 - You sign for each lender individually - each lender requires a separate signature process.
 
-- Each lender's signature is tracked separately - esignatureStatus field tracks each lender independently.
+- Each lender's signature is tracked separately - signature status tracks each lender independently.
 
 - All lenders should be signed before borrower approval - complete all signatures to enable smooth process.
 
@@ -134,20 +130,20 @@ Use token generation and e-sign when:
 
 - Borrower can approve after signatures - borrower approval enables lender visibility.
 
-- Individual tracking - each lender's signature status is tracked independently in tokenDistribution array.
+- Individual tracking - each lender's signature status is tracked independently.
 
 ## What Happens Next
 
 After generating tokens and completing signatures:
 - Tokens are created and allocated to lenders
-- All lender signatures are complete (ESIGN_COMPLETED)
+- All lender signatures are complete
 - Borrower can approve token transfer
 - After borrower approval, funding notice becomes visible to lenders
 - Lenders can review and approve drawdowns
 - Fund transfer process can proceed
 
 After borrower approval:
-- Funding notice status changes to "TOKEN_APPROVED"
+- Funding notice status changes to show tokens are approved
 - Funding notice becomes visible to lenders
 - Lenders receive notifications
 - Lenders review and make approval decisions

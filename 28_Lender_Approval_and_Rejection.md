@@ -33,20 +33,20 @@ Use lender approval when:
    - Review complete drawdown information
 
 2. **Review Drawdown Details**
-   - **requestAmount**: Check the total drawdown amount (from funding request drawAmount)
-   - **tokensAllocated**: Review your allocated token portion (from tokenDistribution array)
-   - **purposeOfFunds**: Understand what the funds will be used for
-   - **fundingDate**: Check when funds are needed
+   - **Total Drawdown Amount**: Check the total drawdown amount
+   - **Your Allocated Portion**: Review your allocated token portion
+   - **Purpose of Funds**: Understand what the funds will be used for
+   - **Funding Date**: Check when funds are needed
    - **Facility Details**: Review facility terms and conditions
-   - **tokenDistribution**: Review your entry in the tokenDistribution array
+   - **Token Distribution**: Review how tokens are distributed to all lenders
 
 3. **Evaluate Drawdown**
-   - Assess borrowing base impact (bbCalculation, availableCapacity, borrowingBase)
-   - Review facility utilization after this drawdown (utilisationPercentage)
+   - Assess borrowing base impact
+   - Review facility utilization after this drawdown
    - Check if drawdown complies with facility rules
    - Evaluate borrower's purpose and justification
    - Consider your risk and exposure
-   - Review your tokensAllocated amount in tokenDistribution
+   - Review your allocated token amount
 
 4. **Review Supporting Information**
    - Check any supporting documentation provided
@@ -66,17 +66,14 @@ Use lender approval when:
 
 2. **Approve Drawdown**
    - Click the "Approve" button or similar
-   - System calls API endpoint: PATCH /cf/funding-notices/:fundingNoticeId/:lenderOrgId/status
-   - Request body includes: { "status": "APPROVED" }
-   - System updates your lenderApprovalStatus in tokenDistribution array to "APPROVED"
    - Review any confirmation messages
    - Confirm your approval decision
-   - Your approval is recorded in actionHistory and statusHistory
+   - Your approval is recorded
 
 ![Lender Approval - Funding Notice](imagesByMdFilesFolder/28/LenderApprovalFundingNotice.png)
 
 3. **After Approval**
-   - Your lenderApprovalStatus is updated to "APPROVED" in tokenDistribution array
+   - Your approval status is updated
    - Your participation is confirmed
    - You can proceed with fund transfer
    - Your portion of the drawdown is committed
@@ -94,16 +91,13 @@ Use lender approval when:
 
 2. **Reject Drawdown**
    - Click the "Reject" button or similar
-   - System calls API endpoint: PATCH /cf/funding-notices/:fundingNoticeId/:lenderOrgId/status
-   - Request body includes: { "status": "REJECTED" }
-   - System updates your lenderApprovalStatus in tokenDistribution array to "REJECTED"
    - Provide rejection reason if required
    - Enter any comments explaining your decision
    - Confirm your rejection
-   - Your rejection is recorded in actionHistory and statusHistory
+   - Your rejection is recorded
 
 3. **After Rejection**
-   - Your lenderApprovalStatus is updated to "REJECTED" in tokenDistribution array
+   - Your rejection status is updated
    - Your participation is declined
    - You will not fund your portion
    - Other lenders make independent decisions
@@ -113,17 +107,17 @@ Use lender approval when:
 ### Tracking Decisions
 
 1. **View Your Decision Status**
-   - See your lenderApprovalStatus in tokenDistribution array (PENDING/APPROVED/REJECTED)
-   - Review your decision timestamp (updatedAt field)
+   - See your approval status (Pending/Approved/Rejected)
+   - Review when you made your decision
    - Check any comments you provided
-   - Verify your decision is recorded in actionHistory and statusHistory
-   - View your tokensAllocated amount
+   - Verify your decision is recorded
+   - View your allocated token amount
 
 2. **Monitor Other Lenders**
-   - See which other lenders have approved (lenderApprovalStatus: "APPROVED")
-   - View which lenders have rejected (lenderApprovalStatus: "REJECTED")
-   - See which lenders are pending (lenderApprovalStatus: "PENDING")
-   - Track overall lender participation via tokenDistribution array
+   - See which other lenders have approved
+   - View which lenders have rejected
+   - See which lenders are pending
+   - Track overall lender participation
    - Understand drawdown status
 
 ## Rules & Validations
@@ -142,7 +136,7 @@ Use lender approval when:
 
 - Rejection reasons help borrowers understand. Providing reasons helps borrowers understand lender concerns.
 
-- Individual tracking. Each lender's decision is tracked separately in tokenDistribution array with lenderApprovalStatus field (PENDING/APPROVED/REJECTED), timestamps (updatedAt), and details in actionHistory and statusHistory.
+- Individual tracking. Each lender's decision is tracked separately with approval status, timestamps, and complete details.
 
 - Borrower visibility. Borrowers can see which lenders approved and which rejected.
 

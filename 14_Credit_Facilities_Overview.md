@@ -49,11 +49,11 @@ Credit facilities serve several important purposes:
 
 ![Term Sheet Creation - Issuer](imagesByMdFilesFolder/14/Issuer_TermSheetCreation.png)
 
-**Master Commitment Creation** - When term sheets are approved (status: 'Accepted'), master commitments are automatically created via autoCreateMasterCommitment function. System generates masterCommitmentId (format: MC-MMDDYYYY-XXXX), creates master commitment with Draft status, pre-populates with term sheet data (facilityType, advanceRate, margin, pricingIndex, maturityDate, drawFrequency, covenantTemplate, totalCommitmentAmount, marketMakerOrgId, issuerOrgId, issuerId), initializes empty arrays (collateralRules: [], lenderGroups: []), sets facilitySetupModelStatus: 'In Progress', requiredFieldsCompleted: false, contractType: 'single'. Facility agents configure the complete facility structure, including facility rules, borrowing base calculations, lender groups, and other parameters.
+**Master Commitment Creation** - When term sheets are approved, master commitments are automatically created with facility details pre-populated from the term sheet. Facility agents then configure the complete facility structure, including facility rules, borrowing base calculations, lender groups, and other parameters.
 
 ![Create Master Commitment Facility](imagesByMdFilesFolder/14/CreateMasterCommitmentFacility.png)
 
-**Lender Approval** - After facility agents configure master commitments, they finalize via POST /cf/createMasterCommitment (status: Draft → PendingLenderApproval). Lenders review and approve via DocuSign (GET /docusign/signing-complete?envelopeRequest=masterCommitmentSign&envelopeId=123&masterCommitmentId=MC-456&lenderOrgId=LENDER-789). System updates lenderGroup: sets lenderStatus to 'esignature_completed', sets approvedAt timestamp. System checks if master commitment status is not already ACTIVE. If not ACTIVE, system updates status: PendingLenderApproval → ACTIVE, calls sendMasterCommitmentToIA function. Any lender approval activates the facility, making it operational for funding requests.
+**Lender Approval** - After facility agents configure master commitments, they submit them for lender approval. Lenders review and approve master commitments electronically. Any lender approval activates the facility, making it operational for funding requests. Once active, borrowers can create funding requests.
 
 ![Credit Facility - Lender Approve](imagesByMdFilesFolder/14/CreditFacility_Lender_Approve.png)
 
@@ -61,7 +61,7 @@ Credit facilities serve several important purposes:
 
 ![Funding Request Creation - Issuer](imagesByMdFilesFolder/14/FundingRequest_Creation_Issuer.png)
 
-**Funding Notice Generation** - When funding requests are approved (status: FAReview → APPROVED), funding notices are automatically generated via generateFundingNotice function with PENDING_TOKEN_GENERATION status. Facility agents call updateTokenDistribution (PATCH /cf/funding-notices/:fundingNoticeId/token-distribution) which creates FT tokens and changes status to TOKEN_GENERATED. Facility agents sign DocuSign for each lender individually (status remains TOKEN_GENERATED, individual lender esignatureStatus updated to ESIGN_COMPLETED). Borrowers approve token transfers (POST /cf/funding-notices/:fundingNoticeId/approve-token-transfer) which changes status to TOKEN_APPROVED, making notices visible to lenders.
+**Funding Notice Generation** - When funding requests are approved, funding notices are automatically generated. Facility agents generate tokens and configure distribution to lenders. Facility agents sign funding notices for each lender individually. Borrowers approve token transfers, making notices visible to lenders for review and approval.
 
 ![Funding Notice Details - FA](imagesByMdFilesFolder/14/FundingNoticeDetailsFA.png)
 

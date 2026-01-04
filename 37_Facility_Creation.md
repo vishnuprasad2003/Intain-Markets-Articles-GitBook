@@ -34,13 +34,13 @@ Use facility creation when:
 
 2. **Review Pre-populated Information**
    - Review term sheet data that was auto-transferred from accepted term sheet
-   - **Read-only fields** (pre-populated from term sheet): facilityType, advanceRate, margin, pricingIndex, maturityDate, drawFrequency, covenantTemplate, totalCommitmentAmount (from requestedCommitmentAmount), marketMakerOrgId, issuerOrgId, issuerId
-   - **FA-editable fields** (empty initially): collateralRules: [], lenderGroups: [], servicerOrgId: []
-   - **Status fields**: status: 'DRAFT', facilitySetupModelStatus: 'In Progress', requiredFieldsCompleted: false, contractType: 'single' (default)
+   - **Read-only fields** (pre-populated from term sheet): Facility type, advance rate, margin, pricing index, maturity date, drawdown frequency, covenant template, total commitment amount, market maker, issuer, and borrower information
+   - **Fields you configure** (empty initially): Collateral rules, lender groups, servicer organizations
+   - **Status**: Draft, facility setup in progress, contract type (single or multiple)
    - Verify facility name, amount, and basic terms
    - Check that information is correct
    - Understand what needs to be configured
-   - **Check Contract Type** - Review whether the facility uses a single contract (contractType: 'single') or multiple contracts (contractType: 'multiple'). This determines whether you'll configure one master commitment or create sub-commitments for different lenders.
+   - **Check Contract Type** - Review whether the facility uses a single contract or multiple contracts. This determines whether you'll configure one master commitment or create sub-commitments for different lenders.
 
 ![Create Facility - FA](imagesByMdFilesFolder/37/CreateFacility_FA.png)
 
@@ -70,14 +70,8 @@ Use facility creation when:
 
 2. **Define Collateral Eligibility Rules**
    - Go to Collateral Rules section
-   - Configure **collateralRules** array (array of rule objects)
-   - Each rule object contains:
-     - **ruleId**: Unique identifier (auto-generated UUID if not provided)
-     - **ruleType**: Type of rule (string, defaults to 'checkbox')
-     - **ruleName**: Name of the rule (string)
-     - **isSelected**: Whether rule is selected (boolean, defaults to false)
-     - **createdAt**: Creation timestamp
-     - **updatedAt**: Update timestamp
+   - Configure collateral eligibility rules
+   - Each rule has a unique identifier, type, name, and selection status
    - Set eligibility criteria for collateral
    - Define collateral quality requirements
    - Set age and geographic limits
@@ -107,16 +101,8 @@ Use facility creation when:
 1. **Add Lenders**
    - Navigate to Lender Groups section
    - Click "Add Lender" button or similar
-   - Configure **lenderGroups** array (array of lender objects)
-   - Each lender object contains:
-     - **lenderGroupId**: Unique identifier (auto-generated UUID if not provided)
-     - **lenderName**: Name of the lender (string)
-     - **lenderOrgId**: Lender organization ID (string, can be null)
-     - **lenderStatus**: Approval status ('pending_approval' | 'approved' | 'esignature_completed', defaults to 'pending_approval')
-     - **commitmentAmount**: Lender's commitment amount (number, parsed using parseFloat)
-     - **votingPercentage**: Lender's voting percentage (number, parsed using parseFloat)
-     - **createdAt**: Creation timestamp
-     - **updatedAt**: Update timestamp
+   - Configure lender groups
+   - Each lender has a unique identifier, name, organization ID, approval status, commitment amount, and voting percentage
    - Select lender organization from available options
    - Enter lender details
    - Add lender to group
@@ -125,8 +111,8 @@ Use facility creation when:
 ![Set Up Lenders](imagesByMdFilesFolder/37/setUpLenders.png)
 
 2. **Configure Lender Details**
-   - Set **commitmentAmount** for each lender (numeric value)
-   - Configure **votingPercentage** for each lender (numeric value)
+   - Set commitment amount for each lender
+   - Configure voting percentage for each lender
    - Set lender-specific terms if applicable
    - Define participation percentages
    - Complete lender configuration
@@ -144,7 +130,7 @@ Use facility creation when:
 1. **Create Sub-Commitment**
    - If contract type is "multiple", navigate to create sub-commitment option
    - Click "Create Sub-Commitment" or similar button
-   - System creates a new sub-commitment from the parent
+   - A new sub-commitment is created from the parent
    - Sub-commitment inherits all facility rules and parameters
    - Sub-commitment starts with empty lender groups
 
@@ -190,15 +176,8 @@ Use facility creation when:
 
 3. **Submit for Lender Approval**
    - Click "Submit" or "Create" button
-   - System calls API: POST /cf/createMasterCommitment
-   - Request body includes: { termSheetId: string (required) }
-   - System validates termSheetId is provided
-   - System queries master commitment: finds master commitment where termSheetId matches and type: 'Master Commitment'
-   - System validates master commitment exists and is in DRAFT status
-   - System creates updateData object: { status: 'PendingLenderApproval', submittedAt: DateUtils.nowUTC(), updatedAt: DateUtils.nowUTC(), updatedBy: userId }
-   - If contractType === 'multiple': System queries all sub-commitments (parentMasterCommitmentId matches, type: 'Sub MasterCommitment', status: 'DRAFT'). System creates lenderToSubCommitmentMap mapping lenderOrgId to subMasterCommitmentId and facilityName. System enriches main lenderGroups with masterCommitmentId, subMasterCommitmentId, subFacilityName. System updates main master commitment and all sub-commitments with updateData.
-   - If contractType !== 'multiple': System updates only main master commitment with updateData.
-   - System adds entry to statusHistory and actionHistory arrays
+   - Master commitment status changes to Pending Lender Approval
+   - If contract type is multiple, all sub-commitments are also submitted
    - Lenders receive notifications
    - Facility is ready for lender review
 
@@ -210,7 +189,7 @@ Use facility creation when:
 
 - Facility rules must be complete - all rules, calculations, and parameters must be configured.
 
-- Validation must pass before submission - system validates configuration before allowing submission.
+- Validation must pass before submission - configuration is validated before allowing submission.
 
 - Once submitted, editing is restricted - make sure configuration is correct before submission.
 

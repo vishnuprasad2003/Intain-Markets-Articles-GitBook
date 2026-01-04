@@ -33,13 +33,13 @@ Funding requests enable flexible access to approved facility limits:
 
 ## Key Components
 
-**drawAmount** - The specific amount you want to borrow (numeric field). This must be within your available borrowing capacity, which is calculated based on facility rules and current utilization. You can request any amount up to your available capacity.
+**Draw Amount** - The specific amount you want to borrow. This must be within your available borrowing capacity, which is calculated based on facility rules and current utilization. You can request any amount up to your available capacity.
 
-**purposeOfFunds** - A detailed description of what the funds will be used for (string field). This helps facility agents and lenders understand how funds will be used and evaluate the request appropriately.
+**Purpose of Funds** - A detailed description of what the funds will be used for. This helps facility agents and lenders understand how funds will be used and evaluate the request appropriately.
 
-**fundingDate** - When you need the funds (date field). This helps coordinate timing and ensures funds are available when needed.
+**Funding Date** - When you need the funds. This helps coordinate timing and ensures funds are available when needed.
 
-**Supporting Documentation** - Documents that justify the request and demonstrate compliance with facility rules. Document fields include: **collateralAddendum** (collateral addendum document, stored in IPFS), **financialStatements** (financial statements, stored in IPFS), **kycDocuments** (KYC documentation, stored in IPFS). Document history arrays track upload history.
+**Supporting Documentation** - Documents that justify the request and demonstrate compliance with facility rules. These include collateral addendum documents, financial statements, and KYC documentation. All documents are securely stored and tracked with complete history.
 
 **Collateral Information** - Collateral information is included in the collateralAddendum document. If the facility requires collateral, you specify which loans or assets will be used, including collateral details, descriptions, and valuations if required.
 

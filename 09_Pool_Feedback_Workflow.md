@@ -64,15 +64,9 @@ Use feedback workflow when:
    - Review your feedback message
    - Confirm the feedback type and level
    - Click "Submit Feedback" button
-   - System calls API: POST /pools/:poolId/feedback
-   - Request body includes: { userId: string, loanId: string | null (null for pool-level), message: string, type: string (default: 'feedback'), orgId: string, userName: string, orgName: string }
-   - System validates poolId, userId, and message are provided
-   - System generates feedbackId: `feedback_${Date.now()}_${random}`
-   - System determines level: 'loan' if loanId provided, 'pool' if loanId is null
-   - System creates feedback record: { feedbackId, poolId, loanId, level, type, message, createdBy: userId, createdByOrgId: orgId, createdUserName: userName, createOrgName: orgName, createdAt: DateUtils.nowUTC(), readBy: [userId], viewedBy: [orgId] }
-   - System inserts feedback into pool_feedback collection
-   - Submit the feedback
+   - Your feedback is saved and recorded
    - Issuer receives notification about the feedback
+   - Feedback appears in the pool's feedback section
 
 ![View Entered Feedback](imagesByMdFilesFolder/09/ViewEnteredFeedback.png)
 

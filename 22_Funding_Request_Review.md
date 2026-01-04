@@ -59,11 +59,11 @@ Use funding request review when:
 
 ## Making Decisions
 
-**Approve Request** - Approve when all requirements are met: request meets facility rules, sufficient borrowing capacity available, documentation is complete and adequate, collateral is acceptable (if applicable), and no compliance issues identified. System calls API: POST /cf/approveFundingRequest/:fundingRequestId. System updates funding request status from FAReview to APPROVED. System automatically calls generateFundingNotice function which creates funding notice with PENDING_TOKEN_GENERATION status. System adds entry to statusHistory and actionHistory. Borrower receives notification.
+**Approve Request** - Approve when all requirements are met: request meets facility rules, sufficient borrowing capacity available, documentation is complete and adequate, collateral is acceptable (if applicable), and no compliance issues identified. Click "Approve" button. Request status changes to APPROVED. Funding notice is automatically created. Borrower receives notification.
 
-**Reject Request** - Reject when requirements are not met: request violates facility rules, insufficient borrowing capacity, incomplete or inadequate documentation, collateral issues (if applicable), or other compliance problems. System calls API: POST /cf/rejectFundingRequest/:fundingRequestId. System updates funding request status from FAReview to REJECTED. System adds entry to statusHistory and actionHistory with rejection reason. Provide detailed rejection reason, borrower receives notification with reason, and borrower can create new request (rejected requests cannot be resubmitted).
+**Reject Request** - Reject when requirements are not met: request violates facility rules, insufficient borrowing capacity, incomplete or inadequate documentation, collateral issues (if applicable), or other compliance problems. Click "Reject" button. Provide detailed rejection reason. Request status changes to REJECTED. Borrower receives notification with reason, and borrower can create new request (rejected requests cannot be resubmitted).
 
-**Request Changes** - Request changes when improvements are needed: minor issues that can be addressed, additional documentation needed, clarifications required, or modifications needed to meet requirements. System calls API: POST /cf/requestChangesFundingRequest/:fundingRequestId. System updates funding request status from FAReview to CHANGES_REQUESTED. System increments revisionNumber, saves current version to previousVersions, re-enables auto-save functionality, creates change request record with comments, and increments changeRequestsCount. Provide specific change request details, borrower can update and resubmit (status changes back to DRAFT when editing, then to FAReview when resubmitted), and process can repeat until approved or rejected.
+**Request Changes** - Request changes when improvements are needed: minor issues that can be addressed, additional documentation needed, clarifications required, or modifications needed to meet requirements. Click "Request Changes" button. Provide specific change request details. Request status changes to CHANGES_REQUESTED. Borrower can update and resubmit, and process can repeat until approved or rejected.
 
 **Decision Documentation** - Enter approval notes if approving, provide rejection reason if rejecting, specify change request details if requesting changes, include any relevant comments or explanations, and ensure all decisions are properly documented for audit purposes.
 
@@ -99,13 +99,12 @@ After reviewing a funding request:
 - **If Changes Requested**: Borrower receives change request details, borrower can update request with requested changes, borrower resubmits for your review, you review again and make new decision, and process can repeat until approved or rejected.
 
 After approval:
-- Funding notice is generated automatically with PENDING_TOKEN_GENERATION status via generateFundingNotice function
-- You call updateTokenDistribution API (PATCH /cf/funding-notices/:fundingNoticeId/token-distribution) which creates FT tokens and changes status to TOKEN_GENERATED
-- You sign funding notice for each lender individually via DocuSign (status remains TOKEN_GENERATED, individual lender esignatureStatus updated to ESIGN_COMPLETED)
-- Borrower approves token transfer (POST /cf/funding-notices/:fundingNoticeId/approve-token-transfer) which changes status to TOKEN_APPROVED
-- Funding notice becomes visible to lenders
-- Lenders review and approve drawdowns (PATCH /cf/funding-notices/:fundingNoticeId/:lenderOrgId/status)
-- After lender approval, lenders transfer funds and confirm (POST /cf/funding-notices/:fundingNoticeId/confirm-fund-transfer)
+- Funding notice is generated automatically
+- You generate tokens and configure distribution to lenders
+- You sign funding notice for each lender individually
+- Borrower approves token transfer, making notice visible to lenders
+- Lenders review and approve drawdowns
+- After lender approval, lenders transfer funds and confirm
 - Borrower receives the funds
 
 Understanding funding request review helps facility agents effectively evaluate requests, ensure facility rules are followed, maintain proper oversight, and make informed approval decisions.

@@ -32,12 +32,10 @@ Use deal setup and calculations when:
 
 1. **Configure Calculation Method**
    - Navigate to Borrowing Base section
-   - System uses IA (Investment Agent) API for borrowing base calculations
-   - System calls iaBBCalculationReq function with payload: { FacilityName, activity_type: "Funding Date", Funding Notice, CurrentPaymentDate, ServicerName, peers: ["peer0-trustee"], ContractType, requestType: "Funding Request" }
-   - System receives response with calculated values: AvailabilityExcess (availableCapacity), Borrowing Base, UtilisationPercentage, EligibleCollateral (collateralValue)
-   - System extracts values using extractCalculatedValues function
-   - System updates master commitment with: availableCapacity, borrowingBase, utilisationPercentage, collateralValue, lastBBCertificationDate
-   - System adds entry to actionHistory: action: 'UpdateBorrowingBase', userId: 'system', timestamp, comments, details with previous and new values
+   - System uses Investment Agent (IA) integration for borrowing base calculations
+   - System calculates values including available capacity, borrowing base, utilization percentage, and collateral value
+   - Master commitment is updated with calculated values
+   - All calculations are recorded with complete history
 
 ![Set Up Borrowing Base Calculation](imagesByMdFilesFolder/38/setUpBorrowingBaseCalculation.png)
 
@@ -105,11 +103,11 @@ Use deal setup and calculations when:
    - Ensure calculations are complete
 
 2. **Test Calculations**
-   - System automatically calls IA API when updateTokenDistribution is called for funding notices
-   - System validates IA API response success
-   - System extracts calculated values: availableCapacity (from AvailabilityExcess), borrowingBase (from Borrowing Base in message), utilisationPercentage (from UtilisationPercentage), collateralValue (from EligibleCollateral)
-   - System updates master commitment with calculated values
-   - System validates all calculation logic
+   - System automatically calculates borrowing base when tokens are generated for funding notices
+   - Calculation results are validated
+   - Calculated values are extracted including available capacity, borrowing base, utilization percentage, and collateral value
+   - Master commitment is updated with calculated values
+   - All calculation logic is validated
    - Ensure calculations produce expected results
 
 3. **Verify Configuration**
@@ -130,7 +128,7 @@ Use deal setup and calculations when:
 
 - Facility parameters must be complete - all operational parameters must be configured.
 
-- Calculations must be validated before submission - system validates calculations before allowing submission.
+- Calculations must be validated before submission - calculations are validated before allowing submission.
 
 - Setup status must show "Completed" - you cannot submit until setup is complete.
 

@@ -40,13 +40,12 @@ Use token approval when:
    - Verify all information matches your funding request
 
 3. **Review Lender Distribution**
-   - View tokenDistribution array showing how tokens are distributed to lenders
-   - **tokensAllocated**: See each lender's allocated token portion (numeric field)
-   - **votingPercentage**: Check percentages match facility participation
-   - **lenderName**: Verify all lenders are included
-   - **lenderOrgId**: Confirm lender organization IDs are correct
-   - **commitmentAmount**: Review each lender's commitment amount
-   - Review total distribution equals requestAmount
+   - View how tokens are distributed to lenders
+   - **Allocated Token Amount**: See each lender's allocated token portion
+   - **Participation Percentage**: Check percentages match facility participation
+   - **Lender Name**: Verify all lenders are included
+   - **Commitment Amount**: Review each lender's commitment amount
+   - Review total distribution equals request amount
 
 4. **Verify Allocation Accuracy**
    - Confirm total allocation equals request amount
@@ -90,9 +89,6 @@ Use token approval when:
 
 4. **Initiate Approval**
    - Click "Approve Token Transfer" button or similar
-   - System calls API endpoint: POST /cf/funding-notices/:fundingNoticeId/approve-token-transfer
-   - System validates funding notice is in TOKEN_GENERATED status
-   - System validates FT tokens exist (ftContractAddress)
    - Review any confirmation messages
    - Understand what happens after approval
    - Confirm you want to proceed
@@ -100,10 +96,9 @@ Use token approval when:
 ![Issuer - Token Approval](imagesByMdFilesFolder/34/Issuer_Token_Approval.png)
 
 5. **Complete Approval**
-   - System approves FT tokens to Intain admin wallet via blockchain
-   - Blockchain transaction is executed
-   - Approval transaction hash is recorded
-   - Status updates to "TOKEN_APPROVED"
+   - Tokens are approved to Intain admin wallet via blockchain
+   - Approval transaction is executed and recorded
+   - Status updates to show tokens are approved
    - Funding notice becomes visible to lenders
    - Lenders receive notifications
 
@@ -149,9 +144,9 @@ Use token approval when:
 
 - Lenders can then review and approve drawdowns - after your approval, lenders make their own decisions.
 
-- Token amounts must match funding request - the total token amount (sum of tokensAllocated in tokenDistribution array) should equal your approved funding request drawAmount.
+- Token amounts must match funding request - the total token amount should equal your approved funding request amount.
 
-- Lender distribution is based on facility participation - tokensAllocated is calculated from lender votingPercentage in lenderGroups, with each lender's portion calculated as (votingPercentage / 100) * drawAmount.
+- Lender distribution is based on facility participation - each lender's portion is calculated based on their participation percentage in the facility.
 
 - Approval is required for process to continue - the drawdown process cannot proceed until you approve token transfer.
 

@@ -37,7 +37,7 @@ Loans serve as the foundation for structured finance transactions:
 
 **Loan Characteristics** - FICO scores, loan-to-value ratios, geographic location, loan type, and other characteristics that help assess loan quality and risk. These characteristics aggregate to create pool-level statistics.
 
-**Status Information** - Current status showing where the loan is in its lifecycle. Loans have multiple status fields: **Status** field (values: "Unmapped", "Mapped"), **loanPoolStatus** field (values: "Pending", "Removed", "Reinstated", "Reconsider"), **poolid** field (pool ID when mapped, null/empty when unmapped), **nftLoanStatus** field (for NFT minting status), **workflow_status** field (for verification workflow). Status tracks loan progression through the workflow.
+**Status Information** - Current status showing where the loan is in its lifecycle, such as Unmapped, Mapped, Submitted, Verified, Minted, Removed, or Reinstated. Status tracks loan progression through the workflow and shows what actions are available.
 
 **Performance Data** - Payment history, current balance, outstanding amounts, and other performance metrics. This data helps assess loan quality and track performance over time.
 
@@ -49,7 +49,7 @@ Loans serve as the foundation for structured finance transactions:
 
 ![Loans Onboarding - Uploading - Issuer](imagesByMdFilesFolder/10/Loans_Onboarding_Uploading_Issuer.png)
 
-**Mapping to Pools** - You assign loans to pools by mapping them via mapLoansToPoolRefactored function. System calls API: POST /cf/maploanstomastercommitment (or similar endpoint). System validates loans aren't already mapped to another pool (checks poolid field). System updates loans: sets poolid to poolId, sets Status to "Mapped", sets loanPoolStatus to "Pending". System pushes loan data to PostgreSQL via postgresDataPush function. System recalculates pool metrics via CalculateNoofLoansAndBalanceRefactored function. When loans are mapped, they contribute their balance and characteristics to pool metrics. Pool metrics calculate automatically to include the mapped loan.
+**Mapping to Pools** - You assign loans to pools by mapping them. The system validates that loans aren't already mapped to another pool. When loans are mapped, they contribute their balance and characteristics to pool metrics. Pool metrics calculate automatically to include the mapped loan—total balance increases, loan count increases, and weighted averages recalculate with the new loan included.
 
 ![Loan Map to Pool - Issuer](imagesByMdFilesFolder/10/LoanMapToPoolIssuer.png)
 
@@ -59,9 +59,9 @@ Loans serve as the foundation for structured finance transactions:
 
 ![NFT Minting](imagesByMdFilesFolder/10/NftMinting.png)
 
-**Status Progression** - Loans progress through statuses: **Unmapped** (Status: "Unmapped", poolid: null/empty, loanPoolStatus: null/empty) → **Mapped** (Status: "Mapped", loanPoolStatus: "Pending", poolid: poolId) → **Submitted** (when included in batch) → **Verified** (after verification) → **Minted** (if tokenization required, nftLoanStatus updated). Loans may also have **Removed** status (loanPoolStatus: "Removed", loan excluded from calculations) or **Reinstated** status (loanPoolStatus: "Reinstated", loan included in calculations again). Status shows where each loan is in its lifecycle and what actions are available.
+**Status Progression** - Loans progress through statuses from Unmapped to Mapped to Submitted to Verified, and potentially to Minted if tokenization is required. Loans may also be Removed from pool calculations or Reinstated back into calculations. Status shows where each loan is in its lifecycle and what actions are available.
 
-**Removal and Reinstatement** - Loans can be removed from pools if they don't meet criteria or have issues. System calls API: GET /loans/updateLoanStatus?loanid=LOAN_ID&poolId=POOL_ID&status=Removed. System sets loanPoolStatus to "Removed" (Status remains "Mapped", poolid remains set). System recalculates pool metrics via CalculateNoofLoansAndBalanceRefactored function (excludes removed loans), deletes loan from PostgreSQL via deleteLoansFromPoolInPostgres function. Removed loans are excluded from pool calculations but remain visible. They can be reinstated when issues are resolved (loanPoolStatus: "Reinstated"), and metrics recalculate to include them via CalculateNoofLoansAndBalanceRefactored function.
+**Removal and Reinstatement** - Loans can be removed from pools if they don't meet criteria or have issues. Removed loans are excluded from pool calculations but remain visible in the pool list. Pool metrics automatically recalculate to exclude removed loans. They can be reinstated when issues are resolved, and metrics recalculate to include them again.
 
 **Contribution to Pool Metrics** - Individual loan characteristics aggregate to create pool-level statistics. Loan balances sum to total pool balance, loan counts aggregate, and weighted averages calculate from individual loan rates and scores.
 

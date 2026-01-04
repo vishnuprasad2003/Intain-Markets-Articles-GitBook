@@ -29,14 +29,10 @@ Use change requests when:
 
 1. **Receive Notification**
    - You receive notification that a change request has been made
-   - Facility agent calls API: POST /cf/requestChanges/:termSheetId
-   - System updates term sheet status from FAReview to CHANGES_REQUESTED
-   - System increments revisionNumber
-   - System saves current version to previousVersions array
-   - System resets DocuSign status (requires re-signing)
-   - System re-enables auto-save functionality
-   - System creates change request record with comments in changeRequests array
-   - System increments changeRequestsCount
+   - Term sheet status changes to indicate changes are requested
+   - The current version is saved for reference
+   - You may need to re-sign the term sheet if significant changes are made
+   - You can now edit the term sheet to make requested changes
    - Notification includes details about what needs to change
    - You can view the change request details
 
@@ -122,12 +118,7 @@ Use change requests when:
 
 2. **Resubmit for Facility Agent Review**
    - Click "Resubmit" or "Submit for Review" button
-   - System calls API: POST /cf/submitTermSheet/:termSheetId
-   - System validates term sheet status is CHANGES_REQUESTED or BorrowerSigned
-   - System updates status from CHANGES_REQUESTED to FAReview
-   - System updates submittedAt timestamp
-   - System increments submissionCount
-   - System adds entry to statusHistory and actionHistory
+   - Term sheet status changes to indicate it's under review again
    - Confirm the resubmission action
    - Facility agent receives notification
 
