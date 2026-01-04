@@ -7,7 +7,7 @@ description: Learn how to manage loans including uploading, mapping, and updatin
 
 ## Overview
 
-Loan management covers all the tasks issuers perform to manage loans in the platform, including uploading loans, mapping them to pools, updating loan information, managing loan statuses, and tracking loans through their lifecycle. Effective loan management ensures loan data quality and enables successful pool creation.
+Loan management covers all the tasks issuers perform to manage loans in the platform, including uploading loans, mapping them to pools, updating loan information, managing loan statuses, and tracking loans through their lifecycle.
 
 ## Who Can Use This
 

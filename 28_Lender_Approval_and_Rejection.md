@@ -7,7 +7,7 @@ description: Learn how lenders approve or reject funding notice drawdowns
 
 ## Overview
 
-Lenders review funding notices and can approve or reject individual drawdowns. Each lender makes their own independent decision, and the system tracks individual lender participation separately. This allows lenders to evaluate each drawdown based on their own criteria and participate or decline as they see fit.
+Lenders review funding notices and can approve or reject individual drawdowns. Each lender makes their own independent decision, and the system tracks individual lender participation separately.
 
 ## Who Can Use This
 

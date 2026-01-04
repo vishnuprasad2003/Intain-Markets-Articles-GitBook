@@ -7,27 +7,27 @@ description: Learn what pools are and how they work in structured finance transa
 
 ## Overview
 
-Pools are collections of loans grouped together for securitization, whole loan sales, or other structured finance transactions. They serve as the fundamental building blocks for presenting loan portfolios to investors, structuring deals, and managing transactions from creation through completion. Understanding pools helps you effectively organize loans and navigate the structured finance workflow.
+Pools are collections of loans grouped together for securitization, whole loan sales, or other structured finance transactions. They serve as the fundamental building blocks for presenting loan portfolios to investors, structuring deals, and managing transactions from creation through completion.
 
 ## What Pools Are
 
-A pool is essentially a container that holds multiple individual loans, organizing them into a single transaction unit. When you create a pool, you're grouping related loans together to present them as a cohesive investment opportunity or transaction package. Pools make it easier to manage, analyze, and present multiple loans as a unified whole rather than dealing with each loan individually.
+A pool is a container that holds multiple individual loans, organizing them into a single transaction unit. When you create a pool, you group related loans together to present them as a cohesive investment opportunity or transaction package.
 
-Pools are dynamic entities—you can add loans to them, remove loans from them, and share them with other parties for review and collaboration. The platform automatically calculates aggregate metrics from all the loans in a pool, such as total balance, loan count, weighted average interest rates, and other characteristics that help investors and market makers understand the pool's composition and quality.
+Pools are dynamic—you can add loans, remove loans, and share them with other parties for review and collaboration. The platform automatically calculates aggregate metrics from all loans in a pool, such as total balance, loan count, weighted average interest rates, and other characteristics.
 
 ## Purpose and Use Cases
 
 Pools serve several important purposes in structured finance:
 
-**For Securitization Transactions** - Pools organize loans that will be packaged into securities and sold to investors. The pool structure helps investors understand the underlying assets and assess risk and return.
+**For Securitization Transactions** - Pools organize loans that will be packaged into securities and sold to investors.
 
-**For Whole Loan Sales** - Pools present loans as investment opportunities to potential buyers. Buyers can review pool characteristics and loan details to make purchase decisions.
+**For Whole Loan Sales** - Pools present loans as investment opportunities to potential buyers.
 
-**For Transaction Management** - Pools provide a structured way to manage the entire transaction process from initial creation through deal completion, tracking progress and coordinating with multiple parties.
+**For Transaction Management** - Pools provide a structured way to manage the entire transaction process from creation through deal completion.
 
-**For Collaboration** - Pools enable collaboration between issuers, market makers, investors, and other parties. You can share pools for review, receive feedback, and work together to structure deals.
+**For Collaboration** - Pools enable collaboration between issuers, market makers, investors, and other parties.
 
-**For Analysis** - Pools aggregate loan data into meaningful metrics that help all parties understand pool characteristics, assess quality, and make informed decisions.
+**For Analysis** - Pools aggregate loan data into meaningful metrics that help all parties understand pool characteristics and assess quality.
 
 ## Key Components
 
@@ -61,24 +61,22 @@ Pools serve several important purposes in structured finance:
 
 ![Pool Details - Issuer](imagesByMdFilesFolder/05/Pool_Details_Issuer.png)
 
-**Status Progression** - Pools progress through statuses from Created to Preview to Mandate Pending to Deal. Each status represents a specific stage and determines what actions are available. Status changes happen when you take actions like sharing, submitting for mandate, or when market makers accept mandates.
+**Status Progression** - Pools progress through statuses from Created to Preview to Mandate Pending to Deal. Each status represents a specific stage and determines what actions are available.
 
-**Collaboration** - Multiple parties can work together on pools. Issuers create and share, market makers review and structure, investors evaluate opportunities, and rating agencies analyze for ratings. Feedback and change requests enable iterative improvement.
+**Collaboration** - Multiple parties can work together on pools. Issuers create and share, market makers review and structure, investors evaluate opportunities, and rating agencies analyze for ratings.
 
-**Finalization** - When market makers accept mandates, pools become Deals, representing finalized and committed transactions. At this stage, editing is restricted, and the pool is ready for execution.
+**Finalization** - When market makers accept mandates, pools become Deals, representing finalized and committed transactions. Editing is restricted at this stage.
 
 ## Important Points to Know
 
-**Automatic Metric Calculation** - Pool metrics calculate automatically from mapped loans. You don't need to calculate them manually—total balance, loan count, weighted averages, and other statistics update automatically when loans are added or removed.
+**Automatic Metric Calculation** - Pool metrics calculate automatically from mapped loans. Total balance, loan count, weighted averages, and other statistics update automatically when loans are added or removed.
 
-**One Pool Per Loan** - Loans can only belong to one pool at a time. If you want to move a loan to a different pool, you must unmap it from the current pool first. This ensures clear ownership and prevents conflicts.
+**One Pool Per Loan** - Loans can only belong to one pool at a time. To move a loan to a different pool, unmap it from the current pool first.
 
-**Status Controls Actions** - Pool status determines what actions are available. You can edit pools in Created or Preview status, but editing is restricted once pools become Deals. Understanding status helps you know what you can do.
+**Status Controls Actions** - Pool status determines what actions are available. You can edit pools in Created or Preview status, but editing is restricted once pools become Deals.
 
-**Removed Loans Are Excluded** - Removed loans are excluded from pool calculations but remain visible for tracking. This allows you to maintain pool quality while preserving complete records. Removed loans can be reinstated if needed.
+**Removed Loans Are Excluded** - Removed loans are excluded from pool calculations but remain visible for tracking. Removed loans can be reinstated if needed.
 
 **Sharing Enables Collaboration** - Sharing pools with other organizations enables collaboration and review. You can share with multiple parties simultaneously, and sharing permissions control what recipients can do.
 
-**Complete Audit Trail** - All pool changes, status updates, and actions are recorded with who did what and when, ensuring complete transparency and accountability throughout the transaction lifecycle.
-
-Understanding pools helps you effectively organize loans, present opportunities to investors, collaborate with other parties, manage transactions from creation to completion, and navigate the structured finance workflow successfully.
+**Complete Audit Trail** - All pool changes, status updates, and actions are recorded with who did what and when.

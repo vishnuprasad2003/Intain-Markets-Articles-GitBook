@@ -7,27 +7,27 @@ description: Learn what credit facilities are and how they work in the platform
 
 ## Overview
 
-A credit facility is a lending arrangement where a borrower can draw down funds as needed, up to a pre-approved limit. Think of it like a line of credit—you get approved for a maximum amount, and you can borrow portions of it when you need them, rather than receiving all funds at once. Credit facilities provide flexibility for borrowers while giving lenders control over fund disbursement.
+A credit facility is a lending arrangement where a borrower can draw down funds as needed, up to a pre-approved limit. You get approved for a maximum amount and can borrow portions of it when needed, rather than receiving all funds at once. Credit facilities provide flexibility for borrowers while giving lenders control over fund disbursement.
 
 ## What Credit Facilities Are
 
-A credit facility is a flexible borrowing arrangement that allows borrowers to access funds incrementally rather than receiving everything upfront. Unlike traditional loans where you receive the full amount at once, credit facilities give you a pre-approved borrowing limit that you can draw from as needed. Each drawdown is a separate funding request that must be reviewed and approved before funds are disbursed.
+A credit facility is a flexible borrowing arrangement that allows borrowers to access funds incrementally rather than receiving everything upfront. Unlike traditional loans where you receive the full amount at once, credit facilities provide a pre-approved borrowing limit that you can draw from as needed. Each drawdown is a separate funding request that must be reviewed and approved before funds are disbursed.
 
-Credit facilities involve multiple components working together: term sheets propose the facility, master commitments define the complete facility structure, funding requests request specific drawdowns, and funding notices document approved drawdowns. The facility remains active over time, supporting multiple drawdowns as long as you stay within approved limits.
+Credit facilities involve multiple components: term sheets propose the facility, master commitments define the complete facility structure, funding requests request specific drawdowns, and funding notices document approved drawdowns. The facility remains active over time, supporting multiple drawdowns as long as you stay within approved limits.
 
 ## Purpose and Use Cases
 
 Credit facilities serve several important purposes:
 
-**For Flexible Borrowing** - Borrowers can access funds as needed rather than receiving everything upfront. This provides flexibility to borrow only what's needed when it's needed, reducing unnecessary borrowing costs.
+**For Flexible Borrowing** - Borrowers can access funds as needed rather than receiving everything upfront, reducing unnecessary borrowing costs.
 
-**For Structured Lending** - Lenders can provide capital through structured arrangements with proper oversight. Each drawdown is reviewed individually, ensuring compliance with facility rules and proper fund usage.
+**For Structured Lending** - Lenders can provide capital through structured arrangements with proper oversight. Each drawdown is reviewed individually, ensuring compliance with facility rules.
 
-**For Ongoing Relationships** - Credit facilities support ongoing relationships between borrowers and lenders. Facilities remain active over time, allowing multiple drawdowns and continuous access to capital.
+**For Ongoing Relationships** - Credit facilities support ongoing relationships between borrowers and lenders. Facilities remain active over time, allowing multiple drawdowns.
 
-**For Controlled Disbursement** - Lenders maintain control over fund disbursement through individual drawdown approvals. This ensures proper oversight and compliance with facility terms.
+**For Controlled Disbursement** - Lenders maintain control over fund disbursement through individual drawdown approvals.
 
-**For Capacity Management** - Facilities track borrowing capacity, utilization, and available capacity, ensuring borrowers stay within approved limits and lenders can monitor exposure.
+**For Capacity Management** - Facilities track borrowing capacity, utilization, and available capacity, ensuring borrowers stay within approved limits.
 
 ## Key Components
 
@@ -79,18 +79,16 @@ Credit facilities serve several important purposes:
 
 ## Important Points to Know
 
-**Flexible Drawdowns** - Credit facilities allow borrowers to request specific amounts as needed, up to approved limits. Each drawdown is a separate funding request that must be reviewed and approved, providing flexibility while maintaining oversight.
+**Flexible Drawdowns** - Credit facilities allow borrowers to request specific amounts as needed, up to approved limits. Each drawdown is a separate funding request that must be reviewed and approved.
 
-**Structured Approval Process** - Each component requires appropriate approvals—term sheets need facility agent approval, master commitments need lender approval, and funding requests need facility agent and lender approval. This ensures proper oversight at each stage.
+**Structured Approval Process** - Each component requires appropriate approvals—term sheets need facility agent approval, master commitments need lender approval, and funding requests need facility agent and lender approval.
 
-**Automatic Generation** - Master commitments are automatically created when term sheets are approved, and funding notices are automatically created when funding requests are approved. This streamlines the process and ensures consistency.
+**Automatic Generation** - Master commitments are automatically created when term sheets are approved, and funding notices are automatically created when funding requests are approved.
 
-**Individual Lender Tracking** - Each lender's participation is tracked individually, allowing for independent decisions and flexible participation. Lenders can approve or reject individual drawdowns based on their own criteria.
+**Individual Lender Tracking** - Each lender's participation is tracked individually, allowing for independent decisions. Lenders can approve or reject individual drawdowns based on their own criteria.
 
-**Borrowing Capacity Management** - Facilities track borrowing capacity, utilization, and available capacity, ensuring borrowers stay within approved limits. Available capacity is calculated based on facility rules and current utilization.
+**Borrowing Capacity Management** - Facilities track borrowing capacity, utilization, and available capacity, ensuring borrowers stay within approved limits.
 
-**Multiple Drawdowns Over Time** - You can create multiple funding requests over time as long as you stay within facility limits and available borrowing capacity. This provides ongoing access to capital throughout the facility term.
+**Multiple Drawdowns Over Time** - You can create multiple funding requests over time as long as you stay within facility limits and available borrowing capacity.
 
-**Complete Documentation** - All facility activities are documented with complete audit trails, ensuring transparency and supporting compliance. Every action, approval, and status change is recorded.
-
-Understanding credit facilities helps you effectively use this flexible borrowing tool, manage multiple drawdowns, work within the structured approval process, access funds when needed, and maintain proper oversight and control throughout the facility lifecycle.
+**Complete Documentation** - All facility activities are documented with complete audit trails, ensuring transparency and supporting compliance.

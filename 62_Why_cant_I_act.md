@@ -7,7 +7,7 @@ description: Troubleshooting guide for when actions are unavailable
 
 ## Overview
 
-This comprehensive troubleshooting guide helps you understand why you can't take certain actions and how to resolve common issues preventing you from acting. Use this guide when actions are disabled or unavailable to diagnose and resolve problems. Follow the diagnostic steps to identify and resolve issues systematically and efficiently.
+This comprehensive troubleshooting guide helps you understand why you can't take certain actions and how to resolve common issues preventing you from acting. Use this guide when actions are disabled or unavailable to diagnose and resolve problems.
 
 ## Frequently Asked Questions
 
@@ -59,4 +59,3 @@ A: Yes, enabled buttons show available actions, disabled buttons show unavailabl
 
 A: Check item status to see if it's waiting for another party, review status messages indicating pending actions, check workflow requirements for dependencies, and look for notifications about pending actions. Understanding dependencies helps you know what's needed.
 
-Understanding why you can't act helps you diagnose issues effectively, resolve problems preventing actions, work within workflow requirements, take appropriate actions when they become available, and work efficiently within the platform's workflow and permission system.

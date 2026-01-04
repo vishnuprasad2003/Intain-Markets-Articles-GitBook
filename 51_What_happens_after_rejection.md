@@ -7,21 +7,21 @@ description: Understand what happens when items are rejected and how to proceed
 
 ## Overview
 
-When an item is rejected, it enters a final state with specific consequences. Understanding what happens after rejection helps you know what to expect, why you can't edit rejected items, and how to proceed when your submissions are rejected. Rejection is a final decision that stops the workflow for that item, and understanding the consequences helps you respond appropriately and move forward effectively.
+When an item is rejected, it enters a final state with specific consequences. Rejection is a final decision that stops the workflow for that item.
 
 ## Possible Outcomes
 
-When your submission is rejected, the item enters a final state and cannot proceed further in the workflow. The rejection outcome is final—you cannot edit rejected items, you cannot resubmit the same rejected item, and you must create a new item if you want to try again. Understanding these outcomes helps you know what to expect and how to proceed after rejection.
+When your submission is rejected, the item enters a final state and cannot proceed further in the workflow. The rejection outcome is final—you cannot edit rejected items, you cannot resubmit the same rejected item, and you must create a new item if you want to try again.
 
 ## What Each Outcome Means
 
-**Rejected Status** means the item has been formally rejected and enters a final state. The workflow stops for this item—it cannot proceed further, no further action is possible on the rejected item itself, rejected items become read-only and cannot be modified, you cannot resubmit the same rejected item, and you must create a new item to try again. Rejection decisions are final—there's no appeal process, and you cannot change the status of rejected items. This final state ensures that rejected items remain as records but cannot proceed in the workflow.
+**Rejected Status** means the item has been formally rejected and enters a final state. The workflow stops for this item—it cannot proceed further, rejected items become read-only and cannot be modified, you cannot resubmit the same rejected item, and you must create a new item to try again. Rejection decisions are final—there's no appeal process.
 
-**What You Cannot Do After Rejection** - You cannot edit the rejected item (rejected items are locked and cannot be edited), you cannot resubmit the same item (the rejected item cannot be resubmitted—it's final), there's no appeal process (rejection decisions are final), you cannot change the status of rejected items, and the rejected item cannot proceed in the workflow. Understanding these limitations helps you know what's not possible and why.
+**What You Cannot Do After Rejection** - You cannot edit the rejected item, you cannot resubmit the same item, there's no appeal process, you cannot change the status of rejected items, and the rejected item cannot proceed in the workflow.
 
-**What You Can Do After Rejection** - You can still view rejected items to review them, you can see the rejection reason to understand why it was rejected, you can create a new item addressing the rejection reasons, you can learn from rejection feedback to improve future submissions, and you can try again by creating new submissions incorporating lessons learned. Understanding what you can do helps you move forward effectively.
+**What You Can Do After Rejection** - You can still view rejected items to review them, you can see the rejection reason to understand why it was rejected, you can create a new item addressing the rejection reasons, you can learn from rejection feedback to improve future submissions, and you can try again by creating new submissions incorporating lessons learned.
 
-**Rejection Reasons** - Rejection reasons are provided to help you understand why items were rejected. These reasons explain what issues were identified, what requirements weren't met, or what concerns led to rejection. Understanding rejection reasons helps you address issues in new submissions and improve your approach.
+**Rejection Reasons** - Rejection reasons are provided to help you understand why items were rejected. These reasons explain what issues were identified, what requirements weren't met, or what concerns led to rejection.
 
 ## Next Steps for Users
 
@@ -35,4 +35,3 @@ When your submission is rejected, the item enters a final state and cannot proce
 
 **Learning from Rejections** - Rejections provide valuable feedback about what needs improvement. Use rejection reasons to understand requirements better. Address all issues identified in rejections when creating new items. Improve your submissions based on rejection feedback. Build on lessons learned to create better submissions in the future.
 
-Understanding what happens after rejection helps you know what to expect, understand why you can't edit rejected items, know how to proceed when submissions are rejected, learn from rejections to improve future submissions, and work effectively within the rejection process.

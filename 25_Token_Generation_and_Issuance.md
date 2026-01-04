@@ -7,11 +7,11 @@ description: Understand how tokens are generated and distributed for funding not
 
 ## Overview
 
-Token generation and issuance is the complete workflow for creating and distributing tokens that represent drawdown amounts in funding notices. These tokens serve as digital representations of the drawdown that enable tracking, distribution, and management of funds across multiple lenders. Understanding this workflow helps you navigate the token-based drawdown process from creation through distribution to lender visibility.
+Token generation and issuance is the complete workflow for creating and distributing tokens that represent drawdown amounts in funding notices. These tokens serve as digital representations of the drawdown that enable tracking, distribution, and management of funds across multiple lenders.
 
 ## Workflow Overview
 
-The token generation and issuance workflow begins when a funding request is approved and a funding notice is automatically created. Facility agents generate tokens representing the drawdown amount, configure distribution to lenders based on their participation percentages, and sign funding notices. Borrowers then approve token transfers, making funding notices visible to lenders who can review and approve their participation. The workflow ensures proper documentation, tracking, and coordination throughout the drawdown process.
+The token generation and issuance workflow begins when a funding request is approved and a funding notice is automatically created. Facility agents generate tokens representing the drawdown amount, configure distribution to lenders based on their participation percentages, and sign funding notices. Borrowers then approve token transfers, making funding notices visible to lenders who can review and approve their participation.
 
 ## Key Stages
 
@@ -57,20 +57,18 @@ The token generation and issuance workflow begins when a funding request is appr
 
 ## Important Points to Know
 
-**Automatic Notice Creation** - Funding notices are automatically created when funding requests are approved. You don't need to create them manually—the system creates them with pre-populated request data, ensuring consistency.
+**Automatic Notice Creation** - Funding notices are automatically created when funding requests are approved. The system creates them with pre-populated request data.
 
 **Token Generation Required** - Facility agents must generate tokens before borrowers can approve transfers. Tokens represent drawdown amounts digitally and enable tracking and distribution to lenders.
 
-**Distribution Based on Participation** - Token distribution is calculated automatically based on lender participation percentages in the facility. Each lender receives their allocated portion, clearly showing their contribution amount.
+**Distribution Based on Participation** - Token distribution is calculated automatically based on lender participation percentages in the facility. Each lender receives their allocated portion.
 
-**Per-Lender E-Signature** - Facility agents sign funding notices for each lender individually, with each lender's signature status tracked separately. This ensures proper documentation for each lender's participation.
+**Per-Lender E-Signature** - Facility agents sign funding notices for each lender individually, with each lender's signature status tracked separately.
 
-**Borrower Approval Required** - Borrowers must approve token transfers before funding notices become visible to lenders. This ensures borrowers verify allocations before proceeding and enables lender review.
+**Borrower Approval Required** - Borrowers must approve token transfers before funding notices become visible to lenders.
 
 **Individual Lender Decisions** - Each lender makes independent decisions about participation. Lenders can approve or reject based on their own criteria, and decisions are tracked separately.
 
-**Complete Documentation** - All token generation, distribution, approvals, and transfers are documented with complete audit trails, ensuring transparency and supporting compliance.
+**Complete Documentation** - All token generation, distribution, approvals, and transfers are documented with complete audit trails.
 
-**Status Tracks Progress** - Funding notice status shows where each notice is in the workflow, from token generation through borrower approval to lender review and fund transfer. Understanding status helps you track progress.
-
-Understanding the token generation and issuance workflow helps you navigate the complete process from approved funding requests through token creation, distribution, borrower approval, lender review, and fund transfer, ensuring proper coordination and documentation throughout the drawdown process.
+**Status Tracks Progress** - Funding notice status shows where each notice is in the workflow, from token generation through borrower approval to lender review and fund transfer.

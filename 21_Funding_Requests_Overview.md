@@ -7,11 +7,11 @@ description: Learn what funding requests are and how to create them
 
 ## Overview
 
-A funding request is when a borrower requests to draw down funds from an active credit facility. Each request specifies the amount needed, the purpose, includes supporting documentation, and must be reviewed and approved by the facility agent before funds can be disbursed. Funding requests allow borrowers to access their approved facility limit flexibly, drawing down funds as needed rather than receiving everything upfront.
+A funding request is when a borrower requests to draw down funds from an active credit facility. Each request specifies the amount needed, the purpose, includes supporting documentation, and must be reviewed and approved by the facility agent before funds can be disbursed.
 
 ## What Funding Requests Are
 
-A funding request is a specific request to borrow a portion of your approved facility limit. Think of it as asking to withdraw money from your line of credit—you specify how much you need, what you'll use it for, and provide documentation to support your request. Each funding request is reviewed individually by facility agents to ensure it complies with facility rules and that sufficient borrowing capacity is available.
+A funding request is a specific request to borrow a portion of your approved facility limit. You specify how much you need, what you'll use it for, and provide documentation to support your request. Each funding request is reviewed individually by facility agents to ensure it complies with facility rules and that sufficient borrowing capacity is available.
 
 Funding requests are separate from the facility itself—you can create multiple funding requests over time as long as you stay within your facility limits. Each request goes through its own review and approval process, and approved requests trigger the creation of funding notices that are sent to lenders for their review and approval.
 
@@ -19,17 +19,17 @@ Funding requests are separate from the facility itself—you can create multiple
 
 Funding requests enable flexible access to approved facility limits:
 
-**For Incremental Borrowing** - You can request specific amounts as needed rather than borrowing the full facility limit at once. This provides flexibility to borrow only what's needed when it's needed.
+**For Incremental Borrowing** - You can request specific amounts as needed rather than borrowing the full facility limit at once.
 
-**For Purpose-Specific Drawdowns** - Each request specifies the purpose of the funds, allowing you to request funds for specific business needs. Facility agents and lenders can evaluate each drawdown based on its purpose.
+**For Purpose-Specific Drawdowns** - Each request specifies the purpose of the funds, allowing you to request funds for specific business needs.
 
-**For Ongoing Capital Access** - You can create multiple funding requests over time, providing ongoing access to capital throughout the facility term. This supports businesses with varying capital needs.
+**For Ongoing Capital Access** - You can create multiple funding requests over time, providing ongoing access to capital throughout the facility term.
 
-**For Controlled Disbursement** - Each drawdown is reviewed individually, ensuring proper oversight and compliance with facility rules. This protects both borrowers and lenders.
+**For Controlled Disbursement** - Each drawdown is reviewed individually, ensuring proper oversight and compliance with facility rules.
 
-**For Capacity Management** - Funding requests are evaluated against available borrowing capacity, ensuring you stay within approved limits. The system tracks utilization and available capacity.
+**For Capacity Management** - Funding requests are evaluated against available borrowing capacity, ensuring you stay within approved limits.
 
-**For Documentation** - Each request includes supporting documentation, providing transparency and justification for fund usage. This documentation supports the review process and maintains proper records.
+**For Documentation** - Each request includes supporting documentation, providing transparency and justification for fund usage.
 
 ## Key Components
 
@@ -69,18 +69,16 @@ Funding requests enable flexible access to approved facility limits:
 
 ## Important Points to Know
 
-**Flexible Drawdowns** - You can request any amount up to your available borrowing capacity, not necessarily the full facility limit. This provides flexibility to borrow as needed while staying within limits.
+**Flexible Drawdowns** - You can request any amount up to your available borrowing capacity, not necessarily the full facility limit.
 
-**Individual Review** - Each funding request is reviewed individually by facility agents to ensure compliance with facility rules and available borrowing capacity. Review ensures proper oversight and compliance.
+**Individual Review** - Each funding request is reviewed individually by facility agents to ensure compliance with facility rules and available borrowing capacity.
 
-**Automatic Notice Generation** - When approved, funding notices are automatically generated and sent to lenders for review and approval. You don't need to create notices manually—the system handles this automatically.
+**Automatic Notice Generation** - When approved, funding notices are automatically generated and sent to lenders for review and approval.
 
-**Multiple Requests Over Time** - You can create multiple funding requests over time as long as you stay within your facility limits and available borrowing capacity. This provides ongoing access to capital throughout the facility term.
+**Multiple Requests Over Time** - You can create multiple funding requests over time as long as you stay within your facility limits and available borrowing capacity.
 
-**Three Possible Outcomes** - Facility agents can approve requests (creating funding notices), reject requests (requiring new requests), or request changes (allowing updates and resubmission). Understanding these outcomes helps you know what to expect.
+**Three Possible Outcomes** - Facility agents can approve requests (creating funding notices), reject requests (requiring new requests), or request changes (allowing updates and resubmission).
 
-**Complete Documentation** - All funding requests are documented with complete details, supporting documentation, and audit trails, ensuring transparency and supporting compliance. Every request, approval, and status change is recorded.
+**Complete Documentation** - All funding requests are documented with complete details, supporting documentation, and audit trails.
 
-**Status Tracks Progress** - Request status shows where each request is in its workflow, from creation through review to approval or rejection. Understanding status helps you track progress and know what to expect.
-
-Understanding funding requests helps you effectively request drawdowns from active facilities, provide proper documentation, track request status, respond to feedback, access funds flexibly, and work within facility rules and borrowing capacity limits throughout the facility lifecycle.
+**Status Tracks Progress** - Request status shows where each request is in its workflow, from creation through review to approval or rejection.

@@ -7,7 +7,7 @@ description: Understand the different roles and responsibilities in credit facil
 
 ## Overview
 
-Credit facilities involve three main parties, each with distinct responsibilities and permissions. Understanding these roles helps you know what you can do, what's expected of you, and how different parties collaborate to make credit facilities work. The platform automatically shows you only relevant information and appropriate actions based on your role, making it easier to focus on your responsibilities and work effectively within the credit facility workflow.
+Credit facilities involve three main parties, each with distinct responsibilities and permissions. The platform automatically shows only relevant information and appropriate actions based on your role, making it easier to focus on your responsibilities and work effectively within the credit facility workflow.
 
 ## Roles Covered
 
@@ -108,24 +108,22 @@ Lenders provide capital for credit facilities. They review facilities, approve m
 
 ## Important Access Notes
 
-**Role Selection** - You must select the correct role during login that matches your account. If you have multiple roles, you can log in with different roles at different times, but you can only use one role per session. The role you select determines what you can see and do in credit facilities.
+**Role Selection** - Select the correct role during login. If you have multiple roles, you can log in with different roles at different times, but only one role per session.
 
-**Role-Based Views** - Your role determines your view—you only see credit facilities where you have a role or where facilities are relevant to you. The platform automatically filters information based on your role, showing you only what's relevant to your responsibilities.
+**Role-Based Views** - You only see credit facilities where you have a role or where facilities are relevant to you. The platform automatically filters information based on your role.
 
-**Action Availability** - Action buttons are enabled or disabled based on your role and the facility's status. Disabled buttons usually show a reason why the action isn't available. Understanding role-based action availability helps you know what you can do and why certain actions might not be available.
+**Action Availability** - Action buttons are enabled or disabled based on your role and the facility's status. Disabled buttons show why the action isn't available.
 
-**Collaboration Between Roles** - Collaboration between roles is essential—borrowers create facilities, facility agents structure them, and lenders provide capital. Understanding how roles collaborate helps you work effectively with other parties.
+**Collaboration Between Roles** - Borrowers create facilities, facility agents structure them, and lenders provide capital.
 
-**Role Attribution** - All actions are recorded with role information, ensuring accountability and proper attribution. This role attribution ensures that actions are traceable to specific roles and users.
+**Role Attribution** - All actions are recorded with role information, ensuring accountability and proper attribution.
 
-**Sequential Responsibilities** - Roles have sequential responsibilities—borrowers create, facility agents review and configure, lenders approve and fund. Understanding sequential responsibilities helps you know when your actions are needed.
+**Sequential Responsibilities** - Roles have sequential responsibilities—borrowers create, facility agents review and configure, lenders approve and fund.
 
-**Independent Decisions** - Lenders make independent decisions about participation. Each lender can approve or reject drawdowns based on their own criteria. Understanding independent decisions helps you know how lender participation works.
+**Independent Decisions** - Lenders make independent decisions about participation. Each lender can approve or reject drawdowns based on their own criteria.
 
-**Facility Agent Intermediary Role** - Facility agents act as intermediaries, structuring facilities and facilitating transactions. They don't provide capital but enable transactions between borrowers and lenders. Understanding this intermediary role helps you appreciate how facility agents add value.
+**Facility Agent Intermediary Role** - Facility agents act as intermediaries, structuring facilities and facilitating transactions. They don't provide capital but enable transactions between borrowers and lenders.
 
-**Borrower Initiation** - Borrowers initiate the credit facility process by creating term sheets. They cannot proceed without facility agent and lender participation. Understanding borrower initiation helps you know how facilities start.
+**Borrower Initiation** - Borrowers initiate the credit facility process by creating term sheets. They cannot proceed without facility agent and lender participation.
 
-**Complete Workflow** - All three roles are needed for credit facilities to work—borrowers create, facility agents structure, and lenders fund. Understanding the complete workflow helps you appreciate how roles work together.
-
-Understanding roles in credit facilities helps you navigate the platform effectively, know what actions you can take, understand what others can do, and understand how different parties collaborate to make credit facilities work. This understanding enables effective collaboration and ensures that credit facilities progress correctly through proper role-based workflows.
+**Complete Workflow** - All three roles are needed for credit facilities to work—borrowers create, facility agents structure, and lenders fund.

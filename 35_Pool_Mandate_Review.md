@@ -7,7 +7,7 @@ description: Learn how market makers review pools and make mandate decisions
 
 ## Overview
 
-Pool mandate review is the process where market makers review pools shared with them and decide whether to accept mandates to structure and manage those pools. This guide covers how market makers evaluate pools, assess opportunities, and make informed mandate decisions that affect pool workflow progression.
+Pool mandate review is the process where market makers review pools shared with them and decide whether to accept mandates to structure and manage those pools. This guide covers how market makers evaluate pools, assess opportunities, and make informed mandate decisions.
 
 ## Who Can Use This
 

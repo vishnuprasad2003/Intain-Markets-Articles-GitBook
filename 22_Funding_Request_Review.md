@@ -7,7 +7,7 @@ description: Learn how facility agents review funding requests and make approval
 
 ## Overview
 
-Funding request review is the process where facility agents evaluate borrower funding requests to ensure they comply with facility rules, have sufficient borrowing capacity, meet all requirements, and are properly documented before approval. This review process ensures proper oversight and control over fund disbursement while maintaining facility integrity.
+Funding request review is the process where facility agents evaluate borrower funding requests to ensure they comply with facility rules, have sufficient borrowing capacity, meet all requirements, and are properly documented before approval.
 
 ## Who Can Use This
 
@@ -108,4 +108,4 @@ After approval:
 - After lender approval, funds are transferred
 - Borrower receives the funds
 
-Understanding funding request review helps facility agents effectively evaluate requests, ensure facility rules are followed, maintain proper oversight, and make informed approval decisions that protect facility integrity while serving borrower needs.
+Understanding funding request review helps facility agents effectively evaluate requests, ensure facility rules are followed, maintain proper oversight, and make informed approval decisions.

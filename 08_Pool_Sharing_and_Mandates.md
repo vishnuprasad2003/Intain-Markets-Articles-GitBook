@@ -7,7 +7,7 @@ description: Learn how to share pools with other organizations and manage mandat
 
 ## Overview
 
-Sharing pools allows you to collaborate with other organizations in the structured finance process. You can share pools with market makers, investors, rating agencies, and other parties who need to review or participate in your transaction. Mandates are formal requests to market makers to structure deals, and managing mandates is a key part of moving pools toward completion.
+Sharing pools enables collaboration with other organizations in the structured finance process. You can share pools with market makers, investors, rating agencies, and other parties who need to review or participate in your transaction. Mandates are formal requests to market makers to structure deals, and managing mandates is a key part of moving pools toward completion.
 
 ## Who Can Use This
 

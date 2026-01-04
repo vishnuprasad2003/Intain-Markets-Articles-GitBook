@@ -7,7 +7,7 @@ description: Learn about workflows and features that have been retired or deprec
 
 ## Overview
 
-This document tracks workflows, processes, and features that have been retired or deprecated. Understanding retired flows helps you know what's no longer available, what replaced old workflows, and how to use current features effectively. Retired features are no longer available in the platform and have typically been replaced by improved processes. Understanding retired flows helps you avoid using outdated methods and focus on current capabilities.
+This document tracks workflows, processes, and features that have been retired or deprecated. Retired features are no longer available in the platform and have typically been replaced by improved processes.
 
 ## What Changed
 
@@ -47,4 +47,3 @@ This document tracks workflows, processes, and features that have been retired o
 
 **Attend Training** - Attend training if available for new methods. Training helps you learn current approaches. Training ensures you can use current features effectively. Training helps you adapt to platform evolution.
 
-Understanding retired flows helps you use current platform features effectively, avoid trying to use features that no longer exist, know what replaced old workflows, migrate to current methods, work efficiently with available features, and stay current with platform evolution.

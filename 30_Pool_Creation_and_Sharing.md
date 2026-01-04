@@ -7,7 +7,7 @@ description: Learn how to create pools and share them with other organizations
 
 ## Overview
 
-This guide covers the complete process of creating pools and sharing them with other organizations. As an issuer, you'll learn how to create pools, add loans, configure sharing options, and share pools with market makers, investors, and other parties to facilitate structured finance transactions.
+This guide covers the complete process of creating pools and sharing them with other organizations. As an issuer, you'll learn how to create pools, add loans, configure sharing options, and share pools with market makers, investors, and other parties.
 
 ## Who Can Use This
 
@@ -180,4 +180,4 @@ After sharing with market makers:
 - Market maker structures the deal
 - Pool progresses toward "Deal" status
 
-Understanding pool creation and sharing helps you effectively present your loan portfolios, collaborate with other parties, and move pools through the structured finance workflow to successful deal completion.
+Understanding pool creation and sharing helps you effectively present your loan portfolios, collaborate with other parties, and move pools through the structured finance workflow.

@@ -7,7 +7,7 @@ description: Understand status qualifiers that provide additional context about 
 
 ## Overview
 
-Statuses in Intain Markets often include qualifiers that provide additional context about the state of an item. Understanding these qualifiers helps you better understand what a status means, what actions are available, and what needs to happen next in the workflow. Qualifiers add meaning to base statuses, clarifying workflow position and indicating what's needed for progression.
+Statuses in Intain Markets often include qualifiers that provide additional context about the state of an item. Qualifiers add meaning to base statuses, clarifying workflow position and indicating what's needed for progression.
 
 ## Reference Details
 
@@ -29,20 +29,18 @@ Statuses in Intain Markets often include qualifiers that provide additional cont
 
 ## Important Notes
 
-**Qualifiers Clarify Workflow Position** - Qualifiers tell you where the item is in its workflow and what's happening. They help you understand the current state more precisely than base statuses alone. Understanding qualifiers helps you know exactly where items are in their journey.
+**Qualifiers Clarify Workflow Position** - Qualifiers tell you where the item is in its workflow and what's happening. They help you understand the current state more precisely than base statuses alone.
 
-**Qualifiers Indicate What's Needed** - Qualifiers show what action is required or what's waiting to happen. They guide you on what needs to happen next for the workflow to progress. Understanding qualifiers helps you know what actions are needed.
+**Qualifiers Indicate What's Needed** - Qualifiers show what action is required or what's waiting to happen. They guide you on what needs to happen next for the workflow to progress.
 
-**Qualifiers Explain Action Availability** - Qualifiers help explain why certain actions are enabled or disabled. Understanding qualifiers helps you know what you can and cannot do. When actions are disabled, qualifiers often explain why.
+**Qualifiers Explain Action Availability** - Qualifiers help explain why certain actions are enabled or disabled. When actions are disabled, qualifiers often explain why.
 
-**Qualifiers Guide Next Steps** - Qualifiers indicate what needs to happen next for the workflow to progress. They help you understand what to expect and what to prepare for. Understanding qualifiers helps you plan next steps.
+**Qualifiers Guide Next Steps** - Qualifiers indicate what needs to happen next for the workflow to progress. They help you understand what to expect and what to prepare for.
 
-**Multiple Qualifiers Possible** - Some statuses may have multiple qualifiers or be combined with other status information. Understanding how qualifiers combine helps you interpret statuses accurately. Some items may have complex statuses with multiple qualifiers.
+**Multiple Qualifiers Possible** - Some statuses may have multiple qualifiers or be combined with other status information. Some items may have complex statuses with multiple qualifiers.
 
-**Qualifiers Are Consistent** - The same qualifiers mean the same thing across different item types. Once you understand a qualifier, you can apply that understanding to other contexts. This consistency helps you navigate the platform effectively.
+**Qualifiers Are Consistent** - The same qualifiers mean the same thing across different item types. Once you understand a qualifier, you can apply that understanding to other contexts.
 
-**Qualifiers Change with Workflow** - Qualifiers change as items progress through workflows. Understanding how qualifiers change helps you track progress and know what to expect. Status progression often involves qualifier changes.
+**Qualifiers Change with Workflow** - Qualifiers change as items progress through workflows. Status progression often involves qualifier changes.
 
-**Qualifiers Support Decision Making** - Qualifiers provide information that helps you make decisions about what actions to take. Understanding qualifiers helps you know when to act and when to wait. This information supports effective decision-making.
-
-Understanding status qualifiers helps you interpret statuses more accurately, know what actions are available, understand what needs to happen next, navigate workflows more effectively, and work efficiently within the platform's status system.
+**Qualifiers Support Decision Making** - Qualifiers provide information that helps you make decisions about what actions to take.

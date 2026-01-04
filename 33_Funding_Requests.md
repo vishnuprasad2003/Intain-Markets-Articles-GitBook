@@ -7,7 +7,7 @@ description: Learn how to create, manage, and submit funding requests against ac
 
 ## Overview
 
-This guide covers how borrowers create, manage, and submit funding requests against active credit facilities. Learn how to request drawdowns, provide supporting documentation, track request status, and handle outcomes to access funds from your approved facilities.
+This guide covers how borrowers create, manage, and submit funding requests against active credit facilities. Learn how to request drawdowns, provide supporting documentation, track request status, and handle outcomes.
 
 ## Who Can Use This
 

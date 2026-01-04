@@ -7,13 +7,13 @@ description: Understand all possible loan statuses and what each means
 
 ## Overview
 
-This comprehensive reference guide explains all possible loan statuses across different status fields. Loans have multiple status fields that track different aspects of their lifecycle, including mapping status, workflow status, and pool status. Understanding these statuses helps you track where loans are in the process, know what actions are available, and manage loans effectively throughout the structured finance workflow.
+This comprehensive reference guide explains all possible loan statuses across different status fields. Loans have multiple status fields that track different aspects of their lifecycle, including mapping status, workflow status, and pool status.
 
 ## Lifecycle Overview
 
 Loans progress through multiple status dimensions: they start as **Unmapped** when uploaded, move to **Mapped** when assigned to a pool, may progress through **Submitted** and **Verified** during processing, potentially reach **Minted** if tokenization is required, and may be **Removed** from pool calculations if needed, with the option to be **Reinstated** later. This progression ensures that loans move through proper stages with appropriate processing and validation at each step.
 
-The lifecycle is designed to support loan management—you upload loans, assign them to pools, they go through verification and processing, and they may be tokenized or removed as needed. Each stage has specific purposes and allows different types of actions, ensuring that loans progress correctly through the structured finance workflow. Understanding this lifecycle helps you know what to expect and how to navigate loan management effectively.
+The lifecycle supports loan management—you upload loans, assign them to pools, they go through verification and processing, and they may be tokenized or removed as needed. Each stage has specific purposes and allows different types of actions.
 
 ## Status Meanings
 
@@ -33,18 +33,16 @@ The lifecycle is designed to support loan management—you upload loans, assign 
 
 ## What Each Status Indicates
 
-**Unmapped Status** indicates that the loan is available for assignment but hasn't been mapped to a pool yet. You can map it to a pool, edit information if allowed, or manage it independently. This status tells you that the loan is ready to be included in a pool. You have full control over unmapped loans and can assign them to pools when ready.
+**Unmapped Status** indicates that the loan is available for assignment but hasn't been mapped to a pool yet. You can map it to a pool, edit information if allowed, or manage it independently.
 
-**Mapped Status** indicates that the loan is part of a pool and contributing to pool calculations. Pool metrics include this loan, and you can unmap it if needed. This status tells you that the loan is actively participating in a pool. The loan affects pool-level statistics and characteristics.
+**Mapped Status** indicates that the loan is part of a pool and contributing to pool calculations. Pool metrics include this loan, and you can unmap it if needed.
 
-**Submitted Status** indicates that the loan is being processed or verified as part of a batch. The loan is in a review or processing stage. This status tells you that the loan is moving through verification or processing workflows. You typically need to wait for processing to complete before taking further actions.
+**Submitted Status** indicates that the loan is being processed or verified as part of a batch. You typically need to wait for processing to complete before taking further actions.
 
-**Verified Status** indicates that the loan has passed verification and meets quality standards. The loan can proceed to tokenization or other next stages. This status tells you that the loan is ready for further processing. The loan has met quality and compliance requirements.
+**Verified Status** indicates that the loan has passed verification and meets quality standards. The loan can proceed to tokenization or other next stages.
 
-**Minted Status** indicates that the loan has been tokenized and an NFT has been created. The loan is now represented on the blockchain. This status tells you that tokenization is complete and the loan is ready for blockchain-based transactions. The loan is fully tokenized and ready for blockchain operations.
+**Minted Status** indicates that the loan has been tokenized and an NFT has been created. The loan is now represented on the blockchain.
 
-**Removed Status** indicates that the loan has been excluded from pool calculations, likely due to data quality issues, not meeting pool criteria, or errors needing correction. The loan remains visible for tracking but doesn't affect pool metrics. This status tells you that the loan is temporarily or permanently excluded from calculations. You can track removed loans and reinstate them when appropriate.
+**Removed Status** indicates that the loan has been excluded from pool calculations, likely due to data quality issues, not meeting pool criteria, or errors needing correction. The loan remains visible for tracking but doesn't affect pool metrics.
 
-**Reinstated Status** indicates that a previously removed loan has been put back into the pool. The loan is included in calculations again and fully participates in the pool. This status tells you that issues have been resolved and the loan is active again. The loan fully contributes to pool metrics and characteristics.
-
-Understanding all loan states helps you track where loans are in the process, know what actions are available, understand why certain actions are disabled, manage loans effectively throughout the structured finance workflow, and work efficiently within the loan management system.
+**Reinstated Status** indicates that a previously removed loan has been put back into the pool. The loan is included in calculations again and fully participates in the pool.

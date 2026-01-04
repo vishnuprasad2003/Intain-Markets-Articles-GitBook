@@ -7,7 +7,7 @@ description: Learn how facility agents configure borrowing base calculations and
 
 ## Overview
 
-Deal setup and calculations involve configuring the financial modeling, borrowing base calculations, and facility parameters that determine how the credit facility operates. This guide covers how facility agents set up these calculations to ensure proper facility operation and accurate borrowing capacity determination.
+Deal setup and calculations involve configuring the financial modeling, borrowing base calculations, and facility parameters that determine how the credit facility operates. This guide covers how facility agents set up these calculations.
 
 **Deals Management** - The deals table provides a comprehensive view of all deals, allowing you to review deal details, track progress, and manage deal-related activities.
 

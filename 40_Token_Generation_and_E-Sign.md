@@ -7,7 +7,7 @@ description: Learn how facility agents generate tokens and complete e-signatures
 
 ## Overview
 
-This guide covers how facility agents generate tokens for funding notices and complete the e-signature process for each lender. Learn how to create tokens, distribute them to lenders, sign funding notices individually for each lender, and track per-lender e-signature status to enable the drawdown process.
+This guide covers how facility agents generate tokens for funding notices and complete the e-signature process for each lender. Learn how to create tokens, distribute them to lenders, sign funding notices individually for each lender, and track per-lender e-signature status.
 
 ## Who Can Use This
 

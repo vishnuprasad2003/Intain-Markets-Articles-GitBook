@@ -7,17 +7,17 @@ description: Understand common reasons actions are blocked and how to resolve th
 
 ## Overview
 
-Understanding why actions are blocked helps you know what needs to happen before you can proceed. This comprehensive guide explains common reasons actions are blocked and how to resolve them, helping you work effectively within workflow requirements. Actions are blocked when certain conditions aren't met, and understanding these conditions helps you resolve blocking issues efficiently.
+This comprehensive guide explains common reasons actions are blocked and how to resolve them. Actions are blocked when certain conditions aren't met.
 
 ## Frequently Asked Questions
 
 **Q: Why is my action button disabled?**
 
-A: Action buttons are disabled when the item isn't in the right status, required information is missing, you're waiting for another party to act, you don't have permission for your role, or the action was already completed. Hover over disabled buttons to see tooltips explaining why they're disabled. Understanding why buttons are disabled helps you know what's needed to enable them.
+A: Action buttons are disabled when the item isn't in the right status, required information is missing, you're waiting for another party to act, you don't have permission for your role, or the action was already completed. Hover over disabled buttons to see tooltips explaining why they're disabled.
 
 **Q: What does "wrong status" mean?**
 
-A: Wrong status means the item isn't in the correct status for this action. Workflow doesn't permit the action at the current status, and you must progress through statuses in order. You cannot skip workflow steps, and status progression is required before the action becomes available. Understanding status requirements helps you know when actions will be available.
+A: Wrong status means the item isn't in the correct status for this action. Workflow doesn't permit the action at the current status, and you must progress through statuses in order. You cannot skip workflow steps, and status progression is required before the action becomes available.
 
 **Q: What information might be missing?**
 
@@ -55,4 +55,3 @@ A: Yes, actions can be blocked temporarily while waiting for other parties, duri
 
 A: Monitor item status changes, check for notifications, review status history, and watch for status updates. Actions become available when conditions are met and statuses progress. Status monitoring helps you know when actions become available.
 
-Understanding why actions are blocked helps you know what needs to happen before you can proceed, resolve blocking issues effectively, work within workflow requirements, take appropriate actions when they become available, and work efficiently within the platform's workflow system.

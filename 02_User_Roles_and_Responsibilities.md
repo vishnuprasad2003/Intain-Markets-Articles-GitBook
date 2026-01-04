@@ -7,7 +7,7 @@ description: Understand different user roles and what each role can do in the pl
 
 ## Overview
 
-Intain Markets uses distinct user roles, each with specific responsibilities and access permissions. Your role determines what actions you can take, what information you can see, and what you're responsible for in the structured finance workflow. The platform automatically filters information and actions based on your role, showing you only what's relevant and making it easier to focus on your responsibilities. Understanding roles helps you know what you can do, what others can do, and how different parties collaborate to complete structured finance transactions.
+Intain Markets uses distinct user roles, each with specific responsibilities and access permissions. Your role determines what actions you can take, what information you can see, and what you're responsible for. The platform automatically filters information and actions based on your role, showing only what's relevant to your responsibilities.
 
 ## Roles Covered
 
@@ -200,20 +200,18 @@ Admins have system-level access for platform administration. They manage users, 
 
 ## Important Access Notes
 
-**Role Selection** - You must select the correct role during login that matches your account. If you have multiple roles, you can log in with different roles at different times, but you can only use one role per session. The role you select determines what you can see and do.
+**Role Selection** - Select the correct role during login. If you have multiple roles, you can log in with different roles at different times, but only one role per session.
 
-**Role-Based Views** - Your role determines your view—you only see items where you have a role or where items are shared with you. The platform automatically filters information based on your role, showing you only what's relevant to your responsibilities.
+**Role-Based Views** - You only see items where you have a role or where items are shared with you. The platform automatically filters information based on your role.
 
-**Action Availability** - Action buttons are enabled or disabled based on your role and the item's status. Disabled buttons usually show a reason why the action isn't available. Understanding role-based action availability helps you know what you can do and why certain actions might not be available.
+**Action Availability** - Action buttons are enabled or disabled based on your role and the item's status. Disabled buttons show why the action isn't available.
 
-**Multiple Roles** - Some users may have multiple roles (for example, an organization might be both an issuer and an investor), but you can only use one role per session. You can switch roles by logging out and logging back in with a different role.
+**Multiple Roles** - Some users may have multiple roles, but you can only use one role per session. Switch roles by logging out and logging back in.
 
-**Role-Based Permissions** - Role-based permissions ensure proper workflow—issuers cannot approve their own submissions, and each role has appropriate responsibilities. This separation of duties ensures proper workflow and maintains security.
+**Role-Based Permissions** - Role-based permissions ensure proper workflow—issuers cannot approve their own submissions, and each role has appropriate responsibilities.
 
-**Automatic Enforcement** - The platform enforces role-based rules automatically, so you can only take actions that are appropriate for your role. This automatic enforcement ensures that role-based rules are consistently applied.
+**Automatic Enforcement** - The platform enforces role-based rules automatically, so you can only take actions appropriate for your role.
 
-**Collaboration Between Roles** - Collaboration between roles is essential—issuers create, market makers structure, investors fund, and servicers manage ongoing administration. Understanding how roles collaborate helps you work effectively with other parties.
+**Collaboration Between Roles** - Issuers create, market makers structure, investors fund, and servicers manage ongoing administration.
 
-**Role Attribution** - All actions are recorded with role information, ensuring accountability and proper attribution. This role attribution ensures that actions are traceable to specific roles and users.
-
-Understanding your role and the roles of others helps you navigate the platform effectively, know what actions you can take, understand what others can do, and understand how different parties collaborate to complete structured finance transactions. This understanding enables effective collaboration and ensures that transactions progress correctly through proper role-based workflows.
+**Role Attribution** - All actions are recorded with role information, ensuring accountability and proper attribution.

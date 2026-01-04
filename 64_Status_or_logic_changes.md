@@ -7,7 +7,7 @@ description: Learn about changes to status workflows and business logic
 
 ## Overview
 
-This document tracks changes to status workflows, business logic, and process flows. Understanding these changes helps you adapt to platform updates, know what to expect, and use updated workflows effectively. Changes are documented when implemented, with release notes explaining what changed and why. Understanding these changes helps you adapt effectively and work efficiently with updated processes.
+This document tracks changes to status workflows, business logic, and process flows. Changes are documented when implemented, with release notes explaining what changed and why.
 
 ## What Changed
 
@@ -45,4 +45,3 @@ This document tracks changes to status workflows, business logic, and process fl
 
 **Review Documentation** - Review updated documentation to understand changes. Documentation reflects current methods and workflows. Updated documentation explains new processes. Regular review helps you stay current.
 
-Understanding status or logic changes helps you adapt to platform updates, know what to expect from changes, use updated workflows effectively, work efficiently with improved processes, and maintain productivity during platform evolution.

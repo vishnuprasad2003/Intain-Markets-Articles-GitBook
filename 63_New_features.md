@@ -7,7 +7,7 @@ description: Learn about new features and capabilities added to the platform
 
 ## Overview
 
-This document tracks new features and capabilities added to the Intain Markets platform. Check here regularly to learn about new functionality, improvements, and enhancements that can help you work more effectively. New features are documented when released, with release notes explaining new capabilities and how to use them. Understanding new features helps you take advantage of platform improvements and work more efficiently.
+This document tracks new features and capabilities added to the Intain Markets platform. Check here regularly to learn about new functionality, improvements, and enhancements that can help you work more effectively. New features are documented when released, with release notes explaining new capabilities and how to use them.
 
 ## What Changed
 
@@ -43,4 +43,3 @@ This document tracks new features and capabilities added to the Intain Markets p
 
 **Platform Notifications** - Platform notifications may alert you to new features. Check notifications regularly for updates. Notifications help you stay informed about platform changes. Staying informed helps you take advantage of new features.
 
-Understanding new features helps you take advantage of platform improvements, use new capabilities effectively, stay current with platform evolution, work more efficiently with enhanced functionality, and maximize your use of platform capabilities.

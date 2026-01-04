@@ -7,7 +7,7 @@ description: Understand how tokens are tracked with unique identifiers and times
 
 ## Overview
 
-Tokens created for funding notices have unique identifiers and timestamps that enable complete tracking and auditability. Understanding token IDs and timestamps helps you track token creation, distribution, and transfers, ensuring complete transparency in the token-based drawdown process. Each token has a unique ID and all token events are timestamped, providing complete traceability for all token-related activities.
+Tokens created for funding notices have unique identifiers and timestamps that enable complete tracking and auditability. Each token has a unique ID and all token events are timestamped, providing complete traceability for all token-related activities.
 
 ## Reference Details
 
@@ -27,20 +27,18 @@ Tokens created for funding notices have unique identifiers and timestamps that e
 
 ## Important Notes
 
-**Unique Identification** - Each token has a unique ID that enables tracking and verification. Token IDs are permanent and cannot be changed, ensuring consistent tracking throughout the token lifecycle. Unique identification ensures that tokens can be tracked individually and verified accurately.
+**Unique Identification** - Each token has a unique ID that enables tracking and verification. Token IDs are permanent and cannot be changed, ensuring consistent tracking throughout the token lifecycle.
 
-**Complete Timestamping** - All significant token events are timestamped, creating complete chronological records. Timestamps are accurate and consistent, using standardized time formats for reliability. Complete timestamping ensures that all token activities are traceable and verifiable.
+**Complete Timestamping** - All significant token events are timestamped, creating complete chronological records. Timestamps are accurate and consistent, using standardized time formats.
 
-**Complete Audit Trail** - Token IDs and timestamps create complete audit trails for all token activities. This supports compliance requirements and enables complete transparency in token operations. Complete audit trails ensure that all token activities are documented and traceable.
+**Complete Audit Trail** - Token IDs and timestamps create complete audit trails for all token activities. This supports compliance requirements and enables complete transparency in token operations.
 
-**Verification Capability** - Token IDs and timestamps enable verification of token information and activities. You can verify when tokens were created, distributed, and transferred using this information. Verification capability helps you confirm token information and activities.
+**Verification Capability** - Token IDs and timestamps enable verification of token information and activities. You can verify when tokens were created, distributed, and transferred using this information.
 
-**Blockchain Integration** - Token IDs link to blockchain records, enabling verification on the blockchain. This provides additional security and transparency for token operations. Blockchain integration provides immutable verification and additional security for token operations.
+**Blockchain Integration** - Token IDs link to blockchain records, enabling verification on the blockchain. This provides additional security and transparency for token operations.
 
-**Permanent Records** - Token IDs and timestamps are permanent records that cannot be modified. This ensures that token history remains accurate and available for audit and compliance purposes. Permanent records ensure that token history remains trustworthy and verifiable.
+**Permanent Records** - Token IDs and timestamps are permanent records that cannot be modified. This ensures that token history remains accurate and available for audit and compliance purposes.
 
-**Distribution Transparency** - Token distribution arrays show complete allocation details with IDs and timestamps. This ensures transparency in how tokens are distributed to lenders. Distribution transparency helps all parties understand token allocation and distribution timing.
+**Distribution Transparency** - Token distribution arrays show complete allocation details with IDs and timestamps. This ensures transparency in how tokens are distributed to lenders.
 
-**Complete Lifecycle Tracking** - Token IDs and timestamps enable tracking from creation through distribution to transfer. This provides complete lifecycle visibility. Complete lifecycle tracking ensures that all token activities are documented and traceable.
-
-Understanding token IDs and timestamps helps you track tokens throughout their lifecycle, verify token information, ensure complete auditability, support compliance requirements, maintain transparency in token-based operations, and work effectively within the token tracking system.
+**Complete Lifecycle Tracking** - Token IDs and timestamps enable tracking from creation through distribution to transfer. This provides complete lifecycle visibility.

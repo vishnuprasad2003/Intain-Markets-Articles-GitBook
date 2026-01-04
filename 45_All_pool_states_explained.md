@@ -7,7 +7,7 @@ description: Understand all possible pool statuses and what each means
 
 ## Overview
 
-This comprehensive reference guide explains all possible pool statuses in the platform. Understanding these statuses helps you know where your pool is in the workflow, what actions are available, and what to expect at each stage. Each status represents a specific stage in the pool's journey from creation to deal completion, and understanding them helps you navigate the pool lifecycle effectively.
+This comprehensive reference guide explains all possible pool statuses in the platform. Each status represents a specific stage in the pool's journey from creation to deal completion.
 
 ## Lifecycle Overview
 
@@ -35,4 +35,3 @@ The lifecycle is designed to support collaboration—you create and prepare pool
 
 **Deal Status** indicates that the transaction is finalized and committed. The pool is structured, editing is restricted, and ongoing activities are managed separately. This status tells you that the pool has reached its final state and the deal is complete. The pool is ready for execution and ongoing management.
 
-Understanding all pool states helps you navigate the platform effectively, know what actions are available at each stage, track your pool's progress from creation to deal completion, understand what each status means for your workflow, and work efficiently within the pool lifecycle system.

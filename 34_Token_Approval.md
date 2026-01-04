@@ -7,7 +7,7 @@ description: Learn how to review token allocations and approve token transfers f
 
 ## Overview
 
-Token approval is the step where borrowers approve the transfer of tokens, making funding notices visible to lenders. This guide covers how to review token allocations, verify distribution accuracy, and approve token transfers to enable the drawdown process and allow lenders to review and approve funding.
+Token approval is the step where borrowers approve the transfer of tokens, making funding notices visible to lenders. This guide covers how to review token allocations, verify distribution accuracy, and approve token transfers.
 
 ## Who Can Use This
 

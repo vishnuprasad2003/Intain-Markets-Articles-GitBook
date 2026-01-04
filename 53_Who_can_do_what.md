@@ -7,7 +7,7 @@ description: Comprehensive guide to role permissions and what each role can do
 
 ## Overview
 
-This comprehensive reference guide explains what each role can and cannot do in the Intain Markets platform. Understanding role permissions helps you know what actions are available to you, what others can do, and why certain actions are unavailable. The platform automatically enforces these permissions, ensuring that you can only take actions appropriate for your role. This guide provides detailed information about role capabilities and limitations across all platform modules.
+This comprehensive reference guide explains what each role can and cannot do in the Intain Markets platform. The platform automatically enforces these permissions, ensuring that you can only take actions appropriate for your role.
 
 ## Roles Covered
 
@@ -197,28 +197,26 @@ Admins have system-level access for platform administration. They manage users, 
 
 ## Important Access Notes
 
-**Each Role Has Specific Permissions** - You can only perform actions allowed by your role. The platform enforces these restrictions automatically, ensuring that role-based permissions are consistently applied. Understanding specific permissions helps you know what you can do.
+**Each Role Has Specific Permissions** - You can only perform actions allowed by your role. The platform enforces these restrictions automatically.
 
-**Role Determines Actions** - Even if you can see an item, you may not be able to take certain actions if your role doesn't allow them. Your role controls both visibility and action availability. Understanding how role determines actions helps you know what you can do.
+**Role Determines Actions** - Even if you can see an item, you may not be able to take certain actions if your role doesn't allow them. Your role controls both visibility and action availability.
 
-**Specific Role Requirements** - Some actions require specific roles—only facility agents can approve term sheets, only lenders can approve master commitments, etc. Understanding specific role requirements helps you know who can do what.
+**Specific Role Requirements** - Some actions require specific roles—only facility agents can approve term sheets, only lenders can approve master commitments, etc.
 
-**Automatic Enforcement** - The platform automatically restricts actions based on your role. You cannot bypass role restrictions. Understanding automatic enforcement helps you appreciate how the platform ensures proper role-based access.
+**Automatic Enforcement** - The platform automatically restricts actions based on your role. You cannot bypass role restrictions.
 
-**Role Controls Visibility and Actions** - Your role controls both what you can see and what actions you can take. The platform filters information and actions based on your role. Understanding how role controls visibility and actions helps you know what you can see and do.
+**Role Controls Visibility and Actions** - Your role controls both what you can see and what actions you can take. The platform filters information and actions based on your role.
 
-**Multiple Roles Possible** - Some users may have multiple roles but must select one role per login session. You can switch roles by logging out and logging back in with a different role. Understanding multiple roles helps you use the platform effectively when you have multiple responsibilities.
+**Multiple Roles Possible** - Some users may have multiple roles but must select one role per login session. You can switch roles by logging out and logging back in with a different role.
 
-**Role-Based Views** - The platform shows you only relevant information based on your role, making navigation simpler. You only see items where you have a role or where items are shared with you. Understanding role-based views helps you know what you can see.
+**Role-Based Views** - The platform shows you only relevant information based on your role. You only see items where you have a role or where items are shared with you.
 
-**Action Buttons Are Role-Aware** - Buttons are enabled or disabled based on your role and permissions, not just item status. Both role and status determine action availability. Understanding role-aware actions helps you know what actions are available.
+**Action Buttons Are Role-Aware** - Buttons are enabled or disabled based on your role and permissions, not just item status. Both role and status determine action availability.
 
-**Complete Audit Trail** - All actions are recorded with role information for accountability and proper attribution. This ensures that actions are traceable to specific roles and users. Understanding audit trails helps you appreciate how the platform maintains accountability.
+**Complete Audit Trail** - All actions are recorded with role information for accountability and proper attribution.
 
-**Collaboration Between Roles** - Different roles collaborate through workflows—issuers create, market makers structure, lenders fund, servicers manage, etc. Understanding collaboration helps you work effectively with other parties.
+**Collaboration Between Roles** - Different roles collaborate through workflows—issuers create, market makers structure, lenders fund, servicers manage, etc.
 
-**Sequential Responsibilities** - Roles have sequential responsibilities in workflows. Understanding sequential responsibilities helps you know when your actions are needed and how roles work together.
+**Sequential Responsibilities** - Roles have sequential responsibilities in workflows.
 
-**Independent Decisions** - Some roles make independent decisions (like lenders approving drawdowns). Understanding independent decisions helps you know how certain decisions work.
-
-Understanding role permissions helps you know what actions are available to you, understand what others can do, know why certain actions are unavailable, work effectively within your role's capabilities, and understand how different roles collaborate to complete transactions. This understanding enables effective collaboration and ensures that transactions progress correctly through proper role-based workflows.
+**Independent Decisions** - Some roles make independent decisions (like lenders approving drawdowns).

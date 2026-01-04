@@ -7,7 +7,7 @@ description: Learn how facility agents review term sheets and make approval deci
 
 ## Overview
 
-Term sheet review is the process where facility agents evaluate term sheets submitted by borrowers and decide whether to approve, reject, or request changes. This guide covers how facility agents review term sheets effectively, assess proposals, and make decisions that affect facility setup workflow.
+Term sheet review is the process where facility agents evaluate term sheets submitted by borrowers and decide whether to approve, reject, or request changes. This guide covers how facility agents review term sheets effectively, assess proposals, and make decisions.
 
 ## Who Can Use This
 

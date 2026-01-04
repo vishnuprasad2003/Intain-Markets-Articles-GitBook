@@ -7,7 +7,7 @@ description: Answers to frequently asked questions about credit facilities, fund
 
 ## Overview
 
-This comprehensive guide answers common questions about credit facilities, funding requests, approvals, and the funding process. These FAQs help you understand the funding workflow and know what to expect at each stage. Use this guide when you have questions about credit facility processes, funding operations, and approval workflows.
+This comprehensive guide answers common questions about credit facilities, funding requests, approvals, and the funding process. Use this guide when you have questions about credit facility processes, funding operations, and approval workflows.
 
 ## Frequently Asked Questions
 
@@ -119,4 +119,3 @@ A: If a lender rejects a drawdown, that lender's portion doesn't proceed. Other 
 
 A: Yes, you can see token distribution details on the funding notice details page. Distribution shows how tokens are allocated to lenders, including amounts and percentages. Token distribution information provides complete transparency.
 
-Understanding funding and approval questions helps you navigate the credit facility workflow effectively, know what to expect at each stage, understand approval processes, and work efficiently within the funding system.

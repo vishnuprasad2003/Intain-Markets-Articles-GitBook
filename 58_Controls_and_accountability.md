@@ -7,7 +7,7 @@ description: Understand the controls and accountability measures in the platform
 
 ## Overview
 
-Intain Markets implements comprehensive controls and accountability measures throughout the platform to ensure security, compliance, proper governance, and protection for all parties. These controls are built into the platform's architecture, working together to maintain integrity, enforce proper workflows, and ensure that transactions proceed correctly while protecting all participants. Understanding controls and accountability helps you appreciate how the platform ensures security, maintains compliance, enforces proper governance, and protects all parties throughout the transaction lifecycle.
+Intain Markets implements comprehensive controls and accountability measures throughout the platform to ensure security, compliance, proper governance, and protection for all parties. These controls are built into the platform's architecture, working together to maintain integrity, enforce proper workflows, and ensure that transactions proceed correctly while protecting all participants.
 
 ## How the Platform Is Designed
 
@@ -17,7 +17,7 @@ The platform is designed with multiple layers of controls that work together to 
 
 - **Role-based permissions** determine what actions are available. Your role determines what you can see, what actions you can take, and what responsibilities you have. The platform automatically filters information and actions based on your role.
 
-- **Authentication** ensures only authorized users can access the platform. Users must authenticate before accessing the platform, and authentication is required for all actions. This ensures that only authorized users can access the platform and take actions.
+- **Authentication** ensures only authorized users can access the platform. Users must authenticate before accessing the platform, and authentication is required for all actions.
 
 - **Session management** provides secure access with automatic expiration. Sessions expire after periods of inactivity, ensuring that access is controlled and that unauthorized access is prevented. This session management ensures that access is secure and controlled.
 
@@ -27,7 +27,7 @@ The platform is designed with multiple layers of controls that work together to 
 
 - **Status-based controls** prevent actions that aren't allowed at the current stage. Statuses control what actions are available, ensuring that actions only happen when appropriate. This prevents errors and ensures proper workflow progression.
 
-- **Sequential progression** ensures steps happen in proper order. You cannot skip steps or go backwards without proper authorization. This ensures that important steps aren't missed and that transactions progress in the correct order.
+- **Sequential progression** ensures steps happen in proper order. You cannot skip steps or go backwards without proper authorization.
 
 - **Dependency management** ensures prerequisites are met before actions are enabled. Actions are only enabled when prerequisites are met, ensuring that transactions progress correctly and that important steps aren't skipped.
 
@@ -57,38 +57,36 @@ These controls work together automatically, ensuring that the platform operates 
 
 ## What This Enables for Users
 
-**For All Users**, controls provide confidence that the platform operates securely, that workflows progress correctly, and that data quality is maintained. You can trust that the platform enforces proper processes and protects your information. This confidence enables you to use the platform effectively and trust that your data and transactions are secure.
+**For All Users**, controls provide confidence that the platform operates securely, that workflows progress correctly, and that data quality is maintained.
 
-**For Submitters**, controls ensure that your submissions are reviewed properly, that approvals happen in the correct sequence, and that your data is validated before acceptance. You can be confident that approved items have met quality and compliance standards. This confidence enables you to submit items knowing that they will be properly reviewed and validated.
+**For Submitters**, controls ensure that your submissions are reviewed properly, that approvals happen in the correct sequence, and that your data is validated before acceptance.
 
-**For Reviewers**, controls ensure that you review items at the appropriate stage, that you have proper authorization to make decisions, and that your decisions are documented and attributed. You can make decisions knowing that proper processes are followed. This confidence enables you to make decisions knowing that proper processes are followed and that your decisions are properly documented.
+**For Reviewers**, controls ensure that you review items at the appropriate stage, that you have proper authorization to make decisions, and that your decisions are documented and attributed.
 
-**For Compliance and Governance**, controls provide assurance that regulatory requirements are met, that business rules are enforced, and that complete audit trails are maintained. You can demonstrate that transactions followed proper processes. This assurance enables you to demonstrate compliance and proper governance.
+**For Compliance and Governance**, controls provide assurance that regulatory requirements are met, that business rules are enforced, and that complete audit trails are maintained.
 
-**For Security**, controls protect sensitive information, ensure proper access, and maintain platform integrity. You can trust that your data and transactions are secure. This security enables you to use the platform confidently knowing that your data and transactions are protected.
+**For Security**, controls protect sensitive information, ensure proper access, and maintain platform integrity.
 
-The control structure enables secure, compliant, and accountable operation while maintaining usability and efficiency. This structure ensures that the platform operates securely and correctly while remaining usable and efficient.
+The control structure enables secure, compliant, and accountable operation while maintaining usability and efficiency.
 
 ## Key Principles to Understand
 
-**Layered Protection** - Controls operate at multiple levels—access, workflow, data, and audit—providing comprehensive protection. These layers work together to ensure security and integrity. Understanding layered protection helps you appreciate how multiple controls work together to provide comprehensive protection.
+**Layered Protection** - Controls operate at multiple levels—access, workflow, data, and audit—providing comprehensive protection. These layers work together to ensure security and integrity.
 
-**Automatic Enforcement** - Controls are enforced automatically by the platform. You don't need to remember to follow rules—the platform ensures proper operation automatically. Understanding automatic enforcement helps you appreciate how the platform simplifies compliance and ensures consistency.
+**Automatic Enforcement** - Controls are enforced automatically by the platform. You don't need to remember to follow rules—the platform ensures proper operation automatically.
 
-**Role-Based Access** - Access is controlled by roles and permissions. You can only see and do what's appropriate for your role, ensuring proper separation of duties and security. Understanding role-based access helps you know what you can see and do, and what others can see and do.
+**Role-Based Access** - Access is controlled by roles and permissions. You can only see and do what's appropriate for your role, ensuring proper separation of duties and security.
 
-**Workflow Integrity** - Workflow controls ensure that steps happen in proper order and that prerequisites are met. You cannot skip steps or proceed improperly—the platform enforces correct progression. Understanding workflow integrity helps you appreciate how the platform ensures proper workflow progression.
+**Workflow Integrity** - Workflow controls ensure that steps happen in proper order and that prerequisites are met. You cannot skip steps or proceed improperly—the platform enforces correct progression.
 
-**Data Quality** - Data controls ensure that information is validated before acceptance, maintaining quality and consistency. Invalid or incomplete data is rejected, preventing errors. Understanding data quality helps you appreciate how the platform maintains data quality and prevents errors.
+**Data Quality** - Data controls ensure that information is validated before acceptance, maintaining quality and consistency. Invalid or incomplete data is rejected, preventing errors.
 
-**Complete Accountability** - Audit controls ensure that all actions are tracked and attributed. You can see who did what and when, creating accountability for all activities. Understanding complete accountability helps you appreciate how the platform maintains accountability and supports compliance.
+**Complete Accountability** - Audit controls ensure that all actions are tracked and attributed. You can see who did what and when, creating accountability for all activities.
 
-**Compliance Support** - Controls ensure that regulatory requirements and business rules are followed. The platform enforces compliance automatically, reducing the risk of violations. Understanding compliance support helps you appreciate how the platform supports compliance and reduces risk.
+**Compliance Support** - Controls ensure that regulatory requirements and business rules are followed. The platform enforces compliance automatically, reducing the risk of violations.
 
-**Transparency** - While controls protect security, they also provide transparency through audit trails. Authorized parties can see what happened, when, and who was responsible. Understanding transparency helps you appreciate how the platform provides transparency while maintaining security.
+**Transparency** - While controls protect security, they also provide transparency through audit trails. Authorized parties can see what happened, when, and who was responsible.
 
-**Protection for All Parties** - Controls protect all parties by ensuring proper processes, maintaining data quality, and enforcing security. Everyone benefits from the protection that controls provide. Understanding protection helps you appreciate how controls protect all parties.
+**Protection for All Parties** - Controls protect all parties by ensuring proper processes, maintaining data quality, and enforcing security.
 
-**Permanent Records** - Audit controls create permanent records that cannot be deleted or modified. This ensures that accountability and compliance records remain accurate and available. Understanding permanent records helps you appreciate how the platform maintains accountability and compliance records.
-
-Understanding controls and accountability helps you appreciate how the platform ensures security, maintains compliance, enforces proper governance, protects all parties, and provides complete transparency and accountability for all platform activities. This understanding enables you to use the platform confidently knowing that proper controls are in place and that accountability is maintained throughout the transaction lifecycle.
+**Permanent Records** - Audit controls create permanent records that cannot be deleted or modified, ensuring that accountability and compliance records remain accurate and available.

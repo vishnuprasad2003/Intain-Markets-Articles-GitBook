@@ -7,7 +7,7 @@ description: Learn how to approve token transfers for funding notices
 
 ## Overview
 
-Borrower token approval is the step where the borrower approves the transfer of tokens, making the funding notice visible to lenders and enabling the drawdown process to proceed. This approval step ensures borrowers verify token allocation before lenders can review and approve drawdowns.
+Borrower token approval is the step where the issuer/borrower enters their C-chain private key or JSON file format to approve the FT tokens to the Intain admin wallet so that they can transfer those FTs to the investors after the payment is completed. This approval makes the funding notice visible to lenders and enables the drawdown process to proceed.
 
 ## Who Can Use This
 

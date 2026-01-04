@@ -7,7 +7,7 @@ description: Learn how lenders review and approve master commitments to activate
 
 ## Overview
 
-Facility approval is the process where lenders review master commitments and approve them, activating the credit facility. This guide covers how lenders evaluate facilities, assess facility structure and terms, and make approval decisions that activate facilities for borrower use.
+Facility approval is the process where lenders review master commitments and approve them, activating the credit facility. This guide covers how lenders evaluate facilities, assess facility structure and terms, and make approval decisions.
 
 ## Who Can Use This
 

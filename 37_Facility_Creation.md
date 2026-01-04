@@ -7,7 +7,7 @@ description: Learn how facility agents configure master commitments after they'r
 
 ## Overview
 
-Facility creation is the process where facility agents configure master commitments after they're automatically created from approved term sheets. This guide covers how to set up facility rules, configure lender groups, define borrowing base calculations, and complete facility setup to prepare facilities for lender approval and activation.
+Facility creation is the process where facility agents configure master commitments after they're automatically created from approved term sheets. This guide covers how to set up facility rules, configure lender groups, define borrowing base calculations, and complete facility setup.
 
 ## Who Can Use This
 

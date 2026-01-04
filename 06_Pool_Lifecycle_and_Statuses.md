@@ -7,13 +7,13 @@ description: Understand the different stages pools go through from creation to d
 
 ## Overview
 
-Pools progress through several statuses from creation to final deal completion. Each status represents a specific stage in the pool's journey and determines what actions are available. Understanding these statuses helps you track where your pool is in the process, know what to expect at each stage, and understand what actions are available and why certain actions might not be available.
+Pools progress through several statuses from creation to final deal completion. Each status represents a specific stage in the pool's journey and determines what actions are available.
 
 ## Lifecycle Overview
 
-Pools typically progress through a logical sequence: they start as **Created** when you first create them, move to **Preview** when shared with other parties, progress to **Mandate Pending** when submitted to a market maker, and finally reach **Deal** status when the market maker accepts the mandate and finalizes the transaction. This progression ensures that pools move through proper stages with appropriate reviews and approvals at each step.
+Pools progress through a logical sequence: **Created** when first created, **Preview** when shared with other parties, **Mandate Pending** when submitted to a market maker, and **Deal** when the market maker accepts the mandate and finalizes the transaction.
 
-The lifecycle is designed to support collaboration—you create and prepare pools, share them for review, submit them for structuring, and finalize them as completed deals. Each stage has specific purposes and allows different types of actions, ensuring that pools progress correctly through the structured finance workflow. Understanding this lifecycle helps you know what to expect and how to navigate the process effectively.
+The lifecycle supports collaboration—you create and prepare pools, share them for review, submit them for structuring, and finalize them as completed deals. Each stage has specific purposes and allows different types of actions.
 
 ## Status Meanings
 
@@ -27,12 +27,10 @@ The lifecycle is designed to support collaboration—you create and prepare pool
 
 ## What Each Status Indicates
 
-**Created Status** indicates that you're still preparing the pool. You can edit freely, add or remove loans, configure sharing settings, and make changes as needed. The pool is private to you until you share it. This status tells you that the pool is in its early stages and not yet ready for external review. You have full control and can work on the pool without restrictions.
+**Created Status** indicates that you're still preparing the pool. You can edit freely, add or remove loans, configure sharing settings, and make changes as needed. The pool is private to you until you share it.
 
-**Preview Status** indicates that the pool is being reviewed by other parties. Recipients can view and analyze, provide feedback, and request changes. You can continue editing and responding to feedback. This status tells you that collaboration has begun and the pool is moving toward structuring. Multiple parties can work together while you maintain editing capabilities.
+**Preview Status** indicates that the pool is being reviewed by other parties. Recipients can view and analyze, provide feedback, and request changes. You can continue editing and responding to feedback.
 
-**Mandate Pending Status** indicates that a formal request has been made to a market maker to structure the deal. The market maker is evaluating whether to accept. This status tells you that the pool is at a critical decision point and you're waiting for the market maker's response. Editing is typically restricted while waiting for the decision.
+**Mandate Pending Status** indicates that a formal request has been made to a market maker to structure the deal. The market maker is evaluating whether to accept. Editing is typically restricted while waiting for the decision.
 
-**Deal Status** indicates that the transaction is finalized and committed. The pool is structured, and ongoing activities are managed separately. This status tells you that the pool has reached its final state and the deal is complete. Editing is restricted, and the pool is ready for execution and ongoing management.
-
-Understanding pool lifecycle and statuses helps you navigate the platform effectively, know what actions are available at each stage, track your pool's progress from creation to deal completion, understand what each status means for your workflow, and work effectively within the structured finance process.
+**Deal Status** indicates that the transaction is finalized and committed. The pool is structured, and ongoing activities are managed separately. Editing is restricted, and the pool is ready for execution.

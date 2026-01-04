@@ -7,11 +7,11 @@ description: Learn how electronic signatures work throughout credit facilities
 
 ## Overview
 
-E-signatures are used throughout the credit facility workflow to digitally sign important documents, enabling a complete digital process without paper documents. Electronic signatures are legally binding and provide complete traceability of who signed what and when. Understanding the e-signature workflow helps you navigate the signing process for term sheets, master commitments, and funding notices.
+E-signatures are used throughout the credit facility workflow to digitally sign important documents, enabling a complete digital process without paper documents. Electronic signatures are legally binding and provide complete traceability of who signed what and when.
 
 ## Workflow Overview
 
-The e-signature workflow spans multiple stages of the credit facility process. Borrowers sign term sheets before submission, lenders sign master commitments to approve facilities, and facility agents sign funding notices for each lender. Each signing stage has specific requirements and outcomes, and signatures are tracked individually with complete audit trails. The workflow ensures proper authorization and documentation at each critical stage.
+The e-signature workflow spans multiple stages of the credit facility process. Borrowers sign term sheets before submission, lenders sign master commitments to approve facilities, and facility agents sign funding notices for each lender. Each signing stage has specific requirements and outcomes, and signatures are tracked individually with complete audit trails.
 
 ## Key Stages
 
@@ -43,20 +43,18 @@ The e-signature workflow spans multiple stages of the credit facility process. B
 
 **Legally Binding** - Electronic signatures are legally binding and enforceable. Once signed, documents are legally valid, and signatures cannot be easily reversed.
 
-**Required Before Progression** - Signatures are required before documents can progress to next stages. Unsigned documents cannot move forward in the workflow, ensuring proper authorization at each stage.
+**Required Before Progression** - Signatures are required before documents can progress to next stages. Unsigned documents cannot move forward in the workflow.
 
 **Multiple Signatures May Be Required** - Some documents require multiple signatures from different parties. Term sheets need borrower signatures, master commitments need lender signatures, and funding notices need facility agent signatures for each lender.
 
-**Tracked with Timestamps** - Every signature is recorded with who signed and when, creating complete audit trails. Signature details are visible to authorized parties and support compliance requirements.
+**Tracked with Timestamps** - Every signature is recorded with who signed and when, creating complete audit trails.
 
-**Stored Securely** - All signed documents are stored securely and can be retrieved for audit purposes. Signed versions are preserved, and signature history is maintained for complete traceability.
+**Stored Securely** - All signed documents are stored securely and can be retrieved for audit purposes. Signed versions are preserved, and signature history is maintained.
 
-**Status Reflects Completion** - Document status updates to reflect signature completion. You can see signature status and completion for all parties, helping you track progress through the workflow.
+**Status Reflects Completion** - Document status updates to reflect signature completion. You can see signature status and completion for all parties.
 
-**Re-signing May Be Required** - If documents are modified significantly, re-signing may be required. This ensures signatures reflect current document content and maintains legal validity.
+**Re-signing May Be Required** - If documents are modified significantly, re-signing may be required to ensure signatures reflect current document content.
 
-**Per-Lender Tracking** - For funding notices, facility agents sign for each lender individually, with each lender's signature status tracked separately. This ensures proper documentation for each lender's participation.
+**Per-Lender Tracking** - For funding notices, facility agents sign for each lender individually, with each lender's signature status tracked separately.
 
-**Enables Workflow Progression** - Signatures enable documents to progress through the workflow. Understanding when signatures are required helps you know what needs to happen next.
-
-Understanding the e-signature workflow helps you complete documents digitally, move through the credit facility process efficiently, ensure all required signatures are obtained for legal validity and compliance, and track signature status throughout the workflow.
+**Enables Workflow Progression** - Signatures enable documents to progress through the workflow.

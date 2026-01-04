@@ -7,7 +7,7 @@ description: Learn how investors review pools and loans shared with them
 
 ## Overview
 
-Pool and loan review is the process where investors and lenders review pools and loans shared with them to evaluate investment opportunities, analyze pool characteristics, assess loan quality, and make informed investment decisions. This guide covers how investors evaluate opportunities and assess risk-return profiles.
+Pool and loan review is the process where investors and lenders review pools and loans shared with them to evaluate investment opportunities, analyze pool characteristics, assess loan quality, and make informed investment decisions.
 
 ## Who Can Use This
 
