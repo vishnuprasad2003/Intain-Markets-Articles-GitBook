@@ -51,8 +51,6 @@ Logging into Intain Markets and navigating the platform is straightforward and r
 
 **Check Your Dashboard First** - Your dashboard shows items requiring your attention and recent activity. Check it regularly to stay on top of pending actions.
 
-**Understand Status Indicators** - Status badges show where items are in their workflow. Learn what different statuses mean to understand what actions are available.
-
 **Use Navigation Menus** - The main navigation menus organize features logically. Use them to move between different sections efficiently.
 
 **Look for Tooltips** - When actions are disabled, hover over buttons or check tooltips to see why they're disabled.

@@ -168,7 +168,7 @@ After sharing a pool:
 - Investors can review opportunities and express interest
 - Rating agencies can analyze pool characteristics for rating purposes
 - You receive feedback and can respond accordingly
-- Pool may progress through statuses based on recipient actions
+- Pool progresses through statuses based on recipient actions
 
 After submitting for mandate:
 - Market maker receives notification and reviews the pool

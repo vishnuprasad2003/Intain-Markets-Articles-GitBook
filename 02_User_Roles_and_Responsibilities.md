@@ -15,7 +15,7 @@ The platform supports several distinct roles, each designed for specific respons
 
 - **Issuer/Borrower** - Organizations that own loans and create pools or credit facility requests. They initiate transactions and manage loan portfolios.
 
-- **Market Maker/Facility Agent** - Organizations that structure deals and facilitate transactions. They review opportunities, structure deals, and facilitate transactions between issuers and investors.
+- **Market Maker/Facility Agent** - Organizations that structure deals and facilitate transactions. They review opportunities, structure deals, and facilitate transactions between issuers/borrowers and investors/lenders.
 
 - **Investor/Lender** - Organizations that provide funding and make investment decisions. They review opportunities, evaluate investments, and provide capital for transactions.
 
@@ -104,11 +104,6 @@ Servicers manage ongoing loan administration after deals are completed. They han
 - Update loan statuses and information
 - Handle ongoing administration tasks
 
-**Limitations:**
-- Cannot create or approve pools—they manage loans after deals are completed
-- Cannot approve transactions—they focus on post-deal administration
-- Cannot modify deal structures—they work within established deal parameters
-
 **Responsibilities:**
 - Maintain accurate loan records
 - Track payments and performance
@@ -124,11 +119,6 @@ Paying Agents handle payment distributions. They manage payment distributions an
 - Manage payment distributions
 - Ensure funds are properly allocated
 - Handle payment-related tasks
-
-**Limitations:**
-- Cannot create or approve pools—they handle payment distributions
-- Cannot approve transactions—they focus on payment processing
-- Cannot modify deal structures—they work within established deal parameters
 
 **Responsibilities:**
 - Ensure accurate payment distributions
@@ -147,11 +137,6 @@ Rating Agencies analyze pools for rating purposes. They review pool data, analyz
 - Review pool characteristics and metrics
 - Perform rating analysis
 - Download data (if permissions allow)
-
-**Limitations:**
-- Have read-only access—cannot make changes or approvals
-- Cannot create or modify pools—they analyze existing pools
-- Cannot approve transactions—they provide analysis only
 
 **Responsibilities:**
 - Analyze pools thoroughly
@@ -193,7 +178,7 @@ Admins have system-level access for platform administration. They manage users, 
 
 **Multiple Roles** - Some users may have multiple roles, but you can only use one role per session. Switch roles by logging out and logging back in.
 
-**Role-Based Permissions** - Role-based permissions ensure proper workflow—issuers cannot approve their own submissions, and each role has appropriate responsibilities.
+**Role-Based Permissions** - Role-based permissions ensure proper workflow—issuers/borrowers cannot approve their own submissions, and each role has appropriate responsibilities.
 
 **Automatic Enforcement** - The platform enforces role-based rules automatically, so you can only take actions appropriate for your role.
 
