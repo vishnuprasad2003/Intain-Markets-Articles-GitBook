@@ -63,10 +63,10 @@ Use feedback workflow when:
 5. **Submit Feedback**
    - Review your feedback message
    - Confirm the feedback type and level
-   - Click "Submit Feedback" button
+   - Click "Send" button
    - Your feedback is saved and recorded
    - Issuer receives notification about the feedback
-   - Feedback appears in the pool's feedback section
+   - Feedback appears in the pool's feedback section for pool-level feedback and in individual loan's chat box icon pop-up modal for loan-level feedback
 
 ![View Entered Feedback](imagesByMdFilesFolder/09/ViewEnteredFeedback.png)
 
@@ -102,12 +102,6 @@ Use feedback workflow when:
    - Confirm when you've completed requested changes
    - Provide updates on your progress
 
-5. **Resubmit if Needed**
-   - When changes are complete, resubmit the pool for review
-   - Status may update to reflect resubmission
-   - Reviewers are notified of changes
-   - Reviewers can review changes and provide additional feedback if needed
-
 ### Managing Feedback History
 
 1. **View Feedback History**
@@ -141,7 +135,6 @@ Use feedback workflow when:
 ## What Happens Next
 
 After providing feedback:
-- Issuers receive notifications about the feedback
 - Feedback appears in the pool's feedback section
 - Unread feedback is highlighted for issuers
 - Change requests require pool updates and resubmission

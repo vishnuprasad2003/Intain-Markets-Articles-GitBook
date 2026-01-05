@@ -13,11 +13,11 @@ Intain Markets uses distinct user roles, each with specific responsibilities and
 
 The platform supports several distinct roles, each designed for specific responsibilities in structured finance transactions:
 
-- **Issuer (Borrower)** - Organizations that own loans and create pools or credit facility requests. They initiate transactions and manage loan portfolios.
+- **Issuer/Borrower** - Organizations that own loans and create pools or credit facility requests. They initiate transactions and manage loan portfolios.
 
-- **Market Maker (Facility Agent)** - Organizations that structure deals and facilitate transactions. They review opportunities, structure deals, and facilitate transactions between issuers and investors.
+- **Market Maker/Facility Agent** - Organizations that structure deals and facilitate transactions. They review opportunities, structure deals, and facilitate transactions between issuers and investors.
 
-- **Investor (Lender)** - Organizations that provide funding and make investment decisions. They review opportunities, evaluate investments, and provide capital for transactions.
+- **Investor/Lender** - Organizations that provide funding and make investment decisions. They review opportunities, evaluate investments, and provide capital for transactions.
 
 - **Servicer** - Organizations that manage ongoing loan administration. They handle loan servicing, payment tracking, and ongoing administration after deals are completed.
 
@@ -29,13 +29,13 @@ The platform supports several distinct roles, each designed for specific respons
 
 ## What Each Role Can Do
 
-### Issuer (Borrower)
+### Issuer/Borrower
 
-Issuers create and manage pools, submit credit facility requests, and manage loan portfolios. They are the initiators of transactions and have primary responsibility for creating and managing pools and credit facility requests.
+Issuers/Borrowers create and manage pools, submit credit facility requests, and manage loan portfolios. They are the initiators of transactions and have primary responsibility for creating and managing pools and credit facility requests.
 
 **Primary Capabilities:**
 - Create pools and assign loans to them
-- Share pools with market makers, investors, and other parties
+- Share pools with market makers/facility agents, investors/lenders, and other parties
 - Submit term sheets for credit facilities
 - Create funding requests against active facilities
 - Manage loan data and pool information
@@ -43,21 +43,16 @@ Issuers create and manage pools, submit credit facility requests, and manage loa
 - View their pools and track status changes
 - Approve token transfers for funding notices
 
-**Limitations:**
-- Cannot approve their own submissions—they must wait for other parties to review and approve
-- Cannot create master commitments—these are automatically created when term sheets are approved
-- Cannot approve funding requests—these require facility agent approval
-
 **Responsibilities:**
 - Ensure pool data is accurate and complete
 - Respond to feedback and change requests promptly
 - Maintain loan data quality
 - Track pool and facility status
-- Coordinate with market makers and facility agents
+- Coordinate with market makers/facility agents
 
-### Market Maker (Facility Agent)
+### Market Maker/Facility Agent
 
-Market Makers help structure deals and facilitate transactions. They play a crucial role in reviewing opportunities, structuring deals, and facilitating transactions between issuers and investors.
+Market Makers/Facility Agents help structure deals and facilitate transactions. They play a crucial role in reviewing opportunities, structuring deals, and facilitating transactions between issuers/borrowers and investors/lenders.
 
 **Primary Capabilities:**
 - Review pools shared with them
@@ -70,11 +65,6 @@ Market Makers help structure deals and facilitate transactions. They play a cruc
 - Structure deals and move pools toward completion
 - View pools and facilities they're involved with
 
-**Limitations:**
-- Cannot create pools or term sheets themselves—they review and structure items created by issuers
-- Cannot approve master commitments—these require lender approval
-- Cannot approve their own reviews—approval decisions are tracked separately
-
 **Responsibilities:**
 - Review opportunities thoroughly
 - Provide constructive feedback
@@ -82,9 +72,9 @@ Market Makers help structure deals and facilitate transactions. They play a cruc
 - Ensure compliance with requirements
 - Facilitate transactions efficiently
 
-### Investor (Lender)
+### Investor/Lender
 
-Investors provide funding for transactions. They review opportunities, evaluate investments, and make funding decisions based on their investment criteria and risk tolerance.
+Investors/Lenders provide funding for transactions. They review opportunities, evaluate investments, and make funding decisions based on their investment criteria and risk tolerance.
 
 **Primary Capabilities:**
 - Review pools and investment opportunities shared with them
@@ -95,11 +85,6 @@ Investors provide funding for transactions. They review opportunities, evaluate 
 - View their investments and track status
 - Express interest in opportunities
 - Analyze pool characteristics and loan details
-
-**Limitations:**
-- Cannot create pools or term sheets—they review and approve items created by issuers
-- Cannot approve term sheets—these require facility agent approval
-- Cannot approve funding requests—these require facility agent approval first
 
 **Responsibilities:**
 - Evaluate opportunities thoroughly
@@ -127,8 +112,7 @@ Servicers manage ongoing loan administration after deals are completed. They han
 **Responsibilities:**
 - Maintain accurate loan records
 - Track payments and performance
-- Update loan statuses promptly
-- Ensure proper loan administration
+- Handle ongoing loan servicing activities
 - Report on loan performance
 
 ### Paying Agent
@@ -181,20 +165,21 @@ Rating Agencies analyze pools for rating purposes. They review pool data, analyz
 Admins have system-level access for platform administration. They manage users, configure system settings, and handle platform-level administrative tasks.
 
 **Primary Capabilities:**
-- Manage users and organizations
+- Create and manage organizations
+- Approve KYC for users
+- Process delegation requests from users
+- Handle loan tape standardization requests from issuers
+- Process deal modeling requests from market makers
+- Run calculations on behalf of users
 - Configure system settings
 - Access administrative functions
 - Handle platform-level tasks
-
-**Limitations:**
-- Typically don't participate in regular business transactions
-- Cannot approve business transactions—they manage platform administration
-- Cannot create business items—they support platform operation
 
 **Responsibilities:**
 - Maintain platform security
 - Configure system settings
 - Manage users and organizations
+- Process delegation requests efficiently
 - Support platform operation
 - Ensure platform availability
 
@@ -212,6 +197,6 @@ Admins have system-level access for platform administration. They manage users, 
 
 **Automatic Enforcement** - The platform enforces role-based rules automatically, so you can only take actions appropriate for your role.
 
-**Collaboration Between Roles** - Issuers create, market makers structure, investors fund, and servicers manage ongoing administration.
+**Collaboration Between Roles** - Issuers/Borrowers create, market makers/facility agents structure, investors/lenders fund, and servicers manage ongoing administration.
 
 **Role Attribution** - All actions are recorded with role information, ensuring accountability and proper attribution.

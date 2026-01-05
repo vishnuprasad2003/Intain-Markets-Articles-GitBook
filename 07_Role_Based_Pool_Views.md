@@ -33,7 +33,7 @@ Different users see pools differently based on their role. The platform automati
 
 ![Pool Screen - Market Maker](imagesByMdFilesFolder/07/Pool_Screen_MarketMaker.png)
 
-**As an Investor** - You'll see investment opportunities (pools shared with you for investment review), your investments (deals where you've invested or committed), funding requests waiting for your approval, and active deals you're involved with. You'll see actions like reviewing opportunities, expressing interest, and approving or rejecting funding requests.
+**As an Investor** - You'll see investment opportunities (pools shared with you for investment review), your investments (deals where you've invested or committed), funding requests waiting for your approval, and active deals you're involved with.
 
 ![Pools Screen - Investor](imagesByMdFilesFolder/07/Pools_Screen_Investor.png)
 

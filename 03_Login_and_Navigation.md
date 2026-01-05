@@ -11,17 +11,13 @@ Logging into Intain Markets and navigating the platform is straightforward and r
 
 ## How to Navigate the Platform
 
-**Login Process** - Enter your credentials (username and password) on the login page. After authentication, select your role from a dropdown menu if you have multiple roles. The platform presents a dashboard tailored to your selected role.
+**Login Process** - Enter your credentials (username and password) on the login page. Select your role from those you have registered, and click submit. The platform presents a dashboard tailored to your selected role.
 
 **Role Selection** - If your account has multiple roles, select which role to use for this session. You can only use one role per session, but you can log out and log back in with a different role if needed.
 
 **Dashboard Access** - After logging in, you'll see a dashboard showing items relevant to your role—pools you've created or are involved with, pending actions, recent activity, and items in various statuses.
 
-**Main Navigation** - Navigation menus organize features by function—Pools, Loans, Credit Facilities, Documents, and other sections. These menus are available throughout the platform.
-
-**Item Lists** - When you navigate to a section, you'll see lists of items relevant to your role. The platform automatically filters these lists to show only items where you have a role or where items are shared with you.
-
-**Item Details** - Clicking on an item takes you to its detail page, showing all information, available actions, status, history, and related items. Action buttons are automatically enabled or disabled based on your role and the item's status.
+**Main Navigation** - A left-side expandable navigation section contains tabs for Pools, Loan Registry, Credit Facility, Whole Loan, Securitization, and other sections. These navigation tabs are available throughout the platform and help you move between different areas.
 
 **Search and Filter** - Search and filter capabilities help you find specific items by name, status, or other criteria.
 
@@ -45,13 +41,9 @@ Logging into Intain Markets and navigating the platform is straightforward and r
 
 **Role-Appropriate Actions** - Action buttons throughout the platform are automatically enabled or disabled based on your role and the item's status. You'll only see actions you can actually take. Disabled buttons typically show tooltips explaining why they're disabled. This role-based action availability ensures you can only take actions that are appropriate for your role.
 
-**Status Indicators** - Items display status badges or labels that show where they are in their workflow. Statuses are often color-coded—green for completed or approved, yellow for pending or under review, red for rejected or blocked. These indicators help you quickly understand where items stand and what actions might be available.
-
 **Notifications** - The platform may show notifications about items requiring your attention, status changes, approvals needed, or other important updates. These notifications help you stay informed about relevant activities and ensure you don't miss important updates or actions that require your attention.
 
 **Search and Filter Options** - The platform provides search and filter capabilities to help you find specific items. You can search by name, filter by status, or use other criteria to locate items quickly. These tools help you find items efficiently, especially when dealing with large numbers of items.
-
-**Breadcrumbs and Navigation Paths** - The platform provides breadcrumbs and clear navigation paths to help you understand where you are and how to navigate back. These navigation aids help you move through the platform efficiently and understand your location within the platform structure.
 
 ## Helpful Tips
 

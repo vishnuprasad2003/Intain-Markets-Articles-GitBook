@@ -76,7 +76,7 @@ Use mandates when you:
    - Confirm the sharing action
    - Recipients receive notifications that the pool has been shared
    - Pool becomes visible to shared parties in their views
-   - Pool status may change to Preview if it was in Created status
+   - Pool status changes to Preview if it was in Created status
 
 6. **Manage Shared Organizations**
    - Navigate to the pool details page
@@ -93,22 +93,25 @@ Use mandates when you:
    - Verify pool information is complete
    - Review pool metrics and loan characteristics
    - Ensure pool meets requirements for mandate submission
-   - Pool should be in Preview status
+   - Pool can be in Created or Preview status
 
 2. **Submit Pool for Mandate**
-   - Navigate to the pool's mandate or submission section
+   - Navigate to the pool's details page
+   - Click the **Start Deal** button at the top right
    - Select the market maker you want to submit to
    - Review mandate details and requirements
    - Submit the pool for mandate review
    - Status changes to Mandate Pending
    - Market maker receives notification
 
+![Submit Pool for Mandate](imagesByMdFilesFolder/08/2.SubmitPoolForMandate.png)
+
 3. **Market Maker Reviews the Pool**
-   - Market maker sees the pool in their view
+   - Market maker sees the pool in their pools dashboard
    - Market maker analyzes pool details, metrics, and loan characteristics
    - Market maker reviews pool composition and quality
    - Market maker evaluates whether to accept the mandate
-   - Market maker can request changes or provide feedback before deciding
+   - Market maker can provide feedback before deciding
 
 4. **Market Maker Makes Decision**
    - **Accept**: Market maker accepts the mandate and commits to structuring the deal
@@ -116,12 +119,11 @@ Use mandates when you:
      - Market maker proceeds with deal structuring
      - Pool moves forward in the workflow
    - **Reject**: Market maker declines the mandate
-     - Pool may return to Preview status
+     - Pool returns to Preview status
      - You can submit to another market maker
      - You receive notification of rejection
-   - **Request Changes**: Market maker provides feedback and requests modifications
-     - Pool remains in Mandate Pending or returns to Preview
-     - You can make changes and resubmit
+
+![Market Maker Makes Decision](imagesByMdFilesFolder/08/4.MarketMakerMakesDecision.png)
 
 5. **Handle Mandate Acceptance**
    - If accepted, pool moves to Deal status
@@ -170,7 +172,7 @@ After sharing a pool:
 
 After submitting for mandate:
 - Market maker receives notification and reviews the pool
-- Market maker makes a decision (accept, reject, or request changes)
+- Market maker makes a decision (accept or reject)
 - Pool status updates based on the decision
 - If accepted, pool moves to Deal status and market maker structures the deal
 - If rejected, you can submit to another market maker or make improvements

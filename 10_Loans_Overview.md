@@ -35,8 +35,6 @@ Loans serve as the foundation for structured finance transactions:
 
 **Financial Details** - Loan amount, interest rate (coupon), payment terms, maturity date, and other financial characteristics. These details determine the loan's financial profile and contribution to pool metrics.
 
-**Loan Characteristics** - FICO scores, loan-to-value ratios, geographic location, loan type, and other characteristics that help assess loan quality and risk. These characteristics aggregate to create pool-level statistics.
-
 **Status Information** - Current status showing where the loan is in its lifecycle, such as Unmapped, Mapped, Submitted, Verified, Minted, Removed, or Reinstated. Status tracks loan progression through the workflow and shows what actions are available.
 
 **Performance Data** - Payment history, current balance, outstanding amounts, and other performance metrics. This data helps assess loan quality and track performance over time.
@@ -75,10 +73,6 @@ Loans serve as the foundation for structured finance transactions:
 
 **Removed Loans Are Excluded** - Removed loans don't affect pool calculations but remain visible for tracking purposes. This allows you to maintain pool quality while preserving complete records. Removed loans can be reinstated when issues are resolved.
 
-**Loan Characteristics Aggregate** - Individual loan characteristics (FICO scores, interest rates, etc.) aggregate to create pool-level statistics that help investors assess opportunities. Understanding loan characteristics helps you create better pools.
-
 **Status Tracks Lifecycle** - Loan status shows where each loan is in its lifecycle, from upload through mapping, processing, verification, and potentially tokenization. Understanding status helps you track loan progress.
-
-**Complete History** - The platform maintains history of loan status changes, mappings, and other actions, ensuring complete traceability. You can see how loans have progressed and who made changes.
 
 Understanding loans helps you effectively manage loan portfolios, create successful pools, ensure loan data quality, track loans throughout their lifecycle, and understand how individual loans contribute to pool-level metrics and transactions.

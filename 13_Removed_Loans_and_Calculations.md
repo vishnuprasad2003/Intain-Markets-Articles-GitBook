@@ -33,8 +33,6 @@ When loans are removed from pools, they're excluded from pool calculations but r
 
 **Automatic Recalculation** - Pool metrics recalculate automatically when loans are removed or reinstated. You don't need to manually recalculate—the system handles this automatically.
 
-**Complete Tracking** - Removed loans are tracked with who removed them and when, creating complete audit trails. You can see the complete history of loan removals and reinstatements.
-
 **Reinstatement Is Possible** - Removed loans can be reinstated if needed. When reinstated, they're included in calculations again, and metrics update automatically.
 
 **Status Indicates Removal** - Removed loans show "Removed" status, making it clear which loans are excluded from calculations. The system automatically excludes removed loans when calculating pool metrics.
@@ -42,7 +40,3 @@ When loans are removed from pools, they're excluded from pool calculations but r
 **Metrics Reflect Active Loans Only** - All pool metrics reflect only active loans, not removed ones.
 
 **Impact Is Immediate** - When loans are removed or reinstated, the impact on pool metrics is immediate. Metrics update right away to reflect the change.
-
-**No Manual Calculation Needed** - You don't need to manually recalculate metrics when loans are removed or reinstated. The system handles all calculations automatically.
-
-**Complete History Maintained** - All removal and reinstatement actions are tracked with complete history. You can see when loans were removed, who removed them, when they were reinstated, and who reinstated them.
