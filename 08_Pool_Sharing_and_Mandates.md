@@ -93,7 +93,6 @@ Use mandates when you:
    - Verify pool information is complete
    - Review pool metrics and loan characteristics
    - Ensure pool meets requirements for mandate submission
-   - Pool can be in Created or Preview status
 
 2. **Submit Pool for Mandate**
    - Navigate to the pool's details page
@@ -111,7 +110,6 @@ Use mandates when you:
    - Market maker analyzes pool details, metrics, and loan characteristics
    - Market maker reviews pool composition and quality
    - Market maker evaluates whether to accept the mandate
-   - Market maker can provide feedback before deciding
 
 4. **Market Maker Makes Decision**
    - **Accept**: Market maker accepts the mandate and commits to structuring the deal
@@ -136,7 +134,6 @@ Use mandates when you:
    - If rejected, review the reason for rejection
    - Make improvements if needed
    - Submit to another market maker if desired
-   - Pool returns to Preview status for further work
 
 ## Rules & Validations
 

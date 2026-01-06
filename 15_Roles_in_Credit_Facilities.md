@@ -36,11 +36,6 @@ Borrowers are organizations that need funding and create credit facility request
 - Monitor facility status and track term sheet and funding request status
 - View facility details and monitor borrowing capacity and utilization
 
-**Limitations:**
-- Cannot approve their own term sheets or funding requests—these require facility agent approval
-- Cannot configure master commitments—this is the facility agent's responsibility after term sheet approval
-- Cannot approve funding notices—this is the lender's responsibility
-- Cannot sign funding notices—facility agents sign on behalf of lenders
 
 **Responsibilities:**
 - Ensure term sheet information is accurate and complete
@@ -66,11 +61,6 @@ Facility agents structure and manage credit facilities, acting as intermediaries
 - Monitor facility status and track borrowing capacity
 - Manage lender groups and ensure facilities operate according to rules
 
-**Limitations:**
-- Cannot create term sheets or funding requests—these are borrower responsibilities
-- Cannot approve master commitments or funding notices—these are lender responsibilities
-- Cannot provide capital—this is the lender's role
-- Cannot approve their own reviews—approval decisions are tracked separately
 
 **Responsibilities:**
 - Review term sheets thoroughly and make informed decisions
@@ -93,11 +83,6 @@ Lenders provide capital for credit facilities. They review facilities, approve m
 - Monitor facility status and borrowing capacity
 - Evaluate drawdown requests based on their own criteria
 
-**Limitations:**
-- Cannot create term sheets or funding requests—these are borrower responsibilities
-- Cannot configure master commitments—this is the facility agent's responsibility
-- Cannot approve term sheets or funding requests—these require facility agent approval first
-- Cannot sign funding notices—facility agents sign on behalf of lenders
 
 **Responsibilities:**
 - Review facilities thoroughly before approval

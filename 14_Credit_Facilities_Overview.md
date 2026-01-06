@@ -71,7 +71,7 @@ Credit facilities serve several important purposes:
 
 **Fund Disbursement** - After lenders approve, they transfer funds and confirm transfers. Funds are disbursed to borrowers, completing the drawdown process.
 
-![Fund Transfer Confirmation](imagesByMdFilesFolder/14/Fund Transfer Confirmation.png)
+![Fund Transfer Confirmation](imagesByMdFilesFolder/14/FundTransferConfirmation.png)
 
 **Active Facilities View** - The credit facility dashboard shows all active facilities, allowing you to view facility details, check borrowing capacity, and access funding request options.
 

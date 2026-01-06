@@ -37,7 +37,7 @@ The token generation and issuance workflow begins when a funding request is appr
 
 **Stage 8: Fund Transfer Confirmation** - After approving, lenders transfer funds and confirm transfers. Each lender confirms their transfer independently, completing their participation in the drawdown. The system tracks individual lender confirmations.
 
-![Fund Transfer Confirmation](imagesByMdFilesFolder/25/Fund Transfer Confirmation.png)
+![Fund Transfer Confirmation](imagesByMdFilesFolder/25/FundTransferConfirmation.png)
 
 ## How the Workflow Progresses
 

@@ -25,8 +25,8 @@ The lifecycle supports facility setup—facility agents configure all rules and 
 
 ## What Each Status Indicates
 
-**Draft Status** indicates that the facility agent is still configuring the master commitment. Facility agents can edit all fields, set up facility rules, configure borrowing base calculations, and add lender groups. Borrowers can view the configuration but cannot create funding requests yet.
+**Draft Status** indicates that the facility agent is still configuring the master commitment. Facility agents can edit all fields, set up facility rules, configure borrowing base calculations, and add lender groups. Borrowers cannot create funding requests yet.
 
-**PendingLenderApproval Status** indicates that configuration is complete and the facility is waiting for lender approval. Facility agents can view but cannot edit. Borrowers can monitor approval progress but cannot create funding requests yet. Lenders can review the complete facility structure and approve or reject. Once at least one lender approves, the facility becomes ACTIVE.
+**PendingLenderApproval Status** indicates that configuration is complete and the facility is waiting for lender approval. Facility agents can view but cannot edit. Borrowers cannot create funding requests yet. Lenders can review the complete facility structure and approve or reject. Once at least one lender approves, the facility becomes ACTIVE.
 
 **ACTIVE Status** indicates that the facility is operational and ready for use. Borrowers can create funding requests, facility agents can review requests, and lenders can approve funding notices. All facility rules and configurations are active and enforced.
