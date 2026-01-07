@@ -29,4 +29,4 @@ The lifecycle supports facility setup—facility agents configure all rules and 
 
 **PendingLenderApproval Status** indicates that configuration is complete and the facility is waiting for lender approval. Facility agents can view but cannot edit. Borrowers cannot create funding requests yet. Lenders can review the complete facility structure and approve or reject. Once at least one lender approves, the facility becomes ACTIVE.
 
-**ACTIVE Status** indicates that the facility is operational and ready for use. Borrowers can create funding requests, facility agents can review requests, and lenders can approve funding notices. All facility rules and configurations are active and enforced.
+**ACTIVE Status** indicates that the facility is operational and ready for use. Facility agents can review requests, and lenders can approve funding notices. All facility rules and configurations are active and enforced.

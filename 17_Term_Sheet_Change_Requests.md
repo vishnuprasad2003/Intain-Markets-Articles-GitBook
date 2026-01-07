@@ -39,7 +39,6 @@ Use change requests when:
    - Navigate to your term sheet
    - Read change request details carefully
    - Understand what specific modifications are needed
-   - Note any deadlines or priorities mentioned
 
 ![Review Changes Requested - Issuer](imagesByMdFilesFolder/17/ReviewChangesRequestedIssuer.png)
 
@@ -49,7 +48,6 @@ Use change requests when:
    - Determine what fields need updating
    - Identify what documents need updating (if any)
    - Prioritize changes if multiple items are requested
-   - Understand the reason for each change
 
 ### Making Changes
 
@@ -60,12 +58,9 @@ Use change requests when:
    - Editing interface opens
 
 2. **Make Requested Modifications**
-   - Update facility name if requested
-   - Adjust maximum facility amount if needed
+   - Adjust requested commitment amount if needed
    - Modify interest rate or rate structure if requested
    - Update repayment terms if changes are needed
-   - Adjust facility term or duration if requested
-   - Update purpose or other terms as requested
    - Modify any other fields that need changes
 
 3. **Update Documents if Required**
@@ -142,8 +137,6 @@ Use change requests when:
 - You can go through multiple rounds of changes. The process can repeat until approved or rejected.
 
 - Change requests are less severe than rejection. You can update and resubmit without creating a new term sheet.
-
-- All changes are recorded. Every edit and resubmission is tracked in the audit trail.
 
 - Facility agents can request changes multiple times. You may go through several rounds of refinement.
 

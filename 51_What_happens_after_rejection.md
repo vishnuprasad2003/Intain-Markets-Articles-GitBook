@@ -29,7 +29,7 @@ When your submission is rejected, the item enters a final state and cannot proce
 
 **After Funding Request Rejection** - Review the rejection reason carefully to understand why the funding request was rejected. No funding notice is created, so the drawdown does not proceed. Create a new funding request that addresses all rejection reasons. Ensure the new request complies with facility rules, has sufficient borrowing capacity, and includes all required documentation. Submit the new request and go through the review process again. Address all issues identified in the rejection.
 
-**After Pool Mandate Rejection** - Review the rejection reason to understand why the mandate was rejected. The pool may return to Preview status, allowing you to submit to another market maker. Consider whether to address the rejection reasons before submitting to another market maker. Submit to another market maker if appropriate, or address issues and resubmit to the same market maker if allowed. Learn from rejection feedback to improve pool quality.
+**After Pool Mandate Rejection** - Once the Pool is rejected by the market maker, it allows you to submit to another market maker. Submit to another market maker if appropriate, or address issues and resubmit to the same market maker if allowed.
 
 **General Approach** - Always review rejection reasons carefully to understand what went wrong. Learn from rejections to improve future submissions. Create new items that address all rejection reasons. Ensure new submissions comply with all requirements and have all necessary information. Be prepared to go through the review process again with new submissions. Use rejection feedback as learning opportunities to improve your approach.
 

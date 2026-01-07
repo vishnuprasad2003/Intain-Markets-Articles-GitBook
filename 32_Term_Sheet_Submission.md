@@ -36,7 +36,7 @@ Use term sheet submission when:
 ![Accessing Term Sheet - Create New Term Sheet](imagesByMdFilesFolder/32/AccessingTermsheetCreateNewTermSheet.png)
 
 2. **Complete Term Sheet Information**
-   - **Total Borrowing Limit**: Enter the maximum amount you want to borrow
+   - **Requested Commitment Amount**: Enter the maximum amount you want to borrow
    - **Advance Rate**: Specify what percentage of collateral value can be borrowed (e.g., 85%)
    - **Pricing Index**: Select the base interest rate index (e.g., SOFR, SOFR 1M)
    - **Margin**: Enter the spread to be added to the pricing index (e.g., 2.5%)
@@ -52,7 +52,6 @@ Use term sheet submission when:
    - **Financial Statements**: Upload your financial statements
    - **KYC Documents**: Upload KYC documentation
    - **Collateral Data**: Upload collateral data files
-   - **Funding Sheet**: Upload funding sheet if applicable
    - Documents can only be uploaded when term sheet is in Draft or Changes Requested status. Documents are securely stored and tracked with complete history.
 
 ![Upload Documents](imagesByMdFilesFolder/32/UploadDocuments.png)
@@ -71,7 +70,7 @@ Use term sheet submission when:
 
 1. **Initiate Electronic Signature**
    - Ensure term sheet is complete and ready
-   - Click "Sign" button or similar
+   - Click "Create Draft" button
    - Electronic signature process begins
    - Signature interface opens
 
@@ -91,14 +90,7 @@ Use term sheet submission when:
 
 ![Term Sheet Signing](imagesByMdFilesFolder/32/TermSheetSigning.png)
 
-4. **Verify Signature Completion**
-   - Confirm signature is complete
-   - Review the signed version
-   - Verify signature is recorded correctly
-   - Status changes to show term sheet is signed (e.g., "BorrowerSigned")
-   - You can preview the signed version
-
-5. **Review Signed Version**
+4. **Review Signed Version**
    - Preview the signed term sheet
    - Verify all information is still correct
    - Check that signature is included
@@ -106,33 +98,28 @@ Use term sheet submission when:
 
 ### Submitting the Term Sheet
 
-1. **Final Review Before Submission**
-   - Review signed term sheet one final time
+1. **Submit for Facility Agent Review**
+   - Click "Submit Term Sheet" Action
+   - Submit Term Sheet model appears
    - Verify all information is correct
-   - Check documents are attached
-   - Ensure signature is complete
-   - Confirm you're ready to submit
+   - Click on Submit button
+   - Term sheet status changes to FAReview
 
-2. **Submit for Facility Agent Review**
-   - Click "Submit" button or similar
-   - Review any confirmation messages
-   - Understand that submission moves term sheet to review
-   - Confirm the submission action
-   - Term sheet status changes to indicate it's under facility agent review
+![Review Term Sheet - FA](imagesByMdFilesFolder/32/SubmitTermSheetToFA.png)
 
-3. **Submission Processing**
+2. **Submission Processing**
    - Term sheet is submitted to facility agent
    - Status changes to "FAReview"
    - Facility agent receives notification
    - You receive confirmation of submission
 
-4. **Wait for Facility Agent Decision**
+3. **Wait for Facility Agent Decision**
    - Facility agent reviews your term sheet
    - Review typically takes a few days
    - You receive notifications about status changes
    - You can monitor review progress
 
-5. **Handle Facility Agent Decision**
+4. **Handle Facility Agent Decision**
    - **If Approved**: Master commitment is automatically created, you receive notification
    - **If Rejected**: You receive rejection reason, you can create a new term sheet
    - **If Changes Requested**: You receive change request details, you can update and resubmit
@@ -147,17 +134,11 @@ Use term sheet submission when:
 
 - Required documents must be uploaded - missing documents may prevent submission or cause rejection.
 
-- You can submit from DRAFT status without signing - signing is optional, but BorrowerSigned status allows preview before submission.
-
-- Status must be DRAFT or BorrowerSigned before submission - system validates status before allowing submission.
-
 - Once submitted, editing is restricted - you cannot edit term sheets while they're under review.
 
 - Submission moves term sheet to review - status changes to indicate it's under facility agent review.
 
 - Facility agent makes decision - you must wait for facility agent to review and decide.
-
-- Complete audit trail - all submissions and status changes are recorded with timestamps.
 
 - Notifications are sent - you receive notifications when term sheet is submitted and when decisions are made.
 
@@ -176,6 +157,5 @@ After facility agent approval:
 - Facility agent configures the complete facility structure
 - Facility agent submits master commitment for lender approval
 - Lenders review and approve the facility
-- Facility becomes active, and you can create funding requests
 
 Understanding term sheet submission helps you effectively propose credit facilities, complete the submission process correctly, and move through the approval workflow to active facility setup.

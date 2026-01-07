@@ -25,13 +25,13 @@ Use pool and loan review when:
 
 ## Review Process
 
-**Accessing Shared Pools** - When issuers share pools with you, you receive notifications. Check notifications for new pool shares, navigate to shared pools or preview queue, open pool details, and review complete pool information.
+**Accessing Shared Pools** - When issuers share pools with you, you receive notifications. Check notifications for new pool shares, navigate to Pools section, open pool details, and review complete pool information.
 
 **Reviewing Pool Information** - Review complete pool information including pool name, asset class, transaction type, description, mapped loans, pool metrics, organization assignments, and current status. Understand the full context of the investment opportunity.
 
-**Analyzing Pool Metrics** - Review total pool balance and size, check number of loans in pool, evaluate weighted average coupon (interest rate characteristics), assess weighted average FICO (credit quality and borrower credit scores), review loan-to-value ratios (collateral characteristics for secured loans), check debt service metrics (payment capacity and service coverage), review geographic distribution (borrower locations and geographic risk), and review all relevant pool statistics and characteristics.
+**Analyzing Pool Metrics** - Review total pool balance and size, check number of loans in pool, evaluate weighted average coupon (interest rate characteristics), check debt service metrics (payment capacity and service coverage), review geographic distribution (borrower locations and geographic risk), and review all relevant pool statistics and characteristics.
 
-**Reviewing Loan Characteristics** - View individual loan details, assess loan distribution and diversity, evaluate risk characteristics, review performance metrics if available, check loan quality indicators, and assess loan composition.
+**Reviewing Loan Characteristics** - View individual loan details, assess loan distribution and diversity, evaluate risk characteristics, review performance metrics, check loan quality indicators, and assess loan composition.
 
 **Evaluating Investment Opportunity** - Assess investment attractiveness, evaluate risk-return profile, consider return potential, determine fit with your investment criteria, assess marketability and liquidity, and evaluate competitive positioning.
 
@@ -40,8 +40,6 @@ Use pool and loan review when:
 ## Evaluation Criteria
 
 **Pool Quality Assessment** - Evaluate overall pool quality, assess loan characteristics and diversity, review pool metrics and statistics, check loan quality indicators, and assess pool composition and structure.
-
-**Risk Profile Evaluation** - Evaluate credit risk, assess concentration risk, review geographic risk, check industry or sector risk, evaluate overall risk-return profile, and determine if risk is acceptable for your investment criteria.
 
 **Investment Attractiveness** - Assess investment appeal, evaluate return potential, review competitive positioning, check marketability and liquidity, and determine if opportunity fits your investment strategy.
 

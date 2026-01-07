@@ -1,64 +1,79 @@
 ---
 title: Signature Visibility
-description: Understand who can see signatures and when they're visible
+description: Understand who can see signatures and when they're visible in Intain Markets
 ---
 
 # Signature Visibility
 
 ## Overview
 
-Electronic signatures are used throughout Intain Markets for document signing, providing legal validity and complete traceability. This guide explains who can see signatures, when they're visible, and how to access signed documents.
+Electronic signatures are used for term sheets, master commitments, and funding notices. This guide explains who can see signatures, when they're visible, and how signature status is tracked.
 
-## How to Navigate the Platform
+## Term Sheet Signatures
 
-**Accessing Signed Documents** - To view signed documents, navigate to the item (term sheet, master commitment, funding notice) and go to the Documents section. You'll see signed documents listed there, and you can click to view or download them. The platform shows you signed documents based on your role and permissions.
+**Borrower Signature** - When borrower signs:
+- Borrower sees signature immediately after signing
+- Facility agent sees signature when term sheet is in FAReview status
+- Status changes to "BorrowerSigned" after completion
+- Visible in term sheet's document section
 
-**Finding Signature Information** - When viewing signed documents, you can see signature details including who signed, when they signed, and signature information. The platform displays this information clearly, showing the complete signature history for the document.
+**Who Can See:** Borrowers and facility agents
 
-**Understanding Visibility Rules** - Signature visibility is controlled by your role and the workflow stage. Different roles can see different signatures at different stages. The platform automatically shows you signatures you're authorized to see based on your role and the document's workflow stage.
+**When Visible:** Immediately after signing, remains visible throughout workflow
 
-**Checking Signature Status** - You can check whether signatures are complete by viewing the document's status and signature information. The platform shows you which parties have signed and which signatures are still pending.
+## Master Commitment Signatures
 
-**Accessing Signature Details** - When viewing signed documents, you can see complete signature details including signer name, organization, timestamp, and signature information.
+**Lender Signatures** - When lenders sign:
+- Each lender sees their own signature after signing
+- Facility agent sees all lender signatures
+- Borrower sees lender signatures after facility becomes ACTIVE
+- Individual lender signature status tracked in lenderGroups array (lenderStatus field)
 
-**Role-Based Access** - Signature visibility depends on your role. Different roles see different signatures at different stages. The platform automatically filters signature visibility based on your role.
+**Who Can See:** Lenders see their own, facility agents see all, borrowers see after activation
 
-## What You Will See
+**When Visible:** After e-signature completion, remains visible throughout facility lifecycle
 
-**After You Sign** - Once you complete a signature, it becomes visible immediately to authorized parties. The signed document is stored securely, and signature completion is tracked with timestamp and signer information.
+## Funding Notice Signatures
 
-**Authorized Party Views** - Authorized parties can see signatures based on document type and workflow. For term sheets, borrowers and facility agents can see the borrower's signature. For master commitments, lenders, facility agents, and borrowers can see lender signatures. For funding notices, facility agents, borrowers, and lenders can see relevant signatures.
+**Facility Agent Signature** - When facility agent signs:
+- Facility agent sees signature after signing
+- Borrower sees signature after signing
+- Lenders see signature when funding notice is visible to them
+- Signature tracked per lender in tokenDistribution array
 
-**Signature Status Indicators** - The platform shows signature status through indicators and badges. You'll see which signatures are complete and which are pending.
+**Per-Lender Signing** - Facility agent signs separately for each lender:
+- Each lender's signature status tracked individually
+- esignatureStatus field shows 'pending' or 'ESIGN_COMPLETED'
+- Each lender sees their specific signed document
 
-**Complete Documents** - When viewing signed documents, you'll see the complete document with all signatures. The platform displays signatures clearly, showing who signed and when.
+**Who Can See:** Facility agents, borrowers, and lenders based on role and funding notice status
 
-**Signature History** - The platform maintains complete signature history, showing all signatures on a document with timestamps and signer information.
+**When Visible:** After completion, remains visible throughout funding notice lifecycle
 
-**Role-Based Visibility** - Signature visibility is controlled by role and workflow stage. You'll only see signatures you're authorized to see based on your role. Different roles see different signatures at different stages of the workflow.
+## Signature Status Tracking
 
-**Pending Signatures** - You can see which signatures are pending and which parties need to sign. The platform shows pending signatures clearly.
+**Term Sheet** - Status changes to "BorrowerSigned" after DocuSign completion. Signed PDF stored in IPFS.
 
-**Completed Signatures** - You can see which signatures are complete and which parties have signed. The platform shows completed signatures with timestamps and signer information.
+**Master Commitment** - lenderStatus in lenderGroups array shows 'pending_approval', 'approved', or 'esignature_completed'. Facility becomes ACTIVE when at least one lender approves. Signed PDF stored in IPFS.
 
-## Helpful Tips
+**Funding Notice** - esignatureStatus in tokenDistribution array shows 'pending' or 'ESIGN_COMPLETED' for each lender. eSignaturePendingCount tracks remaining lenders. eSignatureStatus shows aggregate status.
 
-**Signatures Are Permanent** - Once you sign a document, the signature is permanent and cannot be easily undone. Make sure you're ready to sign before completing the signature process.
+## Accessing Signed Documents
 
-**Check Signature Status** - Before taking actions that depend on signatures, check the signature status to ensure all required signatures are complete. The platform shows you which signatures are pending and which are complete.
+**Term Sheets** - Navigate to term sheet details → Documents section → View signed PDF
 
-**Understand Role-Based Visibility** - Signature visibility depends on your role and the workflow stage. Different roles can see different signatures at different times.
+**Master Commitments** - Navigate to master commitment details → Documents section → View signed PDF with all lender signatures
 
-**Access Signed Documents** - Signed documents are stored securely and can be accessed through the item's Documents section. Navigate to the item and look for the Documents section to find signed documents.
+**Funding Notices** - Navigate to funding notice details → Documents section → View signed PDF for your lender allocation
 
-**Complete Audit Trail** - All signatures are recorded with complete information—who signed, when they signed, and signature details. This creates a complete audit trail for compliance and accountability purposes.
+## Important Notes
 
-**Legal Validity** - Electronic signatures are legally valid and enforceable. Signatures provide legal validity to documents and create binding commitments.
+**Role-Based Visibility** - Signature visibility depends on role and workflow stage.
 
-**Signature Requirements** - Some documents require signatures before they can proceed to the next stage.
+**Status Controls Visibility** - Some signatures visible only when items reach certain statuses (e.g., lender signatures visible to borrowers after facility becomes ACTIVE).
 
-**Multiple Signatures** - Some documents require multiple signatures from different parties.
+**Audit Trail** - All signatures recorded with who signed, when, and signature details.
 
-**Signature Order** - Some documents require signatures in a specific order.
+**Permanent Records** - Signed documents stored in IPFS. Signatures cannot be removed or modified once completed.
 
-**Track Signing Progress** - Monitor signature status to track signing progress. The platform shows you which signatures are complete and which are pending.
+**Signature Requirements** - Term sheets must be signed before submission. Master commitments must be signed before activation. Funding notices must be signed before lender review.

@@ -1,70 +1,92 @@
 ---
 title: End-to-End Traceability
-description: Understand how the platform tracks all actions and changes for complete audit trails
+description: Understand how Intain Markets tracks actions and changes
 ---
 
 # End-to-End Traceability
 
 ## Overview
 
-End-to-end traceability means that every action, status change, and decision in Intain Markets can be tracked from beginning to end, with complete records of who did what, when they did it, and what changed as a result. This traceability is built into the platform's architecture, ensuring full transparency, accountability, and compliance support for all transactions.
+Intain Markets tracks every action, status change, and decision with records of who did what, when, and what changed. All changes are recorded automatically with attribution and timestamps.
 
-## How the Platform Is Designed
+## What Gets Tracked
 
-The platform is designed with the principle that complete traceability is essential for structured finance transactions. Every action, status change, approval decision, document upload, and data modification is automatically recorded with attribution, timestamps, and context. This creates comprehensive audit trails that support compliance, enable accountability, and provide transparency for all parties involved in transactions.
+### Status History
 
-**Traceability as a Fundamental Design Element** - Traceability is not an optional feature—it's a fundamental design element that:
+**Pool Status Changes** - Created → Preview → Mandate Pending → Deal
+- Records who changed status, when and comments
 
-- **Records all actions automatically** - You don't need to do anything special—tracking happens automatically for every action. Whether you create a pool, submit a term sheet, approve a funding request, or make any other action, it's automatically recorded with who did it, when, and what changed.
+**Term Sheet Status Changes** - Draft → BorrowerSigned → FAReview → Accepted/Rejected/CHANGES_REQUESTED
+- Records who changed status, when and reasons
 
-- **Maintains complete history** - All changes are preserved in chronological order, creating complete historical records. You can see how items progressed through their workflows, what changed, when changes occurred, and who was responsible for each change. This history is permanent and cannot be deleted or modified.
+**Master Commitment Status Changes** - Draft → PendingLenderApproval → ACTIVE
+- Records facility agent actions and lender approvals
 
-- **Attributes actions to users** - Every action is linked to the specific user who performed it, ensuring accountability. You can see exactly who created an item, who approved it, who made changes, and who was responsible for specific decisions. This attribution ensures that all actions are traceable to specific individuals.
+**Funding Request Status Changes** - DRAFT → FAReview → APPROVED/REJECTED/CHANGES_REQUESTED
+- Records borrower submissions and facility agent decisions
 
-- **Captures context** - Status changes, approvals, and modifications are recorded with context about what changed and why. Comments, reasons, and related information are preserved, providing complete context for historical records.
+**Funding Notice Status Changes** - PENDING_TOKEN_GENERATION → TOKEN_GENERATED → TOKEN_APPROVED
+- Records token generation, borrower approval, and lender decisions
 
-- **Preserves document versions** - Previous versions of documents are saved when changes are made. This maintains complete document history. You can compare versions, see what changed, and understand how documents progressed.
+### Action History
 
-- **Tracks relationships** - Changes to related items are tracked, showing how items affect each other. When a term sheet is approved and a master commitment is created, the relationship is tracked. When a funding request is approved and a funding notice is generated, the relationship is tracked. This relationship tracking shows how items are connected and how changes affect related items.
+**Pool Actions** - Creation, sharing, mandate submission, loan mapping, removal, reinstatement
 
-The platform maintains these records permanently, ensuring that audit trails are complete, accurate, and available for compliance and accountability purposes. This permanent record-keeping ensures that historical information remains available for audits, compliance reviews, and accountability purposes.
+**Term Sheet Actions** - Creation, editing, signing, submission, approval, rejection, change requests, document uploads
 
-## What This Enables for Users
+**Master Commitment Actions** - Auto-creation, facility configuration, lender group updates, lender approvals
 
-**For All Users**, traceability provides confidence that all actions are recorded, shows what happened and when, and supports accountability by attributing actions to specific users.
+**Funding Request Actions** - Creation, editing, submission, approval, rejection, change requests, document uploads
 
-**For Compliance and Audit Purposes**, traceability provides complete audit trails that support regulatory requirements, enable internal audits, and demonstrate proper process execution.
+**Funding Notice Actions** - Auto-generation, token generation, token distribution, borrower approval, lender approvals, fund transfer confirmations
 
-**For Issue Resolution**, traceability helps identify when issues occurred, who was involved, and what changed. This enables faster problem resolution and helps prevent similar issues in the future.
+### Document History
 
-**For Transparency**, traceability provides visibility into all relevant activities, enabling parties to see what happened, when it happened, and who was responsible.
+**IPFS Storage** - Documents are stored in IPFS with hash verification. Each upload generates an IPFS hash stored in the database. Document history arrays track upload history with timestamps and user attribution.
 
-**For Accountability**, traceability ensures that all actions are attributed to specific users, creating accountability for decisions and actions.
+**Term Sheet Documents** - Collateral profile, financial statements, KYC documents, collateral data uploads tracked with IPFS hash, uploader, and timestamp
 
-The traceability structure enables complete transparency while maintaining security and appropriate access controls.
+**Funding Request Documents** - Collateral addendum, financial statements, KYC documents, supporting documents uploads tracked with IPFS hash, uploader, and timestamp
 
-## Key Principles to Understand
+**Document Versioning** - Previous versions are preserved when documents are updated. Document history arrays maintain version history.
 
-**Automatic Recording** - Traceability happens automatically—you don't need to do anything special to enable it. Every action, status change, and decision is recorded without requiring additional steps from users.
+### Relationship Tracking
 
-**Complete History** - All changes are preserved in chronological order, creating complete historical records. You can see how items progressed through their workflows, what changed, and when changes occurred.
+**Term Sheet → Master Commitment** - Master commitment links to term sheet via termSheetId
 
-**User Attribution** - Every action is attributed to the specific user who performed it. This ensures accountability and shows who was responsible for specific actions or decisions.
+**Master Commitment → Funding Requests** - Funding requests link via masterCommitmentId
 
-**Timestamp Accuracy** - All timestamps are accurate and consistent, using standardized time formats. This ensures that you can accurately determine when events occurred and in what order.
+**Funding Request → Funding Notice** - Funding notice links to funding request
 
-**Status Change Tracking** - Every status change is recorded with who changed it, when it changed, what the previous status was, and what the new status is. This creates complete status progression history.
+**Pool → Loans** - Loans link to pools via poolid field
 
-**Action Logging** - All actions are logged with action type, who performed the action, when it occurred, what was affected, and what the result was.
+### User Attribution
 
-**Activity Details** - You can view detailed activity information by clicking on specific activities, which shows complete context about what happened, who was involved, and when it occurred.
+Every action records: user ID, user name, organization ID and name, timestamp, and role.
 
-**Audit Trail** - The audit tab provides comprehensive audit trail information, showing all changes, approvals, and actions with complete attribution and timestamps.
+Status changes record: who changed and reason.
 
-**Document Versioning** - Previous versions of documents are saved when changes are made. This maintains complete document history and enables you to see how documents evolved over time.
+Approvals record: approver, timestamp, comments, and role.
 
-**Permanent Records** - Audit trails are permanent and cannot be deleted or modified. This ensures that historical records remain accurate and available for compliance and accountability purposes.
+Rejections record: rejector, timestamp, reason, and role.
 
-**Context Preservation** - Changes are recorded with context about what changed and why. Comments, reasons, and related information are preserved, providing complete context for historical records.
+## How to View History
 
-**Access Control** - While traceability provides transparency, access to audit trails is controlled based on roles and permissions. This ensures that sensitive information remains appropriately protected while maintaining transparency for authorized parties.
+Navigate to item detail pages and look for:
+- **Status History** - Shows all status changes chronologically
+- **Action History** - Shows all actions taken chronologically
+- **Document History** - Shows document uploads and updates
+
+History is organized chronologically. Clicking entries shows complete details about what happened, who was involved, and when.
+
+## Important Notes
+
+**Automatic Recording** - Tracking happens automatically. No additional steps required.
+
+**Complete History** - All changes are preserved in chronological order.
+
+**User Attribution** - Every action is attributed to the user who performed it.
+
+**Permanent Records** - Audit trails are permanent and cannot be modified.
+
+**Access Control** - Access to audit trails is controlled based on roles and permissions.

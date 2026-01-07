@@ -79,7 +79,6 @@ Use pool creation and sharing when:
    - Confirm loan selection
    - Click "Map to Pool" or similar button
    - Loans are assigned to the pool
-   - Loan status changes to "Mapped"
 
 ![Loan Map to Pool - Issuer](imagesByMdFilesFolder/30/LoanMapToPoolIssuer.png)
 
@@ -131,7 +130,7 @@ Use pool creation and sharing when:
 ![Pools Sharing Settings](imagesByMdFilesFolder/30/Pools_Sharing_Settings.png)
 
 4. **Complete Sharing**
-   - Click "Share" or "Save" button
+   - Click "Share" button
    - Sharing permissions are saved
    - Recipients receive notifications
    - Pool becomes visible to shared parties
@@ -164,8 +163,6 @@ Use pool creation and sharing when:
 - Removed loans are excluded from pool calculations - if you remove loans, metrics update automatically.
 
 - Pool status affects sharing capabilities - some statuses may restrict sharing or require certain statuses before sharing.
-
-- Sharing is recorded in audit trail - all sharing actions are tracked with who shared what with whom and when.
 
 - Recipients must have appropriate roles - market makers can accept mandates, investors can review opportunities, etc.
 

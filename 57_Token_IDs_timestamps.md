@@ -1,44 +1,95 @@
 ---
 title: Token IDs and Timestamps
-description: Understand how tokens are tracked with unique identifiers and timestamps
+description: Understand how FT tokens are tracked with unique identifiers and timestamps in Intain Markets
 ---
 
 # Token IDs and Timestamps
 
 ## Overview
 
-Tokens created for funding notices have unique identifiers and timestamps that enable complete tracking and auditability. Each token has a unique ID and all token events are timestamped, providing complete traceability for all token-related activities.
+FT tokens created for funding notices have unique contract addresses and timestamps. Each token has a unique contract address, and all token events are timestamped.
 
-## Reference Details
+## Token Creation and Identification
 
-**Token IDs** - Token IDs are unique identifiers that distinguish each token from other tokens. Each token has a unique ID that enables tracking of individual tokens through their lifecycle. Token IDs link to blockchain records and platform records, helping maintain complete audit trails and enabling token transfers and tracking. Token IDs are permanent and cannot be changed, ensuring consistent tracking throughout the token lifecycle.
+**FT Contract Address** - Each funding notice generates a unique FT contract:
+- ftContractAddress field stores the blockchain contract address
+- Contract address is unique for each funding notice
+- Links to blockchain records for verification
 
-**Timestamps** - Timestamps record exactly when events occurred, creating complete chronological records of token activities. Timestamps are essential components of audit trails, help track process progression, and enable verification of when events occurred. Various token events are timestamped, including token creation, token distribution to lenders, borrower approval of token transfer, lender receipt of tokens, token transfers, and all other significant token events. Timestamps use standardized time formats for accuracy and consistency.
+**Token Distribution** - Tokens allocated to lenders in tokenDistribution array:
+- Each lender receives tokensAllocated amount
+- tokensAllocated calculated from lender votingPercentage
+- Individual lender allocations tracked separately
+- Total tokens equal the drawdown amount
 
-**Where Token Information Appears** - Token IDs and timestamps appear in funding notice details, token distribution information showing token allocation with IDs and timestamps, blockchain records linking to token IDs, audit trails showing complete token history, and reports and exports that include token tracking information. This information is accessible throughout the platform where token-related information is displayed.
+**Token Generation Timestamps** - Token creation timestamped:
+- ftCreatedAt records when tokens were created
+- ftCreationTransactionHash records the blockchain transaction
+- totalTokensMinted records the total amount created
+- ftTotalSupply records the total supply with decimals
 
-**How to Access Token Information** - You can access token information by navigating to funding notice details and looking for token information sections. Token distribution arrays show token IDs and allocation details. Blockchain records can be accessed using token IDs for verification. Audit trails show complete token history with timestamps. This access helps you track tokens and verify token information.
+## Token Approval Tracking
 
-**Token Tracking** - Token IDs enable tracking of individual tokens through their entire lifecycle from creation to transfer. Timestamps show when each event occurred, creating a complete timeline of token activities. Combined, token IDs and timestamps provide complete traceability and auditability for all token-related activities. This tracking ensures complete transparency and accountability.
+**Borrower Token Approval** - When borrower approves token transfer:
+- approvedAt timestamp records approval time
+- approvalTransactionHash records the blockchain transaction
+- issuedAt timestamp records when approval was processed
+- Status changes to TOKEN_APPROVED after approval
 
-**Blockchain Integration** - Token IDs link to blockchain records, enabling verification on the blockchain. This provides additional security and transparency for token operations. Blockchain records provide immutable verification of token information and activities. Understanding blockchain integration helps you appreciate how tokens are secured and verified.
+**Approval Details** - Includes borrower wallet address (issuerAddress), Intain admin wallet address, approved token amount, blockchain transaction details
 
-**Token Distribution Tracking** - Token distribution arrays track how tokens are allocated to lenders. Each lender's allocation includes token IDs and timestamps. This tracking ensures complete transparency in token distribution. Understanding distribution tracking helps you see how tokens are allocated and when distributions occurred.
+## Per-Lender Token Tracking
+
+**Individual Lender Allocations** - Each lender's tokens tracked:
+- tokensAllocated shows amount allocated
+- votingPercentage determines allocation percentage
+- commitmentAmount shows lender's commitment
+- lenderOrgId and lenderName identify the lender
+
+**Lender Token Status** - Token status tracked per lender:
+- mintingStatus: 'pending' or 'completed'
+- lenderApprovalStatus: 'PENDING', 'APPROVED', or 'REJECTED'
+- amountTransferred: 'pending' or 'transferred'
+- esignatureStatus: 'pending' or 'ESIGN_COMPLETED'
+
+**Timestamps Per Lender** - Each lender's actions timestamped:
+- updatedAt timestamp for each status change
+- updatedBy field records who made the change
+- Individual timestamps for approval, rejection, and fund transfer
+
+## Blockchain Integration
+
+**Avalanche C-Chain** - Tokens created on Avalanche C-Chain:
+- FT contracts deployed on Avalanche network
+- Contract addresses link to Avalanche blockchain records
+- Transaction hashes enable blockchain verification
+
+**Solana Integration** - Users can choose Solana for FT transfers:
+- Platform supports both Avalanche and Solana networks
+- Users select preferred blockchain during token generation
+- Solana tokens follow same tracking principles
+- Contract addresses and transaction hashes tracked similarly
+
+**Blockchain Verification** - Token contract addresses link to blockchain records, enabling independent verification.
+
+## Where Token Information Appears
+
+**Funding Notice Details** - Shows ftContractAddress, token distribution with lender allocations, token generation timestamps, approval timestamps and transaction hashes
+
+**Token Distribution Array** - Shows each lender's tokensAllocated amount, individual lender status and timestamps, per-lender approval and transfer status
+
+**Audit Trail** - Token activities recorded in status history, action history, complete timeline of token events, blockchain transaction references
 
 ## Important Notes
 
-**Unique Identification** - Each token has a unique ID that enables tracking and verification. Token IDs are permanent and cannot be changed, ensuring consistent tracking throughout the token lifecycle.
+**Unique Contract Addresses** - Each funding notice has a unique FT contract address. Contract addresses are permanent.
 
-**Complete Timestamping** - All significant token events are timestamped, creating complete chronological records. Timestamps are accurate and consistent, using standardized time formats.
+**Timestamping** - All token events timestamped: creation, distribution, approval, transfer. Timestamps use standardized formats.
 
-**Complete Audit Trail** - Token IDs and timestamps create complete audit trails for all token activities. This supports compliance requirements and enables complete transparency in token operations.
+**Audit Trail** - Token IDs and timestamps create audit trails. All token activities tracked from creation through transfer.
 
-**Verification Capability** - Token IDs and timestamps enable verification of token information and activities. You can verify when tokens were created, distributed, and transferred using this information.
+**Blockchain Verification** - Token contract addresses link to blockchain records, enabling independent verification.
 
-**Blockchain Integration** - Token IDs link to blockchain records, enabling verification on the blockchain. This provides additional security and transparency for token operations.
+**Permanent Records** - Token information is permanent. Contract addresses, transaction hashes, and timestamps remain accurate.
 
-**Permanent Records** - Token IDs and timestamps are permanent records that cannot be modified. This ensures that token history remains accurate and available for audit and compliance purposes.
-
-**Distribution Transparency** - Token distribution arrays show complete allocation details with IDs and timestamps. This ensures transparency in how tokens are distributed to lenders.
-
-**Complete Lifecycle Tracking** - Token IDs and timestamps enable tracking from creation through distribution to transfer. This provides complete lifecycle visibility.
+**Network Choice** - Users can choose between Avalanche and Solana networks for FT tokens. Both networks provide tracking and verification.

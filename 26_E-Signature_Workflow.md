@@ -15,9 +15,9 @@ The e-signature workflow spans multiple stages of the credit facility process. B
 
 ## Key Stages
 
-**Stage 1: Term Sheet Signing (Borrowers)** - Borrowers electronically sign term sheets when status is Draft. After signing completion, term sheet status changes to show it's signed. Borrowers can then submit term sheets for facility agent review.
+**Stage 1: Term Sheet Signing (Borrowers)** - Borrowers electronically sign term sheets when status is Draft. After signing completion, Borrowers can then submit term sheets for facility agent review.
 
-**Stage 2: Master Commitment Signing (Lenders)** - Lenders electronically sign master commitments to approve facilities. After facility agent finalizes master commitment (Draft → PendingLenderApproval), lenders sign via DocuSign. Any lender approval activates the facility (PendingLenderApproval → ACTIVE). E-Signature envelope is generated for documentation after approval. Individual lender approval status is tracked separately.
+**Stage 2: Master Commitment Signing (Lenders)** - Lenders electronically sign master commitments to approve facilities. After facility agent finalizes master commitment (Draft → PendingLenderApproval), lenders sign via AdobeSign. Any lender approval activates the facility (PendingLenderApproval → ACTIVE). E-Signature envelope is generated for documentation after approval. Individual lender approval status is tracked separately.
 
 **Stage 3: Funding Notice Signing (Facility Agents)** - Facility agents sign funding notices for each lender individually after tokens are created. Each lender's signature status is tracked separately. Funding notice status remains as tokens generated during this process.
 
@@ -27,11 +27,11 @@ The e-signature workflow spans multiple stages of the credit facility process. B
 
 ## How the Workflow Progresses
 
-**Term Sheet Signing Flow** - Borrowers complete term sheets in Draft status, then sign electronically. After signing completion, term sheet status changes to show it's signed. Borrowers can then submit term sheets for facility agent review. Facility agents review and make decisions (Approve, Reject, or Request Changes). If approved, master commitments are automatically created.
+**Term Sheet Signing Flow** - Borrowers complete term sheets in Draft status, then sign electronically. After signing completion, Borrowers can then submit term sheets for facility agent review. Facility agents review and make decisions (Approve, Reject, or Request Changes). If approved, master commitments are automatically created.
 
-**Master Commitment Signing Flow** - Facility agents configure master commitments in Draft status, then finalize for lender approval. Lenders review and sign electronically to approve facilities. Any lender signature activates the facility. After activation, borrowers can create funding requests.
+**Master Commitment Signing Flow** - Facility agents configure master commitments in Draft status, then finalize for lender approval. Lenders review and sign electronically to approve facilities. Any lender signature activates the facility.
 
-**Funding Notice Signing Flow** - After funding request is approved, funding notice is automatically created. Facility agent generates tokens and configures distribution, which creates tokens and changes status to show tokens are generated. Facility agents then sign for each lender individually. Each lender's signature status is tracked separately. Status remains as tokens generated during signing. After all signatures complete, borrowers can approve token transfers. Lenders can then review and approve drawdowns.
+**Funding Notice Signing Flow** - After funding request is approved, funding notice is automatically created. Facility agent generates tokens and configures distribution, which creates tokens and changes status to show tokens are generated. Facility agents then sign for each lender individually. Each lender's signature status is tracked separately. Status remains as tokens generated during signing.
 
 **Signature Tracking** - Throughout the workflow, signatures are tracked with complete details including who signed, when they signed, and what document was signed. This creates complete audit trails for compliance and accountability.
 
