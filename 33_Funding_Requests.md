@@ -27,10 +27,10 @@ Use funding requests when:
 ### Creating Funding Requests
 
 1. **Access Funding Request Creation**
-   - Navigate to your active credit facility
-   - Go to Funding Requests section
-   - If you have a draft request, it opens with your saved data
-   - If no draft exists, a new draft is created with facility information pre-filled
+   - Navigate to the credit facility section
+   - Click on Funding Requests button for the facility you need to raise funding
+   - If you have a draft request, it opens with the existing funding request without creating new one
+   - If no draft exists, a new draft is created
    - Funding request form opens ready for you to enter details
 
 ![Funding Request Creation - Issuer](imagesByMdFilesFolder/33/FundingRequest_Creation_Issuer.png)
@@ -57,7 +57,6 @@ Use funding requests when:
 
 5. **Review Request Information**
    - Review all entered information for accuracy
-   - Verify amount is within available borrowing capacity
    - Check purpose is clearly described
    - Ensure documentation is complete
    - Confirm all required fields are filled
@@ -69,10 +68,9 @@ Use funding requests when:
 ### Managing Funding Requests
 
 1. **View All Requests**
-   - Navigate to Funding Requests section
+   - Navigate to Credit Facility section
    - See all your funding requests
    - Filter by facility, status, or date if needed
-   - View request list with status indicators
 
 2. **Track Request Status**
    - **Draft**: Can edit freely, not yet submitted
@@ -93,15 +91,13 @@ Use funding requests when:
    - Understand what modifications are needed
    - Update request with requested changes
    - Address all requested items
-   - Click "Resubmit" or "Submit for Review" button
+   - Submit again to FA for Review
    - Request status changes to indicate it's under review again
    - Facility agent receives notification
-   - Resubmit for review
 
 5. **View Request Details**
    - Open individual request details
    - Review complete request information
-   - See status history and updates
    - Check facility agent comments or reasons
    - View attached documents
 
@@ -111,7 +107,6 @@ Use funding requests when:
    - Funding notice is automatically created
    - You receive notification of approval
    - Monitor funding notice progress
-   - Approve token transfer when ready
    - Track lender approvals and fund transfers
 
 2. **If Rejected**
@@ -146,10 +141,6 @@ Use funding requests when:
 
 - Required documentation must be provided - missing documents may result in rejection or change request.
 
-- Status controls what actions are available - you can only edit draft requests or requests with changes requested.
-
-- Complete audit trail - all requests, submissions, and outcomes are recorded with timestamps and details.
-
 ## What Happens Next
 
 After creating a funding request:
@@ -161,7 +152,6 @@ After creating a funding request:
 After facility agent approval:
 - Funding notice is automatically created
 - Tokens are generated and distributed
-- You approve token transfer
 - Funding notice becomes visible to lenders
 - Lenders review and approve drawdowns
 - Funds are transferred as lenders confirm

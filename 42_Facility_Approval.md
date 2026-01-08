@@ -24,7 +24,7 @@ Use facility approval when:
 
 ## Review Process
 
-**Accessing Master Commitments** - When facility agents submit master commitments for lender approval, you receive notifications. Navigate to master commitments for approval, open master commitment details, and review all information provided.
+**Accessing Master Commitments** - When facility agents submit master commitments for lender approval, you receive notifications. Navigate to oppurtunities for approval, open master commitment details, and review all information provided.
 
 **Review Interface** - The review interface provides comprehensive information about the master commitment, including all facility terms, rules, and lender configuration. You can review the complete facility structure to make informed decisions.
 
@@ -56,8 +56,6 @@ Use facility approval when:
 
 **Reject Master Commitment** - Reject when facility doesn't meet your criteria: facility structure concerns, terms are inappropriate, borrower creditworthiness issues, facility setup problems, or risk-return profile unacceptable. Click Reject button, provide rejection reason if needed, enter comments explaining rejection, confirm rejection, your rejection doesn't prevent other lenders from approving, and parties receive notifications.
 
-**Decision Documentation** - Ensure all decisions are properly documented, provide clear reasons for decisions, include relevant comments or explanations, and maintain complete audit trail of decisions.
-
 ## Rules & Validations
 
 - Any lender approval activates the facility. If status is not already ACTIVE, it updates to ACTIVE on first lender approval. You don't need all lenders to approve before facility becomes active.
@@ -74,18 +72,11 @@ Use facility approval when:
 
 - Decisions are final once submitted. You cannot easily reverse approval decisions.
 
-- Complete audit trail. All approvals and rejections are recorded with timestamps and details.
-
-- Borrower and facility agent notifications. Parties are notified when facilities are approved and activated.
-
-- Individual tracking. Each lender's approval status is tracked independently.
-
 ## What Happens Next
 
 After approving a master commitment:
 - Facility becomes active and operational (if first lender approval)
 - Status changes to ACTIVE
-- Borrowers can create funding requests
 - Facility agent can manage active facility
 - You can participate in funding
 - Facility is fully functional

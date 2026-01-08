@@ -33,10 +33,6 @@ A: No, once submitted, you cannot edit term sheets while they're under review. I
 
 A: When your term sheet is approved, a master commitment is automatically created. The facility agent configures the complete facility structure, then submits it for lender approval. Once lenders approve, the facility becomes active, and you can create funding requests. Approval triggers the facility setup process.
 
-**Q: Can I withdraw a term sheet after submitting it?**
-
-A: Withdrawal depends on term sheet status and workflow stage. Once under review, withdrawal may not be possible. Check term sheet status and workflow rules to see if withdrawal is available. Some statuses may allow withdrawal while others do not.
-
 ### Master Commitment Questions
 
 **Q: Why was a master commitment created automatically?**
@@ -46,10 +42,6 @@ A: Master commitments are automatically created when term sheets are approved. T
 **Q: How long does lender approval take?**
 
 A: Lender approval time varies depending on lender workload and facility complexity. Any lender approval activates the facility - you don't need all lenders to approve. You'll be notified when the facility becomes active. Approval timing depends on lender processes.
-
-**Q: Can I see which lenders have approved?**
-
-A: Yes, you can typically see lender approval status. Each lender's approval status is tracked individually, showing who has approved and when. This information is visible on the master commitment details page. Lender approval tracking provides transparency.
 
 **Q: Can I create funding requests before the facility is active?**
 
@@ -61,7 +53,7 @@ A: If all lenders reject (which is rare), the facility does not become active. T
 
 **Q: Can I see facility setup progress?**
 
-A: Yes, you can see facility setup status on the master commitment details page. Setup status shows whether configuration is complete or still in progress. This helps you know when the facility will be ready for lender approval.
+A: Yes, you can see facility setup status. The funding request button will be enabled when the facility setup progress is completed, else it will be disabled.
 
 ### Funding Request Questions
 
@@ -90,10 +82,6 @@ A: Review time varies depending on facility agent workload and request complexit
 A: Cancellation depends on funding request status. Draft requests can usually be cancelled, but submitted requests may not be cancellable. Check funding request status and workflow rules to see if cancellation is available.
 
 ### Funding Notice Questions
-
-**Q: Why do I need to approve token transfer?**
-
-A: Borrower token approval makes the funding notice visible to lenders. Until you approve, lenders cannot see the funding notice. Approval authorizes the token transfer and enables lender review. Token approval is required for lender visibility.
 
 **Q: What are tokens?**
 

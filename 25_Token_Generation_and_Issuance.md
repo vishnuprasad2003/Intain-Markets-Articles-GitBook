@@ -11,7 +11,7 @@ Token generation and issuance is the complete workflow for creating and distribu
 
 ## Workflow Overview
 
-The token generation and issuance workflow begins when a funding request is approved and a funding notice is automatically created. Facility agents generate tokens representing the drawdown amount, configure distribution to lenders based on their participation percentages, and sign funding notices. Borrowers then approve token transfers, making funding notices visible to lenders who can review and approve their participation.
+The token generation and issuance workflow begins when a funding request is approved and a funding notice is automatically created. Facility agents generate tokens representing the drawdown amount, configure distribution to lenders based on their participation percentages, and sign funding notices.
 
 ## Key Stages
 
@@ -25,17 +25,13 @@ The token generation and issuance workflow begins when a funding request is appr
 
 ![Funding Notice Details - FA](imagesByMdFilesFolder/25/FundingNoticeDetailsFA.png)
 
-**Stage 5: Borrower Token Approval** - Borrowers review the token allocation to verify amounts and distribution are correct. Borrowers enter their C-chain private key or upload JSON file format to approve token transfer. Status changes to show tokens are approved. Funding notice becomes visible to lenders.
+**Stage 5: Lender Visibility** - Funding notices become visible to lenders. Lenders can see their allocated token portions and review drawdown details. This enables lender review and decision-making.
 
-![Issuer - Token Approval](imagesByMdFilesFolder/25/Issuer_Token_Approval.png)
-
-**Stage 6: Lender Visibility** - After borrower approval, funding notices become visible to lenders. Lenders can see their allocated token portions and review drawdown details. This enables lender review and decision-making.
-
-**Stage 7: Lender Review and Approval** - Lenders review funding notices and approve or reject their participation. Each lender makes independent decisions, and participation is tracked individually. Lenders can see their allocated portion and make decisions accordingly.
+**Stage 6: Lender Review and Approval** - Lenders review funding notices and approve or reject their participation. Each lender makes independent decisions, and participation is tracked individually. Lenders can see their allocated portion and make decisions accordingly.
 
 ![Lender Approval - Funding Notice](imagesByMdFilesFolder/25/LenderApprovalFundingNotice.png)
 
-**Stage 8: Fund Transfer Confirmation** - After approving, lenders transfer funds and confirm transfers. Each lender confirms their transfer independently, completing their participation in the drawdown. The system tracks individual lender confirmations.
+**Stage 7: Fund Transfer Confirmation** - After approving, lenders transfer funds and confirm transfers. Each lender confirms their transfer independently, completing their participation in the drawdown. The system tracks individual lender confirmations.
 
 ![Fund Transfer Confirmation](imagesByMdFilesFolder/25/FundTransferConfirmation.png)
 
@@ -43,9 +39,7 @@ The token generation and issuance workflow begins when a funding request is appr
 
 **From Approval to Token Generation** - The workflow starts automatically when funding requests are approved. Facility agents initiate token generation, creating tokens for borrowers and configuring distribution. This stage transforms approved requests into tokenized drawdowns ready for distribution.
 
-**From Token Generation to Borrower Approval** - After tokens are generated and distributed, facility agents sign funding notices for each lender. Once all signatures are complete, borrowers can review and approve token transfers. Borrower approval is required before lenders can see notices.
-
-**From Borrower Approval to Lender Review** - Once borrowers approve token transfers, funding notices become visible to lenders. Lenders can review their allocations and drawdown details, enabling informed decision-making about participation.
+**From Token Generation** - After tokens are generated and distributed, facility agents sign funding notices for each lender. Once all signatures are complete, the funding notice are visible to lenders, they can decide the approval.
 
 **From Lender Review to Fund Transfer** - After lenders review and approve, they transfer funds and confirm transfers. Each lender completes their participation independently, and the system tracks all confirmations. Once all lenders confirm, the drawdown process is complete.
 
@@ -62,8 +56,6 @@ The token generation and issuance workflow begins when a funding request is appr
 **Distribution Based on Participation** - Token distribution is calculated automatically based on lender participation percentages in the facility. Each lender receives their allocated portion.
 
 **Per-Lender E-Signature** - Facility agents sign funding notices for each lender individually, with each lender's signature status tracked separately.
-
-**Borrower Approval Required** - Borrowers must approve token transfers before funding notices become visible to lenders.
 
 **Individual Lender Decisions** - Each lender makes independent decisions about participation. Lenders can approve or reject based on their own criteria, and decisions are tracked separately.
 

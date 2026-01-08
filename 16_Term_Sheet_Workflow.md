@@ -37,7 +37,7 @@ Use term sheet workflow when:
 ![Accessing Term Sheet - Create New Term Sheet](imagesByMdFilesFolder/16/AccessingTermsheetCreateNewTermSheet.png)
 
 2. **Enter Facility Information**
-   - **Total Borrowing Limit**: Enter the maximum amount you want to borrow
+   - **Requested Commitment Amount**: Enter the maximum amount you want to borrow
    - **Advance Rate**: Specify what percentage of collateral value can be borrowed (e.g., 85%)
    - **Pricing Index**: Select the base interest rate index (e.g., SOFR, SOFR 1M)
    - **Margin**: Enter the spread to be added to the pricing index (e.g., 2.5%)
@@ -53,7 +53,6 @@ Use term sheet workflow when:
    - **Financial Statements**: Upload your financial statements
    - **KYC Documents**: Upload KYC documentation
    - **Collateral Data**: Upload collateral data files
-   - **Funding Sheet**: Upload funding sheet if applicable
    - Documents are securely stored and tracked with complete history
 
 ![Upload Documents](imagesByMdFilesFolder/16/UploadDocuments.png)
@@ -108,9 +107,8 @@ The credit facility dashboard displays different actions based on term sheet sta
 2. **Facility Agent Makes Decision**
    - In the Review Term Sheet popup, facility agent sees three buttons:
      - **Approve**: Term sheet meets requirements
-       - Status changes to "Approved"
+       - Status changes to "Accepted"
        - Master commitment is automatically created
-       - You receive notification of approval
      - **Reject**: Term sheet doesn't meet requirements
        - Status changes to "Rejected"
        - Rejection reason is provided
@@ -161,7 +159,7 @@ The credit facility dashboard displays different actions based on term sheet sta
 
 ## Rules & Validations
 
-- You can only edit term sheets while they're in Draft or Changes Requested status. Once submitted or approved, editing is restricted.
+- You can only edit term sheets while they're in Draft status. Once submitted or approved, editing is restricted.
 
 - You must sign the term sheet electronically before submitting. Unsigned term sheets cannot be submitted.
 
@@ -176,8 +174,6 @@ The credit facility dashboard displays different actions based on term sheet sta
 - Electronic signatures are legally binding. Once signed, term sheets represent formal proposals.
 
 - Status controls what actions are available. You can only take actions allowed by the current status.
-
-- All changes are recorded. Every edit, signature, and status change is tracked in the audit trail.
 
 - Required fields must be completed. You cannot submit until all required information is provided.
 
@@ -200,6 +196,6 @@ After term sheet approval:
 - Facility agent configures the complete facility structure
 - Facility agent submits master commitment for lender approval
 - Lenders review and approve the facility
-- Facility becomes active, and you can create funding requests
+- Facility becomes active
 
 Understanding the term sheet workflow helps you effectively navigate the first phase of credit facility creation, know what to expect at each stage, and successfully move from proposal to active facility.

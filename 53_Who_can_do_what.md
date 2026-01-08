@@ -7,7 +7,7 @@ description: Comprehensive guide to role permissions and what each role can do
 
 ## Overview
 
-This comprehensive reference guide explains what each role can and cannot do in the Intain Markets platform. The platform automatically enforces these permissions, ensuring that you can only take actions appropriate for your role.
+This comprehensive reference guide explains what each role can do in the Intain Markets platform. The platform automatically enforces these permissions, ensuring that you can only take actions appropriate for your role.
 
 ## Roles Covered
 
@@ -19,13 +19,11 @@ The platform supports multiple roles with distinct permissions, each designed fo
 
 - **Investor / Lender** - Provides funding and makes investment decisions. They review opportunities, evaluate investments, and provide capital for transactions.
 
-- **Servicer** - Manages ongoing loan administration. They handle loan servicing, payment tracking, and ongoing administration after deals are completed.
+- **Servicer** - Manages ongoing loan administration. They upload loan tapes monthly and handle loan servicing activities after deals are completed.
 
 - **Paying Agent** - Handles payment distributions. They manage payment distributions and ensure funds are properly allocated to all parties.
 
 - **Rating Agency** - Analyzes pools for rating purposes. They review pool data, analyze characteristics, and provide ratings for structured finance transactions.
-
-- **Admin** - Manages platform administration. They manage users, configure system settings, and handle platform-level administrative tasks.
 
 ## What Each Role Can Do
 
@@ -53,14 +51,6 @@ Issuers create and manage pools, submit credit facility requests, and manage loa
 - Can approve token transfers for funding notices
 - Can track funding request and funding notice status
 
-**Cannot Do:**
-- Cannot approve their own term sheets—these require facility agent approval
-- Cannot create master commitments—these are automatically created when term sheets are approved
-- Cannot approve their own funding requests—these require facility agent approval
-- Cannot sign funding notices—facility agents sign on behalf of lenders
-- Cannot configure master commitments—this is the facility agent's responsibility
-- Cannot approve master commitments—this is the lender's responsibility
-
 ### Market Maker / Facility Agent
 
 Market Makers and Facility Agents help structure deals and facilitate transactions. They play a crucial role in reviewing opportunities, structuring deals, and facilitating transactions between issuers and investors.
@@ -85,14 +75,6 @@ Market Makers and Facility Agents help structure deals and facilitate transactio
 - Can generate tokens for funding notices
 - Can sign funding notices for lenders before sending to lenders
 
-**Cannot Do:**
-- Cannot create pools—issuers create pools
-- Cannot create term sheets—borrowers create term sheets
-- Cannot approve master commitments as lenders—lenders approve master commitments
-- Cannot create funding requests—borrowers create funding requests
-- Cannot approve token transfers—borrowers approve token transfers
-- Cannot provide capital—this is the lender's role
-
 ### Investor / Lender
 
 Investors and Lenders provide funding for transactions. They review opportunities, evaluate investments, and make funding decisions based on their investment criteria and risk tolerance.
@@ -116,33 +98,17 @@ Investors and Lenders provide funding for transactions. They review opportunitie
 - Can track facility activity and participation
 - Can monitor facility status and borrowing capacity
 
-**Cannot Do:**
-- Cannot create pools—issuers create pools
-- Cannot create term sheets—borrowers create term sheets
-- Cannot create master commitments—these are automatically created
-- Cannot create funding requests—borrowers create funding requests
-- Cannot configure master commitments—facility agents do this
-- Cannot generate tokens—facility agents do this
-- Cannot approve term sheets—facility agents approve term sheets
-- Cannot approve funding requests—facility agents approve funding requests
-
 ### Servicer
 
-Servicers manage ongoing loan administration after deals are completed. They handle loan servicing, payment tracking, and ongoing administration to ensure loans are properly managed.
+Servicers manage ongoing loan administration after deals are completed. They upload loan tapes monthly and handle loan servicing activities to ensure loans are properly managed.
 
 **Pools and Loans:**
 - Can view pools and loans assigned to them for servicing
+- Can upload loan tapes monthly
 - Can manage loan servicing activities
 - Can update loan statuses and information
-- Can track payments and loan performance
 - Can handle ongoing administration tasks
 - Can report on loan performance
-
-**Cannot Do:**
-- Cannot create pools or loans—they manage existing loans
-- Cannot approve facilities or drawdowns—they focus on post-deal administration
-- Cannot structure deals—they manage loans after deals are completed
-- Cannot make investment decisions—they focus on loan administration
 
 ### Paying Agent
 
@@ -155,12 +121,6 @@ Paying Agents handle payment distributions. They manage payment distributions an
 - Can handle payment-related tasks
 - Can track payment distributions
 
-**Cannot Do:**
-- Cannot create pools or facilities—they handle payment distributions
-- Cannot approve facilities or drawdowns—they focus on payment processing
-- Cannot structure deals—they handle payments after deals are completed
-- Cannot make investment decisions—they focus on payment distribution
-
 ### Rating Agency
 
 Rating Agencies analyze pools for rating purposes. They review pool data, analyze characteristics, and provide ratings for structured finance transactions.
@@ -171,29 +131,6 @@ Rating Agencies analyze pools for rating purposes. They review pool data, analyz
 - Can review pool characteristics and metrics
 - Can perform rating analysis
 - Can download data (if permissions allow) for further analysis
-
-**Cannot Do:**
-- Cannot create or modify pools—they analyze existing pools
-- Cannot approve facilities or drawdowns—they provide analysis only
-- Cannot structure deals—they analyze pools for rating purposes
-- Cannot make investment decisions—they provide ratings
-- Typically have read-only access—cannot make changes or approvals
-
-### Admin
-
-Admins have system-level access for platform administration. They manage users, configure system settings, and handle platform-level administrative tasks.
-
-**Platform Administration:**
-- Can manage users and organizations
-- Can configure system settings
-- Can access administrative functions
-- Can handle platform-level tasks
-- Can manage platform security
-
-**Cannot Do:**
-- Typically don't participate in regular business transactions
-- Cannot approve business transactions—they manage platform administration
-- Cannot create business items—they support platform operation
 
 ## Important Access Notes
 
@@ -212,8 +149,6 @@ Admins have system-level access for platform administration. They manage users, 
 **Role-Based Views** - The platform shows you only relevant information based on your role. You only see items where you have a role or where items are shared with you.
 
 **Action Buttons Are Role-Aware** - Buttons are enabled or disabled based on your role and permissions, not just item status. Both role and status determine action availability.
-
-**Complete Audit Trail** - All actions are recorded with role information for accountability and proper attribution.
 
 **Collaboration Between Roles** - Different roles collaborate through workflows—issuers create, market makers structure, lenders fund, servicers manage, etc.
 

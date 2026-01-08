@@ -29,54 +29,18 @@ Use fund transfer confirmation when:
 1. **Review Your Approval**
    - Navigate to the funding notice you approved
    - Review your approval status
-   - Verify your allocated amount
    - Confirm you're ready to transfer funds
 
 2. **Complete Fund Transfer**
-   - Transfer your allocated portion to the borrower
-   - Use the transfer method specified in the facility
-   - Transfer the exact amount of your allocation
+   - Click Confirm Funds Transfer.
+   - Tokens wil be transffered to you wallet.
    - Ensure transfer is successful
-   - Keep transfer confirmation details (transaction ID, reference number, etc.)
-
-3. **Verify Transfer Success**
-   - Confirm funds were transferred successfully
-   - Verify transfer amount matches your allocation
-   - Check that transfer was completed
-   - Ensure you have transfer confirmation details
-   - Note any transfer reference numbers or IDs
-
-### Confirming Transfer
-
-1. **Access Confirmation Function**
-   - Navigate to the funding notice
-   - Review your approval status
-   - Find the fund transfer confirmation section
-   - Access the confirmation interface
-
-2. **Review Transfer Details**
-   - Verify you've transferred funds
-   - Check transfer amount matches your allocation
-   - Confirm transfer was successful
-   - Review transfer date and time
-   - Verify transfer reference information
-
-3. **Submit Confirmation**
-   - Click "Confirm Fund Transfer" button or similar
-   - Optionally add a confirmation note
-   - Review your confirmation details
-   - Confirm the confirmation action
-   - Submit your confirmation
-   - Status updates to show transfer confirmed
-   - System tracks when all lenders have confirmed
 
 ![Fund Transfer Confirmation](imagesByMdFilesFolder/44/confirmfundstransfer.png)
 
-4. **Verify Confirmation**
-   - Confirm status shows transfer is confirmed
-   - Verify your participation is marked complete
-   - Check that confirmation is recorded
-   - Ensure borrower can see your confirmation
+4. **Verify Transfer Success**
+   - Confirm funds were transferred successfully
+   - Check that transfer was completed
 
 ### After Confirmation
 
@@ -84,19 +48,15 @@ Use fund transfer confirmation when:
    - Your participation in the drawdown is marked complete
    - Drawdown process is finished for your portion
    - Status shows transfer confirmed
-   - Your contribution is documented
 
 2. **Borrower Receives Funds**
    - Borrower receives your transferred funds
-   - Borrower can see your confirmation
-   - Borrower can track which lenders have confirmed
    - Borrower knows funds have been received
 
 3. **Process Completion**
    - As other lenders confirm, drawdown progresses
    - Borrower receives funds from all confirming lenders
    - Drawdown process completes as all transfers are confirmed
-   - Complete documentation is maintained
 
 ## Rules & Validations
 
@@ -112,13 +72,7 @@ Use fund transfer confirmation when:
 
 - Confirmation is final - once confirmed, you cannot easily undo the confirmation.
 
-- Transfer details should be accurate - provide correct transfer information for proper documentation.
-
 - Status updates after confirmation - Your transfer confirmation is recorded. System tracks when all lenders have confirmed.
-
-- Complete audit trail - your confirmation is recorded with timestamp and transfer details.
-
-- Borrower visibility - borrowers can see which lenders have confirmed transfers.
 
 ## What Happens Next
 
@@ -127,14 +81,12 @@ After confirming fund transfer:
 - Drawdown process is finished for your portion
 - Status shows transfer confirmed
 - Borrower receives your funds
-- Borrower can see your confirmation
 - Process continues as other lenders confirm
 - Drawdown completes as all transfers are confirmed
 
 After all lenders confirm:
 - Borrower has received funds from all confirming lenders
 - Drawdown process is complete
-- Complete documentation is maintained
 - Borrower can track all confirmations
 - Facility utilization is updated
 - Drawdown is fully documented

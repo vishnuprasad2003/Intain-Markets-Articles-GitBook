@@ -28,7 +28,7 @@ Use funding request review when:
 
 1. **Access Request**
    - Check notifications for new funding request submissions
-   - Navigate to funding requests for review
+   - Navigate to credit facility section for review
    - Open request details
    - Review all information provided
 
@@ -57,14 +57,11 @@ Use funding request review when:
    - Verify collateral eligibility if facility requires collateral
    - Check collateral valuation is accurate
    - Confirm collateral is not already pledged
-   - Ensure collateral concentration is within limits
    - Verify collateral meets quality requirements
 
 6. **Assess Request Details**
    - Review request amount and purpose
    - Check funding date is appropriate
-   - Evaluate borrower's justification
-   - Assess overall request quality
    - Consider facility utilization impact
 
 ### Making Review Decisions
@@ -73,32 +70,24 @@ Use funding request review when:
    - Review thoroughly and verify all requirements met
    - Confirm request complies with facility rules
    - Verify sufficient capacity is available
-   - Click "Approve" button or similar
+   - Click "Approve" button
    - Enter approval comments if needed
-   - Confirm approval
    - Request status changes to APPROVED
    - Funding notice is automatically created
-   - Borrower receives notification
 
 2. **Reject Request**
    - Review and identify issues or concerns
    - Determine request doesn't meet requirements
-   - Click "Reject" button or similar
-   - Provide detailed rejection reason
+   - Click "Reject" button
    - Enter comments explaining rejection
-   - Confirm rejection
    - Status changes to "REJECTED"
-   - Borrower can create new request
 
 3. **Request Changes**
    - Identify needed modifications
-   - Determine improvements that would make request acceptable
-   - Click "Request Changes" button or similar
+   - Click "Request Changes" button
    - Provide detailed change request
-   - Enter specific modifications needed
    - Confirm change request
    - Status changes to "CHANGES_REQUESTED"
-   - Borrower can update and resubmit
 
 ## Rules & Validations
 
@@ -118,14 +107,10 @@ Use funding request review when:
 
 - Decisions are final once submitted - you cannot easily reverse decisions after submission.
 
-- Complete audit trail - all decisions, reasons, and comments are recorded with timestamps.
-
-- Borrower notifications - borrowers receive notifications when you make decisions.
-
 ## What Happens Next
 
 After reviewing a funding request:
-- **If Approved**: Funding notice is automatically created, tokens are generated, facility agent signs for lenders, borrower approves token transfer, lenders review and approve, and funds are transferred.
+- **If Approved**: Funding notice is automatically created, tokens are generated, facility agent signs for lenders, lenders review and approve, and funds are transferred.
 
 - **If Rejected**: Borrower receives rejection reason, borrower can create new request addressing issues, new request goes through same review process, and process can start over with improvements.
 
@@ -134,7 +119,6 @@ After reviewing a funding request:
 After approval:
 - Funding notice is automatically created with "PENDING_TOKEN_GENERATION" status
 - You generate tokens and sign for lenders
-- Borrower approves token transfer
 - Funding notice becomes visible to lenders
 - Lenders review and approve drawdowns
 - Funds are transferred as lenders confirm

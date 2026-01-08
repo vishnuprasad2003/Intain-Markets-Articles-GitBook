@@ -28,7 +28,7 @@ Use facility creation when:
 
 1. **Locate Master Commitment**
    - Navigate to master commitments section
-   - Find master commitment created from approved term sheet
+   - The master commitment created from approved term sheet is shown as a dropdown of that termsheet
    - Status shows as "Draft"
    - Master commitment is pre-populated with term sheet data
 
@@ -74,21 +74,11 @@ Use facility creation when:
    - Each rule has a unique identifier, type, name, and selection status
    - Set eligibility criteria for collateral
    - Define collateral quality requirements
-   - Set age and geographic limits
    - Configure other eligibility criteria
-   - Define valuation methods
 
 ![Configure Rules](imagesByMdFilesFolder/37/ConfigureRules.png)
 
-3. **Configure Facility Parameters**
-   - Go to Facility Parameters section
-   - Set operational parameters
-   - Configure reporting requirements
-   - Set up covenant templates
-   - Define monitoring requirements
-   - Complete all required parameters
-
-4. **Set Up Other Rules**
+3. **Set Up Other Rules**
    - Configure drawdown frequency rules
    - Set utilization limits
    - Define payment terms
@@ -99,12 +89,9 @@ Use facility creation when:
 ### Setting Up Lender Groups
 
 1. **Add Lenders**
-   - Navigate to Lender Groups section
-   - Click "Add Lender" button or similar
-   - Configure lender groups
-   - Each lender has a unique identifier, name, organization ID, approval status, commitment amount, and voting percentage
-   - Select lender organization from available options
-   - Enter lender details
+   - Navigate to Parties & Accounts section
+   - Click "Add Lender" button
+   - Select lender organization from available options from the dropdown
    - Add lender to group
    - Repeat for all lenders
 
@@ -113,8 +100,6 @@ Use facility creation when:
 2. **Configure Lender Details**
    - Set commitment amount for each lender
    - Configure voting percentage for each lender
-   - Set lender-specific terms if applicable
-   - Define participation percentages
    - Complete lender configuration
    - Verify all lenders are configured
 
@@ -128,21 +113,18 @@ Use facility creation when:
 ### Creating Sub-Commitments (Multiple Contract Type Only)
 
 1. **Create Sub-Commitment**
-   - If contract type is "multiple", navigate to create sub-commitment option
-   - Click "Create Sub-Commitment" or similar button
+   - If contract type is "multiple", navigate to Review & Create section
+   - Click "Create Sub-Facility" button
    - A new sub-commitment is created from the parent
    - Sub-commitment inherits all facility rules and parameters
    - Sub-commitment starts with empty lender groups
 
 ![Create Sub Facility](imagesByMdFilesFolder/37/CreateSubFacility.png)
 
-![Create Sub Facility - Additional](imagesByMdFilesFolder/37/CreateSubFacility (copy).png)
-
 2. **Configure Sub-Commitment Lender Groups**
    - Navigate to the sub-commitment you created
    - Add lenders specific to this sub-commitment
-   - Configure commitment amounts and participation percentages
-   - Set lender-specific terms if applicable
+   - Configure commitment amounts and voting percentages
    - Complete lender configuration for this sub-commitment
 
 3. **Repeat for Additional Sub-Commitments**
@@ -165,13 +147,13 @@ Use facility creation when:
    - Verify collateral eligibility rules
    - Review lender group configuration
    - Ensure all required fields are complete
+   - Ensure Required fields complete is 3/3 in the Review & Create section
    - If multiple contract type, review all sub-commitments
 
 2. **Validate Configuration**
    - Check that validation passes
    - Verify all required fields are filled
    - Ensure calculations are correct
-   - Confirm setup status shows "Completed"
    - Review everything one final time
 
 3. **Submit for Lender Approval**
@@ -193,15 +175,11 @@ Use facility creation when:
 
 - Once submitted, editing is restricted - make sure configuration is correct before submission.
 
-- Setup status must show "Completed" - you cannot submit until setup is complete.
-
 - Master commitment is pre-populated - term sheet data is automatically transferred, so you don't need to re-enter it.
 
-- You can save multiple times - save your progress as you configure, status remains "Draft" until submission.
+- The changes will be autosaved, status remains "Draft" until submission.
 
 - Status controls actions - you can only edit while status is "Draft".
-
-- Complete audit trail - all configuration changes are recorded with timestamps.
 
 - Contract type determines structure - single contract type uses one master commitment, multiple contract type allows sub-commitments.
 
@@ -220,13 +198,11 @@ After configuring master commitment:
 - Lenders review master commitment
 - Any lender approval activates the facility
 - Facility becomes active when approved
-- Borrowers can create funding requests
 
 After lender approval:
 - Facility status changes to "ACTIVE"
 - Facility is operational and ready for use
-- Borrowers can create funding requests
 - Facility agent can manage active facility
-- Drawdowns can begin
+- Facility agent can perform deal modelling
 
 Understanding facility creation helps facility agents effectively configure master commitments, set up complete facility structures, and prepare facilities for lender approval and activation.

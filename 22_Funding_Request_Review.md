@@ -25,7 +25,7 @@ Use funding request review when:
 
 ## Review Process
 
-**Accessing Requests** - When borrowers submit funding requests, they appear in your review queue. You can access requests through notifications or by navigating to the funding requests section. Each request shows the borrower, facility, amount, purpose, and current status.
+**Accessing Requests** - When borrowers submit funding requests, they appear in credit facility section in active facilities tab. It appears under the facility it belongs to. Each request shows the amount, purpose, documents uploaded and current status.
 
 **Review Interface** - The review interface provides a comprehensive view of the funding request, including all details, documentation, and facility context. You can review the complete request information to make informed decisions.
 
@@ -35,37 +35,19 @@ Use funding request review when:
 
 ![Review Funding Request - E-Sign](imagesByMdFilesFolder/22/review_funding_request_esign.png)
 
-**Reviewing Request Details** - Open each request to review complete information including request amount, purpose, funding date, supporting documentation, collateral information (if applicable), and facility context. Review all information provided by the borrower to understand the full request.
-
-**Checking Facility Context** - Review which facility the request is against, view facility rules and parameters, check borrower's borrowing history, verify available borrowing capacity, and understand request timing and frequency. This context helps you evaluate requests appropriately.
+**Reviewing Request Details** - Open each request to review complete information including request amount, purpose, funding date, supporting documentation, collateral information (if applicable), and facility context.
 
 **Documentation Review** - Check that all required documents are provided, verify document quality and completeness, ensure documents are readable and properly formatted, verify documents support the request, and assess documentation quality and accuracy.
 
 **Making Evaluation** - Evaluate all factors including compliance with facility rules, borrowing capacity availability, documentation quality and completeness, collateral (if applicable), and borrower's history and performance. Consider all aspects before making decisions.
 
-## Evaluation Criteria
-
-**Facility Rules Compliance** - Verify request amount is within facility limits, check if request complies with borrowing base calculations, verify drawdown frequency rules are followed, ensure request meets all facility-specific requirements, and check if any facility restrictions apply.
-
-**Borrowing Capacity Verification** - Calculate available borrowing capacity, check if request amount exceeds available capacity, review current facility utilization, verify borrower hasn't exceeded limits, and ensure sufficient capacity exists for the request.
-
-**Request Amount Assessment** - Verify amount is reasonable and justified, check if amount aligns with stated purpose, ensure amount doesn't violate facility rules, and verify amount is within approved facility limit.
-
-**Documentation Quality** - Check all required documents are provided, verify document quality and completeness, ensure documents support the request, verify documents meet facility requirements, and assess documentation accuracy and relevance.
-
-**Collateral Evaluation** (if applicable) - Verify collateral eligibility criteria are met, check collateral type is allowed, ensure collateral quality standards are met, review collateral valuation for accuracy, confirm collateral is available and not already pledged, and check collateral concentration is within limits.
-
-**Overall Request Quality** - Assess whether request is well-justified, evaluate if purpose is appropriate, check if timing is reasonable, verify borrower's track record, and consider facility utilization impact.
-
 ## Making Decisions
 
-**Approve Request** - Approve when all requirements are met: request meets facility rules, sufficient borrowing capacity available, documentation is complete and adequate, collateral is acceptable (if applicable), and no compliance issues identified. Click "Approve" button. Request status changes to APPROVED. Funding notice is automatically created. Borrower receives notification.
+**Approve Request** - Approve when all requirements are met: request meets facility rules, sufficient borrowing capacity available, documentation is complete and adequate, collateral is acceptable (if applicable), and no compliance issues identified. After Approve and E-sign Funding notice is automatically created.
 
-**Reject Request** - Reject when requirements are not met: request violates facility rules, insufficient borrowing capacity, incomplete or inadequate documentation, collateral issues (if applicable), or other compliance problems. Click "Reject" button. Provide detailed rejection reason. Request status changes to REJECTED. Borrower receives notification with reason, and borrower can create new request (rejected requests cannot be resubmitted).
+**Reject Request** - Reject when requirements are not met: request violates facility rules, insufficient borrowing capacity, incomplete or inadequate documentation, collateral issues (if applicable), or other compliance problems. After Rejection, Borrower can create new request (rejected requests cannot be resubmitted).
 
-**Request Changes** - Request changes when improvements are needed: minor issues that can be addressed, additional documentation needed, clarifications required, or modifications needed to meet requirements. Click "Request Changes" button. Provide specific change request details. Request status changes to CHANGES_REQUESTED. Borrower can update and resubmit, and process can repeat until approved or rejected.
-
-**Decision Documentation** - Enter approval notes if approving, provide rejection reason if rejecting, specify change request details if requesting changes, include any relevant comments or explanations, and ensure all decisions are properly documented for audit purposes.
+**Request Changes** - Request changes when improvements are needed: minor issues that can be addressed, additional documentation needed, clarifications required, or modifications needed to meet requirements. Click "Request Changes" button. Provide specific change request details. Borrower can update and resubmit, and process can repeat until approved or rejected.
 
 ## Rules & Validations
 
@@ -85,14 +67,12 @@ Use funding request review when:
 
 - Decisions are final once submitted. You cannot easily reverse decisions after submission.
 
-- All reviews are recorded. Every decision, reason, and action is tracked in the audit trail.
-
 - Status controls workflow. Request status determines what actions are available and what happens next.
 
 ## What Happens Next
 
 After reviewing a funding request:
-- **If Approved**: Funding notice is automatically created with PENDING_TOKEN_GENERATION status, notice is sent to lenders for review, borrower is notified of approval, and you proceed with token generation and signing.
+- **If Approved**: Funding notice is automatically created with PENDING_TOKEN_GENERATION status, notice is sent to lenders for review, and you proceed with token generation and signing.
 
 - **If Rejected**: Borrower receives rejection reason, borrower can create new request addressing issues, new request goes through same review process, and process can start over with improvements.
 
@@ -102,7 +82,6 @@ After approval:
 - Funding notice is generated automatically
 - You generate tokens and configure distribution to lenders
 - You sign funding notice for each lender individually
-- Borrower approves token transfer, making notice visible to lenders
 - Lenders review and approve drawdowns
 - After lender approval, lenders transfer funds and confirm
 - Borrower receives the funds

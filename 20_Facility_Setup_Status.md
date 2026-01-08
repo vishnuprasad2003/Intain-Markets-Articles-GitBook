@@ -7,11 +7,11 @@ description: Understand how facility setup status tracks configuration completio
 
 ## Overview
 
-The facility setup status (facilitySetupModelStatus) tracks whether operational parameters and facility management settings have been completed for an ACTIVE master commitment. This status is separate from the master commitment workflow status and focuses on post-activation operational configuration. Facility setup model can only be completed after the master commitment becomes ACTIVE.
+The facility setup status tracks whether operational parameters and facility management settings have been completed for an ACTIVE master commitment. This status is separate from the master commitment workflow status and focuses on post-activation operational configuration. Facility setup model can only be completed after the master commitment becomes ACTIVE.
 
 ## Lifecycle Overview
 
-Facility setup status starts as **In Progress** when the master commitment is first created. It remains In Progress while facility agents configure the master commitment (lender groups, collateral rules, borrowing base calculations). After the master commitment becomes ACTIVE (lender approval), facility agents can mark the facility setup model as completed. Once completed, the status changes to **Completed**, indicating operational parameters are configured.
+Facility setup status starts as **In Progress** when the master commitment is first created. It remains In Progress while facility agents configure the master commitment (lender groups, collateral rules, borrowing base calculations). After the master commitment becomes ACTIVE (lender approval), facility agents can complete the deal modelling. Once completed, the status changes to **Completed**, indicating operational parameters are configured.
 
 The setup status guides facility agents through post-activation operational configuration, ensuring facility management settings are complete for active facilities.
 

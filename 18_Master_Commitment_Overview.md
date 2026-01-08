@@ -13,7 +13,7 @@ A master commitment is the finalized credit facility agreement that defines the 
 
 A master commitment is the complete, finalized agreement that defines how a credit facility will operate. It contains all the terms, rules, calculations, and configurations that govern every aspect of facility operations.
 
-Master commitments are automatically created from approved term sheets. They start with information from your term sheet, then facility agents configure the complete structure including all rules, calculations, and lender groups. Once configured and approved by lenders, master commitments become active and enable funding requests.
+Master commitments are automatically created from approved term sheets. They start with information from your term sheet, then facility agents configure the complete structure including all rules, calculations, and lender groups. Once configured and approved by lenders, master commitments become active.
 
 ## Purpose and Use Cases
 
@@ -27,13 +27,13 @@ Master commitments serve as the operational foundation for credit facilities:
 
 **For Borrowing Base Setup** - Borrowing base calculations are configured in master commitments, determining how much borrowers can borrow based on collateral, financial metrics, or other factors.
 
-**For Facility Activation** - Master commitments must be approved by lenders before facilities become active. Once approved, facilities are operational and borrowers can create funding requests.
+**For Facility Activation** - Master commitments must be approved by lenders before facilities become active. Once approved, facilities are operational.
 
 **For Operational Reference** - Master commitments serve as complete documentation of facility structure and rules, ensuring all parties understand how facilities operate.
 
 ## Key Components
 
-**Facility Terms** - Basic facility information from the approved term sheet, including facility name, maximum facility amount, interest rates, repayment terms, and facility term. This information is pre-populated from the term sheet.
+**Facility Terms** - Basic facility information from the approved term sheet, maximum facility amount, interest rates, repayment terms, and facility term. This information is pre-populated from the term sheet.
 
 **Facility Rules** - Rules that govern how the facility operates, including borrowing limits, drawdown frequency rules, utilization limits, payment terms, interest rate structure, and fee calculations. These rules control all facility operations.
 
@@ -77,7 +77,7 @@ Master commitments serve as the operational foundation for credit facilities:
 
 **Defines All Facility Rules** - All rules that govern the facility are defined in the master commitment, including borrowing limits, collateral eligibility, drawdown frequency, and other requirements.
 
-**Becomes ACTIVE When Approved** - Once at least one lender approves, the facility becomes ACTIVE, and borrowers can create funding requests.
+**Becomes ACTIVE When Approved** - Once at least one lender approves, the facility becomes ACTIVE.
 
 **Complete Documentation** - Master commitments serve as complete documentation of facility structure and rules, ensuring all parties understand how facilities operate.
 

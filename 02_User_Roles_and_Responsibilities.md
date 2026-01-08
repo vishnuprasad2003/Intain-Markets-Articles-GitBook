@@ -95,18 +95,18 @@ Investors/Lenders provide funding for transactions. They review opportunities, e
 
 ### Servicer
 
-Servicers manage ongoing loan administration after deals are completed. They handle loan servicing, payment tracking, and ongoing administration to ensure loans are properly managed.
+Servicers manage ongoing loan administration after deals are completed. They upload loan tapes monthly and handle loan servicing activities to ensure loans are properly managed.
 
 **Primary Capabilities:**
 - View pools and loans assigned to them
+- Upload loan tapes monthly
 - Manage loan servicing activities
-- Track payments and loan performance
 - Update loan statuses and information
 - Handle ongoing administration tasks
 
 **Responsibilities:**
+- Upload loan tapes every month
 - Maintain accurate loan records
-- Track payments and performance
 - Handle ongoing loan servicing activities
 - Report on loan performance
 

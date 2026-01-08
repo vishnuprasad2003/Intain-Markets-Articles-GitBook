@@ -35,9 +35,7 @@ Use loan management when:
    - Include borrower information, financial details, and loan characteristics
 
 2. **Access Imports**
-   - Navigate to the Loans section
-   - Click "Access Imports" or similar button
-   - Import interface opens
+   - Navigate to "Imports" section
 
 ![Access Imports](imagesByMdFilesFolder/31/AccessImports.png)
 
@@ -45,25 +43,26 @@ Use loan management when:
    - Click to browse for your loan file
    - Select the file containing loan data
    - Review file selection
-   - Click "Upload" to start the upload process
+   - Click "Submit" to start the upload process
 
 ![Select and Upload File](imagesByMdFilesFolder/31/SelectAndUploadFile.png)
 
 4. **System Processing**
    - System processes and standardizes the loan data
-   - Data is validated and checked for errors
-   - Loans are stored in the system
-   - Processing status is displayed
+   - The File Uploaded is validated and checked for errors
+   - The Excel is stored in the system and appears in the below table with action "Trigger LTS"
+   - Click on Trigger LTS
 
 ![Loans Onboarding - Uploading - Issuer](imagesByMdFilesFolder/31/Loans_Onboarding_Uploading_Issuer.png)
 
 5. **Review Standardized Loans**
-   - Review standardized loans after processing
+   - "Map Fields" pop up will show up
    - Check that data mapped correctly
    - Verify loan information is accurate
    - Review any validation messages or errors
    - Correct any issues if needed
    - Loans are ready for mapping to pools
+   - Click on "Save Mapping" to save the loans
 
 ![Review Standardized Loans](imagesByMdFilesFolder/31/ReviewStandardizedLoans.png)
 
@@ -71,7 +70,6 @@ Use loan management when:
 
 1. **Access Loan Registry**
    - Navigate to the Loans section
-   - Click "Access Loan Registry" to view available loans
    - View list of available loans
    - Filter loans if needed (by status, unmapped, etc.)
    - Select loans you want to map
@@ -95,76 +93,17 @@ Use loan management when:
 4. **Confirm Mapping**
    - Review your selection (loans and pool)
    - Confirm the mapping action
-   - Click "Map to Pool" or similar button
+   - Click "Submit" button
    - Mapping is processed
 
 ![Confirm Mapping](imagesByMdFilesFolder/31/ConfirmMapping.png)
 
 5. **Verify Mapping**
    - Loans are mapped to the pool
-   - Loan status changes to "Mapped"
    - Pool metrics update automatically
    - Pool loan count increases
    - Pool balances increase
-   - Additional metrics (WAC, FICO, LTV, DSCR/DTI) recalculate automatically
    - Verify metrics updated correctly
-
-### Managing Loan Statuses
-
-1. **View Loan Status**
-   - Check loan status in loan list
-   - View status on loan details page
-   - Understand what each status means
-   - See status history if available
-
-2. **Update Loan Status - Remove from Pool**
-   - Navigate to pool's loan list
-   - Find loan you want to remove
-   - Select the loan
-   - Update status to "Removed"
-   - Confirm removal
-   - Loan is excluded from pool calculations
-   - Pool metrics recalculate automatically
-
-3. **Update Loan Status - Reinstate Loan**
-   - Filter to show removed loans
-   - Find loan you want to reinstate
-   - Select the loan
-   - Update status to "Reinstated"
-   - Confirm reinstatement
-   - Loan is included in pool calculations again
-   - Pool metrics recalculate automatically
-
-4. **Update Loan Status - Unmap from Pool**
-   - Navigate to pool's loan list
-   - Find loan you want to unmap
-   - Select the loan
-   - Update status to "Unmapped"
-   - Confirm unmapping
-   - Loan is removed from pool
-   - Pool metrics recalculate automatically
-   - Loan becomes available for mapping to other pools
-
-### Tracking Loan Information
-
-1. **View Loan Details**
-   - Open individual loan details
-   - See complete loan information
-   - Review borrower and financial details
-   - Check loan characteristics
-   - View loan status and history
-
-2. **Monitor Loan Status Changes**
-   - Track when loans are mapped or unmapped
-   - See when loans are removed or reinstated
-   - Review status change history
-   - Understand loan lifecycle progression
-
-3. **Review Loan Metrics**
-   - See how loans contribute to pool metrics
-   - Understand loan characteristics
-   - Review loan performance data
-   - Track loan information over time
 
 ## Rules & Validations
 

@@ -40,7 +40,7 @@ Use token generation and e-sign when:
    - Review distribution details for accuracy
 
 3. **Initialize Token Distribution**
-   - Click "Update Token Distribution" or similar button
+   - Click "Save" button
    - Funding notice must be in pending token generation status
    - Token distribution is configured
    - Each lender is initialized with pending signature status
@@ -64,22 +64,16 @@ Use token generation and e-sign when:
 ### Completing E-Signatures for Lenders
 
 1. **Sign for First Lender**
-   - Select first lender from lender list
    - Initiate electronic signature process for this lender
    - Review funding notice document
    - Complete electronic signature for this lender
    - This lender's signature status is updated to completed
-   - Signed document is stored securely
-   - Notifications are sent to relevant organizations
-   - Confirm signature is complete
    - Status remains as tokens generated (does not change during signing)
 
 2. **Sign for Remaining Lenders**
-   - Select next lender
-   - Initiate signature process for this lender
+   - Initiate signature process for the remaining lender
    - Review funding notice document
    - Sign electronically for this lender
-   - Confirm signature is complete
    - This lender's esignatureStatus updates to 'ESIGN_COMPLETED'
    - Continue until all lenders are signed
 
@@ -87,28 +81,11 @@ Use token generation and e-sign when:
    - View individual lender signing status
    - See which lenders have completed signatures
    - See which lenders are still pending signatures
-   - Monitor overall completion progress
-   - Verify all signatures are complete
 
 4. **Verify All Signatures Complete**
    - Check that all lenders have completed signatures
    - Confirm all required signatures are done
    - Verify status shows tokens are generated
-   - Ensure funding notice is ready for borrower approval
-
-### After E-Signature Completion
-
-1. **Borrower Approval Enabled**
-   - After all signatures are complete, borrower can approve token transfer
-   - Funding notice is ready for borrower review
-   - Borrower can see token allocation and approve
-   - Borrower approval makes notice visible to lenders
-
-2. **Monitor Process**
-   - Track borrower approval status
-   - Monitor lender review and approval
-   - Track fund transfer confirmations
-   - Ensure process progresses smoothly
 
 ## Rules & Validations
 
@@ -126,19 +103,12 @@ Use token generation and e-sign when:
 
 - Electronic signatures are legally binding - signatures represent formal approval for each lender.
 
-- Complete audit trail - all signatures are recorded with timestamps and details.
-
-- Borrower can approve after signatures - borrower approval enables lender visibility.
-
-- Individual tracking - each lender's signature status is tracked independently.
-
 ## What Happens Next
 
 After generating tokens and completing signatures:
 - Tokens are created and allocated to lenders
 - All lender signatures are complete
-- Borrower can approve token transfer
-- After borrower approval, funding notice becomes visible to lenders
+- Funding notice becomes visible to lenders
 - Lenders can review and approve drawdowns
 - Fund transfer process can proceed
 

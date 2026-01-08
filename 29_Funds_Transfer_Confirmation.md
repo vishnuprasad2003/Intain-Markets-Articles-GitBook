@@ -29,59 +29,18 @@ Use fund transfer confirmation when:
 1. **Review Your Approval**
    - Navigate to the funding notice you approved
    - Review your approval status
-   - Verify your allocated amount
    - Confirm you're ready to transfer funds
 
-2. **Select Payment Transfer Method**
-   - Choose from available payment methods:
-     - **Kinexys Payment Transfer Method** - Use Kinexys payment system for fund transfer
-     - **Circle Payment Transfer Method** - Use Circle payment system for fund transfer
-     - **Offline Payment Transfer Method** - Use offline payment method for fund transfer
-   - Select the appropriate method based on your preference and facility requirements
-
-3. **Complete Fund Transfer**
-   - Transfer your allocated portion to the borrower using the selected method
-   - Transfer the exact amount of your allocation
+2. **Complete Fund Transfer**
+   - Click Confirm Funds Transfer.
+   - Tokens wil be transffered to you wallet.
    - Ensure transfer is successful
-   - Keep transfer confirmation details (transaction ID, reference number, etc.)
+
+![Fund Transfer Confirmation](imagesByMdFilesFolder/44/confirmfundstransfer.png)
 
 4. **Verify Transfer Success**
    - Confirm funds were transferred successfully
-   - Verify transfer amount matches your allocation
    - Check that transfer was completed
-   - Ensure you have transfer confirmation details
-   - Note any transfer reference numbers or IDs
-
-### Confirming Transfer
-
-1. **Access Confirmation Function**
-   - Navigate to the funding notice
-   - Review your approval status
-   - Find the fund transfer confirmation section
-   - Access the confirmation interface
-
-2. **Review Transfer Details**
-   - Verify you've transferred funds
-   - Check transfer amount matches your allocation
-   - Confirm transfer was successful
-   - Review transfer date and time
-   - Verify transfer reference information
-
-3. **Submit Confirmation**
-   - Click "Confirm Fund Transfer" button or similar
-   - Optionally add a confirmation note
-   - Review your confirmation details
-   - Confirm the confirmation action
-   - Submit your confirmation
-   - Status updates to show transfer confirmed
-
-![Fund Transfer Confirmation](imagesByMdFilesFolder/29/confirmfundstransfer.png)
-
-4. **Verify Confirmation**
-   - Confirm status shows transfer is confirmed
-   - Verify your participation is marked complete
-   - Check that confirmation is recorded
-   - Ensure borrower can see your confirmation
 
 ### After Confirmation
 
@@ -89,41 +48,31 @@ Use fund transfer confirmation when:
    - Your participation in the drawdown is marked complete
    - Drawdown process is finished for your portion
    - Status shows transfer confirmed
-   - Your contribution is documented
 
 2. **Borrower Receives Funds**
    - Borrower receives your transferred funds
-   - Borrower can see your confirmation
-   - Borrower can track which lenders have confirmed
    - Borrower knows funds have been received
 
 3. **Process Completion**
    - As other lenders confirm, drawdown progresses
    - Borrower receives funds from all confirming lenders
    - Drawdown process completes as all transfers are confirmed
-   - Complete documentation is maintained
 
 ## Rules & Validations
 
-- You can only confirm after you've approved the drawdown. You must approve before you can confirm transfer.
+- You can only confirm after you've approved the drawdown - you must approve before you can confirm transfer.
 
-- You should transfer funds before confirming. Confirm only after you've actually transferred funds to the borrower.
+- You should transfer funds before confirming - confirm only after you've actually transferred funds to the borrower.
 
-- Confirmation marks your participation as complete. Once confirmed, your participation in this drawdown is finalized.
+- Confirmation marks your participation as complete - once confirmed, your participation in this drawdown is finalized.
 
-- Each lender confirms independently. You confirm your own transfer, and other lenders confirm theirs separately.
+- Each lender confirms independently - you confirm your own transfer, and other lenders confirm theirs separately.
 
-- Your confirmation doesn't affect other lenders. Other lenders confirm their transfers independently.
+- Your confirmation doesn't affect other lenders - other lenders confirm their transfers independently.
 
-- Confirmation is final. Once confirmed, you cannot easily undo the confirmation.
+- Confirmation is final - once confirmed, you cannot easily undo the confirmation.
 
-- Transfer details should be accurate. Provide correct transfer information for proper documentation.
-
-- Status updates after confirmation. Your transfer confirmation is recorded, and the system tracks when all lenders have confirmed.
-
-- Complete audit trail. Your confirmation is recorded with timestamp and transfer details.
-
-- Borrower visibility. Borrowers can see which lenders have confirmed transfers.
+- Status updates after confirmation - Your transfer confirmation is recorded. System tracks when all lenders have confirmed.
 
 ## What Happens Next
 
@@ -132,16 +81,14 @@ After confirming fund transfer:
 - Drawdown process is finished for your portion
 - Status shows transfer confirmed
 - Borrower receives your funds
-- Borrower can see your confirmation
 - Process continues as other lenders confirm
 - Drawdown completes as all transfers are confirmed
 
 After all lenders confirm:
 - Borrower has received funds from all confirming lenders
 - Drawdown process is complete
-- Complete documentation is maintained
 - Borrower can track all confirmations
 - Facility utilization is updated
 - Drawdown is fully documented
 
-Understanding funds transfer confirmation helps you complete the drawdown process, finalize your participation in credit facility drawdowns, and provide proper documentation that funds have been disbursed.
+Understanding funds transfer confirmation helps you complete the drawdown process, finalize your participation in credit facility drawdowns, provide proper documentation that funds have been disbursed, and ensure complete transparency in the fund transfer process.

@@ -7,7 +7,7 @@ description: Learn about the Intain Markets platform and its capabilities for st
 
 ## Overview
 
-Intain Markets is a digital infrastructure platform for structured finance transactions. It coordinates multiple parties—issuers/borrowers, investors/lenders, market makers/facility agents, servicers, and rating agencies—through workflow-driven processes. The platform manages status transitions, approvals, and relationships, enabling you to focus on business decisions rather than transaction mechanics.
+Intain Markets is a digital infrastructure platform for structured finance transactions. It coordinates multiple parties—issuers/borrowers, investors/lenders, market makers/facility agents, servicers, paying agents, and rating agencies—through workflow-driven processes. The platform manages status transitions, approvals, and relationships, enabling you to focus on business decisions rather than transaction mechanics.
 
 ## Platform Design
 
@@ -39,7 +39,9 @@ The platform provides:
 
 **Investors/Lenders** - View investment opportunities, review pool characteristics and loan details, approve or reject funding requests, and track investments. Make independent decisions with complete information.
 
-**Servicers and Paying Agents** - Access assigned pools and facilities, manage loan servicing and payment distributions, and track ongoing activities for smooth post-deal operations.
+**Servicers** - Access assigned pools and facilities, upload loan tapes monthly, manage loan servicing activities, and track ongoing loan administration for smooth post-deal operations.
+
+**Paying Agents** - Access assigned pools and facilities, handle payment distributions, ensure funds are properly allocated to all parties, and manage payment-related activities.
 
 **Rating Agencies** - Read-only access to pool information for analysis and rating purposes with appropriate security controls.
 

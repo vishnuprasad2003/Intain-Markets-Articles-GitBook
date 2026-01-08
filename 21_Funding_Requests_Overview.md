@@ -79,6 +79,4 @@ Funding requests enable flexible access to approved facility limits:
 
 **Three Possible Outcomes** - Facility agents can approve requests (creating funding notices), reject requests (requiring new requests), or request changes (allowing updates and resubmission).
 
-**Complete Documentation** - All funding requests are documented with complete details, supporting documentation, and audit trails.
-
 **Status Tracks Progress** - Request status shows where each request is in its workflow, from creation through review to approval or rejection.

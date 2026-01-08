@@ -13,7 +13,7 @@ Pools are collections of loans grouped together for securitization, whole loan s
 
 A pool is a container that holds multiple individual loans, organizing them into a single transaction unit. When you create a pool, you group related loans together to present them as a cohesive investment opportunity or transaction package.
 
-Pools are dynamic—you can add loans, remove loans, and share them with other parties for review and collaboration. The platform automatically calculates aggregate metrics from all loans in a pool, such as total balance, loan count, weighted average interest rates, and other characteristics.
+Pools are dynamic—you can add loans, remove loans, and share them with other parties for review and collaboration with market maker, investors and rating agencies. The platform automatically calculates aggregate metrics from all loans in a pool, such as total balance, loan count, weighted average interest rates, and other characteristics.
 
 ## Purpose and Use Cases
 

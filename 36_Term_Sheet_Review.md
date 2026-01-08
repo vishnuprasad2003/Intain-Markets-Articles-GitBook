@@ -34,13 +34,9 @@ Use term sheet review when:
 
 **Evaluating Facility Terms** - Assess if facility amount is appropriate and reasonable, evaluate interest rate or rate structure, review how repayments are structured, check duration and maturity, understand what funds will be used for, and review all facility terms and conditions.
 
-**Assessing Facility Structure** - Evaluate overall facility structure, review facility type and characteristics, assess facility complexity, check if structure is appropriate, and evaluate feasibility.
-
 **Assessing Borrower Creditworthiness** - Review borrower financial information, evaluate credit history and standing, assess borrower capacity, check borrower qualifications, and review borrower track record.
 
 **Reviewing Documentation** - Check financial statements completeness, verify required documents are included, review supporting materials quality, assess documentation accuracy, and ensure documentation meets requirements.
-
-**Assessing Compliance** - Verify terms meet facility requirements, check borrower qualifications, ensure documentation is complete, confirm compliance with policies, and review regulatory compliance.
 
 ## Evaluation Criteria
 
@@ -54,8 +50,6 @@ Use term sheet review when:
 
 **Compliance Verification** - Verify terms meet facility requirements, check borrower qualifications, ensure documentation is complete, confirm compliance with policies, and review regulatory compliance.
 
-**Overall Proposal Quality** - Assess proposal soundness, evaluate feasibility, check if proposal meets requirements, determine if proposal is acceptable, and make overall assessment.
-
 ## Making Decisions
 
 **Approve Term Sheet** - Approve when all requirements are met: proposal is sound and feasible, terms are appropriate, borrower is creditworthy, documentation is complete, and compliance is verified. Click "Approve" button. Term sheet status changes to Accepted. Master commitment is automatically created with Draft status, pre-populated with term sheet data. Borrower receives notification.
@@ -63,8 +57,6 @@ Use term sheet review when:
 **Reject Term Sheet** - Reject when requirements are not met: proposal doesn't meet requirements, terms are inappropriate, borrower creditworthiness concerns, incomplete documentation, or compliance issues. Click "Reject" button. Provide detailed rejection reason, enter comments explaining rejection, term sheet status changes to Rejected, borrower can create new term sheet (rejected term sheets cannot be resubmitted), and borrower receives notification.
 
 **Request Changes** - Request changes when improvements are needed: minor issues that can be addressed, additional documentation needed, clarifications required, or modifications needed to make proposal acceptable. Provide detailed change request, enter specific modifications needed, status changes to CHANGES_REQUESTED, borrower can update and resubmit, and borrower receives notification.
-
-**Decision Documentation** - Enter approval comments if approving, provide detailed rejection reason if rejecting, specify change request details if requesting changes, include any relevant comments or explanations, and ensure all decisions are properly documented.
 
 ## Rules & Validations
 
@@ -80,8 +72,6 @@ Use term sheet review when:
 
 - Decisions are final once submitted. You cannot easily reverse decisions after submission.
 
-- Complete audit trail. All decisions, reasons, and comments are recorded with timestamps.
-
 - Borrower notifications. Borrowers receive notifications when you make decisions.
 
 - Status updates reflect decisions. Term sheet status changes based on your decision.
@@ -91,7 +81,7 @@ Use term sheet review when:
 ## What Happens Next
 
 After reviewing a term sheet:
-- **If Approved**: Master commitment is automatically created with Draft status, you configure the facility structure, you submit master commitment for lender approval, facility becomes active when lenders approve, and borrowers can create funding requests.
+- **If Approved**: Master commitment is automatically created with Draft status, you configure the facility structure, you submit master commitment for lender approval, facility becomes active when lenders approve.
 
 - **If Rejected**: Borrower receives rejection reason, borrower can create a new term sheet addressing issues, new term sheet goes through same review process, and process can start over with improvements.
 

@@ -7,7 +7,7 @@ description: Learn how lenders review funding notices and approve or reject draw
 
 ## Overview
 
-Funding notice review is the process where lenders review funding notices after borrower token approval and decide whether to approve or reject individual drawdowns. This guide covers how lenders evaluate funding notices, assess drawdown requests, and make independent approval decisions.
+Funding notice review is the process where lenders review funding notices after Facility Agent E-signed funding request and decide whether to approve or reject individual drawdowns. This guide covers how lenders evaluate funding notices, assess drawdown requests, and make independent approval decisions.
 
 ## Who Can Use This
 

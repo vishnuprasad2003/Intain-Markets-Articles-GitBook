@@ -15,9 +15,9 @@ When reviewers provide input, there are two types: **Change Requests (Feedback)*
 
 ## What Each Outcome Means
 
-**Change Requests (Feedback)** are requests for modifications to improve the item. Issues can be fixed through editing, it's an iterative improvement process, and the item can proceed after changes. When changes are requested, status changes to "CHANGES_REQUESTED," the item becomes editable again, you can make modifications, and you can resubmit when changes are complete. Change requests enable refinement and improvement rather than requiring starting over.
+**Change Requests (Feedback)** are requests for modifications to improve the item. Issues can be fixed through editing, it's an iterative improvement process, and the item can proceed after changes. When changes are requested, the item becomes editable again, you can make modifications, and you can resubmit when changes are complete. Change requests enable refinement and improvement rather than requiring starting over.
 
-**Rejection** is a final decision that the item will not proceed. The item cannot be fixed through editing, it's a final state, and you must create a new item to try again. When an item is rejected, status changes to "Rejected" or "REJECTED," the item becomes read-only, it cannot be edited, it cannot be resubmitted, and the process stops for this item. Rejection requires starting fresh with a new item.
+**Rejection** is a final decision that the item will not proceed. The item cannot be fixed through editing, it's a final state, and you must create a new item to try again. When an item is rejected, the item becomes read-only, it cannot be edited, it cannot be resubmitted, and the process stops for this item. Rejection requires starting fresh with a new item.
 
 **Key Differences** - Change requests allow editing and resubmission, while rejection does not. Change requests enable iterative improvement, while rejection requires starting over. Change requests indicate potential for approval, while rejection is final and indicates the item cannot proceed.
 

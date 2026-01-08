@@ -11,23 +11,22 @@ Lenders review funding notices and can approve or reject individual drawdowns. E
 
 ## Who Can Use This
 
-- Lenders who receive funding notices after borrower token approval
+- Lenders who receive funding notices after Facility Agent e-signed the funding requests
 
 ## When This Is Used
 
 Use lender approval when:
-- Funding notice becomes visible after borrower approves token transfer
+- Funding notice becomes visible after Facility Agent e-signed the funding requests
 - You need to review a drawdown request
 - You want to approve or reject participation in a drawdown
 - You need to make a decision on whether to fund your portion
-- You want to evaluate drawdown details before committing funds
 
 ## Step-by-Step Process
 
 ### Reviewing Funding Notice
 
 1. **Access Funding Notice**
-   - Navigate to your funding notices section
+   - Navigate to Credit Facility section
    - View funding notices available for your review
    - Open the notice you want to review
    - Review complete drawdown information
@@ -43,7 +42,6 @@ Use lender approval when:
 3. **Evaluate Drawdown**
    - Assess borrowing base impact
    - Review facility utilization after this drawdown
-   - Check if drawdown complies with facility rules
    - Evaluate borrower's purpose and justification
    - Consider your risk and exposure
    - Review your allocated token amount
@@ -59,16 +57,13 @@ Use lender approval when:
 1. **Evaluate Approval Criteria**
    - Drawdown meets facility rules
    - Sufficient borrowing capacity available
-   - Purpose is acceptable
-   - Borrower is in good standing
    - Your risk tolerance allows participation
    - Drawdown aligns with your investment criteria
 
 2. **Approve Drawdown**
-   - Click the "Approve" button or similar
-   - Review any confirmation messages
-   - Confirm your approval decision
-   - Your approval is recorded
+   - Click the "Approve & Next" button
+   - Review next sections
+   - At Final confirm your approval decision
 
 ![Lender Approval - Funding Notice](imagesByMdFilesFolder/28/LenderApprovalFundingNotice.png)
 
@@ -77,7 +72,6 @@ Use lender approval when:
    - Your participation is confirmed
    - You can proceed with fund transfer
    - Your portion of the drawdown is committed
-   - Status shows you've approved
    - You can transfer funds when ready
 
 ### Making Decision - Reject
@@ -86,12 +80,9 @@ Use lender approval when:
    - Drawdown doesn't meet your criteria
    - Risk concerns
    - Facility utilization concerns
-   - Borrower concerns
-   - Other business reasons
 
 2. **Reject Drawdown**
-   - Click the "Reject" button or similar
-   - Provide rejection reason if required
+   - Click the "Reject" button
    - Enter any comments explaining your decision
    - Confirm your rejection
    - Your rejection is recorded
@@ -111,14 +102,12 @@ Use lender approval when:
    - Review when you made your decision
    - Check any comments you provided
    - Verify your decision is recorded
-   - View your allocated token amount
 
 2. **Monitor Other Lenders**
    - See which other lenders have approved
    - View which lenders have rejected
    - See which lenders are pending
    - Track overall lender participation
-   - Understand drawdown status
 
 ## Rules & Validations
 
@@ -134,13 +123,9 @@ Use lender approval when:
 
 - Decisions are final once submitted. You cannot easily change your decision after submitting.
 
-- Rejection reasons help borrowers understand. Providing reasons helps borrowers understand lender concerns.
-
-- Individual tracking. Each lender's decision is tracked separately with approval status, timestamps, and complete details.
+- Individual tracking. Each lender's decision is tracked separately with approval status.
 
 - Borrower visibility. Borrowers can see which lenders approved and which rejected.
-
-- Complete audit trail. All decisions are recorded with who made what decision and when.
 
 ## What Happens Next
 
@@ -154,6 +139,5 @@ After all lenders decide:
 - Borrower receives funds from approved lenders
 - Drawdown process completes as transfers are confirmed
 - Borrower can track which lenders participated
-- Complete documentation is maintained
 
 Understanding lender approval and rejection helps you make informed decisions on drawdowns, participate effectively in credit facilities, and manage your participation based on your own evaluation criteria and risk tolerance.

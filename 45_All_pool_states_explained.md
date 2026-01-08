@@ -27,7 +27,7 @@ The lifecycle is designed to support collaboration—you create and prepare pool
 
 ## What Each Status Indicates
 
-**Created Status** indicates that you're still preparing the pool privately. You can edit freely, add or remove loans, configure sharing settings, and make changes as needed. The pool is not yet visible to other parties. This status tells you that the pool is in its early stages and not yet ready for external review or collaboration. You have full control and can work on the pool without restrictions.
+**Created Status** indicates that you're still preparing the pool privately. You can edit freely, add or remove loans, configure sharing settings, and make changes as needed. The pool is not yet visible to other parties. This status tells you that the pool is in its early stages and not yet ready for external review or collaboration.
 
 **Preview Status** indicates that the pool is being reviewed by other parties. Recipients can view and analyze, provide feedback, and request changes. You can continue editing and responding to feedback. The pool is visible to shared parties. This status tells you that collaboration has begun and the pool is moving toward structuring. Multiple parties can work together while you maintain editing capabilities.
 

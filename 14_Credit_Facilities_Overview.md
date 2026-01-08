@@ -53,11 +53,11 @@ Credit facilities serve several important purposes:
 
 ![Create Master Commitment Facility](imagesByMdFilesFolder/14/CreateMasterCommitmentFacility.png)
 
-**Lender Approval** - After facility agents configure master commitments, they submit them for lender approval. Lenders review and approve master commitments electronically. Any lender approval activates the facility, making it operational for funding requests. Once active, borrowers can create funding requests.
+**Lender Approval** - After facility agents configure master commitments, they submit them for lender approval. Lenders review and approve master commitments electronically. Any lender approval activates the facility.
 
 ![Credit Facility - Lender Approve](imagesByMdFilesFolder/14/CreditFacility_Lender_Approve.png)
 
-**Funding Requests** - Once facilities are active, borrowers can create funding requests to draw down funds. Each request specifies the amount, purpose, and includes supporting documentation. Facility agents review requests for compliance and available capacity.
+**Funding Requests** - Once facilities are active and deal model has been set up, borrowers can create funding requests to draw down funds. Each request specifies the amount, purpose, and includes supporting documentation. Facility agents review requests for compliance and available capacity.
 
 ![Funding Request Creation - Issuer](imagesByMdFilesFolder/14/FundingRequest_Creation_Issuer.png)
 
@@ -73,10 +73,6 @@ Credit facilities serve several important purposes:
 
 ![Fund Transfer Confirmation](imagesByMdFilesFolder/14/FundTransferConfirmation.png)
 
-**Active Facilities View** - The credit facility dashboard shows all active facilities, allowing you to view facility details, check borrowing capacity, and access funding request options.
-
-![Credit Facility - Active Facilities Tab - Issuer](imagesByMdFilesFolder/14/credit_facility_active_facilities_tab_issuer.png)
-
 ## Important Points to Know
 
 **Flexible Drawdowns** - Credit facilities allow borrowers to request specific amounts as needed, up to approved limits. Each drawdown is a separate funding request that must be reviewed and approved.
@@ -91,4 +87,3 @@ Credit facilities serve several important purposes:
 
 **Multiple Drawdowns Over Time** - You can create multiple funding requests over time as long as you stay within facility limits and available borrowing capacity.
 
-**Complete Documentation** - All facility activities are documented with complete audit trails, ensuring transparency and supporting compliance.

@@ -1,47 +1,89 @@
 ---
 title: Status or Logic Changes
-description: Learn about changes to status workflows and business logic
+description: Learn about changes to status workflows and business logic in Intain Markets
 ---
 
 # Status or Logic Changes
 
 ## Overview
 
-This document tracks changes to status workflows, business logic, and process flows. Changes are documented when implemented, with release notes explaining what changed and why.
+This document tracks changes to status workflows, business logic, and process flows implemented in Intain Markets.
 
-## What Changed
+## Implemented Changes
 
-**Status Workflow Changes** - Status workflows may change in several ways. New status values may be added, or existing ones may be modified or removed. How items move between statuses may change, with new transitions added or existing ones modified. The overall flow of statuses may be updated to improve workflows. What each status means may be clarified or updated. Rules governing status changes may be updated to improve workflow integrity. These changes improve workflow efficiency and clarity.
+### Credit Facility Workflow
 
-**Business Logic Changes** - Business logic changes may affect approval processes, with how approvals work changing and new requirements or modified processes introduced. Data validation rules may be updated or new validations added. How calculations are performed may be updated or improved. Steps in workflows may be added, removed, or modified. Business rules governing operations may be updated to improve processes. These changes improve process accuracy and efficiency.
+**Dedicated Credit Facility Flow** - Credit facilities now have separate workflow:
+- Term Sheet → Master Commitment → Funding Request → Funding Notice
+- Separate from securitization and pool workflows
+- Focused specifically on credit facility transactions
 
-**Process Flow Updates** - Process flows may be updated to improve efficiency and user experience. New steps may be added to workflows, or existing steps may be modified. Workflow sequences may change to better support business processes. Process improvements may streamline operations and reduce complexity. These updates improve overall process effectiveness.
+**Automatic Master Commitment Creation** - Master commitments auto-created when term sheets approved:
+- Triggered when term sheet status changes to Accepted
+- Created with Draft status
+- Pre-populated with term sheet data
+- Facility agent configures and submits for lender approval
 
-**Validation Rule Changes** - Validation rules may be updated to improve data quality. New validations may be added to catch errors earlier. Existing validations may be modified to be more or less strict. Validation messages may be improved for clarity. These changes help ensure data quality and process integrity.
+**Lender Approval Workflow** - Simplified lender approval process:
+- Any selected lender can approve to activate facility
+- Status changes from PendingLenderApproval to ACTIVE on first approval
+- Each lender's approval tracked individually
+- E-signature envelope generated after approval for documentation
 
-**Calculation Updates** - Calculation methods may be updated to improve accuracy. New calculations may be added to provide better insights. Existing calculations may be refined or corrected. Calculation results may be displayed differently. These updates improve calculation accuracy and usefulness.
+### Pool Preview Loan Status
 
-## Impact on Existing Users
+**Loan Status Visibility** - Removed and reinstated loans now visible:
+- Removed loans maintain "Removed" status and visible in UI
+- Reinstated loans show "Reinstated" status and visible
+- Complete loan status history maintained and displayed
+- Users can see all loan statuses including removed and reinstated
 
-**Workflow Adaptation** - You may need to adapt to new workflows or processes. Status workflows may change, affecting how items progress. Process improvements may require learning new methods. New requirements may be introduced, or existing ones may be modified. Understanding changes helps you adapt effectively. Adaptation ensures you can use updated processes correctly.
+### Status Value Standardization
 
-**Learning New Methods** - You may need to learn new ways of doing things. Documentation is updated to reflect changes, and training may be available for significant changes. Release notes explain what changed and why, helping you understand new methods. Support is available to help you adapt to changes. Learning new methods helps you work effectively with updated processes.
+**Status Values Updated** - Status values standardized:
+- Term sheet "Approved" changed to "Accepted"
+- Master commitment "Active" changed to "ACTIVE"
+- Status values consistent across platform
 
-**Improved Functionality** - Changes often improve functionality and user experience. Process improvements may make workflows more efficient. Better business logic may reduce errors and improve outcomes. Enhanced workflows may provide better visibility and control. Overall, changes typically improve platform effectiveness. These improvements benefit users by making processes better.
+### Funding Notice Workflow
 
-**Migration Support** - When significant changes occur, migration support may be provided. Migration guides explain how to transition to new methods. Support can help you adapt to changes. Documentation reflects current methods and workflows. Training may be available for significant changes. Migration support helps ensure smooth transitions.
+**Automatic Funding Notice Generation** - Funding notices auto-generated:
+- Created automatically when funding request approved
+- Status starts as PENDING_TOKEN_GENERATION
+- Facility agent generates tokens and configures distribution
+- Status changes to TOKEN_GENERATED after token creation
+- Borrower approves tokens, status changes to TOKEN_APPROVED
 
-**Staying Current** - Understanding changes helps you stay current with platform evolution. Reviewing what changed and why helps you adapt effectively. Learning new requirements ensures you can use the platform correctly. Adapting to improvements helps you work more efficiently. Staying informed about changes helps you use the platform most effectively. Staying current ensures you can use all platform capabilities.
+**Per-Lender E-Signature** - Facility agent signs for each lender:
+- Each lender's signature tracked separately
+- esignatureStatus in tokenDistribution array tracks individual signatures
+- All signatures must complete before process continues
 
-**Potential Disruptions** - Some changes may temporarily disrupt workflows while you adapt. Understanding changes helps minimize disruptions. Support is available to help you adapt quickly. Documentation provides guidance for adapting to changes. Temporary disruptions are typically outweighed by long-term improvements.
+### Business Logic Updates
 
-## How to Adapt
+**Validation Rules** - Field and document validation:
+- Required fields validated before submission
+- Required documents enforced (collateral profile, financial statements, KYC documents)
+- Invalid data rejected with error messages
 
-**Review Release Notes** - Review release notes to understand what changed. Release notes explain changes and their impact. They provide guidance on adapting to changes. Regular review helps you stay current with updates.
+**Status Progression** - Status progression enforced:
+- Items must progress through statuses in order
+- Cannot skip workflow steps
+- Prerequisites must be met before actions enabled
 
-**Update Your Processes** - Update your processes to reflect changes. Learn new methods and workflows. Adapt your approach to use updated features. Update your understanding of platform capabilities. Process updates ensure you can work effectively.
+**Token Allocation** - Token distribution calculated automatically:
+- Based on lender voting percentages
+- Each lender receives tokensAllocated amount
+- Total tokens equal drawdown amount
 
-**Seek Support** - Contact support if you need help adapting to changes. Support can explain changes and help you adapt. Training may be available for significant changes. Support helps ensure smooth adaptation.
+## Impact on Users
 
-**Review Documentation** - Review updated documentation to understand changes. Documentation reflects current methods and workflows. Updated documentation explains new processes. Regular review helps you stay current.
+**Workflow Changes** - Users work with:
+- Dedicated credit facility workflow separate from securitization
+- Automatic master commitment and funding notice creation
+- Per-lender signature and approval tracking
+- Visible loan status including removed and reinstated
 
+**Status Management** - Status values standardized and consistent. Status history shows complete progression.
+
+**Documentation** - Documentation reflects current workflows and status values.
