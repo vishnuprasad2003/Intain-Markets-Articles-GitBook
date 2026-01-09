@@ -34,11 +34,6 @@ Pool sharing enables collaboration with other organizations in the structured fi
 - You want to send a deal-ready pool to market makers
 - You're ready to lock down structural editing after acceptance
 
-**Use Mandates when:**
-- You have a pool ready for market maker structuring
-- You want a formal commitment from a market maker
-- You need to progress the pool toward Deal status
-
 ## Step-by-Step Process
 
 ### Preparing the Pool for Sharing
@@ -118,8 +113,8 @@ After sharing via Preview, recipients make mandate decisions:
      - They can now provide pool-level and loan-level feedback
      - They can request loan removals using the cross icon in the Loans tab
    - **Reject**: Recipient declines the mandate
-     - Their view remains **Mandate Pending** (they can reconsider later if you re-share)
-     - You can revise the pool and re-share, or share with other organizations
+     - Their view remains **Pool Rejected**
+     - You can revise the pool and share with other organizations
 
 ![Market Maker Makes Decision](imagesByMdFilesFolder/08/4.MarketMakerMakesDecision.png)
 
@@ -162,8 +157,8 @@ When prerequisites are met (typically all pool loans NFT-minted), you can initia
      - The accepting market maker proceeds with deal structuring
      - Downstream activities (structuring, investor allocation, etc.) continue
    - **Reject**: Recipient declines the deal
-     - Pool remains in **Ready for Deal** for that recipient
-     - You can reach out to understand concerns or work with other parties
+     - Pool remains in **Pool Rejected** for that recipient
+     - You can send deal invitation with other organizations
 
 ### Managing Shared Organizations
 

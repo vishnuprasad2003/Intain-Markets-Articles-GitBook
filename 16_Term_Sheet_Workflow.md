@@ -33,8 +33,6 @@ Use the term sheet workflow when:
    - From the left expandable menu (which expands when you hover over it), click on **Credit Facility**
    - The Credit Facility dashboard displays with term sheets you've created and master commitments
 
-![Accessing Term Sheet - Create New Term Sheet](imagesByMdFilesFolder/16/AccessingTermsheetCreateNewTermSheet.png)
-
 #### Step 2: Start Term Sheet Setup
 
 1. **Click Term Sheet Setup**
@@ -45,6 +43,8 @@ Use the term sheet workflow when:
 
 2. **Select Create Via Wizard**
    - Click **Create Via Wizard** to open the term sheet creation popup
+
+![Accessing Term Sheet - Create New Term Sheet](imagesByMdFilesFolder/16/AccessingTermsheetCreateNewTermSheet.png)
 
 #### Step 3: Enter Term Sheet Details
 
@@ -87,8 +87,6 @@ Use the term sheet workflow when:
    - Review the document
    - Complete the electronic signature process
    - After signing, status changes to **BorrowerSigned**
-
-![Term Sheet Signing](imagesByMdFilesFolder/16/TermSheetSigning.png)
 
 #### Step 6: Submit to Facility Agent
 

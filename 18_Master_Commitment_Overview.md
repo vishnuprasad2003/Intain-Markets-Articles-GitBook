@@ -57,7 +57,7 @@ The facility agent clicks **Create Facility** to open a comprehensive configurat
 - **Additional Sections**: Complete all required configurations
 - **Review & Create**: Final review and submission
 
-![Create Master Commitment Modal](imagesByMdFilesFolder/18/create_master_commitment_modal_scroll_state_b_74.png)
+![Create Master Commitment Facility](imagesByMdFilesFolder/14/CreateMasterCommitmentFacility.png)
 
 All data is auto-saved as the facility agent enters it.
 

@@ -1,9 +1,9 @@
 ---
-title: Facility Setup Status (Deal Modelling)
+title: Facility Setup Status
 description: Understand deal modelling and facility setup status
 ---
 
-# Facility Setup Status (Deal Modelling)
+# Facility Setup Status
 
 ## Overview
 

@@ -66,15 +66,11 @@ The feedback workflow enables collaboration between issuers and reviewing partie
    - In pool details, locate the **Feedback** section
    - This section shows existing pool-level feedback and allows you to add new feedback
 
-![Pools Feedback - Market Maker](imagesByMdFilesFolder/09/Pools_Feedback_MarketMaker.png)
-
 2. **Enter Your Feedback**
    - Click to add new feedback
    - Type your message clearly and specifically
    - Provide context for your observation, question, or concern
    - Be specific about what you're commenting on or what you need clarified
-
-![Enter Feedback](imagesByMdFilesFolder/09/EnterFeedback.png)
 
 3. **Submit Feedback**
    - Review your message for clarity
@@ -82,8 +78,6 @@ The feedback workflow enables collaboration between issuers and reviewing partie
    - Your feedback is saved and recorded
    - The issuer receives notification about the new feedback
    - Your feedback appears in the Feedback section
-
-![View Entered Feedback](imagesByMdFilesFolder/09/ViewEnteredFeedback.png)
 
 ### Providing Loan-Level Feedback (All Roles)
 
@@ -97,16 +91,22 @@ The feedback workflow enables collaboration between issuers and reviewing partie
    - View any existing feedback/comments for this specific loan
    - The dialog shows the conversation history for this loan
 
+![Pools Feedback - Market Maker](imagesByMdFilesFolder/09/Pools_Feedback_MarketMaker.png)
+
 3. **Enter Loan-Specific Feedback**
    - Type your message about this specific loan
    - Be clear about what aspect of the loan you're commenting on
    - Reference specific loan characteristics if relevant
+
+![Enter Feedback](imagesByMdFilesFolder/09/EnterFeedback.png)
 
 4. **Submit Feedback**
    - Click send to save your feedback
    - Your feedback is recorded for this specific loan
    - Other parties with access can view the feedback conversation
    - The loan may show a feedback indicator in the Loans tab
+
+![Enter Feedback](imagesByMdFilesFolder/09/EnterFeedback.png)
 
 ### Requesting Loan Removal (Market Makers and Investors)
 
@@ -134,7 +134,7 @@ If you believe a loan should be removed from the pool, you can request its remov
 
 1. **Check for New Feedback**
    - Your dashboard shows notifications for pools with new/unread feedback
-   - Pools with unread feedback are highlighted or show feedback counts
+   - Pools with unread feedback are highlighted
    - Navigate to pools with feedback to review
 
 2. **Review Pool-Level Feedback**
@@ -185,7 +185,6 @@ When market makers or investors request loan removals, you decide whether to acc
    - All feedback includes who provided it and when
 
 2. **Track Unread Feedback**
-   - Unread feedback is highlighted or counted
    - Check notifications for new feedback activity
    - Review and address feedback promptly
 

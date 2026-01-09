@@ -56,9 +56,8 @@ Every item in the platform has a status that controls available actions:
 | Status | Meaning | Available Actions |
 |--------|---------|-------------------|
 | **Pending** | Not verified | Self Certify, Submit to Agent |
-| **Reviewed** | Verification complete | Mint NFT (in Certificates) |
-| **Certified** | Agent verified | View NFT |
-| **Self Certified** | Self verified | View NFT |
+| **Reviewed** | Verification complete | Mint NFT & View NFT (in Certificates) |
+| **Verified** | Minting Complete | View NFT |
 
 ## Approval Gates
 

@@ -137,7 +137,6 @@ When reviewing pools, use the available sections to evaluate:
 
 **What Happens After Rejection:**
 - The issuer is notified of your rejection
-- The issuer can revise the pool and re-share with you
 - The issuer can share with other market makers
 - Your rejection is recorded in the audit trail
 

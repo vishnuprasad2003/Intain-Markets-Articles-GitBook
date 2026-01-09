@@ -313,23 +313,6 @@ These statuses apply when viewing loans in a pool's Loans tab after the pool has
 - Loan is eligible for credit facility mapping
 - Loan can be used in master commitment transactions
 
-## Status Relationships
-
-| Batch Verification Status | View NFT | Mint NFT | NFT Loan Status Available |
-|--------------------------|----------|----------|---------------------------|
-| Pending | Disabled | Disabled | Not Minted |
-| Reviewed | Enabled | Enabled | Not Minted → Minted |
-| Verified | Enabled | Disabled | Minted |
-
-| Mapping Status | Pool Loan Status | What Happens |
-|---------------|------------------|--------------|
-| Unmapped | N/A | Loan available for mapping |
-| Mapped (Pool Name) | Pending | Pool shared, awaiting MM decision |
-| Mapped (Pool Name) | Accepted | MM accepted, loan confirmed |
-| Mapped (Pool Name) | Under Reconsider / Reconsider | Removal requested |
-| Mapped (Pool Name) | Removed | Excluded from calculations |
-| Mapped (Pool Name) | Reinstated | Back in calculations |
-
 ## Quick Reference
 
 **Want to know if a loan can be mapped to a pool?**

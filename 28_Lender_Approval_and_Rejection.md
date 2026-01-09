@@ -1,117 +1,132 @@
 ---
-title: Lender Funding Notice Review
-description: Learn how lenders review funding notices and complete fund transfers
+title: Lender Approval and Rejection
+description: How lenders approve or reject master commitments in credit facilities
 ---
 
-# Lender Funding Notice Review
+# Lender Approval and Rejection
 
 ## Overview
 
-After funding notices become visible to lenders (once the facility agent has completed the e-sign for that specific lender), lenders review the drawdown details, select a payment method, transfer funds, and confirm settlement.
+This guide explains how lenders approve or reject master commitments in the credit facility module. After the facility agent creates and configures a facility, lenders review and either approve or reject their participation.
 
 ## Who Can Use This
 
-- **Lenders** who have funding notices visible in their Credit Facility section
+- **Lenders** who have been added to a master commitment by the facility agent
 
 ## When This Is Used
 
 Use this process when:
-- A funding notice appears in your Credit Facility section
-- You need to review drawdown details
-- You want to complete fund transfer and settlement
+- A facility agent has created a master commitment
+- You have been added as a lender to the facility
+- You need to review and decide on your participation
 
 ## Prerequisites
 
-Before you see a funding notice:
-1. Funding request has been approved by the facility agent
-2. Funding notice has been generated
-3. Facility agent has approved the funding notice
-4. Facility agent has e-signed for you
+Before you can approve or reject:
+1. A term sheet has been approved
+2. Master commitment has been auto-created
+3. Facility agent has configured the facility and added you as a lender
+4. Facility agent has clicked **Create Facility**
 
 ## Step-by-Step Process
 
-### Step 1: Access the Funding Notice
+### Step 1: Access the Master Commitment
 
-1. **Navigate to Credit Facility**
+1. **Navigate to Oppurtunities**
    - Log in with your Lender credentials
-   - From the left expandable menu, click on **Credit Facility**
-   - Find the funding notice in your dashboard
+   - From the left expandable menu, click on **Oppurtunities**
+   - Find the master commitment pending your review
 
-2. **Click Review Funding Notice**
-   - In the Actions column, click **Review Funding Notice**
-   - A screen opens showing the funding notice details
+2. **Review Facility Details**
+   - Review the facility terms and conditions
+   - Check your allocated commitment amount
+   - Review the borrower information
 
-![Confirm and Settle - Lender](imagesByMdFilesFolder/ConfirmAndSettleInvestor.png)
+![Lender Approval - Master Commitment](imagesByMdFilesFolder/18/LenderApproval_MasterCommitment.png)
 
-### Step 2: Review Drawdown Details
+### Step 2: Make Your Decision
 
-1. **Review the Information**
-   - **Total Drawdown Amount**: Check the total amount being drawn
-   - **Your Allocated Portion**: Review your portion of the drawdown
-   - **Purpose of Funds**: Understand what the funds will be used for
-   - **Funding Date**: Check when funds are needed
+#### To Approve
 
-2. **Verify Your Allocation**
-   - Confirm your allocated amount is correct
-   - Verify it matches your participation in the facility
+1. **Click Review & Approve**
+   - Review all facility details
+   - Ensure terms are acceptable
 
-### Step 3: Select Payment Method
+2. **E-Sign via Adobe Sign**
+   - Adobe Sign popup opens
+   - Complete the electronic signature
+   - Your approval is recorded
 
-1. **Choose Payment Method**
-   - Review available payment methods
-   - Select your preferred payment method
-   - Ensure you have the necessary account information
+3. **Facility Becomes Active**
+   - Once any lender approves, the master commitment becomes **Active**
+   - The facility is now operational
 
-### Step 4: Transfer Funds
+#### To Reject
 
-1. **Complete the Transfer**
-   - Transfer the funds according to your allocated amount
-   - Use the designated accounts and references
-   - Ensure transfer is completed successfully
+1. **Click Reject** (if available)
+   - Provide a reason for rejection
+   - Your rejection is recorded
 
-### Step 5: Confirm and Settle
+2. **What Happens After Rejection**
+   - Facility agent is notified
+   - Facility agent may need to find alternative lenders
+   - You are removed from this facility
 
-1. **Click Confirm and Settle**
-   - After completing the fund transfer, click **Confirm and Settle**
-   - This confirms that you have transferred the funds
+## Approval Flow
 
-2. **Settlement Complete**
-   - Tokens are transferred
-   - The borrower receives the funds
-   - Your participation in this drawdown is recorded
+```
+Term Sheet Accepted
+       ↓
+Master Commitment Auto-Created (Draft)
+       ↓
+FA Configures Facility → Adds Lenders → Create Facility
+       ↓
+Master Commitment Status: PendingLenderApproval
+       ↓
+Lender Reviews → Approve (E-Sign) or Reject
+       ↓
+Any Lender Approves → Master Commitment becomes Active
+```
 
 ## What Lenders See
 
 ### In Credit Facility Section
-- Approved facilities where you're a participant
-- Funding notices (after FA e-signs complete)
-- Actions: Review Funding Notice
+- Master commitments pending your approval
+- Facility details and terms
+- Your allocated commitment amount
 
-### Funding Notice Details
-- Drawdown amount and date
-- Your allocated portion
-- Purpose of funds
-- Payment method options
+### Actions Available
+| Action | Description |
+|--------|-------------|
+| **Review & Approve** | Accept the facility and e-sign |
+| **Reject** | Decline participation |
 
 ## Rules & Validations
 
-- **Visibility After E-Sign**: You see funding notices once the facility agent has completed e-signing for you specifically.
-
-- **Your Allocation Only**: You see only your portion of the drawdown.
-
-- **Confirm After Transfer**: Only click Confirm and Settle after you have actually transferred the funds.
-
-- **Individual Tracking**: Your confirmation is tracked individually. Other lenders confirm separately.
+- **E-Sign Required**: Approval requires e-signature via Adobe Sign
+- **One Approval Activates**: The master commitment becomes Active when any lender approves
+- **Review Before Signing**: Carefully review all terms before e-signing
+- **Rejection Is Final**: Once rejected, you cannot reverse the decision
 
 ## What Happens Next
 
-**After Confirming Settlement:**
-- Tokens are transferred to the borrower
-- The borrower receives the funds
-- Your participation is recorded
-- The drawdown is complete for your portion
+**After Approval:**
+- Master commitment becomes **Active**
+- Facility agent can complete deal modelling
+- Borrower can map loans and raise funding requests
+- You will receive funding notices for settlement
 
-**Ongoing:**
-- The borrower may create additional funding requests
-- New funding notices appear as they are processed
-- The process repeats for each drawdown
+**After Rejection:**
+- Facility agent is notified
+- You are removed from the facility
+- No further actions required from you
+
+## Key Points
+
+**Review Carefully** - Understand all facility terms before approving.
+
+**E-Sign Commitment** - Your e-signature is legally binding.
+
+**Any Lender Activates** - The facility becomes active when any lender approves, not all.
+
+**Ongoing Participation** - After approval, you'll participate in funding notices and settlements.

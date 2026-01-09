@@ -26,7 +26,7 @@ This document tracks workflows and features that have been retired or changed in
 ### NFT Minting Location
 
 **Previous:**
-- NFT minting in Batch Verification section
+- NFT minting is done by Verification Agent
 
 **Current:**
 - NFT minting in **Certificates** section

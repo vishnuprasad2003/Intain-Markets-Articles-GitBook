@@ -29,8 +29,6 @@ Use term sheet submission when:
    - From the left expandable menu (expands when you hover), click on **Credit Facility**
    - Your Credit Facility dashboard displays
 
-![Accessing Term Sheet - Create New Term Sheet](imagesByMdFilesFolder/32/AccessingTermsheetCreateNewTermSheet.png)
-
 ### Step 2: Start Term Sheet Setup
 
 1. **Click Term Sheet Setup**
@@ -42,6 +40,8 @@ Use term sheet submission when:
 2. **Select Create Via Wizard**
    - Click **Create Via Wizard**
    - A popup opens for entering term sheet details
+
+![Accessing Term Sheet - Create New Term Sheet](imagesByMdFilesFolder/32/AccessingTermsheetCreateNewTermSheet.png)
 
 ### Step 3: Enter Term Sheet Details
 
@@ -90,8 +90,6 @@ Use term sheet submission when:
    - Review the document
    - Complete the electronic signature
    - Status changes to **BorrowerSigned**
-
-![Term Sheet Signing](imagesByMdFilesFolder/32/TermSheetSigning.png)
 
 ### Step 7: Submit to Facility Agent
 

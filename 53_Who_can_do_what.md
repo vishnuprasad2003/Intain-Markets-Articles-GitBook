@@ -9,14 +9,6 @@ description: Comprehensive guide to role permissions and what each role can do
 
 This reference guide explains what each role can do in the Intain Markets platform. The platform automatically enforces these permissions.
 
-## Role Names
-
-| Standard Name | Credit Facility Name |
-|---------------|---------------------|
-| Issuer | Borrower |
-| Market Maker | Facility Agent |
-| Investor | Lender |
-
 ## Issuer / Borrower Actions
 
 ### Pools Module

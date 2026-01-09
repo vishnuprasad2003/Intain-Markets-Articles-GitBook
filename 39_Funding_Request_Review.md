@@ -1,9 +1,9 @@
 ---
-title: Funding Request Review (FA)
+title: Funding Request Review
 description: How facility agents review and approve funding requests
 ---
 
-# Funding Request Review (Facility Agent)
+# Funding Request Review
 
 ## Overview
 

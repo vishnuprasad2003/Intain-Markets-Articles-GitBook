@@ -1,110 +1,105 @@
 ---
-title: Funding Notice Processing (FA)
-description: Learn how facility agents process funding notices with approval and e-signatures
+title: Token Generation and E-Sign
+description: Understanding token generation and the e-signature process in credit facilities
 ---
 
-# Funding Notice Processing (Facility Agent)
+# Token Generation and E-Sign
 
 ## Overview
 
-After a funding request is approved, a funding notice is automatically generated. The facility agent then processes the funding notice by approving it and e-signing for each lender individually. As each e-sign is completed, that lender can see the funding notice.
+This guide explains the token generation process and how e-signatures are used in the credit facility module. Token generation occurs when funding notices are created, and e-signatures are required at multiple points in the workflow.
 
-## Who Can Use This
+## Token Generation
 
-- **Facility Agents** who process funding notices
+### When Tokens Are Generated
 
-## When This Is Used
+Tokens are generated at the funding notice stage:
 
-Use this process when:
-- You have approved a funding request
-- A funding notice has been generated (Pending Token Generated)
-- You need to make the funding notice visible to lenders
+1. **Funding Request Approved** - FA approves the borrower's funding request
+2. **Funding Notice Auto-Created** - System generates the funding notice with status **Pending Token Generated**
+3. **Token Preparation** - The system prepares tokens for the drawdown
 
-## Step-by-Step Process
+### Token Generation Status
 
-### Step 1: Access the Funding Notice
+| Status | Meaning |
+|--------|---------|
+| **Pending Token Generated** | Funding notice created, tokens being prepared |
+| **Token Generated** | Tokens ready, awaiting FA approval and e-sign |
 
-1. **Navigate to Credit Facility**
-   - Log in with your Facility Agent credentials
-   - From the left expandable menu, click on **Credit Facility**
-   - Go to the **Active Facilities** tab
+## E-Signature Workflow
 
-2. **Find the Funding Notice**
-   - Locate the funding notice under the relevant master commitment
-   - Status shows **Pending Token Generated**
+E-signatures are required at several points in the credit facility workflow:
 
-### Step 2: Approve the Funding Notice
+### 1. Term Sheet E-Sign (Borrower)
 
-1. **Click Approve**
-   - Click **Approve** on the funding notice
-   - This prepares the notice for e-signatures
+**Who Signs:** Borrower
+**When:** After creating the term sheet, before submitting to FA
 
-### Step 3: E-Sign for Each Lender
+**Process:**
+1. Borrower creates term sheet
+2. Clicks to sign via Adobe Sign
+3. Completes e-signature
+4. Status changes to **BorrowerSigned**
+5. Can now submit to FA
 
-1. **View E-Sign Status**
-   - After approval, the action shows **E-sign (0/n)** where n = number of lenders
-   - Example: E-sign (0/3) means 3 lenders, none signed yet
+### 2. Master Commitment E-Sign (Lender)
 
-2. **Sign for First Lender**
-   - Click E-sign
-   - Adobe Sign popup opens
-   - Complete the electronic signature for this lender
-   - Count updates to (1/n)
+**Who Signs:** Lender
+**When:** When approving the master commitment
 
-![FA - Funding Notice Save - Token Generation](imagesByMdFilesFolder/40/FA_FundingNotice_Save_TokenGeneration.png)
+**Process:**
+1. Lender reviews the master commitment
+2. Clicks **Review & Approve**
+3. Adobe Sign popup opens
+4. Completes e-signature
+5. Master commitment becomes **Active**
 
-3. **Sign for Remaining Lenders**
-   - Click E-sign again
-   - Sign for the next lender
-   - Repeat for each lender
-   - Count progresses: (1/n) → (2/n) → (n/n)
-   - Each lender can see the funding notice once their e-sign is completed
+### 3. Funding Notice E-Sign (Facility Agent)
 
-4. **E-Signs Complete**
-   - When count shows (n/n), all lenders have been signed for
-   - Each lender has visibility to the funding notice
+**Who Signs:** Facility Agent (for each lender)
+**When:** After approving the funding notice
+
+**Process:**
+1. FA approves the funding notice
+2. Action shows **E-sign (0/n)**
+3. FA clicks E-sign
+4. Adobe Sign popup opens
+5. Signs for one lender at a time
+6. Count updates: (1/n), (2/n), ... (n/n)
+7. Each lender can see the notice once their e-sign is complete
+
+![FA - Token Generation and E-Sign](imagesByMdFilesFolder/40/FA_FundingNotice_Save_TokenGeneration.png)
 
 ### E-Sign Progress Tracking
 
 | E-Sign Status | Meaning |
 |---------------|---------|
-| E-sign (0/3) | No lenders signed yet (3 total) |
+| E-sign (0/3) | No lenders signed yet |
 | E-sign (1/3) | Signed for 1 lender |
 | E-sign (2/3) | Signed for 2 lenders |
 | E-sign (3/3) | All lenders signed |
 
-### Lender Visibility
+## Complete Flow
 
-1. **Individual Lender Access**
-   - Each lender sees the funding notice once the FA has e-signed for them
-   - Lenders see it in their **Credit Facility** section
-   - Action shows **Review Funding Notice** for lenders
+```
+1. Borrower creates Term Sheet → E-Sign (Adobe Sign) → Submit
+2. FA approves → Master Commitment created
+3. FA configures → Lender reviews → E-Sign (Adobe Sign) → Active
+4. Borrower creates Funding Request → Submit → FA approves
+5. Funding Notice generated (Token Generation)
+6. FA approves → E-Sign for each lender (Adobe Sign)
+7. Lenders see notice → Transfer funds → Confirm and Settle
+8. Tokens transferred to Borrower
+```
 
-2. **Lender Process**
-   - Lenders review the funding notice
-   - Lenders select payment method
-   - Lenders transfer funds
-   - Lenders click **Confirm and Settle**
+## Key Points
 
-3. **Completion**
-   - Tokens are transferred
-   - Borrower receives the funds
+**Token Generation** - Occurs automatically when funding notices are created from approved funding requests.
 
-## Rules & Validations
+**Multiple E-Sign Points** - E-signatures are required from borrowers, lenders, and facility agents at different stages.
 
-- **Approve Before E-Sign**: You must approve the funding notice before e-signing.
+**Adobe Sign Integration** - All e-signatures are processed through Adobe Sign for legal validity.
 
-- **Sign Per Lender**: You sign for each lender individually via Adobe Sign.
+**Per-Lender E-Sign** - Facility agent signs separately for each lender on funding notices.
 
-- **Individual Visibility**: Each lender sees the funding notice once their e-sign is complete.
-
-- **Individual Tracking**: Each lender's e-signature status is tracked separately.
-
-## What Happens Next
-
-**After E-Signs:**
-- Each lender can see their funding notice once signed for
-- Lenders review and transfer funds
-- Lenders click Confirm and Settle
-- Tokens transferred to borrower
-- Drawdown complete
+**Audit Trail** - All signatures and token generation events are recorded for compliance.

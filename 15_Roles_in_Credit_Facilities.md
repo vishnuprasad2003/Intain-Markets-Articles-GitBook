@@ -9,16 +9,6 @@ description: Understand the different roles and their responsibilities in credit
 
 Credit facility transactions involve multiple parties with distinct roles and responsibilities. Understanding these roles helps you navigate the workflow and know what actions each party can take. Note that in the Credit Facility module, roles have different names compared to other modules.
 
-## Role Name Mapping
-
-In the Credit Facility module, the standard platform roles are referred to by different names:
-
-| Standard Role | Credit Facility Name |
-|---------------|---------------------|
-| Issuer | **Borrower** |
-| Market Maker | **Facility Agent** |
-| Investor | **Lender** |
-
 ## Role Responsibilities
 
 ### Borrower (Issuer)
@@ -98,16 +88,6 @@ Servicers manage ongoing loan administration for active facilities.
 
 ## Role-Based Access
 
-### What Each Role Can See
-
-| Item | Borrower | Facility Agent | Lender | Servicer |
-|------|----------|----------------|--------|----------|
-| Term Sheets | Own created | Submitted for review | - | - |
-| Master Commitments | Approved ones | All in progress | Assigned to them | - |
-| Funding Requests | Own created | Submitted for review | - | - |
-| Funding Notices | Own (after token approval) | All | Assigned to them (after token approval) | - |
-| Deal Details | - | - | - | Assigned deals |
-
 ### What Each Role Can Do
 
 | Action | Borrower | Facility Agent | Lender | Servicer |
@@ -121,7 +101,6 @@ Servicers manage ongoing loan administration for active facilities.
 | Create Funding Request | ✓ | - | - | - |
 | Review Funding Request | - | ✓ | - | - |
 | E-sign Funding Notice | - | ✓ | - | - |
-| Approve Token Transfer | ✓ | - | - | - |
 | Confirm Fund Transfer | - | - | ✓ | - |
 | Upload Monthly Loan Tapes | - | - | - | ✓ |
 
@@ -135,8 +114,7 @@ Servicers manage ongoing loan administration for active facilities.
 4. If changes requested, edit and resubmit
 5. After approval, wait for facility agent to configure and lender to approve
 6. After facility is active and deal modelling complete, map loans and create funding requests
-7. After funding notice is ready, approve token transfer
-8. Receive funds after lender confirms transfer
+7. Receive funds after lender confirms transfer
 
 ### Facility Agent Workflow
 

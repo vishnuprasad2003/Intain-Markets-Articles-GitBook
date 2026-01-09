@@ -1,71 +1,91 @@
 ---
-title: Funding Notice Visibility to Lenders
-description: When and how lenders can see funding notices
+title: Borrower Token Approval
+description: How borrowers approve tokens in the credit facility workflow
 ---
 
-# Funding Notice Visibility to Lenders
+# Borrower Token Approval
 
 ## Overview
 
-This guide explains when funding notices become visible to lenders and what triggers that visibility. Lenders can only see funding notices after the facility agent has completed specific steps.
+This guide explains the borrower token approval process in the credit facility module. After the facility agent approves the funding notice and tokens are generated, the borrower approves the tokens. This approval enables the facility agent to proceed with e-signing for each lender.
 
-## When Lenders See Funding Notices
+## Who Can Use This
 
-Each lender can see the funding notice after:
+- **Borrowers** who have funding requests approved
 
-1. **Funding Request Approved** - The facility agent approves the borrower's funding request
+## When This Is Used
 
-2. **Funding Notice Generated** - The system automatically creates the funding notice (Pending Token Generated)
+Use this process when:
+- Your funding request has been approved
+- The funding notice has been generated
+- The facility agent has approved the funding notice
+- Tokens have been generated
+- You need to approve the tokens
 
-3. **Facility Agent Approves** - The facility agent clicks **Approve** on the funding notice
-
-4. **Facility Agent E-Signs for Each Lender** - The facility agent completes e-signature for each lender (E-sign 0/n → n/n)
-
-Each lender can see the funding notice once the facility agent has completed their individual e-sign.
-
-## Flow Summary
+## Borrower Token Approval Flow
 
 ```
 Funding Request APPROVED
        ↓
-Funding Notice Auto-Generated (Pending Token Generated)
+Funding Notice Generated (Pending Token Generated)
        ↓
 FA clicks Approve
        ↓
-FA E-signs for each lender (E-sign 0/n → 1/n → 2/n → n/n)
+Tokens Generated
        ↓
-Each lender's e-sign complete → Funding Notice VISIBLE TO THAT LENDER
+Borrower Approves Token
+       ↓
+FA E-signs for each lender (0/n → n/n)
+       ↓
+Funding Notice VISIBLE TO LENDERS
        ↓
 Lenders review → Transfer funds → Confirm and Settle
        ↓
 Tokens transferred to Borrower
 ```
 
-## What Lenders See
+## Step-by-Step Process
 
-Once visible, lenders see in their **Credit Facility** section:
-- The funding notice with **Review Funding Notice** action
-- Drawdown amount and date
-- Their allocated portion
-- Purpose of funds
-- Payment method options
+### Step 1: Access Credit Facility
 
-## What Lenders Do
+1. **Navigate to Credit Facility**
+   - Log in with your Borrower credentials
+   - From the left expandable menu, click on **Credit Facility**
+   - Find the funding notice awaiting your token approval
 
-1. Navigate to **Credit Facility** from the left menu
-2. Find the funding notice
-3. Click **Review Funding Notice**
-4. Review the drawdown details
-5. Select payment method
-6. Transfer funds externally
-7. Click **Confirm and Settle**
+### Step 2: Review Token Details
+
+1. **Review the Funding Notice**
+   - Check the drawdown amount
+   - Verify lender allocations
+   - Confirm the details are correct
+
+### Step 3: Approve Token
+
+1. **Click Approve**
+   - Click the Approve Token Action for the funding notice
+   - Enter the wallet Private Key and click the **Approve** button to approve the token
+   - This enables the FA to proceed with e-signing
+
+2. **Confirmation**
+   - Your approval is recorded
+   - FA can now e-sign for each lender
+
+## What Happens After Approval
+
+**After Borrower Approves Token:**
+- Facility agent can proceed with e-signing
+- FA e-signs for each lender (0/n → n/n)
+- Each lender sees the funding notice after their e-sign
+- Lenders transfer funds and confirm settlement
+- Tokens are transferred to the borrower
 
 ## Key Points
 
-**Visibility After E-Sign** - Each lender sees the funding notice once the facility agent has e-signed for them specifically.
+**After Token Generation** - Borrower token approval occurs after the FA approves and tokens are generated.
 
-**E-Sign Progress** - The E-sign (0/n) counter shows how many lenders have been signed for. Each lender can see the notice once signed for.
+**Before FA E-Sign** - This step must complete before the FA can e-sign for lenders.
 
-**Individual Tracking** - Each lender's fund transfer and settlement is tracked individually.
+**Enables FA Action** - Your approval enables the facility agent to proceed with e-signatures.
 
-**Confirm After Transfer** - Lenders should only click Confirm and Settle after they have actually transferred the funds.
+**Token Receipt** - After lenders settle, tokens are transferred to you.

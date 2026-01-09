@@ -56,7 +56,6 @@ After mapping, you can edit the field mappings using dropdowns, then click Save 
 
 You start by going to the **Imports** section from the left expandable menu. Here you select the As Of Date, asset class, and choose your loan tape file, then click Submit. The system creates a Job ID and adds it to the table below with the action **Trigger LTS**.
 
-![Loans Onboarding - Uploading - Issuer](imagesByMdFilesFolder/10/Loans_Onboarding_Uploading_Issuer.png)
 
 **2. Loan Tape Standardization**
 
@@ -67,6 +66,8 @@ Click **Trigger LTS** to open the Map Fields popup. Here your loan tape headers 
 - Click **Save Mapping** when done
 
 After saving, the loans are stored in your organization's database. The **Trigger LTS** action changes to **View Mapped**.
+
+![Loans Onboarding - Uploading - Issuer](imagesByMdFilesFolder/10/Loans_Onboarding_Uploading_Issuer.png)
 
 **3. Accessing the Loan Registry**
 
@@ -87,13 +88,13 @@ In the Loan Registry, select the loans you want to map, then click **Map to Pool
 
 Select loans in the Loan Registry and click **Add to Batch** to group them for verification. Go to the **Batch Verification** section from the left menu to see your batches.
 
-![Batch Verification](imagesByMdFilesFolder/10/BatchVerification.png)
-
 Initial batch status is **Pending**. Click on a Batch ID to go to the batch details page with two tabs:
 - **Loans Tab**: Shows all loans in the batch with the **Self Certify** button
 - **Documents Tab**: Upload verification documents (select document type, verification template, and file from your file share)
 
 **Self Certify Process**: Click Self Certify, enter your name, signer name, email, and place, then click E-Sign. An Adobe Sign popup opens showing the loan certification details for all loans in the batch. After signing, the verification moves forward.
+
+![Batch Verification](imagesByMdFilesFolder/10/BatchVerification.png)
 
 **Verification Agent Process**: Submit to a verification agent who receives the batch in their dashboard. They verify loan details against the uploaded documents, then certify the batch.
 

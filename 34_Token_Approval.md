@@ -1,108 +1,106 @@
 ---
-title: Funding Notice Processing Overview
-description: Overview of how funding notices are processed from creation to lender visibility
+title: Token Approval
+description: Understanding the token approval process in credit facilities
 ---
 
-# Funding Notice Processing Overview
+# Token Approval
 
 ## Overview
 
-This guide provides an overview of how funding notices are processed, from the moment a funding request is approved until lenders can see and act on the funding notice. The process involves the facility agent approving and e-signing for each lender.
+This guide explains the token approval process in the credit facility module. After the facility agent approves the funding notice and tokens are generated, the borrower approves the tokens. This approval enables the facility agent to e-sign for each lender.
 
-## Funding Notice Flow
+## Who Approves Tokens
 
-When a funding request is approved, the following process occurs:
+The **Borrower** is responsible for token approval.
 
-### 1. Funding Notice Auto-Generated
+## When Token Approval Happens
 
-**What Happens:**
-- Funding notice is automatically created
-- Status: **Pending Token Generated**
-- Contains all details from the funding request
+Token approval occurs after:
+1. Funding request is approved by the facility agent
+2. Funding notice is auto-generated
+3. Facility agent approves the funding notice
+4. Tokens are generated
 
-**Who Acts:** System (automatic)
-
-### 2. Facility Agent Approves
-
-**What Happens:**
-- Facility agent reviews the funding notice
-- Clicks **Approve**
-- Prepares notice for e-signature process
-
-**Who Acts:** Facility Agent
-
-### 3. Facility Agent E-Signs for Each Lender
-
-**What Happens:**
-- Action shows **E-sign (0/n)** where n = number of lenders
-- Facility agent clicks E-sign
-- Adobe Sign popup opens
-- Signs for one lender at a time
-- Count updates: (1/n), (2/n), ... (n/n)
-
-**Who Acts:** Facility Agent
-
-**Progress Tracking:**
-| E-Sign Status | Meaning |
-|---------------|---------|
-| E-sign (0/3) | No lenders signed yet |
-| E-sign (1/3) | Signed for 1 lender |
-| E-sign (2/3) | Signed for 2 lenders |
-| E-sign (3/3) | All lenders signed |
-
-### 4. Funding Notice Visible to Lenders
-
-**What Happens:**
-- As each lender's e-sign is completed
-- That lender can see the funding notice in their Credit Facility section
-- Each lender gains visibility once their e-sign is done
-
-**Who Acts:** Lenders can act once their e-sign is complete
-
-### 5. Lenders Review and Transfer
-
-**What Happens:**
-- Lenders click **Review Funding Notice**
-- Review drawdown details and allocation
-- Select payment method
-- Transfer funds
-- Click **Confirm and Settle**
-
-**Who Acts:** Lenders
-
-### 6. Process Complete
-
-**What Happens:**
-- Tokens transferred to borrower
-- Borrower receives funds
-- Drawdown complete
-
-## Summary Flow
+## Token Approval Flow
 
 ```
 Funding Request APPROVED
        ↓
-Funding Notice Auto-Generated (Pending Token Generated)
+Funding Notice Generated (Pending Token Generated)
        ↓
 FA clicks Approve
        ↓
+Tokens Generated
+       ↓
+Borrower Approves Token
+       ↓
 FA E-signs for each lender (0/n → n/n)
        ↓
-Each lender's e-sign complete → Funding Notice VISIBLE TO THAT LENDER
+Funding Notice VISIBLE TO LENDERS
        ↓
 Lenders review → Transfer funds → Confirm and Settle
        ↓
 Tokens transferred to Borrower
 ```
 
+## Step-by-Step Process
+
+### Step 1: FA Approves Funding Notice
+
+1. Facility agent reviews the funding notice
+2. Facility agent clicks **Approve**
+3. Tokens are generated
+
+### Step 2: Borrower Approves Token
+
+1. **Borrower Accesses Funding Notice**
+   - Navigate to Credit Facility
+   - Find the funding notice with generated tokens
+
+2. **Borrower Clicks Approve**
+   - Review the token details
+   - Enter Wallet Private Key and click **Approve** to approve the token
+
+3. **Approval Recorded**
+   - Token approval is recorded
+   - FA can now proceed with e-signing
+
+### Step 3: FA E-Signs for Each Lender
+
+1. Action shows **E-sign (0/n)** where n = number of lenders
+2. FA clicks E-sign for each lender via Adobe Sign
+3. Count progresses: (0/n) → (1/n) → (n/n)
+4. Each lender sees the funding notice after their e-sign
+
+### Step 4: Lenders Act
+
+1. Lenders see the funding notice
+2. Lenders review and transfer funds
+3. Lenders click **Confirm and Settle**
+4. Tokens are transferred to the borrower
+
+## Token Approval Status
+
+| Status | Meaning |
+|--------|---------|
+| **Tokens Generated** | Awaiting borrower token approval |
+| **Token Approved** | Borrower has approved, FA can e-sign |
+
 ## Key Points
 
-**Auto-Generation** - Funding notices are automatically created when funding requests are approved.
+**Borrower Action** - The borrower must approve tokens after they are generated.
 
-**FA Approval Required** - The facility agent must approve the funding notice.
+**Before FA E-Sign** - Token approval must complete before the FA can e-sign for lenders.
 
-**Per-Lender E-Sign** - The facility agent signs for each lender individually via Adobe Sign.
+**Enables E-Sign Process** - Token approval enables the facility agent to proceed with e-signatures.
 
-**Visibility After E-Sign** - Each lender sees the funding notice once the facility agent has completed their individual e-sign.
+**Sequential Process** - FA Approve → Token Generated → Borrower Approve → FA E-Sign
 
-**Individual Lender Process** - Each lender reviews, transfers, and confirms independently.
+## What Happens Next
+
+**After Token Approval:**
+- FA can e-sign for each lender
+- Each lender sees the funding notice after their e-sign
+- Lenders review and transfer funds
+- Lenders click Confirm and Settle
+- Tokens transferred to borrower

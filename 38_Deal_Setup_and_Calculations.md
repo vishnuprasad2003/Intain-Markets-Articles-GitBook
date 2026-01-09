@@ -1,9 +1,9 @@
 ---
-title: Deal Setup and Calculations (Deal Modelling)
+title: Deal Setup and Calculations
 description: Learn how facility agents configure deal modelling for credit facilities
 ---
 
-# Deal Setup and Calculations (Deal Modelling)
+# Deal Setup and Calculations
 
 ## Overview
 
@@ -85,8 +85,6 @@ If needed, you can delegate deal modelling:
 1. **Navigate to Review Section**
    - Go to the final Review section
    - Review all configured parameters
-
-![Validating Calculations](imagesByMdFilesFolder/38/ValidatingCalculations.png)
 
 2. **Click Create**
    - After reviewing, click **Create**

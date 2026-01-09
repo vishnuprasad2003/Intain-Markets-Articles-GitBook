@@ -196,7 +196,6 @@ The loan has been removed from the pool after the issuer accepted a removal requ
 |-------------|--------|-----------|-----|
 | (none) | Create Pool | Created | Issuer |
 | Created | Share (Preview) | Preview | Issuer |
-| Preview | Share (additional orgs) | Preview | Issuer |
 | Created/Preview | Start Deal | Deal | Issuer |
 | Mandate Pending | Accept | Under Review | Market Maker |
 | Mandate Pending | Reject | Mandate Pending (can re-share) | Market Maker |

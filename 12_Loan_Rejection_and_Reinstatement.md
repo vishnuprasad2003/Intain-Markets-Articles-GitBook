@@ -19,14 +19,14 @@ When a market maker or investor reviews a pool and believes a loan should be rem
 - The market maker/investor sees the loan status change to **Under Reconsider**
 - The loan remains in pool calculations until the issuer makes a decision
 
+![Loan Rejection Request - From Market Maker](imagesByMdFilesFolder/12/Loan_Rejection_Request_From_MarketMaker.png)
+
 **Issuer Reviews the Request**
 
 The issuer sees the loan with **Reconsider** status in the Loans tab. Two action icons appear next to that loan:
 
 - **Tick icon**: Accept the removal request (loan will be removed)
 - **Cross icon**: Reject the removal request (loan stays in pool)
-
-![Loan Rejection Request - From Market Maker](imagesByMdFilesFolder/12/Loan_Rejection_Request_From_MarketMaker.png)
 
 ## Possible Outcomes
 
@@ -65,8 +65,6 @@ When the issuer clicks the **cross icon**, rejecting the removal request:
 ## Reinstatement
 
 If a removed loan needs to be added back to the pool, the issuer can reinstate it.
-
-![Reinstate Loan](imagesByMdFilesFolder/12/ReinstateLoan.png)
 
 **What Happens When Reinstated:**
 - The loan status changes from **Removed** to **Reinstated**

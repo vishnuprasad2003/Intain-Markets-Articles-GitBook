@@ -52,14 +52,14 @@ Use loan management when:
 
 ![Select and Upload File](imagesByMdFilesFolder/31/SelectAndUploadFile.png)
 
-![Loans Onboarding - Uploading - Issuer](imagesByMdFilesFolder/31/Loans_Onboarding_Uploading_Issuer.png)
-
 #### Step 3: Trigger Loan Tape Standardization (LTS)
 
 1. **Start Standardization**
    - In the table, find your uploaded file
    - Click the **Trigger LTS** button in the Actions column
    - The **Map Fields** popup opens, showing your loan tape column headers alongside Intain standard fields
+
+![Loans Onboarding - Uploading - Issuer](imagesByMdFilesFolder/31/Loans_Onboarding_Uploading_Issuer.png)
 
 2. **Choose Mapping Method**
    - At the top of the popup, you have options:
