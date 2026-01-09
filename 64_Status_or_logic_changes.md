@@ -50,9 +50,10 @@ This document tracks changes to status workflows, business logic, and process fl
 **Automatic Funding Notice Generation** - Funding notices auto-generated:
 - Created automatically when funding request approved
 - Status starts as PENDING_TOKEN_GENERATION
-- Facility agent generates tokens and configures distribution
-- Status changes to TOKEN_GENERATED after token creation
-- Borrower approves tokens, status changes to TOKEN_APPROVED
+- Funding request approved → Funding notice auto-generated
+- FA clicks Approve on funding notice
+- FA e-signs for each lender (E-sign 0/n → n/n)
+- Each lender's e-sign complete → Visible to that lender
 
 **Per-Lender E-Signature** - Facility agent signs for each lender:
 - Each lender's signature tracked separately

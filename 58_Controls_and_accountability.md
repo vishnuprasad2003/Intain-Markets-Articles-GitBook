@@ -41,13 +41,13 @@ Intain Markets implements controls and accountability measures throughout the pl
 - Term sheets require facility agent approval before master commitment creation
 - Master commitments require lender approval before becoming ACTIVE
 - Funding requests require facility agent approval before funding notice generation
-- Funding notices require borrower token approval before lender review
+- Funding notices require FA e-sign for each lender before that lender can see
 
 **Prerequisite Validation** - Actions require prerequisites:
 - Term sheets must be signed before submission
-- Master commitments must be ACTIVE before funding request creation
-- Tokens must be generated before borrower approval
-- Borrower must approve tokens before lenders can review
+- Master commitments must be ACTIVE and deal modelling complete before funding request creation
+- Funding requests must be approved before funding notice generation
+- FA must e-sign for each lender individually before they can see funding notices
 
 ## Data Controls
 

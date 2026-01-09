@@ -1,159 +1,128 @@
 ---
-title: Deal Setup and Calculations
-description: Learn how facility agents configure borrowing base calculations and facility parameters
+title: Deal Setup and Calculations (Deal Modelling)
+description: Learn how facility agents configure deal modelling for credit facilities
 ---
 
-# Deal Setup and Calculations
+# Deal Setup and Calculations (Deal Modelling)
 
 ## Overview
 
-Deal setup and calculations involve configuring the financial modeling, borrowing base calculations, and facility parameters that determine how the credit facility operates. This guide covers how facility agents set up these calculations.
-
-**Deals Management** - The deals table provides a comprehensive view of all deals, allowing you to review deal details, track progress, and manage deal-related activities.
-
-![Set Up Deal](imagesByMdFilesFolder/38/SetUpDeal.png)
+After a master commitment becomes Active, the facility agent must complete deal modelling before borrowers can raise funding requests. Deal modelling involves configuring the operational parameters, borrowing base calculations, and facility rules needed to operate the credit facility.
 
 ## Who Can Use This
 
-- Facility Agents who configure facility calculations and parameters
+- **Facility Agents** who configure deal modelling for active facilities
 
 ## When This Is Used
 
-Use deal setup and calculations when:
-- You're configuring a master commitment
-- You need to set up borrowing base calculations
-- You want to define facility parameters
-- You're setting up financial modeling
-- You're preparing facility for operation
+Use deal modelling when:
+- A master commitment has become **Active** (at least one lender approved)
+- You need to configure facility operational parameters
+- You want to enable borrowers to raise funding requests
+- You're preparing the facility for operations
+
+## Prerequisites
+
+Before starting deal modelling:
+- Master commitment must be **Active**
+- At least one lender has approved and signed
 
 ## Step-by-Step Process
 
-### Setting Up Borrowing Base Calculations
+### Step 1: Access Deal Modelling
 
-1. **Configure Calculation Method**
-   - Navigate to Borrowing Base section
-   - System uses Investment Agent (IA) integration for borrowing base calculations
-   - System calculates values including available capacity, borrowing base, utilization percentage, and collateral value
-   - Master commitment is updated with calculated values
-   - All calculations are recorded with complete history
+1. **Navigate to Credit Facility**
+   - Log in with your Facility Agent credentials
+   - From the left expandable menu, click on **Credit Facility**
+   - Go to the **Active Facilities** tab
+
+2. **Find the Master Commitment**
+   - Locate the active master commitment
+   - Facility Setup Status shows **In Progress**
+   - Action column shows **Set Up Deal**
+
+3. **Click Set Up Deal**
+   - Click **Set Up Deal** to open the deal modelling screen
+
+![Set Up Deal](imagesByMdFilesFolder/38/SetUpDeal.png)
+
+### Step 2: Complete Deal Modelling Sections
+
+The deal modelling screen has multiple sections in the left menu. Complete each section:
+
+1. **Configure Borrowing Base**
+   - Set up borrowing base calculations
+   - Configure how available capacity is determined
+   - Set advance rates and limits
 
 ![Set Up Borrowing Base Calculation](imagesByMdFilesFolder/38/setUpBorrowingBaseCalculation.png)
 
-2. **Define Collateral Eligibility**
-   - Set what types of collateral qualify
-   - Define collateral quality requirements
-   - Set age limits for collateral
-   - Configure geographic limits
-   - Set other eligibility criteria
-   - Define how collateral is evaluated
-
-3. **Set Advance Rates**
-   - Set advance rate per collateral type
-   - Configure rate adjustments based on quality
-   - Set maximum and minimum advance rate limits
-   - Define rate calculation methods
-   - Save rate configuration
-   - Verify rates are appropriate
-
-4. **Configure Borrowing Limits**
-   - Set maximum borrowing limits
-   - Define concentration limits
-   - Configure utilization limits
-   - Set other borrowing restrictions
-   - Complete borrowing base setup
-
-### Configuring Facility Parameters
-
-1. **Set Financial Parameters**
-   - Configure interest rate structure
-   - Set fee calculations (commitment fees, facility fees, etc.)
-   - Define payment terms and schedules
-   - Set drawdown limits and restrictions
-   - Configure other financial parameters
+2. **Configure Parameters**
+   - Set up facility parameters
+   - Configure interest calculations
+   - Set fee structures
 
 ![Configure Parameters](imagesByMdFilesFolder/38/ConfigureParameters.png)
 
-2. **Configure Utilization Tracking**
-   - Set up utilization calculations
-   - Define available capacity tracking
-   - Configure utilization percentage calculations
-   - Set up capacity monitoring
-   - Define how utilization is reported
+3. **Complete Additional Sections**
+   - Navigate through all required sections
+   - Fill in all mandatory fields
+   - Each section configures specific aspects of the facility
 
-3. **Set Up Reporting Requirements**
-   - Configure reporting frequency
-   - Define required reports
-   - Set up report templates
-   - Configure reporting deadlines
-   - Complete reporting setup
+### Step 3: Delegation Option
 
-4. **Configure Monitoring Requirements**
-   - Set up covenant monitoring
-   - Define monitoring frequency
-   - Configure alert thresholds
-   - Set up monitoring reports
-   - Complete monitoring setup
+If needed, you can delegate deal modelling:
 
-### Validating Calculations
+1. **Click Delegation Button**
+   - A **Delegation** button is available at the top
+   - Click to request admin to complete deal modelling on your behalf
 
-1. **Review Calculation Setup**
-   - Review all calculation configurations
-   - Verify formulas are correct
-   - Check parameters are appropriate
-   - Ensure calculations are complete
+2. **Admin Completes**
+   - If delegated, the admin role will configure the deal modelling
 
-2. **Test Calculations**
-   - System automatically calculates borrowing base when tokens are generated for funding notices
-   - Calculation results are validated
-   - Calculated values are extracted including available capacity, borrowing base, utilization percentage, and collateral value
-   - Master commitment is updated with calculated values
-   - All calculation logic is validated
-   - Ensure calculations produce expected results
+### Step 4: Review and Complete
 
-3. **Verify Configuration**
-   - Verify all required fields are complete
-   - Check that validation passes
-   - Ensure setup status shows "Completed"
-   - Review everything one final time
+1. **Navigate to Review Section**
+   - Go to the final Review section
+   - Review all configured parameters
 
 ![Validating Calculations](imagesByMdFilesFolder/38/ValidatingCalculations.png)
 
+2. **Click Create**
+   - After reviewing, click **Create**
+   - Facility Setup Status changes from **In Progress** to **Completed**
+
+### After Completion
+
+Once deal modelling is complete:
+- **Facility Setup Status**: Completed
+- **Borrower can now**:
+  - Map NFT-minted loans to the facility
+  - Create funding requests
+- **Funding workflow** can proceed
+
+## Facility Setup Status
+
+| Status | Meaning | Borrower Can Raise Funding Request |
+|--------|---------|-------------------------------------|
+| **In Progress** | Deal modelling not complete | No |
+| **Completed** | Deal modelling complete | Yes |
+
 ## Rules & Validations
 
-- Borrowing base calculations must be configured - facilities need borrowing base to determine available capacity.
+- **Active MC Required**: Deal modelling can only be completed for Active master commitments.
 
-- Collateral eligibility rules must be defined - you must specify what collateral qualifies.
+- **All Sections Required**: Complete all required sections before clicking Create.
 
-- Advance rates must be set for each collateral type - rates determine how much can be borrowed against collateral.
+- **One-Time Process**: Deal modelling is completed once per facility.
 
-- Facility parameters must be complete - all operational parameters must be configured.
+- **Delegation Available**: You can delegate to admin if needed.
 
-- Calculations must be validated before submission - calculations are validated before allowing submission.
-
-- Setup status must show "Completed" - you cannot submit until setup is complete.
-
-- Calculations affect borrowing capacity - borrowing base determines how much borrowers can draw down.
-
-- Parameters control facility operation - facility parameters govern how the facility operates.
-
-- Complete audit trail - all calculation configurations are recorded.
-
-- Can save multiple times - save your progress as you configure.
+- **Required for Funding**: Borrowers cannot raise funding requests until deal modelling is complete.
 
 ## What Happens Next
 
-After setting up calculations:
-- Facility is ready for lender approval
-- Borrowing base determines available capacity
-- Facility parameters control operations
-- Calculations are used for funding request reviews
-- Facility becomes operational when approved
-
-After facility activation:
-- Borrowing base calculations determine available capacity
-- Facility parameters govern operations
-- Calculations are used when reviewing funding requests
-- Utilization is tracked based on calculations
-- Facility operates according to configured rules
-
-Understanding deal setup and calculations helps facility agents effectively configure credit facilities, ensure proper operation, and set up accurate borrowing capacity determination for successful facility management.
+**After Deal Modelling Complete:**
+- Borrower can map loans to the facility
+- Borrower can create funding requests
+- Funding request → FA Review → Funding Notice → Lender Transfer

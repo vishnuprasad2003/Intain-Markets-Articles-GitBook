@@ -7,26 +7,106 @@ description: Understand the difference between change requests and rejections
 
 ## Overview
 
-Both feedback (change requests) and rejection are part of the review process but have different implications for your workflow. Change requests allow improvement and resubmission, while rejection is a final decision requiring a new item.
+During review, reviewers can either request changes (feedback) or reject items. Understanding the difference helps you respond appropriately.
 
-## Possible Outcomes
+## Comparison Table
 
-When reviewers provide input, there are two types: **Change Requests (Feedback)** - reviewers want modifications but the item can be improved and resubmitted, and **Rejection** - reviewers have decided the item cannot proceed, and you must create a new item to try again.
+| Aspect | Change Request (Feedback) | Rejection |
+|--------|--------------------------|-----------|
+| **Can edit?** | Yes | No |
+| **Can resubmit?** | Yes | No |
+| **Item state** | Returns to editable | Read-only |
+| **Next step** | Make changes, resubmit | Create new item |
+| **Status example** | CHANGES_REQUESTED | Rejected |
+| **Workflow** | Continues | Stops for this item |
 
-## What Each Outcome Means
+## Where Feedback/Rejection Applies
 
-**Change Requests (Feedback)** are requests for modifications to improve the item. Issues can be fixed through editing, it's an iterative improvement process, and the item can proceed after changes. When changes are requested, the item becomes editable again, you can make modifications, and you can resubmit when changes are complete. Change requests enable refinement and improvement rather than requiring starting over.
+### Term Sheets (FA Review)
 
-**Rejection** is a final decision that the item will not proceed. The item cannot be fixed through editing, it's a final state, and you must create a new item to try again. When an item is rejected, the item becomes read-only, it cannot be edited, it cannot be resubmitted, and the process stops for this item. Rejection requires starting fresh with a new item.
+**Change Request:**
+- Status: CHANGES_REQUESTED
+- Borrower can edit term sheet
+- Borrower resubmits after changes
+- Returns to FAReview
 
-**Key Differences** - Change requests allow editing and resubmission, while rejection does not. Change requests enable iterative improvement, while rejection requires starting over. Change requests indicate potential for approval, while rejection is final and indicates the item cannot proceed.
+**Rejection:**
+- Status: Rejected
+- Term sheet is final
+- Borrower must create new term sheet
+- No master commitment created
 
-## Next Steps for Users
+### Funding Requests (FA Review)
 
-**When Changes Are Requested** - Read the change request carefully to understand what specific modifications are needed. Make all requested changes thoroughly and address all requested items. Review your changes before resubmitting to ensure everything is complete. Resubmit when changes are complete—the item will go back to review status. Be prepared for multiple rounds of changes if needed, as iterative improvement is part of the process. Use change requests as opportunities to refine and improve your submissions.
+**Change Request:**
+- Status: CHANGES_REQUESTED
+- Borrower can edit funding request
+- Borrower resubmits after changes
+- Returns to FAReview
 
-**When an Item Is Rejected** - Review the rejection reason carefully to understand why the item was rejected. Learn from rejection feedback to improve future submissions. Create a completely new item that addresses the issues identified in the rejection. Ensure the new item complies with all requirements and has all necessary information. Try again with improvements, incorporating lessons learned from the rejection. Use rejection feedback to understand requirements better and improve your approach.
+**Rejection:**
+- Status: REJECTED
+- Funding request is final
+- Borrower must create new funding request
+- No funding notice created
 
-**Understanding the Difference** - Change requests mean the reviewer sees potential but needs improvements—you can fix and resubmit. Rejection means the reviewer has decided the item cannot proceed—you must start fresh with a new item. Change requests allow iterative improvement, while rejection requires starting over.
+### Pool Mandates (Market Maker)
 
-**Responding Appropriately** - When changes are requested, focus on making improvements and resubmitting. When items are rejected, focus on learning from feedback and creating better new items. Both outcomes provide valuable feedback that helps you improve.
+**Pool Level Feedback:**
+- Market maker/investor adds comments in Feedback section
+- Issuer can view and respond
+- Pool continues in workflow
+
+**Mandate Rejection:**
+- Market maker rejects mandate
+- Pool can be submitted to another market maker
+- Or issuer makes improvements and resubmits
+
+### Loan Level Feedback
+
+**Loan Comments:**
+- Market maker/investor uses chat box icon on loan
+- Comments shared with issuer
+- Loan stays in pool
+
+**Loan Removal Request:**
+- Market maker/investor clicks cross icon
+- Issuer sees tick/cross to accept/reject removal
+- **Tick:** Accept removal → Loan marked as Removed
+- **Cross:** Reject removal → Loan stays in pool
+
+## How to Respond
+
+### When Changes Are Requested
+
+1. **Review the Request**
+   - Read comments/reason from reviewer
+   - Understand what changes are needed
+
+2. **Make Changes**
+   - Edit the item (status allows editing)
+   - Address all requested changes
+
+3. **Resubmit**
+   - Submit the updated item
+   - Item returns to review status
+
+### When Rejected
+
+1. **Review the Reason**
+   - Read rejection reason
+   - Understand why it was rejected
+
+2. **Create New Item**
+   - Start fresh with a new item
+   - Address the issues from rejection
+
+3. **Submit New Item**
+   - Go through normal submission process
+
+## Key Points
+
+- **Change requests = opportunity to improve** - Item can continue after changes
+- **Rejection = final for that item** - Must start over with new item
+- **Always read the reason** - Helps you understand what's needed
+- **Learn from feedback** - Improve future submissions

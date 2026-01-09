@@ -7,73 +7,101 @@ description: Understand who can see signatures and when they're visible in Intai
 
 ## Overview
 
-Electronic signatures are used for term sheets, master commitments, and funding notices. This guide explains who can see signatures, when they're visible, and how signature status is tracked.
+Electronic signatures via Adobe Sign are used for term sheets, master commitments, and funding notices. This guide explains who can see signatures and when.
 
 ## Term Sheet Signatures
 
-**Borrower Signature** - When borrower signs:
-- Borrower sees signature immediately after signing
-- Facility agent sees signature when term sheet is in FAReview status
-- Status changes to "BorrowerSigned" after completion
-- Visible in term sheet's document section
+### When Borrower Signs
 
-**Who Can See:** Borrowers and facility agents
+**Who Signs:** Borrower (via Create Draft button)
 
-**When Visible:** Immediately after signing, remains visible throughout workflow
+**Process:**
+1. Borrower clicks **Create Draft**
+2. Adobe Sign popup opens
+3. Borrower completes signature
+4. Status changes to **BorrowerSigned**
+
+**Visibility:**
+| Party | Can See? | When |
+|-------|----------|------|
+| Borrower | Yes | Immediately after signing |
+| Facility Agent | Yes | When term sheet is in FAReview |
+
+**Where to View:** Term sheet details → Documents section
 
 ## Master Commitment Signatures
 
-**Lender Signatures** - When lenders sign:
-- Each lender sees their own signature after signing
-- Facility agent sees all lender signatures
-- Borrower sees lender signatures after facility becomes ACTIVE
-- Individual lender signature status tracked in lenderGroups array (lenderStatus field)
+### When Lender Signs
 
-**Who Can See:** Lenders see their own, facility agents see all, borrowers see after activation
+**Who Signs:** Lender (via Approve & E-Sign button)
 
-**When Visible:** After e-signature completion, remains visible throughout facility lifecycle
+**Process:**
+1. Lender clicks **Approve & E-Sign** in Opportunities section
+2. Adobe Sign popup opens
+3. Lender completes signature
+4. Status changes to **ACTIVE** (one lender approval activates)
+
+**Visibility:**
+| Party | Can See? | When |
+|-------|----------|------|
+| Lender | Yes | Their own signature, immediately |
+| Facility Agent | Yes | All lender signatures |
+| Borrower | Yes | After facility becomes ACTIVE |
+
+**Where to View:** Master commitment details → Documents section
 
 ## Funding Notice Signatures
 
-**Facility Agent Signature** - When facility agent signs:
-- Facility agent sees signature after signing
-- Borrower sees signature after signing
-- Lenders see signature when funding notice is visible to them
-- Signature tracked per lender in tokenDistribution array
+### When Facility Agent Signs
 
-**Per-Lender Signing** - Facility agent signs separately for each lender:
-- Each lender's signature status tracked individually
-- esignatureStatus field shows 'pending' or 'ESIGN_COMPLETED'
-- Each lender sees their specific signed document
+**Who Signs:** Facility Agent (for each lender)
 
-**Who Can See:** Facility agents, borrowers, and lenders based on role and funding notice status
+**Process:**
+1. Funding request approved → Funding notice generated
+2. FA clicks **Approve** on funding notice
+3. FA clicks **E-sign (0/n)** - starts e-signature
+4. Adobe Sign popup opens for each lender
+5. FA signs for that lender
+6. Count updates (1/n, 2/n, ... n/n)
+7. Each lender's e-sign complete → Visible to that lender
 
-**When Visible:** After completion, remains visible throughout funding notice lifecycle
+**E-Sign Progress:**
+| Status | Meaning |
+|--------|---------|
+| E-sign (0/3) | No lenders signed yet |
+| E-sign (1/3) | FA signed for 1 lender |
+| E-sign (2/3) | FA signed for 2 lenders |
+| E-sign (3/3) | All lenders signed |
 
-## Signature Status Tracking
+**Visibility:**
+| Party | Can See? | When |
+|-------|----------|------|
+| Facility Agent | Yes | Immediately after signing |
+| Lender | Yes | After FA completes e-sign for that lender |
+| Borrower | Yes | After FA completes e-signs |
 
-**Term Sheet** - Status changes to "BorrowerSigned" after DocuSign completion. Signed PDF stored in IPFS.
+**Where to View:** Credit Facility section → Funding notice details
 
-**Master Commitment** - lenderStatus in lenderGroups array shows 'pending_approval', 'approved', or 'esignature_completed'. Facility becomes ACTIVE when at least one lender approves. Signed PDF stored in IPFS.
+## Signature Status Fields
 
-**Funding Notice** - esignatureStatus in tokenDistribution array shows 'pending' or 'ESIGN_COMPLETED' for each lender. eSignaturePendingCount tracks remaining lenders. eSignatureStatus shows aggregate status.
+### Term Sheet
+- Status: **BorrowerSigned** after signing
 
-## Accessing Signed Documents
+### Master Commitment
+- lenderStatus: 'pending_approval' → 'approved' → 'esignature_completed'
+- Facility becomes ACTIVE when at least one lender approves
 
-**Term Sheets** - Navigate to term sheet details → Documents section → View signed PDF
-
-**Master Commitments** - Navigate to master commitment details → Documents section → View signed PDF with all lender signatures
-
-**Funding Notices** - Navigate to funding notice details → Documents section → View signed PDF for your lender allocation
+### Funding Notice
+- E-sign count: (0/n) → (n/n)
+- Individual lender e-signature tracked
+- Each lender can see the funding notice once their e-sign is complete
 
 ## Important Notes
 
-**Role-Based Visibility** - Signature visibility depends on role and workflow stage.
+**Role-Based Visibility** - What you see depends on your role
 
-**Status Controls Visibility** - Some signatures visible only when items reach certain statuses (e.g., lender signatures visible to borrowers after facility becomes ACTIVE).
+**Status-Based Visibility** - Some signatures only visible after certain statuses
 
-**Audit Trail** - All signatures recorded with who signed, when, and signature details.
+**Permanent Records** - Signed documents stored securely, cannot be modified
 
-**Permanent Records** - Signed documents stored in IPFS. Signatures cannot be removed or modified once completed.
-
-**Signature Requirements** - Term sheets must be signed before submission. Master commitments must be signed before activation. Funding notices must be signed before lender review.
+**Audit Trail** - All signatures recorded with who, when, and details

@@ -1,94 +1,81 @@
 ---
-title: Funds Transfer Confirmation
-description: Learn how lenders confirm fund transfers to complete drawdowns
+title: Confirm and Settle
+description: Final step for lenders to confirm fund transfer completion
 ---
 
-# Funds Transfer Confirmation
+# Confirm and Settle
 
 ## Overview
 
-Funds transfer confirmation is the final step where lenders confirm they have transferred funds to borrowers, completing the drawdown process for each individual lender.
+Confirm and Settle is the final action lenders take after reviewing a funding notice and transferring funds. This confirmation completes the lender's participation in the drawdown and triggers the token transfer to the borrower.
 
 ## Who Can Use This
 
-- Lenders who have approved funding notice drawdowns and transferred funds
+- **Lenders** who have reviewed funding notices and transferred funds
 
 ## When This Is Used
 
-Use fund transfer confirmation when:
-- You have approved a drawdown
-- You have transferred funds to the borrower
-- You want to mark the transfer as complete
-- You need to finalize your participation in the drawdown
-- You want to confirm that funds have been disbursed
+Use Confirm and Settle when:
+- You have reviewed the funding notice
+- You have selected your payment method
+- You have transferred your allocated funds to the borrower
+- You want to finalize your participation
 
 ## Step-by-Step Process
 
-### Transferring Funds
+### Step 1: Review Funding Notice
 
-1. **Review Your Approval**
-   - Navigate to the funding notice you approved
-   - Review your approval status
-   - Confirm you're ready to transfer funds
+1. Navigate to **Credit Facility** from the left menu
+2. Find the funding notice
+3. Click **Review Funding Notice**
+4. Review drawdown details and your allocation
 
-2. **Complete Fund Transfer**
-   - Click Confirm Funds Transfer.
-   - Tokens wil be transffered to you wallet.
-   - Ensure transfer is successful
+### Step 2: Select Payment Method
 
-![Fund Transfer Confirmation](imagesByMdFilesFolder/44/confirmfundstransfer.png)
+1. Choose your preferred payment method
+2. Note the transfer instructions
 
-4. **Verify Transfer Success**
-   - Confirm funds were transferred successfully
-   - Check that transfer was completed
+### Step 3: Transfer Funds
+
+1. Transfer your allocated portion externally
+2. Ensure the transfer completes successfully
+3. Verify funds have been sent
+
+### Step 4: Confirm and Settle
+
+1. After transferring funds, click **Confirm and Settle**
+2. This confirms you have completed the transfer
+
+![Confirm and Settle - Lender](imagesByMdFilesFolder/ConfirmAndSettleInvestor.png)
 
 ### After Confirmation
 
-1. **Participation Complete**
-   - Your participation in the drawdown is marked complete
-   - Drawdown process is finished for your portion
-   - Status shows transfer confirmed
+**What Happens:**
+- Tokens are transferred
+- Your participation is recorded as complete
+- Borrower receives your funds
 
-2. **Borrower Receives Funds**
-   - Borrower receives your transferred funds
-   - Borrower knows funds have been received
+**Status Updates:**
+- Your transfer confirmation is recorded
+- System tracks that you have settled
 
-3. **Process Completion**
-   - As other lenders confirm, drawdown progresses
-   - Borrower receives funds from all confirming lenders
-   - Drawdown process completes as all transfers are confirmed
+## Important Points
 
-## Rules & Validations
+- **Confirm After Transfer**: Only click Confirm and Settle after you have actually transferred the funds.
 
-- You can only confirm after you've approved the drawdown - you must approve before you can confirm transfer.
+- **Final Action**: Once confirmed, your participation is finalized.
 
-- You should transfer funds before confirming - confirm only after you've actually transferred funds to the borrower.
+- **Individual Process**: Each lender confirms their transfer separately.
 
-- Confirmation marks your participation as complete - once confirmed, your participation in this drawdown is finalized.
-
-- Each lender confirms independently - you confirm your own transfer, and other lenders confirm theirs separately.
-
-- Your confirmation doesn't affect other lenders - other lenders confirm their transfers independently.
-
-- Confirmation is final - once confirmed, you cannot easily undo the confirmation.
-
-- Status updates after confirmation - Your transfer confirmation is recorded. System tracks when all lenders have confirmed.
+- **Triggers Token Transfer**: Confirmation triggers the token transfer to the borrower.
 
 ## What Happens Next
 
-After confirming fund transfer:
-- Your participation is marked complete
-- Drawdown process is finished for your portion
-- Status shows transfer confirmed
-- Borrower receives your funds
-- Process continues as other lenders confirm
-- Drawdown completes as all transfers are confirmed
+**After You Confirm:**
+- Your participation is complete
+- Borrower receives your portion
 
-After all lenders confirm:
-- Borrower has received funds from all confirming lenders
-- Drawdown process is complete
-- Borrower can track all confirmations
+**After All Lenders Confirm:**
+- Borrower has received all funds
+- Drawdown is complete
 - Facility utilization is updated
-- Drawdown is fully documented
-
-Understanding funds transfer confirmation helps you complete the drawdown process, finalize your participation in credit facility drawdowns, provide proper documentation that funds have been disbursed, and ensure complete transparency in the fund transfer process.

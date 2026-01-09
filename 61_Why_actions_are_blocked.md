@@ -1,93 +1,129 @@
 ---
 title: Why Actions Are Blocked
-description: Understand common reasons actions are blocked in Intain Markets and how to resolve them
+description: Understand common reasons actions are blocked and how to resolve them
 ---
 
 # Why Actions Are Blocked
 
 ## Overview
 
-This guide explains common reasons actions are blocked in Intain Markets and how to resolve them. Actions are blocked when certain conditions aren't met based on status, role, prerequisites, or workflow requirements.
+Actions are blocked when certain conditions aren't met. This guide explains common blocking reasons and solutions.
 
-## Frequently Asked Questions
+## Common Blocking Reasons
 
-**Q: Why is my action button disabled?**
+### 1. Wrong Status
 
-A: Action buttons are disabled when:
-- Item isn't in the right status (e.g., can't submit term sheet in Draft without signing)
-- Required information is missing (e.g., required fields not filled, documents not uploaded)
-- Waiting for another party to act (e.g., waiting for facility agent to review)
-- Your role doesn't have permission (e.g., borrowers can't approve term sheets)
-- Action was already completed (e.g., term sheet already submitted)
+**Examples:**
+- Cannot submit term sheet (status is Draft, must sign first)
+- Cannot edit term sheet (status is FAReview, waiting for FA)
+- Cannot create funding request (MC not ACTIVE)
 
-Hover over disabled buttons to see tooltips explaining why they're disabled.
+**Solution:** Check item status and complete required steps to progress
 
-**Q: What information might be missing?**
+### 2. Missing Prerequisites
 
-A: Missing information could include:
-- Required fields not filled (e.g., requestedCommitmentAmount, advanceRate for term sheets)
-- Required documents not uploaded (e.g., collateral profile, financial statements, KYC documents)
-- Incomplete information (e.g., missing lender groups in master commitment)
-- Missing prerequisites (e.g., term sheet not signed, tokens not generated)
+**Examples:**
+- Cannot submit term sheet (not signed via Adobe Sign)
+- Cannot mint NFT (batch verification not complete)
+- Cannot create funding request (deal modelling not complete)
 
-Check item details to see what's required. Completing all required information enables actions.
+**Solution:** Complete the prerequisite step first
 
-**Q: Why am I waiting for others?**
+### 3. Waiting for Another Party
 
-A: You're waiting for others when:
-- Another party needs to act first (e.g., facility agent must review before you can resubmit)
-- Previous step hasn't been completed (e.g., term sheet approval needed before master commitment creation)
-- Dependency isn't satisfied (e.g., master commitment must be ACTIVE before funding request creation)
-- Workflow is blocked by another party (e.g., waiting for lender approval of master commitment)
+**Examples:**
+- Term sheet in FAReview (waiting for FA decision)
+- MC in PendingLenderApproval (waiting for lender)
+- Funding notice not visible (FA hasn't completed your e-sign)
 
-Check item status to see what's pending. Understanding dependencies helps you know what's needed.
+**Solution:** Wait for the other party to complete their action
 
-**Q: How do I check if I have permission?**
+### 4. Role Permissions
 
-A: Verify:
-- You're logged in with the correct role (e.g., facility agent role for approvals)
-- Your role has permission for this action (e.g., only facility agents can approve term sheets)
-- You're assigned to this item (e.g., pool shared with your organization)
-- You have access to this item (e.g., funding request for your facility)
+**Examples:**
+- Cannot approve term sheet (not logged in as FA)
+- Cannot approve MC (not logged in as Lender)
+- Cannot edit pool (not the issuer who created it)
 
-Different roles have different permissions. Understanding role permissions helps you know what actions are available.
+**Solution:** Log in with the correct role
 
-**Q: What if the action was already completed?**
+### 5. Action Already Completed
 
-A: If the action was already completed:
-- Item may already be in final state (e.g., term sheet already approved)
-- Process may be complete for this action (e.g., funding request already approved)
-- Action cannot be repeated (e.g., cannot submit term sheet twice)
+**Examples:**
+- Cannot submit term sheet again (already submitted)
+- Cannot mint NFT again (already minted)
+- Cannot approve again (already approved)
 
-Check item status to see if the action was already taken. Understanding completed actions helps you know what's already done.
+**Solution:** Check if action was already taken; proceed to next step
 
-**Q: How do I resolve blocking issues?**
+## Blocking Reasons by Module
 
-A: To resolve blocking issues:
-- Check item status and ensure it allows the action
-- Complete all required information and upload required documents
-- Wait for other parties if needed (check status and notifications)
-- Verify your role has permission
-- Review requirements to ensure everything is complete
+### Pools
 
-The platform provides tooltips and messages explaining what's needed. Following these steps helps resolve blocking issues.
+| Blocked Action | Common Reason | Solution |
+|----------------|---------------|----------|
+| Edit pool | Status is Deal | Cannot edit after deal finalized |
+| Start Deal | NFTs not minted | Complete NFT minting first |
+| Share pool | No orgs selected | Edit pool, add organizations |
 
-**Q: Can I see why an action is blocked?**
+### Loans
 
-A: Yes:
-- Hover over disabled buttons to see tooltips explaining why they're disabled
-- Check status messages nearby
-- Look for error or warning messages
-- Review item status badge
-- Check requirements sections for guidance
+| Blocked Action | Common Reason | Solution |
+|----------------|---------------|----------|
+| Map to Pool | Loan already mapped | Unmap from current pool first |
+| Mint NFT | Batch not verified | Complete batch verification |
+| Add to Batch | Loan already in batch | Remove from current batch first |
 
-Understanding blocking reasons helps you resolve issues.
+### Term Sheets
 
-**Q: Can actions be blocked temporarily?**
+| Blocked Action | Common Reason | Solution |
+|----------------|---------------|----------|
+| Submit to FA | Not signed | Click Create Draft, complete e-sign |
+| Edit | Status is FAReview | Wait for FA decision |
+| Edit | Status is Accepted | Cannot edit approved items |
 
-A: Yes, actions can be blocked temporarily while:
-- Waiting for other parties (e.g., waiting for facility agent review)
-- During processing (e.g., token generation in progress)
-- While validations occur (e.g., document verification)
+### Master Commitments
 
-Check item status and wait for processes to complete. Temporary blocks resolve when conditions are met.
+| Blocked Action | Common Reason | Solution |
+|----------------|---------------|----------|
+| Create Funding Request | MC not ACTIVE | Wait for lender approval |
+| Create Funding Request | Deal modelling not done | FA must complete Set Up Deal |
+| Edit configuration | Status is ACTIVE | Cannot edit active facilities |
+
+### Funding Requests
+
+| Blocked Action | Common Reason | Solution |
+|----------------|---------------|----------|
+| Approve | Status is DRAFT | Borrower must submit first |
+| Edit | Status is FAReview | Wait for FA decision |
+| Edit | Status is APPROVED | Cannot edit approved items |
+
+### Funding Notices
+
+| Blocked Action | Common Reason | Solution |
+|----------------|---------------|----------|
+| Lender can't see | FA hasn't e-signed for you | FA must complete your e-sign |
+| Confirm and Settle | Haven't reviewed | Complete review first |
+
+## How to Diagnose
+
+1. **Check Status Badge** - Shows current status of item
+
+2. **Hover Over Button** - Tooltips explain why disabled
+
+3. **Check Your Role** - Verify you're logged in correctly
+
+4. **Review Prerequisites** - Check if required steps are complete
+
+5. **Check Notifications** - May indicate what's pending
+
+## Quick Reference
+
+| If You Can't... | Check... |
+|-----------------|----------|
+| Submit term sheet | Is it signed? |
+| Create funding request | Is MC ACTIVE? Is deal modelling complete? |
+| Mint NFT | Is batch verification complete (Reviewed)? |
+| See funding notice (as lender) | Has FA completed your e-sign? |
+| Edit item | Is status Draft or CHANGES_REQUESTED? |
+| Approve item | Are you logged in as the approving role? |

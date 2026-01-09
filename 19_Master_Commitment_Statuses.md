@@ -7,26 +7,124 @@ description: Understand the different statuses master commitments go through
 
 ## Overview
 
-Master commitments progress through three main statuses from creation to activation. Each status represents a specific stage in the facility setup and activation workflow.
+Master commitments progress through three main statuses from creation to activation. Understanding these statuses helps you know what actions are available and what needs to happen next.
 
 ## Lifecycle Overview
 
-Master commitments are automatically created when term sheets are approved, starting in **Draft** status where facility agents configure the complete facility structure. They progress to **PendingLenderApproval** when facility agents complete configuration and submit for lender review. Finally, they reach **ACTIVE** status when at least one lender approves the facility, making it operational for funding requests.
-
-The lifecycle supports facility setup—facility agents configure all rules and parameters, lenders review and approve, and once active, borrowers can create funding requests. Each stage has specific purposes and allows different types of actions.
+```
+Term Sheet Approved → Auto-Create → Draft → FA Configures → PendingLenderApproval → Any Lender Approves → Active
+```
 
 ## Status Meanings
 
-**Draft** - The master commitment has been automatically created from an approved term sheet, and the facility agent is configuring it. All fields can be edited, and the facility is not yet submitted for lender approval. Master commitments in Draft status are being configured and are not yet ready for lender review.
+### Draft
 
-**Pending Lender Approval** - The facility agent has completed configuration and submitted the master commitment for lender approval. The facility is waiting for at least one lender to approve it. Master commitments in Pending Lender Approval status are ready for lender review and decision.
+**Meaning**: The master commitment has been automatically created from an approved term sheet, and the facility agent is configuring it.
 
-**ACTIVE** - At least one lender has approved the master commitment, and the facility is operational. Borrowers can create funding requests, and the facility is fully functional. Master commitments in ACTIVE status are operational and ready for use.
+**When This Occurs**:
+- Immediately after a term sheet is approved
+- Automatically created by the system
 
-## What Each Status Indicates
+**What Facility Agents Can Do**:
+- Open the Create Facility popup
+- Configure all sections (Basic, Parties & Accounts, etc.)
+- Add lenders and set commitment amounts
+- Create sub-facilities (if multiple branch)
+- Edit all fields
+- Data auto-saves as they enter
 
-**Draft Status** indicates that the facility agent is still configuring the master commitment. Facility agents can edit all fields, set up facility rules, configure borrowing base calculations, and add lender groups. Borrowers cannot create funding requests yet.
+**What Happens Next**:
+- Click **Create Facility** to submit for lender approval
+- Status changes to PendingLenderApproval
 
-**PendingLenderApproval Status** indicates that configuration is complete and the facility is waiting for lender approval. Facility agents can view but cannot edit. Borrowers cannot create funding requests yet. Lenders can review the complete facility structure and approve or reject. Once at least one lender approves, the facility becomes ACTIVE.
+**Dashboard View**:
+- Appears under the approved term sheet as a dropdown
+- Action: **Create Facility**
 
-**ACTIVE Status** indicates that the facility is operational and ready for use. Facility agents can review requests, and lenders can approve funding notices. All facility rules and configurations are active and enforced.
+### PendingLenderApproval
+
+**Meaning**: The facility agent has completed configuration and submitted the master commitment for lender approval.
+
+**When This Occurs**:
+- After facility agent clicks Create Facility
+- The facility is now shared with selected lenders
+
+**What Lenders Can Do**:
+- See the facility in their Opportunities section
+- Click Review & Approve to review facility details
+- Review all configuration and terms
+- Click Approve & E-Sign to approve
+
+**What Facility Agents Can Do**:
+- View the facility (no editing)
+- Wait for lender approval
+
+**What Happens Next**:
+- Any lender approves → Status changes to Active
+- If rejected, status may need to be reconfigured
+
+**Dashboard View (Lenders)**:
+- Appears in Opportunities section
+- Action: **Review & Approve**
+
+### Active
+
+**Meaning**: At least one lender has approved the master commitment, and the facility is operational.
+
+**When This Occurs**:
+- After any one lender completes Approve & E-Sign
+
+**What Facility Agents Can Do**:
+- Complete deal modelling (Set Up Deal)
+- Review funding requests when submitted
+- Process funding notices
+
+**What Borrowers Can Do**:
+- Map NFT-minted loans to the facility (after deal modelling)
+- Create funding requests (after deal modelling)
+
+**What Lenders Can Do**:
+- View the facility in their Credit Facility section
+- Review funding notices when available
+- Confirm fund transfers
+
+**Dashboard View (FA)**:
+- Appears in Active Facilities tab
+- Action: **Set Up Deal** (then **Review Funding Request** after funding requests are submitted)
+
+**Dashboard View (Lenders)**:
+- Appears in Credit Facility section
+- Action: **View Facility**, **Review Funding Notice** (when available)
+
+## Additional Status: Facility Setup Status
+
+After a master commitment becomes Active, there's an additional status that tracks deal modelling:
+
+### Facility Setup Status: In Progress
+
+**Meaning**: The master commitment is active, but deal modelling is not yet complete.
+
+**What This Means**:
+- Facility agent needs to complete deal modelling
+- Borrower cannot yet create funding requests
+
+### Facility Setup Status: Completed
+
+**Meaning**: Deal modelling is complete.
+
+**What This Means**:
+- Borrower can now map loans and create funding requests
+- Funding workflow can proceed
+
+## Status Summary
+
+| Status | Who Acts | Available Actions |
+|--------|----------|-------------------|
+| Draft | Facility Agent | Configure facility, add lenders, Create Facility |
+| PendingLenderApproval | Lender | Review & Approve, E-Sign |
+| Active | FA, Borrower, Lender | Deal modelling, funding requests, fund transfers |
+
+| Facility Setup Status | Meaning | Borrower Can Raise Funding Request |
+|----------------------|---------|-------------------------------------|
+| In Progress | Deal modelling not complete | No |
+| Completed | Deal modelling complete | Yes |

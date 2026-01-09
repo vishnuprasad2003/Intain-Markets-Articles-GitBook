@@ -1,218 +1,222 @@
 ---
 title: Enabled vs Disabled Actions
-description: Understand why actions are enabled or disabled in Intain Markets and what you can do about it
+description: Understand why actions are enabled or disabled in Intain Markets
 ---
 
 # Enabled vs Disabled Actions
 
 ## Overview
 
-Intain Markets automatically enables or disables actions based on your role, the item's status, and whether prerequisites are met. Understanding why actions are enabled or disabled helps you know what you can do and what needs to happen before you can proceed.
+Intain Markets automatically enables or disables actions based on your role, the item's status, and whether prerequisites are met.
 
-## Platform-Specific Examples
+## Pool Actions
 
-### Pool Actions by Status
+### Created Status
 
-**Created Status** - As an issuer, you can:
-- Edit pool information
-- Add or remove loans
-- Share the pool with other organizations
-- Submit pool for mandate
+**As Issuer:**
+- **Enabled:** Edit pool details (Edit button)
+- **Enabled:** Add/remove loans
+- **Enabled:** Share pool with organizations
+- **Disabled:** Start Deal (NFT minting not complete)
 
-**Preview Status** - As an issuer, you can:
-- Continue editing the pool
-- Respond to feedback
-- Share with additional organizations
-- Submit pool for mandate
+### Preview Status
 
-**Preview Status** - As a market maker, you can:
-- View pool details
-- Provide feedback
-- Accept or reject mandate
-- Cannot edit the pool (only issuer can edit)
+**As Issuer:**
+- **Enabled:** Edit pool details
+- **Enabled:** Respond to feedback
+- **Enabled:** Share with additional organizations
+- **Enabled:** Start Deal (if NFT minting complete)
+- **Enabled:** Accept/reject loan removal requests
 
-**Mandate Pending Status** - As an issuer, you can:
-- View pool details
-- Cannot edit (waiting for market maker decision)
-- Cannot share (pool is committed to market maker)
+**As Market Maker:**
+- **Enabled:** View pool details
+- **Enabled:** Accept or Reject mandate
+- **Disabled:** Edit pool (issuer only)
+- **Disabled:** Provide feedback (must accept mandate first)
 
-**Mandate Pending Status** - As a market maker, you can:
-- Review pool details
-- Accept or reject mandate
-- Cannot edit the pool
+### Under Review Status (After Accept)
 
-**Deal Status** - As an issuer, you can:
-- View pool details
-- Cannot edit (pool is finalized)
-- Cannot share (deal is committed)
+**As Market Maker:**
+- **Enabled:** Provide feedback
+- **Enabled:** Request loan removal
+- **Enabled:** Share to investors
+- **Disabled:** Edit pool
 
-### Term Sheet Actions by Status
+**As Investor:**
+- **Enabled:** View pool details
+- **Enabled:** Provide feedback (if permission enabled)
+- **Enabled:** Download data (if permission enabled)
+- **Disabled:** Edit pool
 
-**Draft Status** - As a borrower, you can:
-- Edit all term sheet fields
-- Upload or update documents
-- Click "Create Draft" to initiate e-signature
-- Cannot submit (must sign first)
+### Deal Status
 
-**BorrowerSigned Status** - As a borrower, you can:
-- Preview the signed term sheet
-- Submit for facility agent review
-- Cannot edit (must request changes if needed)
+**As Issuer:**
+- **Enabled:** View pool details
+- **Disabled:** Edit pool (finalized)
+- **Disabled:** Share (deal committed)
 
-**FAReview Status** - As a borrower, you can:
-- View term sheet details
-- Cannot edit (waiting for facility agent decision)
-- Cannot submit (already submitted)
+## Loan Actions
 
-**FAReview Status** - As a facility agent, you can:
-- Review term sheet details
-- Approve, reject, or request changes
-- Cannot edit (borrower must make changes)
+### Loan Registry
 
-**CHANGES_REQUESTED Status** - As a borrower, you can:
-- Edit term sheet fields
-- Update documents
-- Click "Update" to re-sign and resubmit
+**As Issuer:**
+- **Enabled:** Map to Pool (if loan not already mapped)
+- **Enabled:** Add to Batch (if loan not already in batch)
+- **Disabled:** Map to Pool (if loan already mapped to another pool)
+- **Disabled:** Add to Batch (if loan already in batch)
 
-**Accepted Status** - As a borrower, you can:
-- View term sheet details
-- Cannot edit (term sheet is approved)
-- Master commitment is automatically created
+### Batch Verification
 
-### Master Commitment Actions by Status
+**Status: Pending**
+- **Enabled:** Self Certify
+- **Disabled:** Mint NFT
 
-**Draft Status** - As a facility agent, you can:
-- Edit all facility configuration fields
-- Add or remove lenders
-- Configure collateral rules
-- Set up borrowing base calculations
-- Submit for lender approval
-- Cannot create funding requests (facility not active)
+**Status: Reviewed**
+- **Enabled:** View details
+- **Enabled:** Mint NFT (in Certificates section)
 
-**PendingLenderApproval Status** - As a facility agent, you can:
-- View facility details
-- Cannot edit (waiting for lender approval)
-- Cannot create funding requests (facility not active)
+### Certificates Section
 
-**PendingLenderApproval Status** - As a lender, you can:
-- Review master commitment details
-- Approve via e-signature
-- Cannot edit (facility agent configures)
+**Status: Pending**
+- **Disabled:** View NFT
+- **Disabled:** Mint NFT
 
-**ACTIVE Status** - As a borrower, you can:
-- Create funding requests
-- View facility details and borrowing capacity
-- Cannot edit facility structure
+**Status: Reviewed**
+- **Enabled:** View NFT
+- **Enabled:** Mint NFT
 
-**ACTIVE Status** - As a facility agent, you can:
-- Review funding requests
-- Approve or reject funding requests
-- Generate tokens for funding notices
-- Cannot edit facility structure (must create new term sheet)
+**Status: Verified**
+- **Enabled:** View NFT
+- **Disabled:** Mint NFT (already minted)
 
-### Funding Request Actions by Status
+## Term Sheet Actions
 
-**DRAFT Status** - As a borrower, you can:
-- Edit funding request details
-- Update drawdown amount
-- Upload or update supporting documents
-- Submit for facility agent review
-- Cannot approve (facility agent approves)
+### Draft Status
 
-**FAReview Status** - As a borrower, you can:
-- View funding request details
-- Cannot edit (waiting for facility agent decision)
-- Cannot submit (already submitted)
+**As Borrower:**
+- **Enabled:** Edit all fields
+- **Enabled:** Upload documents
+- **Enabled:** Create Draft (initiates e-sign)
+- **Disabled:** Submit to FA (must sign first)
 
-**FAReview Status** - As a facility agent, you can:
-- Review funding request details
-- Approve, reject, or request changes
-- Cannot edit (borrower must make changes)
+### BorrowerSigned Status
 
-### Funding Notice Actions by Status
+**As Borrower:**
+- **Enabled:** Submit to FA
+- **Enabled:** View term sheet
+- **Disabled:** Edit (must get changes requested)
 
-**PENDING_TOKEN_GENERATION Status** - As a facility agent, you can:
-- Configure token distribution
-- Generate tokens for borrower
-- Cannot send to lenders (tokens must be generated first)
+### FAReview Status
 
-**TOKEN_GENERATED Status** - As a borrower, you can:
-- Review token details
-- Approve token transfer to Intain admin wallet
-- Cannot proceed (must approve tokens first)
+**As Borrower:**
+- **Enabled:** View term sheet
+- **Disabled:** Edit (waiting for FA decision)
 
-**TOKEN_GENERATED Status** - As a facility agent, you can:
-- Sign funding notice for lenders
-- Cannot send to lenders (borrower must approve tokens first)
+**As Facility Agent:**
+- **Enabled:** Approve
+- **Enabled:** Reject
+- **Enabled:** Request Changes
+- **Disabled:** Edit
 
-**TOKEN_APPROVED Status** - As a lender, you can:
-- Review funding notice details
-- Approve or reject drawdown
-- Confirm fund transfer after approval
-- Cannot approve tokens (borrower already approved)
+### CHANGES_REQUESTED Status
+
+**As Borrower:**
+- **Enabled:** Edit term sheet
+- **Enabled:** Update and resubmit
+- **Enabled:** Re-sign via e-sign
+
+### Accepted Status
+
+**As Borrower:**
+- **Enabled:** View term sheet
+- **Disabled:** Edit (approved, MC auto-created)
+
+## Master Commitment Actions
+
+### Draft Status
+
+**As Facility Agent:**
+- **Enabled:** Edit facility configuration
+- **Enabled:** Add lenders
+- **Enabled:** Create sub-facilities (if Multiple Branch)
+- **Enabled:** Create Facility (submit to lenders)
+
+### PendingLenderApproval Status
+
+**As Facility Agent:**
+- **Enabled:** View details
+- **Disabled:** Edit configuration
+
+**As Lender:**
+- **Enabled:** Review & Approve (with e-sign)
+- **Disabled:** Edit configuration
+
+### Active Status
+
+**As Facility Agent:**
+- **Enabled:** Set Up Deal (deal modelling)
+- **Enabled:** Review funding requests
+- **Disabled:** Edit facility structure
+
+**As Borrower:**
+- **Enabled:** Map loans (if deal modelling complete)
+- **Enabled:** Create funding request (if deal modelling complete)
+- **Disabled:** Create funding request (if deal modelling not complete)
+
+## Funding Request Actions
+
+### DRAFT Status
+
+**As Borrower:**
+- **Enabled:** Edit request details
+- **Enabled:** Submit to FA
+- **Disabled:** Approve (FA role only)
+
+### FAReview Status
+
+**As Borrower:**
+- **Enabled:** View request
+- **Disabled:** Edit
+
+**As Facility Agent:**
+- **Enabled:** Approve
+- **Enabled:** Reject
+- **Enabled:** Request Changes
+
+## Funding Notice Actions
+
+### Pending Token Generated Status
+
+**As Facility Agent:**
+- **Enabled:** Approve
+- **Disabled:** E-sign (must approve first)
+
+### After FA Approves
+
+**As Facility Agent:**
+- **Enabled:** E-sign (0/n → n/n)
+
+### After E-Sign Complete (Per Lender)
+
+**As Lender:**
+- **Enabled:** Review Funding Notice
+- **Enabled:** Select Payment Method
+- **Enabled:** Confirm and Settle
 
 ## Common Reasons Actions Are Disabled
 
-**Wrong Status** - The item isn't in the correct status for this action. For example:
-- You cannot submit a term sheet in Draft status (must sign first)
-- You cannot create funding requests when master commitment is Draft (must be ACTIVE)
-- You cannot approve a funding request when it's in DRAFT status (must be FAReview)
+| Reason | Example |
+|--------|---------|
+| Wrong Status | Cannot submit term sheet in Draft (must sign first) |
+| Missing Prerequisites | Cannot create funding request (deal modelling not complete) |
+| Waiting for Other Party | FA must e-sign for each lender before they see notice |
+| Role Permissions | Only FA can approve term sheets |
+| Already Completed | Cannot approve already approved item |
 
-**Missing Prerequisites** - Required steps haven't been completed:
-- Term sheet must be signed before submission
-- Master commitment must be ACTIVE before creating funding requests
-- Tokens must be generated before borrower can approve transfer
-- Borrower must approve tokens before lenders can review funding notice
+## How to Enable Disabled Actions
 
-**Waiting for Another Party** - Another party needs to act first:
-- Borrower must submit term sheet before facility agent can review
-- Facility agent must approve term sheet before master commitment is created
-- Facility agent must approve funding request before funding notice is generated
-- Borrower must approve tokens before lenders can review funding notice
-
-**Role Permissions** - Your role doesn't have permission:
-- Only borrowers can create term sheets and funding requests
-- Only facility agents can approve term sheets and funding requests
-- Only lenders can approve master commitments and funding notices
-- Only issuers can edit pools in Created or Preview status
-
-**Action Already Completed** - The action was already taken:
-- Term sheet already submitted (cannot submit again)
-- Master commitment already approved (cannot approve again)
-- Funding request already approved (cannot approve again)
-
-## How to Enable Actions
-
-**Check Status** - Verify the item is in the correct status for your desired action. Status badges show the current status.
-
-**Complete Prerequisites** - Ensure all required steps are complete:
-- Fill all required fields
-- Upload required documents
-- Complete e-signatures when required
-- Wait for previous workflow steps to complete
-
-**Verify Your Role** - Confirm you're logged in with the correct role that has permission for the action.
-
-**Wait for Other Parties** - If waiting for another party, check the item status and notifications to see what's pending.
-
-**Check Tooltips** - Hover over disabled buttons to see tooltips explaining why they're disabled.
-
-## Important Notes
-
-**Status Controls Everything** - Status is the primary factor determining action availability. Each status enables specific actions and disables others.
-
-**Role Determines Access** - Your role determines what actions you can take. Even if status allows an action, you may not have permission based on your role.
-
-**Workflow Order Matters** - Actions must happen in the correct sequence. You cannot skip steps or proceed out of order.
-
-**Prerequisites Are Required** - All prerequisites must be met before actions are enabled. Partial completion keeps actions disabled.
-
-**Tooltips Explain Restrictions** - Disabled buttons show tooltips explaining why they're disabled. Check these tooltips to understand what's needed.
-
-**Status Changes Enable Actions** - When status changes, new actions become available. Monitor status changes to see when actions become enabled.
-
-**Individual Tracking** - Each user's permissions and access are tracked individually. Your enabled/disabled actions reflect your specific role and access.
-
-**Complete Requirements** - All requirements must be met before actions are enabled. Missing any requirement keeps actions disabled.
-
-Understanding why actions are enabled or disabled helps you navigate the platform effectively and know what needs to happen before you can proceed with your desired actions.
+1. **Check Status** - Verify item is in correct status
+2. **Complete Prerequisites** - Fill required fields, upload documents, complete e-signatures
+3. **Verify Role** - Confirm you're logged in with correct role
+4. **Wait for Others** - Some actions require another party to act first
+5. **Check Tooltips** - Hover over disabled buttons for explanations

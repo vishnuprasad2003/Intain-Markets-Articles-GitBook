@@ -7,54 +7,93 @@ description: Learn how electronic signatures work throughout credit facilities
 
 ## Overview
 
-E-signatures are used throughout the credit facility workflow to digitally sign important documents, enabling a complete digital process without paper documents. Electronic signatures are legally binding and provide complete traceability of who signed what and when.
+E-signatures are used throughout the credit facility workflow to digitally sign important documents. Electronic signatures are legally binding and provide complete traceability of who signed what and when.
 
-## Workflow Overview
+## Where E-Signatures Are Used
 
-The e-signature workflow spans multiple stages of the credit facility process. Borrowers sign term sheets before submission, lenders sign master commitments to approve facilities, and facility agents sign funding notices for each lender. Each signing stage has specific requirements and outcomes, and signatures are tracked individually with complete audit trails.
+E-signatures are required at three key points in the credit facility workflow:
 
-## Key Stages
+1. **Term Sheet Signing (Borrower)** - Borrowers sign term sheets via Adobe Sign before submitting to facility agents
 
-**Stage 1: Term Sheet Signing (Borrowers)** - Borrowers electronically sign term sheets when status is Draft. After signing completion, Borrowers can then submit term sheets for facility agent review.
+2. **Master Commitment Signing (Lender)** - Lenders sign master commitments via Adobe Sign to approve facilities
 
-**Stage 2: Master Commitment Signing (Lenders)** - Lenders electronically sign master commitments to approve facilities. After facility agent finalizes master commitment (Draft → PendingLenderApproval), lenders sign via AdobeSign. Any lender approval activates the facility (PendingLenderApproval → ACTIVE). E-Signature envelope is generated for documentation after approval. Individual lender approval status is tracked separately.
+3. **Funding Notice Signing (Facility Agent)** - Facility agents sign funding notices for each lender individually via Adobe Sign
 
-**Stage 3: Funding Notice Signing (Facility Agents)** - Facility agents sign funding notices for each lender individually after tokens are created. Each lender's signature status is tracked separately. Funding notice status remains as tokens generated during this process.
+## Term Sheet E-Signature (Borrower)
 
-**Stage 4: Signature Verification** - After each signing, signatures are verified and recorded. Signed documents are stored securely, and signature status is visible to all parties. Status updates reflect signature completion.
+### When It Happens
+After the borrower clicks **Create Draft** on a term sheet
 
-**Stage 5: Document Progression** - After signatures are complete, documents can progress to next stages. Term sheets can be submitted, master commitments activate facilities, and funding notices become visible to lenders. Signatures enable workflow progression.
+### Process
+1. Adobe Sign popup opens automatically
+2. Borrower reviews the term sheet document
+3. Borrower completes electronic signature
+4. Status changes from **Draft** to **BorrowerSigned**
+5. Borrower can now submit to facility agent
 
-## How the Workflow Progresses
+### What It Means
+- The term sheet is formally signed by the borrower
+- Required before submission to facility agent
+- Legally binding document
 
-**Term Sheet Signing Flow** - Borrowers complete term sheets in Draft status, then sign electronically. After signing completion, Borrowers can then submit term sheets for facility agent review. Facility agents review and make decisions (Approve, Reject, or Request Changes). If approved, master commitments are automatically created.
+## Master Commitment E-Signature (Lender)
 
-**Master Commitment Signing Flow** - Facility agents configure master commitments in Draft status, then finalize for lender approval. Lenders review and sign electronically to approve facilities. Any lender signature activates the facility.
+### When It Happens
+When a lender clicks **Approve & E-Sign** on a master commitment in their Opportunities section
 
-**Funding Notice Signing Flow** - After funding request is approved, funding notice is automatically created. Facility agent generates tokens and configures distribution, which creates tokens and changes status to show tokens are generated. Facility agents then sign for each lender individually. Each lender's signature status is tracked separately. Status remains as tokens generated during signing.
+### Process
+1. Lender reviews the master commitment details
+2. Lender clicks **Approve & E-Sign**
+3. Adobe Sign popup opens
+4. Lender completes electronic signature
+5. Master commitment status changes to **Active** (any one lender approval activates)
 
-**Signature Tracking** - Throughout the workflow, signatures are tracked with complete details including who signed, when they signed, and what document was signed. This creates complete audit trails for compliance and accountability.
+### What It Means
+- The lender formally approves and commits to the facility
+- One lender approval activates the entire facility
+- Legally binding commitment
 
-**Status Updates** - After each signing stage, document status updates to reflect signature completion. Term sheets change to show they're signed after signing completion. Master commitments become ACTIVE after lender approval. Funding notices remain as tokens generated during per-lender signing, with individual lender signature status tracked separately.
+## Funding Notice E-Signature (Facility Agent)
 
-**Document Storage** - All signed documents are stored securely and can be retrieved for audit purposes. Signed versions are preserved, and signature history is maintained for complete traceability.
+### When It Happens
+After the facility agent approves a funding notice
 
-## Important Points to Know
+### Process
+1. Funding request is approved → Funding notice generated (Pending Token Generated)
+2. Facility agent clicks **Approve** on the funding notice
+3. Action shows **E-sign (0/n)** where n = number of lenders
+4. Facility agent clicks E-sign
+5. Adobe Sign popup opens for each lender
+6. Facility agent signs for that lender
+7. Count updates (1/n, 2/n, etc.)
+8. Repeat for each lender (n/n)
+9. Each lender can see the funding notice once their e-sign is complete
 
-**Legally Binding** - Electronic signatures are legally binding and enforceable. Once signed, documents are legally valid, and signatures cannot be easily reversed.
+### What It Means
+- Facility agent formally signs the funding notice for each lender
+- Each lender has individual e-signature tracking
+- Each lender can see and act on the funding notice once their e-sign is done
 
-**Required Before Progression** - Signatures are required before documents can progress to next stages. Unsigned documents cannot move forward in the workflow.
+## E-Signature Progress Tracking
 
-**Multiple Signatures May Be Required** - Some documents require multiple signatures from different parties. Term sheets need borrower signatures, master commitments need lender signatures, and funding notices need facility agent signatures for each lender.
+### For Funding Notices
+The E-sign counter shows progress:
+- **E-sign (0/3)**: No lenders signed yet (3 total lenders)
+- **E-sign (1/3)**: Signed for 1 lender
+- **E-sign (2/3)**: Signed for 2 lenders
+- **E-sign (3/3)**: All lenders signed
 
-**Tracked with Timestamps** - Every signature is recorded with who signed and when, creating complete audit trails.
+## Important Points
 
-**Stored Securely** - All signed documents are stored securely and can be retrieved for audit purposes. Signed versions are preserved, and signature history is maintained.
+**Legally Binding** - All electronic signatures are legally binding and enforceable.
 
-**Status Reflects Completion** - Document status updates to reflect signature completion. You can see signature status and completion for all parties.
+**Required for Progression** - Documents cannot progress without required signatures:
+- Term sheets cannot be submitted without borrower signature
+- Master commitments cannot activate without lender signature
+- Funding notices cannot be seen by lenders without FA e-signs
 
-**Re-signing May Be Required** - If documents are modified significantly, re-signing may be required to ensure signatures reflect current document content.
+**Per-Lender Tracking** - For funding notices, each lender's e-signature status is tracked individually.
 
-**Per-Lender Tracking** - For funding notices, facility agents sign for each lender individually, with each lender's signature status tracked separately.
+**Adobe Sign Integration** - All e-signatures use Adobe Sign for secure, legally compliant signing.
 
-**Enables Workflow Progression** - Signatures enable documents to progress through the workflow.
+**Complete Audit Trail** - Every signature is recorded with who signed and when.

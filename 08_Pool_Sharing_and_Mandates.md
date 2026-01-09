@@ -7,178 +7,227 @@ description: Learn how to share pools with other organizations and manage mandat
 
 ## Overview
 
-Sharing pools enables collaboration with other organizations in the structured finance process. You can share pools with market makers, investors, rating agencies, and other parties who need to review or participate in your transaction. Mandates are formal requests to market makers to structure deals, and managing mandates is a key part of moving pools toward completion.
+Pool sharing enables collaboration with other organizations in the structured finance process. As an issuer, you share pools with market makers, investors, rating agencies, and other parties who need to review or participate in your transaction. There are two distinct sharing flows: **Preview (Share)** for review and mandate decisions, and **Start Deal** for deal commitment when prerequisites are met. Understanding these flows helps you move pools through the workflow effectively.
 
 ## Who Can Use This
 
-- Issuers who create pools and want to share them with other parties
-- Market Makers who receive pool shares and review mandate requests
-- Investors who receive pool previews for investment opportunities
-- Rating Agencies and other parties involved in transactions
+- **Issuers/Borrowers**: Create pools and share them with other parties using the Share button or Start Deal button. Issuers control sharing configuration and permissions.
+
+- **Market Makers/Facility Agents**: Receive pool shares, review pool details, and make mandate decisions (Accept or Reject). After accepting, market makers can share pools further with investors.
+
+- **Investors/Lenders**: Receive pool shares in their Pools dashboard, review pool details, and provide feedback. Investors cannot share pools further.
+
+- **Rating Agencies**: Receive pool shares for analysis, review pool details, and provide comments. Rating agencies have read-only access.
 
 ## When This Is Used
 
-Use pool sharing when you:
-- Want market makers to review pools and accept mandates to structure deals
-- Need investors to see investment opportunities and express interest
-- Want rating agencies to analyze pools for rating purposes
-- Need to collaborate with multiple parties on a transaction
-- Want to get feedback before finalizing a pool
+**Use Preview Sharing (Share button) when:**
+- You want market makers, investors, or rating agencies to review the pool
+- You need feedback before finalizing pool composition
+- You want recipients to make mandate decisions (Accept/Reject)
+- You want to collaborate while retaining editing rights
+- The pool is in Created or Preview status
 
-Use mandates when you:
-- Have a pool ready for structuring
-- Want a market maker to formally commit to structuring the deal
-- Need to move a pool from preview to deal status
-- Want to establish a formal relationship with a market maker for deal structuring
+**Use Start Deal when:**
+- Prerequisites are met (typically all pool loans NFT-minted)
+- Pool composition is final and ready for deal commitment
+- You want to send a deal-ready pool to market makers
+- You're ready to lock down structural editing after acceptance
+
+**Use Mandates when:**
+- You have a pool ready for market maker structuring
+- You want a formal commitment from a market maker
+- You need to progress the pool toward Deal status
 
 ## Step-by-Step Process
 
-### Sharing a Pool
+### Preparing the Pool for Sharing
 
-1. **Prepare Your Pool**
-   - Ensure pool information is complete and accurate
-   - Map loans to the pool and verify loan data
-   - Review pool metrics for accuracy (total balance, loan count, weighted averages)
-   - Verify all details are correct before sharing
-   - Ensure pool is in Created or Preview status
+Before sharing, ensure your pool is ready for review:
+
+1. **Verify Pool Information**
+   - Pool name, asset class, and transaction type are correct
+   - Description provides relevant context for recipients
+   - Organization assignments include all parties you want to share with
+
+2. **Confirm Loan Mapping**
+   - Loans have been mapped from the Loan Registry
+   - Pool metrics reflect the current loan composition
+   - Review metrics in pool details to ensure they meet your targets
+
+3. **Check Pool Status**
+   - Pool should be in Created or Preview status for Share
+   - For Start Deal, verify prerequisites (NFT minting) are complete
 
 ![Prepare Pool](imagesByMdFilesFolder/08/PreparePool.png)
 
-2. **Access Sharing Settings**
-   - Navigate to your pool's details page
+### Sharing via Preview Flow (Share Button)
+
+1. **Access Sharing**
+   - Navigate to the pool details page by clicking on the Pool ID
    - Click the **Share** button at the top right
-   - A pop-up window appears for sharing configuration
+   - A sharing configuration pop-up appears
 
 ![Pool Share - Issuer](imagesByMdFilesFolder/08/Pool_Share_Issuer.png)
 
-3. **Select Recipient Organizations**
-   - In the pop-up, select the recipient organization type
-   - Based on the selected recipient, the system displays organizations that were added to this pool during creation or editing
-   - Choose which organizations to share with from the available options
-   - You can share with multiple organizations simultaneously
+2. **Select Recipient Type and Organizations**
+   - Select the **Recipient** type from the dropdown (Market Maker, Investor, Rating Agency, etc.)
+   - The **Preview Profile** dropdown shows organizations of that type that were assigned to this pool during creation or editing
+   - Select the specific organizations you want to share with
+   - You can share with multiple organizations of the same type in one action
 
 ![Pool Share - Select Recipient Organization](imagesByMdFilesFolder/08/Pool_Share_Select_recipient_org.png)
 
-4. **Set Sharing Permissions**
-   - Configure permissions for selected organizations:
-     - **Allow Feedback**: Recipients can provide comments and feedback (defaults to enabled)
-     - **Allow Download**: Recipients can download pool data (defaults to enabled)
-     - **Acceptance Status**: Status for market maker mandates (defaults to pending)
-   - Configure access settings for each organization
-   - Control what recipients can see and do with the pool
-   - Set appropriate access levels based on organization type
-   - Review and confirm your sharing configuration
+3. **Configure Sharing Permissions**
+   - **Allow Feedback**: Toggle on/off to control whether recipients can provide feedback on the pool and loans. Default is enabled.
+   - **Allow Download**: Toggle on/off to control whether recipients can download loan tape data. Default is enabled.
+   - These permissions apply to the selected organizations and can be adjusted later in the Sharing tab.
 
 ![Pools Sharing Settings](imagesByMdFilesFolder/08/Pools_Sharing_Settings.png)
 
-5. **Complete the Sharing Process**
-   - Review your sharing selections
-   - Confirm the sharing action
-   - Recipients receive notifications that the pool has been shared
-   - Pool becomes visible to shared parties in their views
-   - Pool status changes to Preview if it was in Created status
+4. **Add Documents (Optional)**
+   - You can add documents relevant to the pool for recipients to review
+   - Upload offering memorandums, legal documents, or other supporting materials
+   - Recipients can view and download these documents based on permissions
 
-6. **Manage Shared Organizations**
-   - Navigate to the pool details page
-   - Below the main table, find the **Sharing** tab
-   - View all shared organizations and their access settings
-   - As the issuer, you can edit accessibility settings for each shared organization
-   - Modify feedback and download permissions as needed
-   - Changes are saved automatically
+5. **Complete the Share**
+   - Click **Share** to finalize
+   - If the pool was in **Created** status, it moves to **Preview** status
+   - Recipients see the pool in their dashboard with status **Mandate Pending**
+   - Recipients have **Accept** and **Reject** action buttons
+   - **Important**: Before accepting the mandate, market makers cannot provide feedback on the pool—feedback functionality becomes available only after acceptance
 
-### Managing Mandates
+6. **Track Sharing in the Sharing Tab**
+   - In pool details, go to the **Sharing** tab to see all shared organizations
+   - View and edit permissions (feedback, download) for each organization
+   - Changes save automatically
 
-1. **Prepare Pool for Mandate Submission**
-   - Ensure pool is shared with the market maker
-   - Verify pool information is complete
-   - Review pool metrics and loan characteristics
-   - Ensure pool meets requirements for mandate submission
+### Managing Mandates (Preview Flow)
 
-2. **Submit Pool for Mandate**
-   - Navigate to the pool's details page
-   - Click the **Start Deal** button at the top right
-   - Select the market maker you want to submit to
-   - Review mandate details and requirements
-   - Submit the pool for mandate review
-   - Status changes to Mandate Pending
-   - Market maker receives notification
+After sharing via Preview, recipients make mandate decisions:
 
-![Submit Pool for Mandate](imagesByMdFilesFolder/08/2.SubmitPoolForMandate.png)
+1. **Recipients Review the Pool**
+   - Market makers see the pool in their Pools dashboard with status **Mandate Pending**
+   - They can view pool details, metrics, loan composition, and supporting documents
+   - They evaluate whether to accept the mandate to structure the deal
 
-3. **Market Maker Reviews the Pool**
-   - Market maker sees the pool in their pools dashboard
-   - Market maker analyzes pool details, metrics, and loan characteristics
-   - Market maker reviews pool composition and quality
-   - Market maker evaluates whether to accept the mandate
-
-4. **Market Maker Makes Decision**
-   - **Accept**: Market maker accepts the mandate and commits to structuring the deal
-     - Pool status changes to Deal
-     - Market maker proceeds with deal structuring
-     - Pool moves forward in the workflow
-   - **Reject**: Market maker declines the mandate
-     - Pool returns to Preview status
-     - You can submit to another market maker
-     - You receive notification of rejection
+2. **Recipients Make Decisions**
+   - **Accept**: Recipient accepts the mandate
+     - Their view shows status **Under Review**
+     - Feedback functionality becomes available
+     - They can now provide pool-level and loan-level feedback
+     - They can request loan removals using the cross icon in the Loans tab
+   - **Reject**: Recipient declines the mandate
+     - Their view remains **Mandate Pending** (they can reconsider later if you re-share)
+     - You can revise the pool and re-share, or share with other organizations
 
 ![Market Maker Makes Decision](imagesByMdFilesFolder/08/4.MarketMakerMakesDecision.png)
 
-5. **Handle Mandate Acceptance**
-   - If accepted, pool moves to Deal status
-   - Market maker proceeds with structuring activities
-   - Editing is restricted as pool is finalized
-   - All parties are notified of mandate acceptance
-   - Deal moves toward completion
+3. **Respond to Feedback**
+   - If recipients provide feedback, review it in the Feedback section (pool-level) or via the chat box icons in the Loans tab (loan-level)
+   - Make changes based on feedback if needed
+   - Address loan removal requests using the tick (accept) or cross (reject) icons
 
-6. **Handle Mandate Rejection**
-   - If rejected, review the reason for rejection
-   - Make improvements if needed
-   - Submit to another market maker if desired
+4. **Proceed to Start Deal When Ready**
+   - After completing review and addressing feedback, you can proceed to Start Deal when prerequisites are met
+
+### Sharing via Start Deal Flow
+
+When prerequisites are met (typically all pool loans NFT-minted), you can initiate the Deal flow:
+
+1. **Verify Prerequisites**
+   - The **Start Deal** button is enabled only after required prerequisites are met
+   - Typically, all loans in the pool must have completed NFT minting
+   - Check that the pool composition is final
+
+![Submit Pool for Mandate](imagesByMdFilesFolder/08/2.SubmitPoolForMandate.png)
+
+2. **Access Start Deal**
+   - In pool details, click the **Start Deal** button at the top right
+   - A configuration pop-up appears similar to the Share pop-up
+
+3. **Select Recipients**
+   - Select organizations to receive the deal invitation
+   - You can include market makers, paying agents, servicers, and rating agencies as applicable
+   - These organizations will receive the pool with status **Ready for Deal**
+
+4. **Send Deal Invitation**
+   - Click to send the deal invitation
+   - Pool status changes to **Deal**
+   - Recipients see the pool as **Ready for Deal** with Accept/Reject actions
+
+5. **Recipients Make Deal Decisions**
+   - **Accept**: Recipient commits to the deal
+     - Pool status remains **Deal** and structural editing is restricted
+     - The accepting market maker proceeds with deal structuring
+     - Downstream activities (structuring, investor allocation, etc.) continue
+   - **Reject**: Recipient declines the deal
+     - Pool remains in **Ready for Deal** for that recipient
+     - You can reach out to understand concerns or work with other parties
+
+### Managing Shared Organizations
+
+After sharing, you can manage sharing settings:
+
+1. **Access the Sharing Tab**
+   - In pool details, navigate to the **Sharing** tab
+   - View all organizations shared with and their current settings
+
+2. **Edit Permissions**
+   - For each organization, you can toggle:
+     - **Allow Feedback**: Enable or disable feedback capability
+     - **Allow Download**: Enable or disable loan tape download capability
+   - Changes save automatically
+
+3. **Track Acceptance Status**
+   - View acceptance status for each organization (pending, accepted, rejected)
+   - Monitor which organizations have accepted or are still deciding
 
 ## Rules & Validations
 
-- You can only share pools while they're in Created or Preview status. Once a pool reaches Deal status, sharing is typically not needed as it's already finalized.
+- **Pool Status for Sharing**: You can share pools while they're in Created or Preview status. For Start Deal, prerequisites must be met.
 
-- Sharing permissions control what recipients can do. Some recipients may have view-only access, while others can provide feedback or request changes.
+- **Organization Assignment Required**: Only organizations assigned to the pool during creation or editing appear as sharing options. Add organizations via Edit Pool Details before sharing.
 
-- A pool can be shared with multiple parties simultaneously. You don't need to share with one party at a time.
+- **Preview vs Start Deal**: Preview sharing allows recipients to review with mandate decision; Start Deal sends a deal-ready pool after prerequisites are met.
 
-- Market makers can accept or reject mandates. They cannot be forced to accept, and rejection is a valid outcome.
+- **Feedback Before Acceptance**: Market makers cannot provide feedback until they accept the mandate. After acceptance, feedback becomes available.
 
-- Mandate acceptance moves pool toward Deal status. Once accepted, the pool is committed to that market maker for structuring.
+- **One-Way Sharing**: Issuers share with market makers, investors, and rating agencies. Market makers can share further with investors. Investors and rating agencies cannot share further.
 
-- You can share with different market makers if one rejects. Rejection doesn't prevent you from submitting to another market maker.
+- **Permissions Per Organization**: Feedback and download permissions are set per organization and can be adjusted in the Sharing tab.
 
-- Pool status affects sharing capabilities. Some statuses may restrict sharing or mandate submission.
+- **Status Progression**: Preview share moves status to Preview (if it was Created). Recipients see Mandate Pending. Accept shows Under Review. Start Deal moves status to Deal. Recipients see Ready for Deal.
 
-- Recipients must have appropriate roles. Market makers can accept mandates, investors can review opportunities, etc.
+- **Edit Rights**: You retain editing rights during Created, Preview, and Under Review phases. Deal status restricts structural editing.
 
-- Sharing is recorded in audit trail. All sharing actions are tracked with who shared what with whom and when.
-
-- Mandate decisions are final. Once a market maker accepts or rejects, that decision is recorded and affects pool status.
+- **Mandate Decisions Are Recorded**: All acceptance and rejection decisions are recorded with who decided, when, and any associated messages.
 
 ## What Happens Next
 
-After sharing a pool:
-- Recipients can view and analyze the pool in their views
-- Market makers can review and accept mandates to structure deals
-- Investors can review opportunities and express interest
-- Rating agencies can analyze pool characteristics for rating purposes
-- You receive feedback and can respond accordingly
-- Pool progresses through statuses based on recipient actions
+**After Preview Sharing:**
+- Recipients see the pool in their dashboard with **Mandate Pending** status
+- Recipients can view pool details, metrics, and loan information
+- Recipients make Accept/Reject decisions
+- After acceptance, recipients can provide feedback and request changes
+- You respond to feedback and refine the pool
+- When ready, proceed to Start Deal
 
-After submitting for mandate:
-- Market maker receives notification and reviews the pool
-- Market maker makes a decision (accept or reject)
-- Pool status updates based on the decision
-- If accepted, pool moves to Deal status and market maker structures the deal
-- If rejected, you can submit to another market maker or make improvements
+**After Mandate Acceptance:**
+- Recipient view shows **Under Review** status
+- Feedback functionality becomes available for the recipient
+- You can collaborate through feedback and continue refining the pool
+- The pool moves toward deal readiness
 
-After mandate acceptance:
-- Pool is finalized and moves to Deal status
-- Market maker proceeds with deal structuring
-- Editing is restricted as pool is committed
-- Deal moves toward completion
-- All parties are notified and can track progress
+**After Start Deal:**
+- Pool status becomes **Deal**
+- Recipients see **Ready for Deal** status with Accept/Reject options
+- Acceptance commits the deal and restricts structural editing
+- Accepting market maker proceeds with deal structuring
+- Downstream activities (investor allocation, documentation, closing) continue
 
-Pool sharing and mandates enable collaboration with other parties, helping you move pools through the structured finance workflow and complete successful transactions with proper structuring and approvals.
+**After Deal Acceptance:**
+- Pool is finalized and committed
+- Structural editing is restricted
+- Market maker coordinates structuring activities
+- Pool progresses through remaining transaction steps

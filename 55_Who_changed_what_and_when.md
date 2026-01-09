@@ -23,7 +23,7 @@ Intain Markets tracks every change with details about who made it, what changed,
 **Funding Request Status History** - Shows progression: DRAFT → FAReview → APPROVED/REJECTED/CHANGES_REQUESTED
 - Each entry shows: who changed status, when, previous status, new status, and reason
 
-**Funding Notice Status History** - Shows progression: PENDING_TOKEN_GENERATION → TOKEN_GENERATED → TOKEN_APPROVED
+**Funding Notice Status History** - Shows progression: Pending Token Generated → FA Approved → E-signed for lenders
 - Each entry shows: who changed status, when, previous status, new status, and details
 
 **How to View** - Navigate to item detail page, look for "Status History" section. Changes are displayed chronologically.
@@ -38,7 +38,7 @@ Intain Markets tracks every change with details about who made it, what changed,
 
 **Funding Request Actions** - Creation, submission, approval, rejection, change requests, document uploads
 
-**Funding Notice Actions** - Auto-generation, token generation, token distribution, borrower approval, lender approvals, fund transfer confirmations
+**Funding Notice Actions** - Auto-generation, FA approval, FA e-sign for each lender, lender fund transfer confirmations
 
 **How to View** - Navigate to item detail page, look for "Action History" or "Activity" section. Actions are displayed chronologically.
 

@@ -7,83 +7,153 @@ description: Learn what credit facilities are and how they work in the platform
 
 ## Overview
 
-A credit facility is a lending arrangement where a borrower can draw down funds as needed, up to a pre-approved limit. You get approved for a maximum amount and can borrow portions of it when needed, rather than receiving all funds at once. Credit facilities provide flexibility for borrowers while giving lenders control over fund disbursement.
+A credit facility is a lending arrangement where a borrower can draw down funds as needed, up to a pre-approved limit. In Intain Markets, credit facilities involve borrowers proposing terms via term sheets, facility agents reviewing and structuring the facility, and lenders approving and funding drawdowns. This module covers the complete credit facility workflow from term sheet creation to fund disbursement.
 
 ## What Credit Facilities Are
 
-A credit facility is a flexible borrowing arrangement that allows borrowers to access funds incrementally rather than receiving everything upfront. Unlike traditional loans where you receive the full amount at once, credit facilities provide a pre-approved borrowing limit that you can draw from as needed. Each drawdown is a separate funding request that must be reviewed and approved before funds are disbursed.
+A credit facility is a flexible borrowing arrangement that allows borrowers to access funds incrementally rather than receiving everything upfront. Unlike traditional loans where you receive the full amount at once, credit facilities provide a pre-approved borrowing limit that you can draw from as needed through funding requests.
 
-Credit facilities involve multiple components: term sheets propose the facility, master commitments define the complete facility structure, funding requests request specific drawdowns, and funding notices document approved drawdowns. The facility remains active over time, supporting multiple drawdowns as long as you stay within approved limits.
+Credit facilities involve multiple components that progress through a structured workflow:
+- **Term Sheets** propose the facility terms
+- **Master Commitments** define the complete facility structure
+- **Funding Requests** request specific drawdowns
+- **Funding Notices** document approved drawdowns and coordinate fund transfer
 
 ## Purpose and Use Cases
 
-Credit facilities serve several important purposes:
-
 **For Flexible Borrowing** - Borrowers can access funds as needed rather than receiving everything upfront, reducing unnecessary borrowing costs.
 
-**For Structured Lending** - Lenders can provide capital through structured arrangements with proper oversight. Each drawdown is reviewed individually, ensuring compliance with facility rules.
+**For Structured Lending** - Lenders can provide capital through structured arrangements with proper oversight. Each drawdown is reviewed individually.
 
 **For Ongoing Relationships** - Credit facilities support ongoing relationships between borrowers and lenders. Facilities remain active over time, allowing multiple drawdowns.
 
 **For Controlled Disbursement** - Lenders maintain control over fund disbursement through individual drawdown approvals.
 
-**For Capacity Management** - Facilities track borrowing capacity, utilization, and available capacity, ensuring borrowers stay within approved limits.
-
 ## Key Components
 
-**Term Sheets** - Initial proposals that borrowers create to request credit facilities. Term sheets outline key terms like maximum facility amount, interest rates, repayment terms, and other conditions. They must be signed electronically and submitted for facility agent review.
+**Term Sheets** - Initial proposals that borrowers create to request credit facilities. Term sheets outline key terms like maximum facility amount, interest rates, repayment terms, and other conditions. They must be signed electronically (Adobe Sign) and submitted to the facility agent for review.
 
-**Master Commitments** - Finalized credit facility agreements that define the complete facility structure. They're automatically created when term sheets are approved and contain all the rules, parameters, lender information, and borrowing base calculations needed to operate the facility.
+**Master Commitments** - Finalized credit facility agreements that define the complete facility structure. They're automatically created when term sheets are approved by the facility agent. The facility agent then configures lenders, facility rules, and other parameters before submitting for lender approval.
 
-**Funding Requests** - Specific requests to draw down funds from an active facility. Borrowers create funding requests when they need funds, specifying the amount, purpose, and providing supporting documentation. Each request must be reviewed and approved.
+**Funding Requests** - Specific requests to draw down funds from an active facility. Borrowers create funding requests when they need funds, specifying the amount, funding date, purpose, and uploading collateral addendum. Each request must be reviewed and approved by the facility agent.
 
-**Funding Notices** - Official documentation for each approved drawdown. They're automatically generated when funding requests are approved and contain details about the drawdown, token distribution to lenders, and fund transfer instructions.
+**Funding Notices** - Official documentation for each approved drawdown. They're automatically generated when funding requests are approved. The facility agent e-signs for each lender individually, and each lender can see the funding notice once the facility agent has e-signed for them.
 
-**Facility Rules** - Rules that govern how the facility operates, including borrowing limits, collateral eligibility, drawdown frequency, repayment terms, and other requirements. These rules are defined in master commitments and enforced throughout the facility lifecycle.
-
-**Borrowing Base Calculations** - Formulas and rules that determine how much you can borrow based on collateral, financial metrics, or other factors. Borrowing base calculations determine available borrowing capacity.
+**Deal Modelling** - Configuration of the facility parameters and calculations. After a master commitment becomes active, the facility agent sets up deal modelling before funding requests can be created.
 
 ## How Credit Facilities Work
 
-**Term Sheet Proposal** - Borrowers create term sheets proposing credit facilities with key terms. Term sheets are signed electronically and submitted to facility agents for review. Facility agents can approve, reject, or request changes.
+**1. Term Sheet Creation (Borrower)**
+
+The borrower logs in and navigates to the **Credit Facility** section from the left expandable menu. The dashboard shows term sheets and master commitments. Click **Term Sheet Setup** at the top right, which shows two options: **Create via Wizard** or **Upload Signed**.
+
+In Create via Wizard, a popup appears where the borrower enters term sheet details (requested commitment amount, advance rate, margin, pricing index, maturity date, drawdown frequency, etc.) and clicks **Create Draft**. An Adobe Sign popup opens for the borrower to sign the term sheet. Initial status is **Draft**, and after signing it changes to **BorrowerSigned**.
+
+After signing, a **Submit to FA** popup appears. If the borrower submits, the status changes to **FAReview**. If they cancel, they can submit later using the **Submit Term Sheet** action in the dashboard.
 
 ![Term Sheet Creation - Issuer](imagesByMdFilesFolder/14/Issuer_TermSheetCreation.png)
 
-**Master Commitment Creation** - When term sheets are approved, master commitments are automatically created with facility details pre-populated from the term sheet. Facility agents then configure the complete facility structure, including facility rules, borrowing base calculations, lender groups, and other parameters.
+**2. Term Sheet Review (Facility Agent)**
+
+The facility agent logs in and navigates to the **Credit Facility** section. The dashboard has top tiles and a table below with **Set-up** and **Active Facilities** tabs. In the Set-up section, term sheets are listed, and under approved term sheets, master commitments appear as a dropdown.
+
+For term sheets in FAReview status, the action column shows **Review Term Sheet**. The facility agent clicks this to open a popup where they can view details, download attached documents, and make a decision:
+- **Approve**: Status changes to **Accepted**, master commitment is automatically created
+- **Reject**: Status changes to **Rejected**
+- **Request Changes**: Status changes to **CHANGES_REQUESTED**, borrower can edit and resubmit
+
+**3. Master Commitment Configuration (Facility Agent)**
+
+When a term sheet is approved, a master commitment is automatically created with **Draft** status and appears as a dropdown under that term sheet. The action shows **Create Facility**.
+
+The facility agent clicks **Create Facility** to open a comprehensive popup with multiple sections (Basic, Parties & Accounts, Economic & Fees, and more, ending with Review & Create).
 
 ![Create Master Commitment Facility](imagesByMdFilesFolder/14/CreateMasterCommitmentFacility.png)
 
-**Lender Approval** - After facility agents configure master commitments, they submit them for lender approval. Lenders review and approve master commitments electronically. Any lender approval activates the facility.
+In the **Basic** section, the facility agent selects whether this is a single or multiple branch master commitment.
+
+In the **Parties & Accounts** section, the facility agent adds lenders that will participate in this facility.
+
+If **multiple branch** is selected, a **Create Sub-Facility** button appears in the Review & Create section. The facility agent can create sub-master commitments. A dropdown at the top of the popup allows switching between sub-facilities and the main facility. Sub-facilities can only include lenders selected in the main facility, and no two sub-facilities can have the same lenders.
+
+Everything in this popup is auto-saved as the facility agent enters data. When complete, the facility agent clicks **Create Facility** to finalize. The master commitment status changes to **PendingLenderApproval** and is shared with the selected lenders.
+
+**4. Lender Approval**
+
+Lenders log in and navigate to the **Opportunities** section from the left expandable menu. They see the main master commitment (if single) or the sub-master commitment assigned to them.
+
+The action shows **Review & Approve**. The lender clicks this to open a popup where they can review all tabs and details of the facility.
 
 ![Credit Facility - Lender Approve](imagesByMdFilesFolder/14/CreditFacility_Lender_Approve.png)
 
-**Funding Requests** - Once facilities are active and deal model has been set up, borrowers can create funding requests to draw down funds. Each request specifies the amount, purpose, and includes supporting documentation. Facility agents review requests for compliance and available capacity.
+If satisfied, the lender clicks **Approve & E-Sign**. An Adobe Sign popup opens for the lender to sign. After signing, the master commitment (or sub-master commitment) moves to the lender's **Credit Facility** tab.
+
+After any one lender approves and signs, the master commitment status changes to **Active**.
+
+**5. Deal Modelling (Facility Agent)**
+
+After the master commitment becomes active, it appears in the facility agent's **Credit Facility** section under the **Active Facilities** tab.
+
+The facility agent clicks **Set Up Deal** to open the deal modelling screen. There's a **Delegation** button if the facility agent wants the admin to do this on their behalf.
+
+The deal modelling screen has multiple sections in the left menu that need to be filled. After completing all sections, the facility agent goes to the Review section and clicks **Create**. The **Facility Setup Status** changes from **In Progress** to **Completed**.
+
+**6. Loan Mapping (Borrower)**
+
+After deal modelling is complete, the borrower sees the master commitment in their Credit Facility section. The **Map Loans** action button is now enabled (along with **Funding Request**).
+
+The borrower clicks **Map Loans** to see a screen showing mapped loans and totals. Click **Add Loans to Facility** to open a popup showing loans. Only loans with minted NFTs have enabled checkboxes. The borrower selects loans, clicks **Next**, then clicks **Map**. An error appears if a selected loan is already mapped to a different facility.
+
+**7. Funding Request (Borrower)**
+
+The borrower clicks **Funding Request** to open a popup where they enter:
+- Draw amount
+- Funding date
+- Purpose of funds
+- Draw currency
+- Upload Collateral Addendum
+
+Click **Review** to create the funding request (status: **Draft**). Click **Submit** to submit to the facility agent for review (status: **FAReview**).
 
 ![Funding Request Creation - Issuer](imagesByMdFilesFolder/14/FundingRequest_Creation_Issuer.png)
 
-**Funding Notice Generation** - When funding requests are approved, funding notices are automatically generated. Facility agents generate tokens and configure distribution to lenders. Facility agents sign funding notices for each lender individually. Borrowers approve token transfers, making notices visible to lenders for review and approval.
+**8. Funding Request Review (Facility Agent)**
+
+The facility agent sees the funding request in the Credit Facility section. The action shows **Review Funding Request**. The facility agent clicks this and can:
+- **Approve**: Funding notice is generated with status **Pending Token Generated**
+- **Reject**: Status changes to **Rejected**
+- **Request Changes**: Status changes to **CHANGES_REQUESTED**
+
+No e-sign is required for funding request approval. After clicking **Approve**, the facility agent clicks the **Approve** button on the funding notice.
+
+**9. Funding Notice E-Sign (Facility Agent)**
+
+After approving the funding request, a funding notice is generated. The funding notice shows **E-sign (0/n)** where n is the number of lenders.
+
+The facility agent clicks E-sign and signs the document for each lender individually using Adobe Sign. Each time the facility agent signs, the count updates (1/n, 2/n, etc.). As each lender's e-sign is completed, that lender can see the funding notice in their Credit Facility section.
 
 ![Funding Notice Details - FA](imagesByMdFilesFolder/14/FundingNoticeDetailsFA.png)
 
-**Lender Review and Approval** - Lenders review funding notices and approve or reject individual drawdowns. Each lender makes independent decisions, and participation is tracked individually.
+**10. Lender Fund Transfer**
 
-![Lender Approval - Funding Notice](imagesByMdFilesFolder/14/LenderApprovalFundingNotice.png)
+Lenders go to the **Credit Facility** section where they see **Review Funding Notice**. They open the funding notice, select the payment method, and after payment is complete, click **Confirm and Settle**.
 
-**Fund Disbursement** - After lenders approve, they transfer funds and confirm transfers. Funds are disbursed to borrowers, completing the drawdown process.
+After confirmation, tokens are transferred and the amount is transferred to the borrower.
 
-![Fund Transfer Confirmation](imagesByMdFilesFolder/14/FundTransferConfirmation.png)
+![Confirm and Settle - Lender](imagesByMdFilesFolder/ConfirmAndSettleInvestor.png)
 
 ## Important Points to Know
 
-**Flexible Drawdowns** - Credit facilities allow borrowers to request specific amounts as needed, up to approved limits. Each drawdown is a separate funding request that must be reviewed and approved.
+**Term Sheet E-Sign Required** - Borrowers must sign the term sheet via Adobe Sign before submitting to the facility agent.
 
-**Structured Approval Process** - Each component requires appropriate approvals—term sheets need facility agent approval, master commitments need lender approval, and funding requests need facility agent and lender approval.
+**Auto-Creation of Master Commitment** - When a term sheet is approved, the master commitment is automatically created. You don't create it manually.
 
-**Automatic Generation** - Master commitments are automatically created when term sheets are approved, and funding notices are automatically created when funding requests are approved.
+**Sub-Facilities for Multiple Lenders** - If multiple branch is selected, the facility agent can create sub-facilities to assign different lenders to different sub-facilities. No two sub-facilities can have the same lenders.
 
-**Individual Lender Tracking** - Each lender's participation is tracked individually, allowing for independent decisions. Lenders can approve or reject individual drawdowns based on their own criteria.
+**Deal Modelling Before Funding** - The facility agent must complete deal modelling before borrowers can raise funding requests.
 
-**Borrowing Capacity Management** - Facilities track borrowing capacity, utilization, and available capacity, ensuring borrowers stay within approved limits.
+**Only NFT-Minted Loans** - Only loans with minted NFTs can be mapped to master commitments for credit facility transactions.
 
-**Multiple Drawdowns Over Time** - You can create multiple funding requests over time as long as you stay within facility limits and available borrowing capacity.
+**E-Sign for Each Lender** - The facility agent e-signs the funding notice for each lender individually. Each lender can see the funding notice once their e-sign is completed.
 
+**Lender Confirms Fund Transfer** - After the lender transfers funds, they click Confirm and Settle to complete the process.

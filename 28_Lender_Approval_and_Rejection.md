@@ -1,143 +1,117 @@
 ---
-title: Lender Approval and Rejection
-description: Learn how lenders approve or reject funding notice drawdowns
+title: Lender Funding Notice Review
+description: Learn how lenders review funding notices and complete fund transfers
 ---
 
-# Lender Approval and Rejection
+# Lender Funding Notice Review
 
 ## Overview
 
-Lenders review funding notices and can approve or reject individual drawdowns. Each lender makes their own independent decision, and the system tracks individual lender participation separately.
+After funding notices become visible to lenders (once the facility agent has completed the e-sign for that specific lender), lenders review the drawdown details, select a payment method, transfer funds, and confirm settlement.
 
 ## Who Can Use This
 
-- Lenders who receive funding notices after Facility Agent e-signed the funding requests
+- **Lenders** who have funding notices visible in their Credit Facility section
 
 ## When This Is Used
 
-Use lender approval when:
-- Funding notice becomes visible after Facility Agent e-signed the funding requests
-- You need to review a drawdown request
-- You want to approve or reject participation in a drawdown
-- You need to make a decision on whether to fund your portion
+Use this process when:
+- A funding notice appears in your Credit Facility section
+- You need to review drawdown details
+- You want to complete fund transfer and settlement
+
+## Prerequisites
+
+Before you see a funding notice:
+1. Funding request has been approved by the facility agent
+2. Funding notice has been generated
+3. Facility agent has approved the funding notice
+4. Facility agent has e-signed for you
 
 ## Step-by-Step Process
 
-### Reviewing Funding Notice
+### Step 1: Access the Funding Notice
 
-1. **Access Funding Notice**
-   - Navigate to Credit Facility section
-   - View funding notices available for your review
-   - Open the notice you want to review
-   - Review complete drawdown information
+1. **Navigate to Credit Facility**
+   - Log in with your Lender credentials
+   - From the left expandable menu, click on **Credit Facility**
+   - Find the funding notice in your dashboard
 
-2. **Review Drawdown Details**
-   - **Total Drawdown Amount**: Check the total drawdown amount
-   - **Your Allocated Portion**: Review your allocated token portion
+2. **Click Review Funding Notice**
+   - In the Actions column, click **Review Funding Notice**
+   - A screen opens showing the funding notice details
+
+![Confirm and Settle - Lender](imagesByMdFilesFolder/ConfirmAndSettleInvestor.png)
+
+### Step 2: Review Drawdown Details
+
+1. **Review the Information**
+   - **Total Drawdown Amount**: Check the total amount being drawn
+   - **Your Allocated Portion**: Review your portion of the drawdown
    - **Purpose of Funds**: Understand what the funds will be used for
    - **Funding Date**: Check when funds are needed
-   - **Facility Details**: Review facility terms and conditions
-   - **Token Distribution**: Review how tokens are distributed to all lenders
 
-3. **Evaluate Drawdown**
-   - Assess borrowing base impact
-   - Review facility utilization after this drawdown
-   - Evaluate borrower's purpose and justification
-   - Consider your risk and exposure
-   - Review your allocated token amount
+2. **Verify Your Allocation**
+   - Confirm your allocated amount is correct
+   - Verify it matches your participation in the facility
 
-4. **Review Supporting Information**
-   - Check any supporting documentation provided
-   - Review borrower's financial information if available
-   - Assess collateral if applicable
-   - Evaluate overall facility health
+### Step 3: Select Payment Method
 
-### Making Decision - Approve
+1. **Choose Payment Method**
+   - Review available payment methods
+   - Select your preferred payment method
+   - Ensure you have the necessary account information
 
-1. **Evaluate Approval Criteria**
-   - Drawdown meets facility rules
-   - Sufficient borrowing capacity available
-   - Your risk tolerance allows participation
-   - Drawdown aligns with your investment criteria
+### Step 4: Transfer Funds
 
-2. **Approve Drawdown**
-   - Click the "Approve & Next" button
-   - Review next sections
-   - At Final confirm your approval decision
+1. **Complete the Transfer**
+   - Transfer the funds according to your allocated amount
+   - Use the designated accounts and references
+   - Ensure transfer is completed successfully
 
-![Lender Approval - Funding Notice](imagesByMdFilesFolder/28/LenderApprovalFundingNotice.png)
+### Step 5: Confirm and Settle
 
-3. **After Approval**
-   - Your approval status is updated
-   - Your participation is confirmed
-   - You can proceed with fund transfer
-   - Your portion of the drawdown is committed
-   - You can transfer funds when ready
+1. **Click Confirm and Settle**
+   - After completing the fund transfer, click **Confirm and Settle**
+   - This confirms that you have transferred the funds
 
-### Making Decision - Reject
+2. **Settlement Complete**
+   - Tokens are transferred
+   - The borrower receives the funds
+   - Your participation in this drawdown is recorded
 
-1. **Evaluate Rejection Reasons**
-   - Drawdown doesn't meet your criteria
-   - Risk concerns
-   - Facility utilization concerns
+## What Lenders See
 
-2. **Reject Drawdown**
-   - Click the "Reject" button
-   - Enter any comments explaining your decision
-   - Confirm your rejection
-   - Your rejection is recorded
+### In Credit Facility Section
+- Approved facilities where you're a participant
+- Funding notices (after FA e-signs complete)
+- Actions: Review Funding Notice
 
-3. **After Rejection**
-   - Your rejection status is updated
-   - Your participation is declined
-   - You will not fund your portion
-   - Other lenders make independent decisions
-   - Borrower can see which lenders approved or rejected
-   - Your rejection doesn't affect other lenders
-
-### Tracking Decisions
-
-1. **View Your Decision Status**
-   - See your approval status (Pending/Approved/Rejected)
-   - Review when you made your decision
-   - Check any comments you provided
-   - Verify your decision is recorded
-
-2. **Monitor Other Lenders**
-   - See which other lenders have approved
-   - View which lenders have rejected
-   - See which lenders are pending
-   - Track overall lender participation
+### Funding Notice Details
+- Drawdown amount and date
+- Your allocated portion
+- Purpose of funds
+- Payment method options
 
 ## Rules & Validations
 
-- Each lender makes independent decision. Your decision doesn't affect other lenders' choices.
+- **Visibility After E-Sign**: You see funding notices once the facility agent has completed e-signing for you specifically.
 
-- Your decision doesn't affect other lenders. Other lenders can approve or reject independently.
+- **Your Allocation Only**: You see only your portion of the drawdown.
 
-- You can approve or reject based on your evaluation. Make decisions based on your own criteria and risk tolerance.
+- **Confirm After Transfer**: Only click Confirm and Settle after you have actually transferred the funds.
 
-- Approved lenders can proceed with fund transfer. If you approve, you can transfer your portion of funds.
-
-- Rejected lenders don't participate in that drawdown. If you reject, you won't fund your portion, but other lenders can still participate.
-
-- Decisions are final once submitted. You cannot easily change your decision after submitting.
-
-- Individual tracking. Each lender's decision is tracked separately with approval status.
-
-- Borrower visibility. Borrowers can see which lenders approved and which rejected.
+- **Individual Tracking**: Your confirmation is tracked individually. Other lenders confirm separately.
 
 ## What Happens Next
 
-After making your decision:
-- **If Approved**: You can proceed with fund transfer, transfer your allocated portion to the borrower, confirm the transfer, and your participation is complete.
+**After Confirming Settlement:**
+- Tokens are transferred to the borrower
+- The borrower receives the funds
+- Your participation is recorded
+- The drawdown is complete for your portion
 
-- **If Rejected**: You don't participate in this drawdown, other lenders make their own decisions independently, borrower can see your rejection, and you can participate in future drawdowns.
-
-After all lenders decide:
-- Approved lenders transfer funds and confirm transfers
-- Borrower receives funds from approved lenders
-- Drawdown process completes as transfers are confirmed
-- Borrower can track which lenders participated
-
-Understanding lender approval and rejection helps you make informed decisions on drawdowns, participate effectively in credit facilities, and manage your participation based on your own evaluation criteria and risk tolerance.
+**Ongoing:**
+- The borrower may create additional funding requests
+- New funding notices appear as they are processed
+- The process repeats for each drawdown

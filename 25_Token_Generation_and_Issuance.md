@@ -7,58 +7,89 @@ description: Understand how tokens are generated and distributed for funding not
 
 ## Overview
 
-Token generation and issuance is the complete workflow for creating and distributing tokens that represent drawdown amounts in funding notices. These tokens serve as digital representations of the drawdown that enable tracking, distribution, and management of funds across multiple lenders.
+Token generation and issuance is the workflow for creating and distributing tokens that represent drawdown amounts in funding notices. After a funding request is approved, the facility agent processes the funding notice by approving it, e-signing for each lender, and then lenders can see the notice and complete fund transfers.
 
 ## Workflow Overview
 
-The token generation and issuance workflow begins when a funding request is approved and a funding notice is automatically created. Facility agents generate tokens representing the drawdown amount, configure distribution to lenders based on their participation percentages, and sign funding notices.
+The token generation and issuance workflow begins when a funding request is approved and a funding notice is automatically created. The facility agent approves the funding notice, then e-signs for each lender individually. As each lender's e-sign is completed, that lender can see the funding notice and proceed to transfer funds and confirm settlement.
 
 ## Key Stages
 
-**Stage 1: Funding Notice Creation** - When a funding request is approved, a funding notice is automatically created with PENDING_TOKEN_GENERATION status. The notice contains all information from the approved request and is ready for token generation.
+**Stage 1: Funding Notice Creation**
 
-**Stage 2: Token Distribution Configuration and Token Generation** - Facility agents configure token distribution with lender allocations based on their participation percentages. Tokens are created for the borrower representing the drawdown amount. The system also updates borrowing base and available capacity calculations. Status changes to show tokens are generated.
+When a funding request is approved, a funding notice is automatically created with **Pending Token Generated** status. The notice contains all information from the approved request.
 
-![FA - Funding Notice Save - Token Generation](imagesByMdFilesFolder/25/FA_FundingNotice_Save_TokenGeneration.png)
+**Stage 2: Facility Agent Approval**
 
-**Stage 3: Per-Lender E-Signature** - Facility agents sign funding notices for each lender individually after tokens are created. Each lender's signature status is tracked separately. Status remains as tokens generated during this process.
+The facility agent reviews the funding notice and clicks **Approve**. This prepares the notice for the e-signature process.
+
+**Stage 3: Facility Agent E-Sign for Each Lender**
+
+The facility agent signs the funding notice for each lender individually using Adobe Sign. The progress shows as **E-sign (0/n)** where n is the number of lenders.
+
+Each time the facility agent signs for a lender:
+- The count updates (1/n, 2/n, etc.)
+- That lender's e-signature status changes to completed
+- That lender can now see the funding notice
+- Continue until all lenders are signed (n/n)
 
 ![Funding Notice Details - FA](imagesByMdFilesFolder/25/FundingNoticeDetailsFA.png)
 
-**Stage 5: Lender Visibility** - Funding notices become visible to lenders. Lenders can see their allocated token portions and review drawdown details. This enables lender review and decision-making.
+**Stage 4: Lender Visibility**
 
-**Stage 6: Lender Review and Approval** - Lenders review funding notices and approve or reject their participation. Each lender makes independent decisions, and participation is tracked individually. Lenders can see their allocated portion and make decisions accordingly.
+As each lender's e-sign is completed, that lender can see the funding notice in their Credit Facility section.
 
-![Lender Approval - Funding Notice](imagesByMdFilesFolder/25/LenderApprovalFundingNotice.png)
+**Stage 5: Lender Review and Fund Transfer**
 
-**Stage 7: Fund Transfer Confirmation** - After approving, lenders transfer funds and confirm transfers. Each lender confirms their transfer independently, completing their participation in the drawdown. The system tracks individual lender confirmations.
+Lenders review the funding notice, see their allocated portion, select a payment method, and transfer funds. After transferring, they click **Confirm and Settle**.
 
-![Fund Transfer Confirmation](imagesByMdFilesFolder/25/FundTransferConfirmation.png)
+![Confirm and Settle - Lender](imagesByMdFilesFolder/ConfirmAndSettleInvestor.png)
+
+**Stage 6: Process Completion**
+
+After lenders confirm settlement, tokens are transferred and the borrower receives the funds. Each lender's confirmation is tracked individually.
 
 ## How the Workflow Progresses
 
-**From Approval to Token Generation** - The workflow starts automatically when funding requests are approved. Facility agents initiate token generation, creating tokens for borrowers and configuring distribution. This stage transforms approved requests into tokenized drawdowns ready for distribution.
+**From Approval to E-Sign**
 
-**From Token Generation** - After tokens are generated and distributed, facility agents sign funding notices for each lender. Once all signatures are complete, the funding notice are visible to lenders, they can decide the approval.
+1. Funding request is approved
+2. Funding notice is auto-generated (Pending Token Generated)
+3. Facility agent clicks Approve
+4. Facility agent e-signs for each lender (0/n → n/n)
 
-**From Lender Review to Fund Transfer** - After lenders review and approve, they transfer funds and confirm transfers. Each lender completes their participation independently, and the system tracks all confirmations. Once all lenders confirm, the drawdown process is complete.
+**From E-Sign to Lender Visibility**
 
-**Status Progression** - The workflow progresses through statuses: Pending token generation (when funding notice is created) → Tokens generated (after tokens are created) → Tokens approved (after borrower approves token transfer). During per-lender e-signature, status remains as tokens generated. Each status represents a specific stage and determines what actions are available. Understanding status helps you know where you are in the process.
+1. Each lender can see the funding notice once their e-sign is complete
+2. Lenders navigate to Credit Facility section
+3. Action shows Review Funding Notice
 
-**Individual Lender Tracking** - Throughout the workflow, each lender's participation is tracked individually. Token allocations, signature status, approval decisions, and transfer confirmations are all tracked separately, enabling flexible participation and independent decisions.
+**From Lender Review to Completion**
+
+1. Lenders review the funding notice
+2. Lenders select payment method
+3. Lenders transfer funds
+4. Lenders click Confirm and Settle
+5. Tokens transferred to borrower
+6. Drawdown complete
+
+## Individual Lender Tracking
+
+Throughout the workflow, each lender's participation is tracked individually:
+- E-signature status (completed by FA)
+- Fund transfer confirmation status
+- Individual allocation amounts
 
 ## Important Points to Know
 
-**Automatic Notice Creation** - Funding notices are automatically created when funding requests are approved. The system creates them with pre-populated request data.
+**Automatic Notice Creation** - Funding notices are automatically created when funding requests are approved.
 
-**Token Generation Required** - Facility agents must generate tokens before borrowers can approve transfers. Tokens are created when facility agents configure token distribution, not during e-signature completion. Tokens represent drawdown amounts digitally and enable tracking and distribution to lenders.
+**FA Approves First** - The facility agent clicks Approve on the funding notice before e-signing.
 
-**Distribution Based on Participation** - Token distribution is calculated automatically based on lender participation percentages in the facility. Each lender receives their allocated portion.
+**E-Sign Per Lender** - The facility agent signs for each lender individually using Adobe Sign.
 
-**Per-Lender E-Signature** - Facility agents sign funding notices for each lender individually, with each lender's signature status tracked separately.
+**Visibility After E-Sign** - Each lender sees the funding notice once the facility agent has completed their e-sign.
 
-**Individual Lender Decisions** - Each lender makes independent decisions about participation. Lenders can approve or reject based on their own criteria, and decisions are tracked separately.
+**Confirm and Settle** - Lenders transfer funds and click Confirm and Settle to complete the process.
 
-**Complete Documentation** - All token generation, distribution, approvals, and transfers are documented with complete audit trails.
-
-**Status Tracks Progress** - Funding notice status shows where each notice is in the workflow, from token generation through borrower approval to lender review and fund transfer.
+**Individual Tracking** - Each lender's participation and confirmation is tracked separately.

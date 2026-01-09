@@ -1,84 +1,83 @@
 ---
 title: Funding Notices Overview
-description: Learn what funding notices are and how they work
+description: Learn what funding notices are and how they work in credit facilities
 ---
 
 # Funding Notices Overview
 
 ## Overview
 
-A funding notice is the official documentation for each drawdown from a credit facility. It's automatically generated when a funding request is approved by the facility agent and contains all the details needed for the drawdown, including token distribution to lenders, drawdown amounts, and fund transfer instructions. Funding notices serve as the bridge between approved funding requests and actual fund disbursement.
+Funding notices are official documents generated when funding requests are approved. They document each drawdown from a credit facility, including the amount, allocation to lenders, and coordination of fund transfer. The funding notice workflow ensures proper e-signing by the facility agent and fund transfer by lenders.
 
 ## What Funding Notices Are
 
-A funding notice is the formal document that represents an approved drawdown from a credit facility. Think of it as the official paperwork for withdrawing funds—it documents the approved amount, how it will be distributed to lenders, and provides instructions for fund transfer. Funding notices are automatically created when facility agents approve funding requests, so you don't need to create them manually.
+A funding notice is the formal documentation of an approved drawdown from a credit facility. When a borrower's funding request is approved by the facility agent, the system automatically generates a funding notice. This notice tracks the e-signature process and fund transfer from lenders.
 
-Funding notices contain all the information needed to complete the drawdown process. They include the approved amount, purpose, funding date, token distribution to lenders, and other details. Once created, funding notices go through token generation, lender review, and fund transfer confirmation before funds are disbursed.
+Funding notices contain:
+- Drawdown amount and date
+- Allocation to each lender
+- E-signature status for each lender
+- Fund transfer confirmation status
 
 ## Purpose and Use Cases
 
-Funding notices serve several important purposes:
+**For Documenting Drawdowns** - Funding notices create a formal record of each drawdown from the facility, documenting amounts, dates, and participating lenders.
 
-**For Drawdown Documentation** - Funding notices provide complete documentation of approved drawdowns, ensuring all parties have proper records. They serve as official documentation for audit and compliance purposes.
+**For Coordinating Fund Transfer** - The funding notice workflow coordinates the steps required to transfer funds from lenders to the borrower.
 
-**For Token Distribution** - Funding notices facilitate token generation and distribution to lenders. Tokens represent drawdown amounts and enable tracking of lender participation and fund transfers.
+**For E-Signature Tracking** - Funding notices track the facility agent's e-signature for each lender individually.
 
-**For Lender Coordination** - Funding notices coordinate lender participation by showing each lender their allocated portion and enabling individual lender decisions. Each lender can approve or reject their participation independently.
-
-**For Fund Transfer Process** - Funding notices provide instructions and documentation for the fund transfer process. They enable lenders to understand their obligations and confirm transfers.
-
-**For Process Tracking** - Funding notices track the complete drawdown process from approval through fund disbursement. Status shows where each notice is in the process and what needs to happen next.
-
-## Key Components
-
-**Approved Drawdown Details** - Information from the approved funding request, including request amount, purpose, funding date, and facility details. This information is pre-populated from the approved request.
-
-**Token Distribution** - Configuration of how tokens are distributed to lenders based on their participation percentages in the facility. Each lender receives their allocated portion, clearly showing their contribution amount.
-
-**Token Status** - Status of token generation and distribution, such as PENDING_TOKEN_GENERATION, TOKEN_GENERATED, or TOKEN_APPROVED. Status tracks where tokens are in the generation and approval process.
-
-**Per-Lender E-Signature Status** - Individual tracking of facility agent's e-signature status for each lender. Facility agents sign funding notices for each lender individually, with each lender's signature status tracked separately.
-
-**Lender Approval Status** - Individual tracking of each lender's approval or rejection decision. Each lender can approve or reject their participation independently, and decisions are tracked separately.
-
-**Fund Transfer Confirmation** - Tracking of lender fund transfer confirmations. Lenders confirm when they've transferred funds, completing their participation in the drawdown.
+**For Tracking Lender Participation** - Each lender's portion and fund transfer confirmation status are tracked individually.
 
 ## How Funding Notices Work
 
-**Automatic Creation** - Funding notices are automatically created when funding requests are approved. The system takes information from the approved funding request and master commitment, calculates token distribution to lenders based on their participation percentages, and creates the funding notice ready for token generation.
+**1. Auto-Generation**
 
-**Token Generation** - Facility agents generate tokens for the drawdown and configure distribution to lenders. Tokens represent the drawdown amount and are allocated to lenders based on their participation percentages in the facility. The system updates borrowing base and available capacity calculations. Status changes to show tokens are generated.
+When a funding request is approved by the facility agent, the system automatically generates a funding notice with status **Pending Token Generated**.
 
-![FA - Funding Notice Save - Token Generation](imagesByMdFilesFolder/24/FA_FundingNotice_Save_TokenGeneration.png)
+**2. Facility Agent Approval**
 
-**Per-Lender E-Signature** - Facility agents sign funding notices for each lender individually. Each lender's signature status is tracked separately, and the system tracks overall completion. Status remains TOKEN_GENERATED during this process.
+The facility agent clicks **Approve** on the funding notice.
 
-**Funding Notice Details** - After approval, you can view complete funding notice details including token distribution, lender allocations, and fund transfer instructions. This provides complete visibility into the drawdown process.
+**3. Facility Agent E-Sign for Each Lender**
+
+In the facility agent's Credit Facility section (Active Facilities tab), the funding notice shows **E-sign (0/n)** where n is the number of lenders.
+
+The facility agent clicks E-sign and signs the document for each lender individually using Adobe Sign. Each time the facility agent signs, the count updates (1/n, 2/n, etc.).
 
 ![Funding Notice Details - FA](imagesByMdFilesFolder/24/FundingNoticeDetailsFA.png)
 
-**Lender Review and Approval** - Lenders review funding notices and approve or reject their participation. Each lender makes independent decisions, and participation is tracked individually. Lenders can see their allocated portion and make decisions accordingly.
+**4. Lender Visibility**
 
-![Lender Approval - Funding Notice](imagesByMdFilesFolder/24/LenderApprovalFundingNotice.png)
+As the facility agent completes each lender's e-sign, that lender can see the funding notice in their Credit Facility section.
 
-**Fund Transfer Confirmation** - After approving, lenders transfer funds and confirm transfers. Each lender confirms their transfer independently, completing their participation in the drawdown. The system tracks individual lender confirmations.
+**5. Lender Fund Transfer**
 
-**Process Completion** - Once lenders confirm transfers, the drawdown process is complete. Funds have been disbursed, and the drawdown is documented with complete audit trails.
+Lenders go to their Credit Facility section and see **Review Funding Notice**. They review the notice, select a payment method, transfer funds, and click **Confirm and Settle**.
 
-![Process Completion](imagesByMdFilesFolder/24/ProcessCompletion.png)
+![Confirm and Settle - Lender](imagesByMdFilesFolder/ConfirmAndSettleInvestor.png)
+
+**6. Process Completion**
+
+After lenders confirm settlement, tokens are transferred and the borrower receives the funds. Each lender's confirmation is tracked individually.
+
+## Individual Lender Tracking
+
+Each lender in the funding notice has individual tracking:
+
+| Field | Description |
+|-------|-------------|
+| E-signature Status | Whether FA has signed for this lender |
+| Fund Transfer Status | Whether lender has confirmed transfer |
 
 ## Important Points to Know
 
-**Automatic Creation** - Funding notices are automatically created when funding requests are approved. You don't need to create them manually—the system creates them with pre-populated request data, ensuring consistency and completeness.
+**Auto-Generated** - Funding notices are automatically created when funding requests are approved. You cannot create them manually.
 
-**Token Generation Required** - Facility agents must generate tokens and configure distribution before borrowers can approve transfers. Tokens represent drawdown amounts and enable tracking and distribution to lenders.
+**FA Signs Per Lender** - The facility agent must e-sign for each lender individually. The E-sign (0/n) counter shows progress.
 
-**Individual Lender Tracking** - Each lender's participation is tracked individually, allowing for independent decisions and flexible participation. Lenders can approve or reject based on their own criteria.
+**Lender Visibility After E-Sign** - Each lender sees the funding notice once the facility agent has completed the e-sign for that specific lender.
 
-**Per-Lender E-Signature** - Facility agents sign funding notices for each lender individually, with each lender's signature status tracked separately. This ensures proper documentation for each lender's participation.
+**Individual Tracking** - Each lender's participation is tracked separately. Lenders confirm their own fund transfers independently.
 
-**Complete Documentation** - Funding notices serve as complete documentation of drawdowns, ensuring all parties have proper records. All actions, approvals, and transfers are documented with complete audit trails.
-
-**Status Tracks Process** - Funding notice status shows where each notice is in the drawdown process, from creation through token generation, lender review, and fund transfer. Understanding status helps you track progress.
-
-Understanding funding notices helps you appreciate how approved funding requests become documented drawdowns, know what happens during token generation and distribution, understand when notices become visible to lenders, track the drawdown process through to fund disbursement, and understand how individual lender participation is coordinated and tracked.
+**Confirm and Settle** - After transferring funds, lenders click Confirm and Settle to complete the process.

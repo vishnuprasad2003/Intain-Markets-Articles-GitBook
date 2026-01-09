@@ -7,161 +7,118 @@ description: Learn how to respond to change requests on term sheets
 
 ## Overview
 
-When a facility agent reviews a term sheet and needs modifications, they can request changes. This allows borrowers to update the term sheet and resubmit it for review, creating an iterative improvement process that helps refine proposals before approval. Understanding change requests helps you effectively respond to facility agent feedback and improve your term sheets.
+When a facility agent reviews a term sheet, they may request changes before approving it. This guide explains how borrowers respond to change requests by editing, re-signing, and resubmitting their term sheets.
 
 ## Who Can Use This
 
-- Borrowers who receive change requests and need to update their term sheets
-- Facility Agents who request changes to improve term sheet quality
+- **Borrowers**: Edit and resubmit term sheets when changes are requested
 
 ## When This Is Used
 
-Use change requests when:
-- Facility agent needs modifications to your term sheet before approval
-- You need to update information based on facility agent feedback
-- You want to improve your proposal through iterative refinement
-- Facility agent identifies issues that need to be addressed
-- Terms need adjustment to meet requirements or improve feasibility
+Use this process when:
+- Your term sheet status shows **CHANGES_REQUESTED**
+- The facility agent has requested modifications to your term sheet
+- You need to update and resubmit your term sheet
 
 ## Step-by-Step Process
 
-### Receiving a Change Request
+### Step 1: Review the Change Request
 
-1. **Receive Notification**
-   - You receive notification that a change request has been made
-   - Term sheet status changes to "CHANGES_REQUESTED"
-   - You can now edit the term sheet to make requested changes
-   - Notification includes details about what needs to change
-   - You can view the change request details
-   - You will need to re-sign the term sheet after making changes
+1. **Check Dashboard**
+   - Navigate to Credit Facility section
+   - Find your term sheet with status **CHANGES_REQUESTED**
+   - The Action column shows **Edit Term Sheet**
 
-2. **Review Change Request Details**
-   - Navigate to your term sheet
-   - Read change request details carefully
-   - Understand what specific modifications are needed
+2. **Understand What Needs to Change**
+   - Review the change request details provided by the facility agent
+   - Note what specific changes are requested
+   - Understand the reasoning if provided
 
 ![Review Changes Requested - Issuer](imagesByMdFilesFolder/17/ReviewChangesRequestedIssuer.png)
 
-3. **Understand Requirements**
-   - Identify all requested changes
-   - Clarify any unclear items (contact facility agent if needed)
-   - Determine what fields need updating
-   - Identify what documents need updating (if any)
-   - Prioritize changes if multiple items are requested
+### Step 2: Edit the Term Sheet
 
-### Making Changes
+1. **Click Edit Term Sheet**
+   - Click the **Edit Term Sheet** action
+   - The term sheet opens for editing
 
-1. **Access Term Sheet for Editing**
-   - Navigate to your term sheet
-   - Status shows "CHANGES_REQUESTED" which allows editing
-   - Click to edit the term sheet
-   - Editing interface opens
+2. **Make Requested Changes**
+   - Update the fields as requested by the facility agent
+   - Modify financial terms if needed (amount, rate, etc.)
+   - Upload new or revised documents if required
+   - Address all requested changes
 
-2. **Make Requested Modifications**
-   - Adjust requested commitment amount if needed
-   - Modify interest rate or rate structure if requested
-   - Update repayment terms if changes are needed
-   - Modify any other fields that need changes
+### Step 3: Update and Re-sign
 
-3. **Update Documents if Required**
-   - Replace or update supporting documents if requested
-   - Upload new documents if additional documentation is needed
-   - Ensure documents meet quality and format requirements
-   - Verify all required documents are still included
+1. **Click Update**
+   - After making all changes, click **Update**
+   - An Adobe Sign popup window opens automatically
 
-4. **Review Your Changes**
-   - Verify all requested changes are addressed
-   - Check that information is accurate and complete
-   - Ensure documents are current and correct
-   - Review terms to ensure they're still reasonable
-   - Make sure nothing was accidentally removed or changed incorrectly
-   - Complete all changes before proceeding
-
-5. **Update Changes**
-   - Click "Update" button in the changes popup
-   - Ensure all requested changes are complete before clicking Update
-   - You must complete all changes before proceeding to e-sign
-
-### Re-signing After Changes
-
-1. **E-Sign Popup Appears**
-   - After clicking "Update", issuer e-sign popup appears
-   - You must re-sign the term sheet after making changes
-   - Review the updated document you're signing
+2. **Complete E-Signature**
+   - Review the updated term sheet document
    - Complete the electronic signature process
-   - Verify signature is complete and correct
+   - Status changes to **BorrowerSigned**
 
-2. **Verify Signed Version**
-   - Review the signed version
-   - Ensure all changes are reflected correctly
-   - Verify signature is legally binding
-   - Confirm everything is accurate
+### Step 4: Resubmit to Facility Agent
 
-### Submitting After Changes
+1. **Submit Term Sheet Popup Appears**
+   - After signing, the **Submit to FA** popup appears
+   - Review the submission details
 
-1. **Submit Term Sheet Popup**
-   - After completing e-sign, "Submit Term Sheet" popup appears
-   - Review submission details
-   - Click "Submit" button
-   - Status changes from CHANGES_REQUESTED to FAReview
+2. **Click Submit**
+   - Click **Submit** to resubmit the updated term sheet
+   - Status changes from **BorrowerSigned** to **FAReview**
    - Facility agent receives notification
-   - Action displayed in dashboard: "Submit Term Sheet"
 
 ![Submit Term Sheet to FA](imagesByMdFilesFolder/17/SubmitTermSheetToFA.png)
 
-2. **Wait for Review Again**
-   - Facility agent reviews your updated term sheet
-   - Facility agent clicks "Review Term Sheet" action button
-   - Review Term Sheet popup appears with Approve, Reject, and Request Changes buttons
-   - Review typically takes a few days
-   - You receive notifications about status changes
-   - You can monitor review progress
+### Step 5: Await Review
 
-![Review Term Sheet - FA](imagesByMdFilesFolder/17/review_term_sheet_FA.png)
+1. **Monitor Status**
+   - The facility agent reviews your updated term sheet
+   - Possible outcomes:
+     - **Approved**: Status changes to Accepted, master commitment created
+     - **Rejected**: Status changes to Rejected (create new term sheet)
+     - **Changes Requested Again**: Repeat the process
 
-3. **Handle Subsequent Decisions**
-   - **If Approved**: Term sheet is approved, master commitment is automatically created
-   - **If Rejected**: Term sheet is rejected, you must create a new one
-   - **If More Changes Requested**: Process repeats - you make changes, click Update, re-sign, and submit again
+## Change Request Flow
+
+```
+CHANGES_REQUESTED → Edit Term Sheet → Update → Sign (Adobe Sign) → Submit → FAReview
+```
+
+The facility agent may:
+- Approve → Accepted → Master commitment created
+- Reject → Rejected (final)
+- Request more changes → CHANGES_REQUESTED (repeat process)
 
 ## Rules & Validations
 
-- You can only edit term sheets when status is "CHANGES_REQUESTED". Once submitted, editing is restricted until another change request is made.
+- **Only CHANGES_REQUESTED Can Edit**: You can only edit term sheets when they're in CHANGES_REQUESTED status.
 
-- Status remains "CHANGES_REQUESTED" while you work on changes. It changes to FAReview when you submit.
+- **Re-signing Required**: Every time you update a term sheet, you must sign it again via Adobe Sign.
 
-- You must address all requested changes before clicking Update. Complete all changes before proceeding to e-sign.
+- **Submit After Signing**: You must submit the term sheet after signing for the facility agent to review.
 
-- Re-signing is required after making changes. You must complete electronic signature again after updating the term sheet.
+- **Multiple Rounds Possible**: The facility agent may request changes multiple times before approving.
 
-- You can go through multiple rounds of changes. The process can repeat until approved or rejected.
-
-- Change requests are less severe than rejection. You can update and resubmit without creating a new term sheet.
-
-- Facility agents can request changes multiple times. You may go through several rounds of refinement.
-
-- Status controls what actions are available. You can only edit and resubmit when status allows it.
+- **Address All Changes**: Make sure to address all requested changes before resubmitting.
 
 ## What Happens Next
 
-After receiving a change request:
-- You can edit the term sheet to make requested changes
-- Complete all requested changes
-- Click "Update" button, which triggers e-sign popup
-- Complete electronic signature again
-- Submit Term Sheet popup appears with Submit button
-- Click Submit to resubmit for facility agent review
-- Status changes from CHANGES_REQUESTED to FAReview
-- Facility agent reviews again and can approve, reject, or request more changes
-- Process can repeat until approved or rejected
-
-After submitting:
+**After Resubmitting:**
 - Facility agent reviews your updated term sheet
-- Facility agent clicks "Review Term Sheet" action button
-- Review Term Sheet popup shows with Approve, Reject, and Request Changes buttons
-- Facility agent makes a new decision
-- If approved, master commitment is automatically created
-- If rejected, you must create a new term sheet
-- If more changes are requested, the process repeats
+- You receive notification of the decision
 
-Understanding term sheet change requests helps you effectively respond to facility agent feedback, refine your proposals through iterative improvement, and successfully move from change requests to approval.
+**If Approved:**
+- Status changes to Accepted
+- Master commitment is automatically created
+- Facility configuration proceeds
+
+**If Rejected:**
+- Status changes to Rejected (final state)
+- You need to create a new term sheet
+
+**If More Changes Requested:**
+- Status changes back to CHANGES_REQUESTED
+- Repeat the edit, sign, and submit process

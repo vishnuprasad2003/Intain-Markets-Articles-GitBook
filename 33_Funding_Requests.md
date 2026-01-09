@@ -1,165 +1,146 @@
 ---
 title: Funding Requests
-description: Learn how to create, manage, and submit funding requests against active credit facilities
+description: Learn how borrowers create and submit funding requests for credit facilities
 ---
 
 # Funding Requests
 
 ## Overview
 
-This guide covers how borrowers create, manage, and submit funding requests against active credit facilities. Learn how to request drawdowns, provide supporting documentation, track request status, and handle outcomes.
+Funding requests are how borrowers draw down funds from active credit facilities. After a master commitment is active and deal modelling is complete, borrowers can create funding requests specifying the amount they want to draw, the funding date, purpose, and supporting documentation. The facility agent reviews each request before funds can be disbursed.
 
 ## Who Can Use This
 
-- Borrowers who need to draw down funds from active credit facilities
+- **Borrowers**: Create and submit funding requests for their active facilities
 
 ## When This Is Used
 
 Use funding requests when:
-- You have an active credit facility approved by lenders
-- You need to borrow funds for specific purposes
-- You want to draw down a portion of your approved facility limit
-- You need funds for business operations or other purposes
-- You want to access your pre-approved borrowing capacity
+- Your master commitment is Active
+- Deal modelling has been completed by the facility agent
+- You need to draw down funds from your credit facility
+- You want to request a specific amount from your available capacity
+
+## Prerequisites
+
+Before creating a funding request:
+
+1. **Active Master Commitment**: The master commitment must be in **Active** status (at least one lender has approved)
+
+2. **Deal Modelling Complete**: The facility agent must have completed deal modelling (Facility Setup Status: Completed)
+
+3. **Loans Mapped (if required)**: You may need to map NFT-minted loans to the facility first
+
+4. **Available Capacity**: You must have available borrowing capacity within your facility limits
 
 ## Step-by-Step Process
 
-### Creating Funding Requests
+### Step 1: Access the Master Commitment
 
-1. **Access Funding Request Creation**
-   - Navigate to the credit facility section
-   - Click on Funding Requests button for the facility you need to raise funding
-   - If you have a draft request, it opens with the existing funding request without creating new one
-   - If no draft exists, a new draft is created
-   - Funding request form opens ready for you to enter details
+1. **Navigate to Credit Facility**
+   - Log in to the platform with your Borrower credentials
+   - From the left expandable menu, click on **Credit Facility**
+   - Locate your active master commitment
+
+2. **Verify Prerequisites**
+   - Confirm the master commitment shows **Active** status
+   - Check that **Funding Request** button is enabled (indicates deal modelling is complete)
+
+### Step 2: Map Loans (If Required)
+
+Before creating a funding request, you may need to map loans:
+
+1. **Click Map Loans**
+   - In the Actions column, click **Map Loans**
+   - A screen shows currently mapped loans and totals
+
+2. **Add Loans to Facility**
+   - Click **Add Loans to Facility**
+   - A popup shows available loans
+   - Only loans with **minted NFTs** have enabled checkboxes
+   - Select the loans you want to map
+   - Click **Next**, then click **Map**
+   - Error appears if a loan is already mapped to a different facility
+
+### Step 3: Create Funding Request
+
+1. **Click Funding Request**
+   - Click the **Funding Request** button
+   - A popup opens for entering request details
 
 ![Funding Request Creation - Issuer](imagesByMdFilesFolder/33/FundingRequest_Creation_Issuer.png)
 
 2. **Enter Request Details**
-   - **Draw Amount**: Specify the amount you want to borrow (must be within available borrowing capacity)
-   - **Purpose of Funds**: Enter detailed description of what funds will be used for
-   - **Funding Date**: Select when you need the funds
-   - **Currency**: Select currency (defaults to USD if not specified)
-   - **Notes**: Add any additional notes or comments
+   - **Draw Amount**: Enter the amount you want to draw
+   - **Funding Date**: Select the date you need the funds
+   - **Purpose of Funds**: Describe what the funds will be used for
+   - **Draw Currency**: Select the currency for the drawdown
+   - **Upload Collateral Addendum**: Upload supporting collateral documentation
 
-3. **Upload Supporting Documentation**
-   - **Collateral Addendum**: Upload collateral addendum document
-   - **Financial Statements**: Upload financial statements
-   - **KYC Documents**: Upload KYC documentation
-   - Documents are securely stored and tracked with complete history
+3. **Review the Request**
+   - Verify all entered information is correct
+   - Ensure the draw amount is within your available capacity
+   - Check that the funding date is appropriate
+   - Confirm the collateral addendum is uploaded
 
-4. **Add Collateral Information** (if applicable)
-   - Collateral information is included in the collateralAddendum document
-   - Specify loans or assets to be used as collateral
-   - Provide collateral details and descriptions
-   - Include collateral valuation if required
-   - Ensure collateral meets facility eligibility criteria
+### Step 4: Submit the Funding Request
 
-5. **Review Request Information**
-   - Review all entered information for accuracy
-   - Check purpose is clearly described
-   - Ensure documentation is complete
-   - Confirm all required fields are filled
+1. **Click Review**
+   - Click **Review** to create the funding request
+   - Status is **Draft**
 
-6. **Save or Submit**
-   - **Save as Draft**: Save to complete later if not ready to submit. Status remains Draft. You can save multiple times.
-   - **Submit Immediately**: Click "Submit" button. Request status changes to indicate it's under facility agent review. Facility agent receives notification. You receive confirmation.
-
-### Managing Funding Requests
-
-1. **View All Requests**
-   - Navigate to Credit Facility section
-   - See all your funding requests
-   - Filter by facility, status, or date if needed
-
-2. **Track Request Status**
-   - **Draft**: Can edit freely, not yet submitted
-   - **FAReview**: Under facility agent review, waiting for decision
-   - **APPROVED**: Approved by facility agent, funding notice created
-   - **REJECTED**: Rejected by facility agent, cannot resubmit
-   - **CHANGES_REQUESTED**: Facility agent requested modifications, can update and resubmit
-
-3. **Edit Draft Requests**
-   - Open draft request for editing
-   - Modify amount, purpose, date, or documents
-   - Update collateral information if needed
-   - Save changes
-   - Submit when ready
-
-4. **Respond to Change Requests**
-   - Review change request details
-   - Understand what modifications are needed
-   - Update request with requested changes
-   - Address all requested items
-   - Submit again to FA for Review
-   - Request status changes to indicate it's under review again
+2. **Click Submit**
+   - Click **Submit** to send the request to the facility agent
+   - Status changes to **FAReview**
    - Facility agent receives notification
 
-5. **View Request Details**
-   - Open individual request details
-   - Review complete request information
-   - Check facility agent comments or reasons
-   - View attached documents
+### Step 5: Wait for Facility Agent Review
 
-### Handling Request Outcomes
+1. **Monitor Status**
+   - Track your funding request status in the Credit Facility dashboard
+   - Possible outcomes:
+     - **Approved**: Funding notice is generated
+     - **Rejected**: Request is declined (you can create a new request)
+     - **Changes Requested**: You need to modify and resubmit
 
-1. **If Approved**
-   - Funding notice is automatically created
-   - You receive notification of approval
-   - Monitor funding notice progress
-   - Track lender approvals and fund transfers
+2. **Respond to Change Requests (If Any)**
+   - If status is **CHANGES_REQUESTED**, edit the request
+   - Address the requested changes
+   - Resubmit for review
 
-2. **If Rejected**
-   - Review rejection reason carefully
-   - Understand why request was rejected
-   - Address issues if possible
-   - Create new funding request with corrections
-   - Adjust amount if capacity was the issue
+## Funding Request Statuses
 
-3. **If Changes Requested**
-   - Review requested changes
-   - Update funding request accordingly
-   - Address all requested modifications
-   - Resubmit for facility agent review
-   - Process can repeat until approved or rejected
+| Status | Meaning | Available Actions |
+|--------|---------|-------------------|
+| DRAFT | Created but not submitted | Edit, Submit |
+| FAReview | Submitted, awaiting FA decision | View only |
+| APPROVED | Approved, funding notice generated | View, proceed to token approval |
+| REJECTED | Rejected by FA (final) | View only, create new request |
+| CHANGES_REQUESTED | FA requested modifications | Edit, resubmit |
 
 ## Rules & Validations
 
-- You can only create requests against active facilities - facilities must be approved by lenders and in ACTIVE status.
+- **Active Facility Required**: You can only create funding requests for master commitments with Active status.
 
-- Facility must have available borrowing capacity - you can only request amounts up to your available capacity, which may be less than your total facility limit.
+- **Deal Modelling Must Be Complete**: The facility agent must complete deal modelling before you can create funding requests.
 
-- You can have only one draft request per facility at a time - you must submit or delete draft requests before creating new ones.
+- **Only NFT-Minted Loans**: Only loans with minted NFTs can be mapped to the facility.
 
-- Approved requests automatically generate funding notices - you don't need to create notices manually.
+- **Within Capacity**: Draw amount must be within your available borrowing capacity.
 
-- Rejected requests cannot be resubmitted - if rejected, you must create a new request addressing the issues.
+- **One at a Time**: Submit one funding request at a time. Wait for the current request to be processed before creating another.
 
-- Change requests allow editing and resubmission - this is less severe than rejection and allows iterative improvement.
-
-- Request amount cannot exceed available capacity - the system ensures amount is within limits.
-
-- Required documentation must be provided - missing documents may result in rejection or change request.
+- **Rejected Is Final**: Rejected funding requests cannot be resubmitted. Create a new request if rejected.
 
 ## What Happens Next
 
-After creating a funding request:
-- Request is saved as draft or submitted for review
-- If submitted, facility agent receives notification
-- Facility agent evaluates and makes decision
-- You receive notification of outcome
+**After Submitting:**
+- Facility agent reviews your request
+- You receive notification of the decision
 
-After facility agent approval:
-- Funding notice is automatically created
-- Tokens are generated and distributed
-- Funding notice becomes visible to lenders
-- Lenders review and approve drawdowns
-- Funds are transferred as lenders confirm
-
-After rejection:
-- You receive rejection reason
-- You can create new request addressing issues
-- New request goes through same review process
-- You can adjust amount or provide better documentation
-
-Understanding funding requests helps you effectively request drawdowns from your credit facilities, provide proper documentation, manage request status, and work through the approval process to access funds when needed.
+**After Approval:**
+- Funding notice is automatically generated
+- Facility agent processes the funding notice (token generation, e-sign for each lender)
+- You approve token transfer when notified
+- Lenders transfer funds and confirm settlement
+- Funds are disbursed to you

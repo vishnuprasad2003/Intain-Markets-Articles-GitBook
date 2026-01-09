@@ -7,31 +7,111 @@ description: Understand what happens when items are rejected and how to proceed
 
 ## Overview
 
-When an item is rejected, it enters a final state with specific consequences. Rejection is a final decision that stops the workflow for that item.
+Rejection is a final decision that stops the workflow for that item. Rejected items cannot be edited or resubmitted.
 
-## Possible Outcomes
+## Rejection Outcomes by Item Type
 
-When your submission is rejected, the item enters a final state and cannot proceed further in the workflow. The rejection outcome is final—you cannot edit rejected items, you cannot resubmit the same rejected item, and you must create a new item if you want to try again.
+### Term Sheet Rejected
 
-## What Each Outcome Means
+**What Happens:**
+- Status changes to Rejected
+- Term sheet becomes read-only
+- No master commitment is created
 
-**Rejected Status** means the item has been formally rejected and enters a final state. The workflow stops for this item—it cannot proceed further, rejected items become read-only and cannot be modified, you cannot resubmit the same rejected item, and you must create a new item to try again. Rejection decisions are final—there's no appeal process.
+**What You Can Do:**
+- View the rejected term sheet
+- See rejection reason/comments from FA
+- Create a new term sheet addressing the issues
+- Submit the new term sheet
 
-**What You Cannot Do After Rejection** - You cannot edit the rejected item, you cannot resubmit the same item, there's no appeal process, you cannot change the status of rejected items, and the rejected item cannot proceed in the workflow.
+**What You Cannot Do:**
+- Edit the rejected term sheet
+- Resubmit the same term sheet
+- Appeal the rejection
 
-**What You Can Do After Rejection** - You can still view rejected items to review them, you can see the rejection reason to understand why it was rejected, you can create a new item addressing the rejection reasons, you can learn from rejection feedback to improve future submissions, and you can try again by creating new submissions incorporating lessons learned.
+### Funding Request Rejected
 
-**Rejection Reasons** - Rejection reasons are provided to help you understand why items were rejected. These reasons explain what issues were identified, what requirements weren't met, or what concerns led to rejection.
+**What Happens:**
+- Status changes to REJECTED
+- Funding request becomes read-only
+- No funding notice is created
 
-## Next Steps for Users
+**What You Can Do:**
+- View the rejected funding request
+- See rejection reason from FA
+- Create a new funding request
+- Address the issues in the new request
 
-**After Term Sheet Rejection** - Review the rejection reason carefully to understand why the term sheet was rejected. No master commitment is created, so the facility does not proceed. Create a new term sheet that addresses all rejection reasons. Ensure the new term sheet complies with requirements and has all necessary information. Submit the new term sheet and go through the review process again. Learn from the rejection to improve your proposal.
+**What You Cannot Do:**
+- Edit the rejected funding request
+- Resubmit the same request
 
-**After Funding Request Rejection** - Review the rejection reason carefully to understand why the funding request was rejected. No funding notice is created, so the drawdown does not proceed. Create a new funding request that addresses all rejection reasons. Ensure the new request complies with facility rules, has sufficient borrowing capacity, and includes all required documentation. Submit the new request and go through the review process again. Address all issues identified in the rejection.
+### Pool Mandate Rejected
 
-**After Pool Mandate Rejection** - Once the Pool is rejected by the market maker, it allows you to submit to another market maker. Submit to another market maker if appropriate, or address issues and resubmit to the same market maker if allowed.
+**What Happens:**
+- Market maker declines to structure the deal
+- Pool can be submitted to another market maker
 
-**General Approach** - Always review rejection reasons carefully to understand what went wrong. Learn from rejections to improve future submissions. Create new items that address all rejection reasons. Ensure new submissions comply with all requirements and have all necessary information. Be prepared to go through the review process again with new submissions. Use rejection feedback as learning opportunities to improve your approach.
+**What You Can Do:**
+- View the pool
+- Submit to a different market maker
+- Make improvements before resubmitting
 
-**Learning from Rejections** - Rejections provide valuable feedback about what needs improvement. Use rejection reasons to understand requirements better. Address all issues identified in rejections when creating new items. Improve your submissions based on rejection feedback. Build on lessons learned to create better submissions in the future.
+### Loan Removal Rejected (by Issuer)
 
+**What Happens:**
+- When market maker/investor requests loan removal and issuer clicks cross (reject)
+- Loan stays in the pool
+- Loan continues to be included in pool calculations
+
+## Rejection vs Change Request
+
+| | Rejection | Change Request |
+|---|-----------|----------------|
+| **Final?** | Yes, cannot proceed | No, can be modified |
+| **Editable?** | No | Yes |
+| **Resubmit?** | Must create new item | Can resubmit same item |
+| **Workflow** | Stops | Returns to submitter |
+
+## Next Steps After Rejection
+
+### For Borrowers (Term Sheets, Funding Requests)
+
+1. **Review Rejection Reason**
+   - Understand why it was rejected
+   - Note specific issues mentioned
+
+2. **Create New Item**
+   - Start fresh with a new term sheet or funding request
+   - Address all issues from the rejection
+
+3. **Verify Before Submitting**
+   - Ensure all requirements are met
+   - Double-check documentation
+   - Confirm all fields are complete
+
+4. **Submit New Item**
+   - Go through the normal submission process
+   - Be prepared for review again
+
+### For Issuers (Pool Mandates)
+
+1. **Review Market Maker Feedback**
+   - Understand why mandate was rejected
+
+2. **Consider Options**
+   - Submit to a different market maker
+   - Improve pool before resubmitting
+   - Address specific concerns
+
+3. **Resubmit When Ready**
+   - Share with new market maker
+   - Or resubmit to same market maker after improvements
+
+## Key Points
+
+- **Rejection is final** for that specific item
+- **Create new items** to try again
+- **Learn from rejection reasons** to improve
+- **No appeal process** exists
+- **Rejected items are read-only** for reference

@@ -1,126 +1,88 @@
 ---
-title: Funding Request Review
-description: Learn how facility agents review funding requests and make approval decisions
+title: Funding Request Review (FA)
+description: How facility agents review and approve funding requests
 ---
 
-# Funding Request Review
+# Funding Request Review (Facility Agent)
 
 ## Overview
 
-Funding request review is the process where facility agents evaluate borrower funding requests to ensure compliance with facility rules, verify borrowing base availability, and make approval decisions.
+This guide covers how facility agents review funding requests submitted by borrowers. The facility agent evaluates each request and decides to approve, reject, or request changes. No e-signature is required for funding request approval.
 
 ## Who Can Use This
 
-- Facility Agents who review funding requests submitted by borrowers
+- **Facility Agents**: Review and make decisions on funding requests
 
 ## When This Is Used
 
-Use funding request review when:
-- Borrowers submit funding requests against active facilities
-- You need to evaluate drawdown requests
-- You want to approve or reject requests
-- You need to ensure facility rules are followed
-- You want to verify borrowing capacity availability
+- When a funding request shows **FAReview** status
+- When you need to evaluate a borrower's drawdown request
 
 ## Step-by-Step Process
 
-### Reviewing Funding Requests
+### Step 1: Access the Funding Request
 
-1. **Access Request**
-   - Check notifications for new funding request submissions
-   - Navigate to credit facility section for review
-   - Open request details
-   - Review all information provided
+1. Navigate to **Credit Facility** from the left menu
+2. Go to **Active Facilities** tab
+3. Find the funding request under the relevant master commitment
+4. Click **Review Funding Request** action
 
-2. **Verify Compliance with Facility Rules**
-   - Check request complies with all facility rules
-   - Verify amount is within facility limits
-   - Confirm drawdown frequency rules are followed
-   - Ensure purpose aligns with facility terms
-   - Check other facility-specific requirements
+### Step 2: Evaluate the Request
 
-3. **Check Borrowing Base and Capacity**
-   - Verify sufficient borrowing capacity is available
-   - Calculate available capacity based on borrowing base
-   - Assess request impact on borrowing base
-   - Check if request exceeds available capacity
-   - Verify calculations are correct
+Review the following:
 
-4. **Review Documentation**
-   - Check all required documents are provided
-   - Verify document quality and completeness
-   - Ensure documents support the request
-   - Confirm documentation meets requirements
-   - Review document content for accuracy
+**Request Details:**
+- Draw amount
+- Funding date
+- Purpose of funds
+- Draw currency
 
-5. **Evaluate Collateral** (if applicable)
-   - Verify collateral eligibility if facility requires collateral
-   - Check collateral valuation is accurate
-   - Confirm collateral is not already pledged
-   - Verify collateral meets quality requirements
+**Documentation:**
+- Collateral Addendum
+- Supporting documents
 
-6. **Assess Request Details**
-   - Review request amount and purpose
-   - Check funding date is appropriate
-   - Consider facility utilization impact
+**Capacity:**
+- Available borrowing capacity
+- Facility utilization
 
-### Making Review Decisions
+### Step 3: Make Your Decision
 
-1. **Approve Request**
-   - Review thoroughly and verify all requirements met
-   - Confirm request complies with facility rules
-   - Verify sufficient capacity is available
-   - Click "Approve" button
-   - Enter approval comments if needed
-   - Request status changes to APPROVED
-   - Funding notice is automatically created
+Three options are available:
 
-2. **Reject Request**
-   - Review and identify issues or concerns
-   - Determine request doesn't meet requirements
-   - Click "Reject" button
-   - Enter comments explaining rejection
-   - Status changes to "REJECTED"
+| Decision | When to Use | What Happens |
+|----------|-------------|--------------|
+| **Approve** | Requirements met | Funding notice auto-generated |
+| **Reject** | Requirements not met | Borrower creates new request |
+| **Request Changes** | Modifications needed | Borrower edits and resubmits |
 
-3. **Request Changes**
-   - Identify needed modifications
-   - Click "Request Changes" button
-   - Provide detailed change request
-   - Confirm change request
-   - Status changes to "CHANGES_REQUESTED"
+**Click Approve:**
+- Status changes to **APPROVED**
+- Funding notice is automatically generated (Pending Token Generated)
+- Proceed to approve funding notice and e-sign
 
-## Rules & Validations
+**Click Reject:**
+- Provide rejection reason
+- Status changes to **REJECTED** (final)
+- Borrower must create a new request
 
-- Requests must comply with all facility rules - any violation results in rejection or change request.
+**Click Request Changes:**
+- Enter details about needed changes
+- Status changes to **CHANGES_REQUESTED**
+- Borrower can edit and resubmit
 
-- Request amount cannot exceed available capacity - the amount is validated to ensure it's within borrowing base limits.
+## After Approval
 
-- All required documentation must be provided - missing documents result in rejection or change request.
+When you approve a funding request:
 
-- Collateral must meet eligibility criteria if applicable - ineligible collateral results in rejection or change request.
+1. **Funding Notice Generated** (Pending Token Generated)
+2. **Approve Funding Notice** - Click Approve on the funding notice
+3. **E-Sign for Each Lender** - Click E-sign (0/n) and sign for each lender via Adobe Sign
+4. **Lender Visibility** - Each lender sees the funding notice once their e-sign is complete
+5. **Lender Fund Transfer** - Lenders transfer funds and click Confirm and Settle
 
-- Approved requests automatically generate funding notices - you don't need to create notices manually.
+## Key Points
 
-- Rejected requests cannot be resubmitted - borrowers must create new requests if rejected.
-
-- Change requests allow editing and resubmission - borrowers can update requests and resubmit.
-
-- Decisions are final once submitted - you cannot easily reverse decisions after submission.
-
-## What Happens Next
-
-After reviewing a funding request:
-- **If Approved**: Funding notice is automatically created, tokens are generated, facility agent signs for lenders, lenders review and approve, and funds are transferred.
-
-- **If Rejected**: Borrower receives rejection reason, borrower can create new request addressing issues, new request goes through same review process, and process can start over with improvements.
-
-- **If Changes Requested**: Borrower receives change request details, borrower updates request with requested changes, borrower resubmits for your review, you review again and make new decision, and process can repeat until approved or rejected.
-
-After approval:
-- Funding notice is automatically created with "PENDING_TOKEN_GENERATION" status
-- You generate tokens and sign for lenders
-- Funding notice becomes visible to lenders
-- Lenders review and approve drawdowns
-- Funds are transferred as lenders confirm
-
-Understanding funding request review helps facility agents effectively evaluate requests, ensure facility rules are followed, maintain proper oversight, and make informed approval decisions that protect facility integrity while serving borrower needs.
+- **No E-Sign for Approval**: Funding request approval doesn't require e-signature (unlike term sheets)
+- **Auto-Generate Notice**: Approved requests automatically create funding notices
+- **Rejected Is Final**: Rejected requests cannot be resubmitted
+- **E-Sign Per Lender**: For funding notices, you sign for each lender individually

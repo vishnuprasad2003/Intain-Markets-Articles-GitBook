@@ -21,7 +21,7 @@ When loans are removed from pools, they're excluded from pool calculations but r
 
 **Reinstatement Recalculates Metrics** - When removed loans are reinstated, pool metrics recalculate again to include them. Total balance increases, loan count increases, weighted averages recalculate with the reinstated loan included, and all metrics update to reflect the reinstated loan.
 
-**Impact on Weighted Averages** - Weighted averages (coupon, FICO, etc.) recalculate using only active loans. Removed loans don't affect these calculations.
+**Impact on Weighted Averages** - Weighted averages recalculate using only active loans. Removed loans don't affect these calculations.
 
 **Geographic Distribution Updates** - Geographic distribution metrics update to exclude removed loans, ensuring that location-based statistics reflect only active loans.
 

@@ -7,84 +7,137 @@ description: Troubleshooting guide for when actions are unavailable in Intain Ma
 
 ## Overview
 
-This troubleshooting guide helps you understand why you can't take certain actions in Intain Markets and how to resolve common issues preventing you from acting.
+This troubleshooting guide helps you understand why you can't take certain actions and how to resolve common issues.
 
-## Frequently Asked Questions
+## Common Issues and Solutions
 
-**Q: How do I diagnose why I can't act?**
+### Pools
 
-A: Check systematically:
-- **Button/Action**: Hover over disabled buttons to see tooltips, check status messages, look for error messages, review item status badges, check requirements sections
-- **Role**: Verify you're logged in with the correct role, check if your role has permission, ensure you're assigned to the item, verify you have access
-- **Status**: Check item status allows the action, verify status is correct for workflow stage, review status history if needed
-- **Requirements**: Verify all required fields are filled, check if required documents are uploaded, ensure prerequisites are met, verify information is complete, check validation messages
+**Q: Why can't I edit my pool?**
 
-Systematic diagnosis helps identify issues.
+| Possible Cause | Solution |
+|----------------|----------|
+| Pool is in Deal status | Pools cannot be edited after deal finalization |
+| You're not the issuer | Only the issuer who created the pool can edit |
+
+**Q: Why can't I share my pool?**
+
+| Possible Cause | Solution |
+|----------------|----------|
+| Pool not in Created/Preview status | Can only share in Created or Preview status |
+| No organizations selected during setup | Edit pool and add organizations first |
+
+**Q: Why can't I click Start Deal?**
+
+| Possible Cause | Solution |
+|----------------|----------|
+| NFT minting not complete | All loans in pool must have NFTs minted |
+| Check Certificates section | Verify batch verification is complete and NFTs minted |
+
+### Loans
+
+**Q: Why can't I map a loan to a pool?**
+
+| Possible Cause | Solution |
+|----------------|----------|
+| Loan already mapped | A loan can only be in one pool. Unmap first. |
+| No pools created | Create a pool first via Set-up Pool |
+
+**Q: Why can't I mint NFTs?**
+
+| Possible Cause | Solution |
+|----------------|----------|
+| Batch not verified | Complete batch verification first (status: Reviewed) |
+| Go to Certificates section | NFT minting is done from Certificates, not Batch Verification |
+
+**Q: Why is Mint NFT button disabled?**
+
+| Possible Cause | Solution |
+|----------------|----------|
+| Batch status is Pending | Complete verification (Self Certify or via verification agent) |
+| Already minted | Check if NFTs are already minted (View NFT button enabled) |
+
+### Term Sheets
 
 **Q: Why can't I submit my term sheet?**
 
-A: Possible causes:
-- Term sheet not signed (must click "Create Draft" and complete e-signature first)
-- Electronic signature not completed (e-sign popup must be completed)
-- Required fields not filled (requestedCommitmentAmount, advanceRate, pricingIndex, etc.)
-- Required documents not uploaded (collateral profile, financial statements, KYC documents)
-- Validation errors present (check for error messages)
+| Possible Cause | Solution |
+|----------------|----------|
+| Not signed yet | Click Create Draft → complete Adobe Sign |
+| Required fields missing | Fill all required fields |
+| Documents not uploaded | Upload required documents |
 
-Solutions: Complete electronic signature, fill all required fields, upload all required documents, fix any validation errors, ensure term sheet is complete.
+**Q: Why can't I edit my term sheet?**
+
+| Possible Cause | Solution |
+|----------------|----------|
+| Status is FAReview | Wait for FA decision |
+| Status is Accepted | Cannot edit approved term sheets |
+| Status is Rejected | Create a new term sheet |
+
+### Master Commitments
 
 **Q: Why can't I create a funding request?**
 
-A: Possible causes:
-- Master commitment not being ACTIVE (must be ACTIVE status)
-- Facility not being operational (check facility status)
-- No available borrowing capacity (check facility capacity)
-- You don't have access to the facility (verify access)
-- Facility status doesn't allow requests (must be ACTIVE)
+| Possible Cause | Solution |
+|----------------|----------|
+| MC not Active | At least one lender must approve |
+| Deal modelling not complete | FA must complete Set Up Deal first |
+| Check Facility Setup Status | Must show "Completed" |
 
-Solutions: Wait for facility to become ACTIVE, check facility status, verify available borrowing capacity, ensure you have access to the facility, confirm facility status allows requests.
+**Q: Why can't I see the master commitment?**
 
-**Q: Why can't I approve a term sheet or funding request?**
+| Possible Cause | Solution |
+|----------------|----------|
+| Term sheet not approved | Wait for FA to approve term sheet |
+| Check Credit Facility section | MC appears under the term sheet |
 
-A: Possible causes:
-- Item not being in FAReview status (must be FAReview for approval)
-- You're not the authorized reviewer (must be facility agent role)
-- Item is already approved or rejected (check status)
-- You don't have permission for your role (only facility agents can approve)
+### Funding Requests
 
-Solutions: Check item status, verify you're logged in as facility agent, ensure item is in FAReview status, confirm your role has approval authority.
+**Q: Why can't I approve a funding request?**
 
-**Q: Why can't I edit an item?**
+| Possible Cause | Solution |
+|----------------|----------|
+| Not in FAReview status | Borrower must submit first |
+| Not logged in as FA | Switch to Facility Agent role |
 
-A: Possible causes:
-- Item not being in editable status (must be Draft or CHANGES_REQUESTED)
-- Item is under review (cannot edit while in FAReview)
-- Item has been approved or rejected (cannot edit after approval/rejection)
-- You don't have permission to edit (check role permissions)
+### Funding Notices
 
-Solutions: Check item status, ensure item is in Draft or CHANGES_REQUESTED status, verify you have edit permission, confirm status allows editing.
+**Q: Why can't I see the funding notice as a lender?**
 
-**Q: Why can't I see an item?**
+| Possible Cause | Solution |
+|----------------|----------|
+| FA hasn't completed your e-sign | FA must e-sign for you first |
+| Check with FA | Your e-sign must be completed |
 
-A: Possible causes:
-- Item not being shared with you (check sharing settings)
-- You don't have a role in the item (verify role assignment)
-- Item is in a status that restricts visibility (check status)
-- You're using the wrong role (switch to correct role)
+**Q: Why can't I Confirm and Settle?**
 
-Solutions: Check if item is shared with your organization, verify you have a role in the item, ensure you're using the correct role, check item status for visibility restrictions.
+| Possible Cause | Solution |
+|----------------|----------|
+| Haven't reviewed the notice | Click Review Funding Notice first |
+| Haven't selected payment method | Select payment method during review |
 
-**Q: Why can't I confirm fund transfer?**
+### General
 
-A: Possible causes:
-- Funding notice not approved by you (must approve drawdown first)
-- Fund transfer already confirmed (check status)
-- You're not the lender (only lenders can confirm transfers)
-- Funding notice not visible to you (check access)
+**Q: Why can't I see certain items?**
 
-Solutions: Approve funding notice first, check if transfer already confirmed, verify you're logged in as lender, ensure you have access to funding notice.
+| Possible Cause | Solution |
+|----------------|----------|
+| Not shared with you | Item must be shared with your organization |
+| Wrong role selected | Log out and log in with correct role |
 
-**Q: How do I get help if I can't resolve the issue?**
+**Q: Why are all my buttons disabled?**
 
-A: Check platform help documentation, contact support with specific details about the issue, raise a ticket in the zoho service desk, review workflow documentation, check for known issues or updates. Getting help ensures issues are resolved efficiently.
+| Possible Cause | Solution |
+|----------------|----------|
+| Session expired | Log out and log back in |
+| Item in wrong status | Check status badge on the item |
+| Waiting for another party | Check who needs to act next |
 
-Understanding why you can't act helps you diagnose issues, resolve problems, and proceed with your desired actions effectively.
+## How to Diagnose Issues
+
+1. **Check Status** - Look at the item's status badge
+2. **Hover Over Button** - Tooltips explain why buttons are disabled
+3. **Verify Role** - Ensure you're logged in with correct role
+4. **Check Prerequisites** - Review if all required steps are complete
+5. **Contact Support** - If issue persists, contact support with details

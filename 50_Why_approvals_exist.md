@@ -7,121 +7,106 @@ description: Understand the purpose and importance of approvals in Intain Market
 
 ## Overview
 
-Approvals are fundamental to how Intain Markets operates. They serve as quality gates, compliance checkpoints, and authorization mechanisms that ensure transactions progress correctly while protecting all parties involved. Every approval in the platform has a specific purpose and protects specific interests.
+Approvals are quality gates that ensure transactions progress correctly while protecting all parties involved.
 
-## Platform-Specific Approval Workflows
+## Platform Approval Points
 
-### Term Sheet Approval
+### 1. Term Sheet Approval
 
-**Who Approves:** Facility agents approve term sheets submitted by borrowers.
+**Who Approves:** Facility Agent
 
-**What Gets Approved:** Term sheets proposing new credit facilities with facility terms, amounts, interest rates, and repayment terms.
+**What Gets Approved:** Term sheets proposing new credit facilities
 
-**Why Approval Exists:**
-- Ensures facility terms meet requirements before commitment
-- Verifies borrower documentation is complete and accurate
-- Validates facility structure is feasible and compliant
+**Why It Exists:**
+- Ensures facility terms meet requirements
+- Verifies borrower documentation is complete
+- Validates facility structure is feasible
 - Protects lenders by ensuring quality proposals
-- Enables iterative improvement through change requests
 
-**What Happens After Approval:**
-- Term sheet status changes to "Accepted"
-- Master commitment is automatically created with Draft status
-- Facility agent can configure the complete facility structure
-- Facility becomes available for lender approval
+**What Happens After:**
+- Status changes to Accepted
+- Master commitment auto-created (Draft status)
+- FA can configure facility structure
 
-### Master Commitment Approval
+### 2. Master Commitment Approval
 
-**Who Approves:** Lenders approve master commitments configured by facility agents.
+**Who Approves:** Lender (via Approve & E-Sign)
 
-**What Gets Approved:** Complete facility structures including lender groups, collateral rules, borrowing base calculations, and facility parameters.
+**What Gets Approved:** Complete facility structure configured by FA
 
-**Why Approval Exists:**
-- Ensures lenders agree to facility terms before activation
-- Verifies facility structure meets lender requirements
-- Validates lender groups and commitment amounts are correct
-- Protects borrowers by ensuring lender commitment
-- Creates formal agreement between parties
+**Why It Exists:**
+- Ensures lenders agree to terms before activation
+- Creates formal commitment between parties
+- Validates lender participation amounts
 
-**What Happens After Approval:**
-- Master commitment status changes to "ACTIVE"
-- Facility agent can set up deal modelling
+**What Happens After:**
+- Status changes to Active (one lender approval activates)
+- FA can complete deal modelling
+- Borrower can create funding requests (after deal modelling)
 
-### Funding Request Approval
+### 3. Funding Request Approval
 
-**Who Approves:** Facility agents approve funding requests submitted by borrowers.
+**Who Approves:** Facility Agent
 
-**What Gets Approved:** Requests to draw down funds from active facilities, including drawdown amounts, purposes, funding dates, and supporting documentation.
+**What Gets Approved:** Borrower's request to draw funds
 
-**Why Approval Exists:**
-- Ensures drawdown requests comply with facility rules
-- Verifies borrowing capacity is available
-- Validates supporting documentation is complete
-- Protects lenders by ensuring proper use of funds
-- Maintains facility compliance
+**Why It Exists:**
+- Ensures request complies with facility rules
+- Verifies borrowing capacity
+- Validates documentation
 
-**What Happens After Approval:**
-- Funding request status changes to "APPROVED"
-- Funding notice is automatically generated with PENDING_TOKEN_GENERATION status
-- Facility agent can generate tokens and configure token distribution
-- Process moves to token generation and lender approval
+**What Happens After:**
+- Status changes to APPROVED
+- Funding notice auto-generated (Pending Token Generated)
+- FA can approve and e-sign for lenders
 
-### Funding Notice Approval
+### 4. Funding Notice Processing
 
-**Who Approves:** Lenders approve funding notices after borrower token approval.
+**Who Acts:** Facility Agent, then Lenders
 
-**What Gets Approved:** Individual drawdowns with token allocations, funding amounts, and lender-specific details.
+**Process:**
+1. FA clicks Approve on funding notice
+2. FA e-signs for each lender (E-sign 0/n → n/n)
+3. Each lender can see the notice once their e-sign is complete
+4. Lenders review, transfer funds, Confirm and Settle
 
-**Why Approval Exists:**
-- Ensures lenders agree to individual drawdowns
-- Allows lenders to evaluate each drawdown independently
-- Protects lenders by enabling independent decisions
-- Validates token allocations are correct
-- Creates formal agreement for fund transfer
+**Why It Exists:**
+- Ensures proper authorization before lender visibility
+- Creates formal signed documents for each lender
+- Allows lenders to confirm fund transfers
 
-**What Happens After Approval:**
-- Lender's approval status in tokenDistribution array changes to "APPROVED"
-- Lender can confirm fund transfer
-- Other lenders can still approve or reject independently
-- Process continues with fund transfer confirmation
+### 5. Pool Mandate Acceptance
 
-### Pool Mandate Acceptance
+**Who Approves:** Market Maker (Accept button)
 
-**Who Approves:** Market makers accept mandates to structure deals for pools.
+**What Gets Approved:** Pools submitted for deal structuring
 
-**What Gets Approved:** Pools submitted by issuers for deal structuring and completion.
+**Why It Exists:**
+- Ensures market maker commits to structuring
+- Verifies pool meets requirements
+- Creates formal deal commitment
 
-**Why Approval Exists:**
-- Ensures market makers commit to structuring deals
-- Verifies pools meet structuring requirements
-- Protects issuers by ensuring market maker commitment
-- Creates formal relationship for deal completion
-- Enables deal progression
+**What Happens After:**
+- Status changes to Deal
+- Pool is finalized
+- Market maker proceeds with structuring
 
-**What Happens After Acceptance:**
-- Pool status changes to "Deal"
-- Market maker proceeds with deal structuring
-- Pool is finalized and committed
-- Editing is restricted
+## Why Approvals Matter
 
-## Key Principles
+**Quality Control** - Every approval ensures review before proceeding
 
-**Quality Assurance** - Approvals ensure quality by requiring review before proceeding. Facility agents review term sheets, lenders review master commitments, and all parties review funding requests.
+**Risk Management** - Reviewers assess risk before commitment
 
-**Compliance and Risk Management** - Approvals ensure compliance by verifying transactions meet regulatory requirements and business rules. Reviewers assess risk before commitment, protecting all parties.
+**Compliance** - Approvals verify regulatory requirements are met
 
-**Transparency and Accountability** - Approvals provide transparency by creating visible decision points. All approval decisions are documented with who approved, when, and why, creating accountability.
+**Accountability** - All decisions are documented with who/when
 
-**Workflow Control** - Approvals control workflow progression by acting as gates. Items cannot proceed without required approvals, ensuring proper order and sequence.
+**Protection** - Both submitters and reviewers are protected
 
-**Protection for All Parties** - Approvals protect all parties by ensuring agreement before commitment. Borrowers know their requests are reviewed, lenders can ensure quality, and facility agents can structure properly.
+## Approval vs Change Request vs Rejection
 
-**Collaboration Enablement** - Approvals enable collaboration by creating structured opportunities for feedback. Reviewers can request changes, submitters can respond, and items can be improved iteratively.
-
-**Role-Based Authority** - Different roles have authority to approve different items. Facility agents approve term sheets and funding requests, lenders approve master commitments and funding notices, market makers accept pool mandates.
-
-**Documented Decisions** - All approval decisions are recorded with timestamps, reviewer information, and comments. This creates complete audit trails for compliance and accountability.
-
-**Change Requests vs. Rejection** - Reviewers can request changes (allowing improvement) or reject items (stopping the workflow). This distinction enables iterative improvement while maintaining quality standards.
-
-Understanding why approvals exist helps you navigate the platform effectively, know what to expect at each stage, and understand how approvals protect all parties while ensuring quality and compliance.
+| Action | Outcome |
+|--------|---------|
+| **Approve** | Item proceeds to next stage |
+| **Request Changes** | Item returns to submitter for modification |
+| **Reject** | Item is finalized as rejected, cannot proceed |

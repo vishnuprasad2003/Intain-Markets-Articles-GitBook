@@ -7,116 +7,96 @@ description: Answers to frequently asked questions about Intain Markets platform
 
 ## Overview
 
-This guide answers common questions about using Intain Markets, including pools, loans, credit facilities, and general platform usage.
+This guide answers common questions about using Intain Markets.
 
-## Frequently Asked Questions
+## Pool Questions
 
-### Pool Questions
+**Q: How do I create a pool?**
 
-**Q: Can I edit a pool after sharing it?**
+A: Navigate to Pools from the left menu, click **Set-up Pool** button at top right, fill in the pool details (name, asset class, transaction type, organizations to share with), and click **Create**.
 
-A: Yes, you can edit pools while they're in Preview status. Once a pool reaches Deal status, editing is restricted. Preview status allows editing while collaboration is ongoing.
+**Q: Can I edit a pool after creating it?**
 
-**Q: How many loans can I add to a pool?**
+A: Yes, you can edit pools while in Created status. Click **Edit** button at top right of pool details. Once shared (Preview status) or in Deal status, some editing is restricted.
 
-A: There's no specific limit. Add as many loans as needed. Pool metrics (total balance, loan count, weighted averages) calculate automatically from all mapped loans.
+**Q: How do I add loans to a pool?**
 
-**Q: What happens if I remove a loan from a pool?**
+A: Go to **Loan Registry** from the left menu, select the loans you want to add, click **Map to Pool**, and select the pool from the dropdown.
 
-A: The loan is excluded from pool calculations. Pool metrics update automatically. The loan remains visible with "Removed" status. You can reinstate it later, and metrics will recalculate to include it again.
+**Q: What do the tick and cross icons mean on loans?**
 
-**Q: Can I share a pool with multiple organizations at once?**
+A: When a market maker or investor requests loan removal, the tick and cross appear. **Tick** = accept the removal request (loan marked as Removed). **Cross** = reject the removal request (loan stays in pool).
 
-A: Yes, you can share with multiple organizations simultaneously. Select multiple recipients in the sharing popup. Each organization receives notifications and can access the pool.
+**Q: How do I share a pool?**
 
-**Q: What's the difference between Created and Preview status?**
+A: Click the **Share** button at top right of pool details, select recipient type (Market Maker, Investor, Rating Agency), select organizations, set permissions (feedback, download), and share.
 
-A: Created means the pool is visible only to you. Preview means the pool has been shared with other organizations for review. Created pools are private; Preview pools are visible to shared parties.
+## Loan Questions
 
-**Q: What happens when a market maker accepts a mandate?**
+**Q: How do I upload loans?**
 
-A: Pool status changes to Deal. The pool is finalized, editing is restricted, and the market maker proceeds with deal structuring. The transaction is committed.
+A: Go to **Imports** from the left menu, select as of date, select asset class, choose file, and click **Submit**. The file is uploaded and a job is created.
 
-### Loan Questions
+**Q: What is Trigger LTS?**
 
-**Q: Can a loan be in multiple pools?**
+A: LTS (Loan Tape Standardization) maps your loan file columns to Intain standard fields. Click **Trigger LTS** to start the mapping process. You can use Basic or Intelligent AI mapping.
 
-A: No, a loan can only belong to one pool at a time. To move a loan to another pool, unmap it from the current pool first, then map it to the new pool.
+**Q: What's the difference between Mapped and Unmapped status?**
 
-**Q: What's the difference between unmapped and mapped loans?**
+A: **Mapped** = loan is assigned to a pool. **Unmapped** = loan exists but is not assigned to any pool. The Status column in Loan Registry shows this.
 
-A: Unmapped loans exist in the system but aren't assigned to any pool. Mapped loans are assigned to a specific pool and included in pool calculations.
+**Q: How do I verify loans?**
 
-**Q: What happens to pool metrics when I remove a loan?**
+A: Add loans to a batch from Loan Registry, go to **Batch Verification**, enter the batch, and either Self Certify or submit to a verification agent. After verification, batch status changes to Reviewed.
 
-A: Pool metrics recalculate automatically. Total balance decreases, loan count decreases, and weighted averages recalculate to exclude the removed loan. Metrics update immediately.
+**Q: When can I mint NFTs?**
 
-**Q: Can I reinstate a removed loan?**
+A: After batch verification is complete (status: Reviewed). Go to **Certificates**, find the batch, and click **Mint NFT**. Select loans and click **Mint Selected**.
 
-A: Yes. When reinstated, the loan is included in pool calculations again, and pool metrics update automatically. The loan shows "Reinstated" status.
+## Credit Facility Questions
 
-### Credit Facility Questions
+**Q: How do I create a term sheet?**
 
-**Q: Why can't I submit my term sheet?**
+A: Go to **Credit Facility** from the left menu, click **Term Sheet Setup** at top right, select **Create via Wizard**, fill in the details, and click **Create Draft**. An Adobe Sign popup opens for signing.
 
-A: Term sheets must be signed before submission. Click "Create Draft" to initiate e-signature, complete the signature, then submit. Required fields and documents must also be complete.
+**Q: What happens after I sign and submit a term sheet?**
+
+A: The facility agent reviews it and can Approve, Reject, or Request Changes. If approved, a master commitment is automatically created.
 
 **Q: Why can't I create a funding request?**
 
-A: Master commitment must be ACTIVE status. Check facility status—only ACTIVE facilities and deal modelling for the facility should be completed which will allow funding request creation. Verify you have access to the facility.
+A: Check two things: (1) Master commitment must be **Active** (at least one lender approved), and (2) Deal modelling must be **Completed** (facility agent did Set Up Deal).
 
-**Q: Why can't I approve a term sheet or funding request?**
+**Q: How do lenders see funding notices?**
 
-A: Items must be in FAReview status for facility agents to approve. Verify you're logged in as a facility agent and the item is in the correct status.
+A: After the facility agent approves the funding notice and e-signs for each lender individually, each lender can see the funding notice in their Credit Facility section once their e-sign is complete.
 
-**Q: Why can't I edit a term sheet or funding request?**
+**Q: What is Confirm and Settle?**
 
-A: Items can only be edited in Draft or CHANGES_REQUESTED status. Once submitted, editing is restricted until changes are requested or item is rejected.
+A: After lenders review the funding notice and transfer funds, they click **Confirm and Settle** to finalize their participation. Tokens are then transferred to the borrower.
 
-**Q: What happens after term sheet approval?**
+## General Platform Questions
 
-A: Master commitment is automatically created with Draft status. Facility agent configures the facility structure, then submits for lender approval. Once ACTIVE, borrowers can create funding requests.
+**Q: How do I switch roles?**
 
-**Q: How do lenders approve master commitments?**
-
-A: Lenders review master commitments in PendingLenderApproval status. They complete e-signature to approve. Once at least one lender approves, facility becomes ACTIVE.
-
-### General Platform Questions
-
-**Q: How do I switch between roles?**
-
-A: Log out and log back in. Select your role during login from the dropdown menu. Each role has its own view and permissions.
+A: Log out and log back in. Select your role during login from the dropdown.
 
 **Q: Why are some buttons disabled?**
 
-A: Buttons are disabled when: item isn't in the right status, required information is missing, waiting for another party to act, action already completed, or your role doesn't have permission. Hover over disabled buttons to see tooltips explaining why.
+A: Buttons are disabled when:
+- Item isn't in the right status
+- Your role doesn't have permission
+- Prerequisites aren't met
+- Waiting for another party to act
 
-**Q: How do I track my submissions?**
+**Q: How do I provide feedback on a pool?**
 
-A: View item status to see where items are in their workflow. Status history shows all changes and actions. Notifications alert you to status changes.
-
-**Q: Can I download pool or loan data?**
-
-A: Download capabilities depend on sharing permissions set by issuers. If you have download permissions, you can download data from the pool or loan detail pages.
-
-**Q: How do I provide feedback on pools?**
-
-A: If sharing permissions allow feedback, use the pool's feedback section. You can provide pool-level or loan-level feedback. Mark it as a change request if modifications are needed.
+A: Open the pool details, go to the **Feedback** section, and add your comments. Pool-level feedback is visible to the issuer. Loan-level feedback uses the chat box icon on individual loans.
 
 **Q: What's the difference between feedback and rejection?**
 
-A: Feedback (change requests) allows modifications—items can be edited and resubmitted. Rejection is final—rejected items cannot be resubmitted and must be replaced with new items.
+A: **Feedback** allows the issuer to make changes. **Rejection** (for term sheets, funding requests) is final - a new item must be created.
 
-**Q: How long do approvals take?**
+**Q: How do I track my submissions?**
 
-A: Approval times vary depending on reviewer workload and complexity. You'll receive notifications when decisions are made. Check item status for current state.
-
-**Q: Can I cancel a submission?**
-
-A: Cancellation depends on item status. Items in Draft status can usually be cancelled. Once submitted, cancellation may not be possible. Check item status and workflow rules.
-
-**Q: How do I find items I've created or am involved with?**
-
-A: Use filters and search functions. Filter by status, date, or other criteria. Your dashboard shows items relevant to your role. Search helps locate specific items quickly.
-
-Understanding common questions helps you quickly find answers, understand platform features, troubleshoot issues, and use the platform effectively.
+A: Check the item's status in the dashboard. Status shows where it is in the workflow. Status history shows all changes.

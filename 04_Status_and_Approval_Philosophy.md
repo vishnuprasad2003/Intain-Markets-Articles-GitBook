@@ -7,66 +7,123 @@ description: Understand how statuses and approvals work together to create struc
 
 ## Overview
 
-Statuses and approvals are fundamental design elements of Intain Markets. They work together to create structured workflows where items progress through defined stages, quality is ensured through review checkpoints, and proper authorization is obtained before commitment.
+Intain Markets uses statuses and approvals to ensure transactions progress through defined stages with proper authorization. Statuses control what actions are available, while approvals serve as quality gates before progression.
 
-## How the Platform Is Designed
+## Status-Based Control
 
-The platform is designed around the principle that structured finance transactions must progress through logical stages, with quality checks and authorization gates at critical points. Statuses serve as markers that indicate where an item is in its journey, while approvals serve as gates that ensure quality and compliance before items can proceed to the next stage.
+Every item in the platform has a status that controls available actions:
 
-**Statuses as Active Controls** - Statuses are active controls that:
+### Pool Statuses
 
-- **Define what actions are available** - Only actions appropriate for the current stage are enabled. Disabled buttons indicate the status doesn't allow that action yet or prerequisites haven't been met.
+| Status | Meaning | Available Actions |
+|--------|---------|-------------------|
+| **Created** | Pool created, not shared | Edit, Add Loans, Share |
+| **Preview** | Shared for review | Edit, Respond to Feedback, Start Deal |
+| **Under Review** | Market maker accepted | View, Provide Feedback |
+| **Deal** | Deal finalized | View only |
 
-- **Prevent improper progression** - You cannot skip stages or go backwards without proper authorization. The platform enforces sequential progression.
+### Term Sheet Statuses
 
-- **Reflect business state** - Statuses represent real business conditions. A pool in "Preview" status is being shared for review, a term sheet in "FAReview" status is being reviewed by a facility agent, and a funding request in "APPROVED" status has been approved and is ready for the next stage.
+| Status | Meaning | Available Actions |
+|--------|---------|-------------------|
+| **Draft** | Being created | Edit, Sign (Create Draft) |
+| **BorrowerSigned** | Borrower signed | Submit to FA |
+| **FAReview** | FA reviewing | Approve/Reject/Request Changes (FA) |
+| **CHANGES_REQUESTED** | Changes needed | Edit, Resubmit (Borrower) |
+| **Accepted** | Approved | View, MC auto-created |
+| **Rejected** | Declined | View only |
 
-- **Enable parallel workflows** - Different parties can work on different aspects while respecting status boundaries. Certain actions are only available when the status allows them.
+### Master Commitment Statuses
 
-- **Provide visibility** - Statuses communicate to all parties where items are in the process. Everyone can see the current status and understand what stage the item is at.
+| Status | Meaning | Available Actions |
+|--------|---------|-------------------|
+| **Draft** | Being configured | Edit, Add Lenders, Create Facility |
+| **PendingLenderApproval** | Awaiting lender | Approve & E-Sign (Lender) |
+| **ACTIVE** | Facility operational | Set Up Deal, Create Funding Requests |
 
-**Approvals as Quality Assurance** - Approvals are quality assurance mechanisms that:
+### Funding Request Statuses
 
-- **Ensure standards are met** - Items are reviewed by qualified parties before proceeding. Reviewers examine items to ensure they meet quality requirements and identify issues early.
+| Status | Meaning | Available Actions |
+|--------|---------|-------------------|
+| **DRAFT** | Being created | Edit, Submit |
+| **FAReview** | FA reviewing | Approve/Reject/Request Changes (FA) |
+| **APPROVED** | Approved | Funding Notice auto-generated |
+| **REJECTED** | Declined | View only |
+| **CHANGES_REQUESTED** | Changes needed | Edit, Resubmit |
 
-- **Maintain compliance** - Regulatory and business rule requirements are verified before commitment. Reviewers assess compliance to ensure transactions meet all necessary requirements.
+### Batch Verification Statuses
 
-- **Protect all parties** - Approvals ensure all parties agree before commitment. Submitters know their items are reviewed, and reviewers can ensure quality.
+| Status | Meaning | Available Actions |
+|--------|---------|-------------------|
+| **Pending** | Not verified | Self Certify, Submit to Agent |
+| **Reviewed** | Verification complete | Mint NFT (in Certificates) |
+| **Certified** | Agent verified | View NFT |
+| **Self Certified** | Self verified | View NFT |
 
-- **Enable improvement** - Reviewers can request changes before final approval, allowing iterative improvement and ensuring items meet requirements before final commitment.
+## Approval Gates
 
-- **Create accountability** - Approval decisions are documented and attributed to specific reviewers, creating accountability and supporting compliance requirements.
+Approvals are required at key workflow stages:
 
-The platform enforces this structure automatically, ensuring workflows progress correctly and approvals happen in the proper sequence.
+### Term Sheet Approval (Facility Agent)
+- **Reviews:** Facility terms, documents, borrower information
+- **Options:** Approve → MC created, Reject → Final, Request Changes → Borrower edits
 
-## What This Enables for Users
+### Master Commitment Approval (Lender)
+- **Reviews:** Facility structure, terms, participation
+- **Options:** Approve & E-Sign → Facility ACTIVE
+- **Note:** One lender approval activates the facility
 
-**For Submitters** (issuers, borrowers), this structure provides clarity about what needs to happen next, ensures submissions are reviewed by qualified parties, and protects you by requiring approvals before commitment. You can see where your items are in the process and understand what's required to move forward.
+### Funding Request Approval (Facility Agent)
+- **Reviews:** Draw amount, purpose, capacity, documentation
+- **Options:** Approve → FN generated, Reject → Final, Request Changes → Borrower edits
 
-**For Reviewers** (facility agents, market makers, lenders), this structure provides clear decision points, ensures you review items at the right stage, and gives you tools to request improvements before approval. You can see what needs your attention and make informed decisions.
+### Pool Mandate (Market Maker)
+- **Reviews:** Pool details, loans, terms
+- **Options:** Accept → Deal, Reject → Pool remains in Preview
 
-**For All Parties**, this structure provides transparency into process progression, ensures quality through review, maintains compliance through structured workflows, and creates accountability through documented decisions. Everyone can see where things stand and what needs to happen next.
+## Key Principles
 
-The status and approval structure enables efficient collaboration while maintaining quality, compliance, and proper authorization throughout the transaction lifecycle.
+**Status Controls Actions:**
+- Buttons enabled/disabled based on status
+- Cannot skip stages
+- Sequential progression enforced
 
-## Key Principles to Understand
+**Role-Based Authority:**
+- Only certain roles can approve certain items
+- FA approves term sheets and funding requests
+- Lenders approve master commitments
+- Market makers accept pool mandates
 
-**Statuses Control Actions** - Statuses actively control what you can do. When an action is disabled, the status doesn't allow it yet or prerequisites haven't been met.
+**Change Requests vs Rejection:**
 
-**Approvals Are Quality Gates** - Approvals are checkpoints that ensure items meet standards, comply with requirements, and have proper authorization before proceeding.
+| Aspect | Change Request | Rejection |
+|--------|---------------|-----------|
+| **Item editable?** | Yes | No |
+| **Can resubmit?** | Yes | No |
+| **Workflow** | Returns to submitter | Stops |
+| **Next step** | Make changes, resubmit | Create new item |
 
-**Sequential Progression** - Workflows progress sequentially through stages. You cannot skip steps or go backwards without proper authorization.
+**Complete Audit Trail:**
+- Every status change recorded
+- Who changed, when, why
+- Approval decisions documented
+- Cannot be modified after recording
 
-**Role-Based Approval Authority** - Different roles have authority to approve different items at different stages. Only facility agents can approve term sheets, only lenders can approve funding requests.
+## Platform Status Examples
 
-**Rejection vs. Change Requests** - Reviewers can reject items (stopping the workflow) or request changes (allowing improvement and resubmission). Change requests enable iterative improvement, while rejections require starting over.
+**Example 1: Term Sheet Flow**
+```
+Draft → (Borrower signs) → BorrowerSigned → (Submit) → FAReview → (FA approves) → Accepted
+```
 
-**Status Changes Are Permanent** - Status changes are recorded and cannot be easily undone. Make sure items are ready before moving to the next status.
+**Example 2: Funding Request with Changes**
+```
+DRAFT → (Submit) → FAReview → (FA requests changes) → CHANGES_REQUESTED → (Edit, Resubmit) → FAReview → (FA approves) → APPROVED
+```
 
-**Complete History** - All status changes and approvals are recorded with who made the change, when it happened, and what changed, creating complete audit trails.
+**Example 3: Pool to Deal**
+```
+Created → (Share) → Preview → (MM accepts) → Under Review → (Start Deal) → Deal
+```
 
-**Status Visibility** - Statuses are visible to all relevant parties, providing transparency into process progression.
-
-**Approval Decisions Are Documented** - All approval decisions are recorded with who approved, when, and any comments or reasons.
-
-**Automatic Enforcement** - The platform enforces status and approval rules automatically, ensuring proper operation.
+Understanding statuses and approvals helps you navigate workflows effectively and know what actions are available at each stage.

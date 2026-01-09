@@ -7,44 +7,62 @@ description: Learn about workflows and features that have been retired in Intain
 
 ## Overview
 
-This document tracks workflows and features that have been retired and replaced in Intain Markets.
+This document tracks workflows and features that have been retired or changed in Intain Markets.
 
-## Retired Workflows
+## Loans Module Changes
 
-### Pool Preview Loan Status Management
+### Batch Verification Process
 
-**What Was Retired** - Previously in pool preview:
-- Removed loans did not maintain status in UI
-- Reinstated loans did not show status
-- Loan status history not visible for removed/reinstated loans
-- Removed and reinstated loans not displayed in interface
+**Previous (Retired):**
+- Only Verification Agent could certify batches
+- Issuer had to submit batch and wait for VA to verify
+- No self-certification option
 
-**Replacement** - Now in pool preview:
-- Removed loans maintain "Removed" status and visible
-- Reinstated loans show "Reinstated" status and visible
-- Complete loan status history maintained and displayed
-- Users can see all loan statuses including removed and reinstated
+**Current:**
+- Issuer can **Self Certify** batches directly
+- Issuer can also submit to Verification Agent if needed
+- Multiple verification paths available
 
-### Credit Facility Securitization Flow
+### NFT Minting Location
 
-**What Was Retired** - Credit facilities previously used securitization flow:
-- Credit facilities integrated with securitization workflows
-- Process included pools and deals as part of credit facility creation
-- Flow combined multiple transaction types
+**Previous:**
+- NFT minting in Batch Verification section
 
-**Replacement** - Credit facilities now have dedicated workflow:
-- Term Sheet → Master Commitment → Funding Request → Funding Notice
-- Separate from securitization and pool workflows
-- Focused specifically on credit facility transactions
+**Current:**
+- NFT minting in **Certificates** section
+- View NFT and Mint NFT buttons in Certificates
+- Batch Verification for verification only
+
+## Pool Module Changes
+
+### Pool Sharing for Preview
+
+**Previous (Retired):**
+- Only Issuer could share pools with market makers and investors
+- Market Maker could not share to investors
+
+**Current:**
+- Issuer shares pools with market makers and investors
+- Market Maker can also share accepted pools to investors
+
+### Loan Status Display
+
+**Previous (Retired):**
+- Removed loans not visible in UI
+- Reinstated loans not tracked
+- Limited loan status history
+
+**Current:**
+- Removed loans show "Removed" status, remain visible
+- Reinstated loans show "Reinstated" status
+- Complete loan status history maintained
 
 ## Deprecated Features
 
-Some features may be marked as deprecated before retirement. Deprecated features will be removed in future releases. Documentation indicates which features are deprecated.
+Features may be marked as deprecated before retirement. Check release notes for deprecation announcements.
 
 ## How to Stay Current
 
-**Review Release Notes** - Release notes explain what was retired and what replaced it.
-
-**Check Documentation** - Documentation reflects current capabilities and workflows.
-
-**Contact Support** - Support can explain retirements and guide you to current alternatives.
+- **Release Notes** - Review for changes
+- **Documentation** - Reflects current workflows
+- **Support** - Contact for clarification on current processes

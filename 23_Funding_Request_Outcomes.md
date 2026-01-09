@@ -7,26 +7,128 @@ description: Understand what happens after your funding request is reviewed
 
 ## Overview
 
-When a facility agent reviews a funding request, there are three possible outcomes: Approval, Rejection, or Changes Requested. Each outcome has different implications for your workflow and next steps.
-
-![Funding Request Review - FA](imagesByMdFilesFolder/23/review_funding_request_FAReview.png)
+When you submit a funding request, the facility agent reviews it and makes a decision: Approve, Reject, or Request Changes. This guide explains what each outcome means and what happens next.
 
 ## Possible Outcomes
 
-After you submit a funding request, the facility agent reviews it and makes a decision. There are three possible outcomes: **Approved** - your request meets all requirements and is approved, **Rejected** - your request doesn't meet requirements and is declined, or **Changes Requested** - your request needs modifications before it can be approved.
+After you submit a funding request to the facility agent, there are three possible outcomes:
 
-## What Each Outcome Means
+1. **Approved** - Your request meets all requirements
+2. **Rejected** - Your request doesn't meet requirements
+3. **Changes Requested** - Your request needs modifications
 
-**Approved Outcome** means your funding request meets all requirements, and the facility agent has approved it. A funding notice is automatically created, request status changes to "APPROVED". The facility agent generates tokens and signs the funding notice for lenders. Lenders review the funding notice and approve or reject individual drawdowns. After lender approval, lenders transfer funds and confirm transfers. Funds are transferred to you.
+![Funding Request Review - FA](imagesByMdFilesFolder/23/review_funding_request_FAReview.png)
 
-**Rejected Outcome** means your funding request doesn't meet requirements, and the facility agent has rejected it. Request status changes to "REJECTED", a rejection reason is provided, you receive notification of rejection, and no funding notice is created. You cannot resubmit the same request—you must create a new funding request if you want to try again, and the new request should address the rejection reasons.
+## Approved
 
-**Changes Requested Outcome** means the facility agent needs modifications before approval. Request status changes to "CHANGES_REQUESTED", the request becomes editable again, you can make modifications, and you can resubmit when changes are complete. After making changes and resubmitting, the request goes back to facility agent review for another evaluation.
+**What It Means:**
+- Your funding request meets all requirements
+- The facility agent has approved your drawdown
+- The funding process proceeds
 
-## Next Steps for Users
+**Status Change:**
+- Status changes to **APPROVED**
 
-**If Your Request Is Approved** - Monitor the funding notice progress as it moves through lender review. Wait for lender approval and track status updates. Prepare to receive funds after lender approval and fund transfer confirmation.
+**What Happens Next:**
 
-**If Your Request Is Rejected** - Create a new funding request that addresses all rejection reasons. Ensure the new request complies with facility rules and has sufficient documentation.
+1. **Funding Notice Generated**
+   - The system automatically generates a funding notice
+   - Status: Pending Token Generated
 
-**If Changes Are Requested** - Read the change request carefully to understand what modifications are needed. Make all requested changes thoroughly and address all requested items. Review your changes before resubmitting. Resubmit the request when changes are complete, and it will go back to facility agent review.
+2. **Facility Agent Approves Notice**
+   - The facility agent clicks Approve on the funding notice
+
+3. **Facility Agent E-Signs for Each Lender**
+   - The facility agent signs the funding notice for each lender individually
+   - Progress shows as E-sign (0/n), (1/n), (2/n), etc.
+
+4. **Lenders See the Notice**
+   - Each lender can see the funding notice once the FA has e-signed for them
+
+5. **Lenders Transfer Funds**
+   - Lenders review the funding notice
+   - Lenders select payment method
+   - Lenders transfer funds and click **Confirm and Settle**
+
+6. **Funds Disbursed**
+   - Tokens are transferred
+   - You receive the funds
+
+## Rejected
+
+**What It Means:**
+- Your funding request doesn't meet requirements
+- The facility agent has declined your request
+- The rejection reason is provided
+
+**Status Change:**
+- Status changes to **REJECTED** (final state)
+
+**What Happens Next:**
+
+1. **Review Rejection Reason**
+   - Read the reason provided by the facility agent
+   - Understand what requirements were not met
+
+2. **Create New Request**
+   - Rejected requests cannot be resubmitted
+   - You must create a new funding request
+   - Address the rejection reasons in your new request
+
+**Important:** You cannot edit or resubmit a rejected funding request. You must start fresh with a new request.
+
+## Changes Requested
+
+**What It Means:**
+- Your request needs modifications before approval
+- The facility agent has specified what needs to change
+- You can edit and resubmit
+
+**Status Change:**
+- Status changes to **CHANGES_REQUESTED**
+
+**What Happens Next:**
+
+1. **Review Change Request**
+   - Read the details provided by the facility agent
+   - Understand what modifications are needed
+
+2. **Edit Your Request**
+   - Your funding request becomes editable again
+   - Make the requested changes
+   - Update documentation if needed
+
+3. **Resubmit**
+   - Submit the updated request
+   - Status changes back to **FAReview**
+   - Facility agent reviews again
+
+4. **Await New Decision**
+   - The facility agent may:
+     - Approve (funding notice generated)
+     - Reject (create new request)
+     - Request more changes (repeat process)
+
+## Summary
+
+| Outcome | Status | Funding Notice | Next Steps |
+|---------|--------|----------------|------------|
+| Approved | APPROVED | Auto-generated | FA e-signs, lenders transfer funds |
+| Rejected | REJECTED | Not created | Create new request |
+| Changes Requested | CHANGES_REQUESTED | Not created | Edit and resubmit |
+
+## Tips
+
+**For Approved Requests:**
+- Monitor the funding notice progress
+- Funds will be disbursed after lenders Confirm and Settle
+
+**For Rejected Requests:**
+- Carefully read the rejection reason
+- Ensure your new request addresses all issues
+- Verify capacity and documentation before submitting
+
+**For Change Requests:**
+- Address all requested changes
+- Double-check before resubmitting
+- The process may repeat until approved or rejected

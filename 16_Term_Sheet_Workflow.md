@@ -7,36 +7,48 @@ description: Understand the term sheet process from creation to approval
 
 ## Overview
 
-The term sheet is the first step in creating a credit facility. It's the borrower's proposal outlining the key terms of the facility they want, including maximum facility amount, interest rates, repayment terms, and other conditions. Understanding the term sheet workflow helps you navigate this critical first phase from creation through approval.
+The term sheet is the first step in creating a credit facility. As a borrower, you create a term sheet proposing the key terms of the facility you want, sign it via Adobe Sign, and submit it to the facility agent for review. The facility agent then reviews and decides to approve, reject, or request changes.
 
 ## Who Can Use This
 
-- Borrowers who create term sheets and want to propose new credit facilities
-- Facility Agents who review term sheets and make approval decisions
+- **Borrowers**: Create term sheets and submit them for facility agent review
+- **Facility Agents**: Review term sheets and make approval decisions
 
 ## When This Is Used
 
-Use term sheet workflow when:
-- You want to propose a new credit facility to lenders
-- You need to request flexible funding arrangements
-- You want to understand how term sheets progress from creation to approval
-- You need to review a borrower's proposal as a facility agent
+Use the term sheet workflow when:
+- You want to propose a new credit facility
+- You need to understand how term sheets progress from creation to approval
+- You need to review and respond to change requests
 - You want to know what happens after term sheet approval
 
 ## Step-by-Step Process
 
-### Creating a Term Sheet
+### Part 1: Creating a Term Sheet (Borrower)
 
-1. **Access Term Sheet Setup**
-   - Navigate to the term sheets section
-   - Click "Term Sheet Setup" button
-   - Two options appear:
-     - **Create Via Wizard**: Opens a pop-up form to create term sheet step-by-step
-     - **Upload Signed**: Upload a signed term sheet document; the system extracts details and creates a term sheet from the document
+#### Step 1: Access the Credit Facility Dashboard
+
+1. **Navigate to Credit Facility**
+   - Log in to the platform with your Borrower credentials
+   - From the left expandable menu (which expands when you hover over it), click on **Credit Facility**
+   - The Credit Facility dashboard displays with term sheets you've created and master commitments
 
 ![Accessing Term Sheet - Create New Term Sheet](imagesByMdFilesFolder/16/AccessingTermsheetCreateNewTermSheet.png)
 
-2. **Enter Facility Information**
+#### Step 2: Start Term Sheet Setup
+
+1. **Click Term Sheet Setup**
+   - Click the **Term Sheet Setup** button at the top right of the dashboard
+   - Two options appear:
+     - **Create Via Wizard**: Opens a popup form to create the term sheet step-by-step
+     - **Upload Signed**: Upload an already-signed term sheet document
+
+2. **Select Create Via Wizard**
+   - Click **Create Via Wizard** to open the term sheet creation popup
+
+#### Step 3: Enter Term Sheet Details
+
+1. **Fill in Facility Information**
    - **Requested Commitment Amount**: Enter the maximum amount you want to borrow
    - **Advance Rate**: Specify what percentage of collateral value can be borrowed (e.g., 85%)
    - **Pricing Index**: Select the base interest rate index (e.g., SOFR, SOFR 1M)
@@ -48,154 +60,174 @@ Use term sheet workflow when:
 
 ![Add Term Sheet Details](imagesByMdFilesFolder/16/2_AddTermSheetDetails.png)
 
-3. **Upload Required Documents**
+#### Step 4: Upload Required Documents
+
+1. **Upload Supporting Documents**
    - **Collateral Profile**: Upload your collateral profile document
    - **Financial Statements**: Upload your financial statements
    - **KYC Documents**: Upload KYC documentation
    - **Collateral Data**: Upload collateral data files
-   - Documents are securely stored and tracked with complete history
 
 ![Upload Documents](imagesByMdFilesFolder/16/UploadDocuments.png)
 
-4. **Create Draft**
+#### Step 5: Create Draft and Sign
+
+1. **Create the Draft**
    - Review all entered information for accuracy
    - Verify all required fields are filled
    - Ensure documents are uploaded correctly
-   - Click "Create Draft" button
+   - Click **Create Draft**
+   - Status changes to **Draft**
 
 ![Issuer - Term Sheet Creation](imagesByMdFilesFolder/16/Issuer_TermSheetCreation.png)
 
-### Signing the Term Sheet
-
-1. **E-Sign Popup Appears**
-   - After clicking "Create Draft", issuer e-sign popup appears
-   - Review the document you're signing
+2. **Sign via Adobe Sign**
+   - After clicking Create Draft, an Adobe Sign popup window opens automatically
+   - The popup shows the term sheet document with all the details you entered
+   - Review the document
    - Complete the electronic signature process
-   - Verify signature is complete
+   - After signing, status changes to **BorrowerSigned**
 
 ![Term Sheet Signing](imagesByMdFilesFolder/16/TermSheetSigning.png)
 
-2. **Submit Term Sheet Popup**
-   - After signing, "Submit Term Sheet" popup appears
-   - Review submission details
-   - Click "Submit" button to submit to facility agent
-   - Status changes from Draft to FAReview
+#### Step 6: Submit to Facility Agent
+
+1. **Submit Term Sheet Popup Appears**
+   - After signing, a **Submit to FA** popup appears
+   - Review the submission details
+
+2. **Choose to Submit or Cancel**
+   - Click **Submit** to submit the term sheet to the facility agent
+   - Status changes from **BorrowerSigned** to **FAReview**
    - Facility agent receives notification
+   - If you click **Cancel**, you can submit later from the dashboard
 
 ![Submit Term Sheet to FA](imagesByMdFilesFolder/16/SubmitTermSheetToFA.png)
 
-### Credit Facility Dashboard Actions
+3. **Dashboard Actions After Signing**
+   - If you cancelled the Submit popup, the action column in the dashboard shows **Submit Term Sheet**
+   - Click this action to submit when ready
+   - After submitting, the action changes to **View Term Sheet**
 
-The credit facility dashboard displays different actions based on term sheet status:
+### Part 2: Facility Agent Review
 
-- **Submit Term Sheet After Signing** - Available when term sheet is in Draft status and signed
-- **Edit Term Sheet** - Available when status is CHANGES_REQUESTED
-- **View Term Sheet** - Available when status is FAReview or Accepted
+#### Step 1: Access Review
 
-### Facility Agent Review and Decision
+1. **Navigate to Credit Facility**
+   - Log in as Facility Agent
+   - Go to **Credit Facility** section from the left menu
+   - Find the term sheet in the Set-up tab
 
-1. **Access Review**
-   - Facility agent clicks "Review Term Sheet" action button
-   - Review Term Sheet popup appears
-   - Facility agent evaluates your term sheet
-   - Reviews facility terms, amounts, and conditions
-   - Checks supporting documentation
-   - Assesses feasibility and compliance
+2. **Click Review Term Sheet**
+   - In the Actions column, click **Review Term Sheet**
+   - A popup opens showing all term sheet details and attached documents
 
 ![Review Term Sheet - FA](imagesByMdFilesFolder/16/review_term_sheet_FA.png)
 
-2. **Facility Agent Makes Decision**
-   - In the Review Term Sheet popup, facility agent sees three buttons:
+#### Step 2: Make Decision
+
+1. **Review Options**
+   - In the Review Term Sheet popup, three buttons are available:
      - **Approve**: Term sheet meets requirements
-       - Status changes to "Accepted"
-       - Master commitment is automatically created
      - **Reject**: Term sheet doesn't meet requirements
-       - Status changes to "Rejected"
-       - Rejection reason is provided
-       - You receive notification of rejection
      - **Request Changes**: Modifications are needed
-       - Status changes to "CHANGES_REQUESTED"
-       - Change request details are provided
-       - You receive notification of change request
 
-3. **Wait for Review**
-   - Facility agent reviews your term sheet
-   - Facility agent clicks "Review Term Sheet" action button
-   - Review Term Sheet popup appears with Approve, Reject, and Request Changes buttons
-   - Review typically takes a few days
-   - You receive notifications about status changes
-   - You can monitor review progress
+2. **Approve**
+   - Click **Approve** when all requirements are met
+   - Status changes to **Accepted**
+   - Master commitment is automatically created with **Draft** status
+   - Borrower receives notification
 
-### Responding to Change Requests
+3. **Reject**
+   - Click **Reject** when requirements are not met
+   - Provide rejection reason
+   - Status changes to **Rejected** (final state)
+   - Borrower receives notification
+   - Rejected term sheets cannot be resubmitted; borrower must create a new one
 
-1. **Review Change Request**
-   - Read change request details carefully
-   - Understand what needs to be modified
-   - Note any deadlines or priorities
-   - Navigate to term sheet to make changes
+4. **Request Changes**
+   - Click **Request Changes** when modifications are needed
+   - Enter details about what needs to be changed
+   - Status changes to **CHANGES_REQUESTED**
+   - Borrower receives notification and can edit and resubmit
+
+### Part 3: Responding to Change Requests (Borrower)
+
+#### Step 1: Review Change Request
+
+1. **Check Dashboard**
+   - Term sheet status shows **CHANGES_REQUESTED**
+   - Action column shows **Edit Term Sheet**
+   - Read the change request details carefully
 
 ![Review Changes Requested - Issuer](imagesByMdFilesFolder/16/ReviewChangesRequestedIssuer.png)
 
-2. **Make Requested Changes**
-   - Open term sheet for editing (status allows editing)
-   - Update fields as requested
+#### Step 2: Make Changes
+
+1. **Edit Term Sheet**
+   - Click **Edit Term Sheet** action
+   - The term sheet opens for editing
+   - Update fields as requested by the facility agent
    - Modify documents if needed
    - Address all requested changes
-   - Complete all changes before proceeding
 
-3. **Update and Re-sign**
-   - Click "Update" button in the changes popup
-   - Issuer e-sign popup appears again
-   - Complete electronic signature
-   - Verify signed version is correct
-   - Ensure all changes are reflected
+#### Step 3: Update and Re-sign
 
-4. **Submit Term Sheet**
-   - After signing, "Submit Term Sheet" popup appears
-   - Click "Submit" button
-   - Status changes from CHANGES_REQUESTED to FAReview
-   - Facility agent receives notification
-   - Action displayed in dashboard: "Submit Term Sheet"
+1. **Click Update**
+   - After making all changes, click **Update**
+   - An Adobe Sign popup appears again
+   - Complete the electronic signature
+   - Status changes to **BorrowerSigned**
+
+2. **Resubmit**
+   - After signing, the Submit to FA popup appears
+   - Click **Submit** to resubmit the updated term sheet
+   - Status changes to **FAReview**
+   - Facility agent reviews the updated term sheet
+
+## Term Sheet Statuses
+
+| Status | Meaning | Available Actions |
+|--------|---------|-------------------|
+| Draft | Initial creation, not yet signed | Edit, sign |
+| BorrowerSigned | Signed by borrower, ready to submit | Submit to FA |
+| FAReview | Submitted, awaiting facility agent decision | View (borrower), Review (FA) |
+| Accepted | Approved by facility agent | View (master commitment created) |
+| Rejected | Rejected by facility agent (final) | View only |
+| CHANGES_REQUESTED | Facility agent requested modifications | Edit, sign, resubmit |
 
 ## Rules & Validations
 
-- You can only edit term sheets while they're in Draft status. Once submitted or approved, editing is restricted.
+- **Signing Required**: You must sign the term sheet via Adobe Sign before submitting. Unsigned term sheets cannot be submitted.
 
-- You must sign the term sheet electronically before submitting. Unsigned term sheets cannot be submitted.
+- **One Submission at a Time**: Term sheets can only be submitted once. After submission, you wait for the facility agent's decision.
 
-- Facility agents can approve, reject, or request changes. They cannot create term sheets themselves.
+- **No Edit After Submission**: You cannot edit term sheets while they're in FAReview status. You can only edit in Draft or CHANGES_REQUESTED status.
 
-- Approved term sheets automatically create master commitments. You don't need to create master commitments manually.
+- **Rejected Is Final**: Rejected term sheets cannot be resubmitted. Create a new term sheet if rejected.
 
-- Rejected term sheets cannot be resubmitted. If rejected, you must create a new term sheet.
-
-- Change requests allow iterative improvement. You can go through multiple rounds of changes until approved or rejected.
-
-- Electronic signatures are legally binding. Once signed, term sheets represent formal proposals.
-
-- Status controls what actions are available. You can only take actions allowed by the current status.
-
-- Required fields must be completed. You cannot submit until all required information is provided.
+- **Auto-Create Master Commitment**: When approved, a master commitment is automatically created. You don't need to create it manually.
 
 ## What Happens Next
 
-After creating a term sheet:
-- Click "Create Draft" button
-- Issuer e-sign popup appears, complete signature
-- Submit Term Sheet popup appears, click Submit
-- Status changes from Draft to FAReview
-- Facility agent clicks "Review Term Sheet" action button
-- Review Term Sheet popup shows with Approve, Reject, and Request Changes buttons
-- Facility agent makes a decision
-- If approved, master commitment is automatically created
-- If rejected, you can create a new term sheet
-- If changes are requested, you can update and resubmit
+**After Creating and Signing:**
+- Submit to facility agent when ready
+- Wait for facility agent review
 
-After term sheet approval:
+**After Submitting:**
+- Facility agent reviews your term sheet
+- You receive notification of the decision (Approved, Rejected, or Changes Requested)
+
+**After Approval:**
 - Master commitment is automatically created
-- Facility agent configures the complete facility structure
-- Facility agent submits master commitment for lender approval
-- Lenders review and approve the facility
-- Facility becomes active
+- Facility agent configures the facility (adds lenders, rules)
+- Facility agent submits to lenders for approval
+- After lender approval, facility becomes active
 
-Understanding the term sheet workflow helps you effectively navigate the first phase of credit facility creation, know what to expect at each stage, and successfully move from proposal to active facility.
+**After Rejection:**
+- Review rejection reason
+- Create a new term sheet addressing the issues
+
+**After Changes Requested:**
+- Edit the term sheet to address requested changes
+- Sign and resubmit for review

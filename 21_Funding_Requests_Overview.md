@@ -7,76 +7,103 @@ description: Learn what funding requests are and how to create them
 
 ## Overview
 
-A funding request is when a borrower requests to draw down funds from an active credit facility. Each request specifies the amount needed, the purpose, includes supporting documentation, and must be reviewed and approved by the facility agent before funds can be disbursed.
+A funding request is how borrowers draw down funds from an active credit facility. After a master commitment is active and deal modelling is complete, borrowers can create funding requests specifying the amount, purpose, funding date, and uploading supporting documentation. Each request is reviewed by the facility agent before funds can be disbursed.
 
 ## What Funding Requests Are
 
-A funding request is a specific request to borrow a portion of your approved facility limit. You specify how much you need, what you'll use it for, and provide documentation to support your request. Each funding request is reviewed individually by facility agents to ensure it complies with facility rules and that sufficient borrowing capacity is available.
+A funding request is a specific request to borrow a portion of your approved facility limit. You specify how much you need, when you need it, what the funds are for, and upload supporting documentation. Each funding request is reviewed individually by the facility agent.
 
-Funding requests are separate from the facility itself—you can create multiple funding requests over time as long as you stay within your facility limits. Each request goes through its own review and approval process, and approved requests trigger the creation of funding notices that are sent to lenders for their review and approval.
+You can create multiple funding requests over time as long as you stay within your facility limits. Each request goes through its own review and approval process, and approved requests trigger the automatic generation of funding notices.
 
 ## Purpose and Use Cases
 
-Funding requests enable flexible access to approved facility limits:
+**For Incremental Borrowing** - Request specific amounts as needed rather than borrowing the full facility limit at once.
 
-**For Incremental Borrowing** - You can request specific amounts as needed rather than borrowing the full facility limit at once.
+**For Purpose-Specific Drawdowns** - Each request specifies the purpose of the funds.
 
-**For Purpose-Specific Drawdowns** - Each request specifies the purpose of the funds, allowing you to request funds for specific business needs.
+**For Ongoing Capital Access** - Create multiple funding requests over time throughout the facility term.
 
-**For Ongoing Capital Access** - You can create multiple funding requests over time, providing ongoing access to capital throughout the facility term.
-
-**For Controlled Disbursement** - Each drawdown is reviewed individually, ensuring proper oversight and compliance with facility rules.
-
-**For Capacity Management** - Funding requests are evaluated against available borrowing capacity, ensuring you stay within approved limits.
-
-**For Documentation** - Each request includes supporting documentation, providing transparency and justification for fund usage.
+**For Controlled Disbursement** - Each drawdown is reviewed individually before funds are disbursed.
 
 ## Key Components
 
-**Draw Amount** - The specific amount you want to borrow. This must be within your available borrowing capacity, which is calculated based on facility rules and current utilization. You can request any amount up to your available capacity.
+**Draw Amount** - The specific amount you want to borrow from your available capacity.
 
-**Purpose of Funds** - A detailed description of what the funds will be used for. This helps facility agents and lenders understand how funds will be used and evaluate the request appropriately.
+**Funding Date** - When you need the funds.
 
-**Funding Date** - When you need the funds. This helps coordinate timing and ensures funds are available when needed.
+**Purpose of Funds** - Description of what the funds will be used for.
 
-**Supporting Documentation** - Documents that justify the request and demonstrate compliance with facility rules. These include collateral addendum documents, financial statements, and KYC documentation. All documents are securely stored and tracked with complete history.
+**Draw Currency** - The currency for the drawdown.
 
-**Collateral Information** - Collateral information is included in the collateralAddendum document. If the facility requires collateral, you specify which loans or assets will be used, including collateral details, descriptions, and valuations if required.
-
-**Status** - The current stage of the request in its workflow, such as DRAFT, FAReview, APPROVED, REJECTED, or CHANGES_REQUESTED. Status determines what actions are available and what needs to happen next.
+**Collateral Addendum** - Supporting documentation uploaded with the request.
 
 ## How Funding Requests Work
 
-**Creation** - You create funding requests against active facilities by specifying the amount, purpose, funding date, and uploading supporting documentation. Requests start in DRAFT status, allowing you to work on them before submission.
+**1. Prerequisites**
+
+Before creating a funding request:
+- Master commitment must be **Active**
+- Facility Setup Status must be **Completed** (deal modelling done)
+- You may need to map NFT-minted loans to the facility first
+
+**2. Creating the Request**
+
+Navigate to Credit Facility section and click **Funding Request** on your active master commitment. A popup opens where you enter:
+- Draw amount
+- Funding date
+- Purpose of funds
+- Draw currency
+- Upload Collateral Addendum
 
 ![Funding Request Creation - Issuer](imagesByMdFilesFolder/21/FundingRequest_Creation_Issuer.png)
 
-**Submission** - When ready, you submit funding requests to facility agents for review. Status changes to FAReview, and facility agents evaluate the request for compliance with facility rules and available borrowing capacity.
+**3. Review and Submit**
+
+Click **Review** to create the funding request (status: DRAFT). Click **Submit** to send to the facility agent for review (status: FAReview).
 
 ![Funding Request Submit - By Issuer](imagesByMdFilesFolder/21/funding_request_Submit_By_Issuer.jpg)
 
-**Facility Agent Review** - Facility agents review requests to ensure they comply with facility rules, verify sufficient borrowing capacity is available, review documentation, and assess overall request quality. They can approve, reject, or request changes.
+**4. Facility Agent Review**
+
+The facility agent reviews the request and can:
+- **Approve**: Funding notice is generated (Pending Token Generated)
+- **Reject**: Status changes to REJECTED
+- **Request Changes**: Status changes to CHANGES_REQUESTED
+
+No e-sign is required for funding request approval.
 
 ![Review Funding Request - FA Review](imagesByMdFilesFolder/21/review_funding_request_FAReview.png)
 
-**Approval Outcomes** - When approved, funding notices are automatically created. When rejected, you receive a reason and can create new requests. When changes are requested, you can update and resubmit.
+**5. After Approval**
 
-**Funding Notice Generation** - Approved requests automatically trigger funding notice creation. Funding notices document the approved drawdown and are sent to lenders for review. Tokens are generated, and the drawdown process proceeds.
+When approved:
+- Funding notice is automatically generated
+- FA clicks Approve on funding notice
+- FA e-signs for each lender (E-sign 0/n)
+- Each lender can see the funding notice once their e-sign is complete
+- Lenders review, transfer funds, and Confirm and Settle
+- Funds are disbursed to borrower
 
-**Lender Review** - Lenders review funding notices and approve or reject individual drawdowns. Each lender makes independent decisions, and participation is tracked individually.
+## Funding Request Statuses
 
-**Fund Disbursement** - After lender approval, funds are transferred to borrowers. Lenders confirm transfers, completing the drawdown process.
+| Status | Meaning | Available Actions |
+|--------|---------|-------------------|
+| DRAFT | Created, not submitted | Edit, Submit |
+| FAReview | Submitted, awaiting FA decision | View only |
+| APPROVED | Approved, funding notice generated | View |
+| REJECTED | Rejected (final) | Create new request |
+| CHANGES_REQUESTED | FA requested modifications | Edit, resubmit |
 
 ## Important Points to Know
 
-**Flexible Drawdowns** - You can request any amount up to your available borrowing capacity, not necessarily the full facility limit.
+**Active Facility Required** - Funding requests can only be created for Active master commitments.
 
-**Individual Review** - Each funding request is reviewed individually by facility agents to ensure compliance with facility rules and available borrowing capacity.
+**Deal Modelling Required** - Facility Setup Status must be Completed before you can create funding requests.
 
-**Automatic Notice Generation** - When approved, funding notices are automatically generated and sent to lenders for review and approval.
+**Map Loans First** - You may need to map NFT-minted loans to the facility before creating funding requests.
 
-**Multiple Requests Over Time** - You can create multiple funding requests over time as long as you stay within your facility limits and available borrowing capacity.
+**One at a Time** - Submit one funding request at a time and wait for the decision.
 
-**Three Possible Outcomes** - Facility agents can approve requests (creating funding notices), reject requests (requiring new requests), or request changes (allowing updates and resubmission).
+**Rejected Is Final** - Rejected requests cannot be resubmitted; create a new request.
 
-**Status Tracks Progress** - Request status shows where each request is in its workflow, from creation through review to approval or rejection.
+**Auto-Generated Notices** - Approved requests automatically generate funding notices.

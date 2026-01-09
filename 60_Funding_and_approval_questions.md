@@ -1,109 +1,126 @@
 ---
 title: Funding and Approval Questions
-description: Answers to frequently asked questions about credit facilities, funding, and approvals
+description: Frequently asked questions about the credit facility funding and approval process
 ---
 
 # Funding and Approval Questions
 
 ## Overview
 
-This comprehensive guide answers common questions about credit facilities, funding requests, approvals, and the funding process. Use this guide when you have questions about credit facility processes, funding operations, and approval workflows.
+This guide answers common questions about the credit facility funding and approval process. Use this as a quick reference for understanding how different parts of the workflow operate.
 
-## Frequently Asked Questions
+## Term Sheet Questions
 
-### Term Sheet Questions
+### Q: How do I create a term sheet?
 
-**Q: How long does term sheet review take?**
+Navigate to **Credit Facility** from the left menu, click **Term Sheet Setup** at the top right, select **Create Via Wizard**, fill in the details, and click **Create Draft**.
 
-A: Review time varies depending on facility agent workload and term sheet complexity. Typically, reviews take a few days. You'll receive notifications when status changes. Check with the facility agent if you have concerns about timing. Review timing depends on various factors including complexity and reviewer availability.
+### Q: Do I need to sign the term sheet?
 
-**Q: What happens if my term sheet is rejected?**
+Yes. After clicking Create Draft, an Adobe Sign popup opens automatically. You must complete the electronic signature before you can submit to the facility agent.
 
-A: If your term sheet is rejected, it enters a final state. No master commitment is created, and the facility does not proceed. You receive a rejection reason. You can create a new term sheet addressing the issues that led to rejection. Rejection is final and requires creating a new term sheet.
+### Q: Can I edit a term sheet after submitting?
 
-**Q: Do I need to re-sign if changes are requested?**
+No. Once submitted (FAReview status), you cannot edit. You can only edit if the facility agent requests changes (CHANGES_REQUESTED status).
 
-A: Usually yes. When changes are requested, you typically need to re-sign the term sheet after making changes. The system will indicate if re-signing is required. Complete electronic signature again after making requested modifications. Re-signing ensures that changes are properly authorized.
+### Q: What happens when my term sheet is approved?
 
-**Q: Can I edit a term sheet after submitting it?**
+A master commitment is automatically created with Draft status. The facility agent then configures the facility.
 
-A: No, once submitted, you cannot edit term sheets while they're under review. If changes are requested, you can edit and resubmit. Otherwise, you must wait for the facility agent's decision. Editing restrictions maintain workflow integrity during review.
+### Q: What if my term sheet is rejected?
 
-**Q: What happens after my term sheet is approved?**
+Rejected term sheets cannot be resubmitted. You must create a new term sheet.
 
-A: When your term sheet is approved, a master commitment is automatically created. The facility agent configures the complete facility structure, then submits it for lender approval. Once lenders approve, the facility becomes active, and you can create funding requests. Approval triggers the facility setup process.
+## Master Commitment Questions
 
-### Master Commitment Questions
+### Q: How is a master commitment created?
 
-**Q: Why was a master commitment created automatically?**
+Master commitments are automatically created when term sheets are approved. You cannot create them manually.
 
-A: Master commitments are automatically created when term sheets are approved. The system creates them with information from your approved term sheet, then the facility agent configures the complete facility structure. Auto-creation ensures consistency and efficiency.
+### Q: Who configures the master commitment?
 
-**Q: How long does lender approval take?**
+The facility agent configures the master commitment by adding lenders, setting up facility rules, and completing all required sections.
 
-A: Lender approval time varies depending on lender workload and facility complexity. Any lender approval activates the facility - you don't need all lenders to approve. You'll be notified when the facility becomes active. Approval timing depends on lender processes.
+### Q: What are sub-facilities?
 
-**Q: Can I create funding requests before the facility is active?**
+For multiple-branch master commitments, sub-facilities allow the facility agent to assign different lender groups. Each sub-facility has its own lenders, and no two sub-facilities can have the same lenders.
 
-A: No, you can only create funding requests against active facilities. Facilities must be approved by at least one lender and in ACTIVE status before you can create funding requests. ACTIVE status is required for funding request creation.
+### Q: When does the facility become active?
 
-**Q: What happens if all lenders reject the master commitment?**
+The facility becomes Active when any one lender approves and e-signs the master commitment.
 
-A: If all lenders reject (which is rare), the facility does not become active. The facility agent may reconfigure the master commitment and resubmit, or the process may stop. Check with the facility agent about next steps. Lender rejection prevents facility activation.
+## Deal Modelling Questions
 
-**Q: Can I see facility setup progress?**
+### Q: What is deal modelling?
 
-A: Yes, you can see facility setup status. The funding request button will be enabled when the facility setup progress is completed, else it will be disabled.
+Deal modelling is when the facility agent configures operational parameters after the master commitment becomes Active. This must be completed before borrowers can raise funding requests.
 
-### Funding Request Questions
+### Q: Can I delegate deal modelling?
 
-**Q: How much can I request in a funding request?**
+Yes. Facility agents can click the **Delegation** button to ask the admin to complete deal modelling on their behalf.
 
-A: You can request up to your available borrowing capacity. The system shows available capacity, and you cannot request more than what's available. Available capacity is calculated based on facility rules and current utilization. Capacity limits ensure compliance with facility terms.
+### Q: Why can't I raise a funding request?
 
-**Q: Can I create multiple funding requests?**
+Check if:
+1. The master commitment is Active
+2. Deal modelling is complete (Facility Setup Status: Completed)
 
-A: Yes, you can create multiple funding requests as long as you don't exceed total facility limits. Each request goes through the review process individually. You can have only one draft request per facility at a time. Multiple requests enable flexible drawdown management.
+You can only raise funding requests after both conditions are met.
 
-**Q: What happens if my funding request is rejected?**
+## Funding Request Questions
 
-A: If your funding request is rejected, no funding notice is created, and the drawdown doesn't proceed. You receive a rejection reason. You can create a new funding request addressing the issues that led to rejection. Rejection is final and requires creating a new request.
+### Q: What do I need to create a funding request?
 
-**Q: Can I edit a funding request after submitting it?**
+You need:
+- Active master commitment
+- Completed deal modelling
+- NFT-minted loans mapped to the facility (if required)
+- Draw amount, funding date, purpose, and collateral addendum
 
-A: No, once submitted, you cannot edit funding requests while they're under review. If changes are requested, you can edit and resubmit. Otherwise, you must wait for the facility agent's decision. Editing restrictions maintain workflow integrity during review.
+### Q: Is e-signature required for funding requests?
 
-**Q: How long does funding request review take?**
+No. Unlike term sheets, facility agents don't need to e-sign to approve funding requests.
 
-A: Review time varies depending on facility agent workload and request complexity. Typically, reviews take a few days. You'll receive notifications when decisions are made. Review timing depends on various factors.
+### Q: What happens after my funding request is approved?
 
-**Q: Can I cancel a funding request?**
+A funding notice is automatically generated. The facility agent approves it and e-signs for each lender individually. Each lender can see the notice once their e-sign is complete and can then transfer funds.
 
-A: Cancellation depends on funding request status. Draft requests can usually be cancelled, but submitted requests may not be cancellable. Check funding request status and workflow rules to see if cancellation is available.
+### Q: Can I resubmit a rejected funding request?
 
-### Funding Notice Questions
+No. Rejected funding requests cannot be resubmitted. You must create a new funding request.
 
-**Q: What are tokens?**
+## Funding Notice Questions
 
-A: Tokens represent drawdown amounts digitally. They enable tracking and distribution to lenders. Tokens are allocated to lenders based on their participation percentages in the facility. They facilitate the fund transfer process. Tokens provide digital representation of drawdown amounts.
+### Q: How is a funding notice created?
 
-**Q: When are tokens generated?**
+Funding notices are automatically created when funding requests are approved. You cannot create them manually.
 
-A: Tokens are generated by facility agents after funding requests are approved. Facility agents generate tokens and configure distribution to lenders. After tokens are generated, you can approve the token transfer. Token generation occurs after funding request approval.
+### Q: What does E-sign (0/n) mean?
 
-**Q: Can I see which lenders have approved drawdowns?**
+The facility agent must e-sign the funding notice for each lender individually. The count shows progress (0/n means none signed, n/n means all signed).
 
-A: Yes, you can see which lenders have approved or rejected drawdowns. Each lender's decision is tracked individually, showing approval or rejection status. This information is visible on the funding notice details page. Lender decision tracking provides transparency.
+### Q: When do lenders see the funding notice?
 
-**Q: How long does it take for funds to be transferred?**
+Lenders see funding notices after:
+1. Facility agent approves the funding notice
+2. Facility agent e-signs for each lender individually
 
-A: Fund transfer timing depends on lender processes. After lenders approve drawdowns, they transfer funds and confirm transfers. Transfer timing varies by lender. You'll receive funds as lenders confirm transfers. Transfer timing depends on lender processes.
+### Q: How do lenders complete the process?
 
-**Q: What happens if a lender rejects a drawdown?**
+Lenders review the funding notice in their Credit Facility section, select a payment method, transfer funds, and click **Confirm and Settle**.
 
-A: If a lender rejects a drawdown, that lender's portion doesn't proceed. Other lenders can still approve their portions. The facility agent manages the drawdown process and coordinates with lenders. Lender rejection affects only that lender's portion.
+## Role-Related Questions
 
-**Q: Can I see token distribution details?**
+### Q: What are the role names in credit facility?
 
-A: Yes, you can see token distribution details on the funding notice details page. Distribution shows how tokens are allocated to lenders, including amounts and percentages. Token distribution information provides complete transparency.
+- Issuer → **Borrower**
+- Market Maker → **Facility Agent**
+- Investor → **Lender**
 
+### Q: Where do lenders see pending facilities?
+
+Lenders see master commitments awaiting approval in their **Opportunities** section from the left menu.
+
+### Q: Where do lenders see approved facilities?
+
+Lenders see approved facilities and funding notices in their **Credit Facility** section from the left menu.

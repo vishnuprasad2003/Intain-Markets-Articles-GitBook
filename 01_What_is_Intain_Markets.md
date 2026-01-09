@@ -7,54 +7,63 @@ description: Learn about the Intain Markets platform and its capabilities for st
 
 ## Overview
 
-Intain Markets is a digital infrastructure platform for structured finance transactions. It coordinates multiple parties—issuers/borrowers, investors/lenders, market makers/facility agents, servicers, paying agents, and rating agencies—through workflow-driven processes. The platform manages status transitions, approvals, and relationships, enabling you to focus on business decisions rather than transaction mechanics.
+[Intain Markets](https://intainft.com/intain-markets) is a blockchain-based digital infrastructure platform for structured finance transactions. The platform enables issuers, investors, market makers, servicers, and other participants to collaborate on structured finance workflows with complete transparency and traceability.
 
-## Platform Design
+Built on blockchain technology, Intain Markets provides a secure environment for managing the complete lifecycle of structured finance transactions with tokenization, workflow automation, and multi-party collaboration.
 
-Intain Markets is built on the principle that structured finance transactions require careful coordination between multiple parties with distinct roles. These transactions progress through defined stages, require approvals at critical points, and maintain transparency throughout their lifecycle.
+## What Intain Markets Does
 
-The platform provides:
+Intain Markets provides digital infrastructure for structured finance, enabling:
 
-**Workflow-Driven Progression** - Transactions follow structured paths from creation to completion. The platform enforces proper sequences and prevents skipped stages.
+- **Loan Management** - Onboard, standardize, verify, and tokenize loans
+- **Pool Creation** - Organize loans into investment pools for structured transactions
+- **Facility Management** - Manage credit facilities and fund distribution
+- **Multi-Party Collaboration** - Enable issuers, investors, market makers, and service providers to work together
+- **Workflow Automation** - Automate approval workflows, status tracking, and action controls
 
-**Status-Based Control** - Each item's status controls available actions and ensures proper progression.
+## User Roles
 
-**Quality Approval Gates** - Critical stages require review and approval from authorized parties to ensure standards and compliance.
+| Role | Primary Responsibility |
+|------|------------------------|
+| **Issuer** | Create and manage assets, submit for review |
+| **Market Maker** | Structure deals, review submissions, facilitate transactions |
+| **Investor** | Review opportunities, provide funding |
+| **Servicer** | Ongoing administration and data uploads |
+| **Paying Agent** | Manage payment distributions |
+| **Rating Agency** | Review and analyze (read-only access) |
+| **Admin** | Platform administration |
 
-**Role-Based Access** - Your role determines visibility and available actions. The platform filters information automatically.
+## Core Platform Capabilities
 
-**Multi-Party Collaboration** - Share items with multiple parties for parallel review and collaboration.
+**Blockchain-Based Tokenization:**
+- Assets tokenized on blockchain
+- Unique contract addresses for each token
+- Immutable audit trail on-chain
 
-**Complete Traceability** - Every action, status change, and decision is recorded with attribution and timestamps.
+**Workflow-Driven Processes:**
+- Defined stages for each transaction type
+- Status-based action controls
+- Approval gates at critical points
 
-**Automatic Coordination** - The platform handles coordination between parties, status transitions, and approvals—you focus on business decisions.
+**Multi-Party Collaboration:**
+- Share items with multiple organizations
+- Role-based visibility and permissions
+- Feedback and comment workflows
 
-**Security and Compliance** - Security is built into every aspect, from authentication to digital signatures and audit trails.
+**E-Signature Integration:**
+- Adobe Sign integration for legally binding signatures
+- Signature tracking and status
+- Complete signing audit trail
 
-## Capabilities by Role
+**Complete Traceability:**
+- Every action recorded with user and timestamp
+- Status history for all items
+- IPFS document storage with hash verification
 
-**Issuers/Borrowers** - Organize loan portfolios into pools, present investment opportunities, submit credit facility requests, and manage transactions from creation to completion. Track submissions, respond to feedback, and see when approvals occur.
+## Getting Started
 
-**Market Makers/Facility Agents** - Review opportunities, accept mandates, provide feedback, request changes, approve submissions, and facilitate transactions. Clear decision points ensure you review items at the appropriate stage.
+1. **Login** - Access the platform and select your role
+2. **Dashboard** - View items relevant to your role
+3. **Actions** - Perform actions based on your role and item status
 
-**Investors/Lenders** - View investment opportunities, review pool characteristics and loan details, approve or reject funding requests, and track investments. Make independent decisions with complete information.
-
-**Servicers** - Access assigned pools and facilities, upload loan tapes monthly, manage loan servicing activities, and track ongoing loan administration for smooth post-deal operations.
-
-**Paying Agents** - Access assigned pools and facilities, handle payment distributions, ensure funds are properly allocated to all parties, and manage payment-related activities.
-
-**Rating Agencies** - Read-only access to pool information for analysis and rating purposes with appropriate security controls.
-
-## Key Principles to Understand
-
-**Workflow-Driven Design** - Every action fits into a larger process. The system guides you through the appropriate sequence of steps, ensuring proper order and preventing skipped stages.
-
-**Status-Based Control** - Statuses actively control what actions are available and ensure proper progression. When actions are disabled, the status doesn't allow them yet or prerequisites haven't been met. Statuses prevent improper progression and enable parallel workflows.
-
-**Approval Gates** - Approvals are quality checkpoints that ensure items meet standards and comply with requirements before proceeding. They protect all parties, enable improvement through change requests, and create accountability through documented decisions.
-
-**Role-Based Access** - Your role determines your view and capabilities. The platform automatically filters information and actions based on your role, ensuring you only see and can act on what's appropriate for your responsibilities.
-
-**Collaborative by Design** - Sharing, feedback, and parallel review are core capabilities. Multiple parties can work together efficiently while respecting status boundaries and role permissions.
-
-**Complete Traceability** - Every action, status change, and decision is tracked with attribution and timestamps, ensuring accountability and compliance. Complete audit trails support regulatory requirements and enable issue resolution.
+For detailed information on specific features, refer to the relevant documentation sections.

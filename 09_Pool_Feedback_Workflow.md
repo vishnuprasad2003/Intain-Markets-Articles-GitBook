@@ -7,152 +7,232 @@ description: Learn how to provide and respond to feedback on pools
 
 ## Overview
 
-The feedback workflow allows market makers, investors, and other parties to provide input on pools shared with them. This collaborative process helps improve pool quality, ensures all parties are aligned before finalizing deals, and enables effective communication between issuers and reviewers. Feedback can be provided at both pool-level and loan-level, allowing for detailed and specific input.
+The feedback workflow enables collaboration between issuers and reviewing parties on shared pools. Market makers, investors, and rating agencies can provide feedback at both pool-level and loan-level to communicate observations, questions, and change requests. Issuers review this feedback and respond by making changes or providing explanations. This iterative process helps improve pool quality and ensures all parties are aligned before finalizing deals.
 
 ## Who Can Use This
 
-- Market Makers who review pools and want to request changes or provide comments
-- Investors who review opportunities and have questions or concerns
-- Rating Agencies who analyze pools and need to communicate findings
-- Issuers who receive feedback and need to respond and make changes
+- **Market Makers/Facility Agents**: Provide pool-level and loan-level feedback after accepting a mandate. Can request loan removals using the cross icon in the Loans tab.
+
+- **Investors/Lenders**: Provide pool-level and loan-level feedback on shared pools. Can request loan removals using the cross icon in the Loans tab.
+
+- **Rating Agencies**: Provide pool-level and loan-level feedback (comments) on shared pools. Cannot request loan removals.
+
+- **Issuers/Borrowers**: View pool-level feedback from other parties. Provide loan-level feedback/comments via the chat box icon. Respond to loan removal requests using tick (accept) or cross (reject) icons.
 
 ## When This Is Used
 
-Use feedback workflow when:
-- Reviewers want to request changes or provide comments on pools
-- Issuers need to address feedback and improve pools based on input
-- Parties want to discuss pool details or ask questions
-- Change requests need to be communicated formally
-- Issues or concerns need to be flagged for attention
-- Clarifications are needed about pool characteristics or loan data
+**Use Pool-Level Feedback when:**
+- You have comments or observations about the pool overall
+- You want to ask questions about pool composition, metrics, or structure
+- You need to communicate findings or concerns at the pool level
+- You're reviewing the pool and want to document your analysis
+
+**Use Loan-Level Feedback when:**
+- You have comments about specific loans
+- You notice data issues or concerns with individual loans
+- You want to request changes to specific loans
+- You need to discuss loan-specific characteristics or eligibility
+
+**Use Loan Removal Requests when:**
+- You (as market maker or investor) want a loan removed from the pool
+- A loan doesn't meet eligibility criteria
+- A loan has issues that affect pool quality
+- You want the issuer to reconsider including a specific loan
 
 ## Step-by-Step Process
 
-### Providing Feedback
+### Viewing Pool Details Before Providing Feedback
 
-1. **Review the Pool**
-   - Navigate to the shared pool in your view
-   - View pool details, metrics, and loan characteristics
-   - Analyze loan data and pool composition
-   - Identify areas needing attention or improvement
+1. **Navigate to Pool Details**
+   - From your Pools dashboard, click on the Pool ID
+   - The pool details page opens with summary tiles, metrics, and tabbed sections
+
+2. **Review Pool Information**
+   - Review summary metrics to understand pool composition
+   - Check loan count, balances, weighted averages, and other characteristics
+   - Examine charts in the Summary section for visual analysis
 
 ![Pool Detail](imagesByMdFilesFolder/09/PoolDetail.png)
 
-2. **Decide Feedback Type and Level**
-   - **General Feedback**: Comments, questions, or observations about the pool
-   - **Change Request**: Formal request for modifications that need to be addressed
-   - **Pool-Level Feedback**: Feedback about the pool overall (metrics, composition, structure)
-   - **Loan-Level Feedback**: Feedback about specific loans (data issues, eligibility, characteristics)
+3. **Review Loan Details**
+   - Navigate to the **Loans** tab to see individual mapped loans
+   - Review loan characteristics, statuses, and any existing feedback indicators
+   - Navigate to the **Loan Tape** section for detailed loan-level data
+   - Use the **As Of Date** dropdown to view data from different reporting periods
 
-3. **Access Feedback Function**
-   - Navigate to the pool's details page
-   - Click to add new feedback
-   - Select whether this is pool-level or loan-level feedback
-   - If loan-level, select the specific loan(s) you're providing feedback on
+### Providing Pool-Level Feedback (Market Makers, Investors, Rating Agencies)
+
+1. **Navigate to the Feedback Section**
+   - In pool details, locate the **Feedback** section
+   - This section shows existing pool-level feedback and allows you to add new feedback
 
 ![Pools Feedback - Market Maker](imagesByMdFilesFolder/09/Pools_Feedback_MarketMaker.png)
 
-4. **Enter Feedback Details**
-   - Type your feedback message clearly and specifically
-   - Specify if this is a change request (requires action) or general feedback (informational)
-   - Provide context and explanation for your feedback
-   - Be specific about what needs to change or what your concern is
+2. **Enter Your Feedback**
+   - Click to add new feedback
+   - Type your message clearly and specifically
+   - Provide context for your observation, question, or concern
+   - Be specific about what you're commenting on or what you need clarified
 
 ![Enter Feedback](imagesByMdFilesFolder/09/EnterFeedback.png)
 
-5. **Submit Feedback**
-   - Review your feedback message
-   - Confirm the feedback type and level
-   - Click "Send" button
+3. **Submit Feedback**
+   - Review your message for clarity
+   - Click **Submit** button
    - Your feedback is saved and recorded
-   - Issuer receives notification about the feedback
-   - Feedback appears in the pool's feedback section for pool-level feedback and in individual loan's chat box icon pop-up modal for loan-level feedback
+   - The issuer receives notification about the new feedback
+   - Your feedback appears in the Feedback section
 
 ![View Entered Feedback](imagesByMdFilesFolder/09/ViewEnteredFeedback.png)
 
+### Providing Loan-Level Feedback (All Roles)
+
+1. **Navigate to the Loans Tab**
+   - In pool details, go to the **Loans** tab
+   - Locate the loan you want to provide feedback on
+   - Find the **chat box icon** in the Actions column for that loan
+
+2. **Open the Feedback Dialog**
+   - Click the chat box icon to open the loan-level feedback dialog
+   - View any existing feedback/comments for this specific loan
+   - The dialog shows the conversation history for this loan
+
+3. **Enter Loan-Specific Feedback**
+   - Type your message about this specific loan
+   - Be clear about what aspect of the loan you're commenting on
+   - Reference specific loan characteristics if relevant
+
+4. **Submit Feedback**
+   - Click send to save your feedback
+   - Your feedback is recorded for this specific loan
+   - Other parties with access can view the feedback conversation
+   - The loan may show a feedback indicator in the Loans tab
+
+### Requesting Loan Removal (Market Makers and Investors)
+
+If you believe a loan should be removed from the pool, you can request its removal:
+
+1. **Navigate to the Loans Tab**
+   - In pool details, go to the **Loans** tab
+   - Locate the loan you want to request removal for
+   - Find the **cross icon** in the Actions column
+
+2. **Request Removal**
+   - Click the cross icon to request removal of this loan
+   - The system records your removal request
+   - The issuer receives notification of the removal request
+   - The loan shows a pending removal status
+
+3. **Wait for Issuer Response**
+   - The issuer reviews your removal request
+   - The issuer sees tick and cross icons next to the loan:
+     - **Tick**: Issuer accepts the removal—loan becomes **Removed** and is excluded from pool calculations
+     - **Cross**: Issuer rejects the removal request—loan remains in the pool
+   - You're notified of the issuer's decision
+
 ### Responding to Feedback (Issuers)
 
-1. **Review All Feedback**
-   - Check your dashboard for pools with unread feedback
-   - Navigate to pools with feedback notifications
-   - Review all feedback messages carefully
-   - Check change requests first (these require action)
-   - Read comments and questions
-   - Note any flagged items or concerns
+1. **Check for New Feedback**
+   - Your dashboard shows notifications for pools with new/unread feedback
+   - Pools with unread feedback are highlighted or show feedback counts
+   - Navigate to pools with feedback to review
 
-2. **Prioritize Actions**
-   - Address critical issues first (blocking problems, data errors)
-   - Handle change requests that prevent pool progression
-   - Then address other feedback and questions
-   - Create a plan for addressing all feedback
+2. **Review Pool-Level Feedback**
+   - In pool details, go to the **Feedback** section
+   - Review all feedback messages from market makers, investors, and rating agencies
+   - Note questions that need answers and concerns that need addressing
 
-3. **Make Necessary Changes**
-   - Update pool information if needed
-   - Fix identified data issues
-   - Address loan-level concerns (remove loans, correct data, etc.)
-   - Update pool metrics if loans are added or removed
-   - Resolve flagged items
-   - Make all changes requested in change requests
+3. **Respond to Feedback**
+   - For pool-level feedback: You can view the feedback but cannot add pool-level feedback yourself
+   - For loan-level feedback: Click the chat box icon on the relevant loan to respond with loan-level comments
+   - Address questions by providing clarifications
+   - Address concerns by making changes or explaining your position
 
-4. **Respond to Feedback**
-   - Respond to feedback messages with your actions
-   - Explain changes you made
-   - Answer questions that were asked
-   - Ask for clarification if feedback is unclear
-   - Confirm when you've completed requested changes
-   - Provide updates on your progress
+4. **Make Requested Changes**
+   - If feedback suggests changes, make updates as appropriate:
+     - Edit pool details if needed
+     - Map or unmap loans based on feedback
+     - Upload updated loan tape data if requested
+   - Pool metrics update automatically when loans are added or removed
+
+### Responding to Loan Removal Requests (Issuers)
+
+When market makers or investors request loan removals, you decide whether to accept or reject:
+
+1. **Identify Removal Requests**
+   - In the Loans tab, loans with removal requests show tick and cross icons
+   - These icons appear when a market maker or investor has clicked the cross icon on a loan
+
+2. **Review the Request**
+   - Consider why the removal was requested
+   - Review any associated feedback in the loan's chat box
+   - Evaluate whether removing the loan is appropriate
+
+3. **Make Your Decision**
+   - **Tick (Accept)**: Click the tick icon to accept the removal
+     - The loan status changes to **Removed**
+     - The loan is excluded from pool calculations
+     - Pool metrics update automatically
+   - **Cross (Reject)**: Click the cross icon to reject the removal request
+     - The loan remains in the pool
+     - The requesting party is notified
 
 ### Managing Feedback History
 
 1. **View Feedback History**
-   - Access the pool's feedback section
-   - See all feedback messages in chronological order
-   - View who provided feedback and when
-   - Review feedback responses and status
+   - Pool-level feedback appears in the Feedback section in chronological order
+   - Loan-level feedback appears in the chat dialog for each specific loan
+   - All feedback includes who provided it and when
+
+2. **Track Unread Feedback**
+   - Unread feedback is highlighted or counted
+   - Check notifications for new feedback activity
+   - Review and address feedback promptly
 
 ## Rules & Validations
 
-- You can only provide feedback if sharing permissions allow it. Some pools may have view-only access, preventing feedback.
+- **Feedback Permissions**: Your ability to provide feedback depends on sharing permissions. If the issuer disabled feedback for your organization, you cannot add feedback.
 
-- Change requests require issuers to make changes and resubmit. Change requests are more formal than general feedback and require action.
+- **Mandate Acceptance Required**: Market makers cannot provide feedback until they accept the mandate. Before acceptance, feedback functionality is not available.
 
-- Feedback can be pool-level or loan-level. Pool-level feedback is about the pool overall, while loan-level feedback is about specific loans.
+- **Pool-Level vs Loan-Level**: Pool-level feedback appears in the Feedback section; loan-level feedback appears in the chat dialog for specific loans. Use the appropriate level for your feedback.
 
-- Unread feedback is tracked and highlighted. Issuers see notifications and counts of unread feedback.
+- **Issuer Pool-Level Feedback**: Issuers can view pool-level feedback but cannot add pool-level feedback themselves. Issuers respond through loan-level comments.
 
-- Issuers can respond to feedback by making changes or adding comments. You can address feedback through actions or communication.
+- **Loan Removal**: Only market makers and investors can request loan removals using the cross icon. Rating agencies cannot request removals.
 
-- Feedback is permanent and recorded. All feedback is stored in the audit trail with who provided it and when.
+- **Removal Decision by Issuer**: Only issuers can accept (tick) or reject (cross) loan removal requests. The issuer's decision is final for each request.
 
-- Multiple reviewers can provide feedback. Different parties can provide feedback on the same pool.
+- **Removed Loan Calculations**: When a loan is removed (issuer accepts removal request), it's excluded from pool metrics. Metrics update automatically.
 
-- Feedback can be provided at any time while pool is shared. As long as the pool is shared and in an appropriate status, feedback can be provided.
+- **Feedback Is Recorded**: All feedback is stored with who provided it, when, and the content. Feedback history is maintained for audit purposes.
 
-- Loan-level feedback requires selecting specific loans. You must identify which loan(s) your feedback relates to.
-
-- Feedback notifications are sent automatically. Issuers receive notifications when feedback is provided.
+- **Notification System**: Issuers receive notifications when feedback is provided. Other parties receive notifications when issuers respond or make decisions.
 
 ## What Happens Next
 
-After providing feedback:
-- Feedback appears in the pool's feedback section
-- Unread feedback is highlighted for issuers
-- Change requests require pool updates and resubmission
-- General feedback can be addressed through discussion or changes
-- Feedback history is maintained for audit purposes
+**After Providing Feedback:**
+- Your feedback appears in the pool's feedback section (pool-level) or loan chat (loan-level)
+- The issuer receives notification and can review your feedback
+- The issuer may make changes based on your input
+- The issuer may respond with clarifications or explanations
+- Feedback conversation continues as needed
 
-After responding to feedback:
-- Reviewers can see your responses and changes
-- Change requests are marked as addressed when changes are made
-- Pool may be resubmitted for review
-- Reviewers can provide additional feedback if needed
-- Pool quality improves through iterative feedback and changes
+**After Responding to Feedback (Issuers):**
+- Reviewers can see your responses and any changes you made
+- Questions are answered and concerns are addressed
+- Pool composition may be refined based on feedback
+- The pool improves through collaborative input
+- Pool moves closer to deal readiness
 
-After resolving feedback:
-- All parties can see that feedback has been addressed
-- Change requests are marked as completed
-- Pool can progress to next stages
-- Feedback history shows the complete conversation
-- Pool is improved based on collaborative input
+**After Loan Removal Decisions:**
+- **If Accepted**: Loan is marked Removed and excluded from calculations; pool metrics update
+- **If Rejected**: Loan remains in pool; requesting party is notified
+- All decisions are recorded for audit purposes
+- Feedback conversation may continue regarding the loan
 
-The feedback workflow enables effective collaboration, helping improve pool quality through constructive input and ensuring all parties are aligned before finalizing deals. This iterative process helps catch issues early and ensures pools meet all requirements before commitment.
+**Iterative Process:**
+- Feedback may go through multiple rounds
+- Pool composition improves with each iteration
+- All parties become aligned on pool content
+- Pool progresses toward finalization when feedback is resolved

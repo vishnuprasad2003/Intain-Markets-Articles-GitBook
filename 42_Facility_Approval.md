@@ -1,99 +1,135 @@
 ---
 title: Facility Approval
-description: Learn how lenders review and approve master commitments to activate credit facilities
+description: Learn how lenders review and approve master commitments
 ---
 
 # Facility Approval
 
 ## Overview
 
-Facility approval is the process where lenders review master commitments and approve them, activating the credit facility. This guide covers how lenders evaluate facilities, assess facility structure and terms, and make approval decisions.
+After a facility agent submits a master commitment for approval, lenders review and decide whether to approve and commit to the facility. As a lender, you review the facility details, lender commitments, and terms, then approve via electronic signature. Once any lender approves, the facility becomes active.
 
 ## Who Can Use This
 
-- Lenders who receive master commitments for approval
+- **Lenders**: Review master commitments and make approval decisions
 
 ## When This Is Used
 
 Use facility approval when:
-- Master commitments are submitted for your approval
-- You need to evaluate facility proposals
-- You want to activate credit facilities
-- You're making facility participation decisions
-- You're deciding whether to participate in facilities
+- A master commitment appears in your Opportunities section
+- You need to review facility terms before committing
+- You want to approve and e-sign a facility
+- You need to understand what happens after approval
 
-## Review Process
+## Step-by-Step Process
 
-**Accessing Master Commitments** - When facility agents submit master commitments for lender approval, you receive notifications. Navigate to oppurtunities for approval, open master commitment details, and review all information provided.
+### Step 1: Access Pending Facilities
 
-**Review Interface** - The review interface provides comprehensive information about the master commitment, including all facility terms, rules, and lender configuration. You can review the complete facility structure to make informed decisions.
+1. **Navigate to Opportunities**
+   - Log in to the platform with your Lender credentials
+   - From the left expandable menu, click on **Opportunities**
+   - The Opportunities dashboard shows master commitments (or sub-master commitments) shared with your organization
 
-**Reviewing Facility Information** - Review complete facility information including facility terms (amount, interest rates, maturity), facility rules and parameters, borrowing base configuration and calculations, collateral eligibility and valuation methods, lender configuration, and overall facility structure.
+2. **Find the Master Commitment**
+   - Locate the facility awaiting your approval
+   - Status shows **PendingLenderApproval**
+   - For multiple-branch facilities, you see only the sub-master commitment assigned to you
 
-**Evaluating Facility Structure** - Review facility amount, interest rates, and maturity, assess facility rules and parameters, review borrowing base configuration and calculations, evaluate collateral eligibility and valuation methods, and assess overall facility structure and complexity.
+### Step 2: Review the Facility
 
-**Reviewing Lender Configuration** - Check your commitment amount, review your participation percentage, understand voting rights and decision-making, verify lender-specific terms, review other lenders' participation, and assess lender group structure.
+1. **Click Review & Approve**
+   - In the Actions column, click **Review & Approve**
+   - A popup opens showing comprehensive facility details
 
-**Assessing Facility Setup** - Evaluate facility setup completeness, review calculation methods, check rule definitions, verify configuration quality, and assess facility readiness.
+2. **Review All Sections**
+   - Navigate through all tabs in the popup
+   - Review basic facility information
+   - Check commitment amounts and terms
+   - Verify interest rates and fees
+   - Review facility rules and parameters
+   - Examine any attached documents
 
-**Evaluating Risk and Return** - Assess facility risk profile, evaluate borrower creditworthiness, review facility terms and conditions, assess return potential, and consider your risk tolerance.
+3. **Assess the Facility**
+   - Evaluate whether the terms meet your investment criteria
+   - Check your commitment amount and voting percentage
+   - Review other participating lenders (if visible)
+   - Ensure you understand all obligations
 
-## Evaluation Criteria
+### Step 3: Make Approval Decision
 
-**Facility Structure Assessment** - Evaluate facility terms (amount, rates, maturity), assess facility rules and parameters, review borrowing base configuration, check collateral rules and eligibility, and assess overall facility structure.
+1. **Approve the Facility**
+   - If satisfied with the facility terms, click **Approve & E-Sign**
+   - An Adobe Sign popup window opens automatically
+   - Review the master commitment document
+   - Complete the electronic signature process
 
-**Lender Configuration Review** - Verify your commitment amount and participation percentage, understand voting rights and decision-making, review lender-specific terms, check other lenders' participation, and assess lender group structure.
+2. **After Signing**
+   - The master commitment (or your sub-master commitment) moves to your **Credit Facility** section
+   - After any one lender approves and signs, the overall master commitment status changes to **Active**
+   - The facility agent is notified
+   - Facility setup can proceed
 
-**Facility Setup Quality** - Evaluate facility setup completeness, review calculation methods, check rule definitions, verify configuration quality, and assess facility readiness.
+## What Lenders See
 
-**Risk and Return Evaluation** - Assess facility risk profile, evaluate borrower creditworthiness, review facility terms and conditions, assess return potential, and consider your risk tolerance.
+### In Opportunities Section
+- Master commitments (or sub-master commitments) pending your approval
+- Status: PendingLenderApproval
+- Action: Review & Approve
 
-**Overall Facility Assessment** - Consider all factors together, evaluate facility attractiveness, assess fit with your participation criteria, determine if facility should be approved, and make informed decision.
+### In Credit Facility Section (After Approval)
+- Approved and active facilities
+- Funding notices when available
+- Actions: View Facility, Review Funding Notice
 
-## Making Decisions
+## Review Checklist
 
-**Approve Master Commitment** - Approve when facility meets your criteria: facility structure is sound, terms are appropriate, borrower is creditworthy, facility setup is complete, and risk-return profile is acceptable. Click "Approve" button. Complete electronic signature process. Your approval status is updated. If this is the first lender approval, facility status changes to ACTIVE. Facility becomes active, and parties receive notifications.
+When reviewing a master commitment, consider:
 
-**Reject Master Commitment** - Reject when facility doesn't meet your criteria: facility structure concerns, terms are inappropriate, borrower creditworthiness issues, facility setup problems, or risk-return profile unacceptable. Click Reject button, provide rejection reason if needed, enter comments explaining rejection, confirm rejection, your rejection doesn't prevent other lenders from approving, and parties receive notifications.
+**Facility Terms**
+- Commitment amount and your participation
+- Interest rate structure
+- Maturity date
+- Drawdown frequency
+
+**Lender Commitments**
+- Your voting percentage
+- Total facility size
+- Other participating lenders
+
+**Facility Rules**
+- Borrowing limits
+- Collateral requirements
+- Covenant compliance
+
+**Documentation**
+- Supporting documents attached
+- Completeness of information
 
 ## Rules & Validations
 
-- Any lender approval activates the facility. If status is not already ACTIVE, it updates to ACTIVE on first lender approval. You don't need all lenders to approve before facility becomes active.
+- **Review Before Approval**: You should thoroughly review all facility details before approving. Once approved, you are committed to the facility.
 
-- You can only approve master commitments in Pending Lender Approval status. Master commitment status is validated before allowing approval.
+- **E-Signature Required**: You must complete the Adobe Sign process to finalize your approval.
 
-- Electronic signature is required for approval. Your approval must be signed electronically for legal validity.
+- **Any Lender Can Activate**: Once any one lender approves and signs, the master commitment becomes Active. You don't need all lenders to approve.
 
-- Once approved, facility becomes active. Master commitment status changes from Pending Lender Approval to ACTIVE (if not already ACTIVE). Borrowers can create funding requests.
+- **Sub-Facility Assignment**: For multiple-branch facilities, you only see and approve the sub-master commitment assigned to you, not the main facility.
 
-- Your approval decision is tracked individually. Each lender's approval status is tracked separately with timestamps and complete details.
-
-- Rejection doesn't prevent activation. Other lenders can still approve and activate the facility.
-
-- Decisions are final once submitted. You cannot easily reverse approval decisions.
+- **Approval Is Binding**: Your approval represents a commitment to participate in the facility according to the specified terms.
 
 ## What Happens Next
 
-After approving a master commitment:
-- Facility becomes active and operational (if first lender approval)
-- Status changes to ACTIVE
-- Facility agent can manage active facility
-- You can participate in funding
-- Facility is fully functional
+**After Approval:**
+- Master commitment status changes to **Active**
+- Facility moves to your Credit Facility section
+- Facility agent can proceed with deal modelling
 
-After facility activation:
-- Borrowers create funding requests
-- Facility agent reviews and approves requests
-- Funding notices are generated
-- You review and approve individual drawdowns
-- Funds are transferred as you confirm
-- Facility operates according to configured rules
+**After Deal Modelling:**
+- Borrower can map loans to the facility
+- Borrower can create funding requests
+- You receive funding notices when drawdowns are approved
 
-After rejection:
-- Your rejection is recorded
-- Other lenders can still approve
-- Facility may become active if other lenders approve
-- You don't participate in the facility
-- You can participate in future facilities
-
-Understanding facility approval helps lenders effectively evaluate facilities, assess facility structure and terms, make informed participation decisions, and activate credit facilities for borrower use.
+**Funding Notice Review:**
+- When funding notices are ready for your review, they appear in your Credit Facility section
+- You review the drawdown details
+- You transfer funds and confirm settlement

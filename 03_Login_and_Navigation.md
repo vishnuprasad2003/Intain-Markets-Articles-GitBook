@@ -27,7 +27,7 @@ Logging into Intain Markets and navigating the platform is straightforward and r
 
 ![Intain Markets Login Page](imagesByMdFilesFolder/03/IntainMarketsLoginPage.png)
 
-**Your Dashboard** - After login, you'll see a dashboard showing items relevant to your role. As an issuer, you'll see pools you've created. As a market maker, you'll see pools shared with you. As an investor, you'll see investment opportunities. The dashboard helps you quickly see what needs your attention and provides an overview of your activities.
+**Your Dashboard** - After login, you'll see a dashboard showing items relevant to your role. As an issuer, you'll see pools you've created. As a market maker, you'll see pools shared with you. As an investor, you'll see pools shared with you. The dashboard helps you quickly see what needs your attention and provides an overview of your activities.
 
 ![Dashboard - Investor View](imagesByMdFilesFolder/03/Dashboard_Investor.png)
 
@@ -47,7 +47,7 @@ Logging into Intain Markets and navigating the platform is straightforward and r
 
 ## Helpful Tips
 
-**Select the Correct Role** - Select the role that matches what you want to do. If you're creating pools, use the Issuer role. If you're reviewing opportunities, use the Investor role.
+**Select the Correct Role** - Select the role that matches what you want to do. If you're creating pools, use the Issuer role. If you're reviewing shared pools, use the Investor role.
 
 **Check Your Dashboard First** - Your dashboard shows items requiring your attention and recent activity. Check it regularly to stay on top of pending actions.
 

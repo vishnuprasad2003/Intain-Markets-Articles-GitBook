@@ -1,175 +1,108 @@
 ---
-title: Token Approval
-description: Learn how to review token allocations and approve token transfers for funding notices
+title: Funding Notice Processing Overview
+description: Overview of how funding notices are processed from creation to lender visibility
 ---
 
-# Token Approval
+# Funding Notice Processing Overview
 
 ## Overview
 
-Token approval is the step where borrowers approve the transfer of tokens, making funding notices visible to lenders. This guide covers how to review token allocations, verify distribution accuracy, and approve token transfers.
+This guide provides an overview of how funding notices are processed, from the moment a funding request is approved until lenders can see and act on the funding notice. The process involves the facility agent approving and e-signing for each lender.
 
-## Who Can Use This
+## Funding Notice Flow
 
-- Borrowers who have funding notices with generated tokens
+When a funding request is approved, the following process occurs:
 
-## When This Is Used
+### 1. Funding Notice Auto-Generated
 
-Use token approval when:
-- Tokens have been generated for your funding notice by the facility agent
-- You want to proceed with the drawdown process
-- You need to make the funding notice visible to lenders
-- You're ready to enable lender review and approval
-- You want to verify token allocation before proceeding
+**What Happens:**
+- Funding notice is automatically created
+- Status: **Pending Token Generated**
+- Contains all details from the funding request
 
-## Step-by-Step Process
+**Who Acts:** System (automatic)
 
-### Reviewing Token Allocation
+### 2. Facility Agent Approves
 
-1. **Access Funding Notice**
-   - Navigate to Funding Notices section
-   - Find funding notice with tokens generated
-   - Status shows tokens are generated (e.g., "TOKEN_GENERATED")
-   - Open funding notice details
+**What Happens:**
+- Facility agent reviews the funding notice
+- Clicks **Approve**
+- Prepares notice for e-signature process
 
-2. **Review Token Details**
-   - **Total Token Amount**: Check total matches your funding request amount
-   - **Funding Date**: Verify funding date is correct
-   - **Purpose**: Review purpose of funds
-   - **Facility Information**: Confirm facility details are accurate
-   - Verify all information matches your funding request
+**Who Acts:** Facility Agent
 
-3. **Review Lender Distribution**
-   - View how tokens are distributed to lenders
-   - **Allocated Token Amount**: See each lender's allocated token portion
-   - **Participation Percentage**: Check percentages match facility participation
-   - **Lender Name**: Verify all lenders are included
-   - **Commitment Amount**: Review each lender's commitment amount
-   - Review total distribution equals request amount
+### 3. Facility Agent E-Signs for Each Lender
 
-4. **Verify Allocation Accuracy**
-   - Confirm total allocation equals request amount
-   - Check that lender percentages are correct
-   - Verify no errors in distribution
-   - Ensure all lenders are included
-   - Review individual allocations for accuracy
+**What Happens:**
+- Action shows **E-sign (0/n)** where n = number of lenders
+- Facility agent clicks E-sign
+- Adobe Sign popup opens
+- Signs for one lender at a time
+- Count updates: (1/n), (2/n), ... (n/n)
 
-5. **Review Complete Information**
-   - Ensure request amount is correct
-   - Check funding date is appropriate
-   - Verify purpose is accurate
-   - Confirm facility details are correct
-   - Review all information one final time
+**Who Acts:** Facility Agent
 
-### Approving Token Transfer
+**Progress Tracking:**
+| E-Sign Status | Meaning |
+|---------------|---------|
+| E-sign (0/3) | No lenders signed yet |
+| E-sign (1/3) | Signed for 1 lender |
+| E-sign (2/3) | Signed for 2 lenders |
+| E-sign (3/3) | All lenders signed |
 
-1. **Final Review Before Approval**
-   - Review all token allocation details carefully
-   - Verify token amounts match your expectations
-   - Check lender distribution is accurate
-   - Confirm all information is correct
-   - Ensure funding notice status is "TOKEN_GENERATED"
-   - Verify FT tokens have been created (ftContractAddress exists)
-   - Ensure you're ready to proceed
+### 4. Funding Notice Visible to Lenders
 
-2. **Understand Approval Impact**
-   - Approval makes funding notice visible to lenders
-   - Lenders can review and make decisions
-   - Process moves forward to lender review
-   - Status changes from TOKEN_GENERATED to TOKEN_APPROVED
-   - You cannot easily undo approval
-   - Ensure everything is correct before approving
+**What Happens:**
+- As each lender's e-sign is completed
+- That lender can see the funding notice in their Credit Facility section
+- Each lender gains visibility once their e-sign is done
 
-3. **Enter Private Key**
-   - Provide your C-chain private key or JSON file format
-   - Private key is required for blockchain transaction
-   - System uses private key to approve FT tokens to Intain admin wallet
-   - This enables token transfer to investors after payment
-   - Ensure private key is secure and correct
+**Who Acts:** Lenders can act once their e-sign is complete
 
-4. **Initiate Approval**
-   - Click "Approve Token Transfer" button or similar
-   - Review any confirmation messages
-   - Understand what happens after approval
-   - Confirm you want to proceed
+### 5. Lenders Review and Transfer
 
-![Issuer - Token Approval](imagesByMdFilesFolder/34/Issuer_Token_Approval.png)
+**What Happens:**
+- Lenders click **Review Funding Notice**
+- Review drawdown details and allocation
+- Select payment method
+- Transfer funds
+- Click **Confirm and Settle**
 
-5. **Complete Approval**
-   - Tokens are approved to Intain admin wallet via blockchain
-   - Approval transaction is executed and recorded
-   - Status updates to show tokens are approved
-   - Funding notice becomes visible to lenders
-   - Lenders receive notifications
+**Who Acts:** Lenders
 
-6. **Verify Approval Completion**
-   - Confirm status shows "TOKEN_APPROVED"
-   - Verify funding notice is now visible to lenders
-   - Check that lenders receive notifications
-   - Review approval transaction hash
-   - Ensure process can proceed
-   - Status reflects approval
+### 6. Process Complete
 
-### After Approval
+**What Happens:**
+- Tokens transferred to borrower
+- Borrower receives funds
+- Drawdown complete
 
-1. **Lender Visibility**
-   - Funding notice is now visible to all lenders
-   - Lenders receive notifications about the notice
-   - Lenders can review drawdown details
-   - Lenders can make approval decisions
+## Summary Flow
 
-2. **Track Lender Decisions**
-   - Monitor which lenders have reviewed the notice
-   - See which lenders have approved or rejected
-   - Track individual lender participation
-   - Monitor fund transfer confirmations
-   - View lender decision status
+```
+Funding Request APPROVED
+       ↓
+Funding Notice Auto-Generated (Pending Token Generated)
+       ↓
+FA clicks Approve
+       ↓
+FA E-signs for each lender (0/n → n/n)
+       ↓
+Each lender's e-sign complete → Funding Notice VISIBLE TO THAT LENDER
+       ↓
+Lenders review → Transfer funds → Confirm and Settle
+       ↓
+Tokens transferred to Borrower
+```
 
-3. **Proceed with Drawdown**
-   - Approved lenders can proceed with fund transfer
-   - Each lender confirms their transfer independently
-   - Funds are transferred to you as lenders confirm
-   - Drawdown process completes as transfers are confirmed
-   - You receive funds from confirming lenders
+## Key Points
 
-## Rules & Validations
+**Auto-Generation** - Funding notices are automatically created when funding requests are approved.
 
-- You can only approve tokens after they've been generated - tokens must be created by facility agent before you can approve.
+**FA Approval Required** - The facility agent must approve the funding notice.
 
-- You must review allocation before approving - take time to verify token amounts and distribution are correct.
+**Per-Lender E-Sign** - The facility agent signs for each lender individually via Adobe Sign.
 
-- Approval makes funding notice visible to lenders - once approved, lenders can see and review the notice.
+**Visibility After E-Sign** - Each lender sees the funding notice once the facility agent has completed their individual e-sign.
 
-- Once approved, you cannot easily undo the approval - approval is a significant step, so verify everything before approving.
-
-- Lenders can then review and approve drawdowns - after your approval, lenders make their own decisions.
-
-- Token amounts must match funding request - the total token amount should equal your approved funding request amount.
-
-- Lender distribution is based on facility participation - each lender's portion is calculated based on their participation percentage in the facility.
-
-- Approval is required for process to continue - the drawdown process cannot proceed until you approve token transfer.
-
-- Status updates after approval - funding notice status changes to reflect your approval.
-
-- Complete audit trail - your approval is recorded with timestamp and details.
-
-## What Happens Next
-
-After approving token transfer:
-- Funding notice becomes visible to all lenders
-- Lenders receive notifications about the notice
-- Lenders can review drawdown details and make decisions
-- Approved lenders can proceed with fund transfer
-- You can track lender decisions and transfer confirmations
-- Funds are transferred to you as lenders confirm transfers
-- Drawdown process completes as all transfers are confirmed
-
-After lenders approve:
-- Approved lenders transfer their allocated portions
-- Each lender confirms transfer independently
-- You receive funds from confirming lenders
-- Drawdown process completes as transfers are confirmed
-- Complete documentation is maintained
-
-Understanding token approval helps you complete the drawdown process, enable lenders to participate in your funding requests, verify token allocation accuracy, and ensure proper verification before funds are disbursed.
+**Individual Lender Process** - Each lender reviews, transfers, and confirms independently.

@@ -1,103 +1,208 @@
 ---
 title: Pool and Loan Review
-description: Learn how investors review pools and loans shared with them
+description: Learn how market makers and investors review pools and loans shared with them
 ---
 
 # Pool and Loan Review
 
 ## Overview
 
-Pool and loan review is the process where investors and lenders review pools and loans shared with them to evaluate investment opportunities, analyze pool characteristics, assess loan quality, and make informed investment decisions.
+Pool and loan review is the process where market makers and investors evaluate pools shared with them. When issuers share pools with you, you review the pool's composition, metrics, loan characteristics, and details. This guide explains how to review pools and what sections are available for analysis.
 
 ## Who Can Use This
 
-- Investors who review pool opportunities for investment
-- Lenders who evaluate loan characteristics and pool quality
+- **Market Makers/Facility Agents**: Receive pool shares from issuers, evaluate them, provide feedback, request loan removals, and can share pools further with investors.
+
+- **Investors/Lenders**: Receive pool shares from issuers or market makers, evaluate them, provide feedback, and request loan removals. Investors cannot share pools further.
+
+Both roles have the same pool view and review capabilities. The key difference is that market makers can share pools with investors, while investors cannot share pools with anyone.
 
 ## When This Is Used
 
 Use pool and loan review when:
-- Pools are shared with you for investment opportunities
-- You need to evaluate investment potential
-- You want to analyze pool characteristics and loan quality
-- You're making investment decisions
-- You need to assess risk and return profiles
+- You receive a pool share notification from an issuer (or from a market maker, if you're an investor)
+- A pool appears in your Pools dashboard (shared with your organization)
+- You need to evaluate the pool before providing feedback
+- You want to analyze pool characteristics and loan details
 
 ## Review Process
 
-**Accessing Shared Pools** - When issuers share pools with you, you receive notifications. Check notifications for new pool shares, navigate to Pools section, open pool details, and review complete pool information.
+### Accessing Shared Pools
 
-**Reviewing Pool Information** - Review complete pool information including pool name, asset class, transaction type, description, mapped loans, pool metrics, organization assignments, and current status. Understand the full context of the investment opportunity.
+1. **Navigate to Pools Dashboard**
+   - Log in to the platform with your Market Maker or Investor credentials
+   - Navigate to the **Pools** section from the left expandable menu (the menu expands when you hover over it)
+   - Your Pools dashboard shows pools that have been shared with your organization
+   - The status column shows **Mandate Pending** (for Share flow) or **Ready for Deal** (for Start Deal flow)
 
-**Analyzing Pool Metrics** - Review total pool balance and size, check number of loans in pool, evaluate weighted average coupon (interest rate characteristics), check debt service metrics (payment capacity and service coverage), review geographic distribution (borrower locations and geographic risk), and review all relevant pool statistics and characteristics.
+2. **Open Pool Details**
+   - Click on the **Pool ID** to open the pool details page
+   - Review comprehensive information about the pool and its loans
 
-**Reviewing Loan Characteristics** - View individual loan details, assess loan distribution and diversity, evaluate risk characteristics, review performance metrics, check loan quality indicators, and assess loan composition.
+### Reviewing Pool Information
 
-**Evaluating Investment Opportunity** - Assess investment attractiveness, evaluate risk-return profile, consider return potential, determine fit with your investment criteria, assess marketability and liquidity, and evaluate competitive positioning.
+1. **Review Summary Metrics**
+   - Summary tiles at the top show pool metrics calculated from mapped loans
+   - Metrics update automatically when loans are added or removed from the pool
 
-**Reviewing Pool Documentation** - Check pool documentation completeness, review loan data quality, assess supporting materials, verify compliance information, and check data accuracy.
+2. **Review Pool Details**
+   - Check pool name, asset class, transaction type, and description
+   - Understand the context and structure
+   - Review organization assignments to see who else is involved (issuer, servicer, etc.)
+
+3. **Analyze Summary Charts**
+   - In the Summary section, review charts showing pool composition
+   - Examine distributions by loan characteristics
+
+### Analyzing Loan Characteristics
+
+1. **Review Loans Tab**
+   - Navigate to the **Loans** tab to see individual mapped loans
+   - Review key loan fields for each loan in the pool
+   - Click on a **Loan ID** to view detailed analytics for that specific loan
+   - **Actions column** shows available actions:
+     - **Cross icon**: Request removal of a loan you believe should be excluded
+     - **Chat box icon**: Provide loan-level feedback or comments
+
+2. **Review Loan Tape Section**
+   - Navigate to the **Loan Tape** section for detailed loan-level data
+   - Mapped columns appear first; unmapped columns appear in italic
+   - Use the **As Of Date** dropdown to view data from different reporting periods (useful for understanding loan data over time when monthly loan tapes are uploaded)
+   - Click the **Download** button to export loan data in XLSX or CSV format (if download is permitted)
+
+3. **Review Stratifications**
+   - Navigate to the **Strats** section for stratification analytics
+   - Examine distributions by various loan characteristics
+
+4. **Review Performance**
+   - Navigate to the **Performance** section for performance analytics
+
+### Reviewing Documentation
+
+1. **Check Supporting Documents**
+   - Review any documents the issuer has attached to the pool
+   - Look for relevant materials and supporting information
 
 ## Evaluation Criteria
 
-**Pool Quality Assessment** - Evaluate overall pool quality, assess loan characteristics and diversity, review pool metrics and statistics, check loan quality indicators, and assess pool composition and structure.
+When reviewing pools, use the available sections:
 
-**Investment Attractiveness** - Assess investment appeal, evaluate return potential, review competitive positioning, check marketability and liquidity, and determine if opportunity fits your investment strategy.
-
-**Loan Quality Assessment** - Review individual loan characteristics, assess loan distribution and diversity, evaluate risk characteristics, check loan performance data, and assess overall loan quality.
-
-**Documentation Quality** - Check documentation completeness, verify data quality, review supporting materials, assess compliance information, and ensure documentation meets requirements.
-
-**Overall Opportunity Assessment** - Consider all factors together, evaluate opportunity attractiveness, assess fit with your investment criteria, determine if opportunity should be pursued, and make informed decision.
+- **Pool Metrics**: Review the summary tiles to understand pool composition
+- **Loan Details**: Examine individual loans in the Loans tab and Loan Tape section
+- **Stratifications**: Use the Strats section to understand loan distributions
+- **Performance**: Review the Performance section for analytics
+- **Documents**: Check any attached documents for additional information
 
 ## Making Decisions
 
-**Express Interest** - Express interest when pool meets your investment criteria: pool quality is acceptable, risk-return profile is attractive, opportunity fits your investment strategy, and you want to pursue the opportunity. Provide feedback or questions to issuer, indicate interest level, request additional information if needed, and communicate your interest to issuer.
+### Accept or Reject (Mandate/Deal)
 
-**Provide Feedback** - Provide feedback to help issuers improve pools: share observations about pool quality, provide suggestions for improvements, ask questions about pool characteristics, request clarifications if needed, and help issuer improve pool quality.
+From the Pools dashboard, you can:
 
-**Download Information** (if permitted) - Download pool data if sharing permissions allow: export loan details for further analysis, save information for decision making, use downloaded data for evaluation, and perform additional analysis offline.
+1. **Accept**
+   - Click **Accept** in the Actions column
+   - A confirmation popup appears
+   - Click **Accept** to confirm
+   - For Mandate Pending: Your status changes to Under Review, feedback becomes available
+   - For Ready for Deal: The pool becomes a Deal
 
-**Track Pools of Interest** - Mark pools you're interested in, track pool status changes, monitor pool progress, stay informed about updates, and follow pools through workflow.
+2. **Reject**
+   - Click **Reject** in the Actions column
+   - A confirmation popup appears
+   - Click **Reject** to confirm
+   - The issuer is notified of your rejection
 
-**Make Investment Decision** - Based on your review, decide whether to pursue the investment opportunity, participate in the deal when it becomes available, or pass on the opportunity. Your review helps inform your investment decision.
+### Provide Feedback
+
+After accepting a mandate (for market makers), you can provide feedback:
+
+1. **Pool-Level Feedback**
+   - Navigate to the **Feedback** section
+   - Add feedback about the pool overall
+   - Ask questions about pool characteristics, structure, or documentation
+
+2. **Loan-Level Feedback**
+   - Navigate to the **Loans** tab
+   - Click the **chat box icon** next to a specific loan
+   - Provide feedback about that particular loan
+
+### Request Loan Removal
+
+If you believe a loan should be excluded from the pool:
+
+1. **Navigate to the Loans Tab**
+   - Locate the loan you want to request removal for
+   - Click the **cross icon** in the Actions column
+
+2. **Submit Removal Request**
+   - Your removal request is sent to the issuer
+   - The issuer reviews your request and decides:
+     - **Accept (tick)**: Loan becomes Removed and excluded from calculations
+     - **Reject (cross)**: Loan remains in the pool
+
+### Share with Investors (Market Makers Only)
+
+If you're a market maker, you can share the pool with investors:
+
+1. **Click the Share Button**
+   - At the top of the pool details page, click **Share**
+   - A popup appears to configure sharing
+
+2. **Select Investors**
+   - Choose investor organizations to share with
+   - Configure permissions (feedback, download)
+   - Confirm the share
+
+### Download for Analysis (if permitted)
+
+If the issuer has enabled download for your organization:
+
+1. **Navigate to the Loan Tape Section**
+   - Click the **Download** button
+   - Select format (XLSX or CSV)
+   - Download loan data for offline analysis
 
 ## Rules & Validations
 
-- You can only see pools shared with you. You cannot see pools that aren't shared with your organization.
+- **View-Only Pool Access**: You can view and analyze pool information but cannot edit the pool itself.
 
-- Download permissions are controlled by issuer. Issuers set whether you can download pool data.
+- **Feedback After Acceptance (Market Makers)**: Market makers cannot provide feedback until they accept the mandate. After accepting, feedback functionality becomes available.
 
-- Feedback permissions are controlled by issuer. Issuers control whether you can provide feedback.
+- **Feedback Permissions**: Your ability to provide feedback depends on permissions set by the issuer. If feedback is disabled for your organization, you cannot add feedback.
 
-- You can review but cannot modify pools. You have read-only access to shared pools.
+- **Download Permissions**: Your ability to download loan tape data depends on permissions set by the issuer.
 
-- Your review doesn't affect pool status. Your review doesn't change pool workflow status.
+- **Sharing Capability**: Market makers can share pools with investors. Investors cannot share pools with anyone.
 
-- You can express interest without commitment. Expressing interest doesn't obligate you to invest.
+- **Loan Removal Requests**: You can request loan removals; the issuer decides whether to accept.
 
-- Complete transparency. You can see all pool information that's shared with you.
+- **Multiple Pools**: You can review multiple pools simultaneously.
 
-- Individual decisions. You make your own investment decisions independently.
-
-- Multiple pools can be reviewed. You can review multiple pools simultaneously.
-
-- Review history is maintained. Your reviews and feedback are tracked.
+- **Feedback Is Recorded**: All feedback is stored with timestamps for audit purposes.
 
 ## What Happens Next
 
-After reviewing pools:
-- You can express interest or provide feedback
-- You can download information if permitted
-- Issuer receives your feedback
-- You can track pools of interest
-- Investment decisions can be made
-- You can participate in deals if interested
+**After Accepting (Market Maker - Mandate):**
+- Your status changes to Under Review
+- Feedback functionality becomes available
+- You can provide pool-level and loan-level feedback
+- You can request loan removals
+- You can share the pool with investors
 
-After expressing interest:
-- Issuer knows you're interested
-- You may receive additional information
-- You can continue reviewing as pool progresses
-- You can participate when pool becomes a deal
-- Investment opportunities can be pursued
+**After Accepting (Ready for Deal):**
+- The pool becomes a Deal
+- Structural editing is restricted
+- Deal structuring and downstream activities proceed
 
-Understanding pool and loan review helps investors effectively evaluate opportunities, assess risk and return profiles, make informed investment decisions, and participate in structured finance transactions that meet their investment criteria.
+**After Providing Feedback:**
+- The issuer receives your feedback and may respond
+- Pool composition may be adjusted based on your input
+
+**After Loan Removal Request:**
+- The issuer reviews and decides on your request
+- If accepted, the loan is removed and metrics update
+- If rejected, the loan remains
+
+**After Sharing with Investors (Market Makers):**
+- Investors see the pool in their Pools dashboard
+- Investors can review and provide feedback

@@ -1,130 +1,158 @@
 ---
 title: Roles in Credit Facilities
-description: Understand the different roles and responsibilities in credit facilities
+description: Understand the different roles and their responsibilities in credit facility transactions
 ---
 
 # Roles in Credit Facilities
 
 ## Overview
 
-Credit facilities involve four main parties, each with distinct responsibilities and permissions. The platform automatically shows only relevant information and appropriate actions based on your role, making it easier to focus on your responsibilities and work effectively within the credit facility workflow.
+Credit facility transactions involve multiple parties with distinct roles and responsibilities. Understanding these roles helps you navigate the workflow and know what actions each party can take. Note that in the Credit Facility module, roles have different names compared to other modules.
 
-## Roles Covered
+## Role Name Mapping
 
-Credit facilities involve four primary roles, each with specific responsibilities in the credit facility lifecycle:
+In the Credit Facility module, the standard platform roles are referred to by different names:
 
-- **Borrower** - Organizations that need funding and create credit facility requests. They initiate facilities and request drawdowns.
+| Standard Role | Credit Facility Name |
+|---------------|---------------------|
+| Issuer | **Borrower** |
+| Market Maker | **Facility Agent** |
+| Investor | **Lender** |
 
-- **Facility Agent** - Organizations that structure and manage credit facilities. They review proposals, configure facilities, and facilitate transactions between borrowers and lenders.
+## Role Responsibilities
 
-- **Lender** - Organizations that provide capital for credit facilities. They approve facilities and fund drawdowns.
+### Borrower (Issuer)
 
-- **Servicer** - Organizations that manage ongoing loan administration for credit facilities. They handle loan servicing, payment tracking, and ongoing administration after facilities are active.
+The borrower initiates and manages credit facility requests. They are the party seeking funds through the credit facility.
 
-## What Each Role Can Do
+**What Borrowers Do:**
+- Create term sheets proposing new credit facilities
+- Sign term sheets via Adobe Sign
+- Submit term sheets to facility agents for review
+- Respond to change requests and resubmit updated term sheets
+- View approved master commitments
+- Map NFT-minted loans to active facilities
+- Create funding requests to draw down funds
+- Approve token transfers for funding notices
+- Track facility utilization and available capacity
 
-### Borrower Role
+**Dashboard View:**
+- Access Credit Facility section from left expandable menu
+- See term sheets created by them
+- See master commitments under approved term sheets
+- Actions: Submit Term Sheet, Edit Term Sheet (when changes requested), View Term Sheet, Map Loans, Funding Request
 
-Borrowers are organizations that need funding and create credit facility requests. They initiate the credit facility process and manage their borrowing needs.
+### Facility Agent (Market Maker)
 
-**Primary Capabilities:**
-- Create term sheets proposing new credit facilities with facility terms, amounts, interest rates, and repayment terms
-- Sign term sheets electronically before submission
-- Submit term sheets for facility agent review
-- Respond to change requests by updating term sheets and resubmitting
-- Create funding requests to draw down funds from active facilities
-- Specify drawdown amounts, purposes, and funding dates
-- Monitor facility status and track term sheet and funding request status
-- View facility details and monitor borrowing capacity and utilization
+The facility agent reviews, structures, and manages credit facilities. They act as the intermediary between borrowers and lenders.
 
-
-**Responsibilities:**
-- Ensure term sheet information is accurate and complete
-- Respond to change requests promptly
-- Create funding requests that comply with facility rules
-- Monitor borrowing capacity and utilization
-- Track facility and request status
-
-### Facility Agent Role
-
-Facility agents structure and manage credit facilities, acting as intermediaries between borrowers and lenders. They play a crucial role in reviewing proposals, configuring facilities, and facilitating transactions.
-
-**Primary Capabilities:**
+**What Facility Agents Do:**
 - Review term sheets submitted by borrowers
-- Approve, reject, or request changes to term sheets
-- Configure master commitments after they're auto-created from approved term sheets
-- Set up complete facility structures including facility rules, borrowing base calculations, lender groups, and other parameters
-- Review funding requests for compliance with facility rules
-- Approve or reject funding requests
-- Generate tokens and configure token distribution for funding notices
-- Sign funding notices before sending them to lenders for approval
-- Monitor facility status and track borrowing capacity
-- Manage lender groups and ensure facilities operate according to rules
+- Approve, reject, or request changes on term sheets
+- Configure master commitments (add lenders, set up facility rules)
+- Create sub-facilities for multiple-lender arrangements
+- Submit master commitments for lender approval
+- Set up deal modelling after master commitment is active
+- Review funding requests from borrowers
+- Approve, reject, or request changes on funding requests
+- E-sign funding notices for each lender
+- Monitor facility operations and compliance
 
+**Dashboard View:**
+- Access Credit Facility section from left expandable menu
+- See **Set-up** tab with term sheets and master commitments awaiting setup
+- See **Active Facilities** tab with active master commitments
+- Actions: Review Term Sheet, Create Facility, Set Up Deal, Review Funding Request, E-sign
 
-**Responsibilities:**
-- Review term sheets thoroughly and make informed decisions
-- Configure facility structures completely and accurately
-- Ensure facility rules are properly defined
-- Review funding requests for compliance
-- Facilitate transactions efficiently
+### Lender (Investor)
 
-### Lender Role
+Lenders provide funding for credit facilities. They review and approve facilities, and transfer funds for approved drawdowns.
 
-Lenders provide capital for credit facilities. They review facilities, approve master commitments, and fund drawdowns based on their investment criteria.
+**What Lenders Do:**
+- Review master commitments (or sub-master commitments) shared with them
+- Approve and e-sign master commitments via Adobe Sign
+- View approved facilities in their Credit Facility section
+- Review funding notices for approved drawdowns
+- Select payment methods and transfer funds
+- Confirm and settle fund transfers
+- Track their participation and commitments
 
-**Primary Capabilities:**
-- Review master commitments submitted for approval
-- Approve or reject master commitments to activate facilities
-- Approve or reject individual drawdowns independently
-- Confirm fund transfers after approving drawdowns
-- View facility details and track participation
-- Monitor facility status and borrowing capacity
-- Evaluate drawdown requests based on their own criteria
+**Dashboard View:**
+- Access Opportunities section to see pending master commitments for approval
+- Access Credit Facility section to see approved facilities and funding notices
+- Actions: Review & Approve (for master commitments), Review Funding Notice, Confirm and Settle
 
+### Servicer
 
-**Responsibilities:**
-- Review facilities thoroughly before approval
-- Make informed decisions about participation
-- Evaluate drawdown requests independently
-- Confirm fund transfers promptly
-- Track participation and commitments
+Servicers manage ongoing loan administration for active facilities.
 
-### Servicer Role
+**What Servicers Do:**
+- Upload monthly loan tapes for facility loans
+- Monitor loan performance
+- Provide servicing reports
 
-Servicers manage ongoing loan administration for credit facilities. They handle loan servicing and ongoing administration to ensure loans are properly managed after facilities become active.
+**Dashboard View:**
+- Access Servicer dashboard showing deals
+- View deal details
+- Upload recurring loan data
 
-**Primary Capabilities:**
-- View credit facilities and loans assigned to them for servicing
-- Manage loan servicing activities for facility collateral
-- Update loan statuses and information
-- Handle ongoing administration tasks
-- Report on loan performance and facility collateral status
+## Role-Based Access
 
-**Responsibilities:**
-- Maintain accurate loan records for facility collateral
-- Handle ongoing loan servicing activities
-- Report on loan performance
-- Ensure proper administration of facility collateral
+### What Each Role Can See
 
-## Important Access Notes
+| Item | Borrower | Facility Agent | Lender | Servicer |
+|------|----------|----------------|--------|----------|
+| Term Sheets | Own created | Submitted for review | - | - |
+| Master Commitments | Approved ones | All in progress | Assigned to them | - |
+| Funding Requests | Own created | Submitted for review | - | - |
+| Funding Notices | Own (after token approval) | All | Assigned to them (after token approval) | - |
+| Deal Details | - | - | - | Assigned deals |
 
-**Role Selection** - Select the correct role during login. If you have multiple roles, you can log in with different roles at different times, but only one role per session.
+### What Each Role Can Do
 
-**Role-Based Views** - You only see credit facilities where you have a role or where facilities are relevant to you. The platform automatically filters information based on your role.
+| Action | Borrower | Facility Agent | Lender | Servicer |
+|--------|----------|----------------|--------|----------|
+| Create Term Sheet | ✓ | - | - | - |
+| Review Term Sheet | - | ✓ | - | - |
+| Configure Master Commitment | - | ✓ | - | - |
+| Approve Master Commitment | - | - | ✓ | - |
+| Set Up Deal Modelling | - | ✓ | - | - |
+| Map Loans to Facility | ✓ | - | - | - |
+| Create Funding Request | ✓ | - | - | - |
+| Review Funding Request | - | ✓ | - | - |
+| E-sign Funding Notice | - | ✓ | - | - |
+| Approve Token Transfer | ✓ | - | - | - |
+| Confirm Fund Transfer | - | - | ✓ | - |
+| Upload Monthly Loan Tapes | - | - | - | ✓ |
 
-**Action Availability** - Action buttons are enabled or disabled based on your role and the facility's status. Disabled buttons show why the action isn't available.
+## Workflow Summary by Role
 
-**Collaboration Between Roles** - Borrowers create facilities, facility agents structure them, lenders provide capital, and servicers manage ongoing loan administration.
+### Borrower Workflow
 
-**Role Attribution** - All actions are recorded with role information, ensuring accountability and proper attribution.
+1. Create term sheet and enter details
+2. Sign via Adobe Sign
+3. Submit to facility agent
+4. If changes requested, edit and resubmit
+5. After approval, wait for facility agent to configure and lender to approve
+6. After facility is active and deal modelling complete, map loans and create funding requests
+7. After funding notice is ready, approve token transfer
+8. Receive funds after lender confirms transfer
 
-**Sequential Responsibilities** - Roles have sequential responsibilities—borrowers create, facility agents review and configure, lenders approve and fund.
+### Facility Agent Workflow
 
-**Independent Decisions** - Lenders make independent decisions about participation. Each lender can approve or reject drawdowns based on their own criteria.
+1. Review submitted term sheets
+2. Approve, reject, or request changes
+3. For approved term sheets, configure master commitment (add lenders, rules)
+4. Submit to lenders for approval
+5. After lender approval, set up deal modelling
+6. Review funding requests from borrowers
+7. Approve, reject, or request changes on funding requests
+8. E-sign funding notices for each lender
 
-**Facility Agent Intermediary Role** - Facility agents act as intermediaries, structuring facilities and facilitating transactions. They don't provide capital but enable transactions between borrowers and lenders.
+### Lender Workflow
 
-**Borrower Initiation** - Borrowers initiate the credit facility process by creating term sheets. They cannot proceed without facility agent and lender participation.
-
-**Complete Workflow** - All four roles are needed for credit facilities to work—borrowers create, facility agents structure, lenders fund, and servicers manage ongoing administration.
+1. Review master commitments in Opportunities section
+2. Approve and e-sign via Adobe Sign
+3. View approved facilities in Credit Facility section
+4. Review funding notices when available
+5. Transfer funds and confirm settlement

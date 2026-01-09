@@ -1,140 +1,71 @@
 ---
-title: Borrower Token Approval
-description: Learn how to approve token transfers for funding notices
+title: Funding Notice Visibility to Lenders
+description: When and how lenders can see funding notices
 ---
 
-# Borrower Token Approval
+# Funding Notice Visibility to Lenders
 
 ## Overview
 
-Borrower token approval is the step where the issuer/borrower enters their C-chain private key or JSON file format to approve the FT tokens to the Intain admin wallet so that they can transfer those FTs to the investors after the payment is completed. This approval makes the funding notice visible to lenders and enables the drawdown process to proceed.
+This guide explains when funding notices become visible to lenders and what triggers that visibility. Lenders can only see funding notices after the facility agent has completed specific steps.
 
-## Who Can Use This
+## When Lenders See Funding Notices
 
-- Borrowers who have funding notices with generated tokens
+Each lender can see the funding notice after:
 
-## When This Is Used
+1. **Funding Request Approved** - The facility agent approves the borrower's funding request
 
-Use token approval when:
-- Tokens have been generated for your funding notice by the facility agent
-- You want to proceed with the drawdown process
-- You need to make the funding notice visible to lenders
-- You're ready to enable lender review and approval
-- You want to verify token allocation before proceeding
+2. **Funding Notice Generated** - The system automatically creates the funding notice (Pending Token Generated)
 
-## Step-by-Step Process
+3. **Facility Agent Approves** - The facility agent clicks **Approve** on the funding notice
 
-### Reviewing Token Allocation
+4. **Facility Agent E-Signs for Each Lender** - The facility agent completes e-signature for each lender (E-sign 0/n → n/n)
 
-1. **Access Your Funding Notice**
-   - Navigate to your funding notices section
-   - Find the funding notice with generated tokens
-   - Open the funding notice details
-   - View token allocation information
+Each lender can see the funding notice once the facility agent has completed their individual e-sign.
 
-2. **Review Token Details**
-   - Check total token amount matches your funding request amount
-   - Verify tokens have been created
-   - Review funding date and purpose of funds
-   - Confirm facility information is accurate
-   - Ensure status shows tokens are generated
+## Flow Summary
 
-3. **Review Lender Distribution**
-   - View how tokens are distributed to lenders
-   - Check each lender's allocated token amount
-   - Verify participation percentages match facility participation
-   - Ensure all lenders are included
-   - Review individual lender allocations
+```
+Funding Request APPROVED
+       ↓
+Funding Notice Auto-Generated (Pending Token Generated)
+       ↓
+FA clicks Approve
+       ↓
+FA E-signs for each lender (E-sign 0/n → 1/n → 2/n → n/n)
+       ↓
+Each lender's e-sign complete → Funding Notice VISIBLE TO THAT LENDER
+       ↓
+Lenders review → Transfer funds → Confirm and Settle
+       ↓
+Tokens transferred to Borrower
+```
 
-4. **Verify Allocation Accuracy**
-   - Confirm total allocation equals request amount
-   - Check that lender percentages are correct
-   - Verify no errors in distribution
-   - Ensure all information is accurate
+## What Lenders See
 
-### Approving Token Transfer
+Once visible, lenders see in their **Credit Facility** section:
+- The funding notice with **Review Funding Notice** action
+- Drawdown amount and date
+- Their allocated portion
+- Purpose of funds
+- Payment method options
 
-1. **Final Review Before Approval**
-   - Review all token allocation details one final time
-   - Verify token amounts match your expectations
-   - Check lender distribution is accurate
-   - Confirm you're ready to proceed
-   - Ensure all information is correct
+## What Lenders Do
 
-2. **Initiate Approval**
-   - Click the "Approve Token Transfer" button or similar
-   - Enter your C-chain private key or upload a JSON file format
-   - This approves the tokens to the Intain admin wallet so they can transfer those tokens to investors after payment is completed
-   - Review any confirmation messages
-   - Understand that approval makes notice visible to lenders
-   - Confirm you want to proceed
+1. Navigate to **Credit Facility** from the left menu
+2. Find the funding notice
+3. Click **Review Funding Notice**
+4. Review the drawdown details
+5. Select payment method
+6. Transfer funds externally
+7. Click **Confirm and Settle**
 
-![Issuer - Token Approval](imagesByMdFilesFolder/27/Issuer_Token_Approval.png)
+## Key Points
 
-3. **Complete Approval**
-   - Tokens are approved to Intain admin wallet via blockchain
-   - Approval transaction is executed and recorded
-   - Status updates to show tokens are approved
-   - Funding notice becomes visible to lenders
+**Visibility After E-Sign** - Each lender sees the funding notice once the facility agent has e-signed for them specifically.
 
-4. **Verify Approval Completion**
-   - Confirm status shows tokens are approved
-   - Verify funding notice is now visible to lenders
-   - Check that lenders receive notifications
-   - Review approval transaction details
-   - Ensure process can proceed
+**E-Sign Progress** - The E-sign (0/n) counter shows how many lenders have been signed for. Each lender can see the notice once signed for.
 
-### After Approval
+**Individual Tracking** - Each lender's fund transfer and settlement is tracked individually.
 
-1. **Lender Visibility**
-   - Funding notice is now visible to all lenders
-   - Lenders receive notifications about the notice
-   - Lenders can review drawdown details
-   - Lenders can make approval decisions
-
-2. **Track Lender Decisions**
-   - Monitor which lenders have reviewed the notice
-   - See which lenders have approved or rejected
-   - Track individual lender participation
-   - Monitor fund transfer confirmations
-
-3. **Proceed with Drawdown**
-   - Approved lenders can proceed with fund transfer
-   - Each lender confirms their transfer independently
-   - Funds are transferred to you as lenders confirm
-   - Drawdown process completes as transfers are confirmed
-
-## Rules & Validations
-
-- You can only approve tokens after they've been generated. Tokens must be created by facility agent before you can approve.
-
-- You must review allocation before approving. Take time to verify token amounts and distribution are correct.
-
-- Approval makes funding notice visible to lenders. Once approved, lenders can see and review the notice.
-
-- Once approved, you cannot easily undo the approval. Approval is a significant step, so verify everything before approving.
-
-- Lenders can then review and approve drawdowns. After your approval, lenders make their own decisions.
-
-- Token amounts must match funding request. The total token amount should equal your approved funding request amount.
-
-- Lender distribution is based on facility participation. Each lender's portion is calculated based on their participation percentage in the facility.
-
-- Approval is required for process to continue. The drawdown process cannot proceed until you approve token transfer. Funding notice must show tokens are generated before approval.
-
-- Status updates after approval. Funding notice status changes to show tokens are approved. Only approved funding notices are visible to lenders.
-
-- Complete audit trail. Your approval is recorded with timestamp and details.
-
-## What Happens Next
-
-After approving token transfer:
-- Funding notice becomes visible to all lenders
-- Lenders receive notifications about the notice
-- Lenders can review drawdown details and make decisions
-- Approved lenders can proceed with fund transfer
-- You can track lender decisions and transfer confirmations
-- Funds are transferred to you as lenders confirm transfers
-- Drawdown process completes as all transfers are confirmed
-
-Understanding borrower token approval helps you complete the drawdown process, enable lenders to participate in your funding requests, and ensure proper verification before funds are disbursed.
+**Confirm After Transfer** - Lenders should only click Confirm and Settle after they have actually transferred the funds.

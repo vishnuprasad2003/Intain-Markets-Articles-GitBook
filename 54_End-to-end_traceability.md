@@ -13,80 +13,109 @@ Intain Markets tracks every action, status change, and decision with records of 
 
 ### Status History
 
-**Pool Status Changes** - Created → Preview → Mandate Pending → Deal
-- Records who changed status, when and comments
+**Pool Status Changes:**
+- Created → Preview → Under Review → Deal
+- Records who changed status, when, and comments
 
-**Term Sheet Status Changes** - Draft → BorrowerSigned → FAReview → Accepted/Rejected/CHANGES_REQUESTED
-- Records who changed status, when and reasons
+**Term Sheet Status Changes:**
+- Draft → BorrowerSigned → FAReview → Accepted/Rejected/CHANGES_REQUESTED
+- Records who changed status, when, and reasons
 
-**Master Commitment Status Changes** - Draft → PendingLenderApproval → ACTIVE
+**Master Commitment Status Changes:**
+- Draft → PendingLenderApproval → ACTIVE
 - Records facility agent actions and lender approvals
 
-**Funding Request Status Changes** - DRAFT → FAReview → APPROVED/REJECTED/CHANGES_REQUESTED
+**Funding Request Status Changes:**
+- DRAFT → FAReview → APPROVED/REJECTED/CHANGES_REQUESTED
 - Records borrower submissions and facility agent decisions
 
-**Funding Notice Status Changes** - PENDING_TOKEN_GENERATION → TOKEN_GENERATED → TOKEN_APPROVED
-- Records token generation, borrower approval, and lender decisions
+**Funding Notice Status Changes:**
+- Pending Token Generated → FA Approved → E-signed for lenders
+- Records FA actions and lender confirmations
 
 ### Action History
 
-**Pool Actions** - Creation, sharing, mandate submission, loan mapping, removal, reinstatement
+**Pool Actions:**
+- Creation, sharing, mandate acceptance/rejection
+- Loan mapping, removal, reinstatement
+- Feedback submission
 
-**Term Sheet Actions** - Creation, editing, signing, submission, approval, rejection, change requests, document uploads
+**Term Sheet Actions:**
+- Creation, editing, signing (Adobe Sign)
+- Submission, approval, rejection, change requests
+- Document uploads
 
-**Master Commitment Actions** - Auto-creation, facility configuration, lender group updates, lender approvals
+**Master Commitment Actions:**
+- Auto-creation from term sheet
+- Facility configuration, lender additions
+- Lender approvals (with e-signature)
 
-**Funding Request Actions** - Creation, editing, submission, approval, rejection, change requests, document uploads
+**Funding Request Actions:**
+- Creation, editing, submission
+- Approval, rejection, change requests
+- Document uploads
 
-**Funding Notice Actions** - Auto-generation, token generation, token distribution, borrower approval, lender approvals, fund transfer confirmations
+**Funding Notice Actions:**
+- Auto-generation from approved funding request
+- FA approval and e-signatures for each lender
+- Lender fund transfer confirmations (Confirm and Settle)
 
 ### Document History
 
-**IPFS Storage** - Documents are stored in IPFS with hash verification. Each upload generates an IPFS hash stored in the database. Document history arrays track upload history with timestamps and user attribution.
+**IPFS Storage:**
+- Documents stored with hash verification
+- Each upload generates an IPFS hash
+- History arrays track uploads with timestamps
 
-**Term Sheet Documents** - Collateral profile, financial statements, KYC documents, collateral data uploads tracked with IPFS hash, uploader, and timestamp
-
-**Funding Request Documents** - Collateral addendum, financial statements, KYC documents, supporting documents uploads tracked with IPFS hash, uploader, and timestamp
-
-**Document Versioning** - Previous versions are preserved when documents are updated. Document history arrays maintain version history.
+**Document Types Tracked:**
+- Term sheet documents (collateral profile, financials, KYC)
+- Funding request documents (collateral addendum, supporting docs)
+- Pool documents
 
 ### Relationship Tracking
 
-**Term Sheet → Master Commitment** - Master commitment links to term sheet via termSheetId
-
-**Master Commitment → Funding Requests** - Funding requests link via masterCommitmentId
-
-**Funding Request → Funding Notice** - Funding notice links to funding request
-
-**Pool → Loans** - Loans link to pools via poolid field
+| From | To | Link |
+|------|-----|------|
+| Term Sheet | Master Commitment | termSheetId |
+| Master Commitment | Funding Requests | masterCommitmentId |
+| Funding Request | Funding Notice | fundingRequestId |
+| Pool | Loans | poolid |
 
 ### User Attribution
 
-Every action records: user ID, user name, organization ID and name, timestamp, and role.
+**Every Action Records:**
+- User ID and name
+- Organization ID and name
+- Timestamp
+- Role
 
-Status changes record: who changed and reason.
+**Status Changes Record:**
+- Who changed
+- Previous status
+- New status
+- Reason/comments
 
-Approvals record: approver, timestamp, comments, and role.
-
-Rejections record: rejector, timestamp, reason, and role.
+**Approvals/Rejections Record:**
+- Approver/rejector
+- Timestamp
+- Comments
+- Role
 
 ## How to View History
 
 Navigate to item detail pages and look for:
-- **Status History** - Shows all status changes chronologically
-- **Action History** - Shows all actions taken chronologically
-- **Document History** - Shows document uploads and updates
+- **Status History** - All status changes chronologically
+- **Action History** - All actions taken chronologically
+- **Document History** - Document uploads and updates
 
-History is organized chronologically. Clicking entries shows complete details about what happened, who was involved, and when.
+## Key Points
 
-## Important Notes
+**Automatic Recording** - Tracking happens automatically
 
-**Automatic Recording** - Tracking happens automatically. No additional steps required.
+**Complete History** - All changes preserved in order
 
-**Complete History** - All changes are preserved in chronological order.
+**User Attribution** - Every action attributed to user
 
-**User Attribution** - Every action is attributed to the user who performed it.
+**Permanent Records** - Cannot be modified
 
-**Permanent Records** - Audit trails are permanent and cannot be modified.
-
-**Access Control** - Access to audit trails is controlled based on roles and permissions.
+**Access Control** - Based on roles and permissions

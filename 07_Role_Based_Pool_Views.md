@@ -7,70 +7,135 @@ description: Understand how different users see pools based on their role
 
 ## Overview
 
-Different users see pools differently based on their role. The platform automatically filters information and shows only relevant items and appropriate actions for your role, making navigation simpler and more focused.
+Different users see pools differently based on their role in the platform. The role you select during login determines what pools you can see, what information is displayed, and what actions are available. Issuers see pools they create and manage; market makers see pools shared with them for review and structuring; investors see pools shared with them; rating agencies see pools shared for analysis. Each role has a tailored view that shows only relevant information and appropriate actions.
 
 ## How to Navigate the Platform
 
-**Accessing Pool Lists** - When you navigate to the Pools section, the platform automatically shows only pools relevant to your role. As an issuer, you'll see pools you've created. As a market maker, you'll see pools shared with you. As an investor, you'll see investment opportunities.
+**Accessing the Pools Section** - From the left expandable menu (which expands when you hover over it), click on **Pools** to navigate to the Pools dashboard. The dashboard displays all pools relevant to your role with their current statuses and available actions.
 
-**Viewing Pool Details** - Clicking on a pool takes you to its detail page, showing all information, metrics, loan details, status, history, and available actions. The information and actions shown are automatically filtered based on your role.
+**Viewing Pool Details** - In the Pools dashboard, click on a **Pool ID** to navigate to the pool details page. The details page shows comprehensive information: summary tiles with metrics, tabbed sections for loans, loan tape, stratifications, performance, feedback, and sharing (depending on your role and the pool's sharing configuration).
 
-**Understanding Visibility** - Pools are visible to you if you created them, if they're shared with your organization, or if you have an assigned role in them.
+**Understanding Your View** - The pools you see depend on:
+- **Your role**: Issuers see pools they created; market makers, investors, and rating agencies see pools shared with them
+- **Pool status**: Pools in Created status are visible only to the issuer; other statuses are visible to shared parties
+- **Sharing configuration**: You can only see pools that have been shared with your organization (except issuers who see their own pools regardless)
 
-**Role Selection Matters** - The role you select during login determines what pools you can see. If you have multiple roles, you'll see different pools when you log in with different roles.
-
-**Status Affects Visibility** - Some statuses affect visibility. Pools in Created status are only visible to the issuer who created them until they're shared.
-
-**Sharing Controls Visibility** - Pools must be shared with your organization for you to see them (unless you created them). Issuers control sharing.
+**Role Selection at Login** - When you log in, you select your role. If you have multiple roles in the platform, you can log in with different roles to see different views. For example, logging in as Issuer shows pools you created; logging in as Market Maker shows pools shared with you.
 
 ## What You Will See
 
-**As an Issuer** - You'll see all pools you've created, regardless of status. You'll see pools in Created, Preview, Mandate Pending, and Deal statuses. You'll see pending actions requiring your attention, such as responding to feedback.
+### Issuer / Borrower View
+
+As an issuer, you have full control over pools you create. Your Pools dashboard shows all pools you've created, regardless of their current status.
+
+**Pools Dashboard**
+- All pools you've created with their Pool IDs, names, statuses, and metrics
+- **Set-up Pool** button at top right to create new pools
+- Status indicators showing where each pool is in the workflow
+- Action options for each pool
 
 ![Pools Screen - Issuer](imagesByMdFilesFolder/07/Pools_Screen_Issuer.png)
 
-**As a Market Maker** - You'll see pools shared with you for review, pools submitted to you for mandate review, pools where you've accepted the mandate, and deals you've helped structure. You'll see actions like reviewing pool details, accepting or rejecting mandates, providing feedback, and structuring deals.
+**Pool Details Page** (accessible by clicking on a Pool ID)
+- **Summary tiles** at top showing pool metrics
+- **Summary section** with charts showing pool composition and distributions
+- **Loans tab** showing all mapped loans with action icons:
+  - **Chat box icon**: Opens loan-level feedback/comments dialog
+  - **Tick icon**: Appears when a market maker requests loan removal—click to accept (loan becomes Removed)
+  - **Cross icon**: Appears when a market maker requests loan removal—click to reject the removal request
+- **Loan Tape section** showing detailed loan data (mapped columns first, unmapped columns in italic)
+  - **As Of Date dropdown** to select loan data for different reporting periods
+  - **Download button** to export loan data in XLSX or CSV format
+- **Strats section** with stratification analytics
+- **Performance section** with performance analytics
+- **Feedback section** showing pool-level feedback from shared parties (you can view but not add pool-level feedback)
+- **Sharing tab** showing all shared organizations and their permissions (feedback, download)—you can edit these settings
+
+**Top Action Buttons**
+- **Edit button** with two options:
+  - **Edit Pool Details**: Opens the same form as Set-up Pool to modify pool information and organization assignments
+  - **Edit Loan Tape**: Upload recurring loan tape data for subsequent reporting periods with As Of Date selection
+- **Share button**: Opens sharing configuration to share with organizations (market makers, investors, rating agencies, etc.)
+- **Start Deal button**: Enabled after prerequisites (typically all pool loans NFT-minted); initiates Deal flow
+
+### Market Maker / Facility Agent View
+
+As a market maker, you see pools that issuers have shared with you. Your Pools dashboard shows these shared pools with their statuses and available actions.
+
+**Pools Dashboard**
+- Pools shared with your organization, displayed with status and actions
+- Status shows **Mandate Pending** for Preview shares awaiting your decision, **Ready for Deal** for Start Deal shares
+- Actions include **Review**, **Accept**, **Reject** depending on status
 
 ![Pool Screen - Market Maker](imagesByMdFilesFolder/07/Pool_Screen_MarketMaker.png)
 
-**As an Investor** - You'll see investment opportunities (pools shared with you for investment review), your investments (deals where you've invested or committed), funding requests waiting for your approval, and active deals you're involved with.
+**Pool Details Page** (after clicking on Pool ID, typically after accepting)
+- Same view as issuer for information sections: Summary, Loans, Loan Tape, Strats, Performance, Feedback
+- **Sharing tab is not visible** (only issuers manage sharing configuration)
+- **Edit button and Start Deal button are not visible** (these are issuer actions)
+- **Share button** is available—you can share the pool with investors only
+- **Loans tab actions**:
+  - **Cross icon**: Click to request removal of a loan from the pool (sends request to issuer)
+  - **Chat box icon**: Opens loan-level feedback dialog for comments
+- You can provide pool-level feedback in the Feedback section (after accepting the mandate)
+
+**Acceptance Pop-up** (when you click Accept from the dashboard)
+- Confirmation dialog for accepting the mandate/deal
+- Accept and Cancel buttons
+- After accepting a Preview share, your view shows **Under Review** status
+
+### Investor / Lender View
+
+As an investor, you see pools shared with you. Your view is similar to the market maker view but without the ability to share further.
+
+**Pools Dashboard**
+- Pools shared with your organization
+- Status and action options for each pool
 
 ![Pools Screen - Investor](imagesByMdFilesFolder/07/Pools_Screen_Investor.png)
 
-**Opportunities Card View** - You can also view opportunities in a card format, which provides a different perspective on available investment opportunities.
+**Pool Details Page**
+- Same information sections as market maker: Summary, Loans, Loan Tape, Strats, Performance, Feedback
+- **Share button is not visible** (investors cannot share pools further)
+- **Loans tab actions**:
+  - **Cross icon**: Click to request removal of a loan from the pool (sends request to issuer)
+  - **Chat box icon**: Opens loan-level feedback dialog for comments
+- You can provide pool-level and loan-level feedback
 
-![Opportunities Table - Card View](imagesByMdFilesFolder/07/opportunities_table_card_view.png)
+### Rating Agency View
 
-**As a Rating Agency** - You'll see pools shared with you for rating analysis, pool data needed for rating purposes, and access to analysis tools. You'll typically have read-only access—you can view and analyze but cannot make changes or approvals.
+As a rating agency, you see pools shared with you for rating analysis. Your view is read-only for most actions—you can analyze and provide comments but cannot reject loans or share pools.
+
+**Pools Dashboard**
+- Pools shared with your organization for rating analysis
+- Status indicators for each pool
 
 ![Pools Screen - Rating Agency](imagesByMdFilesFolder/07/Pools_Screen_RatingAgency.png)
 
-**Action Availability** - Action buttons are automatically enabled or disabled based on your role and the pool's status. Disabled buttons show tooltips explaining why they're disabled.
-
-**Status Indicators** - Pools display status badges showing where they are in their workflow.
-
-**Filtered Information** - The information shown for each pool is filtered based on your role.
+**Pool Details Page**
+- Same information sections: Summary, Loans, Loan Tape, Strats, Performance, Feedback
+- **No Share button** (rating agencies cannot share pools)
+- **Loans tab actions**:
+  - **Chat box icon**: Opens loan-level feedback dialog for comments
+  - **No cross icon** (rating agencies cannot request loan removals)
+- You can provide comments in pool-level and loan-level feedback sections
 
 ## Helpful Tips
 
-**Check Sharing Settings** - If you're an issuer and want others to see your pool, make sure you've shared it with the right organizations. If you're a market maker or investor and can't see a pool, check if it's been shared with your organization.
+**Check Your Role** - If you're not seeing expected pools, verify you logged in with the correct role. Different roles see different sets of pools.
 
-**Understand Status Visibility** - Pools in Created status are only visible to the issuer until shared. Once shared, they become visible to shared parties.
+**Issuer Pools Are Private Until Shared** - Pools in Created status are visible only to the issuer who created them. Other parties can only see pools after they've been shared.
 
-**Use the Correct Role** - Make sure you're logged in with the correct role for what you want to do. If you want to create pools, use the Issuer role. If you want to review opportunities, use the Investor role.
+**Market Maker Actions After Acceptance** - Before accepting a mandate, market makers cannot provide feedback. After accepting, feedback functionality becomes available and the status shows Under Review.
 
-**Check Action Tooltips** - When actions are disabled, hover over buttons or check tooltips to see why they're disabled.
+**Loan-Level vs Pool-Level Feedback** - Use the chat box icon in the Loans tab for loan-specific feedback. Use the Feedback section for pool-level comments. As an issuer, you can view pool-level feedback but respond through loan-level comments.
 
-**Multiple Roles** - If you have multiple roles, you can log in with different roles at different times to see different views.
+**Loan Rejection Flow** - When a market maker or investor clicks the cross icon to request loan removal, the issuer sees tick and cross icons on that loan. Tick accepts the removal (loan becomes Removed); cross rejects the removal request.
 
-**Dashboard First** - Check your dashboard first—it shows items relevant to your role, pending actions, and recent activity.
+**As Of Date Selection** - In the Loan Tape section, use the As Of Date dropdown to view loan data for different reporting periods. This is useful when monthly loan tapes are uploaded for recurring calculations.
 
-**Status Affects Actions** - Both your role and the pool's status determine what actions are available. Even if you have permission, the status must allow the action.
+**Download Permissions** - Your ability to download loan tape data depends on the permissions set by the issuer in the Sharing tab. If download is disabled for your organization, the download option may not be available.
 
-**Collaboration Through Sharing** - Different roles collaborate through sharing. Issuers share pools with market makers and investors, who then see the pools in their views.
+**Status Affects Actions** - The actions available to you depend on both your role and the pool's current status. Disabled actions typically have tooltips explaining why they're unavailable.
 
-**Filtering Is Automatic** - The platform filters information automatically—you don't need to manually filter or search through irrelevant items.
-
-**Read-Only Access** - Some roles, like Rating Agency, have read-only access. You can view and analyze but cannot make changes or approvals.
-
-**Track Status Changes** - Monitor pool status changes to understand where pools are in their workflow.
+**Dashboard Navigation** - Use the left expandable menu to navigate between sections. The menu expands when you hover over it, showing section names for easy navigation.
