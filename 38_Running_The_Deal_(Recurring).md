@@ -37,8 +37,6 @@ To access the Recurring view:
 
 The Recurring Module opens with tabs that mirror the Deal Creation structure.
 
-![Recurring module showing Calculate Payments action](../.gitbook/assets/recurring-dashboard.png)
-
 ## Reviewing Data in the Recurring View
 
 Before running calculations, you can review data across multiple tabs, including:
