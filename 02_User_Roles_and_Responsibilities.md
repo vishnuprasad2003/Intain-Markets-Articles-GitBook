@@ -7,213 +7,112 @@ description: Understand different user roles and what each role can do in the pl
 
 ## Overview
 
-Intain Markets uses distinct user roles, each with specific responsibilities and access permissions. Your role determines what actions you can take, what information you can see, and what you're responsible for in the structured finance workflow. The platform automatically filters information and actions based on your role, showing you only what's relevant and making it easier to focus on your responsibilities. Understanding roles helps you know what you can do, what others can do, and how different parties collaborate to complete structured finance transactions.
+Intain Markets uses distinct user roles, each with specific responsibilities and access permissions. Your role determines what actions you can take, what information you can see, and what you're responsible for. The platform automatically filters information and actions based on your role.
 
-## Roles Covered
-
-The platform supports several distinct roles, each designed for specific responsibilities in structured finance transactions:
-
-- **Issuer (Borrower)** - Organizations that own loans and create pools or credit facility requests. They initiate transactions and manage loan portfolios.
-
-- **Market Maker (Facility Agent)** - Organizations that structure deals and facilitate transactions. They review opportunities, structure deals, and facilitate transactions between issuers and investors.
-
-- **Investor (Lender)** - Organizations that provide funding and make investment decisions. They review opportunities, evaluate investments, and provide capital for transactions.
-
-- **Servicer** - Organizations that manage ongoing loan administration. They handle loan servicing, payment tracking, and ongoing administration after deals are completed.
-
-- **Paying Agent** - Organizations that handle payment distributions. They manage payment distributions and ensure funds are properly allocated to all parties.
-
-- **Rating Agency** - Organizations that analyze pools for rating purposes. They review pool data, analyze characteristics, and provide ratings for structured finance transactions.
-
-- **Admin** - System administrators with platform-level access. They manage users, configure system settings, and handle platform-level administrative tasks.
+![Role Selection showing all 7 roles](images/02-user-roles-and-responsibilities/role-selection.png)
 
 ## What Each Role Can Do
 
-### Issuer (Borrower)
+### Issuer
 
-Issuers create and manage pools, submit credit facility requests, and manage loan portfolios. They are the initiators of transactions and have primary responsibility for creating and managing pools and credit facility requests.
+Issuers create and manage assets, pools, and submit items for review.
 
-**Primary Capabilities:**
-- Create pools and assign loans to them
-- Share pools with market makers, investors, and other parties
-- Submit term sheets for credit facilities
-- Create funding requests against active facilities
-- Manage loan data and pool information
-- Respond to feedback and make changes
-- View their pools and track status changes
-- Approve token transfers for funding notices
+**What Issuers Do:**
+- Create and manage pools
+- Onboard and standardize loans via imports and the loan registry
+- Map loans to pools and verify via batch verification
+- Mint asset NFTs for verified loans
+- Share pools with other parties for review
+- Respond to feedback from market makers and investors
+- Accept or reject loan removal requests
+- Create and submit term sheets for credit facilities
+- Create asset sale deals, assign loans, configure sale terms, and publish for review
+- Initiate repayment on active asset sale deals (upload loan tape, send wire, submit confirmation)
+- Upload historical loan tapes
 
-**Limitations:**
-- Cannot approve their own submissions—they must wait for other parties to review and approve
-- Cannot create master commitments—these are automatically created when term sheets are approved
-- Cannot approve funding requests—these require facility agent approval
+### Market Maker
 
-**Responsibilities:**
-- Ensure pool data is accurate and complete
-- Respond to feedback and change requests promptly
-- Maintain loan data quality
-- Track pool and facility status
-- Coordinate with market makers and facility agents
+Market Makers help structure deals and facilitate transactions.
 
-### Market Maker (Facility Agent)
+**What Market Makers Do:**
+- Review pools shared by issuers (accept/reject mandates)
+- Provide feedback at pool and loan level
+- Request loan removal from pools
+- Review and approve term sheets for credit facilities
+- Configure facilities, add participants, and set up deal modelling
+- Complete deal setup and calculations (borrowing base, waterfalls, triggers)
+- Approve notices and e-sign documents
+- Review and approve asset sale deals submitted by issuers
+- Manage investor commitment allocation in asset sales
+- Access the modelling workbench for scenario comparison
 
-Market Makers help structure deals and facilitate transactions. They play a crucial role in reviewing opportunities, structuring deals, and facilitating transactions between issuers and investors.
+### Investor
 
-**Primary Capabilities:**
-- Review pools shared with them
-- Accept or reject mandates to structure deals
-- Provide feedback and request changes on pools
-- Review and approve term sheets
-- Configure master commitments after they're auto-created
-- Review and approve funding requests
-- Sign funding notices for lenders
-- Structure deals and move pools toward completion
-- View pools and facilities they're involved with
+Investors provide funding for transactions.
 
-**Limitations:**
-- Cannot create pools or term sheets themselves—they review and structure items created by issuers
-- Cannot approve master commitments—these require lender approval
-- Cannot approve their own reviews—approval decisions are tracked separately
-
-**Responsibilities:**
-- Review opportunities thoroughly
-- Provide constructive feedback
-- Structure deals effectively
-- Ensure compliance with requirements
-- Facilitate transactions efficiently
-
-### Investor (Lender)
-
-Investors provide funding for transactions. They review opportunities, evaluate investments, and make funding decisions based on their investment criteria and risk tolerance.
-
-**Primary Capabilities:**
-- Review pools and investment opportunities shared with them
-- Review and approve credit facilities and master commitments
-- Approve or reject funding requests and funding notices
-- Review master commitments and facility setups
-- Confirm fund transfers
-- View their investments and track status
-- Express interest in opportunities
-- Analyze pool characteristics and loan details
-
-**Limitations:**
-- Cannot create pools or term sheets—they review and approve items created by issuers
-- Cannot approve term sheets—these require facility agent approval
-- Cannot approve funding requests—these require facility agent approval first
-
-**Responsibilities:**
-- Evaluate opportunities thoroughly
-- Make informed investment decisions
-- Review facility structures carefully
-- Track investments and commitments
-- Confirm fund transfers promptly
+**What Investors Do:**
+- Review pools shared by issuers or market makers
+- Provide feedback at pool and loan level
+- Request loan removal from pools
+- Download data and reports
+- Review and approve credit facility master commitments
+- Review and approve funding notices
+- E-sign commitments and agreements
+- Select payment method and confirm fund transfers
+- Commit to asset sale deals and sign investor agreements
+- Confirm repayment receipt on asset sale deals
+- Burn receivables NFTs to close asset sale positions
+- Access portfolio analytics, risk surveillance, and ESMA reporting
 
 ### Servicer
 
-Servicers manage ongoing loan administration after deals are completed. They handle loan servicing, payment tracking, and ongoing administration to ensure loans are properly managed.
+Servicers manage ongoing administration.
 
-**Primary Capabilities:**
-- View pools and loans assigned to them
-- Manage loan servicing activities
-- Track payments and loan performance
-- Update loan statuses and information
-- Handle ongoing administration tasks
-
-**Limitations:**
-- Cannot create or approve pools—they manage loans after deals are completed
-- Cannot approve transactions—they focus on post-deal administration
-- Cannot modify deal structures—they work within established deal parameters
-
-**Responsibilities:**
-- Maintain accurate loan records
-- Track payments and performance
-- Update loan statuses promptly
-- Ensure proper loan administration
-- Report on loan performance
+**What Servicers Do:**
+- Upload monthly loan tapes for assigned deals (5-step upload flow: upload → preview → map fields → preview mapped → summarize)
+- View deal details and performance
+- Manage ongoing servicing activities
+- Support both credit facility and asset sale deal types
 
 ### Paying Agent
 
-Paying Agents handle payment distributions. They manage payment distributions and ensure funds are properly allocated to all parties according to deal terms.
+Paying Agents handle payment distributions.
 
-**Primary Capabilities:**
-- View pools and facilities assigned to them
+**What Paying Agents Do:**
+- View assigned pools and facilities
 - Manage payment distributions
 - Ensure funds are properly allocated
-- Handle payment-related tasks
-
-**Limitations:**
-- Cannot create or approve pools—they handle payment distributions
-- Cannot approve transactions—they focus on payment processing
-- Cannot modify deal structures—they work within established deal parameters
-
-**Responsibilities:**
-- Ensure accurate payment distributions
-- Allocate funds correctly
-- Process payments promptly
-- Maintain payment records
-- Report on payment activities
 
 ### Rating Agency
 
-Rating Agencies analyze pools for rating purposes. They review pool data, analyze characteristics, and provide ratings for structured finance transactions.
+Rating Agencies analyze and review items.
 
-**Primary Capabilities:**
-- View pools shared with them
-- Access pool and loan data for analysis
-- Review pool characteristics and metrics
-- Perform rating analysis
-- Download data (if permissions allow)
-
-**Limitations:**
-- Have read-only access—cannot make changes or approvals
-- Cannot create or modify pools—they analyze existing pools
-- Cannot approve transactions—they provide analysis only
-
-**Responsibilities:**
-- Analyze pools thoroughly
-- Provide accurate ratings
-- Maintain analysis standards
-- Ensure rating quality
-- Report on rating analysis
+**What Rating Agencies Do:**
+- View items shared with them (read-only)
+- Provide feedback if permissions allow
+- Download data if permissions allow
+- Cannot request loan removal
 
 ### Admin
 
-Admins have system-level access for platform administration. They manage users, configure system settings, and handle platform-level administrative tasks.
+Admins have system-level access for platform administration.
 
-**Primary Capabilities:**
-- Manage users and organizations
-- Configure system settings
-- Access administrative functions
-- Handle platform-level tasks
-
-**Limitations:**
-- Typically don't participate in regular business transactions
-- Cannot approve business transactions—they manage platform administration
-- Cannot create business items—they support platform operation
-
-**Responsibilities:**
-- Maintain platform security
-- Configure system settings
-- Manage users and organizations
-- Support platform operation
-- Ensure platform availability
+**What Admins Do:**
+- Create and manage organizations
+- Approve KYC for users
+- Process delegation requests
+- Handle tasks on behalf of other users when delegated
+- Use the "View As" (impersonation) feature for read-only support of other users
+- Manage user accounts and organization settings
 
 ## Important Access Notes
 
-**Role Selection** - You must select the correct role during login that matches your account. If you have multiple roles, you can log in with different roles at different times, but you can only use one role per session. The role you select determines what you can see and do.
+**Role Selection** — Select the correct role during login. You can only use one role per session. If you have multiple roles, you may be prompted to select one after authentication.
 
-**Role-Based Views** - Your role determines your view—you only see items where you have a role or where items are shared with you. The platform automatically filters information based on your role, showing you only what's relevant to your responsibilities.
+**Role-Based Views** — You only see items relevant to your role or shared with your organization. The dashboard, sidebar navigation, and available actions all adapt to your role.
 
-**Action Availability** - Action buttons are enabled or disabled based on your role and the item's status. Disabled buttons usually show a reason why the action isn't available. Understanding role-based action availability helps you know what you can do and why certain actions might not be available.
+**Action Availability** — Action buttons are enabled or disabled based on your role and the item's current status. Disabled actions indicate that your role cannot perform that action at the current stage.
 
-**Multiple Roles** - Some users may have multiple roles (for example, an organization might be both an issuer and an investor), but you can only use one role per session. You can switch roles by logging out and logging back in with a different role.
+**Automatic Enforcement** — The platform enforces role-based rules automatically. You cannot perform actions outside your role's permissions.
 
-**Role-Based Permissions** - Role-based permissions ensure proper workflow—issuers cannot approve their own submissions, and each role has appropriate responsibilities. This separation of duties ensures proper workflow and maintains security.
-
-**Automatic Enforcement** - The platform enforces role-based rules automatically, so you can only take actions that are appropriate for your role. This automatic enforcement ensures that role-based rules are consistently applied.
-
-**Collaboration Between Roles** - Collaboration between roles is essential—issuers create, market makers structure, investors fund, and servicers manage ongoing administration. Understanding how roles collaborate helps you work effectively with other parties.
-
-**Role Attribution** - All actions are recorded with role information, ensuring accountability and proper attribution. This role attribution ensures that actions are traceable to specific roles and users.
-
-Understanding your role and the roles of others helps you navigate the platform effectively, know what actions you can take, understand what others can do, and understand how different parties collaborate to complete structured finance transactions. This understanding enables effective collaboration and ensures that transactions progress correctly through proper role-based workflows.
+**Microsoft SSO** — The platform supports Microsoft Entra single sign-on. If your organization uses Entra SSO, you can log in using your Microsoft credentials without a separate platform password.

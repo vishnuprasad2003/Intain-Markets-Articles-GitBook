@@ -1,0 +1,59 @@
+---
+description: Complete lifecycle for creating, updating, and maintaining articles
+alwaysApply: true
+---
+
+# Article Lifecycle
+
+## Creating a New Article
+
+1. **Determine placement** — Check `ARTICLE_TAXONOMY.md` for L1/L2 category
+2. **Pick next number** — Use the next available sequential number (e.g., 88)
+3. **Assign Document Type** — Choose A–L based on article purpose (see `01-article-writing.mdc`)
+4. **Create the file** — `{NN}_{Title_With_Underscores}.md` with frontmatter
+5. **Create image folder** — `mkdir images/{NN}-{kebab-case-title}/`
+6. **Write content** — Follow the Document Type structure exactly
+7. **Add to SUMMARY.md** — Place under the correct L1 section
+8. **Update ARTICLE_TAXONOMY.md** — Add the new mapping
+9. **Capture screenshots** — Using Playwright MCP or UI codebase
+10. **Commit** — `docs(article): add {title} article`
+
+## Updating an Existing Article
+
+1. **Read current content** — Understand what's already there
+2. **Research codebase** — Check if features have changed since last update
+3. **Make surgical edits** — Don't rewrite what's already correct
+4. **Verify image refs** — Ensure all `![...](...)` paths resolve
+5. **Check word count** — Should be 500+ words minimum
+6. **Commit** — `docs(article): update {topic} in article {NN}`
+
+## Adding New Features to Documentation
+
+When the platform adds new features (check git log for backend/UI changes):
+
+1. **Audit scope** — Does it need a new article or update to existing?
+2. **If new article needed** — Follow "Creating a New Article" above
+3. **If existing article update** — Add a new section, don't remove old content
+4. **Update related articles** — Status articles, FAQ, overview docs may need updates
+5. **Update New Features article (85)** — Add the feature with date and description
+6. **Update taxonomy** — If new L2/L3 categories are needed
+
+## Retiring Content
+
+1. **Don't delete** — Move deprecated info to `87_Retired_flows.md`
+2. **Add redirect** — In `.gitbook.yaml` if the file is removed
+3. **Update SUMMARY.md** — Remove from navigation
+4. **Update cross-references** — Fix any links pointing to removed content
+
+## Quality Gates (Before Publishing)
+
+- [ ] Follows assigned Document Type structure
+- [ ] 500+ words (600+ for process docs)
+- [ ] Frontmatter complete (title + description)
+- [ ] Screenshots for process/navigation articles
+- [ ] All image paths resolve correctly
+- [ ] No TODO/TBD/placeholder text
+- [ ] Cross-references link to correct articles
+- [ ] Specific field names and statuses from codebase
+- [ ] SUMMARY.md entry exists
+- [ ] ARTICLE_TAXONOMY.md entry exists

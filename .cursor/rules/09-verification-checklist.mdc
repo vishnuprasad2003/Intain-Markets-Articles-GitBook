@@ -1,0 +1,86 @@
+---
+description: Pre-commit verification checklist and quality audit procedures
+alwaysApply: true
+---
+
+# Verification & Quality Audit
+
+## Pre-Commit Checklist
+
+Run these checks before every commit:
+
+### 1. Image Reference Integrity
+```bash
+# Find all image references and check they resolve
+for f in [0-9]*.md; do
+  grep -oP '!\[.*?\]\((.*?)\)' "$f" | grep -oP '\((.*?)\)' | tr -d '()' | while read img; do
+    [ ! -f "$img" ] && echo "BROKEN: $f → $img"
+  done
+done
+```
+
+### 2. Word Count Audit
+```bash
+# Flag articles under 500 words
+for f in [0-9]*.md; do
+  words=$(wc -w < "$f")
+  [ "$words" -lt 500 ] && echo "THIN ($words words): $f"
+done
+```
+
+### 3. Frontmatter Check
+```bash
+# Verify all articles have title and description
+for f in [0-9]*.md; do
+  head -5 "$f" | grep -q "^title:" || echo "MISSING TITLE: $f"
+  head -5 "$f" | grep -q "^description:" || echo "MISSING DESC: $f"
+done
+```
+
+### 4. SUMMARY.md Sync
+```bash
+# Check every article is in SUMMARY.md
+for f in [0-9]*.md; do
+  grep -q "$f" SUMMARY.md || echo "NOT IN SUMMARY: $f"
+done
+```
+
+### 5. No Placeholder Text
+```bash
+grep -rl 'TODO\|TBD\|FIXME\|coming soon\|\[insert' [0-9]*.md
+```
+
+## Periodic Full Audit
+
+Run monthly or after major changes:
+
+### Coverage Audit (all features documented?)
+```bash
+# Check feature coverage across articles
+for term in "Asset Sale" "Credit Facilit" "Securitization" "Settlement" \
+  "Entra" "Audit" "Adobe Sign" "ABDP" "MFA" "Stablecoin" "Kinexys" \
+  "Wormhole" "NFT" "Batch" "Historical Tape" "Rate Limit"; do
+  count=$(grep -rli "$term" [0-9]*.md 2>/dev/null | wc -l)
+  printf "  %2d articles | %s\n" "$count" "$term"
+done
+```
+
+### Image Usage Audit
+```bash
+# Find images in folders that aren't referenced by any article
+find images/ -type f | while read img; do
+  grep -rl "$(basename "$img")" [0-9]*.md > /dev/null || echo "UNUSED: $img"
+done
+```
+
+## Production Readiness Criteria
+
+A release is production-ready when:
+- [ ] Zero broken image references
+- [ ] Zero articles under 300 words
+- [ ] All process docs (Type D) have at least 1 screenshot
+- [ ] All navigation docs (Type C) have screenshots
+- [ ] SUMMARY.md matches all article files exactly
+- [ ] ARTICLE_TAXONOMY.md covers all articles
+- [ ] No TODO/TBD/placeholder text in any article
+- [ ] Commit messages follow the convention

@@ -1,0 +1,87 @@
+---
+description: UI/UX formatting standards for production-grade documentation
+globs: "**/*.md"
+alwaysApply: false
+---
+
+# UX & Formatting Standards
+
+## Heading Hierarchy
+
+```markdown
+# Article Title (H1 — only ONE per article, matches frontmatter title)
+
+## Major Section (H2)
+
+### Sub-Section (H3)
+
+#### Detail (H4 — use sparingly)
+```
+
+- Never skip levels (e.g., H1 → H3)
+- H1 appears once, immediately after frontmatter
+- H2 for major document type sections (Overview, Step-by-Step, etc.)
+- H3 for subsections within those
+
+## Tables
+
+Use tables for structured data — they're the most scannable format:
+
+```markdown
+| Status | Description | Next Action |
+|--------|-------------|-------------|
+| **Draft** | Deal created, not yet submitted | Edit or publish |
+| **Published** | Visible to investors | Wait for commitments |
+```
+
+- Bold the key column (status names, role names)
+- Keep descriptions concise (one line)
+- Align columns with pipes
+
+## Lists
+
+- Use **numbered lists** for sequential steps (1, 2, 3...)
+- Use **bullet lists** for non-ordered items
+- Use **bold** for the key term at start of each item:
+  ```markdown
+  - **Fund Transfer** — Investors transfer purchase funds via bank wire
+  - **Payment Confirmation** — Both sides confirm the transaction
+  ```
+
+## Emphasis
+
+- **Bold** for UI element names: **Create Deal**, **Submit**, **Confirm & Settle**
+- *Italic* for status values when inline: deal moves to *Active*
+- `Code` for technical values: `settlementId`, `STL-A1B2C3D4`, `0x5425...`
+- **Bold** for field labels: **Purchase Price Basis**, **Governing Law**
+
+## Callout Patterns
+
+For important notes within flow:
+```markdown
+> **Note:** Settlement is tracked per investor. Different investors may be at different stages.
+```
+
+For warnings:
+```markdown
+> ⚠️ **Important:** Once NFT transfer completes, settlement cannot be reversed.
+```
+
+## Spacing & Readability
+
+- One blank line between sections
+- One blank line before and after tables
+- One blank line before and after images
+- No more than 3-4 sentences per paragraph
+- Break long processes into numbered steps
+- Maximum 80-100 words per paragraph for readability
+
+## Cross-Reference Style
+
+```markdown
+For more details, see [Settlement & NFT Transfer](36_Settlement_and_NFT_Transfer.md).
+```
+
+- Link text should be the article title or a descriptive phrase
+- Place cross-references at end of relevant section, not inline
+- Group related links: "See also: [Article A], [Article B]"

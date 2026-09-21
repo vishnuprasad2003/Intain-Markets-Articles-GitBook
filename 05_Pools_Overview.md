@@ -7,78 +7,101 @@ description: Learn what pools are and how they work in structured finance transa
 
 ## Overview
 
-Pools are collections of loans grouped together for securitization, whole loan sales, or other structured finance transactions. They serve as the fundamental building blocks for presenting loan portfolios to investors, structuring deals, and managing transactions from creation through completion. Understanding pools helps you effectively organize loans and navigate the structured finance workflow.
+Pools are collections of loans grouped together for securitization, whole loan sales, or other structured finance transactions. They serve as the fundamental building blocks for presenting loan portfolios to market makers, investors, and rating agencies. As an issuer, you create pools, map loans from your Loan Registry, and share them with other organizations for review and deal progression.
 
 ## What Pools Are
 
-A pool is essentially a container that holds multiple individual loans, organizing them into a single transaction unit. When you create a pool, you're grouping related loans together to present them as a cohesive investment opportunity or transaction package. Pools make it easier to manage, analyze, and present multiple loans as a unified whole rather than dealing with each loan individually.
+A pool is a container that holds multiple individual loans, organizing them into a single transaction unit. When you create a pool, you group related loans together to present them as a cohesive investment opportunity or transaction package. Pools aggregate loan-level data into meaningful metrics that help all parties understand the pool's characteristics, risk profile, and investment potential.
 
-Pools are dynamic entities—you can add loans to them, remove loans from them, and share them with other parties for review and collaboration. The platform automatically calculates aggregate metrics from all the loans in a pool, such as total balance, loan count, weighted average interest rates, and other characteristics that help investors and market makers understand the pool's composition and quality.
+Pools are dynamic—you can add loans, remove loans, and share them with other parties for review and collaboration. The platform automatically calculates aggregate metrics from all loans in a pool, and these metrics update automatically when loans are added or removed.
 
 ## Purpose and Use Cases
 
 Pools serve several important purposes in structured finance:
 
-**For Securitization Transactions** - Pools organize loans that will be packaged into securities and sold to investors. The pool structure helps investors understand the underlying assets and assess risk and return.
+**For Securitization Transactions** - Pools organize loans that will be packaged into securities and sold to investors. By grouping loans into pools, you can present a defined set of collateral for securitization structures.
 
-**For Whole Loan Sales** - Pools present loans as investment opportunities to potential buyers. Buyers can review pool characteristics and loan details to make purchase decisions.
+**For Whole Loan Sales** - Pools present loans for potential buyers. Investors can review pool characteristics and individual loan details.
 
-**For Transaction Management** - Pools provide a structured way to manage the entire transaction process from initial creation through deal completion, tracking progress and coordinating with multiple parties.
+**For Transaction Management** - Pools provide a structured way to manage the entire transaction process from creation through deal completion. Status progression tracks where each pool is in the workflow.
 
-**For Collaboration** - Pools enable collaboration between issuers, market makers, investors, and other parties. You can share pools for review, receive feedback, and work together to structure deals.
+**For Collaboration** - Pools enable collaboration between issuers, market makers, investors, and rating agencies. Sharing controls determine what each party can see and do.
 
 **For Analysis** - Pools aggregate loan data into meaningful metrics that help all parties understand pool characteristics, assess quality, and make informed decisions.
 
 ## Key Components
 
-**Pool Information** - Basic details about the pool including pool name, asset class, transaction type, description, and closing deal indicator. The pool name must be unique and helps identify the pool throughout the transaction.
+**Pool Information** - Basic details about the pool including pool name (must be unique), asset class (auto loans, personal loans, mortgages, commercial mortgages, etc.), transaction type (securitization, whole loan sale, etc.), description, and closing deal indicator. These details are entered when you set up the pool and can be edited while in Created or Preview status.
 
-**Mapped Loans** - Individual loans that have been assigned to the pool. Loans can only belong to one pool at a time. When loans are mapped, they contribute their balance, characteristics, and data to pool-level metrics.
+**Organization Assignments** - Organizations assigned to participate in the transaction: market makers for structuring, investors for funding, servicers for loan administration, paying agents for payment distributions, rating agencies for analysis, and verification agents for loan verification. You select these organizations during pool setup, and only assigned organizations appear as options when you share the pool.
 
-**Pool Metrics** - Aggregate statistics calculated automatically from mapped loans, including total balance, loan count, weighted average coupon, weighted average FICO scores, geographic distribution, and other characteristics. These metrics update automatically when loans are added or removed.
+**Mapped Loans** - Individual loans that have been assigned to the pool from the Loan Registry. Loans can only belong to one pool at a time. When loans are mapped, they contribute their balance, characteristics, and data to pool-level metrics. The Loans tab in pool details shows all mapped loans with action icons for feedback and loan rejection handling.
 
-**Organization Assignments** - Organizations assigned to participate in the transaction, such as market makers for structuring, investors for funding, servicers for loan administration, paying agents for payment distributions, and rating agencies for analysis.
+**Pool Metrics** - Aggregate statistics calculated automatically from mapped loans. These metrics are displayed in summary tiles at the top of the pool details page and update automatically when loans are added, removed, or reinstated.
 
-**Status** - The current stage of the pool in its workflow, such as Created, Preview, Mandate Pending, or Deal. Status determines what actions are available and what needs to happen next.
+**Pool Details Sections** - Within the pool details page, you have access to:
+- **Summary Section**: Charts and analytics showing pool composition and loan distributions
+- **Loans Tab**: All mapped loans with their key fields and action icons (tick, cross, chat box for feedback and loan rejection handling)
+- **Loan Tape Section**: Detailed loan-level data for both mapped and unmapped columns (unmapped columns show headers in italic). You can select different "As Of Date" values to view loan data for different reporting periods and download loan data in XLSX or CSV format
+- **Strats Section**: Stratification analytics showing distributions by various loan characteristics
+- **Performance Section**: Performance analytics for loans in the pool
+- **Feedback Section**: Pool-level feedback from market makers, investors, and other shared parties (issuers can view but not add pool-level feedback themselves)
+- **Sharing Tab**: Shows all organizations shared with and their current permissions (feedback, download)
 
-**Sharing Configuration** - Settings that control which organizations can see the pool and what they can do with it, such as viewing, providing feedback, downloading data, or requesting changes.
+**Status** - The current stage of the pool in its workflow. Pool status progresses through Created → Preview → Deal. Status determines what actions are available and what editing is permitted.
+
+**Sharing Configuration** - Settings that control which organizations can see the pool and what they can do with it. Permissions include view access, feedback capability, and download capability. Permissions are set per organization and can be adjusted in the Sharing tab.
 
 ## How Pools Work
 
-**Creation** - You create a pool by providing basic information like pool name, asset class, and transaction type. The pool starts in Created status, visible only to you, ready for loan mapping and configuration.
+**Creation** - You create a pool by clicking **Set-up Pool** in the Pools dashboard and entering basic information: pool name, asset class, transaction type, description, and closing deal indicator. You also select organizations (market makers, investors, servicers, paying agents, rating agencies, verification agents) that will be available for sharing later. The pool starts in Created status, visible only to you, ready for loan mapping and configuration.
 
-![Pool Creation - Issuer](imagesByMdFilesFolder/05/PoolCreation_Issuer.png)
+![Pools Page - Issuer View](images/05-pools-overview/issuer-pools-page.png)
 
-**Loan Mapping** - You map loans to the pool by selecting individual loans and assigning them to the pool. When loans are mapped, pool metrics calculate automatically. You can add or remove loans while the pool is in Created or Preview status.
+![Pool Creation - Issuer](images/05-pools-overview/PoolCreation_Issuer.png)
 
-![Loan Map to Pool - Issuer](imagesByMdFilesFolder/05/LoanMapToPoolIssuer.png)
+**Loan Mapping** - You map loans to the pool from the **Loan Registry** section (not from within pool details). In Loan Registry, you select unmapped loans and click **Map to Pool**, then choose the target pool from a dropdown. When loans are mapped, pool metrics calculate automatically. You can view mapped loans in the pool's Loans tab.
 
-**Sharing** - You share pools with other organizations for review and collaboration. When shared, pools become visible to those organizations, and recipients can view, analyze, and provide feedback based on sharing permissions.
+![Loan Map to Pool - Issuer](images/05-pools-overview/LoanMapToPoolIssuer.png)
 
-![Pool Sharing - Issuer](imagesByMdFilesFolder/05/PoolSharing_Issuer.png)
+**Sharing (Preview Flow)** - You share pools with other organizations by clicking **Share** in pool details. You select recipient type, choose from assigned organizations, and set permissions (feedback, download). When shared, the pool status becomes Preview (if it was Created). Recipients see the pool as **Mandate Pending** with Accept/Reject actions. Before accepting, market makers cannot provide feedback. After a market maker accepts, their view shows **Under Review** and feedback becomes available.
 
-**Pool Details** - When viewing pools, you can access detailed information including pool metrics, loan composition, and available actions. The pool details view provides comprehensive information for decision-making.
+![Pool Sharing - Issuer](images/05-pools-overview/PoolSharing_Issuer.png)
 
-![Pool Details - Issuer](imagesByMdFilesFolder/05/Pool_Details_Issuer.png)
+**Pool Details** - When viewing pools, you access comprehensive information: pool metrics in summary tiles, loan composition in the Loans tab, detailed loan data in the Loan Tape section (with As Of Date selection and download), stratification analytics in Strats, performance analytics in Performance, pool-level feedback in Feedback, and sharing configuration in Sharing. The Edit button provides options to edit pool details or upload recurring loan tapes.
 
-**Status Progression** - Pools progress through statuses from Created to Preview to Mandate Pending to Deal. Each status represents a specific stage and determines what actions are available. Status changes happen when you take actions like sharing, submitting for mandate, or when market makers accept mandates.
+![Pool Details - Issuer](images/05-pools-overview/Pool_Details_Issuer.png)
 
-**Collaboration** - Multiple parties can work together on pools. Issuers create and share, market makers review and structure, investors evaluate opportunities, and rating agencies analyze for ratings. Feedback and change requests enable iterative improvement.
+**Start Deal Flow** - When prerequisites are met (typically all pool loans NFT-minted), the **Start Deal** button becomes enabled. Start Deal sends the pool to recipients with status **Ready for Deal**. When a market maker accepts, the pool becomes a **Deal** and structural editing is restricted.
 
-**Finalization** - When market makers accept mandates, pools become Deals, representing finalized and committed transactions. At this stage, editing is restricted, and the pool is ready for execution.
+**Status Progression** - Pools progress through statuses: Created → Preview (when shared) → Deal (when accepted via Start Deal). Each status represents a specific stage with appropriate controls. In Created and Preview, you can edit the pool. In Deal, editing is restricted.
+
+**Collaboration** - Multiple parties work together on pools. Issuers create and share; market makers review, accept mandates, and can share further with investors; investors evaluate and provide feedback; rating agencies analyze for ratings. Each role sees appropriate views and actions.
+
+
+
+![Issuer Overview Page](images/05-pools-overview/issuer-overview-page.png)
 
 ## Important Points to Know
 
-**Automatic Metric Calculation** - Pool metrics calculate automatically from mapped loans. You don't need to calculate them manually—total balance, loan count, weighted averages, and other statistics update automatically when loans are added or removed.
+**Automatic Metric Calculation** - Pool metrics calculate automatically from mapped loans and update automatically when loans are added, removed, or reinstated.
 
-**One Pool Per Loan** - Loans can only belong to one pool at a time. If you want to move a loan to a different pool, you must unmap it from the current pool first. This ensures clear ownership and prevents conflicts.
+**One Pool Per Loan** - Loans can only belong to one pool at a time. To move a loan to a different pool, unmap it from the current pool first.
 
-**Status Controls Actions** - Pool status determines what actions are available. You can edit pools in Created or Preview status, but editing is restricted once pools become Deals. Understanding status helps you know what you can do.
+**Status Controls Actions** - Pool status determines what actions are available. You can edit pools in Created or Preview status, but editing is restricted once pools become Deals.
 
-**Removed Loans Are Excluded** - Removed loans are excluded from pool calculations but remain visible for tracking. This allows you to maintain pool quality while preserving complete records. Removed loans can be reinstated if needed.
+**Sharing Permissions** - Permissions (feedback, download) are set per organization and control what recipients can do. You can adjust permissions in the Sharing tab.
 
-**Sharing Enables Collaboration** - Sharing pools with other organizations enables collaboration and review. You can share with multiple parties simultaneously, and sharing permissions control what recipients can do.
+**Preview vs Start Deal** - Preview sharing allows recipients to review and accept/reject mandates while you retain editing rights. Start Deal sends a finalized pool (after NFT minting) and results in Deal status when accepted.
 
-**Complete Audit Trail** - All pool changes, status updates, and actions are recorded with who did what and when, ensuring complete transparency and accountability throughout the transaction lifecycle.
+**Loan Rejection Handling** - In the Loans tab, action icons allow handling of loan rejection requests from market makers. Tick accepts the rejection (loan marked as Removed); cross rejects the rejection request.
 
-Understanding pools helps you effectively organize loans, present opportunities to investors, collaborate with other parties, manage transactions from creation to completion, and navigate the structured finance workflow successfully.
+**Loan Tape Downloads** - The Loan Tape section allows selecting different As Of Date values for periodic loan data and downloading in XLSX or CSV format.
+
+**Feedback Levels** - Feedback can be pool-level (in the Feedback section) or loan-level (via chat box icon in Loans tab). Issuers can view pool-level feedback but add comments through loan-level feedback.
+
+**Asset Sale Deal Assignment** - Pools can be assigned to Asset Sale deals. When loans from a pool are assigned to a deal, they become part of the asset sale portfolio.
+
+**Pool Analysis (IDA)** - The Pool Analysis feature provides analytics including Summary, Strats, Performance, and Loans views. Market makers and investors can access Pool Analysis via the Pool Analysis button on pool preview details.
+
+**Modelling Workbench** - The Modelling Workbench allows market makers and investors to configure and compare cashflow model scenarios for pools.

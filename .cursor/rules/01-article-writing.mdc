@@ -1,0 +1,261 @@
+---
+description: Document Type definitions (A–L), article writing rules, and content quality standards
+globs: "**/*.md"
+alwaysApply: true
+---
+
+# Article Writing & Document Types
+
+## Frontmatter (REQUIRED)
+
+Every `.md` article MUST start with YAML frontmatter:
+
+```yaml
+---
+title: Human-Readable Title
+description: One-line SEO description (50-160 characters)
+---
+```
+
+## Content Quality Standards
+
+- **Minimum depth:** 600+ words for process docs (D, L), 500+ words for all others
+- **Specificity:** Use actual field names, status values, dropdown options from the codebase
+- **No placeholders:** Never use TODO, TBD, "coming soon", or "[insert content]"
+- **No fiction:** Only document features that exist in the code
+- **Tables:** Use for status definitions, role permissions, field descriptions, comparisons
+- **Cross-references:** Link related articles: `[Settlement](36_Settlement_and_NFT_Transfer.md)`
+
+## Writing Tone
+
+- Professional, clear, user-friendly
+- Audience: Platform users (non-technical), not developers
+- Explain WHY, not just WHAT
+- Define any technical term on first use
+- Use active voice: "Click Submit" not "The Submit button should be clicked"
+
+## Document Type Compliance
+
+Before writing or editing an article, check `ARTICLE_TAXONOMY.md` for its assigned Document Type (A–L), then follow the **full structure** below.
+
+---
+
+### Type A — Platform Foundation
+
+**Purpose:** Orient users, set mental models, explain philosophy, establish foundational understanding.
+
+**Used for:** What is Intain Markets, Status & Approval Philosophy, Why Approvals Exist, End-to-End Traceability, Controls & Accountability.
+
+**Structure:**
+1. **Title**
+2. **Overview** — Brief intro, why it matters, context and importance
+3. **How the Platform Is Designed** — Design principles, architectural approach, system-wide considerations
+4. **What This Enables for Users** — Benefits, value proposition, how users benefit
+5. **Key Principles to Understand** — Core principles, important concepts, foundational knowledge
+
+**Guidelines:** No steps or procedures. No feature lists. Strategic explanation only. Focus on "why" and "what" not "how".
+
+---
+
+### Type B — Role & Access
+
+**Purpose:** Explain roles, permissions, and access capabilities.
+
+**Used for:** User Roles & Responsibilities, Who Can Do What, Enabled vs Disabled Actions, Roles in Credit Facilities.
+
+**Structure:**
+1. **Title**
+2. **Overview** — Intro to roles/access, why understanding roles matters
+3. **Roles Covered** — List of roles, descriptions, context
+4. **What Each Role Can Do** — Detailed capabilities, actions, permissions, limitations
+5. **Important Access Notes** — Key access control points, restrictions, how access works
+
+**Guidelines:** Clear role descriptions. Non-technical language. Focus on what users can do.
+
+---
+
+### Type C — Navigation & Usage
+
+**Purpose:** Guide users on how to navigate and use platform features.
+
+**Used for:** Login & Navigation, Role-Based Views, Analytics, IDA Dashboard, Signature Visibility, Reporting.
+
+**Structure:**
+1. **Title**
+2. **Overview** — Intro to navigation/feature, why it matters
+3. **How to Navigate the Platform** — Navigation instructions, how to access features
+4. **What You Will See** — Visual descriptions, interface elements, what to expect
+5. **Helpful Tips** — Best practices, shortcuts, efficiency tips
+
+**Guidelines:** Step-by-step navigation guidance. Visual descriptions. Practical tips.
+
+---
+
+### Type D — Process / How-To
+
+**Purpose:** Provide step-by-step instructions for completing tasks.
+
+**Used for:** Pool creation, loan management, approvals, submissions, reviews, funding requests, facility creation, deal setup, repayment, token approval.
+
+**Structure:**
+1. **Title**
+2. **Overview** — What this process accomplishes, why users need it
+3. **Who Can Use This** — Roles that can perform this process
+4. **When This Is Used** — Situations requiring this process
+5. **Step-by-Step Process** — Detailed instructions, clear actions, expected outcomes
+6. **Rules & Validations** — Business rules, validation requirements, constraints
+7. **What Happens Next** — Outcomes after completion, next steps in workflow
+
+**Guidelines:** Clear, actionable steps. Detailed explanations per step. Complete coverage.
+
+---
+
+### Type E — Lifecycle & Status
+
+**Purpose:** Explain statuses and lifecycle progression.
+
+**Used for:** Pool/Loan/Deal lifecycle & statuses, Facility Setup Status, Master Commitment Statuses, Asset Sale Statuses.
+
+**Structure:**
+1. **Title**
+2. **Overview** — Intro to statuses, why understanding them matters
+3. **Lifecycle Overview** — Overall progression, typical flow, how items move through lifecycle
+4. **Status Meanings** — Each status explained clearly, what each represents
+5. **What Each Status Indicates** — Implications, what users should know, actions available at each status
+
+**Guidelines:** Avoid procedural tone. Focus on explanation. Clear status descriptions. Very common in MNC portals.
+
+---
+
+### Type F — Outcome & Decision
+
+**Purpose:** Explain possible outcomes and their implications.
+
+**Used for:** What Happens After Rejection, Feedback vs Rejection, Funding Request Outcomes, Loan Rejection & Reinstatement.
+
+**Structure:**
+1. **Title**
+2. **Overview** — Intro to outcomes, why understanding them matters
+3. **Possible Outcomes** — List of all outcomes, descriptions
+4. **What Each Outcome Means** — Detailed explanations, implications, consequences
+5. **Next Steps for Users** — What to do for each outcome, how to proceed
+
+**Guidelines:** Clear outcome explanations. Actionable next steps. Complete coverage.
+
+---
+
+### Type G — Reference / Lookup
+
+**Purpose:** Provide reference information for lookup and understanding.
+
+**Used for:** Status Qualifiers, Token IDs & Timestamps, Who Changed What and When, Removed Loans & Calculations.
+
+**Structure:**
+1. **Title**
+2. **Overview** — Intro to reference topic, why it matters
+3. **Reference Details** — Detailed reference information, comprehensive explanations
+4. **Important Notes** — Key points, critical information, additional context
+
+**Guidelines:** Comprehensive reference information. Easy to lookup and understand.
+
+---
+
+### Type H — FAQ / Support
+
+**Purpose:** Answer common questions and provide troubleshooting guidance.
+
+**Used for:** Common User Questions, Why Can't I Act?, Why Actions Are Blocked, Funding & Approval Questions, Asset Sale FAQs.
+
+**Structure:**
+1. **Title**
+2. **Overview** — Intro to FAQs, how to use this document
+3. **Frequently Asked Questions** — Q&A pairs organized by topic/category
+
+**Guidelines:** Clear questions, detailed answers. Organized by topic. User-friendly format.
+
+---
+
+### Type I — Change & Release Notes
+
+**Purpose:** Document platform changes and their impact.
+
+**Used for:** New Features, Status or Logic Changes, Retired Flows.
+
+**Structure:**
+1. **Title**
+2. **Overview** — Intro to changes, how to use this information
+3. **What Changed** — Detailed descriptions, new capabilities or features
+4. **Impact on Existing Users** — How changes affect users, adaptation/migration guidance
+
+**Guidelines:** Clear change descriptions. User-focused impact analysis.
+
+---
+
+### Type J — Concept / Module Overview
+
+**Purpose:** Explain what a concept/module is, its purpose, key components, and how it works.
+
+**Used for:** Pools Overview, Loans Overview, Credit Facilities Overview, Master Commitment Overview, Funding Requests/Notices Overview, Asset Sale Overview.
+
+**Structure:**
+1. **Title**
+2. **Overview** — Intro to the concept, why it matters
+3. **What [Concept] Is** — Clear definition, what it represents, detailed explanation
+4. **Purpose and Use Cases** — Why it exists, common use cases, when it's needed
+5. **Key Components** — Main elements, component descriptions, how they relate
+6. **How [Concept] Works** — Operational mechanics, process flow
+7. **Important Points to Know** — Key information, important considerations
+
+**Guidelines:** Explains the concept itself, not platform design. Module-specific context.
+
+---
+
+### Type K — Workflow Overview
+
+**Purpose:** Explain complete workflows from start to finish.
+
+**Used for:** Token Generation & Issuance, E-Signature Workflow, Settlement & NFT Transfer, Investor Agreement & E-Signature.
+
+**Structure:**
+1. **Title**
+2. **Overview** — Intro to the workflow, why it matters
+3. **Workflow Overview** — Overall description, complete flow, end-to-end process
+4. **Key Stages** — Main stages, descriptions, what happens at each
+5. **How the Workflow Progresses** — Stage progression, connections between stages
+6. **Important Points to Know** — Key information, critical points
+
+**Guidelines:** Shows progression through stages. Avoids step-by-step instructions (use Type D). Focus on workflow understanding.
+
+---
+
+### Type L — Review & Decision
+
+**Purpose:** Explain how reviewers evaluate and make decisions.
+
+**Used for:** Pool Mandate Review, Term Sheet Review, Funding Request Review, Funding Notice Review, Facility Approval, Pool & Loan Review.
+
+**Structure:**
+1. **Title**
+2. **Overview** — Intro to review process, why reviews matter
+3. **Who Can Use This** — Roles that perform reviews
+4. **When This Is Used** — Situations requiring review
+5. **Review Process** — How reviews are conducted, process flow
+6. **Evaluation Criteria** — What reviewers look for, standards
+7. **Making Decisions** — Decision options (approve/reject/changes requested)
+8. **Rules & Validations** — Business rules, constraints
+9. **What Happens Next** — Outcomes after review, next steps
+
+**Guidelines:** Focus on evaluation and decision-making. Covers approve/reject/changes requested.
+
+---
+
+## Golden MNC Rule
+
+> Not all pages are "how-to". Mature platforms **explain, orient, and justify** — not just instruct.
+
+1. Use natural, user-friendly language throughout
+2. Provide detailed explanations for complete understanding
+3. Avoid technical jargon unless necessary (define on first use)
+4. Ensure consistency across all document types
+5. Maintain clear structure and organization
+6. Use clear, descriptive titles and headings

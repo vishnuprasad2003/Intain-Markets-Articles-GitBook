@@ -1,0 +1,100 @@
+---
+description: GitBook sync configuration and content formatting rules
+alwaysApply: true
+---
+
+# GitBook Sync Rules
+
+## Critical Files (GitBook reads these)
+
+| File | Purpose | Edit Policy |
+|------|---------|-------------|
+| `SUMMARY.md` | Sidebar navigation | Edit when articles change |
+| `README.md` | Homepage | Do NOT edit (GitBook-managed) |
+| `.gitbook.yaml` | Space config | Rarely edit |
+
+## SUMMARY.md Format
+
+```markdown
+# Table of contents
+
+## Getting Started
+
+* [What is Intain Markets](01_What_is_Intain_Markets.md)
+* [User Roles](02_User_Roles_and_Responsibilities.md)
+
+## Pools & Loans
+
+* [Pools Overview](05_Pools_Overview.md)
+```
+
+- Each article appears EXACTLY ONCE
+- Use `## Section` for L1 categories
+- Use `* [Title](filename.md)` for articles
+- Nested items use indentation with `  *`
+- The title in SUMMARY.md can differ from frontmatter title
+
+## Frontmatter Requirements
+
+```yaml
+---
+title: Required — displayed as page title
+description: Required — used for SEO and preview cards
+---
+```
+
+GitBook also supports (use sparingly):
+- `icon:` — page icon (e.g., `icon: book-open`)
+- `hidden: true` — hide from navigation
+- `layout.width: wide` — wide page layout
+
+## GitBook Markdown Extensions
+
+### Hints (callout boxes)
+```markdown
+{% hint style="info" %}
+Helpful tip or additional context.
+{% endhint %}
+```
+Styles: `info` (blue), `warning` (yellow), `danger` (red), `success` (green)
+
+### Tabs
+```markdown
+{% tabs %}
+{% tab title="Issuer" %}
+Issuer-specific content here.
+{% endtab %}
+{% tab title="Investor" %}
+Investor-specific content here.
+{% endtab %}
+{% endtabs %}
+```
+
+### Steppers
+```markdown
+{% stepper %}
+{% step %}
+### Step 1: Create Deal
+Click the Create Deal button...
+{% endstep %}
+{% step %}
+### Step 2: Select Pool
+Choose the pool to include...
+{% endstep %}
+{% endstepper %}
+```
+
+## Links
+
+- Internal: `[Settlement](36_Settlement_and_NFT_Transfer.md)` (relative path)
+- Cross-article anchors: `[Payment Rails](36_Settlement_and_NFT_Transfer.md#payment-rails)`
+- External: `[Wormhole Bridge](https://wormhole.com)` (full URL)
+
+## What NOT to Do
+
+- ❌ Don't use HTML tags (GitBook strips most HTML)
+- ❌ Don't use `<details>` / `<summary>` — use GitBook expandable blocks instead
+- ❌ Don't embed iframes or scripts
+- ❌ Don't put OpenAPI specs inline — upload via GitBook API
+- ❌ Don't edit README.md — it's GitBook's homepage file
+- ❌ Don't use absolute paths for images — always relative

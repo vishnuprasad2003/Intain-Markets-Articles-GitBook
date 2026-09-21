@@ -1,32 +1,146 @@
 ---
 title: Loan Rejection and Reinstatement
-description: Learn how to remove loans from pools and put them back when needed
+description: Learn how loan removal requests work and how issuers handle them
 ---
 
 # Loan Rejection and Reinstatement
 
 ## Overview
 
-Sometimes loans need to be removed from pools temporarily or permanently, and later reinstated when appropriate. Understanding loan rejection and reinstatement helps you maintain pool quality, address data issues, and adjust pool composition as needed. This process allows you to manage pool composition flexibly while maintaining data integrity and ensuring pools meet quality standards.
+When pools are shared with market makers and investors, they can request removal of specific loans they believe shouldn't be in the pool. The issuer then decides whether to accept or reject these removal requests. This process allows collaborative pool refinement while keeping the issuer in control of pool composition.
+
+## How Loan Rejection Works
+
+**Market Maker / Investor Requests Removal**
+
+When a market maker or investor reviews a pool and believes a loan should be removed, they can request removal by clicking the **cross icon** next to that loan in the Loans tab of the pool details page.
+
+- The removal request is sent to the issuer
+- The market maker/investor sees the loan status change to **Under Reconsider**
+- The loan remains in pool calculations until the issuer makes a decision
+
+![Loan Rejection Request - From Market Maker](images/12-loan-rejection-and-reinstatement/Loan_Rejection_Request_From_MarketMaker.png)
+
+**Issuer Reviews the Request**
+
+The issuer sees the loan with **Reconsider** status in the Loans tab. Two action icons appear next to that loan:
+
+- **Tick icon**: Accept the removal request (loan will be removed)
+- **Cross icon**: Reject the removal request (loan stays in pool)
 
 ## Possible Outcomes
 
-When you remove a loan from a pool, the loan enters a "Removed" status. When you reinstate a loan, it returns to active participation in the pool. These are the two main outcomes for loan status management within pools. Understanding these outcomes helps you know what happens when you remove or reinstate loans and how these actions affect pool metrics and composition.
+### Removal Accepted (Tick Icon)
 
-## What Each Outcome Means
+When the issuer clicks the **tick icon**, accepting the removal request:
 
-**Removed Status** means the loan has been excluded from pool calculations but remains visible in the pool for tracking purposes. Pool metrics automatically recalculate to exclude the removed loan—total balance decreases, loan count decreases, and weighted averages recalculate without the removed loan. The loan is still visible in the pool list but marked as removed, allowing you to track what was excluded and why. This status is useful when loans don't meet pool criteria, have data quality issues, need correction, or when pool requirements change. Removed loans don't affect pool metrics but remain visible for audit and tracking purposes.
+**What Happens:**
+- The loan status changes to **Removed**
+- The loan is excluded from pool calculations
+- Pool metrics recalculate automatically (total balance decreases, loan count decreases)
+- The loan remains visible in the pool list for tracking purposes
+- Both issuer and market maker/investor see the loan as "Removed"
 
-![Loan Rejection Request - From Market Maker](imagesByMdFilesFolder/12/Loan_Rejection_Request_From_MarketMaker.png)
+**What This Means:**
+- The loan no longer contributes to pool metrics
+- The pool composition has been adjusted based on feedback
+- The loan is still tracked but not counted in calculations
+- The loan can potentially be reinstated later if needed
 
-**Reinstated Status** means a previously removed loan has been put back into the pool and is included in calculations again. Pool metrics automatically recalculate to include the reinstated loan—total balance increases, loan count increases, and weighted averages recalculate with the reinstated loan included. The loan fully participates in the pool again, and you can track that it was reinstated. This status is useful when issues with removed loans have been resolved, data has been corrected, pool requirements change, or you decide to include loans that were removed earlier. Reinstated loans fully participate in pool metrics and calculations.
+### Removal Rejected (Cross Icon)
+
+When the issuer clicks the **cross icon**, rejecting the removal request:
+
+**What Happens:**
+- The loan remains in the pool
+- The loan status returns to normal (Accepted/Mapped)
+- Pool calculations continue to include this loan
+- The market maker/investor is informed the request was rejected
+
+**What This Means:**
+- The issuer has decided to keep the loan in the pool
+- Pool composition remains unchanged
+- The loan continues to contribute to pool metrics
+
+## Reinstatement
+
+If a removed loan needs to be added back to the pool, the issuer can reinstate it.
+
+**What Happens When Reinstated:**
+- The loan status changes from **Removed** to **Reinstated**
+- The loan is included in pool calculations again
+- Pool metrics recalculate automatically (total balance increases, loan count increases)
+- The loan fully participates in the pool
+
+**When to Reinstate:**
+- Issues that caused removal have been resolved
+- Pool requirements have changed
+- The loan was removed in error
+- Circumstances have changed and the loan should be included
 
 ## Next Steps for Users
 
-**After Removing a Loan** - Review the updated pool metrics to ensure they reflect the removal correctly. Verify that the loan shows as "Removed" in the pool list. If the loan was removed due to data issues, correct the data. If it was removed because it doesn't meet criteria, determine if criteria can be adjusted or if the loan should remain removed. Consider whether other loans should also be removed for similar reasons. Track why loans were removed for future reference and audit purposes.
+### For Market Makers / Investors (Requesting Removal)
 
-**After Reinstating a Loan** - Review the updated pool metrics to ensure they reflect the reinstatement correctly. Verify that the loan shows as active in the pool list. Confirm that the issues that caused removal have been resolved. Ensure the loan now meets pool criteria and requirements. Consider whether the reinstated loan affects pool characteristics in ways that are acceptable. Verify that reinstatement improves pool quality and meets requirements.
+1. **Identify Loans for Removal**
+   - Review the loans in the pool's Loans tab
+   - Identify loans you believe should not be in the pool
+   - Consider your reasoning (data quality, criteria mismatch, risk concerns)
 
-**Ongoing Management** - Monitor removed loans to see if they can be reinstated later. Track why loans were removed to help with future pool management decisions. Use removal and reinstatement to maintain pool quality and ensure pools meet requirements. Keep records of removal and reinstatement decisions for audit purposes. Regularly review removed loans to determine if they can be reinstated or should remain removed.
+2. **Submit Removal Request**
+   - Click the **cross icon** next to the loan you want removed
+   - The request is sent to the issuer
+   - The loan shows as "Under Reconsider" in your view
 
-Understanding loan rejection and reinstatement helps you manage pool composition effectively, maintain pool quality, address data issues, adjust pools as requirements change, and ensure pools meet quality standards throughout their lifecycle.
+3. **Wait for Issuer Decision**
+   - The issuer reviews your request
+   - You will see the outcome: either "Removed" (accepted) or the loan returns to normal status (rejected)
+
+4. **Continue Review**
+   - If accepted, pool metrics update to exclude the loan
+   - If rejected, the loan remains in the pool
+   - You can provide feedback through the chat box if you want to discuss further
+
+### For Issuers (Handling Removal Requests)
+
+1. **Review the Request**
+   - Go to the pool's Loans tab
+   - Look for loans with "Reconsider" status
+   - Understand why the removal was requested (check feedback/comments)
+
+2. **Make Your Decision**
+   - Click **tick icon** to accept: Loan is removed from calculations
+   - Click **cross icon** to reject: Loan stays in pool
+
+3. **After Accepting Removal**
+   - Verify pool metrics updated correctly
+   - Consider if the loan should be fixed and reinstated later
+   - Track removed loans for record-keeping
+
+4. **After Rejecting Removal**
+   - Consider providing feedback explaining your decision
+   - The loan continues to be part of the pool
+   - Address any underlying concerns through the feedback mechanism
+
+5. **Reinstatement (When Needed)**
+   - If issues are resolved, you can reinstate removed loans
+   - Pool metrics will update to include the reinstated loan
+   - The loan returns to full participation in the pool
+
+
+
+![ReinstateLoan](images/12-loan-rejection-and-reinstatement/ReinstateLoan.png)
+
+## Important Notes
+
+**Issuer Has Final Say** - The issuer decides whether to accept or reject removal requests. Market makers and investors can request, but the issuer controls pool composition.
+
+**Automatic Metric Updates** - Pool metrics recalculate automatically when loans are removed or reinstated. You don't need to manually update anything.
+
+**Loans Remain Visible** - Removed loans stay visible in the pool list with "Removed" status. This maintains a complete record of what happened.
+
+**Feedback for Communication** - Use the chat box icon in the Loans tab to communicate about specific loans. This provides context for removal requests and decisions.
+
+**Reinstatement Is Possible** - Removal is not permanent. Loans can be reinstated when appropriate.
+
+**All Actions Are Tracked** - Removal requests, decisions, and reinstatements are recorded for audit purposes.

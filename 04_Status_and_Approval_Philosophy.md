@@ -1,74 +1,113 @@
 ---
 title: Status and Approval Philosophy
-description: Understand how statuses and approvals work together to create structured workflows
+description: Why Intain Markets uses status-driven workflows and approval gates to ensure trust, accountability, and structured progression across every transaction
 ---
 
 # Status and Approval Philosophy
 
 ## Overview
 
-Statuses and approvals are fundamental design elements of Intain Markets that work together to create structured workflows where items progress through defined stages, quality is ensured through review checkpoints, and proper authorization is obtained before commitment. Understanding this philosophy helps you appreciate why the platform works the way it does, how statuses and approvals interact, and how to work effectively within the structured workflow system.
+Intain Markets is built on a foundational principle: every transaction should progress through clearly defined stages, with proper authorization at each transition. This is not merely a technical design choice — it reflects a deliberate philosophy rooted in how institutional financial markets operate. In traditional capital markets, deals move through stages of preparation, review, commitment, execution, and settlement, with checks and sign-offs at every boundary. Intain Markets brings this same rigor to a digital platform, ensuring that no action happens without the right person authorizing it at the right time.
+
+Statuses and approvals are the two mechanisms that enforce this philosophy. Statuses represent where an item is in its journey — they control what actions are available and who can act. Approvals are the gates between stages — they ensure that a qualified party has reviewed and authorized the transition before it happens.
+
+Together, these mechanisms create workflows that are predictable, auditable, and resistant to errors or unauthorized actions.
 
 ## How the Platform Is Designed
 
-The platform is designed around the principle that structured finance transactions must progress through logical stages, with quality checks and authorization gates at critical points. Statuses serve as markers that indicate where an item is in its journey, while approvals serve as gates that ensure quality and compliance before items can proceed to the next stage.
+### Status-Driven Workflows
 
-**Statuses as Active Controls** - Statuses are not arbitrary labels—they are active controls that:
+Every major item on the platform — pools, loans, term sheets, master commitments, funding requests, asset sale deals — carries a status that defines its current state. This status is the single source of truth for what can happen next.
 
-- **Define what actions are available** - Only actions appropriate for the current stage are enabled. When you see a disabled button, it's usually because the status doesn't allow that action yet, or prerequisites haven't been met. This prevents errors and ensures proper workflow progression.
+The platform enforces strict rules based on status:
 
-- **Prevent improper progression** - You cannot skip stages or go backwards without proper authorization. The platform enforces sequential progression, ensuring that important steps aren't missed and that items progress in the correct order.
+- **Action availability is status-dependent.** Buttons and actions are enabled or disabled based on the item's current status. For example, a term sheet in **Draft** status can be edited, but once it moves to **FAReview**, editing is locked until the facility agent makes a decision. A deal in **Active** status allows repayment initiation, but a deal in **Settlement In Progress** does not.
 
-- **Reflect business state** - Statuses represent real business conditions, not just technical states. A pool in "Preview" status is actually being shared for review, a term sheet in "FAReview" status is actually being reviewed by a facility agent, and a funding request in "APPROVED" status has actually been approved and is ready for the next stage.
+- **Sequential progression is enforced.** Items cannot skip stages. A pool must move from **Created** to **Preview** to **Under Review** to **Deal** — there is no shortcut from Created directly to Deal. An asset sale deal must progress through Draft, Pending Review, Published, Commit, Invest, Settlement In Progress, Settled, and Active in order. Each status transition is a deliberate, recorded event.
 
-- **Enable parallel workflows** - Different parties can work on different aspects while respecting status boundaries. An issuer can work on pool details while a market maker reviews the pool, but certain actions are only available when the status allows them.
+- **Backward movement is controlled.** When an item moves backward (for example, a term sheet returning from **FAReview** to **CHANGES_REQUESTED**), it is always the result of an explicit decision by an authorized party, never an automatic or accidental regression.
 
-- **Provide visibility** - Statuses communicate to all parties where items are in the process. Everyone can see the current status and understand what stage the item is at, what has happened, and what needs to happen next.
+- **Terminal statuses are final.** Statuses like **Cancelled**, **Rejected**, and **Closed** are endpoints. Once an item reaches a terminal status, it cannot be reactivated or re-entered into the workflow. This prevents confusion about whether a cancelled or rejected item might still be acted upon.
 
-**Approvals as Quality Assurance** - Approvals are not obstacles—they are quality assurance mechanisms that:
+### The Maker-Checker Principle
 
-- **Ensure standards are met** - Items are reviewed by qualified parties before proceeding. Reviewers examine items to ensure they meet quality requirements, identify issues early, and provide opportunities for improvement before final commitment.
+At the heart of the approval philosophy is the **maker-checker** pattern — a well-established control principle in financial services. The idea is simple but powerful: the person who creates or initiates something should not be the same person who approves it.
 
-- **Maintain compliance** - Regulatory requirements and business rule requirements are verified before commitment. Reviewers assess compliance, ensuring that transactions meet all necessary requirements before proceeding.
+On Intain Markets, this principle appears throughout:
 
-- **Protect all parties** - Approvals ensure all parties agree before commitment. Submitters know their items are reviewed, reviewers can ensure quality, and all parties benefit from structured review processes that protect everyone involved.
+- **Borrowers create** term sheets; **Facility Agents review** and approve them.
+- **Issuers create** asset sale deals; **Underwriters (Market Makers) review** and approve them.
+- **Borrowers submit** funding requests; **Facility Agents review** and approve them.
+- **Issuers initiate** repayment; **Investors confirm** receipt.
+- **Facility Agents configure** master commitments; **Lenders approve** and e-sign them.
 
-- **Enable improvement** - Reviewers can request changes before final approval, allowing iterative improvement. This enables refinement and ensures that items meet requirements before final commitment, rather than requiring rejection and restart.
+This separation ensures that no single party can unilaterally advance a transaction. Every progression requires at least two parties to agree, reducing the risk of errors, fraud, or miscommunication.
 
-- **Create accountability** - Approval decisions are documented and attributed to specific reviewers. This creates accountability and supports compliance requirements, ensuring that decisions are traceable and attributable.
+### Role-Based Action Controls
 
-The platform enforces this structure automatically, ensuring that workflows progress correctly and approvals happen in the proper sequence. This automatic enforcement reduces errors, ensures consistency, and maintains workflow integrity throughout the transaction lifecycle.
+The platform does not merely check whether an action is available — it also checks whether the current user has the authority to perform it. Actions are gated by both status and role:
+
+- Only **Facility Agents** can approve or reject term sheets and funding requests.
+- Only **Lenders** can approve master commitments.
+- Only **Market Makers** can accept or reject pool mandates.
+- Only **Issuers** can publish deals, initiate repayment, and upload loan tapes.
+- Only **Investors** can confirm repayment receipt and burn receivables NFTs.
+
+Even if an item is in a status that theoretically allows an action, the action will not appear unless the logged-in user holds the correct role. This means a borrower viewing a term sheet in **FAReview** status will not see approval buttons — only the facility agent will.
+
+### Change Requests vs. Rejection
+
+The platform distinguishes between two types of negative decisions:
+
+- **Change Requests** return the item to the submitter for revision. The item remains editable, and the submitter can make modifications and resubmit. The workflow continues. This is a collaborative mechanism that allows iterative refinement.
+
+- **Rejection** is final. The item cannot be edited or resubmitted. The workflow stops. If the submitter wants to try again, they must create a new item from scratch.
+
+This distinction matters because it preserves workflow integrity while enabling practical collaboration. Most real-world negotiations involve back-and-forth refinement, and change requests accommodate that. Rejection is reserved for situations where the submission is fundamentally unsuitable.
+
+| Aspect | Change Request | Rejection |
+|--------|---------------|-----------|
+| **Item editable?** | Yes | No |
+| **Can resubmit?** | Yes | No |
+| **Workflow** | Returns to submitter for revision | Stops permanently |
+| **Next step** | Make changes, resubmit | Create a new item |
 
 ## What This Enables for Users
 
-**For Submitters** (issuers, borrowers), this structure provides clarity about what needs to happen next, ensures your submissions are reviewed by qualified parties, and protects you by requiring approvals before commitment. You can see where your items are in the process, understand what's required to move forward, and be confident that approved items have met quality and compliance standards. The structure also provides opportunities for feedback and improvement before final commitment.
+### Predictability
 
-**For Reviewers** (facility agents, market makers, lenders), this structure provides clear decision points, ensures you review items at the right stage, and gives you tools to request improvements before approval. You can see what needs your attention, make informed decisions, and ensure quality and compliance through structured review processes. The structure also ensures that you review items at the appropriate stage, when all necessary information is available.
+Because workflows follow fixed status progressions, users always know what to expect. When you see a deal in **Published** status, you know it has already been created, reviewed, and approved — and you know the next stage is investor commitment. There are no surprises about what comes next or what has already happened.
 
-**For All Parties**, this structure provides transparency into process progression, ensures quality through review, maintains compliance through structured workflows, and creates accountability through documented decisions. Everyone can see where things stand, what needs to happen next, and who is responsible for specific actions or decisions. This transparency builds trust and enables effective collaboration.
+### Accountability
 
-The status and approval structure enables efficient collaboration while maintaining quality, compliance, and proper authorization throughout the transaction lifecycle. This structure protects all parties while ensuring that transactions progress efficiently and correctly.
+Every status change is recorded with a timestamp, the identity of the user who triggered it, and any associated notes or decisions. This creates a complete, immutable audit trail. If a term sheet was rejected, you can see who rejected it, when, and why. If a funding request was approved, the approval decision and the approver's identity are permanently recorded.
+
+This audit trail is not just for compliance — it gives all participants confidence that the process is transparent and that every decision can be traced back to a specific person and moment.
+
+### Safety and Error Prevention
+
+The combination of status controls, role-based gates, and maker-checker separation creates multiple layers of protection against errors:
+
+- An issuer cannot accidentally publish an incomplete deal because the platform validates that loans are assigned and terms are configured before allowing publication.
+- A facility agent cannot accidentally approve a term sheet they haven't reviewed because the approval action requires an explicit decision.
+- An investor cannot burn a receivables NFT before confirming repayment receipt because the burn action is only available after repayment confirmation.
+
+### Trust Between Parties
+
+In multi-party financial transactions, trust is essential but difficult to establish. The platform's structured workflows create trust by ensuring that every party's interests are protected by the process itself. Investors know that deals have been reviewed by underwriters before they see them. Lenders know that facility terms have been reviewed by facility agents. Issuers know that their deals will proceed in an orderly fashion once approved.
 
 ## Key Principles to Understand
 
-**Statuses Control Actions** - Statuses are not just informational—they actively control what you can do. When an action is disabled, it's usually because the status doesn't allow it yet, or prerequisites haven't been met. Understanding statuses helps you know what's possible at each stage and why certain actions might not be available.
+**Every item has exactly one status at any time.** There is no ambiguity about where something stands. The status is the definitive answer to "What is happening with this item right now?"
 
-**Approvals Are Quality Gates** - Approvals are checkpoints, not obstacles. They ensure that items meet standards, comply with requirements, and have proper authorization before proceeding. This protects all parties and maintains quality throughout the process. Understanding approvals helps you appreciate their value in ensuring quality and maintaining compliance.
+**Status controls everything.** Available actions, visible buttons, permitted edits, and allowed transitions are all determined by the current status. The status is not just a label — it is a control mechanism.
 
-**Sequential Progression** - Workflows progress sequentially through stages. You cannot skip steps or go backwards without proper authorization. This ensures that important steps aren't missed and that items progress in the correct order. Understanding sequential progression helps you know what needs to happen and in what order.
+**Approvals are gates, not rubber stamps.** Every approval point exists because there is a genuine business need for review at that stage. Approvals require an authorized party to make an active decision — there is no automatic approval or timeout-based progression.
 
-**Role-Based Approval Authority** - Different roles have authority to approve different items at different stages. Only facility agents can approve term sheets, only lenders can approve funding requests, etc. This ensures proper authorization and maintains workflow integrity. Understanding role-based authority helps you know who can approve what and when.
+**The audit trail is permanent and complete.** Every status change, every approval decision, every action is recorded. This trail cannot be modified after the fact and serves as the authoritative record of what happened.
 
-**Rejection vs. Change Requests** - Reviewers can reject items (stopping the workflow) or request changes (allowing improvement and resubmission). Understanding this distinction helps you know whether you need to start fresh or can make changes and continue. Change requests enable iterative improvement, while rejections require starting over.
+**Separation of duties is enforced by the platform.** The maker-checker principle is not a guideline — it is a technical enforcement. The platform will not allow a user to both create and approve the same item, regardless of their role.
 
-**Status Changes Are Permanent** - Status changes are recorded and cannot be easily undone. This creates accountability and maintains audit trails. Make sure items are ready before moving to the next status. Understanding permanence helps you appreciate the importance of careful progression.
+**Forward momentum is the default.** The workflow is designed to move items forward through their lifecycle. Backward movement (change requests) is an exception that requires an explicit decision. This keeps transactions progressing toward completion.
 
-**Complete History** - All status changes and approvals are recorded with who made the change, when it happened, and what changed. This creates complete audit trails for compliance and accountability. Understanding history helps you appreciate how the platform maintains accountability and supports compliance.
-
-**Status Visibility** - Statuses are visible to all relevant parties, providing transparency into process progression. Everyone can see where items are and what stage they're at. Understanding visibility helps you know how statuses communicate information to all parties.
-
-**Approval Decisions Are Documented** - All approval decisions are recorded with who approved, when, and any comments or reasons. This creates accountability and supports compliance requirements. Understanding documentation helps you appreciate how the platform maintains accountability.
-
-**Automatic Enforcement** - The platform enforces status and approval rules automatically. You don't need to remember to follow rules—the platform ensures proper operation automatically. Understanding automatic enforcement helps you appreciate how the platform simplifies compliance and ensures consistency.
-
-Understanding this philosophy helps you work effectively within the platform's structure, appreciate why certain actions are available or disabled, and understand how statuses and approvals work together to ensure quality, compliance, and proper workflow progression. This understanding enables you to navigate the platform effectively and work efficiently within the structured workflow system.
+Understanding these principles helps you navigate the platform with confidence. When you encounter a disabled button or an unavailable action, it is not a bug — it is the platform enforcing the structured workflow that protects all participants.

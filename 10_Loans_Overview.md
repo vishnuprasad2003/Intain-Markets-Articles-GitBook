@@ -7,74 +7,136 @@ description: Learn what loans are and how they work in the platform
 
 ## Overview
 
-Loans are individual credit agreements representing money lent to borrowers. In Intain Markets, loans are the building blocks of pools—you group multiple loans together to create pools for securitization, whole loan sales, or credit facilities. Understanding loans helps you effectively manage your loan portfolios and create successful pools.
+Loans are individual credit agreements that serve as the building blocks for pools and credit facilities. As an issuer, you onboard loans into the platform, standardize them through field mapping, organize them in the Loan Registry, map them to pools, add them to batches for verification, and mint them as NFTs. This module covers the complete loan lifecycle from upload to tokenization.
 
 ## What Loans Are
 
-A loan represents a single credit agreement where money has been lent to a borrower. Each loan contains detailed information about the borrower, the loan amount, interest rates, payment terms, loan characteristics, and performance data. Loans are the fundamental units that make up larger transactions—you organize multiple loans into pools to present them to investors or use them in credit facilities.
+A loan represents a single credit agreement containing detailed information about the borrower, loan amount, interest rates, payment terms, and performance data. Loans are stored in your organization's database after onboarding and are managed through the Loan Registry. Each loan has both mapped fields (standardized to Intain's format) and unmapped fields (original data that didn't match standard fields).
 
-Loans have their own lifecycle within the platform. They start as uploaded data, get processed and standardized, can be mapped to pools, go through verification and processing, may be tokenized, and can be removed or reinstated as needed. Each loan contributes its characteristics to pool-level metrics when mapped to a pool.
+Loans progress through distinct stages: onboarding (via Imports), standardization (field mapping), registry management, pool mapping, batch verification, and NFT minting. Each stage has specific workflows and requirements that ensure loan data quality and enable downstream transactions.
 
 ## Purpose and Use Cases
 
-Loans serve as the foundation for structured finance transactions:
+**For Pool Creation** - Loans are the building blocks of pools. You select loans from the Loan Registry and map them to pools. Pool metrics automatically calculate from the mapped loans.
 
-**For Pool Creation** - Loans are the building blocks of pools. You map multiple loans to a pool to create investment opportunities or transaction packages. Pool metrics aggregate individual loan characteristics.
+**For Credit Facilities** - Loans whose NFTs are minted can be mapped to master commitments for credit facility transactions. Only NFT-minted loans are eligible for facility mapping.
 
-**For Investment Analysis** - Investors and market makers review individual loan details to assess quality, evaluate risk, and make investment decisions. Loan characteristics help determine pool quality and attractiveness.
+**For Verification** - Loans are grouped into batches for verification. The batch verification process validates loan data either through self-certification by the issuer or verification by a third-party verification agent.
 
-**For Loan Servicing** - After deals are completed, servicers manage individual loans, tracking payments, updating statuses, and handling ongoing administration. Each loan requires individual attention for servicing.
-
-**For Quality Management** - Loans can be removed from pools if they don't meet quality standards or have data issues. Removed loans are excluded from calculations but can be reinstated when issues are resolved.
-
-**For Portfolio Management** - Issuers manage loan portfolios, organizing loans into pools, tracking loan status, and ensuring data quality throughout the transaction lifecycle.
+**For Tokenization** - Loans can be minted as NFTs (Non-Fungible Tokens) on the blockchain after batch verification is complete. NFT minting creates a digital representation of each loan enabling secure tracking and transfer.
 
 ## Key Components
 
-**Borrower Information** - Details about the borrower including name, contact information, and other identifying information. This helps understand who the loan is with and enables borrower-level analysis.
+**Imports Section** - Where you upload loan tape files. You select the As Of Date, asset class, choose your file, and submit. The system creates a Job ID for tracking. From here, you trigger Loan Tape Standardization (LTS) to map your file columns to Intain standard fields.
 
-**Financial Details** - Loan amount, interest rate (coupon), payment terms, maturity date, and other financial characteristics. These details determine the loan's financial profile and contribution to pool metrics.
+**Loan Tape Standardization** - The process of mapping your loan tape column headers to Intain's standard fields. You can use:
+- **Basic AI Mapping**: Standard AI-assisted field mapping
+- **Intelligent AI Mapping**: Enhanced AI mapping for better accuracy
+- **Delegation**: Submit to Admin to perform mapping on your behalf
 
-**Loan Characteristics** - FICO scores, loan-to-value ratios, geographic location, loan type, and other characteristics that help assess loan quality and risk. These characteristics aggregate to create pool-level statistics.
+After mapping, you can edit the field mappings using dropdowns, then click Save Mapping to store the loans.
 
-**Status Information** - Current status showing where the loan is in its lifecycle, such as Unmapped, Mapped, Submitted, Verified, Minted, Removed, or Reinstated. Status tracks loan progression through the workflow.
+**Loan Registry** - Your central view of all onboarded loans. Shows both mapped columns (standard Intain fields) first, followed by unmapped columns (in italic headers). From here, you can:
+- Select loans and click **Map to Pool** to assign them to pools
+- Select loans and click **Add to Batch** for batch verification
+- View detailed loan information
 
-**Performance Data** - Payment history, current balance, outstanding amounts, and other performance metrics. This data helps assess loan quality and track performance over time.
+**Batch Verification** - Where loans are grouped into batches for verification. The Batch Verification section shows all batches with their status. You can:
+- Self Certify: Issuer self-certifies the loans with an e-signature (Adobe Sign)
+- Submit to Verification Agent: Send to a third-party verification agent for review
+- Provide Documents: Upload verification documents from your file share
 
-**Pool Assignment** - Which pool the loan is mapped to (if any). Loans can only belong to one pool at a time, ensuring clear ownership and preventing conflicts.
+**Certificates Section** - Where you view verified batches and mint NFTs. Shows batch details, verification status, and provides:
+- **Mint NFT** button: Select loans and mint them as NFTs
+- **View NFT** button: View already minted NFTs
 
 ## How Loans Work
 
-**Upload and Processing** - You upload loan data into the platform, typically through file upload. The system processes and standardizes the data, validates loan information, and makes loans available for mapping to pools or individual management.
+**1. Uploading Loan Data**
 
-![Loans Onboarding - Uploading - Issuer](imagesByMdFilesFolder/10/Loans_Onboarding_Uploading_Issuer.png)
+You start by going to the **Imports** section from the left expandable menu. Here you select the As Of Date, asset class, and choose your loan tape file, then click Submit. The system creates a Job ID and adds it to the table below with the action **Trigger LTS**.
 
-**Mapping to Pools** - You assign loans to pools by mapping them. When loans are mapped, they contribute their balance and characteristics to pool metrics. Pool metrics calculate automatically to include the mapped loan.
 
-![Loan Map to Pool - Issuer](imagesByMdFilesFolder/10/LoanMapToPoolIssuer.png)
+**2. Loan Tape Standardization**
 
-**Batch Verification and NFT Minting** - After mapping loans to pools, loans are added to batches for verification and NFT minting. Batches group multiple loans together for efficient processing. During verification, the system validates loan data and ensures everything is correct. Once verified, loans can be minted as NFTs (Non-Fungible Tokens) on the blockchain, creating a digital representation of each loan that enables secure tracking, ownership, and transfer. The batch process ensures loans are properly verified and tokenized before they can be used in transactions.
+Click **Trigger LTS** to open the Map Fields popup. Here your loan tape headers are mapped to Intain standard fields. You can:
+- Use the **Delegation** button to submit this task to Admin (enter start date, end date, and required documents)
+- Use the **Re-run** button to choose between Basic or Intelligent AI mapping
+- Edit individual field mappings using the dropdown menus
+- Click **Save Mapping** when done
 
-**Status Progression** - Loans progress through statuses from Unmapped to Mapped to Submitted to Verified, and potentially to Minted if tokenization is required. Status shows where each loan is in its lifecycle and what actions are available.
+After saving, the loans are stored in your organization's database. The **Trigger LTS** action changes to **View Mapped**.
 
-**Removal and Reinstatement** - Loans can be removed from pools if they don't meet criteria or have issues. Removed loans are excluded from pool calculations but remain visible. They can be reinstated when issues are resolved, and metrics recalculate to include them.
+![Loans Onboarding - Uploading - Issuer](images/10-loans-overview/Loans_Onboarding_Uploading_Issuer.png)
 
-**Contribution to Pool Metrics** - Individual loan characteristics aggregate to create pool-level statistics. Loan balances sum to total pool balance, loan counts aggregate, and weighted averages calculate from individual loan rates and scores.
+**3. Accessing the Loan Registry**
 
-**Individual Management** - Each loan can be managed individually—you can view loan details, update information, track status, and manage loans independently of pools when needed.
+Click **View Mapped** to see the standardized loans. Click **Open in Registry** to navigate to the Loan Registry section. In the Loan Registry, you see all your onboarded loans with:
+- Mapped columns displayed first (standard Intain field names)
+- Unmapped columns displayed after (headers shown in italic)
+- **Add Loan** button: Navigate back to Imports to upload more loans
+- **Map to Pool** button: Enabled when any selected loans aren't already mapped to a pool
+- **Add to Batch** button: Enabled when any selected loans aren't already in a batch
+
+![Asset Registry - Issuer View](images/10-loans-overview/issuer-loan-registry.png)
+
+**4. Mapping Loans to Pools**
+
+In the Loan Registry, select the loans you want to map, then click **Map to Pool**. A popup appears with a dropdown showing all your pools. Select the target pool and confirm. The loans are mapped to that pool, and pool metrics update automatically.
+
+![Loan Map to Pool - Issuer](images/10-loans-overview/LoanMapToPoolIssuer.png)
+
+**5. Adding to Batch and Verification**
+
+Select loans in the Loan Registry and click **Add to Batch** to group them for verification. Go to the **Batch Verification** section from the left menu to see your batches.
+
+Initial batch status is **Pending**. Click on a Batch ID to go to the batch details page with two tabs:
+- **Loans Tab**: Shows all loans in the batch with the **Self Certify** button
+- **Documents Tab**: Upload verification documents (select document type, verification template, and file from your file share)
+
+**Self Certify Process**: Click Self Certify, enter your name, signer name, email, and place, then click E-Sign. An Adobe Sign popup opens showing the loan certification details for all loans in the batch. After signing, the verification moves forward.
+
+![Batch Verification](images/10-loans-overview/BatchVerification.png)
+
+**Verification Agent Process (ABDP Integration)**: Submit a batch to the ABDP Verification Agent platform. The loan tape is streamed directly from Snowflake to ABDP via secure JWT exchange (Entra SSO OBO flow). ABDP processes the batch asynchronously — the certification result is posted back to the platform and recorded on the batch. Both the issuer and verification agent receive notification emails on submission and completion.
+
+**Verification Status Values**:
+- **No**: Initial status, not verified
+- **Certified**: Verified by third-party verification agent
+- **Self Certified**: Issuer logged in as verification agent and verified
+- **Self Certify (Data Only)**: Issuer used Self Certify button directly
+
+After verification, the batch verification status changes to **Reviewed**.
+
+**6. NFT Minting**
+
+Go to the **Certificates** section from the left menu. Here you see the same batch details with verification status and action buttons:
+- When batch verification status is **Pending**: Both View NFT and Mint NFT are disabled
+- When batch verification status is **Reviewed**: Both View NFT and Mint NFT are enabled
+- When batch verification status is **Verified**: Only View NFT is enabled
+
+Click **Mint NFT** to see a screen with all loans listed with checkboxes. Select individual loans or use the select-all checkbox, then click **Mint Selected**. Minting runs in the background. After all loans are minted, the batch verification status becomes **Verified**.
+
+![NFT Minting](images/10-loans-overview/NftMinting.png)
 
 ## Important Points to Know
 
-**One Pool Per Loan** - Loans can only belong to one pool at a time. If you want to move a loan to a different pool, you must unmap it from the current pool first. This ensures clear ownership and prevents conflicts.
+**One Pool Per Loan** - Loans can only belong to one pool at a time. To move a loan to a different pool, you must unmap it from the current pool first.
 
-**Automatic Pool Calculations** - When you map loans to pools, pool metrics calculate automatically. Total balance, loan count, weighted averages, and other statistics update immediately to reflect the mapped loans.
+**Mapped vs Unmapped Columns** - In the Loan Registry and Loan Tape section, mapped columns (standard Intain fields) appear first, unmapped columns (original headers) appear after in italic format.
 
-**Removed Loans Are Excluded** - Removed loans don't affect pool calculations but remain visible for tracking purposes. This allows you to maintain pool quality while preserving complete records. Removed loans can be reinstated when issues are resolved.
+**As Of Date Selection** - When viewing loan data in pool details (Loan Tape section), you can select different As Of Date values to see loan data from different reporting periods. This is useful for monthly loan tape uploads.
 
-**Loan Characteristics Aggregate** - Individual loan characteristics (FICO scores, interest rates, etc.) aggregate to create pool-level statistics that help investors assess opportunities. Understanding loan characteristics helps you create better pools.
+**NFT Minting Prerequisite** - Loans must have batch verification status of Reviewed before NFT minting is enabled. After minting all loans, the status becomes Verified.
 
-**Status Tracks Lifecycle** - Loan status shows where each loan is in its lifecycle, from upload through mapping, processing, verification, and potentially tokenization. Understanding status helps you track loan progress.
+**Credit Facility Eligibility** - Only loans with minted NFTs can be mapped to master commitments for credit facility transactions.
 
-**Complete History** - The platform maintains history of loan status changes, mappings, and other actions, ensuring complete traceability. You can see how loans have progressed and who made changes.
+**Automatic Pool Metric Updates** - When loans are mapped to or removed from pools, pool metrics recalculate automatically.
 
-Understanding loans helps you effectively manage loan portfolios, create successful pools, ensure loan data quality, track loans throughout their lifecycle, and understand how individual loans contribute to pool-level metrics and transactions.
+**Delegation Option** - During loan tape standardization, you can delegate the mapping task to Admin using the Delegation button.
+
+**Loan Registry v2 with IDA** - The Loan Registry now supports a v2 interface with IDA (AI-assisted field mapping) for more efficient loan onboarding. IDA provides intelligent suggestions during loan tape standardization.
+
+**Historical Tape Upload** - Historical Tape upload is available for loading historical loan tape data, allowing you to import past reporting periods alongside current loan tapes.
+
+**Batch Verification v2** - Batch Verification v2 provides enhanced verification workflows with improved list management, making it easier to organize and track verification batches. Includes ABDP (Verification Agent) integration for automated batch certification — loan tapes are streamed from Snowflake to ABDP, and certification results are posted back asynchronously.
