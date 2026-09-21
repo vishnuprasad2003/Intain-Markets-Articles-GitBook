@@ -526,95 +526,117 @@ Key Principles:
 7. Provide comprehensive coverage of topics
 8. Use clear, descriptive titles and headings
 
-Document Type Mapping:
+Document Type Mapping (Renumbered v3 — 87 articles):
 
 Type A (Platform Foundation):
 - 01_What_is_Intain_Markets.md
 - 04_Status_and_Approval_Philosophy.md
-- 50_Why_approvals_exist.md
-- 54_End-to-end_traceability.md
-- 58_Controls_and_accountability.md
+- 71_Why_approvals_exist.md
+- 75_End-to-end_traceability.md
+- 79_Controls_and_accountability.md
 
 Type B (Role & Access):
 - 02_User_Roles_and_Responsibilities.md
-- 15_Roles_in_Credit_Facilities.md
-- 49_Enabled_vs_Disabled_actions.md
-- 53_Who_can_do_what.md
+- 17_Roles_in_Credit_Facilities.md
+- 69_Enabled_vs_Disabled_actions.md
+- 74_Who_can_do_what.md
 
 Type C (Navigation & Usage):
 - 03_Login_and_Navigation.md
 - 07_Role_Based_Pool_Views.md
-- 56_Signature_visibility.md
+- 14_Analytics.md
+- 15_IDA_Dashboard.md
+- 39_Asset_Sale_Analytics.md
+- 52_Understanding_Platform_Syntax.md
+- 61_Reporting_and_Document_Management.md
+- 62_ESMA_Reporting.md
+- 77_Signature_visibility.md
 
 Type D (Process/How-To):
 - 08_Pool_Sharing_and_Mandates.md
 - 09_Pool_Feedback_Workflow.md
-- 16_Term_Sheet_Workflow.md
-- 17_Term_Sheet_Change_Requests.md
-- 27_Borrower_Token_Approval.md
-- 28_Lender_Approval_and_Rejection.md
-- 29_Funds_Transfer_Confirmation.md
-- 30_Pool_Creation_and_Sharing.md
-- 31_Loan_Management.md
-- 32_Term_Sheet_Submission.md
-- 33_Funding_Requests.md
-- 34_Token_Approval.md
-- 37_Facility_Creation.md
-- 38_Deal_Setup_and_Calculations.md
-- 40_Token_Generation_and_E-Sign.md
-- 44_Funds_Transfer_Confirmation.md
+- 18_Term_Sheet_Workflow.md
+- 19_Term_Sheet_Change_Requests.md
+- 29_Borrower_Token_Approval.md
+- 30_Lender_Approval_and_Rejection.md
+- 31_Funds_Transfer_Confirmation.md
+- 34_Deal_Creation_and_Publishing.md
+- 35_Investor_Commitment_and_Allocation.md
+- 37_Repayment_Flow.md
+- 38_Receivables_and_NFT_Burn.md
+- 41_Pool_Creation_and_Sharing.md
+- 42_Loan_Management.md
+- 43_Term_Sheet_Submission.md
+- 44_Funding_Requests.md
+- 45_Token_Approval.md
+- 46_Asset_Sale_Deal_Setup_Issuer.md
+- 47_Repayment_Initiation_Issuer.md
+- 50_Facility_Creation.md
+- 51_Deal_Setup_and_Calculations.md
+- 53_Running_The_Deal_Recurring.md
+- 55_Token_Generation_and_E-Sign.md
+- 56_Asset_Sale_Review_and_Allocation.md
+- 60_Funds_Transfer_Confirmation_Investor.md
+- 63_Asset_Sale_Investment_Investor.md
+- 64_Repayment_Receipt_and_NFT_Burn_Investor.md
 
 Type E (Lifecycle & Status):
 - 06_Pool_Lifecycle_and_Statuses.md
 - 11_Loan_Lifecycle_and_Statuses.md
-- 19_Master_Commitment_Statuses.md
-- 20_Facility_Setup_Status.md
-- 45_All_pool_states_explained.md
-- 46_All_loan_states_explained.md
-- 47_Term_sheet_facility_funding.md
+- 21_Master_Commitment_Statuses.md
+- 22_Facility_Setup_Status.md
+- 33_Asset_Sale_Deal_Lifecycle_and_Statuses.md
+- 65_All_pool_states_explained.md
+- 66_All_loan_states_explained.md
+- 67_Term_sheet_facility_funding.md
+- 70_Asset_Sale_Statuses.md
 
 Type F (Outcome & Decision):
 - 12_Loan_Rejection_and_Reinstatement.md
-- 23_Funding_Request_Outcomes.md
-- 51_What_happens_after_rejection.md
-- 52_Feedback_vs_rejection.md
+- 25_Funding_Request_Outcomes.md
+- 72_What_happens_after_rejection.md
+- 73_Feedback_vs_rejection.md
 
 Type G (Reference):
 - 13_Removed_Loans_and_Calculations.md
-- 48_Status__qualifiers_explained.md
-- 55_Who_changed_what_and_when.md
-- 57_Token_IDs_timestamps.md
+- 68_Status_qualifiers_explained.md
+- 76_Who_changed_what_and_when.md
+- 78_Token_IDs_timestamps.md
 
 Type H (FAQ):
-- 59_Common_user_questions.md
-- 60_Funding_and_approval_questions.md
-- 61_Why_actions_are_blocked.md
-- 62_Why_cant_I_act.md
+- 80_Common_user_questions.md
+- 81_Funding_and_approval_questions.md
+- 82_Why_actions_are_blocked.md
+- 83_Why_cant_I_act.md
+- 84_Asset_Sale_FAQs.md
 
 Type I (Change & Release):
-- 63_New_features.md
-- 64_Status_or_logic_changes.md
-- 65_Retired_flows.md
+- 85_New_features.md
+- 86_Status_or_logic_changes.md
+- 87_Retired_flows.md
 
 Type J (Concept/Module Overview):
 - 05_Pools_Overview.md
 - 10_Loans_Overview.md
-- 14_Credit_Facilities_Overview.md
-- 18_Master_Commitment_Overview.md
-- 21_Funding_Requests_Overview.md
-- 24_Funding_Notices_Overview.md
+- 16_Credit_Facilities_Overview.md
+- 20_Master_Commitment_Overview.md
+- 23_Funding_Requests_Overview.md
+- 26_Funding_Notices_Overview.md
+- 32_Asset_Sale_Overview.md
 
 Type K (Workflow Overview):
-- 25_Token_Generation_and_Issuance.md
-- 26_E-Signature_Workflow.md
+- 27_Token_Generation_and_Issuance.md
+- 28_E-Signature_Workflow.md
+- 36_Settlement_and_NFT_Transfer.md
+- 40_Investor_Agreement_and_E-Signature.md
 
 Type L (Review and Decision):
-- 22_Funding_Request_Review.md
-- 35_Pool_Mandate_Review.md
-- 36_Term_Sheet_Review.md
-- 39_Funding_Request_Review.md
-- 41_Pool_and_Loan_Review.md
-- 42_Facility_Approval.md
-- 43_Funding_Notice_Review.md
+- 24_Funding_Request_Review.md
+- 48_Pool_Mandate_Review.md
+- 49_Term_Sheet_Review.md
+- 54_Funding_Request_Review_MM.md
+- 57_Pool_and_Loan_Review.md
+- 58_Facility_Approval.md
+- 59_Funding_Notice_Review.md
 
-Total Documents: 65
+Total Documents: 87

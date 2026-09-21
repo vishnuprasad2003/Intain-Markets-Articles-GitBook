@@ -19,7 +19,7 @@ When a market maker or investor reviews a pool and believes a loan should be rem
 - The market maker/investor sees the loan status change to **Under Reconsider**
 - The loan remains in pool calculations until the issuer makes a decision
 
-![Loan Rejection Request - From Market Maker](imagesByMdFilesFolder/12/Loan_Rejection_Request_From_MarketMaker.png)
+![Loan Rejection Request - From Market Maker](images/12-loan-rejection-and-reinstatement/Loan_Rejection_Request_From_MarketMaker.png)
 
 **Issuer Reviews the Request**
 

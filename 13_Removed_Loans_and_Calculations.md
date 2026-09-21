@@ -9,7 +9,7 @@ description: Understand how removed loans affect pool calculations and metrics
 
 When loans are removed from pools, they're excluded from pool calculations but remain visible for tracking purposes. The platform automatically recalculates pool metrics when loans are removed or reinstated, ensuring that pool characteristics accurately reflect only active loans.
 
-![Loan Status Overall Image](imagesByMdFilesFolder/13/LoanStatusOverallImage.png)
+![Loan Status Overall Image](images/13-removed-loans-and-calculations/LoanStatusOverallImage.png)
 
 ## Reference Details
 

@@ -15,11 +15,13 @@ Built on blockchain technology, Intain Markets provides a secure environment for
 
 Intain Markets provides digital infrastructure for structured finance, enabling:
 
-- **Loan Management** - Onboard, standardize, verify, and tokenize loans
-- **Pool Creation** - Organize loans into investment pools for structured transactions
-- **Facility Management** - Manage credit facilities and fund distribution
-- **Multi-Party Collaboration** - Enable issuers, investors, market makers, and service providers to work together
-- **Workflow Automation** - Automate approval workflows, status tracking, and action controls
+- **Loan Management** — Onboard, standardize, verify, and tokenize loans
+- **Pool Creation** — Organize loans into investment pools for structured transactions
+- **Credit Facility Management** — Manage credit facilities with term sheets, master commitments, and funding workflows
+- **Asset Sale** — Execute whole loan sale transactions with deal creation, investor commitment, blockchain-based settlement, and post-sale repayment
+- **Multi-Party Collaboration** — Enable issuers, investors, market makers, servicers, and other participants to work together
+- **Workflow Automation** — Automate approval workflows, status tracking, and action controls
+- **Analytics & Reporting** — Portfolio analytics, risk surveillance, and regulatory reporting (including ESMA)
 
 ## User Roles
 
@@ -51,19 +53,31 @@ Intain Markets provides digital infrastructure for structured finance, enabling:
 - Feedback and comment workflows
 
 **E-Signature Integration:**
-- Adobe Sign integration for legally binding signatures
-- Signature tracking and status
+- Adobe Sign and ZohoSign integration for legally binding signatures
+- Signature tracking and status per document and signer
 - Complete signing audit trail
 
+**Authentication & Security:**
+- Microsoft Entra SSO (single sign-on) for enterprise login
+- Multi-factor authentication (MFA) for sensitive actions
+- Role-based access control (RBAC) with fine-grained permissions
+- Rate limiting and session management
+
 **Complete Traceability:**
-- Every action recorded with user and timestamp
-- Status history for all items
-- IPFS document storage with hash verification
+- Every action recorded with user and timestamp via the audit module
+- Status history for all items with full change tracking
+- Blockchain-based document storage with hash verification
+- Settlement and repayment audit trails
+
+**Admin & Support Tools:**
+- Admin impersonation (read-only "view as") for support operations
+- Organization and user management
+- Delegation workflows for role-based task assignment
 
 ## Getting Started
 
-1. **Login** - Access the platform and select your role
-2. **Dashboard** - View items relevant to your role
-3. **Actions** - Perform actions based on your role and item status
+1. **Login** — Access the platform via Microsoft SSO or direct login, then select your role
+2. **Dashboard** — View items relevant to your role across pools, credit facilities, asset sales, and more
+3. **Actions** — Perform actions based on your role and the current status of each item
 
 For detailed information on specific features, refer to the relevant documentation sections.

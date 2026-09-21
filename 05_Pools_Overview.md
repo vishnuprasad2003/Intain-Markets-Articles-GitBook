@@ -56,19 +56,19 @@ Pools serve several important purposes in structured finance:
 
 **Creation** - You create a pool by clicking **Set-up Pool** in the Pools dashboard and entering basic information: pool name, asset class, transaction type, description, and closing deal indicator. You also select organizations (market makers, investors, servicers, paying agents, rating agencies, verification agents) that will be available for sharing later. The pool starts in Created status, visible only to you, ready for loan mapping and configuration.
 
-![Pool Creation - Issuer](imagesByMdFilesFolder/05/PoolCreation_Issuer.png)
+![Pool Creation - Issuer](images/05-pools-overview/PoolCreation_Issuer.png)
 
 **Loan Mapping** - You map loans to the pool from the **Loan Registry** section (not from within pool details). In Loan Registry, you select unmapped loans and click **Map to Pool**, then choose the target pool from a dropdown. When loans are mapped, pool metrics calculate automatically. You can view mapped loans in the pool's Loans tab.
 
-![Loan Map to Pool - Issuer](imagesByMdFilesFolder/05/LoanMapToPoolIssuer.png)
+![Loan Map to Pool - Issuer](images/05-pools-overview/LoanMapToPoolIssuer.png)
 
 **Sharing (Preview Flow)** - You share pools with other organizations by clicking **Share** in pool details. You select recipient type, choose from assigned organizations, and set permissions (feedback, download). When shared, the pool status becomes Preview (if it was Created). Recipients see the pool as **Mandate Pending** with Accept/Reject actions. Before accepting, market makers cannot provide feedback. After a market maker accepts, their view shows **Under Review** and feedback becomes available.
 
-![Pool Sharing - Issuer](imagesByMdFilesFolder/05/PoolSharing_Issuer.png)
+![Pool Sharing - Issuer](images/05-pools-overview/PoolSharing_Issuer.png)
 
 **Pool Details** - When viewing pools, you access comprehensive information: pool metrics in summary tiles, loan composition in the Loans tab, detailed loan data in the Loan Tape section (with As Of Date selection and download), stratification analytics in Strats, performance analytics in Performance, pool-level feedback in Feedback, and sharing configuration in Sharing. The Edit button provides options to edit pool details or upload recurring loan tapes.
 
-![Pool Details - Issuer](imagesByMdFilesFolder/05/Pool_Details_Issuer.png)
+![Pool Details - Issuer](images/05-pools-overview/Pool_Details_Issuer.png)
 
 **Start Deal Flow** - When prerequisites are met (typically all pool loans NFT-minted), the **Start Deal** button becomes enabled. Start Deal sends the pool to recipients with status **Ready for Deal**. When a market maker accepts, the pool becomes a **Deal** and structural editing is restricted.
 
@@ -93,3 +93,9 @@ Pools serve several important purposes in structured finance:
 **Loan Tape Downloads** - The Loan Tape section allows selecting different As Of Date values for periodic loan data and downloading in XLSX or CSV format.
 
 **Feedback Levels** - Feedback can be pool-level (in the Feedback section) or loan-level (via chat box icon in Loans tab). Issuers can view pool-level feedback but add comments through loan-level feedback.
+
+**Asset Sale Deal Assignment** - Pools can be assigned to Asset Sale deals. When loans from a pool are assigned to a deal, they become part of the asset sale portfolio.
+
+**Pool Analysis (IDA)** - The Pool Analysis feature provides analytics including Summary, Strats, Performance, and Loans views. Market makers and investors can access Pool Analysis via the Pool Analysis button on pool preview details.
+
+**Modelling Workbench** - The Modelling Workbench allows market makers and investors to configure and compare cashflow model scenarios for pools.

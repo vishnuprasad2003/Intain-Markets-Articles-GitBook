@@ -67,7 +67,7 @@ Click **Trigger LTS** to open the Map Fields popup. Here your loan tape headers 
 
 After saving, the loans are stored in your organization's database. The **Trigger LTS** action changes to **View Mapped**.
 
-![Loans Onboarding - Uploading - Issuer](imagesByMdFilesFolder/10/Loans_Onboarding_Uploading_Issuer.png)
+![Loans Onboarding - Uploading - Issuer](images/10-loans-overview/Loans_Onboarding_Uploading_Issuer.png)
 
 **3. Accessing the Loan Registry**
 
@@ -82,7 +82,7 @@ Click **View Mapped** to see the standardized loans. Click **Open in Registry** 
 
 In the Loan Registry, select the loans you want to map, then click **Map to Pool**. A popup appears with a dropdown showing all your pools. Select the target pool and confirm. The loans are mapped to that pool, and pool metrics update automatically.
 
-![Loan Map to Pool - Issuer](imagesByMdFilesFolder/10/LoanMapToPoolIssuer.png)
+![Loan Map to Pool - Issuer](images/10-loans-overview/LoanMapToPoolIssuer.png)
 
 **5. Adding to Batch and Verification**
 
@@ -94,7 +94,7 @@ Initial batch status is **Pending**. Click on a Batch ID to go to the batch deta
 
 **Self Certify Process**: Click Self Certify, enter your name, signer name, email, and place, then click E-Sign. An Adobe Sign popup opens showing the loan certification details for all loans in the batch. After signing, the verification moves forward.
 
-![Batch Verification](imagesByMdFilesFolder/10/BatchVerification.png)
+![Batch Verification](images/10-loans-overview/BatchVerification.png)
 
 **Verification Agent Process**: Submit to a verification agent who receives the batch in their dashboard. They verify loan details against the uploaded documents, then certify the batch.
 
@@ -115,7 +115,7 @@ Go to the **Certificates** section from the left menu. Here you see the same bat
 
 Click **Mint NFT** to see a screen with all loans listed with checkboxes. Select individual loans or use the select-all checkbox, then click **Mint Selected**. Minting runs in the background. After all loans are minted, the batch verification status becomes **Verified**.
 
-![NFT Minting](imagesByMdFilesFolder/10/NftMinting.png)
+![NFT Minting](images/10-loans-overview/NftMinting.png)
 
 ## Important Points to Know
 
@@ -132,3 +132,9 @@ Click **Mint NFT** to see a screen with all loans listed with checkboxes. Select
 **Automatic Pool Metric Updates** - When loans are mapped to or removed from pools, pool metrics recalculate automatically.
 
 **Delegation Option** - During loan tape standardization, you can delegate the mapping task to Admin using the Delegation button.
+
+**Loan Registry v2 with IDA** - The Loan Registry now supports a v2 interface with IDA (AI-assisted field mapping) for more efficient loan onboarding. IDA provides intelligent suggestions during loan tape standardization.
+
+**Historical Tape Upload** - Historical Tape upload is available for loading historical loan tape data, allowing you to import past reporting periods alongside current loan tapes.
+
+**Batch Verification v2** - Batch Verification v2 provides enhanced verification workflows with improved list management, making it easier to organize and track verification batches.

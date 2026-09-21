@@ -11,31 +11,52 @@ Logging into Intain Markets and navigating the platform is straightforward and r
 
 ## How to Navigate the Platform
 
-**Login Process** - Enter your credentials (username and password) on the login page. Select your role from those you have registered, and click submit. The platform presents a dashboard tailored to your selected role.
+**Login Process** — The platform supports two authentication methods:
 
-**Role Selection** - If your account has multiple roles, select which role to use for this session. You can only use one role per session, but you can log out and log back in with a different role if needed.
+1. **Microsoft Entra SSO** — If your organization uses Microsoft Entra (formerly Azure AD), click the **Sign in with Microsoft** button on the login page. You will be redirected to Microsoft's authentication flow. After authentication, if your account has multiple roles, you will be prompted to select a role on the **Select Role** page before entering the platform.
 
-**Dashboard Access** - After logging in, you'll see a dashboard showing items relevant to your role—pools you've created or are involved with, pending actions, recent activity, and items in various statuses.
+2. **Direct Login** — Enter your credentials (username and password) on the login page, select your role from those you have registered, and click submit. The platform presents a dashboard tailored to your selected role.
 
-**Main Navigation** - A left-side expandable navigation section contains tabs for Pools, Loan Registry, Credit Facility, Whole Loan, Securitization, and other sections. These navigation tabs are available throughout the platform and help you move between different areas.
+**Role Selection** — If your account has multiple roles, select which role to use for this session. You can only use one role per session, but you can log out and log back in with a different role if needed.
 
-**Search and Filter** - Search and filter capabilities help you find specific items by name, status, or other criteria.
+**Dashboard Access** — After logging in, you'll see a dashboard showing items relevant to your role — pools you've created or are involved with, pending actions, recent activity, and items in various statuses. The dashboard provides quick-action tiles for common tasks.
+
+**Main Navigation** — A left-side expandable navigation sidebar (which expands when you hover over it) contains tabs for:
+- **Pools** — Pool management and review
+- **Asset Registry / Loan Registry** — Loan onboarding and management
+- **Credit Facility** — Credit facility term sheets and master commitments
+- **Asset Sale** — Whole loan sale deals and settlement
+- **Securitization** — Securitization deals and tranches
+- **Imports** — Loan tape uploads and ingestion
+- **Batch Verification** — Loan verification batches
+- **Activity Audit** — Cross-module activity log
+- Other sections depending on your role (Reports, Payment Settings, Profile)
+
+The visible navigation items depend on your role — you only see sections relevant to your responsibilities.
+
+**Search and Filter** — Search and filter capabilities help you find specific items by name, status, or other criteria. Tables support server-side column filters for efficient searching across large datasets.
+
+**Notifications** — A notification drawer provides real-time alerts for items requiring your attention, status changes, and approvals needed.
 
 ## What You Will See
 
-**Login Page** - When you access the platform, you'll see the login page where you enter your credentials to access your account.
+**Login Page** - When you access the platform, you'll see the login page where you enter your credentials to access your account. The login page supports Sign In with credentials, Microsoft SSO, role selection, and Sign Up.
 
-![Intain Markets Login Page](imagesByMdFilesFolder/03/IntainMarketsLoginPage.png)
+![Intain Markets Login Page](images/03-login-and-navigation/login-page.png)
+
+**Role Selection** - The role dropdown on the login page lets you select from all available roles (Issuer, Market Maker, Investor, Servicer, Paying Agent, Rating Agency, Admin).
+
+![Role Dropdown on Login Page](images/03-login-and-navigation/role-dropdown.png)
 
 **Your Dashboard** - After login, you'll see a dashboard showing items relevant to your role. As an issuer, you'll see pools you've created. As a market maker, you'll see pools shared with you. As an investor, you'll see pools shared with you. The dashboard helps you quickly see what needs your attention and provides an overview of your activities.
 
-![Dashboard - Investor View](imagesByMdFilesFolder/03/Dashboard_Investor.png)
+![Dashboard - Investor View](images/03-login-and-navigation/Dashboard_Investor.png)
 
-![Dashboard - Market Maker View](imagesByMdFilesFolder/03/Dashboard_MarketMaker.jpg)
+![Dashboard - Market Maker View](images/03-login-and-navigation/Dashboard_MarketMaker.jpg)
 
 **Dashboard Notifications** - The dashboard includes notifications and alerts for items requiring your attention. You can click on notifications to view details in the context panel, which appears as a right drawer with relevant information.
 
-![Dashboard Notification Panel](imagesByMdFilesFolder/03/Dashboard_Notification_Panel.png)
+![Dashboard Notification Panel](images/03-login-and-navigation/Dashboard_Notification_Panel.png)
 
 **Filtered Lists** - When you navigate to sections like Pools or Credit Facilities, you'll see lists automatically filtered for your role. You won't see items where you don't have a role or that aren't shared with you. This filtering happens automatically—you don't need to manually filter. This automatic filtering ensures you only see relevant items.
 

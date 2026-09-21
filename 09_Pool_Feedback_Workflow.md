@@ -52,7 +52,7 @@ The feedback workflow enables collaboration between issuers and reviewing partie
    - Check loan count, balances, weighted averages, and other characteristics
    - Examine charts in the Summary section for visual analysis
 
-![Pool Detail](imagesByMdFilesFolder/09/PoolDetail.png)
+![Pool Detail](images/09-pool-feedback-workflow/PoolDetail.png)
 
 3. **Review Loan Details**
    - Navigate to the **Loans** tab to see individual mapped loans
@@ -91,14 +91,14 @@ The feedback workflow enables collaboration between issuers and reviewing partie
    - View any existing feedback/comments for this specific loan
    - The dialog shows the conversation history for this loan
 
-![Pools Feedback - Market Maker](imagesByMdFilesFolder/09/Pools_Feedback_MarketMaker.png)
+![Pools Feedback - Market Maker](images/09-pool-feedback-workflow/Pools_Feedback_MarketMaker.png)
 
 3. **Enter Loan-Specific Feedback**
    - Type your message about this specific loan
    - Be clear about what aspect of the loan you're commenting on
    - Reference specific loan characteristics if relevant
 
-![Enter Feedback](imagesByMdFilesFolder/09/EnterFeedback.png)
+![Enter Feedback](images/09-pool-feedback-workflow/EnterFeedback.png)
 
 4. **Submit Feedback**
    - Click send to save your feedback
@@ -106,7 +106,7 @@ The feedback workflow enables collaboration between issuers and reviewing partie
    - Other parties with access can view the feedback conversation
    - The loan may show a feedback indicator in the Loans tab
 
-![Enter Feedback](imagesByMdFilesFolder/09/EnterFeedback.png)
+![Enter Feedback](images/09-pool-feedback-workflow/EnterFeedback.png)
 
 ### Requesting Loan Removal (Market Makers and Investors)
 

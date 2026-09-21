@@ -54,7 +54,7 @@ Before sharing, ensure your pool is ready for review:
    - Pool should be in Created or Preview status for Share
    - For Start Deal, verify prerequisites (NFT minting) are complete
 
-![Prepare Pool](imagesByMdFilesFolder/08/PreparePool.png)
+![Prepare Pool](images/08-pool-sharing-and-mandates/PreparePool.png)
 
 ### Sharing via Preview Flow (Share Button)
 
@@ -63,7 +63,7 @@ Before sharing, ensure your pool is ready for review:
    - Click the **Share** button at the top right
    - A sharing configuration pop-up appears
 
-![Pool Share - Issuer](imagesByMdFilesFolder/08/Pool_Share_Issuer.png)
+![Pool Share - Issuer](images/08-pool-sharing-and-mandates/Pool_Share_Issuer.png)
 
 2. **Select Recipient Type and Organizations**
    - Select the **Recipient** type from the dropdown (Market Maker, Investor, Rating Agency, etc.)
@@ -71,14 +71,14 @@ Before sharing, ensure your pool is ready for review:
    - Select the specific organizations you want to share with
    - You can share with multiple organizations of the same type in one action
 
-![Pool Share - Select Recipient Organization](imagesByMdFilesFolder/08/Pool_Share_Select_recipient_org.png)
+![Pool Share - Select Recipient Organization](images/08-pool-sharing-and-mandates/Pool_Share_Select_recipient_org.png)
 
 3. **Configure Sharing Permissions**
    - **Allow Feedback**: Toggle on/off to control whether recipients can provide feedback on the pool and loans. Default is enabled.
    - **Allow Download**: Toggle on/off to control whether recipients can download loan tape data. Default is enabled.
    - These permissions apply to the selected organizations and can be adjusted later in the Sharing tab.
 
-![Pools Sharing Settings](imagesByMdFilesFolder/08/Pools_Sharing_Settings.png)
+![Pools Sharing Settings](images/08-pool-sharing-and-mandates/Pools_Sharing_Settings.png)
 
 4. **Add Documents (Optional)**
    - You can add documents relevant to the pool for recipients to review
@@ -116,7 +116,7 @@ After sharing via Preview, recipients make mandate decisions:
      - Their view remains **Pool Rejected**
      - You can revise the pool and share with other organizations
 
-![Market Maker Makes Decision](imagesByMdFilesFolder/08/4.MarketMakerMakesDecision.png)
+![Market Maker Makes Decision](images/08-pool-sharing-and-mandates/4.MarketMakerMakesDecision.png)
 
 3. **Respond to Feedback**
    - If recipients provide feedback, review it in the Feedback section (pool-level) or via the chat box icons in the Loans tab (loan-level)
@@ -135,7 +135,7 @@ When prerequisites are met (typically all pool loans NFT-minted), you can initia
    - Typically, all loans in the pool must have completed NFT minting
    - Check that the pool composition is final
 
-![Submit Pool for Mandate](imagesByMdFilesFolder/08/2.SubmitPoolForMandate.png)
+![Submit Pool for Mandate](images/08-pool-sharing-and-mandates/2.SubmitPoolForMandate.png)
 
 2. **Access Start Deal**
    - In pool details, click the **Start Deal** button at the top right

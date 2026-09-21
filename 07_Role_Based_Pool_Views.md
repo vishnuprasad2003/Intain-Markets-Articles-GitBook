@@ -34,7 +34,7 @@ As an issuer, you have full control over pools you create. Your Pools dashboard 
 - Status indicators showing where each pool is in the workflow
 - Action options for each pool
 
-![Pools Screen - Issuer](imagesByMdFilesFolder/07/Pools_Screen_Issuer.png)
+![Pools Screen - Issuer](images/07-role-based-pool-views/Pools_Screen_Issuer.png)
 
 **Pool Details Page** (accessible by clicking on a Pool ID)
 - **Summary tiles** at top showing pool metrics
@@ -67,7 +67,7 @@ As a market maker, you see pools that issuers have shared with you. Your Pools d
 - Status shows **Mandate Pending** for Preview shares awaiting your decision, **Ready for Deal** for Start Deal shares
 - Actions include **Review**, **Accept**, **Reject** depending on status
 
-![Pool Screen - Market Maker](imagesByMdFilesFolder/07/Pool_Screen_MarketMaker.png)
+![Pool Screen - Market Maker](images/07-role-based-pool-views/Pool_Screen_MarketMaker.png)
 
 **Pool Details Page** (after clicking on Pool ID, typically after accepting)
 - Same view as issuer for information sections: Summary, Loans, Loan Tape, Strats, Performance, Feedback
@@ -92,7 +92,7 @@ As an investor, you see pools shared with you. Your view is similar to the marke
 - Pools shared with your organization
 - Status and action options for each pool
 
-![Pools Screen - Investor](imagesByMdFilesFolder/07/Pools_Screen_Investor.png)
+![Pools Screen - Investor](images/07-role-based-pool-views/Pools_Screen_Investor.png)
 
 **Pool Details Page**
 - Same information sections as market maker: Summary, Loans, Loan Tape, Strats, Performance, Feedback
@@ -110,7 +110,7 @@ As a rating agency, you see pools shared with you for rating analysis. Your view
 - Pools shared with your organization for rating analysis
 - Status indicators for each pool
 
-![Pools Screen - Rating Agency](imagesByMdFilesFolder/07/Pools_Screen_RatingAgency.png)
+![Pools Screen - Rating Agency](images/07-role-based-pool-views/Pools_Screen_RatingAgency.png)
 
 **Pool Details Page**
 - Same information sections: Summary, Loans, Loan Tape, Strats, Performance, Feedback
