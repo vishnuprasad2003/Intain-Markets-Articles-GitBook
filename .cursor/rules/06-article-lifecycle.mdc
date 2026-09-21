@@ -9,7 +9,7 @@ alwaysApply: true
 
 1. **Determine placement** — Check `ARTICLE_TAXONOMY.md` for L1/L2 category
 2. **Pick next number** — Use the next available sequential number (e.g., 88)
-3. **Assign Document Type** — Choose A–L based on article purpose (see Document-Format.txt)
+3. **Assign Document Type** — Choose A–L based on article purpose (see `01-article-writing.mdc`)
 4. **Create the file** — `{NN}_{Title_With_Underscores}.md` with frontmatter
 5. **Create image folder** — `mkdir images/{NN}-{kebab-case-title}/`
 6. **Write content** — Follow the Document Type structure exactly

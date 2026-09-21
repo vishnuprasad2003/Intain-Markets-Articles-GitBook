@@ -19,7 +19,6 @@ IntainMarketsArticles/
 ├── AGENTS.md                  # Agent instructions
 ├── ARTICLE_TAXONOMY.md        # Article → Document Type mapping
 ├── SCREENSHOT_TRACKING.md     # Screenshot audit tracker
-├── Document-Format.txt        # 12 Document Types (A–L) + conventions
 ├── images/                    # All images, organized by article
 │   └── {NN}-{kebab-title}/   # e.g., images/36-settlement-and-nft-transfer/
 ├── 01_*.md through 87_*.md    # Article files (sequential)
@@ -39,5 +38,5 @@ IntainMarketsArticles/
 
 - `SUMMARY.md` drives GitBook sidebar → must match article files
 - `ARTICLE_TAXONOMY.md` maps each article number to its Document Type
-- `Document-Format.txt` defines the 12 document type structures
+- `.cursor/rules/01-article-writing.mdc` defines the 12 document type structures (A–L)
 - Every article has a corresponding `images/{NN}-{kebab}/` folder

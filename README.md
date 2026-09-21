@@ -18,4 +18,4 @@ Welcome to the Intain Markets Knowledge Base. This documentation covers the comp
 
 ## For Contributors
 
-See [AGENTS.md](AGENTS.md) for coding agent instructions and [Document-Format.txt](Document-Format.txt) for the documentation model.
+See [AGENTS.md](AGENTS.md) for agent instructions and `.cursor/rules/` for detailed documentation standards.

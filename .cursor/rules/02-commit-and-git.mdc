@@ -26,7 +26,7 @@ docs(<scope>): <short imperative description>
 | `article` | Creating or editing article content |
 | `image` | Adding, replacing, or organizing screenshots |
 | `config` | .gitbook.yaml, .cursor/rules, AGENTS.md changes |
-| `taxonomy` | ARTICLE_TAXONOMY.md or Document-Format.txt changes |
+| `taxonomy` | ARTICLE_TAXONOMY.md changes |
 | `nav` | SUMMARY.md navigation changes |
 | `format` | Formatting, typo fixes, markdown cleanup |
 

@@ -1,98 +1,106 @@
 # Agent Instructions — Intain Markets Knowledge Base
 
-This repository contains the **Intain Markets** Knowledge Base documentation, published via **GitBook** with **Git Sync** enabled. Follow these instructions when editing, creating, or maintaining any content in this repository.
+This is a **GitBook-synced documentation repository**. All content edits — whether by humans or AI agents — MUST follow the rules defined here and in `.cursor/rules/`.
+
+---
+
+## How to Use This File
+
+**This file is the single entry point.** Read it first, then follow the referenced rule files for detailed guidance on each topic.
+
+1. Read this file for repository structure, platform context, and rule index
+2. Read `.cursor/rules/*.mdc` for detailed rules on each topic (see index below)
+3. Check `ARTICLE_TAXONOMY.md` for article numbering and document type assignments
+4. Check `SUMMARY.md` for current navigation structure
 
 ---
 
 ## Repository Structure
 
 ```
-/
-  .gitbook.yaml              # GitBook space configuration
-  .cursor/rules/             # AI agent rules (10 .mdc files — READ THESE FIRST)
-  SUMMARY.md                 # Table of contents / navigation (GitBook reads this)
-  README.md                  # Homepage (GitBook-managed)
-  AGENTS.md                  # THIS FILE — agent instructions
-  Document-Format.txt        # Detailed document type definitions (A–L) with full structures
-  ARTICLE_TAXONOMY.md        # Definitive article numbering, L1/L2 placement, doc type mapping
-  SCREENSHOT_TRACKING.md     # Screenshot status tracking per article
-  images/                    # All article images (organized by article subfolder)
-    {number}-{kebab-case}/   # e.g., images/36-settlement-and-nft-transfer/
-  01_*.md through 87_*.md    # Article files (sequential numbering)
+IntainMarketsArticles/
+├── .gitbook.yaml                # GitBook space configuration
+├── .cursor/rules/               # AI agent rules (10 files — see index below)
+├── AGENTS.md                    # THIS FILE — single entry point for agents
+├── SUMMARY.md                   # Table of contents / sidebar navigation
+├── README.md                    # Homepage (GitBook-managed — do NOT edit)
+├── ARTICLE_TAXONOMY.md          # Article → Document Type mapping (source of truth)
+├── SCREENSHOT_TRACKING.md       # Screenshot audit status per article
+├── images/                      # All article images
+│   └── {NN}-{kebab-case}/      # One folder per article (e.g., images/36-settlement-and-nft-transfer/)
+├── 01_*.md through 87_*.md      # Article files (sequential numbering)
+└── Intain Markets – *.xlsx      # Category taxonomy spreadsheet
 ```
 
-## Cursor Rules (`.cursor/rules/`)
+---
 
-This repo includes **10 production-grade rule files** that AI agents automatically load:
+## Rules Index (`.cursor/rules/`)
 
-| Rule | What It Covers |
-|------|----------------|
-| `00-repo-overview.mdc` | Repo architecture, platform context |
-| `01-article-writing.mdc` | Document Type compliance (A–L), content quality, tone |
-| `02-commit-and-git.mdc` | Commit message format, branch strategy |
-| `03-images-and-screenshots.mdc` | Image naming, Playwright capture, test credentials |
-| `04-gitbook-sync.mdc` | SUMMARY.md, frontmatter, GitBook custom blocks |
-| `05-codebase-research.mdc` | Where to find statuses, fields, routes in backend/UI |
-| `06-article-lifecycle.mdc` | Create → Update → Retire article workflow |
-| `07-ux-formatting.mdc` | Heading hierarchy, tables, lists, emphasis, spacing |
-| `08-platform-terminology.mdc` | Canonical names for products, roles, statuses |
-| `09-verification-checklist.mdc` | Pre-commit checks, periodic audits, quality gates |
+These 10 rule files contain all detailed standards. **Read the relevant ones before making changes.**
 
-For **detailed document type structures** (sections, writing guidelines per type), see `Document-Format.txt`.
+| # | File | What It Covers | Read When |
+|---|------|---------------|-----------|
+| 00 | `00-repo-overview.mdc` | Repo architecture, platform context, key relationships | Always (auto-loaded) |
+| 01 | `01-article-writing.mdc` | **Document Types A–L** (full structures), content quality, writing tone | Writing or editing any article |
+| 02 | `02-commit-and-git.mdc` | Commit message format, branch strategy, pre-push checks | Before every commit |
+| 03 | `03-images-and-screenshots.mdc` | Image naming, folder structure, Playwright capture, test credentials | Adding or updating images |
+| 04 | `04-gitbook-sync.mdc` | SUMMARY.md format, frontmatter, GitBook custom blocks (hints, tabs, steppers) | Changing navigation or using GitBook features |
+| 05 | `05-codebase-research.mdc` | Where to find statuses, fields, routes in backend/UI codebases | Verifying content against code |
+| 06 | `06-article-lifecycle.mdc` | Create → Update → Retire workflow, quality gates | Creating or retiring articles |
+| 07 | `07-ux-formatting.mdc` | Heading hierarchy, tables, lists, emphasis, spacing, cross-references | Formatting any content |
+| 08 | `08-platform-terminology.mdc` | Canonical names for products, roles, statuses, settlement terms | Using any platform terminology |
+| 09 | `09-verification-checklist.mdc` | Pre-commit checks, periodic audits, production readiness criteria | Before committing changes |
 
-## GitBook Sync Rules
+---
 
-1. **SUMMARY.md is the navigation source of truth.** GitBook reads `SUMMARY.md` to build the sidebar. Every article must have exactly one entry in `SUMMARY.md`. Keep it synchronized whenever articles are added, removed, or renamed.
+## Platform Context
 
-2. **Frontmatter is required on every article.** Each `.md` file must start with YAML frontmatter:
-   ```yaml
-   ---
-   title: Article Title
-   description: One-line description for SEO and preview
-   ---
-   ```
+- **Product:** Intain Markets — structured finance platform
+- **Product Lines:** Asset Sale (WLS), Credit Facilities, Securitization, Participation Agreements
+- **Roles:** Issuer, Investor, Market Maker (Underwriter/Facility Agent), Servicer, Paying Agent, Verification Agent, Admin, Rating Agency, Partner
+- **Backend:** `intain-markets-node-app/` — Node.js, MongoDB, PostgreSQL, Snowflake
+- **UI:** `intain-markets-ui/` — React, Ant Design, Redux
+- **Blockchain:** Avalanche L1 subnet (NFTs), Ethereum/Avalanche C-Chain (USDC settlement)
 
-3. **Do NOT use `.gitbook/assets/` for new images.** All images go into `images/{number}-{kebab-case-article-title}/`. Reference them with relative paths:
-   ```markdown
-   ![Alt text](images/36-settlement-and-nft-transfer/settlement-activity.png)
-   ```
+---
 
-4. **Do NOT edit `README.md` directly.** GitBook manages it as the homepage. If you need to change the landing page, edit it in the GitBook UI or update `.gitbook.yaml`.
+## Quick Reference
 
-5. **Redirects:** If you rename or move an article file, add a redirect in `.gitbook.yaml` under `redirects:` so old links still resolve.
+### Commit Messages
 
-## Commit Message Convention
-
-When committing changes to this repository, use the following format:
-
-### For GitBook-synced exports (automatic):
+**GitBook auto-exports:**
 ```
 GITBOOK-{change_request_number}: {change_request_subject}
 ```
-Example: `GITBOOK-123: Fix documentation for settlement workflow`
 
-### For manual developer commits:
+**Manual commits:**
 ```
 docs(<scope>): <short description>
-
-<optional body with details>
 ```
+Scopes: `article` | `image` | `config` | `taxonomy` | `format` | `nav`
 
-Scopes: `article`, `image`, `config`, `taxonomy`, `format`, `nav`
+→ Full details in `02-commit-and-git.mdc`
 
-Examples:
-- `docs(article): add Asset Sale deal creation wizard details`
-- `docs(image): capture issuer dashboard screenshot`
-- `docs(config): update .gitbook.yaml redirects`
-- `docs(nav): regenerate SUMMARY.md for new articles`
-- `docs(taxonomy): add Participation Agreements L2 category`
+### Article File Naming
+```
+{NN}_{Title_With_Underscores}.md
+```
+- `NN` = two-digit sequential number (01–87+)
+- Example: `36_Settlement_and_NFT_Transfer.md`
 
-## Document Types (A–L)
+### Image Conventions
+- **Folder:** `images/{NN}-{kebab-case-title}/`
+- **Reference:** `![Alt text](images/36-settlement-and-nft-transfer/file.png)`
+- **Formats:** PNG for screenshots, SVG for diagrams
 
-Every article is assigned one of 12 document types defined in `Document-Format.txt`. When creating or editing articles, follow the structure for the assigned type:
+→ Full details in `03-images-and-screenshots.mdc`
 
-| Type | Purpose | Structure |
-|------|---------|-----------|
+### Document Types (A–L)
+
+Every article is assigned one of 12 document types. Check `ARTICLE_TAXONOMY.md` for the mapping.
+
+| Type | Purpose | Key Sections |
+|------|---------|-------------|
 | **A** | Platform Foundation | Overview → How Platform Is Designed → What This Enables → Key Principles |
 | **B** | Role & Access | Overview → Roles Covered → What Each Role Can Do → Access Notes |
 | **C** | Navigation & Usage | Overview → How to Navigate → What You Will See → Helpful Tips |
@@ -100,83 +108,70 @@ Every article is assigned one of 12 document types defined in `Document-Format.t
 | **E** | Lifecycle & Status | Overview → Lifecycle Overview → Status Meanings → What Each Status Indicates |
 | **F** | Outcome & Decision | Overview → Possible Outcomes → What Each Means → Next Steps |
 | **G** | Reference / Lookup | Overview → Reference Details → Important Notes |
-| **H** | FAQ | Overview → Categorized Q&A → Related Articles |
-| **I** | Change & Release Notes | Overview → What Changed → Impact on Users → What To Do |
-| **J** | Concept / Module Overview | Overview → What [X] Is → Key Features → How It Works |
-| **K** | Workflow Overview | Overview → Workflow Summary → Key Stages → Roles Involved |
-| **L** | Review & Decision | Overview → Evaluation Criteria → Making Decisions → Outcomes |
+| **H** | FAQ / Support | Overview → Categorized Q&A |
+| **I** | Change & Release | Overview → What Changed → Impact on Users |
+| **J** | Concept / Module Overview | Overview → What [X] Is → Purpose → Key Components → How It Works |
+| **K** | Workflow Overview | Overview → Workflow Summary → Key Stages → Progression |
+| **L** | Review & Decision | Overview → Who/When → Review Process → Criteria → Decisions → Outcomes |
 
-Check `ARTICLE_TAXONOMY.md` for the full mapping of article numbers to document types.
+→ **Full structures with sub-sections and writing guidelines** in `01-article-writing.mdc`
 
-## Article Naming Convention
-
-```
-{NN}_{Title_With_Underscores}.md
-```
-
-- `NN` = two-digit sequential number (01–87+)
-- Title uses underscores between words, PascalCase for proper nouns
-- Example: `36_Settlement_and_NFT_Transfer.md`
-
-When adding a new article, use the next available number. Update `SUMMARY.md` and `ARTICLE_TAXONOMY.md`.
-
-## Image Conventions
-
-- **Folder:** `images/{number}-{kebab-case-title}/` matching the article
-- **Filenames:** Descriptive kebab-case (e.g., `issuer-dashboard.png`, `deal-lifecycle-stepper.png`)
-- **Formats:** PNG for screenshots, SVG for icons/diagrams
-- **Size:** Screenshots should be full-width viewport captures at CSS scale
-- **Alt text:** Always provide meaningful alt text in the `![alt](path)` syntax
-
-## Writing Guidelines
-
-1. **Audience:** Platform users (Issuers, Investors, Market Makers, Servicers, Admins). Write for non-technical users who need to understand what to do and why.
-2. **Tone:** Professional, clear, user-friendly. No jargon without explanation.
-3. **Depth:** Minimum 600 words for process docs, 500 words for reference docs. Include specific field names, status values, and actions from the actual platform.
-4. **Screenshots:** Process and navigation articles should include annotated screenshots showing the actual UI.
-5. **Cross-references:** Link to related articles using relative paths: `[Settlement](36_Settlement_and_NFT_Transfer.md)`.
-6. **Tables:** Use tables for status definitions, role permissions, field descriptions, and comparison matrices.
-7. **No placeholders:** Never use TODO, TBD, or "coming soon" in published articles.
-
-## Platform Reference
-
-The Intain Markets platform codebase is at:
-- **Backend:** `intain-markets-node-app/` (Node.js, MongoDB, PostgreSQL, Snowflake)
-- **UI:** `intain-markets-ui/` (React, Ant Design, Redux)
-- **Product lines:** Asset Sale (WLS), Credit Facilities, Securitization, Participation Agreements
-- **Roles:** Issuer, Investor, Market Maker (Underwriter), Servicer, Paying Agent, Verification Agent, Admin, Rating Agency, Partner
-
-## GitBook Custom Blocks (if needed)
-
-GitBook supports enhanced markdown blocks. Use sparingly:
+### GitBook Custom Blocks
 
 ```markdown
 {% hint style="info" %}
-Helpful information for the user.
+Helpful information.
 {% endhint %}
 
 {% hint style="warning" %}
-Important warning the user should know.
+Important warning.
 {% endhint %}
 
 {% tabs %}
 {% tab title="Issuer" %}
-Content for Issuer role.
+Issuer-specific content.
 {% endtab %}
 {% tab title="Investor" %}
-Content for Investor role.
+Investor-specific content.
 {% endtab %}
 {% endtabs %}
+
+{% stepper %}
+{% step %}
+### Step 1: Do Something
+Instructions here.
+{% endstep %}
+{% endstepper %}
 ```
+
+→ Full details in `04-gitbook-sync.mdc`
+
+---
 
 ## Maintenance Checklist
 
-When making changes:
-- [ ] Article follows its assigned Document Type structure
+Before every commit, verify:
+
+- [ ] Article follows its assigned Document Type structure (see `01-article-writing.mdc`)
 - [ ] Frontmatter has `title` and `description`
-- [ ] Images are in the correct `images/` subfolder
-- [ ] Image references use relative paths and render correctly
-- [ ] `SUMMARY.md` is updated if articles were added/removed/renamed
-- [ ] `ARTICLE_TAXONOMY.md` is updated for new articles
-- [ ] Commit message follows the convention above
+- [ ] Images are in correct `images/` subfolder with relative paths
+- [ ] All image references resolve (no broken links)
+- [ ] `SUMMARY.md` updated if articles were added/removed/renamed
+- [ ] `ARTICLE_TAXONOMY.md` updated for new articles
+- [ ] Commit message follows the convention (see `02-commit-and-git.mdc`)
+- [ ] No TODO/TBD/placeholder text
 - [ ] No broken internal links
+
+→ Automated audit scripts in `09-verification-checklist.mdc`
+
+---
+
+## Key Relationships
+
+| File | Depends On | Update When |
+|------|-----------|-------------|
+| `SUMMARY.md` | Article `.md` files | Articles added/removed/renamed |
+| `ARTICLE_TAXONOMY.md` | Article `.md` files | New articles created |
+| `SCREENSHOT_TRACKING.md` | `images/` folders | Screenshots captured/updated |
+| `.cursor/rules/01-article-writing.mdc` | Document type definitions | New doc type needed (rare) |
+| `.cursor/rules/08-platform-terminology.mdc` | Platform codebase | New features/roles/statuses added |
