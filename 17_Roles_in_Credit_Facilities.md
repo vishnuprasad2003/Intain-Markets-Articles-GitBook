@@ -117,14 +117,7 @@ The Servicer manages ongoing loan administration for active facilities. This rol
 
 ### Paying Agent
 
-The Paying Agent manages payment distribution to Lenders on active facilities. This role is responsible for ensuring that payments from the Borrower are correctly allocated and distributed to the appropriate Lenders based on their participation.
-
-**Capabilities:**
-
-- View facility and funding details
-- Manage payment distribution to lenders
-- Track payment schedules and disbursement records
-- Coordinate with the Facility Agent on payment processing
+The Paying Agent is designated on the Master Commitment by the Facility Agent during facility setup. The Facility Agent selects the Paying Agent organization from a dropdown when configuring the Master Commitment. In the current platform implementation, the Paying Agent is recorded as an organizational reference on the facility rather than having its own dedicated Credit Facility dashboard or workflow actions. The Paying Agent's identity is captured for legal and operational documentation purposes and may be used for integration with external payment administration systems.
 
 ## Important Access Notes
 
@@ -150,7 +143,7 @@ The Paying Agent manages payment distribution to Lenders on active facilities. T
 | Review Funding Notice | — | — | ✓ | — | — |
 | Confirm Fund Transfer | — | — | ✓ | — | — |
 | Upload Monthly Loan Tapes | — | — | — | ✓ | — |
-| Manage Payment Distribution | — | — | — | — | ✓ |
+| Designated on MC (org field) | — | — | — | — | ✓ |
 
 ### Key Access Principles
 
@@ -174,4 +167,4 @@ The Paying Agent manages payment distribution to Lenders on active facilities. T
 
 **Servicer**: Access active deals → Upload monthly loan tapes → Monitor loan performance
 
-**Paying Agent**: Access active facilities → Manage payment distribution → Track payment schedules
+**Paying Agent**: Designated on the Master Commitment by the Facility Agent during facility setup (organizational reference for legal and payment administration purposes)
