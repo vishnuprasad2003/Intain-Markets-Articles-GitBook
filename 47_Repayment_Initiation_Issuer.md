@@ -175,7 +175,7 @@ If the investor rejects the repayment, the modal detects this and redirects the 
 - A wire confirmation document (PNG, JPEG, JPG, or PDF, max 10 MB) is required for submission
 - The repayment date cannot be in the future
 - Only one repayment can be in progress at a time per deal
-- The payment rail is limited to Bank (Wire/ACH) — Kinexys and Stablecoin are coming soon
+- The payment rail is currently limited to Bank (Wire/ACH) — Kinexys and Stablecoin rails are planned for future releases
 - Declaring default is permanent — no further repayment can be recorded after default
 - Idempotency keys are used to prevent duplicate submissions
 - The wire reference / memo is required and cannot be empty

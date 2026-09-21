@@ -101,13 +101,13 @@ Kinexys is a **planned** payment rail that will enable institutional-grade payme
 | Feature | Bank (Wire/ACH) | Stablecoin (USDC) | Kinexys |
 |---------|-----------------|-------------------|---------|
 | **Status** | Active | Active | Planned |
-| **Settlement speed** | Manual (1–3 days) | Automated (minutes) | TBD |
+| **Settlement speed** | Manual (1–3 days) | Automated (minutes) | Pending integration |
 | **Lock timeout** | 3 days | 24 hours | 3 days |
 | **On-chain** | No (fund transfer off-chain) | Yes (USDC + Wormhole) | Hybrid |
-| **Wallet required** | No | Yes (MetaMask) | TBD |
-| **Manual confirmation** | Both parties | Investor deposits only | TBD |
-| **Asset delivery** | Manual NFT transfer | Automatic via escrow | TBD |
-| **Refund on timeout** | N/A | Automatic escrow refund | TBD |
+| **Wallet required** | No | Yes (MetaMask) | Pending integration |
+| **Manual confirmation** | Both parties | Investor deposits only | Pending integration |
+| **Asset delivery** | Manual NFT transfer | Automatic via escrow | Pending integration |
+| **Refund on timeout** | N/A | Automatic escrow refund | Pending integration |
 
 ## Settlement Workflow — Purchase Flow
 
