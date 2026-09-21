@@ -1,104 +1,152 @@
 ---
 title: Who Changed What and When
-description: Learn how to view change history in Intain Markets
+description: Reference guide to the platform's audit and change-tracking capabilities — what information is recorded, how to access it, how to query the centralized audit log, and what the audit export contains
 ---
 
 # Who Changed What and When
 
 ## Overview
 
-Intain Markets tracks every change with details about who made it, what changed, and when. All changes are recorded automatically with attribution and timestamps.
+Intain Markets records every action with details about who performed it, what was affected, and when it happened. This tracking operates at two levels: per-item history embedded in each pool, term sheet, master commitment, funding request, funding notice, and deal; and a centralized audit module that consolidates activity from every module into a single, searchable log with export capabilities.
 
-## Status History
+This reference guide explains what information is recorded, where to find it, and how to use the audit module.
 
-**Pool Status History** - Shows progression: Created → Preview → Mandate Pending → Deal
-- Each entry shows: who changed status, when, previous status, new status, and comments
+## Reference Details
 
-**Term Sheet Status History** - Shows progression: Draft → BorrowerSigned → FAReview → Accepted/Rejected/CHANGES_REQUESTED
-- Each entry shows: who changed status, when, previous status, new status, and reason
+### What Gets Recorded on Every Action
 
-**Master Commitment Status History** - Shows progression: Draft → PendingLenderApproval → ACTIVE
-- Each entry shows: who changed status, when, previous status, new status, and comments
+Every action in the platform captures the following information:
 
-**Funding Request Status History** - Shows progression: DRAFT → FAReview → APPROVED/REJECTED/CHANGES_REQUESTED
-- Each entry shows: who changed status, when, previous status, new status, and reason
+| Field | What It Contains | Example |
+|---|---|---|
+| **Actor** | User ID, email address, role, and organization ID | `john.doe@lender.com`, Role: Lender, Org: ABC Capital |
+| **Action** | What type of action was performed | `created`, `updated`, `approved`, `rejected`, `signed`, `submitted` |
+| **Resource** | What the action was performed on — resource type and ID | Type: `credit_facility`, ID: `MC-09152026-a3f2` |
+| **Timestamp** | When the action occurred (UTC) | `2026-09-15T14:23:07.000Z` |
+| **Outcome** | Whether the action succeeded, failed, or was denied | `SUCCESS`, `FAILURE`, `DENIED` |
+| **Summary** | A human-readable sentence describing what happened | `Term sheet "TS-09102026-b7c1" approved by facility agent` |
+| **Metadata** | Additional context — change details, comments, reasons, blockchain transaction hashes | Previous status, new status, rejection reason, `txHash` |
+| **Request Context** | The HTTP request that triggered the action — request ID, IP address, method, path | `POST /cf/:id/term-sheets/:id/approve` |
 
-**Funding Notice Status History** - Shows progression: Pending Token Generated → FA Approved → E-signed for lenders
-- Each entry shows: who changed status, when, previous status, new status, and details
+### Per-Item Status History
 
-**How to View** - Navigate to item detail page, look for "Status History" section. Changes are displayed chronologically.
+Each item type maintains its own status history directly on the record. Every status transition records:
 
-## Action History
+- **Who changed the status** (user name and organization)
+- **When the change occurred** (timestamp)
+- **Previous status** (what it was before)
+- **New status** (what it changed to)
+- **Comments or reason** (why the change was made, if provided)
 
-**Pool Actions** - Creation, sharing, mandate submission, mandate acceptance/rejection, loan mapping, removal, reinstatement
+**Pool Status History:**
+Tracks progression through: Created → Preview → Mandate Pending → Under Review → Deal. Records who created the pool, who shared it, who accepted or rejected the mandate, and who moved it through each stage.
 
-**Term Sheet Actions** - Creation, signing, submission, approval, rejection, change requests, document uploads
+**Term Sheet Status History:**
+Tracks progression through: Draft → BorrowerSigned → FAReview → Accepted / Rejected / CHANGES_REQUESTED. Records who signed the term sheet, who submitted it, and who approved, rejected, or requested changes.
 
-**Master Commitment Actions** - Auto-creation, facility configuration, lender group updates, lender approvals
+**Master Commitment Status History:**
+Tracks progression through: Draft → PendingLenderApproval → ACTIVE. Records when the facility agent submitted for approval and when each lender approved.
 
-**Funding Request Actions** - Creation, submission, approval, rejection, change requests, document uploads
+**Funding Request Status History:**
+Tracks progression through: DRAFT → FAReview → APPROVED / REJECTED / CHANGES_REQUESTED. Records when the borrower submitted the request and how the facility agent responded.
 
-**Funding Notice Actions** - Auto-generation, FA approval, FA e-sign for each lender, lender fund transfer confirmations
+**Funding Notice Status History:**
+Tracks progression through: Pending Token Generated → FA Approved → E-signed (per lender). Records the facility agent's approval and each individual lender e-signature event.
 
-**How to View** - Navigate to item detail page, look for "Action History" or "Activity" section. Actions are displayed chronologically.
+**Asset Sale Deal Status History:**
+Tracks the full lifecycle: Draft → Pending Review → Published → Commit → Invest → Settlement In Progress → Settled → Active → Repayment In Progress → Closed. Records every status transition with attribution.
 
-## Document History
+### Per-Item Action History
 
-**Term Sheet Documents** - Tracks collateral profile, financial statements, KYC documents, collateral data uploads
-- Records: IPFS hash, uploader, timestamp
-- Previous versions preserved in history arrays
+In addition to status history, items maintain an action history that records operations beyond status changes:
 
-**Funding Request Documents** - Tracks collateral addendum, financial statements, KYC documents, supporting documents uploads
-- Records: IPFS hash, uploader, timestamp
-- Previous versions preserved in history arrays
+- **Pool actions**: Creation, sharing, mandate submission, mandate acceptance/rejection, loan mapping, loan removal, loan reinstatement, feedback submission
+- **Term sheet actions**: Creation, editing, document uploads, signing, submission, approval, rejection, change requests, change request responses
+- **Master commitment actions**: Auto-creation from term sheet, facility configuration, lender group additions, lender approvals with e-signature
+- **Funding request actions**: Creation, editing, document uploads, submission, approval, rejection, change requests
+- **Funding notice actions**: Auto-generation from approved funding request, FA approval, FA e-sign for each lender, lender fund transfer confirmations
 
-**IPFS Storage** - Documents stored in IPFS. Each upload generates IPFS hash stored in database. Document history arrays maintain upload history.
+### Document History
 
-**How to View** - Navigate to item detail page, look for document sections. Document history shows all uploads with uploader, timestamp, and IPFS hash.
+Documents uploaded to the platform are tracked with:
+- **Uploader** — who uploaded the document
+- **Timestamp** — when it was uploaded
+- **IPFS hash** — content-addressable hash for verification
+- **History arrays** — previous versions are preserved, not overwritten
 
-## Change Attribution
+Document types tracked include: collateral profiles, financial statements, KYC documents, collateral data, funding sheets, collateral addendums, and supporting documents.
 
-**User Attribution** - Every change records: user ID, user name, organization ID and name, role, timestamp
+### The Centralized Audit Module
 
-**Status Change Attribution** - Records: who changed, when, previous status, new status, reason or comments
+The Activity Audit module consolidates all of the above into a single, cross-module activity log. It is accessible via the **Activity Audit** item in the sidebar.
 
-**Approval Attribution** - Records: approver, when, comments, role
+**How to query the audit log:**
 
-**Rejection Attribution** - Records: rejector, when, reason, role
+The audit log supports filtering on the following fields:
+- `occurredAt` — when the event happened (date range)
+- `event.type` — the specific event type (e.g., `credit_facility.term_sheet.created`)
+- `event.category` — the broad category (Authentication, Authorization, Data Mutation, Data Access, Chain, Integration, System)
+- `event.action` — the action performed
+- `event.outcome` — SUCCESS, FAILURE, DENIED, or PENDING
+- `actor.userId`, `actor.email`, `actor.role`, `actor.orgId` — who performed the action
+- `resource.type`, `resource.id` — what the action was performed on
+- `metadata.chain.txHash` — blockchain transaction hash (for on-chain events)
+- `metadata.issuerOrgId`, `metadata.assetClass` — additional context filters
+- `request.correlationId` — link related events from the same request
 
-## Viewing Change History
+The log supports sorting by time, event type, category, outcome, actor, or resource type. Results are cursor-paginated (up to 200 events per page) for efficient browsing of large activity histories.
 
-**Item Detail Pages** - Navigate to pools, term sheets, master commitments, funding requests, or funding notices. Look for:
-- "Status History" - Shows all status changes
-- "Action History" - Shows all actions taken
-- "Activity" - Shows recent activities
-- "Document History" - Shows document uploads and updates
+**Distinct-value lookups:**
 
-**Chronological Display** - History organized chronologically. Most recent first or chronological order. Each entry shows complete details.
+For building filter dropdowns, the audit module provides a distinct-values endpoint that returns unique values for any filterable column. This powers the filter chips in the UI — for example, showing all unique event types or all unique actor emails present in the current data.
 
-**Detailed Information** - Clicking entries shows: what happened, who was involved, when it occurred, what changed.
+**What the audit export contains:**
 
-## Centralized Audit Module
+The audit module supports exporting to CSV or XLSX format. Each export contains the following columns:
 
-**Activity Audit** - The platform now provides a centralized audit module that offers a unified view of who changed what and when across all modules. Users can access the Activity Audit from the sidebar to see a chronological feed of all actions taken across the platform.
+| Column | Description |
+|---|---|
+| Occurred At | Timestamp of the event |
+| Audit Id | Unique event identifier (AUD-<uuid>) |
+| Event Type | Specific event type |
+| Category | Event category |
+| Action | Action performed |
+| Outcome | SUCCESS, FAILURE, DENIED, or PENDING |
+| Actor Email | Email of the person who performed the action |
+| Actor Role | Role of the person who performed the action |
+| Actor Org Id | Organization of the person who performed the action |
+| Resource Type | Type of resource affected |
+| Resource Id | Identifier of the resource affected |
+| Summary | Human-readable description of what happened |
 
-**What the Audit Log Includes:**
-- **Actor** - Who performed the action (user name and organization)
-- **Action Type** - What type of action was performed (creation, update, approval, rejection, etc.)
-- **Affected Entity** - Which item was affected (pool, term sheet, deal, funding request, etc.)
-- **Timestamp** - When the action occurred
-- **Change Details** - What specifically changed (previous values, new values, comments)
+Exports are capped at **50,000 rows** per download. XLSX exports include a frozen header row for easy scrolling. CSV exports include a UTF-8 BOM for correct Excel rendering.
 
-**How to Access** - Navigate to Activity Audit in the sidebar. The audit log displays a chronological feed of all actions with filtering and export capabilities.
+### Relationship Tracking
+
+The audit log and item histories also track relationships between items:
+
+| From | To | Tracked Via |
+|---|---|---|
+| Term Sheet | Master Commitment | `termSheetId` on the master commitment |
+| Master Commitment | Funding Requests | `masterCommitmentId` on each funding request |
+| Funding Request | Funding Notice | `fundingRequestId` on the funding notice |
+| Pool | Loans | `poolid` on each loan mapping |
+| Deal | Commitments | `dealId` on each commitment |
+
+This means you can trace a complete chain from a borrower's original term sheet through to the final funding notice and settlement.
 
 ## Important Notes
 
-**Complete History** - All changes recorded permanently. Cannot be deleted or modified.
+**Complete history** — All changes are recorded permanently. History cannot be deleted or modified after the fact.
 
-**User Attribution** - Every change attributed to specific user.
+**User attribution** — Every change is attributed to a specific user, with their email, role, and organization recorded.
 
-**Timestamps** - All timestamps use consistent time standards.
+**Organization scoping** — Non-Admin users automatically see only events related to their own organization. This scoping is applied server-side and cannot be bypassed.
 
-**History Cannot Be Modified** - Change history is permanent.
+**Impersonation transparency** — When an admin uses view-as mode, actions are tagged with the `impersonatedBy` field, recording both the admin's identity and the target user's identity.
 
-**Access Control** - History visibility based on roles and permissions.
+**Timestamps** — All timestamps are recorded in UTC for consistency across time zones.
+
+**Indefinite retention** — Audit records are retained permanently. There is no automatic deletion or expiration of audit data.
+
+**Catalog discovery** — The audit module provides a catalog endpoint that exposes all available categories, resource types, outcomes, filterable fields, sortable fields, and export format options. The UI uses this catalog to build its filter and sort menus dynamically.
