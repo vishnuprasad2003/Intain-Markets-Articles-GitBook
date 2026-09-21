@@ -1,0 +1,65 @@
+---
+description: How to research the platform codebase when writing or updating documentation
+alwaysApply: true
+---
+
+# Codebase Research Guide
+
+When writing or updating articles, always verify details against the actual codebase.
+NEVER invent features — document only what exists in the code.
+
+## Source Codebases
+
+| Codebase | Path | Purpose |
+|----------|------|---------|
+| Backend | `/home/vishnu-intain/Documents/Node-App/intain-markets-node-app/` | APIs, services, business logic |
+| UI | `/home/vishnu-intain/Documents/Node-App/intain-markets-ui/src/` | Screens, components, constants |
+
+## Where to Find What
+
+### Status Values & Constants
+- Backend: `api/settlement/rails.js` (settlement statuses)
+- Backend: `api/dealOnBoarding.js` (deal statuses, field lists)
+- Backend: `api/securitization/securitization.routes.js` (SEC constants)
+- UI: `src/Constants/index.js` (all API paths, status constants)
+- UI: `src/Constants/settlementChain.js` (blockchain chain config)
+- UI: `src/Utils/settlementPartyUtils.js` (settlement flow types)
+
+### UI Screens & Fields
+- Containers: `src/Containers/` — one folder per module
+- Components: `src/Components/` — shared UI components
+- Routes: `src/Routers/RootRouter.js` — all routes by role
+- Side nav: `src/Components/SideNavbar/SideNavbar.js`
+
+### API Routes & Modules
+- Route registry: `routes/index.js` (v1 + v2 mount points)
+- Module folders: `api/{module}/` (each has routes, service, helpers)
+- OpenAPI: `openapi/` folder for API documentation
+- Architecture: `docs/rules/` for backend coding standards
+
+### Key Backend Modules
+| Module | Folder | Covers |
+|--------|--------|--------|
+| Pools | `api/pools/` | Pool CRUD, sharing, mandates |
+| Loans | `api/loans/` | Loan registry, onboarding |
+| Batches | `api/batches/` | Batch verification, ABDP |
+| Settlement | `api/settlement/` | Payment rails, escrow, NFT transfer |
+| WholeLoanSale | `api/WholeLoanSale/` | Deal lifecycle, investor agreements |
+| Credit Facility | `api/cfmodule/` | Term sheets, MC, funding |
+| Securitization | `api/securitization/` | Tranches, waterfalls |
+| Audit | `api/audit/` | Activity logging, export |
+| Receivables RNFT | `api/receivablesRnft/` | NFT mint/burn |
+| Organizations | `api/organizations/` | Org management, onboarding |
+| Notifications | `api/notifications/` | SSE, email alerts |
+| E-Signature | `api/common/esignature.helper.js` | Adobe Sign, ZohoSign |
+| Auth/SSO | `api/common/externalJwt.helper.js` | Entra SSO, ABDP JWT |
+| Blockchain | `api/blockchain/` | EVM, Wormhole, Solana |
+
+## Research Workflow
+
+1. **Identify the module** — which product line / feature does the article cover?
+2. **Check backend constants** — statuses, enums, field names are the source of truth
+3. **Check UI components** — what does the user actually see? Field labels, buttons, modals
+4. **Check routes** — which roles have access? What URL patterns?
+5. **Verify against running platform** — use Playwright MCP if screenshots are needed
+6. **Cross-reference** — does the article match what the code says?

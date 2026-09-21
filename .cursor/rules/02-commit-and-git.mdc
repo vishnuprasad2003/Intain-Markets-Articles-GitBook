@@ -1,0 +1,53 @@
+---
+description: Git workflow, commit messages, and branch conventions
+alwaysApply: true
+---
+
+# Git & Commit Conventions
+
+## Commit Message Format
+
+### GitBook Auto-Exports (from GitBook UI)
+```
+GITBOOK-{change_request_number}: {change_request_subject}
+```
+Example: `GITBOOK-123: Fix documentation for settlement workflow`
+
+### Manual Developer Commits
+```
+docs(<scope>): <short imperative description>
+
+<optional body — what changed and why>
+```
+
+**Scopes:**
+| Scope | When to use |
+|-------|-------------|
+| `article` | Creating or editing article content |
+| `image` | Adding, replacing, or organizing screenshots |
+| `config` | .gitbook.yaml, .cursor/rules, AGENTS.md changes |
+| `taxonomy` | ARTICLE_TAXONOMY.md or Document-Format.txt changes |
+| `nav` | SUMMARY.md navigation changes |
+| `format` | Formatting, typo fixes, markdown cleanup |
+
+**Examples:**
+```
+docs(article): add stablecoin settlement details to article 36
+docs(image): capture issuer asset sale dashboard screenshot
+docs(nav): add new Participation Agreements articles to SUMMARY.md
+docs(config): update .gitbook.yaml redirects for renamed articles
+docs(taxonomy): add articles 88-90 for Securitization module
+```
+
+## Branch Strategy
+
+- `main` — production, synced to GitBook (protected)
+- `refined3` — current working branch for major overhauls
+- Feature branches: `docs/{topic}` for isolated changes
+
+## Before Every Push
+
+1. Verify no broken image references: `grep -r '!\[' *.md | grep -v 'images/'`
+2. Verify SUMMARY.md matches article files
+3. Verify all new images are in `images/{NN}-{kebab}/`
+4. Run word count check: articles under 300 words need enrichment

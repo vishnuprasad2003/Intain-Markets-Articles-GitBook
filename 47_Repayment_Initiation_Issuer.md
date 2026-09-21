@@ -1,13 +1,13 @@
 ---
 title: Repayment Initiation
-description: Task-based guide for issuers to initiate repayment on active asset sale deals
+description: Complete task-based guide for issuers to initiate repayment — covering the four-step wizard, payment rail selection, repayment type cards, amount validation, wire reference, document upload, and confirmation flow
 ---
 
 # Repayment Initiation
 
 ## Overview
 
-This guide provides issuers with step-by-step instructions for initiating repayment on an active asset sale deal. When borrowers make payments on the underlying loans, the issuer uploads the latest loan tape, initiates repayment via bank wire, and submits the repayment for investor confirmation. This covers all issuer-side tasks in the repayment phase.
+This guide provides issuers with step-by-step instructions for initiating repayment on an active asset sale deal. When borrowers make payments on the underlying loans, the issuer uploads the latest loan tape, opens the repayment modal, selects a payment rail, records payment details (type, amount, date, wire reference, wire confirmation document), reviews the summary, and confirms the repayment. This covers all issuer-side tasks in the repayment phase, including the complete four-step repayment wizard.
 
 ## Who Can Use This
 
@@ -19,7 +19,7 @@ Use this guide when:
 - Borrowers have made payments on the underlying loans
 - You need to pass through repayment funds to investors
 - An active deal requires repayment processing
-- You want to initiate a full or partial repayment on a deal
+- You want to initiate a full repayment, partial repayment, or declare a default on a deal
 
 ## Step-by-Step Process
 
@@ -36,74 +36,157 @@ Use this guide when:
 3. Select the loan tape file to upload (Excel format)
 4. Select the **As Of Date** for the loan tape data
 5. Click **Upload** to begin the upload process
-
-### Step 3: Map Loan Tape Fields
-
-1. After upload, the field mapping interface appears
-2. Map each column in your loan tape to the platform's expected fields
-3. Verify the field mapping is correct
-4. Click **Save Mapping** to confirm
+6. After upload, the field mapping interface appears — map each column to the platform's expected fields
+7. Verify the field mapping and click **Save Mapping** to confirm
 
 > **Tip:** If you need assistance preparing the loan tape, Intain support can guide you through updating the loan tape in Excel before upload.
 
-### Step 4: Initiate the Repayment
+> **For Receivables deals:** The loan tape is especially important because the repayment amount is automatically derived from the loan tape's invoice totals. The platform fetches the `currentInstance.totalPaymentAmount` from the uploaded loan tape data.
+
+### Step 3: Open the Repayment Modal
 
 1. Click **Initiate Repayment** from the deal operations menu
-2. The repayment initiation wizard opens
+2. The repayment modal opens with a four-step wizard:
+   - **Step 1: Select Rail** — Choose the payment method
+   - **Step 2: Record Payment** — Enter repayment details
+   - **Step 3: Review** — Review the summary before confirming
+   - **Step 4: Status** — Monitor the repayment progress
 
-### Step 5: Select Payment Rail
+A progress tracker at the top of the modal shows your current step.
 
-1. Choose **Bank Wire** as the payment rail
-2. Bank wire is the currently supported off-chain payment method
-3. Click **Next** to continue
+### Step 4: Select Payment Rail (Wizard Step 1)
 
-### Step 6: Configure Repayment Details
+Choose your settlement rail from the available options:
 
-Review and complete the repayment information:
+| Rail | Description | Availability |
+|------|-------------|--------------|
+| **Kinexys** | Escrowed book-entry with on-platform confirmations | Coming soon (disabled) |
+| **Stablecoin** | USDC via smart contract escrow on the configured chain (e.g., Polygon) | Coming soon (disabled) |
+| **Bank (Wire/ACH)** | Traditional rails via instructions on file | **Available** |
 
-1. **Repayment Type**: Auto-calculated based on the uploaded loan tape
-   - **Full**: Entire outstanding balance is being repaid
-   - **Partial**: A portion of the outstanding balance is being repaid
-2. **Repayment Date**: Enter the date of the repayment
-3. **Repayment Amount**: Auto-calculated from the loan tape — verify this amount
-4. **Memo**: Add any relevant notes about the repayment
-5. **Wire Confirmation Document**: Upload the bank wire confirmation document as proof of transfer
-6. Click **Next** to proceed to the review step
+Currently, only **Bank (Wire/ACH)** is enabled. Click the Bank card to select it and automatically advance to Step 2.
 
-> **Important:** The repayment amount and repayment type are automatically calculated from the uploaded loan tape data. Always verify these values match your actual wire transfer before submitting.
+> **Note:** Hovering over disabled rails shows a tooltip: "Repayment currently supports Bank (Wire/ACH) only. Additional rails will be enabled later."
 
-### Step 7: Review and Submit
+### Step 5: Record Payment Details (Wizard Step 2)
 
-1. Review all repayment details on the confirmation screen:
-   - Repayment type (Full/Partial)
-   - Repayment amount
-   - Repayment date
-   - Wire confirmation document
-   - Memo
-2. Click **Confirm** to submit the repayment
-3. The deal status changes to **Repayment In Progress**
-4. Investors are notified that repayment has been initiated
+This step has two sections: **Repayment Type** and **Repayment Details**.
 
-### Step 8: Monitor Investor Confirmation
+#### Select Repayment Type
 
-1. After submission, monitor the investor confirmation status in the deal details
-2. Each investor will review and confirm receipt of the repayment
-3. Once all investors confirm, the deal is ready for NFT burn and closure
+Choose one of three repayment type cards:
+
+| Type | Description | Effect |
+|------|-------------|--------|
+| **Full Repayment** | Full payment of the outstanding balance | Amount auto-populates with outstanding balance |
+| **Partial Repayment** | Partial payment; remaining balance stays open | Amount field is cleared for manual entry |
+| **Declare Default** | Declare default on this repayment | Amount fields are hidden; default is permanent |
+
+> **Important:** If the outstanding balance is zero, all repayment type cards are disabled with the message: "There is nothing left to repay on this settlement."
+
+> **Warning for Declare Default:** A permanent warning is displayed: "Declaring default is permanent. No further repayment can be recorded after this action."
+
+#### Enter Repayment Details (for Full or Partial)
+
+The following fields appear after selecting Full or Partial repayment:
+
+- **Repayment Method**: Displayed as **"Bank (Wire/ACH)"** (read-only, based on the selected rail)
+
+- **Repayment Date*** (required): Select the date of the repayment using the date picker. Format: MM/DD/YYYY. Future dates are disabled — the payment date cannot be after today.
+
+- **Repayment Amount*** (required): 
+  - For **Full Repayment**: Auto-populated with the outstanding balance. You can modify if needed.
+  - For **Partial Repayment**: Enter the amount manually.
+  - For **Receivables deals**: The amount is automatically fetched from the loan tape's invoice totals (`currentInstance.totalPaymentAmount`). If the loan tape amount is zero or unavailable, an error is shown: "Payment amount from the latest loan tape is 0. Re-upload the loan tape Excel and try again."
+  - Accepts up to 4 decimal places. Commas are stripped automatically.
+  - Validation: The amount must be greater than zero and cannot exceed the outstanding balance for full repayment.
+
+- **Wire Reference*** (required): Enter the wire memo or transaction ID (e.g., "Wire memo or transaction ID"). This field cannot be empty.
+
+- **Wire Confirmation Document*** (required): Upload the bank wire confirmation document as proof of transfer.
+  - Click **Select document** (or **Replace document** if one is already attached) to choose a file
+  - Accepted formats: PNG, JPEG, JPG, or PDF up to 10 MB
+  - At least one document must be uploaded before proceeding
+
+Click **Next** to save the payment information and proceed to the review step.
+
+> **Validation on Next:** All fields are validated. Error tooltips appear if any required field is missing or invalid:
+> - "Select a repayment type to continue."
+> - "Enter a repayment amount to continue."
+> - "Enter a repayment date to continue."
+> - "Enter a wire reference to continue."
+> - "Upload a wire confirmation document to continue."
+
+### Step 6: Review and Confirm (Wizard Step 3)
+
+The review screen shows a summary table:
+
+| Item | Value |
+|------|-------|
+| Repayment Method | Bank (Wire/ACH) |
+| Repayment Type | Full Repayment / Partial Repayment |
+| Repayment Amount | $XX,XXX.XX |
+
+Click **Review & Confirm** to open the confirmation panel.
+
+The confirmation panel shows the complete summary:
+
+| Item | Value |
+|------|-------|
+| Deal | Deal Name · Deal ID |
+| Repayment Method | Bank (Wire/ACH) |
+| Repayment Type | Full / Partial / Defaulted |
+| Repayment Amount | $XX,XXX.XX |
+| Repayment Date | MM/DD/YYYY |
+| Wire Reference | [Your reference] |
+
+The confirmation message reads: **"Confirm that funds have been sent"** with the attestation: "By confirming, you are attesting that the wire transfer has been initiated."
+
+For Declare Default, the message reads: **"This declares default on the outstanding balance"** with bullets:
+- "This repayment will be marked as Defaulted."
+- "The investor will be notified to acknowledge this declaration."
+
+Click **Confirm** to finalize the repayment submission.
+
+### Step 7: Monitor Repayment Status (Wizard Step 4)
+
+After confirmation, the wizard moves to the Status step:
+
+- **Awaiting Investor Confirmation**: The repayment has been submitted and the investor needs to confirm receipt
+- **Repayment Complete**: The investor has accepted the repayment
+- **Default Declared**: Default has been declared (for Declare Default)
+- **Installment Recorded**: A partial installment has been recorded (for partial repayments)
+
+The modal polls the server every 10 seconds for status updates while open.
+
+#### Partial Repayment Loop
+
+For partial repayments, after the investor confirms receipt of an installment, a **Record Next Installment** option appears. Clicking it resets the wizard to Step 1 for the next installment, clearing all previously entered payment details. This allows the issuer to record multiple partial repayments over time.
+
+#### Retry After Investor Rejection
+
+If the investor rejects the repayment, the modal detects this and redirects the issuer to Step 2 (Record Payment) with a fresh form. Previously uploaded documents are cleared, and the issuer must re-enter payment details and re-upload the wire confirmation for the new attempt.
 
 ## Rules & Validations
 
 - Repayment can only be initiated on deals in **Active** status
 - A loan tape must be uploaded and field mapping saved before initiating repayment
-- The repayment amount is derived from the loan tape and cannot be manually overridden
-- A wire confirmation document is required for submission
+- For Receivables deals, the repayment amount is derived from the loan tape's invoice totals and cannot be manually overridden
+- A wire confirmation document (PNG, JPEG, JPG, or PDF, max 10 MB) is required for submission
+- The repayment date cannot be in the future
 - Only one repayment can be in progress at a time per deal
-- The payment rail is limited to bank wire (off-chain transaction)
+- The payment rail is limited to Bank (Wire/ACH) — Kinexys and Stablecoin are coming soon
+- Declaring default is permanent — no further repayment can be recorded after default
+- Idempotency keys are used to prevent duplicate submissions
+- The wire reference / memo is required and cannot be empty
 
 ## What Happens Next
 
 After you submit the repayment:
-- The deal status changes to **Repayment In Progress**
-- Investors review the repayment details and confirm receipt
-- After confirmation, investors burn their receivables NFTs
-- The deal status changes to **Closed** once burn is complete
-- See **Repayment Flow** (article 37) for the complete end-to-end process
+- The deal enters the **Repayment In Progress** phase
+- Investors review the repayment details and can **Accept** or **Reject** the repayment
+- If accepted, investors proceed to burn their receivables NFTs
+- If rejected, the issuer is notified and can record a new repayment attempt
+- For partial repayment, additional installments can be recorded after investor confirmation
+- After full repayment confirmation and NFT burn, the deal status changes to **Closed**
+- See **Repayment Receipt & NFT Burn** (article 64) for the investor's perspective

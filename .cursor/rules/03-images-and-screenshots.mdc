@@ -1,0 +1,75 @@
+---
+description: Rules for screenshots, images, and visual assets in documentation
+globs: "images/**"
+alwaysApply: false
+---
+
+# Image & Screenshot Rules
+
+## Folder Structure
+
+```
+images/
+  {NN}-{kebab-case-article-title}/
+    descriptive-name.png
+```
+
+- `NN` = article number (matches the article file)
+- Folder name = article number + kebab-case title
+- Example: `images/36-settlement-and-nft-transfer/settlement-activity.png`
+
+## Naming Conventions
+
+| Type | Format | Example |
+|------|--------|---------|
+| Dashboard | `{role}-{section}-dashboard.png` | `issuer-asset-sale-dashboard.png` |
+| Form/Modal | `{action}-{context}.png` | `create-deal-wizard-step1.png` |
+| Detail Page | `{entity}-details.png` | `deal-details-page.png` |
+| Status/Lifecycle | `{entity}-lifecycle-stepper.png` | `deal-lifecycle-stepper.png` |
+| Table/List | `{entity}-list.png` | `pool-list-issuer.png` |
+| Icon/SVG | `{feature}-icon.svg` | `asset-sale-icon.svg` |
+
+## Format Rules
+
+- **Screenshots:** PNG format, CSS scale (not device scale)
+- **Icons/Diagrams:** SVG format when possible
+- **Full viewport:** Screenshots should capture the full relevant area
+- **No personal data:** Blur or use test accounts only
+- **Consistent sizing:** Use the same browser width for all captures
+
+## Capturing Screenshots
+
+### Using Playwright MCP
+```
+1. browser_navigate → target URL
+2. browser_wait_for → key element visible
+3. browser_take_screenshot → { scale: "css", filename: "path.png" }
+```
+
+### Test Credentials
+- All roles except Admin: `santhosh.vembaiyan@intainft.com` / `Int@1#M@K&T$`
+- Admin: `im_admin@intainft.com` / `Int@1#M@K&T$` at `/admin/login`
+- Platform: `https://imtest.intainmarkets.us`
+
+## Referencing Images in Articles
+
+```markdown
+![Issuer Asset Sale Dashboard](images/32-asset-sale-overview/issuer-asset-sale-dashboard.png)
+```
+
+- Always use relative paths from the article file
+- Always provide meaningful alt text (not just "screenshot")
+- Place images AFTER the paragraph they illustrate
+- One image per concept — don't stack multiple images without text between them
+
+## Which Articles Need Screenshots
+
+| Document Type | Screenshot Expectation |
+|---------------|----------------------|
+| C (Navigation) | REQUIRED — show the actual UI being described |
+| D (How-To) | REQUIRED — show each major step |
+| J (Overview) | RECOMMENDED — show the module dashboard |
+| K (Workflow) | RECOMMENDED — show key workflow stages |
+| L (Review) | RECOMMENDED — show the review interface |
+| A, E, F, G, H, I | OPTIONAL — conceptual articles may not need them |
+| B | OPTIONAL — role descriptions rarely need screenshots |

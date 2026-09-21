@@ -1,0 +1,54 @@
+---
+description: Rules for writing and editing documentation articles
+globs: "**/*.md"
+alwaysApply: false
+---
+
+# Article Writing Rules
+
+## Frontmatter (REQUIRED)
+
+Every `.md` article MUST start with YAML frontmatter:
+
+```yaml
+---
+title: Human-Readable Title
+description: One-line SEO description (50-160 characters)
+---
+```
+
+## Document Type Compliance
+
+Before writing or editing an article, check `ARTICLE_TAXONOMY.md` for its assigned Document Type (A–L), then follow the structure defined in `Document-Format.txt`.
+
+| Type | Structure |
+|------|-----------|
+| A | Overview → How Platform Is Designed → What This Enables → Key Principles |
+| B | Overview → Roles Covered → What Each Role Can Do → Access Notes |
+| C | Overview → How to Navigate → What You Will See → Helpful Tips |
+| D | Overview → Who Can Use → When Used → Step-by-Step → Rules → What Happens Next |
+| E | Overview → Lifecycle Overview → Status Meanings → What Each Status Indicates |
+| F | Overview → Possible Outcomes → What Each Means → Next Steps |
+| G | Overview → Reference Details → Important Notes |
+| H | Overview → Categorized Q&A → Related Articles |
+| I | Overview → What Changed → Impact on Users → What To Do |
+| J | Overview → What [X] Is → Key Features → How It Works |
+| K | Overview → Workflow Summary → Key Stages → Roles Involved |
+| L | Overview → Evaluation Criteria → Making Decisions → Outcomes |
+
+## Content Quality Standards
+
+- **Minimum depth:** 600+ words for process docs (D), 500+ words for reference/status docs
+- **Specificity:** Use actual field names, status values, dropdown options from the codebase
+- **No placeholders:** Never use TODO, TBD, "coming soon", or "[insert content]"
+- **No fiction:** Only document features that exist in the code
+- **Tables:** Use for status definitions, role permissions, field descriptions, comparisons
+- **Cross-references:** Link related articles: `[Settlement](36_Settlement_and_NFT_Transfer.md)`
+
+## Writing Tone
+
+- Professional, clear, user-friendly
+- Audience: Platform users (non-technical), not developers
+- Explain WHY, not just WHAT
+- Define any technical term on first use
+- Use active voice: "Click Submit" not "The Submit button should be clicked"

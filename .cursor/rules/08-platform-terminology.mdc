@@ -1,0 +1,64 @@
+---
+description: Canonical terminology and naming conventions for Intain Markets documentation
+alwaysApply: true
+---
+
+# Platform Terminology
+
+Use these exact terms consistently across all articles.
+
+## Product Lines
+
+| Canonical Name | Also Known As | Do NOT Use |
+|----------------|---------------|------------|
+| **Asset Sale** | Whole Loan Sale (WLS) | "Loan Sale", "Asset Transfer" |
+| **Credit Facilities** | CF | "Credit Lines", "Lending" |
+| **Securitization** | SEC | "Structured Products" |
+| **Participation Agreements** | PA | "Participations" |
+
+In UI-facing docs, prefer "Asset Sale" (the user-visible label).
+In technical context, "Whole Loan Sale (WLS)" is acceptable.
+
+## Roles
+
+| Canonical Name | Context | Backend Value |
+|----------------|---------|---------------|
+| **Issuer** | All product lines | `Issuer` |
+| **Investor** | Asset Sale, Securitization | `Investor` |
+| **Lender** | Credit Facilities | `Investor` (same account) |
+| **Market Maker** | Credit Facilities | `MarketMaker` |
+| **Underwriter** | Asset Sale | `MarketMaker` (same account) |
+| **Facility Agent** | Credit Facilities | `MarketMaker` (same account) |
+| **Servicer** | Post-close servicing | `Servicer` |
+| **Paying Agent** | Securitization payments | `PayingAgent` |
+| **Verification Agent** | Batch verification / ABDP | `VerificationAgent` |
+| **Admin** | Platform administration | `Admin` |
+
+## Settlement Terms
+
+| Term | Meaning |
+|------|---------|
+| **Bank (Wire/ACH)** | Traditional off-chain bank wire settlement |
+| **Stablecoin** | USDC on-chain settlement via smart contract escrow |
+| **Kinexys** | JP Morgan payment rail (planned, not yet active) |
+| **Escrow** | Smart contract holding funds/assets during settlement |
+| **Wormhole** | Cross-chain bridge for USDC ↔ Asset transfer |
+| **MetaMask** | Browser wallet for stablecoin settlement |
+| **MFA** | Multi-factor authentication (OTP verification) |
+
+## Status Naming
+
+Always use the EXACT status names from the codebase:
+- Deal: Draft, Pending Review, Approved, Published, Commit, Invest, Settlement In Progress, Settled, Active, Repayment In Progress, Closed, Defaulted, Cancelled
+- Pool: Preview, Mandate Pending, Mandate Accepted, Ready for Deal
+- Loan: Pending, Accepted, Reconsider, Removed, Reinstated
+- Settlement: Created, Funded, Settled, Repayment Initiated, Partially Settled, Defaulted
+
+## E-Signature
+
+| Term | Meaning |
+|------|---------|
+| **Adobe Sign** | Primary e-signature provider (batch signing, sale agreements) |
+| **ZohoSign** | E-signature for credit facility funding notices |
+| **DocuSign** | DEPRECATED — removed from platform |
+| **Mock Sign** | Test/UAT environment simulated signing |

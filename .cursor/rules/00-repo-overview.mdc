@@ -1,0 +1,43 @@
+---
+description: Repository overview and architecture for the Intain Markets Knowledge Base
+alwaysApply: true
+---
+
+# Intain Markets Knowledge Base — Repository Overview
+
+This is a **GitBook-synced documentation repository** for the Intain Markets platform.
+It is NOT a code repository — it contains only markdown articles, images, and configuration.
+
+## Architecture
+
+```
+IntainMarketsArticles/
+├── .gitbook.yaml              # GitBook space config
+├── .cursor/rules/             # AI agent rules (this directory)
+├── SUMMARY.md                 # Navigation / table of contents (GitBook reads this)
+├── README.md                  # Homepage (GitBook-managed)
+├── AGENTS.md                  # Agent instructions
+├── ARTICLE_TAXONOMY.md        # Article → Document Type mapping
+├── SCREENSHOT_TRACKING.md     # Screenshot audit tracker
+├── Document-Format.txt        # 12 Document Types (A–L) + conventions
+├── images/                    # All images, organized by article
+│   └── {NN}-{kebab-title}/   # e.g., images/36-settlement-and-nft-transfer/
+├── 01_*.md through 87_*.md    # Article files (sequential)
+└── Intain Markets – *.xlsx    # Category taxonomy spreadsheet
+```
+
+## Platform Context
+
+- **Product:** Intain Markets — structured finance platform
+- **Product Lines:** Asset Sale (WLS), Credit Facilities, Securitization, Participation Agreements
+- **Roles:** Issuer, Investor, Market Maker, Servicer, Paying Agent, Verification Agent, Admin
+- **Backend:** Node.js (intain-markets-node-app)
+- **UI:** React + Ant Design (intain-markets-ui)
+- **Blockchain:** Avalanche L1 subnet (NFTs), Ethereum/Avalanche C-Chain (USDC settlement)
+
+## Key Relationships
+
+- `SUMMARY.md` drives GitBook sidebar → must match article files
+- `ARTICLE_TAXONOMY.md` maps each article number to its Document Type
+- `Document-Format.txt` defines the 12 document type structures
+- Every article has a corresponding `images/{NN}-{kebab}/` folder

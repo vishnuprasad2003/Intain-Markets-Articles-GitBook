@@ -1,106 +1,130 @@
 ---
 title: Facility Setup Status
-description: Understand deal modelling and facility setup status
+description: Understand the facility setup status lifecycle, deal modelling process, and what each status means for credit facility participants
 ---
 
 # Facility Setup Status
 
 ## Overview
 
-After a master commitment becomes Active, the facility agent must complete deal modelling before borrowers can raise funding requests. The Facility Setup Status tracks whether this configuration is complete. This guide explains the deal modelling process and what each status means.
+After a master commitment becomes **Active** (when at least one lender approves and e-signs), the facility agent must complete **deal modelling** before borrowers can raise funding requests or map loans. The **Facility Setup Status** is a secondary status on the master commitment that tracks whether this critical configuration step is complete. Understanding this status is essential because it directly controls what actions borrowers and other participants can perform on the facility.
 
-## What is Deal Modelling
+## Lifecycle Overview
 
-Deal modelling is the process where the facility agent configures the operational parameters for an active credit facility. This includes setting up calculations, parameters, and rules needed for the facility to operate. Deal modelling can only be completed after the master commitment is Active.
+The facility setup status has a straightforward two-state lifecycle:
 
-## Facility Setup Status Values
+```
+Master Commitment becomes Active
+  → Facility Setup Status: In Progress (default)
+    → FA completes deal modelling
+      → Facility Setup Status: Completed
+```
+
+This lifecycle is linear — once the status reaches **Completed**, it does not revert. Deal modelling is a one-time configuration process per facility.
+
+## Status Meanings
 
 ### In Progress
 
-**Meaning**: Deal modelling has not been completed yet.
+**What This Status Represents:**
+The facility is active but deal modelling has not been completed yet. This is the **default status** automatically assigned when a master commitment first transitions to Active.
 
-**When This Occurs**:
-- Initial state after master commitment becomes Active
-- Facility agent has not completed the deal modelling process
+**When This Occurs:**
+- Immediately after any lender approves the master commitment, transitioning it to Active
+- The facility agent has not yet opened or completed the deal modelling process
 
-**What This Means**:
-- Borrower **cannot** raise funding requests yet
-- Borrower **cannot** map loans to the facility yet
-- Facility agent needs to complete deal modelling
+**What This Means for Each Role:**
+
+| Role | Impact |
+|------|--------|
+| **Facility Agent** | Must complete deal modelling. The **Set Up Deal** action is available in the Active Facilities tab. |
+| **Borrower** | **Cannot** map loans to the facility. **Cannot** create funding requests. These actions remain disabled until deal modelling is complete. |
+| **Lender** | Can view the facility details but no funding-related actions are available yet. |
+
+**Dashboard View:**
+- The facility appears in the Active Facilities tab for the facility agent
+- The action column displays **Set Up Deal**
+- Borrowers see the facility but with disabled action buttons for Map Loans and Create Funding Request
 
 ### Completed
 
-**Meaning**: Deal modelling is complete.
+**What This Status Represents:**
+Deal modelling is complete and the facility is fully operational. All workflow actions are now available to the appropriate roles.
 
-**When This Occurs**:
-- Facility agent has completed all sections in deal modelling
-- Facility agent has clicked **Create** in the Review section
+**When This Occurs:**
+- After the facility agent (or admin, if delegated) completes all deal modelling sections and clicks **Create** in the Review section
 
-**What This Means**:
-- Borrower **can** now map loans to the facility
-- Borrower **can** now raise funding requests
-- Funding workflow can proceed
+**What This Means for Each Role:**
 
-## Step-by-Step: Completing Deal Modelling
+| Role | Impact |
+|------|--------|
+| **Facility Agent** | Deal modelling is finished. **Review Funding Request** action becomes available when borrowers submit requests. |
+| **Borrower** | **Map Loans** action is now enabled — can map NFT-minted loans to the facility. **Create Funding Request** action is now enabled — can submit drawdown requests. |
+| **Lender** | Can view the facility and will see **Review Funding Notice** when funding notices are generated and e-signed by the facility agent. |
 
-### Step 1: Access Deal Modelling
+## What is Deal Modelling
 
-1. **Navigate to Credit Facility**
-   - Log in with your Facility Agent credentials
-   - From the left expandable menu, click on **Credit Facility**
-   - Go to the **Active Facilities** tab
+Deal modelling is the process where the facility agent configures all the operational parameters needed for the credit facility to function. This includes setting up the financial structure, parties, fees, interest rates, covenants, and payment waterfalls. The platform provides a multi-section configuration interface with auto-save functionality, so data is preserved as the facility agent works through each section.
 
-2. **Find the Master Commitment**
-   - Locate the active master commitment
-   - Action column shows **Set Up Deal**
+### Deal Modelling Sections
 
-3. **Click Set Up Deal**
-   - Click **Set Up Deal** to open the deal modelling screen
+The deal modelling screen contains the following sections, accessible through a left-side navigation menu:
 
-### Step 2: Complete Deal Modelling Sections
+1. **Basic Details** — Core deal information including deal name, deal type, currency, closing date, maturity date, payment frequency, day count convention (e.g., 30/360, Actual/360), and business day convention.
 
-1. **Navigate Through Sections**
-   - The deal modelling screen has multiple sections in the left menu
-   - Complete each section as required
+2. **Parties & Accounts** — Configuration of all parties involved in the facility, including borrower details, facility agent details, individual lender details, bank account information for each party, and payment instructions for wire transfers.
 
-2. **Delegation Option**
-   - A **Delegation** button is available at the top
-   - Click this to request the admin to complete deal modelling on your behalf
-   - If delegated, the admin role will do the configuration
+3. **Fee Structure** — All fee configurations for the facility, including upfront fees, commitment fees, agent fees, and any other applicable fees.
 
-3. **Fill All Required Fields**
-   - Complete each section with the required information
-   - Ensure all parameters are configured correctly
+4. **Interest Rate** — Interest rate parameters including rate type (fixed or floating), base rate reference (e.g., SOFR), spread over the base rate, margin, default interest rate, and interest period configuration.
 
-### Step 3: Complete Deal Modelling
+5. **Covenants** — Definition of all covenant requirements, organized into financial covenants, reporting covenants, and other covenant categories.
 
-1. **Navigate to Review Section**
-   - Go to the last section (Review)
+6. **Waterfall** — Payment priority configuration including waterfall steps (the order in which payments are distributed) and distribution rules that govern how cash flows are allocated among participants.
 
-2. **Click Create**
-   - Click **Create** to complete deal modelling
-   - Facility Setup Status changes from **In Progress** to **Completed**
+7. **Review** — The final section that presents a summary of all configured sections. This section contains the **Create** button that completes deal modelling.
 
-### Step 4: Borrower Can Now Raise Funding Requests
+### Auto-Save Behavior
 
-After deal modelling is complete:
-- The borrower's **Map Loans** action is enabled
-- The borrower's **Funding Request** action is enabled
-- The funding workflow can proceed
+As the facility agent enters data in each section, the platform auto-saves the information. This means the facility agent can work through the sections over multiple sessions without losing progress. Data is preserved even if the browser is closed and the facility agent returns later.
 
-## Important Points
+### Delegation to Admin
 
-**Active Master Commitment Required** - Deal modelling can only be completed for Active master commitments.
+A **Delegation** button is available at the top of the deal modelling screen. If the facility agent needs assistance or wants the platform admin to complete the configuration:
 
-**Must Complete Before Funding Requests** - Borrowers cannot raise funding requests until deal modelling is complete.
+1. Click the **Delegation** button
+2. The deal modelling responsibility is transferred to the admin role
+3. The admin can now access and complete all deal modelling sections
+4. Once the admin clicks **Create** in the Review section, the facility setup status changes to **Completed**
 
-**Delegation Available** - Facility agents can delegate deal modelling to the admin role.
+Delegation can only be initiated when the facility setup status is **In Progress**. Once delegated, the admin takes over the configuration responsibility.
 
-**One-Time Process** - Deal modelling is completed once per facility.
+## What Each Status Indicates
 
-## What Happens Next
+### Actions Available at Each Status
 
-**After Deal Modelling is Complete:**
-- Borrower can map NFT-minted loans to the facility
-- Borrower can create funding requests
-- Funding request → FA Review → Funding Notice → Lender Transfer
+| Facility Setup Status | FA Action | Borrower: Map Loans | Borrower: Create Funding Request | Lender Actions |
+|----------------------|-----------|---------------------|----------------------------------|----------------|
+| **In Progress** | Set Up Deal | Disabled | Disabled | View only |
+| **Completed** | Review Funding Request (when submitted) | Enabled | Enabled | Review Funding Notice (when available) |
+
+### Validation Rules
+
+- **Active Master Commitment Required** — Deal modelling can only be initiated and completed for master commitments in Active status. Draft or PendingLenderApproval commitments do not have the Set Up Deal action.
+- **All Sections Required** — All deal modelling sections must be completed before the Create button becomes active in the Review section.
+- **One-Time Process** — Deal modelling is completed once per facility. After the status changes to Completed, the configuration cannot be re-opened or modified through the deal modelling interface.
+- **Delegation is One-Way** — Once deal modelling is delegated to admin, the facility agent cannot reclaim the configuration task.
+- **No Duplicate Creation** — The platform prevents creating a deal model if one already exists for the master commitment, ensuring the process runs exactly once.
+
+## What Happens After Completion
+
+Once the facility setup status changes to **Completed**, the full credit facility funding workflow becomes available:
+
+1. **Borrower Maps Loans** — The borrower can map NFT-minted loans to the facility using the now-enabled Map Loans action
+2. **Borrower Creates Funding Request** — The borrower can submit drawdown requests specifying the amount, purpose, and supporting documentation
+3. **Facility Agent Reviews** — The facility agent reviews funding requests and can approve, reject, or request changes
+4. **Funding Notice Generated** — Upon approval, a funding notice is automatically generated and progresses through e-signature
+5. **Lenders Transfer Funds** — Lenders review the funding notice, transfer funds, and click Confirm and Settle
+6. **Settlement Complete** — Tokens are transferred and the drawdown is finalized
+
+The facility setup status serves as the critical gate between facility activation and the start of the funding workflow.
