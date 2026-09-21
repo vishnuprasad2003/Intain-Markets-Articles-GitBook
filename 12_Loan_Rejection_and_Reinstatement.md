@@ -127,6 +127,10 @@ If a removed loan needs to be added back to the pool, the issuer can reinstate i
    - Pool metrics will update to include the reinstated loan
    - The loan returns to full participation in the pool
 
+
+
+![ReinstateLoan](images/12-loan-rejection-and-reinstatement/ReinstateLoan.png)
+
 ## Important Notes
 
 **Issuer Has Final Say** - The issuer decides whether to accept or reject removal requests. Market makers and investors can request, but the issuer controls pool composition.

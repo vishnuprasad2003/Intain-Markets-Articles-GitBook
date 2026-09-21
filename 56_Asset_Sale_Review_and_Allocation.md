@@ -31,6 +31,8 @@ Use this guide when:
 2. The dashboard shows deals requiring your review (status: Pending Review)
 3. Click on the deal to open the deal details page
 
+![Underwriter Asset Sale View](images/56-asset-sale-review-and-allocation/mm-asset-sale.png)
+
 #### Step 2: Review the Deal Package
 
 Evaluate the following components:

@@ -11,6 +11,13 @@ IDA is a structured finance chatbot that lets you ask questions about data and d
 
 ![[IDA Dashboard]](images/15-ida-dashboard/ida-dashboard.png)
 
+
+![IDA Dashboard Overview](images/15-ida-dashboard/ida-dashboard.png)
+
+![IDA Clause Comparison](images/15-ida-dashboard/ida-clause-comparison.png)
+
+![IDA Document Intelligence](images/15-ida-dashboard/ida-document-intelligence.png)
+
 ## Data Side Tabs
 
 Use the Data side to explore numbers and charts. Ask table or visualization questions and follow up as needed.

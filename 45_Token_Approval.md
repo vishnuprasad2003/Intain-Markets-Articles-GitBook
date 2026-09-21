@@ -9,6 +9,9 @@ description: Understanding the token approval process in credit facilities
 
 This guide explains the token approval process in the credit facility module. After the facility agent approves the funding notice and tokens are generated, the borrower approves the tokens. This approval enables the facility agent to e-sign for each lender.
 
+
+![Issuer Token Approval](images/45-token-approval/Issuer_Token_Approval.png)
+
 ## Who Approves Tokens
 
 The **Borrower** is responsible for token approval.

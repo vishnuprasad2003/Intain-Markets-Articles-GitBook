@@ -229,3 +229,9 @@ Use the term sheet workflow when:
 **After Changes Requested:**
 - Edit the term sheet to address requested changes
 - Sign and resubmit for review
+
+![SaveAsDraft](images/18-term-sheet-workflow/SaveAsDraft.png)
+
+![TermSheetSigning](images/18-term-sheet-workflow/TermSheetSigning.png)
+
+

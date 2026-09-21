@@ -34,6 +34,8 @@ Logging into Intain Markets and navigating the platform is straightforward and r
 
 The visible navigation items depend on your role — you only see sections relevant to your responsibilities.
 
+![Issuer Sidebar Navigation](images/03-login-and-navigation/issuer-sidebar-navigation.png)
+
 **Search and Filter** — Search and filter capabilities help you find specific items by name, status, or other criteria. Tables support server-side column filters for efficient searching across large datasets.
 
 **Notifications** — A notification drawer provides real-time alerts for items requiring your attention, status changes, and approvals needed.
@@ -49,6 +51,8 @@ The visible navigation items depend on your role — you only see sections relev
 ![Role Dropdown on Login Page](images/03-login-and-navigation/role-dropdown.png)
 
 **Your Dashboard** - After login, you'll see a dashboard showing items relevant to your role. As an issuer, you'll see pools you've created. As a market maker, you'll see pools shared with you. As an investor, you'll see pools shared with you. The dashboard helps you quickly see what needs your attention and provides an overview of your activities.
+
+![Issuer Dashboard](images/03-login-and-navigation/issuer-dashboard.png)
 
 ![Dashboard - Investor View](images/03-login-and-navigation/Dashboard_Investor.png)
 
@@ -87,3 +91,13 @@ The visible navigation items depend on your role — you only see sections relev
 **Action Availability** - Action buttons are enabled or disabled based on both your role and the item's status. Check both to understand why an action isn't available.
 
 **Use Filters Effectively** - Use filters to narrow down items by status, date, or other criteria when viewing lists.
+
+![IntainMarketsLoginPage](images/03-login-and-navigation/IntainMarketsLoginPage.png)
+
+![Investor Dashboard](images/03-login-and-navigation/investor-dashboard.png)
+
+![Mm Dashboard](images/03-login-and-navigation/mm-dashboard.png)
+
+![Signup Page](images/03-login-and-navigation/signup-page.png)
+
+

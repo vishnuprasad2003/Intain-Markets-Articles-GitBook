@@ -235,3 +235,7 @@ When market makers or investors request loan removals, you decide whether to acc
 - Pool composition improves with each iteration
 - All parties become aligned on pool content
 - Pool progresses toward finalization when feedback is resolved
+
+![ViewEnteredFeedback](images/09-pool-feedback-workflow/ViewEnteredFeedback.png)
+
+

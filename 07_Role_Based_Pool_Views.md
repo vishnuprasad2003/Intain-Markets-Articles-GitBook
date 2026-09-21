@@ -139,3 +139,7 @@ As a rating agency, you see pools shared with you for rating analysis. Your view
 **Status Affects Actions** - The actions available to you depend on both your role and the pool's current status. Disabled actions typically have tooltips explaining why they're unavailable.
 
 **Dashboard Navigation** - Use the left expandable menu to navigate between sections. The menu expands when you hover over it, showing section names for easy navigation.
+
+![Opportunities Table Card View](images/07-role-based-pool-views/opportunities_table_card_view.png)
+
+

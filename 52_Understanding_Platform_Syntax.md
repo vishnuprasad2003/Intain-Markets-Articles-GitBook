@@ -19,6 +19,19 @@ This syntax allows different parts of a deal to communicate with each other. For
 
 ***
 
+
+![Platform Syntax Overview](images/52-understanding-platform-syntax/page_5_image.png)
+
+![Platform Syntax Details](images/52-understanding-platform-syntax/page_6_image.png)
+
+![General Table Structure](images/52-understanding-platform-syntax/general-table..png)
+
+![Accounts Table](images/52-understanding-platform-syntax/accounts-table.png)
+
+![Tranches Table](images/52-understanding-platform-syntax/tranches-table.png)
+
+![Mapping Order](images/52-understanding-platform-syntax/mapping-order.png)
+
 ## Standardized Expression Format
 
 Every expression follows a specific structure so the system knows exactly where to look for data:

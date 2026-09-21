@@ -45,7 +45,11 @@ Credit facilities involve multiple components that progress through a structured
 
 **1. Term Sheet Creation (Borrower)**
 
-The borrower logs in and navigates to the **Credit Facility** section from the left expandable menu. The dashboard shows term sheets and master commitments. Click **Term Sheet Setup** at the top right, which shows two options: **Create via Wizard** or **Upload Signed**.
+The borrower logs in and navigates to the **Credit Facility** section from the left expandable menu. The dashboard shows term sheets and master commitments.
+
+![Credit Facilities Dashboard](images/16-credit-facilities-overview/issuer-credit-facilities.png)
+
+Click **Term Sheet Setup** at the top right, which shows two options: **Create via Wizard** or **Upload Signed**.
 
 In Create via Wizard, a popup appears where the borrower enters term sheet details (requested commitment amount, advance rate, margin, pricing index, maturity date, drawdown frequency, etc.) and clicks **Create Draft**. An Adobe Sign popup opens for the borrower to sign the term sheet. Initial status is **Draft**, and after signing it changes to **BorrowerSigned**.
 
@@ -141,6 +145,20 @@ Lenders go to the **Credit Facility** section where they see **Review Funding No
 After confirmation, tokens are transferred and the amount is transferred to the borrower.
 
 ![Confirm and Settle - Lender](images/60-funds-transfer-confirmation-investor/ConfirmAndSettleInvestor.png)
+
+
+
+![FundTransferConfirmation](images/16-credit-facilities-overview/FundTransferConfirmation.png)
+
+![LenderApprovalFundingNotice](images/16-credit-facilities-overview/LenderApprovalFundingNotice.png)
+
+![Cf Cashflow Simulation](images/16-credit-facilities-overview/cf-cashflow-simulation.png)
+
+![Cf Dashboard](images/16-credit-facilities-overview/cf-dashboard.png)
+
+![Cf Funding Operations](images/16-credit-facilities-overview/cf-funding-operations.png)
+
+![Credit Facility Active Facilities Tab Issuer](images/16-credit-facilities-overview/credit_facility_active_facilities_tab_issuer.png)
 
 ## Important Points to Know
 

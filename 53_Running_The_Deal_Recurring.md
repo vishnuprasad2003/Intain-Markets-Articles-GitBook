@@ -18,6 +18,17 @@ to calculate payment distributions, evaluate tests, and generate official result
 
 This step represents the point where the deal logic is applied to finalized loan data.
 
+
+![Recurring Deal Dashboard](images/53-running-the-deal-recurring/recurring-dashboard.png)
+
+![Deal Dashboard](images/53-running-the-deal-recurring/dashboard.png)
+
+![Loan Processing Dashboard](images/53-running-the-deal-recurring/loan-processing-dashboard.png)
+
+![Loan Summary](images/53-running-the-deal-recurring/loan-summary.png)
+
+![Deal Processing Details](images/53-running-the-deal-recurring/page_46_image.png)
+
 ## Prerequisites
 
 Before running the recurring calculation, ensure that:

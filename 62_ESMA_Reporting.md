@@ -72,6 +72,10 @@ To support regulatory submissions and downstream systems, ESMA reports are avail
 
 Users can select the required format based on reporting or regulatory submission needs.
 
+
+
+![ESMA Reporting](images/62-esma-reporting/page_53_image.png)
+
 ## Important Notes
 
 * ESMA reports are generated **per payment period**

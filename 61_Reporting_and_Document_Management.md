@@ -84,6 +84,12 @@ Trustees can upload various document types, including:
 * Investors have **view-only access** to documents that are shared with them
 * All files remain securely stored on the platform for reference
 
+
+
+![Reporting and Document Management](images/61-reporting-and-document-management/page_51_image.png)
+
+![Reporting and Document Management](images/61-reporting-and-document-management/page_52_image.png)
+
 ## Important Notes
 
 * Reports are generated **per payment period**

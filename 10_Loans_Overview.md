@@ -78,6 +78,8 @@ Click **View Mapped** to see the standardized loans. Click **Open in Registry** 
 - **Map to Pool** button: Enabled when any selected loans aren't already mapped to a pool
 - **Add to Batch** button: Enabled when any selected loans aren't already in a batch
 
+![Asset Registry - Issuer View](images/10-loans-overview/issuer-loan-registry.png)
+
 **4. Mapping Loans to Pools**
 
 In the Loan Registry, select the loans you want to map, then click **Map to Pool**. A popup appears with a dropdown showing all your pools. Select the target pool and confirm. The loans are mapped to that pool, and pool metrics update automatically.

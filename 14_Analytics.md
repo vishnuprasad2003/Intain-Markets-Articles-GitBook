@@ -98,3 +98,13 @@ The following screenshots show the Pool Details Analytics views with updated dat
 
 ![Risk Concentration](images/14-analytics/risk-concentration.png)
 
+![LoansAnalytics](images/14-analytics/LoansAnalytics.png)
+
+![PerformanceAnalytics](images/14-analytics/PerformanceAnalytics.png)
+
+![StratsAnalytics](images/14-analytics/StratsAnalytics.png)
+
+![SummaryAnalytics](images/14-analytics/SummaryAnalytics.png)
+
+
+

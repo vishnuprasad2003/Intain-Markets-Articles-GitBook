@@ -98,6 +98,12 @@ After deal modelling is complete:
 - Borrower can create funding requests
 - Funding workflow proceeds
 
+
+
+![Create Master Commitment Modal Create On Click Configure Collateral Eligibility Rules Modal 75](images/20-master-commitment-overview/create_master_commitment_modal_create_on_click_configure_collateral_eligibility_rules_modal_75.png)
+
+![Create Master Commitment Modal Scroll State B 74](images/20-master-commitment-overview/create_master_commitment_modal_scroll_state_b_74.png)
+
 ## Important Points to Know
 
 **Auto-Created Only** - Master commitments are automatically created when term sheets are approved. You cannot create them manually.

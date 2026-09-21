@@ -130,3 +130,7 @@ Any Lender Approves → Master Commitment becomes Active
 **Any Lender Activates** - The facility becomes active when any lender approves, not all.
 
 **Ongoing Participation** - After approval, you'll participate in funding notices and settlements.
+
+![LenderApprovalFundingNotice](images/30-lender-approval-and-rejection/LenderApprovalFundingNotice.png)
+
+

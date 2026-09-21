@@ -41,6 +41,8 @@ Use this guide when:
    - **Documentation**: Offering memorandums and supporting documents
 3. Evaluate the risk-return profile of the deal
 
+![Investor Asset Sale View](images/63-asset-sale-investment-investor/investor-asset-sale.png)
+
 ### Part 2: Commitment
 
 #### Step 3: Submit Your Commitment

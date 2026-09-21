@@ -80,6 +80,16 @@ Throughout the workflow, each lender's participation is tracked individually:
 - Fund transfer confirmation status
 - Individual allocation amounts
 
+
+
+![FA FundingNotice Save TokenGeneration](images/27-token-generation-and-issuance/FA_FundingNotice_Save_TokenGeneration.png)
+
+![FundTransferConfirmation](images/27-token-generation-and-issuance/FundTransferConfirmation.png)
+
+![Issuer Token Approval](images/27-token-generation-and-issuance/Issuer_Token_Approval.png)
+
+![LenderApprovalFundingNotice](images/27-token-generation-and-issuance/LenderApprovalFundingNotice.png)
+
 ## Important Points to Know
 
 **Automatic Notice Creation** - Funding notices are automatically created when funding requests are approved.

@@ -54,11 +54,15 @@ Asset sales involve multiple components that progress through a structured workf
 
 ![Deal Details Page](images/32-asset-sale-overview/deal-details-page.png)
 
+![Asset Sale Deal Details](images/32-asset-sale-overview/issuer-deal-details.png)
+
 ## How Asset Sale Works
 
 **1. Deal Creation (Issuer)**
 
 The issuer navigates to the **Asset Sale** section from the left sidebar menu (under Transactions). The Asset Sale dashboard displays summary tiles (Total Deals, Draft Deals, Submitted Deals, Active Deals) and a searchable, filterable deal table showing Deal ID, Deal Name, Sale Route, Servicing Setup, Current Balance, Price, Status, and Last Updated. The issuer clicks **Create Deal** to open a 3-step wizard (Basics → Pool Selection → Sale Terms), configures the deal, and saves it in Draft status.
+
+![Asset Sale Dashboard - Issuer View](images/32-asset-sale-overview/issuer-asset-sale-dashboard.png)
 
 **2. Loan Assignment (Issuer)**
 

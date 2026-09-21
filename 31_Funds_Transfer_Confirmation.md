@@ -98,3 +98,7 @@ Use fund transfer confirmation when:
 - Borrower has received funds from all lenders
 - Drawdown process is complete
 - Facility utilization is updated
+
+![Confirmfundstransfer](images/31-funds-transfer-confirmation/confirmfundstransfer.png)
+
+

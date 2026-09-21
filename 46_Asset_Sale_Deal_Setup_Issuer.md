@@ -9,6 +9,9 @@ description: Task-based guide for issuers to set up and manage asset sale deals
 
 This guide provides issuers with step-by-step instructions for setting up an asset sale deal from start to finish. As an issuer, you create the deal, assign loans, configure sale terms, prepare investor agreements, and publish the deal for underwriter review. This covers all issuer-side tasks in the pre-sale phase.
 
+
+![Asset Sale Deal Details — Issuer View](images/46-asset-sale-deal-setup-issuer/deal-details-issuer.png)
+
 ## Who Can Use This
 
 - **Issuers**: All steps in this guide are performed by the issuer role

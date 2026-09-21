@@ -124,3 +124,9 @@ Once deal modelling is complete:
 - Borrower can map loans to the facility
 - Borrower can create funding requests
 - Funding request → FA Review → Funding Notice → Lender Transfer
+
+![Add Deal](images/51-deal-setup-and-calculations/Add-Deal.png)
+
+![ValidatingCalculations](images/51-deal-setup-and-calculations/ValidatingCalculations.png)
+
+

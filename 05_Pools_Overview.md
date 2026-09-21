@@ -56,6 +56,8 @@ Pools serve several important purposes in structured finance:
 
 **Creation** - You create a pool by clicking **Set-up Pool** in the Pools dashboard and entering basic information: pool name, asset class, transaction type, description, and closing deal indicator. You also select organizations (market makers, investors, servicers, paying agents, rating agencies, verification agents) that will be available for sharing later. The pool starts in Created status, visible only to you, ready for loan mapping and configuration.
 
+![Pools Page - Issuer View](images/05-pools-overview/issuer-pools-page.png)
+
 ![Pool Creation - Issuer](images/05-pools-overview/PoolCreation_Issuer.png)
 
 **Loan Mapping** - You map loans to the pool from the **Loan Registry** section (not from within pool details). In Loan Registry, you select unmapped loans and click **Map to Pool**, then choose the target pool from a dropdown. When loans are mapped, pool metrics calculate automatically. You can view mapped loans in the pool's Loans tab.
@@ -75,6 +77,10 @@ Pools serve several important purposes in structured finance:
 **Status Progression** - Pools progress through statuses: Created → Preview (when shared) → Deal (when accepted via Start Deal). Each status represents a specific stage with appropriate controls. In Created and Preview, you can edit the pool. In Deal, editing is restricted.
 
 **Collaboration** - Multiple parties work together on pools. Issuers create and share; market makers review, accept mandates, and can share further with investors; investors evaluate and provide feedback; rating agencies analyze for ratings. Each role sees appropriate views and actions.
+
+
+
+![Issuer Overview Page](images/05-pools-overview/issuer-overview-page.png)
 
 ## Important Points to Know
 

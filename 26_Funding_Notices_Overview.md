@@ -70,6 +70,18 @@ Each lender in the funding notice has individual tracking:
 | E-signature Status | Whether FA has signed for this lender |
 | Fund Transfer Status | Whether lender has confirmed transfer |
 
+
+
+![FA FundingNotice Save TokenGeneration](images/26-funding-notices-overview/FA_FundingNotice_Save_TokenGeneration.png)
+
+![Fund Transfer Confirmation](images/26-funding-notices-overview/Fund-Transfer-Confirmation.png)
+
+![Issuer Token Approval](images/26-funding-notices-overview/Issuer_Token_Approval.png)
+
+![LenderApprovalFundingNotice](images/26-funding-notices-overview/LenderApprovalFundingNotice.png)
+
+![ProcessCompletion](images/26-funding-notices-overview/ProcessCompletion.png)
+
 ## Important Points to Know
 
 **Auto-Generated** - Funding notices are automatically created when funding requests are approved. You cannot create them manually.

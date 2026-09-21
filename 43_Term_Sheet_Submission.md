@@ -146,3 +146,11 @@ Use term sheet submission when:
 **If Changes Requested:**
 - Status changes to **CHANGES_REQUESTED**
 - Edit and resubmit your term sheet
+
+![SaveAsDraft](images/43-term-sheet-submission/SaveAsDraft.png)
+
+![TermSheetSigning](images/43-term-sheet-submission/TermSheetSigning.png)
+
+![Review Term Sheet Fa](images/43-term-sheet-submission/review_term_sheet_FA.png)
+
+

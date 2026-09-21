@@ -110,6 +110,10 @@ Confirmation recorded → Tokens transferred
 - **Correct References**: Use the provided transfer references
 - **Timely Confirmation**: Confirm promptly after transferring
 
+
+
+![Confirmfundstransfer](images/60-funds-transfer-confirmation-investor/confirmfundstransfer.png)
+
 ## Important Points
 
 | Point | Description |

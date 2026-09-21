@@ -122,3 +122,7 @@ The facility agent may:
 **If More Changes Requested:**
 - Status changes back to CHANGES_REQUESTED
 - Repeat the edit, sign, and submit process
+
+![Review Term Sheet Fa](images/19-term-sheet-change-requests/review_term_sheet_FA.png)
+
+

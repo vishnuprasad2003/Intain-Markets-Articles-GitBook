@@ -38,6 +38,8 @@ Use this process when:
    - Review the loan portfolio, sale terms, recourse options, and documentation
    - Evaluate the deal's risk-return profile before committing
 
+![Investor Deals View](images/35-investor-commitment-and-allocation/investor-deals-view.png)
+
 #### Step 2: Submit a Commitment
 
 1. **Enter Commitment Details**
