@@ -2,6 +2,72 @@ Enterprise-Grade Document Types (Final, Expanded)
 
 Below is the final, MNC-standard documentation model, mapped to your platform.
 
+═══════════════════════════════════════════════════════════════════════════════
+SECTION 0 — GITBOOK SYNC & REPOSITORY CONVENTIONS
+═══════════════════════════════════════════════════════════════════════════════
+
+This repository is published via GitBook with Git Sync enabled.
+All content edits — whether by humans or AI agents — MUST follow these conventions.
+
+📁 Repository Configuration Files:
+  • .gitbook.yaml         — GitBook space configuration (root, SUMMARY path)
+  • SUMMARY.md            — Table of contents / sidebar navigation (GitBook reads this)
+  • README.md             — Homepage (managed by GitBook; do NOT edit directly)
+  • AGENTS.md             — Agent instructions for AI coding assistants
+  • ARTICLE_TAXONOMY.md   — Definitive article-to-doctype mapping
+  • SCREENSHOT_TRACKING.md — Screenshot status per article
+  • Document-Format.txt   — THIS FILE — document type definitions & conventions
+
+📝 Commit Message Convention:
+
+  GitBook auto-exports use:
+    GITBOOK-{change_request_number}: {change_request_subject}
+    Example: GITBOOK-123: Fix documentation for /user/me
+
+  Manual developer commits use:
+    docs(<scope>): <short description>
+    Scopes: article | image | config | taxonomy | format | nav
+    Example: docs(article): enrich settlement payment rails section
+
+📄 Frontmatter (REQUIRED on every .md article):
+    ---
+    title: Article Title Here
+    description: One-line SEO description
+    ---
+
+🖼️ Image Conventions:
+  • Store in: images/{number}-{kebab-case-title}/
+  • Reference with relative paths: ![Alt text](images/36-settlement-and-nft-transfer/file.png)
+  • Formats: PNG for screenshots, SVG for icons/diagrams
+  • Alt text: Always provide meaningful alt text
+
+📐 Article File Naming:
+    {NN}_{Title_With_Underscores}.md
+    NN = two-digit sequential number (01–87+)
+    Example: 36_Settlement_and_NFT_Transfer.md
+
+🔗 Internal Links:
+    Use relative paths: [Settlement](36_Settlement_and_NFT_Transfer.md)
+
+📌 GitBook Custom Blocks (use sparingly):
+    {% hint style="info" %}...{% endhint %}
+    {% hint style="warning" %}...{% endhint %}
+    {% tabs %}{% tab title="Tab1" %}...{% endtab %}{% endtabs %}
+    {% stepper %}{% step %}...{% endstep %}{% endstepper %}
+
+✅ Maintenance Checklist (before every commit):
+  □ Article follows its assigned Document Type structure (see types below)
+  □ Frontmatter has title and description
+  □ Images in correct images/ subfolder with relative paths
+  □ SUMMARY.md updated if articles added/removed/renamed
+  □ ARTICLE_TAXONOMY.md updated for new articles
+  □ Commit message follows the convention above
+  □ No broken internal links or image references
+
+═══════════════════════════════════════════════════════════════════════════════
+SECTION 1 — DOCUMENT TYPES (A through L)
+═══════════════════════════════════════════════════════════════════════════════
+
 🟦 DOCUMENT TYPE A — Platform Foundation Documents
 
 (Appear once, at the beginning)
