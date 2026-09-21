@@ -176,6 +176,24 @@ This document tracks features and capabilities currently implemented in Intain M
 - Updated asset registry with IDA (AI-assisted field mapping)
 - Reference ingestion ID support
 
+### ABDP Verification Agent Integration (2026)
+
+**Automated Batch Certification:**
+- Batch loan tapes are streamed from Snowflake directly to the ABDP (Verification Agent) platform for certification
+- ABDP exchanges JWT tokens via Entra SSO OBO (On-Behalf-Of) flow for secure machine-to-machine auth
+- Certification results are posted back to the platform and recorded on the batch
+- VA certification evidence (contract files + loan tape) is uploaded automatically
+- Issuers submit batches via the Batch Verification screen; the ABDP processes asynchronously
+- Notification emails sent to both issuer and verification agent on submission and completion
+
+### Participation Agreements Module (2026)
+
+**New Product Line:**
+- Participation Agreements added as a fourth transaction type alongside Asset Sale, Credit Facilities, and Securitization
+- Visible in the sidebar navigation and dashboard overview tiles for all roles
+- Enables structured participation agreement workflows between issuers, market makers, and investors
+- Integrated with the unified dashboard showing deal counts and status alongside other product lines
+
 ### Delegation Workflows (2026)
 
 **Typed Delegation Requests:**

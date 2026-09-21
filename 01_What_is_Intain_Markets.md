@@ -19,6 +19,8 @@ Intain Markets provides digital infrastructure for structured finance, enabling:
 - **Pool Creation** — Organize loans into investment pools for structured transactions
 - **Credit Facility Management** — Manage credit facilities with term sheets, master commitments, and funding workflows
 - **Asset Sale** — Execute whole loan sale transactions with deal creation, investor commitment, blockchain-based settlement, and post-sale repayment
+- **Securitization** — Structure and manage securitization deals with tranching, waterfall calculations, and investor distribution
+- **Participation Agreements** — Create and manage participation agreement transactions between originators and participants
 - **Multi-Party Collaboration** — Enable issuers, investors, market makers, servicers, and other participants to work together
 - **Workflow Automation** — Automate approval workflows, status tracking, and action controls
 - **Analytics & Reporting** — Portfolio analytics, risk surveillance, and regulatory reporting (including ESMA)

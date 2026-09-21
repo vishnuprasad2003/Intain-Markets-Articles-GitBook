@@ -98,7 +98,7 @@ Initial batch status is **Pending**. Click on a Batch ID to go to the batch deta
 
 ![Batch Verification](images/10-loans-overview/BatchVerification.png)
 
-**Verification Agent Process**: Submit to a verification agent who receives the batch in their dashboard. They verify loan details against the uploaded documents, then certify the batch.
+**Verification Agent Process (ABDP Integration)**: Submit a batch to the ABDP Verification Agent platform. The loan tape is streamed directly from Snowflake to ABDP via secure JWT exchange (Entra SSO OBO flow). ABDP processes the batch asynchronously — the certification result is posted back to the platform and recorded on the batch. Both the issuer and verification agent receive notification emails on submission and completion.
 
 **Verification Status Values**:
 - **No**: Initial status, not verified
@@ -139,4 +139,4 @@ Click **Mint NFT** to see a screen with all loans listed with checkboxes. Select
 
 **Historical Tape Upload** - Historical Tape upload is available for loading historical loan tape data, allowing you to import past reporting periods alongside current loan tapes.
 
-**Batch Verification v2** - Batch Verification v2 provides enhanced verification workflows with improved list management, making it easier to organize and track verification batches.
+**Batch Verification v2** - Batch Verification v2 provides enhanced verification workflows with improved list management, making it easier to organize and track verification batches. Includes ABDP (Verification Agent) integration for automated batch certification — loan tapes are streamed from Snowflake to ABDP, and certification results are posted back asynchronously.
