@@ -148,6 +148,36 @@ Instructions here.
 
 ---
 
+## Companion Documents (MUST update on every change)
+
+When any article is created, modified, renamed, or deleted, **all** of these documents must also be updated:
+
+| Document | What to Update | When |
+|----------|---------------|------|
+| `SUMMARY.md` | Add/remove/rename navigation entry | Articles added, removed, or renamed |
+| `ARTICLE_TAXONOMY.md` | Add/update article → doc type mapping | New articles or type changes |
+| `Intain Markets – *.xlsx` | **Changes column** + Description (see below) | **Every article change** |
+| `SCREENSHOT_TRACKING.md` | Screenshot status for the article | Screenshots added or needed |
+| `85_New_features.md` | Feature entry with date and description | New platform features documented |
+| `87_Retired_flows.md` | Retired flow with context | Features deprecated |
+| `README.md` | Getting Started links | Major structural changes (rare) |
+
+### Excel Changes Column Convention
+
+The Excel spreadsheet has a **Changes** column that records what happened to each article:
+
+| Tag | Format | Example |
+|-----|--------|---------|
+| **Created** | `Created — <what this new article covers>` | `Created — New article for Asset Sale settlement mechanics` |
+| **Modified** | `Modified — <what was changed and why>` | `Modified — Added Entra SSO login flow, updated sidebar navigation` |
+| **Renamed** | `Renamed — <old> → <new>` | `Renamed — 38_Deal_Setup.md → 51_Deal_Setup_and_Calculations.md` |
+| **Deleted** | `Deleted — <reason>` | `Deleted — Merged into article 36 (Settlement)` |
+| **Unchanged** | `Unchanged` | `Unchanged` |
+
+→ Full details in `06-article-lifecycle.mdc`
+
+---
+
 ## Maintenance Checklist
 
 Before every commit, verify:
@@ -158,6 +188,7 @@ Before every commit, verify:
 - [ ] All image references resolve (no broken links)
 - [ ] `SUMMARY.md` updated if articles were added/removed/renamed
 - [ ] `ARTICLE_TAXONOMY.md` updated for new articles
+- [ ] **Excel spreadsheet updated** — Changes column + Description
 - [ ] Commit message follows the convention (see `02-commit-and-git.mdc`)
 - [ ] No TODO/TBD/placeholder text
 - [ ] No broken internal links
@@ -172,6 +203,7 @@ Before every commit, verify:
 |------|-----------|-------------|
 | `SUMMARY.md` | Article `.md` files | Articles added/removed/renamed |
 | `ARTICLE_TAXONOMY.md` | Article `.md` files | New articles created |
+| `Intain Markets – *.xlsx` | Article `.md` files | **Every article change** (Changes column) |
 | `SCREENSHOT_TRACKING.md` | `images/` folders | Screenshots captured/updated |
 | `.cursor/rules/01-article-writing.mdc` | Document type definitions | New doc type needed (rare) |
 | `.cursor/rules/08-platform-terminology.mdc` | Platform codebase | New features/roles/statuses added |

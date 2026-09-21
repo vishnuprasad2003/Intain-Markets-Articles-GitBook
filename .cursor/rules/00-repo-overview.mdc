@@ -39,4 +39,15 @@ IntainMarketsArticles/
 - `SUMMARY.md` drives GitBook sidebar → must match article files
 - `ARTICLE_TAXONOMY.md` maps each article number to its Document Type
 - `.cursor/rules/01-article-writing.mdc` defines the 12 document type structures (A–L)
+- `Intain Markets – *.xlsx` tracks all articles with descriptions, doc types, and change history
 - Every article has a corresponding `images/{NN}-{kebab}/` folder
+
+## Companion Documents (update on every change)
+
+When any article is created, modified, renamed, or deleted, these documents MUST also be updated:
+- `SUMMARY.md` — navigation entry
+- `ARTICLE_TAXONOMY.md` — article-to-type mapping
+- `Intain Markets – *.xlsx` — Changes column with tag (Created/Modified/Renamed/Deleted/Unchanged)
+- `SCREENSHOT_TRACKING.md` — screenshot status (if images changed)
+
+See `06-article-lifecycle.mdc` for the full companion document update rules.

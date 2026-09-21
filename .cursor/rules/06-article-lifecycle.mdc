@@ -1,5 +1,5 @@
 ---
-description: Complete lifecycle for creating, updating, and maintaining articles
+description: Complete lifecycle for creating, updating, and maintaining articles and companion documents
 alwaysApply: true
 ---
 
@@ -15,8 +15,10 @@ alwaysApply: true
 6. **Write content** — Follow the Document Type structure exactly
 7. **Add to SUMMARY.md** — Place under the correct L1 section
 8. **Update ARTICLE_TAXONOMY.md** — Add the new mapping
-9. **Capture screenshots** — Using Playwright MCP or UI codebase
-10. **Commit** — `docs(article): add {title} article`
+9. **Update Excel spreadsheet** — Add row with `Created — <description>` in Changes column (see below)
+10. **Update SCREENSHOT_TRACKING.md** — Add entry for the new article
+11. **Capture screenshots** — Using Playwright MCP or UI codebase
+12. **Commit** — `docs(article): add {title} article`
 
 ## Updating an Existing Article
 
@@ -25,7 +27,8 @@ alwaysApply: true
 3. **Make surgical edits** — Don't rewrite what's already correct
 4. **Verify image refs** — Ensure all `![...](...)` paths resolve
 5. **Check word count** — Should be 500+ words minimum
-6. **Commit** — `docs(article): update {topic} in article {NN}`
+6. **Update Excel spreadsheet** — Set Changes column to `Modified — <what changed>` (see below)
+7. **Commit** — `docs(article): update {topic} in article {NN}`
 
 ## Adding New Features to Documentation
 
@@ -44,6 +47,43 @@ When the platform adds new features (check git log for backend/UI changes):
 2. **Add redirect** — In `.gitbook.yaml` if the file is removed
 3. **Update SUMMARY.md** — Remove from navigation
 4. **Update cross-references** — Fix any links pointing to removed content
+5. **Update Excel spreadsheet** — Set Changes column to `Deleted — <reason>`
+
+---
+
+## Companion Documents (MUST update on every change)
+
+Every article change MUST be accompanied by updates to these companion documents:
+
+| Document | Update When | What to Update |
+|----------|-------------|----------------|
+| `SUMMARY.md` | Articles added, removed, or renamed | Add/remove/rename the entry |
+| `ARTICLE_TAXONOMY.md` | Articles added or type changed | Add/update the mapping row |
+| `SCREENSHOT_TRACKING.md` | Screenshots added or needed | Update status for the article |
+| `Intain Markets – *.xlsx` | **Any article change** | Update Changes column + Description |
+| `README.md` | Major structural changes | Update if Getting Started links change |
+| `85_New_features.md` | New platform features documented | Add feature with date and description |
+| `87_Retired_flows.md` | Features deprecated | Add retired flow with context |
+
+### Excel Spreadsheet — Changes Column Convention
+
+The Excel file (`Intain Markets – Knowledge Base Categories & Sub-Categories.xlsx`) has a **Changes** column that tracks what happened to each article in the current release. Use these tags:
+
+| Tag | When to Use | Example |
+|-----|-------------|---------|
+| `Created — <description>` | Brand-new article | `Created — New article for Asset Sale settlement mechanics` |
+| `Modified — <description>` | Existing article updated | `Modified — Added Entra SSO login flow, updated sidebar navigation` |
+| `Renamed — <old name> → <new name>` | Article title/file changed | `Renamed — 38_Deal_Setup.md → 51_Deal_Setup_and_Calculations.md` |
+| `Deleted — <reason>` | Article removed | `Deleted — Merged into article 36 (Settlement)` |
+| `Unchanged` | No changes this release | `Unchanged` |
+
+**Color coding** (when editing via script):
+- 🟢 Green background (`#E2EFDA`) — Created
+- 🟡 Yellow background (`#FFF2CC`) — Modified
+- 🔵 Blue background (`#D6E4F0`) — Renamed
+- ⚪ White background — Unchanged
+
+---
 
 ## Quality Gates (Before Publishing)
 
@@ -57,3 +97,5 @@ When the platform adds new features (check git log for backend/UI changes):
 - [ ] Specific field names and statuses from codebase
 - [ ] SUMMARY.md entry exists
 - [ ] ARTICLE_TAXONOMY.md entry exists
+- [ ] Excel spreadsheet updated (Changes column + Description)
+- [ ] SCREENSHOT_TRACKING.md updated if screenshots changed
