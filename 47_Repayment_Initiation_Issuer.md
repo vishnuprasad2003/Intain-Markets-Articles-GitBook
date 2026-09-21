@@ -60,8 +60,8 @@ Choose your settlement rail from the available options:
 
 | Rail | Description | Availability |
 |------|-------------|--------------|
-| **Kinexys** | Escrowed book-entry with on-platform confirmations | Coming soon (disabled) |
-| **Stablecoin** | USDC via smart contract escrow on the configured chain (e.g., Polygon) | Coming soon (disabled) |
+| **Kinexys** | Escrowed book-entry with on-platform confirmations | Planned (disabled) |
+| **Stablecoin** | USDC via smart contract escrow on the configured chain (e.g., Polygon) | Planned (disabled) |
 | **Bank (Wire/ACH)** | Traditional rails via instructions on file | **Available** |
 
 Currently, only **Bank (Wire/ACH)** is enabled. Click the Bank card to select it and automatically advance to Step 2.
