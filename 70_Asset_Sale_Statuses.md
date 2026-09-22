@@ -13,13 +13,13 @@ Asset sale deals progress through a series of statuses that represent the deal's
 
 Asset sale deals follow a linear progression through statuses:
 
-**Draft** → **Pending Review** → **Published** → **Commit** → **Invest** → **Settlement In Progress** → **Settled** → **Active** → **Repayment In Progress** → **Closed**
+**Draft** → **Pending Review** → **Approved** → **Published** → **Commit** → **Invest** → **Settlement In Progress** → **Settled** → **Active** → **Repayment In Progress** → **Closed**
 
-Alternative terminal statuses: **Cancelled**, **Defaulted**, **Inactive**
+Alternative terminal statuses: **Cancelled**, **Defaulted**
 
-The underlying settlement system tracks its own status independently:
-- Settlement overall statuses: **Created**, **Funded**, **Settled**, **Repayment Initiated**, **Partially Settled**, **Defaulted**, **Settled Late**
-- Settlement NFT statuses: **HELD**, **BURN_PENDING**, **BURNED**, **TRANSFERRED**
+Settlement statuses shown to users:
+- Settlement: **Created**, **Funded**, **Settled**, **Repayment Initiated**, **Partially Settled**, **Defaulted**
+- NFT: **Transferred**, **Retirement pending**, **Retired**
 
 The lifecycle moves from deal preparation (Draft) through market distribution (Published), investor participation (Commit/Invest), financial exchange (Settlement), active management (Active), and finally repayment and closure (Closed).
 
@@ -118,9 +118,8 @@ The lifecycle moves from deal preparation (Draft) through market distribution (P
 - Issuer: Confirm payment receipt
 - Platform: Record settlement events on blockchain
 
-**Settlement engine statuses during this phase:**
-- Overall status: **Created** → **Funded** → **Settled**
-- Rail status progresses through: READY → IN_PROGRESS → DELIVERING → DELIVERED → SETTLED
+**Settlement statuses during this phase:**
+- **Created** → **Funded** → **Settled**
 
 **Transitions to:** Settled (when all transfers confirmed)
 
@@ -134,7 +133,7 @@ The lifecycle moves from deal preparation (Draft) through market distribution (P
 
 **Available actions:**
 - Platform: Mint and transfer receivables NFTs to investor wallets
-- NFT status transitions from **HELD** to **TRANSFERRED**
+- NFT status becomes **Transferred**
 
 **Transitions to:** Active (after NFT transfer completes)
 
@@ -151,7 +150,7 @@ The lifecycle moves from deal preparation (Draft) through market distribution (P
 - Investors: View receivables, monitor analytics
 - All: Access asset sale analytics dashboard
 
-**Transitions to:** Repayment In Progress (when issuer initiates repayment), Defaulted (on default), Inactive (on administrative action)
+**Transitions to:** Repayment In Progress (when issuer initiates repayment), Defaulted (on default)
 
 ---
 
@@ -162,22 +161,22 @@ The lifecycle moves from deal preparation (Draft) through market distribution (P
 **Who sees it:** All parties.
 
 **Settlement statuses during repayment:**
-- Overall status: **Created** (initial) → **Funded** (after issuer confirms payment) → **Settled** (after investor accepts and rail completes)
+- Overall status: **Created** (initial) → **Funded** (after issuer confirms payment) → **Settled** (after investor accepts)
 - If investor rejects: overall status reverts to **Created** for a retry
 - For partial repayment: **Partially Settled** allows additional installments
-- NFT status: **HELD** → **BURN_PENDING** (after repayment accepted) → **BURNED** (after all NFTs burned)
+- NFT status: **Transferred** → **Retirement pending** (after repayment accepted) → **Retired** (after all NFTs retired)
 
 **Available actions:**
-- Investors: Review repayment details, accept or reject, burn NFTs
+- Investors: Review repayment details, accept or reject, retire NFTs
 - Issuer: Monitor investor confirmations, record additional installments for partial repayment
 
-**Transitions to:** Closed (after all NFTs burned and repayment confirmed)
+**Transitions to:** Closed (after all NFTs retired and repayment confirmed)
 
 ---
 
 ### Closed
 
-**What it means:** The deal is fully repaid and all receivables NFTs have been burned. This is the successful terminal status.
+**What it means:** The deal is fully repaid and all receivables NFTs have been retired. This is the successful terminal status.
 
 **Who sees it:** All parties (read-only).
 
@@ -185,8 +184,6 @@ The lifecycle moves from deal preparation (Draft) through market distribution (P
 - View audit trail and settlement history
 - Access reports and compliance documentation
 - No operational actions available
-
-**Code reference:** The deal collection's `nftStatus` is set to **BURNED**. A `settlement.token.burned` audit event is recorded.
 
 **Terminal status** — no further transitions.
 
@@ -223,24 +220,13 @@ The lifecycle moves from deal preparation (Draft) through market distribution (P
 
 ---
 
-### Inactive
-
-**What it means:** The deal has been administratively marked as inactive.
-
-**Who sees it:** All parties (read-only).
-
-**Available actions:**
-- View deal history
-- Administrative reactivation if applicable
-
----
-
 ## What Each Status Indicates
 
 | Status | Phase | Key Indicator | Editable? |
 |--------|-------|---------------|-----------|
 | Draft | Pre-Sale | Deal is being prepared privately | Yes |
 | Pending Review | Pre-Sale | Awaiting underwriter evaluation | No (issuer) |
+| Approved | Pre-Sale | Underwriter approved; preparing for publication | No |
 | Published | Pre-Sale | Available for investor participation | No |
 | Commit | Commitment | Investors are committing capital | No |
 | Invest | Commitment | Allocation finalized, agreements signing | No (deal terms), Yes (agreements) |
@@ -248,30 +234,25 @@ The lifecycle moves from deal preparation (Draft) through market distribution (P
 | Settled | Settlement | Transfers confirmed, NFT minting next | No |
 | Active | Post-Sale | Live deal, investors hold NFTs | Loan tape uploads only |
 | Repayment In Progress | Closure | Repayment sent, awaiting confirmation | No |
-| Closed | Terminal | Fully repaid, NFTs burned | No |
+| Closed | Terminal | Fully repaid, NFTs retired | No |
 | Cancelled | Terminal | Deal cancelled before settlement | Limited editing |
 | Defaulted | Terminal | Default condition encountered | No |
-| Inactive | Terminal | Administratively deactivated | No |
 
-### Settlement-Level Statuses (Internal)
-
-These statuses are tracked on the settlement document and drive the settlement engine:
+### Settlement Statuses
 
 | Settlement Status | Meaning |
 |-------------------|---------|
 | Created | Settlement initialized, awaiting funding |
 | Funded | Payer has confirmed funding |
-| Settled | Rail delivered and assets transferred |
+| Settled | Settlement complete; assets transferred |
 | Repayment Initiated | Issuer initiated repayment |
 | Partially Settled | Partial repayment accepted, balance remains |
 | Defaulted | Default declared |
-| Settled Late | Settlement completed after target date |
 
-### NFT Statuses (Internal)
+### NFT Statuses
 
 | NFT Status | Meaning |
 |------------|---------|
-| HELD | NFTs are in escrow or initial state |
-| TRANSFERRED | NFTs transferred to investor wallet |
-| BURN_PENDING | Repayment accepted, burn available |
-| BURNED | All NFTs burned, deal closure complete |
+| Transferred | NFTs transferred to investor wallet |
+| Retirement pending | Repayment accepted; NFT retirement available |
+| Retired | All NFTs retired; deal closure complete |

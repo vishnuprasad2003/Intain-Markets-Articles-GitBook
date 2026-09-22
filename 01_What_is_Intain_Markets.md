@@ -7,7 +7,7 @@ description: Comprehensive introduction to the Intain Markets platform — block
 
 ## Overview
 
-[Intain Markets](https://intainft.com/intain-markets) is a blockchain-based digital infrastructure platform for structured finance transactions. The platform enables issuers, investors, market makers, servicers, borrowers, facility agents, lenders, and other participants to collaborate on structured finance workflows with complete transparency, traceability, and automation.
+[Intain Markets](https://intainft.com/intainmarkets) is a blockchain-based digital infrastructure platform for structured finance transactions. The platform enables issuers, investors, market makers, servicers, borrowers, facility agents, lenders, and other participants to collaborate on structured finance workflows with complete transparency, traceability, and automation.
 
 Built on blockchain technology, Intain Markets provides a secure, auditable environment for managing the entire lifecycle of structured finance transactions — from loan onboarding and pool creation through deal structuring, investor commitment, tokenized settlement, repayment, and deal closure. Every action taken on the platform is recorded with an immutable audit trail, providing institutional-grade accountability for all participants.
 
@@ -33,7 +33,7 @@ At the core of the platform is blockchain-based tokenization. Loans and receivab
 
 - **Immutable ownership records** — Token transfers on-chain permanently record who holds what
 - **Transparent settlement** — Settlement is recorded on the blockchain, not just in a database
-- **NFT lifecycle tracking** — NFTs move through defined states (e.g., HELD → BURN_PENDING → BURNED during repayment)
+- **NFT lifecycle tracking** — After settlement, receivables NFTs are **Transferred** to investors; during repayment they move to **Retirement pending** and then **Retired** when burned on-chain
 - **Document hash verification** — Documents stored on-chain have hash verification for integrity
 
 ### Workflow-Driven Architecture
@@ -56,21 +56,21 @@ Structured finance involves multiple organizations working together. The platfor
 
 ## What This Enables for Users
 
-### For Issuers and Borrowers
+### For Issuers or Borrowers
 - Create and manage loan pools, term sheets, and funding requests from a single platform
 - Submit for review with complete documentation and supporting materials
 - Track the status of every submission through clear, defined lifecycle stages
 - Receive structured feedback or approvals with full audit trails
 - Initiate repayments and manage post-transaction obligations
 
-### For Market Makers and Facility Agents
+### For Market Makers or Facility Agents
 - Review submissions with all relevant data in one place
 - Structure deals with configurable parameters, waterfall calculations, and fee structures
 - Approve, reject, or request changes with documented reasoning
 - E-sign documents individually per participant using Adobe Sign or ZohoSign
 - Run recurring calculations and manage ongoing deal operations
 
-### For Investors and Lenders
+### For Investors or Lenders
 - Browse opportunities and review detailed deal information
 - Commit to deals and approve master commitments with legally binding e-signatures
 - Transfer funds and confirm settlement with blockchain-recorded transactions

@@ -34,9 +34,9 @@ The previous naming was counterintuitive. A deal that had just settled was calle
 The rename required careful handling because both old and new naming share the word "Closed." A `Closed` status recorded before a deal reached `Active` (the new sale-milestone name) was the legacy sale milestone and was renamed to `Active`. A `Closed` status recorded after a deal was already `Active` was already the new terminal status and was left unchanged. Each migrated deal was stamped with a `statusRenameMigratedAt` marker so repeat runs could not misinterpret their values. On-chain status strings were rewritten to match, and the `closedDeal` flag was recalculated under the new rule (set for `Closed` and `Cancelled` deals, not for `Active` deals).
 
 **Full Asset Sale Lifecycle (Current):**
-Draft → Pending Review → Published → Commit → Invest → Settlement In Progress → Settled → **Active** → Repayment In Progress → **Closed**
+Draft → Pending Review → Approved → Published → Commit → Invest → Settlement In Progress → Settled → **Active** → Repayment In Progress → **Closed**
 
-Terminal statuses: Cancelled, Defaulted, Inactive
+Terminal statuses: Cancelled, Defaulted
 
 ### v2 API Migration
 

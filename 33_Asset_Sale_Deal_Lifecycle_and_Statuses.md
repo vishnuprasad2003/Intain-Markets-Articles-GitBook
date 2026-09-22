@@ -18,7 +18,7 @@ Asset sale deals follow a linear lifecycle with clear progression through stages
 - After loan assignment, sale terms configuration, and optional recourse profile setup, the issuer publishes the deal
 - The deal moves to **Pending Review** for the underwriter (Market Maker) to evaluate
 - The underwriter reviews the deal package — loans, terms, documentation — and makes a decision:
-  - **Approve** → the deal becomes **Published** and is visible to investors
+  - **Approve** → the deal becomes **Approved**, then **Published** and is visible to investors
   - **Reject** → the deal reverts to **Draft** for the issuer to revise
 - If the issuer or underwriter cancels at any point during pre-sale, the deal moves to **Cancelled**
 
@@ -33,22 +33,21 @@ Asset sale deals follow a linear lifecycle with clear progression through stages
 **Settlement Phase**
 - Settlement begins once agreements are signed and the fund transfer process is initiated
 - The deal enters **Settlement In Progress** while transfers are being confirmed
-- Underneath, the settlement engine tracks its own status progression: Created → Funded → Settled
-- The settlement rail tracks delivery: READY → IN_PROGRESS → DELIVERING → DELIVERED → SETTLED
-- Once all parties confirm and the rail completes, the deal becomes **Settled**
+- Settlement progress is tracked as **Created** → **Funded** → **Settled**
+- Once all parties confirm, the deal becomes **Settled**
 
 **Post-Sale Phase**
 - After settlement, receivables NFTs are minted and transferred to investor wallets
-- The settlement NFT status transitions from **HELD** to **TRANSFERRED**
+- The NFT status becomes **Transferred**
 - The deal status becomes **Active** — the primary operational status for live deals
 - The issuer manages ongoing loan tape uploads and monitors the underlying loans
 - When the issuer initiates repayment, the deal moves to **Repayment In Progress**
 - A repayment settlement is created with transaction type `Whole Loan Sale Repayment`
 - The investor reviews and accepts (or rejects) the repayment declaration
-- After acceptance, the investor burns their receivables NFTs on-chain
-- The settlement NFT status progresses: HELD → BURN_PENDING → BURNED
-- Once all NFTs are burned, the deal becomes **Closed**
-- If the deal encounters issues, it may move to **Defaulted** (via the issuer's "Declare Default" action) or **Inactive**
+- After acceptance, the investor retires (burns) their receivables NFTs on-chain
+- The NFT status progresses: **Transferred** → **Retirement pending** → **Retired**
+- Once all NFTs are retired, the deal becomes **Closed**
+- If the deal encounters issues, it may move to **Defaulted** (via the issuer's "Declare Default" action)
 
 The lifecycle is designed to ensure proper review, approval, and documentation at each stage before progressing to the next.
 
@@ -94,7 +93,7 @@ This is a transitional status that resolves once all transfers are confirmed and
 
 ### Settled
 
-All fund transfers have been confirmed and recorded. The settlement is complete, and the deal is ready for NFT transfer to finalize investor ownership of the loan receivables. The platform mints receivables NFTs and transfers them to investor wallets, changing the NFT status from **HELD** to **TRANSFERRED**.
+All fund transfers have been confirmed and recorded. The settlement is complete, and the deal is ready for NFT transfer to finalize investor ownership of the loan receivables. The platform mints receivables NFTs and transfers them to investor wallets; the NFT status becomes **Transferred**.
 
 ### Active
 
@@ -121,15 +120,11 @@ The deal remains in this status until all investors respond:
 
 ### Closed
 
-The deal has been fully repaid and all receivables NFTs have been burned by investors. This is the final terminal status indicating successful completion of the entire asset sale lifecycle. The deal shows as 100% repaid, the settlement NFT status is **BURNED**, and all settlement and repayment audit trails are preserved. A `settlement.token.burned` audit event is recorded when the last NFT on the deal is burned.
+The deal has been fully repaid and all receivables NFTs have been retired by investors. This is the final terminal status indicating successful completion of the entire asset sale lifecycle. The deal shows as 100% repaid, the NFT status is **Retired**, and all settlement and repayment audit trails are preserved.
 
 ### Defaulted
 
 The deal has encountered a default condition. This status is reached when the issuer declares default through the repayment modal's "Declare Default" option. The settlement overall status is set to **Defaulted**. The investor must confirm the default declaration (rejection of a declared default is not permitted). Declaring default is permanent — no further repayment can be recorded after this action.
-
-### Inactive
-
-The deal has been marked as inactive, typically due to administrative reasons or extended periods without activity. Inactive deals are retained for reference but are not part of active operations.
 
 ## What Each Status Indicates
 
@@ -145,6 +140,6 @@ The deal has been marked as inactive, typically due to administrative reasons or
 
 **Active** indicates the deal is fully settled with NFTs transferred to investors. This is the operational steady-state where loan tape management, monitoring, and repayment initiation occur.
 
-**Repayment In Progress** indicates an active repayment cycle. The issuer has declared a repayment outcome (full, partial, or default) and the investor must respond. The settlement tracks additional statuses: Partially Settled for partial repayment, Defaulted for declared default, and NFT statuses (HELD → BURN_PENDING → BURNED) for the token retirement flow.
+**Repayment In Progress** indicates an active repayment cycle. The issuer has declared a repayment outcome (full, partial, or default) and the investor must respond. The settlement tracks additional statuses: Partially Settled for partial repayment, Defaulted for declared default, and NFT statuses (**Transferred** → **Retirement pending** → **Retired**) for the token retirement flow.
 
-**Closed** indicates successful deal completion. All financial obligations have been met, all NFTs have been burned on-chain, and the deal is archived with a complete, immutable audit trail covering every event from creation through closure.
+**Closed** indicates successful deal completion. All financial obligations have been met, all NFTs have been retired on-chain, and the deal is archived with a complete, immutable audit trail covering every event from creation through closure.

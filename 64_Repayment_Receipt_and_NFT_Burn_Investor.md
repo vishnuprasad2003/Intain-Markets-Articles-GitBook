@@ -115,7 +115,7 @@ After accepting repayment, the NFT burn becomes available. The burn permanently 
 
 > **Eligibility gate:** The burn button is only available when:
 > - Repayment has been confirmed (accepted) on the settlement
-> - The settlement's NFT status is **BURN_PENDING**
+> - The settlement's NFT status is **Retirement pending**
 > - The NFTs have a tokenization status of **Transferred** (meaning they are in your wallet)
 > - You are the authenticated Investor (payee) on the repayment settlement
 
@@ -153,11 +153,11 @@ The burn is an irreversible blockchain transaction:
 
 After all NFTs on the deal are burned:
 - The platform re-reads all LOAN_METADATA rows for the deal to verify every tokenized loan is now in **Burned** status
-- If all tokens are burned, the settlement's NFT status is updated from **BURN_PENDING** to **BURNED**
+- If all tokens are burned, the settlement's NFT status is updated from **Retirement pending** to **Retired**
 - An audit event (`settlement.token.burned`) is recorded with the category **CHAIN** and action **burn_token**
-- The deal's `nftStatus` is also updated to **BURNED** in the deal collection
+- The deal's NFT status is also updated to **Retired**
 
-> **Partial burns:** If you only burn some of the deal's tokens, the settlement remains at **BURN_PENDING** so you can return later to burn the remaining tokens.
+> **Partial burns:** If you only burn some of the deal's tokens, the settlement remains at **Retirement pending** so you can return later to burn the remaining tokens.
 
 #### Step 10: Verify Deal Closure
 
@@ -178,10 +178,10 @@ After all NFTs on the deal are burned:
 - You must verify the repayment amount against your actual wire receipt before accepting
 - Rejection requires a written reason (up to 1,000 characters)
 - A declared default cannot be rejected — only confirmed
-- NFT burn is only available after repayment is accepted and the settlement's NFT status is **BURN_PENDING**
+- NFT burn is only available after repayment is accepted and the settlement's NFT status is **Retirement pending**
 - For partially settled deals, only assets with zero invoice outstanding can be burned
 - Burning an NFT is irreversible — the token is permanently destroyed on-chain
-- The settlement marker (BURN_PENDING → BURNED) only transitions when ALL deal tokens are burned, not just the requested subset
+- The settlement marker (**Retirement pending** → **Retired**) only transitions when ALL deal tokens are burned, not just the requested subset
 - Idempotency keys prevent duplicate acceptance or rejection submissions
 - The burn job processes asynchronously — the status is polled for updates
 

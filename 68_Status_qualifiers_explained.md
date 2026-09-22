@@ -158,7 +158,6 @@ Asset Sale deals use a distinct set of status qualifiers that track the transact
 | **Repayment In Progress** | Issuer has initiated repayment to investors |
 | **Closed** | Repayment completed and deal is closed |
 | **Defaulted** | Deal has defaulted on repayment obligations |
-| **Inactive** | Deal is no longer active or operational |
 
 ### How Deal Status Drives Actions
 

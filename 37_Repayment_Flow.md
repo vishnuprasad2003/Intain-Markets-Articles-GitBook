@@ -196,19 +196,19 @@ After a Full Repayment is confirmed, the investor must burn their receivables NF
 
 ### NFT Status Lifecycle
 
-The NFT progresses through three defined states during the repayment process:
+The NFT progresses through defined states during repayment:
 
 | NFT Status | Meaning |
 |-----------|---------|
-| **HELD** | The investor holds the receivables NFT — this is the normal state during an active deal |
-| **BURN_PENDING** | The burn transaction has been submitted to the blockchain and is awaiting confirmation |
-| **BURNED** | The NFT has been permanently burned on the blockchain — the investor's tokenized claim is removed |
+| **Transferred** | The investor holds the receivables NFT after settlement — the normal state during an active deal |
+| **Retirement pending** | Repayment is confirmed; the investor can retire (burn) the NFT |
+| **Retired** | The NFT has been permanently burned on the blockchain — the investor's tokenized claim is removed |
 
 ```
-HELD → (investor clicks Burn after repayment confirmed) → BURN_PENDING → (blockchain confirms) → BURNED
+Transferred → (investor retires NFT after repayment confirmed) → Retirement pending → (blockchain confirms) → Retired
 ```
 
-**Important:** NFT burn is **irreversible**. Once an NFT is burned on the blockchain, the receivable position is permanently closed and cannot be recovered. The burn can only be initiated after the repayment installment has been confirmed (status: CONFIRMED).
+**Important:** NFT retirement is **irreversible**. Once an NFT is burned on the blockchain, the receivable position is permanently closed and cannot be recovered. Retirement can only be initiated after the repayment installment has been confirmed.
 
 ### Phase 5: Deal Closure
 

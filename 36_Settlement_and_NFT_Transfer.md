@@ -212,43 +212,15 @@ After all NFT transfers are complete, the deal reaches its active state.
 | **Settled** | Settlement complete; assets delivered to investor |
 | **Repayment Initiated** | Issuer has declared a repayment (repayment flow only) |
 | **Partially Settled** | Partial repayment confirmed; balance remains |
-| **Settled Late** | Repayment cleared after the target settlement date |
 | **Defaulted** | Issuer declared default on the deal |
-| **In Recovery** | Investor-initiated recovery (reserved for future use) |
-| **Written Off** | Asset written off (reserved for future use) |
-
-### Rail (On-Chain) Status
-
-| Status | Description |
-|--------|-------------|
-| **READY** | Rail initialized, ready to begin |
-| **IN_PROGRESS** | On-chain transactions executing |
-| **DELIVERING** | Assets being transferred to investor wallet |
-| **DELIVERED** | All assets successfully delivered |
-| **SETTLED** | USDC escrow finalized, funds released |
-| **REFUNDED** | Settlement cancelled, USDC returned to investor |
-| **FAILED** | Settlement failed (admin can retry) |
 
 ### NFT Status
 
 | Status | Context | Description |
 |--------|---------|-------------|
-| **TRANSFERRED** | Purchase flow | Assets delivered from escrow to investor wallet |
-| **HELD** | Repayment flow | NFT held by investor during active repayment period |
-| **BURN_PENDING** | Repayment flow | Repayment settled; awaiting investor NFT burn |
-| **BURNED** | Repayment flow | Investor has burned the NFT, completing the lifecycle |
-
-### Lock Status (Stablecoin Escrow)
-
-| Status | Description |
-|--------|-------------|
-| **IDLE** | No lock active |
-| **LOCKING** | Collateral being locked in escrow |
-| **LOCKED** | Collateral locked; settlement can proceed |
-| **LOCK_FAILED** | Lock attempt failed |
-| **UNLOCKING** | Assets being returned to issuer (timeout or cancellation) |
-| **UNLOCKED** | Assets returned; escrow released |
-| **UNLOCK_FAILED** | Unlock attempt failed |
+| **Transferred** | Purchase flow | Assets delivered from escrow to the investor wallet |
+| **Retirement pending** | Repayment flow | Repayment settled; awaiting investor NFT retirement |
+| **Retired** | Repayment flow | Investor has retired the NFT, completing the lifecycle |
 
 ## Settlement Activity Timeline
 
