@@ -1,95 +1,75 @@
 ---
 title: Receivables and NFT Burn
 description: >-
-  Step-by-step guide for managing receivables and burning NFTs after asset sale
-  repayment
+  What receivables NFTs represent after settlement and how investors burn them
+  after repayment
 ---
 
 # Receivables & NFT Burn
 
 ## Overview
 
-After an asset sale deal is settled, investors hold receivables NFTs that represent their ownership of the loan assets. These NFTs are minted on the blockchain during settlement and transferred to investor wallets. When the deal is fully repaid, investors burn these NFTs to close out their position, completing the asset sale lifecycle. This guide covers the receivables management and NFT burn process.
+After settlement, investors hold receivables NFTs as on-chain proof that they own the loan assets in the deal. Each NFT is minted when settlement completes and transferred to the investor’s wallet. After a full repayment is accepted, the investor burns those NFTs to close the position. Burn is a blockchain transaction and cannot be undone.
 
 ## Who Can Use This
 
-* **Investors**: View receivables, manage NFT positions, and burn NFTs after repayment
-* **Issuers**: Monitor receivables status across their deals
+* **Investors** — view receivables and burn NFTs they hold
+* **Issuers** — monitor receivable and NFT status on the deal
+
+Only the investor who holds the token can burn it. Servicers and underwriters may see the same tab for monitoring.
 
 ## When This Is Used
 
-Use this process when:
-
-* An asset sale deal has been settled and NFTs have been transferred to investors
-* The issuer has completed repayment and the investor has confirmed receipt
-* You want to close out your investment position by burning the receivables NFT
-* You need to understand what receivables represent and how they work
+Use this after the deal is **Active** (NFTs already transferred) and, for burn, after you have accepted repayment. Do not burn because a wire arrived if you have not accepted on the platform — accept first, then burn. Accept/reject steps live in [Repayment Flow](37_Repayment_Flow.md).
 
 ## Step-by-Step Process
 
-### Part 1: Understanding Receivables
+### What the NFT represents
 
-#### Step 1: What Receivables Represent
+The NFT is tied to the deal’s loan portfolio. It is not a payment instruction. It is proof of ownership after **Settled** / **Active**. Until it is burned, the investor’s position stays open even if cash has already moved. Each row shows an asset ID and token ID so you can match the screen to the wallet that holds the token.
 
-After settlement of an asset sale deal:
+### View receivables
 
-* Receivables NFTs are minted on the blockchain representing the loan assets
-* Each NFT contains metadata linking it to the specific loan portfolio in the deal
-* The NFT serves as on-chain proof of ownership of the receivable
-* Receivables are visible in the deal details under the **Asset Analysis** section
-
-#### Step 2: View Your Receivables
-
-1. Navigate to **Asset Sale** from the left sidebar menu
-2. Click on the relevant deal
-3. Navigate to **Asset Analysis** → **Receivables** tab
-4. View your receivables with details including asset IDs, amounts, and status
+1. Open **Asset Sale** and the deal.
+2. Go to **Asset Analysis** → **Receivables**.
+3. Review asset IDs, amounts, tokenization status, and NFT status.
 
 ![Receivable Level Data](.gitbook/assets/receivables-data.png)
 
-### Part 2: Burning NFTs After Repayment
+### Burn after repayment
 
-#### Step 3: Verify Repayment Completion
+1. Confirm repayment is accepted and NFT status is **Retirement pending**.
+2. On **Receivables**, click **Burn** next to the token. You can select one or more asset IDs.
+3. Review the confirmation and click **Yes, Burn NFT**.
+4. The NFT is removed from your wallet. When every NFT on the deal is burned, NFT status becomes **Retired** and the deal becomes **Closed** (Fully Repaid).
 
-Before burning an NFT, ensure:
+On a partial repayment, only assets with a zero outstanding balance can be burned. If some tokens remain, status stays **Retirement pending** so you can finish later.
 
-* The issuer has initiated repayment for the deal
-* You have confirmed receipt of the repayment (see Repayment Flow, article 37)
-* The repayment amount matches your expected amount
+| NFT status             | Meaning                               |
+| ---------------------- | ------------------------------------- |
+| **Transferred**        | You hold the NFT; deal is Active      |
+| **Retirement pending** | Repayment accepted; burn is available |
+| **Retired**            | All NFTs burned; deal can close       |
 
-#### Step 4: Initiate the Burn
+### After a failed or partial burn
 
-1. In the **Receivables** tab, locate the NFT to burn
-2. Click the **Burn** button next to the receivable
-3. A confirmation dialog appears with details of the NFT to be burned
+If the burn job does not finish, wait and refresh **Receivables**. Do not assume the token is gone until status is no longer **Transferred**. If some assets burned and others did not, burn the remaining IDs when they are eligible. The deal does not close until every token on the deal is **Retired**.
 
-#### Step 5: Confirm the Burn
-
-1. Review the burn details in the confirmation dialog
-2. Click **Yes, Burn NFT** to proceed
-3. The platform submits the burn transaction to the blockchain
-4. The NFT is permanently burned, removing it from your wallet
-
-#### Step 6: Verify Deal Closure
-
-1. After the burn completes, the deal dashboard updates
-2. The deal status changes to **Closed** with **Fully Repaid** designation
-3. The burn event is recorded in the settlement activity trail
+Issuers watching the same tab see status only — they cannot click **Burn**.
 
 ## Rules & Validations
 
-* NFT burn is only available after the investor has confirmed repayment receipt
-* Burning an NFT is irreversible — the tokenized position is permanently destroyed
-* The burn transaction is recorded on the blockchain with an immutable timestamp
-* Only the investor holding the NFT can initiate the burn
-* The burn must be completed for the deal to reach Closed status
-* Partial burns are not supported — the full receivable position is burned at once
+* Burn is available only after repayment is accepted.
+* Only the investor on the settlement can burn.
+* Burn is irreversible.
+* The full selected receivable is burned in one action.
+* The deal reaches **Closed** only after all NFTs on the deal are retired, not after a subset.
+* A declared default does not use the same burn-to-close path as a full repayment. Follow the default confirmation on the repayment modal.
 
 ## What Happens Next
 
-After the NFT is burned:
+The deal stays on the dashboard for reporting. Settlement Details keep the burn timestamp and transaction hash. No operational actions remain on a **Closed** deal.
 
-* The deal reaches its final **Closed** status
-* The complete audit trail (settlement → repayment → burn) is preserved
-* The deal remains accessible in the Asset Sale dashboard for reporting and compliance
-* Settlement Details show the full event history including the burn timestamp and transaction hash
+If repayment was only partial, do not expect **Closed** after one burn. Wait for the next installment, then burn remaining eligible assets.
+
+Investor-facing clicks: [Repayment Receipt & NFT Burn](64_Repayment_Receipt_and_NFT_Burn_Investor.md).

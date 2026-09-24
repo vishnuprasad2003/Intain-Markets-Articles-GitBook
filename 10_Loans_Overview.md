@@ -7,144 +7,146 @@ description: Learn what loans are and how they work in the platform
 
 ## Overview
 
-Loans are individual credit agreements that serve as the building blocks for pools and credit facilities. As an issuer, you onboard loans into the platform, standardize them through field mapping, organize them in the Loan Registry, map them to pools, add them to batches for verification, and mint them as NFTs. This module covers the complete loan lifecycle from upload to tokenization.
+Loans are the individual credit agreements that make up pools and credit facilities. As an issuer, you upload loans, match their columns to standard fields, manage them in the Loan Registry, map them to pools, verify them in batches, and mint them as NFTs.
 
 ## What Loans Are
 
-A loan represents a single credit agreement containing detailed information about the borrower, loan amount, interest rates, payment terms, and performance data. Loans are stored in your organization's database after onboarding and are managed through the Loan Registry. Each loan has both mapped fields (standardized to Intain's format) and unmapped fields (original data that didn't match standard fields).
+A loan is one credit agreement. It holds borrower details, the loan amount, interest, payment terms, and performance data. After you onboard a file, the loans are saved for your organization and managed in the Loan Registry.
 
-Loans progress through distinct stages: onboarding (via Imports), standardization (field mapping), registry management, pool mapping, batch verification, and NFT minting. Each stage has specific workflows and requirements that ensure loan data quality and enable downstream transactions.
+Matched columns use Intain’s standard field names. Unmatched columns keep the original headers from your file.
+
+A loan moves through upload, field matching, the Loan Registry, pool mapping, batch verification, and NFT minting.
 
 ## Purpose and Use Cases
 
-**For Pool Creation** - Loans are the building blocks of pools. You select loans from the Loan Registry and map them to pools. Pool metrics automatically calculate from the mapped loans.
+**For Pool Creation** — You select loans in the Loan Registry and map them to a pool. Pool metrics update from those loans.
 
-**For Credit Facilities** - Loans whose NFTs are minted can be mapped to master commitments for credit facility transactions. Only NFT-minted loans are eligible for facility mapping.
+**For Credit Facilities** — Only loans that already have an NFT can be mapped to a master commitment.
 
-**For Verification** - Loans are grouped into batches for verification. The batch verification process validates loan data either through self-certification by the issuer or verification by a third-party verification agent.
+**For Verification** — You group loans into batches. You can self-certify the batch, or send it to a verification agent.
 
-**For Tokenization** - Loans can be minted as NFTs (Non-Fungible Tokens) on the blockchain after batch verification is complete. NFT minting creates a digital representation of each loan enabling secure tracking and transfer.
+**For Tokenization** — After verification, you can mint each loan as an NFT. The NFT is the digital record used to track and transfer that loan.
 
 ## Key Components
 
-**Imports Section** - Where you upload loan tape files. You select the As Of Date, asset class, choose your file, and submit. The system creates a Job ID for tracking. From here, you trigger Loan Tape Standardization (LTS) to map your file columns to Intain standard fields.
+**Imports** — Upload a loan tape. Choose the As Of Date and asset class, select the file, and submit. The platform assigns a Job ID. From that row you start Loan Tape Standardization (LTS) to match your columns to standard fields.
 
-**Loan Tape Standardization** - The process of mapping your loan tape column headers to Intain's standard fields. You can use:
+**Loan Tape Standardization** — Match your column headers to Intain standard fields:
 
-* **Basic AI Mapping**: Standard AI-assisted field mapping
-* **Intelligent AI Mapping**: Enhanced AI mapping for better accuracy
-* **Delegation**: Submit to Admin to perform mapping on your behalf
+* **Basic AI Mapping** — Standard suggested matches
+* **Intelligent AI Mapping** — A stronger set of suggestions
+* **Delegation** — Ask an admin to do the mapping for you
 
-After mapping, you can edit the field mappings using dropdowns, then click Save Mapping to store the loans.
+You can change any match in the dropdowns, then click **Save Mapping**.
 
-**Loan Registry** - Your central view of all onboarded loans. Shows both mapped columns (standard Intain fields) first, followed by unmapped columns (in italic headers). From here, you can:
+**Loan Registry** — All onboarded loans. Standard columns appear first. Unmatched columns follow, with italic headers. From here you can:
 
-* Select loans and click **Map to Pool** to assign them to pools
-* Select loans and click **Add to Batch** for batch verification
-* View detailed loan information
+* Select loans and click **Map to Pool**
+* Select loans and click **Add to Batch**
+* Open a loan for more detail
 
-**Batch Verification** - Where loans are grouped into batches for verification. The Batch Verification section shows all batches with their status. You can:
+**Batch Verification** — Batches and their status. You can:
 
-* Self Certify: Issuer self-certifies the loans with an e-signature (Adobe Sign)
-* Submit to Verification Agent: Send to a third-party verification agent for review
-* Provide Documents: Upload verification documents from your file share
+* **Self Certify** — Sign a certification with Adobe Sign
+* **Submit to Verification Agent** — Send the batch for third-party review
+* **Provide Documents** — Upload verification documents from your file share
 
-**Certificates Section** - Where you view verified batches and mint NFTs. Shows batch details, verification status, and provides:
+**Certificates** — Verified batches and NFT actions:
 
-* **Mint NFT** button: Select loans and mint them as NFTs
-* **View NFT** button: View already minted NFTs
+* **Mint NFT** — Select loans and mint them
+* **View NFT** — Open NFTs that are already minted
 
 ## How Loans Work
 
 **1. Uploading Loan Data**
 
-You start by going to the **Imports** section from the left expandable menu. Here you select the As Of Date, asset class, and choose your loan tape file, then click Submit. The system creates a Job ID and adds it to the table below with the action **Trigger LTS**.
+Open **Imports** from the left menu. Choose the As Of Date and asset class, select the loan tape, and click Submit. A Job ID appears in the table with the action **Trigger LTS**.
 
 **2. Loan Tape Standardization**
 
-Click **Trigger LTS** to open the Map Fields popup. Here your loan tape headers are mapped to Intain standard fields. You can:
+Click **Trigger LTS** to open Map Fields.
 
-* Use the **Delegation** button to submit this task to Admin (enter start date, end date, and required documents)
-* Use the **Re-run** button to choose between Basic or Intelligent AI mapping
-* Edit individual field mappings using the dropdown menus
-* Click **Save Mapping** when done
+* **Delegation** sends the task to an admin. Enter a start date, an end date, and the required documents.
+* **Re-run** lets you choose Basic or Intelligent AI mapping.
+* Dropdowns let you change individual matches.
+* **Save Mapping** stores the loans.
 
-After saving, the loans are stored in your organization's database. The **Trigger LTS** action changes to **View Mapped**.
+After you save, **Trigger LTS** changes to **View Mapped**.
 
 ![Loans Onboarding - Uploading - Issuer](.gitbook/assets/Loans_Onboarding_Uploading_Issuer.png)
 
 **3. Accessing the Loan Registry**
 
-Click **View Mapped** to see the standardized loans. Click **Open in Registry** to navigate to the Loan Registry section. In the Loan Registry, you see all your onboarded loans with:
+Click **View Mapped**, then **Open in Registry**. The Loan Registry shows:
 
-* Mapped columns displayed first (standard Intain field names)
-* Unmapped columns displayed after (headers shown in italic)
-* **Add Loan** button: Navigate back to Imports to upload more loans
-* **Map to Pool** button: Enabled when any selected loans aren't already mapped to a pool
-* **Add to Batch** button: Enabled when any selected loans aren't already in a batch
+* Standard columns first
+* Unmatched columns next, with italic headers
+* **Add Loan** — returns to Imports
+* **Map to Pool** — on when a selected loan is not already in a pool
+* **Add to Batch** — on when a selected loan is not already in a batch
 
 ![Asset Registry - Issuer View](.gitbook/assets/issuer-loan-registry.png)
 
 **4. Mapping Loans to Pools**
 
-In the Loan Registry, select the loans you want to map, then click **Map to Pool**. A popup appears with a dropdown showing all your pools. Select the target pool and confirm. The loans are mapped to that pool, and pool metrics update automatically.
+Select loans and click **Map to Pool**. Choose the pool and confirm. Pool metrics update from the mapped loans.
 
 ![Loan Map to Pool - Issuer](<.gitbook/assets/LoanMapToPoolIssuer (1).png>)
 
 **5. Adding to Batch and Verification**
 
-Select loans in the Loan Registry and click **Add to Batch** to group them for verification. Go to the **Batch Verification** section from the left menu to see your batches.
+Select loans and click **Add to Batch**. Open **Batch Verification** from the left menu.
 
-Initial batch status is **Pending**. Click on a Batch ID to go to the batch details page with two tabs:
+A new batch starts as **Pending**. Open the Batch ID. Two tabs appear:
 
-* **Loans Tab**: Shows all loans in the batch with the **Self Certify** button
-* **Documents Tab**: Upload verification documents (select document type, verification template, and file from your file share)
+* **Loans** — loans in the batch, and **Self Certify**
+* **Documents** — upload a file from your file share. Choose the document type and verification template.
 
-**Self Certify Process**: Click Self Certify, enter your name, signer name, email, and place, then click E-Sign. An Adobe Sign popup opens showing the loan certification details for all loans in the batch. After signing, the verification moves forward.
+**Self Certify** — Enter your name, the signer’s name, email, and place, then click E-Sign. Adobe Sign opens with the certification for the loans in the batch. After you sign, verification moves forward.
 
 ![Batch Verification](.gitbook/assets/BatchVerification.png)
 
-**Verification Agent Process (ABDP Integration)**: Submit a batch to the ABDP Verification Agent platform. The loan tape is streamed directly from Snowflake to ABDP via secure JWT exchange (Entra SSO OBO flow). ABDP processes the batch asynchronously — the certification result is posted back to the platform and recorded on the batch. Both the issuer and verification agent receive notification emails on submission and completion.
+**Verification Agent** — You can submit the batch to a verification agent. The agent reviews it and the result is recorded on the batch. You and the verification agent both receive email when the batch is submitted and when it is finished.
 
-**Verification Status Values**:
+**Verification status values:**
 
-* **No**: Initial status, not verified
-* **Certified**: Verified by third-party verification agent
-* **Self Certified**: Issuer logged in as verification agent and verified
-* **Self Certify (Data Only)**: Issuer used Self Certify button directly
+* **No** — Not verified yet
+* **Certified** — Verified by a third-party verification agent
+* **Self Certified** — The issuer signed in as a verification agent and verified the batch
+* **Self Certify (Data Only)** — The issuer used **Self Certify** on the batch
 
-After verification, the batch verification status changes to **Reviewed**.
+After verification, the batch status changes to **Reviewed**.
 
 **6. NFT Minting**
 
-Go to the **Certificates** section from the left menu. Here you see the same batch details with verification status and action buttons:
+Open **Certificates**.
 
-* When batch verification status is **Pending**: Both View NFT and Mint NFT are disabled
-* When batch verification status is **Reviewed**: Both View NFT and Mint NFT are enabled
-* When batch verification status is **Verified**: Only View NFT is enabled
+* **Pending** — View NFT and Mint NFT are off
+* **Reviewed** — View NFT and Mint NFT are on
+* **Verified** — Only View NFT is on
 
-Click **Mint NFT** to see a screen with all loans listed with checkboxes. Select individual loans or use the select-all checkbox, then click **Mint Selected**. Minting runs in the background. After all loans are minted, the batch verification status becomes **Verified**.
+Click **Mint NFT**, select loans, and click **Mint Selected**. Minting continues in the background. When every selected loan is minted, the batch status becomes **Verified**.
 
 ![NFT Minting](.gitbook/assets/NftMinting.png)
 
 ## Important Points to Know
 
-**One Pool Per Loan** - Loans can only belong to one pool at a time. To move a loan to a different pool, you must unmap it from the current pool first.
+**One Pool Per Loan** — A loan can be in only one pool. Unmap it before you map it to another pool.
 
-**Mapped vs Unmapped Columns** - In the Loan Registry and Loan Tape section, mapped columns (standard Intain fields) appear first, unmapped columns (original headers) appear after in italic format.
+**Mapped vs Unmapped Columns** — Standard columns come first. Original headers follow in italic.
 
-**As Of Date Selection** - When viewing loan data in pool details (Loan Tape section), you can select different As Of Date values to see loan data from different reporting periods. This is useful for monthly loan tape uploads.
+**As Of Date** — In a pool’s Loan Tape section, change the As Of Date to see another reporting period. This is useful when you upload a tape each month.
 
-**NFT Minting Prerequisite** - Loans must have batch verification status of Reviewed before NFT minting is enabled. After minting all loans, the status becomes Verified.
+**NFT Minting** — Mint NFT turns on when the batch is **Reviewed**. After every loan is minted, the batch is **Verified**.
 
-**Credit Facility Eligibility** - Only loans with minted NFTs can be mapped to master commitments for credit facility transactions.
+**Credit Facility Eligibility** — Only loans with an NFT can be mapped to a master commitment.
 
-**Automatic Pool Metric Updates** - When loans are mapped to or removed from pools, pool metrics recalculate automatically.
+**Pool Metrics** — Metrics recalculate when loans are mapped or removed.
 
-**Delegation Option** - During loan tape standardization, you can delegate the mapping task to Admin using the Delegation button.
+**Delegation** — During standardization you can send mapping to an admin.
 
-**Loan Registry v2 with IDA** - The Loan Registry now supports a v2 interface with IDA (AI-assisted field mapping) for more efficient loan onboarding. IDA provides intelligent suggestions during loan tape standardization.
+**IDA** — While you match fields, IDA suggests matches so onboarding takes fewer manual edits.
 
-**Historical Tape Upload** - Historical Tape upload is available for loading historical loan tape data, allowing you to import past reporting periods alongside current loan tapes.
+**Historical Tape** — You can upload tapes for past reporting periods as well as the current tape.
 
-**Batch Verification v2** - Batch Verification v2 provides enhanced verification workflows with improved list management, making it easier to organize and track verification batches. Includes ABDP (Verification Agent) integration for automated batch certification — loan tapes are streamed from Snowflake to ABDP, and certification results are posted back asynchronously.
+**Verification Agent** — From Batch Verification you can send a batch for certification. The result is recorded on the batch, and both you and the verification agent are emailed when it is submitted and when it is finished.

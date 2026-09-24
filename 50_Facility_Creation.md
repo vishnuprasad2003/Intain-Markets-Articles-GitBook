@@ -132,7 +132,7 @@ If you selected **Multiple** in the Basic section:
    * Ensure all required fields are complete
 3. **Click Create Facility**
    * Click the **Create Facility** button to finalize
-   * Master commitment status changes from **Draft** to **PendingLenderApproval**
+   * Master commitment status changes from **Draft** to **Pending Lender Approval**
    * The facility is now shared with the selected lenders
    * Lenders see the facility in their **Opportunities** section
 
@@ -158,7 +158,7 @@ If you selected **Multiple** in the Basic section:
 
 **After Creating Facility:**
 
-* Master commitment status changes to **PendingLenderApproval**
+* Master commitment status changes to **Pending Lender Approval**
 * Lenders see the facility in their Opportunities section
 * Lenders can Review & Approve the facility
 

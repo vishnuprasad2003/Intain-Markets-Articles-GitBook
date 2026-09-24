@@ -1,70 +1,61 @@
 ---
 title: Asset Sale Analytics
-description: Navigate and use the analytics dashboard within asset sale deals
+description: >-
+  How to use Asset Analysis, Risk Surveillance, and Reports inside an Asset Sale
+  deal
 ---
 
 # Asset Sale Analytics
 
 ## Overview
 
-Each asset sale deal includes an embedded analytics dashboard that provides comprehensive visibility into the loan portfolio's performance, risk characteristics, and composition. The analytics dashboard is organized into distinct sections covering asset analysis, risk surveillance, and reporting. This guide explains how to navigate and use the analytics features within asset sale deals.
+Each Asset Sale deal includes an analytics dashboard for portfolio composition, performance, and risk. The same deal page is used by issuers, underwriters, and investors; what you can act on still follows deal status. Metrics refresh when the issuer uploads a new loan tape.
 
 ## How to Navigate the Platform
 
-### Accessing Analytics
+1. Open **Asset Sale** in the sidebar.
+2. Select the deal.
+3. Use the analytics tabs in deal details: **Asset Analysis**, **Risk Surveillance**, and **Reports**.
 
-1. Navigate to **Asset Sale** from the left sidebar menu
-2. Click on the deal you want to analyze
-3. Within the deal details, the analytics sections are available as tabs or navigation items
+You do not need a separate analytics login. If a tab looks empty, the deal may not have loans assigned yet, or a loan tape has not been uploaded. Analytics never change deal status by themselves.
 
-### Analytics Sections
+**Asset Analysis**
 
-The asset sale analytics dashboard is organized into three main areas:
-
-#### Asset Analysis
-
-**Overview** — A high-level summary of the loan portfolio within the deal. Shows aggregate metrics including total balance, loan count, average rates, and portfolio composition.
+* **Overview** — total balance, loan count, average rates, and a composition snapshot.
+* **Strats** — breakdowns by loan type, geography, maturity, rate type, and collateral. Use this to see concentration before you commit.
+* **Performance** — delinquency, prepayment, and loss trends over time.
+* **Receivables** — loan-level rows plus NFT status. After repayment is accepted, investors burn NFTs from this tab.
 
 ![Asset Analysis Overview](<.gitbook/assets/asset-analysis-overview (1).png>)
 
-**Strats (Stratifications)** — Breakdown of the loan portfolio by various dimensions such as loan type, geography, maturity, rate type, and collateral characteristics. Stratification views help investors understand portfolio concentration and diversification.
-
-**Performance** — Historical and current performance metrics for the loan portfolio. Includes delinquency rates, prepayment speeds, loss rates, and other performance indicators that track how the underlying loans are performing over time.
-
-**Receivables** — Detailed view of the receivables (loan assets) within the deal. Shows individual loan-level data, receivable status, and NFT information. This is also where investors can initiate the NFT burn process after repayment.
-
 ![Asset Analysis Receivables](.gitbook/assets/asset-analysis-receivables.png)
 
-#### Risk Surveillance
+**Risk Surveillance**
 
-**Overview** — Summary of risk metrics across the portfolio, providing a quick assessment of the deal's risk profile.
+* **Overview** — a short risk snapshot for the deal.
+* **Concentration** — borrower, geography, industry, and collateral concentration.
+* **Data Checks** — missing fields and inconsistent values after a tape upload.
+* **Exceptions** — rows outside expected ranges that need a person to review.
+* **Performance Triggers** — alerts when a watched metric crosses a threshold.
 
-**Concentration** — Analysis of portfolio concentration by various risk factors (borrower, geography, industry, collateral type). Helps identify concentration risks that could impact deal performance.
-
-**Data Checks** — Automated validation checks on the loan data, flagging any data quality issues, missing fields, or inconsistencies that need attention.
-
-**Exceptions** — Loans or data points that fall outside expected ranges or violate predefined rules. Exceptions highlight areas requiring manual review or investigation.
-
-**Performance Triggers** — Monitoring of predefined performance thresholds. When portfolio metrics cross trigger levels (e.g., delinquency rates exceeding a threshold), alerts are generated.
-
-#### Reports
-
-**Reports** — Access to generated reports for the deal, including portfolio summaries, performance reports, and compliance documentation.
+**Reports** — generated portfolio summaries, performance files, and compliance documents you can download.
 
 ## What You Will See
 
-**Dashboard Layout** — The analytics dashboard uses a tabbed navigation within the deal details page. Each main section (Asset Analysis, Risk Surveillance, Reports) contains sub-sections that you can navigate between.
+Analytics sit in tabs on the deal, not on a separate site. Summary cards sit above charts. Detail views use sortable, filterable tables that you can export. Filters apply to the current tab only.
 
-**Charts and Visualizations** — Portfolio metrics are presented through charts, graphs, and summary cards. Stratification views use bar charts and pie charts to show portfolio composition.
+On **Receivables**, you also see operational columns (asset ID, amount, NFT status). That tab is both analysis and the burn location.
 
-**Data Tables** — Detailed loan-level data is available in sortable, filterable tables. You can export data for external analysis.
-
-**Filters** — Analytics views support filtering by various dimensions to focus on specific subsets of the portfolio.
+Investors typically use Overview and Strats before they commit, then Performance and Receivables after the deal is **Active**. Issuers use Data Checks after every tape. Underwriters use the same tabs during review to sanity-check the package they are about to publish.
 
 ## Helpful Tips
 
-* Use the **Strats** section to quickly understand portfolio composition before making investment decisions
-* Monitor **Performance Triggers** regularly on active deals to catch early warning signs
-* The **Receivables** tab is where you manage your NFT positions, not just view analytics
-* **Data Checks** should be reviewed after each loan tape update to catch data quality issues early
-* Analytics data refreshes when the issuer uploads a new loan tape, so performance metrics reflect the latest available data
+* Use **Strats** before you submit a commitment.
+* On **Active** deals, check **Performance Triggers** after each tape upload.
+* Run **Data Checks** whenever the issuer replaces the loan tape.
+* Do not treat **Receivables** as charts only — burn lives there.
+* If numbers look stale, confirm the latest tape **As Of Date** on Deal Operations.
+* Empty charts usually mean no loans yet, or the tape has not been mapped.
+* Export a table when you need to share a snapshot outside the platform.
+* Performance is only as current as the last saved loan tape mapping.
+* You cannot approve a deal or record repayment from analytics tabs. Those actions stay on Deal Operations or Investment Operations.

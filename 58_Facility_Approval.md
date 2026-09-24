@@ -23,12 +23,12 @@ For facilities with a **multiple-branch** structure (where the main facility is 
 
 Use facility approval when:
 
-* A new master commitment appears in your **Opportunities** section with status **PendingLenderApproval**
+* A new master commitment appears in your **Opportunities** section with status **Pending Lender Approval**
 * You need to evaluate whether a facility's terms meet your investment criteria before committing capital
 * You are ready to formally commit to a facility by completing your electronic signature
 * You want to understand what your approval triggers for the broader facility workflow
 
-The facility agent triggers this process by submitting the master commitment. When they do, the status changes from Draft to **PendingLenderApproval**, and every lender listed in the facility's lender groups can see it in their Opportunities section.
+The facility agent triggers this process by submitting the master commitment. When they do, the status changes from Draft to **Pending Lender Approval**, and every lender listed in the facility's lender groups can see it in their Opportunities section.
 
 ## Review Process
 
@@ -40,7 +40,7 @@ The facility agent triggers this process by submitting the master commitment. Wh
    * The Opportunities dashboard shows master commitments (or sub-master commitments) shared with your organization
 2. **Find the Master Commitment**
    * Locate the facility awaiting your approval
-   * Status shows **PendingLenderApproval**
+   * Status shows **Pending Lender Approval**
    * For multiple-branch facilities, you see only the sub-master commitment assigned to you
 
 ### Step 2: Review the Facility
@@ -111,10 +111,10 @@ When reviewing a master commitment, evaluate the following areas:
 
 As a lender, you have two options:
 
-| Decision    | Action                                              | Result                                                                                                |
-| ----------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| **Approve** | Click Approve & E-Sign and complete the e-signature | You are committed to the facility; master commitment activates if you are the first approver          |
-| **Decline** | Do not approve                                      | The facility remains in PendingLenderApproval for other lenders; no action is recorded on your behalf |
+| Decision    | Action                                              | Result                                                                                                  |
+| ----------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **Approve** | Click Approve & E-Sign and complete the e-signature | You are committed to the facility; master commitment activates if you are the first approver            |
+| **Decline** | Do not approve                                      | The facility remains in Pending Lender Approval for other lenders; no action is recorded on your behalf |
 
 There is no formal "reject" action for lender approval — you simply do not approve. The facility can proceed when any other lender approves.
 
@@ -124,7 +124,7 @@ There is no formal "reject" action for lender approval — you simply do not app
 * **E-signature required**: You must complete the electronic signature process (Adobe Sign or ZohoSign) to finalize your approval. Clicking "Approve" alone does not complete the process — the signed document is the formal commitment.
 * **Any lender can activate**: Once any one lender approves and signs, the master commitment becomes **Active**. You do not need all lenders to approve before the facility can proceed. Each lender's approval is tracked individually with their own e-signature status.
 * **Sub-facility assignment**: For multiple-branch facilities, you only see and approve the sub-master commitment assigned to your organization, not the parent facility. Your approval activates your sub-commitment independently.
-* **Status progression is enforced**: The master commitment must be in **PendingLenderApproval** status for you to approve. You cannot approve a Draft commitment (it has not been submitted yet) or an Active commitment (it has already been approved).
+* **Status progression is enforced**: The master commitment must be in **Pending Lender Approval** status for you to approve. You cannot approve a Draft commitment (it has not been submitted yet) or an Active commitment (it has already been approved).
 * **Per-lender tracking**: Your approval, e-signature status, and timestamp are recorded against your specific lender entry in the facility's lender groups. Each lender's status is tracked independently — one lender's approval does not affect another's pending status.
 
 ## What Happens Next

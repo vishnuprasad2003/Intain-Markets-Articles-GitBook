@@ -1,113 +1,62 @@
 ---
 title: Asset Sale Investment
-description: Task-based guide for investors to participate in asset sale deals
+description: How an investor reviews, commits, signs, and settles an Asset Sale deal
 ---
 
 # Asset Sale Investment
 
 ## Overview
 
-This guide provides investors with step-by-step instructions for participating in an asset sale deal. As an investor, you review published deals, submit commitments, sign investor agreements, and complete settlement by confirming fund transfer. This covers all investor-side tasks from deal review through settlement completion.
+This is the investor path from a published deal through settlement: review the package, submit a commitment, sign the agreement, send funds, and receive the receivables NFT. You do not create the deal, assign loans, or allocate other investors. Those actions belong to the issuer and underwriter. Your path is review → commit → sign → settle → hold the NFT. Skip a step and the next button stays disabled until that earlier required gate is fully finished. Repayment and burn are a later stage — see the link at the end.
 
 ## Who Can Use This
 
-* **Investors**: All steps in this guide are performed by the investor role
+* **Investors**
+
+You only see deals from **Published** onward, and only if Buyer Visibility includes you (**All** or **Selected**). If a colleague can see a deal and you cannot, you are likely outside the Selected list — ask the issuer or underwriter, do not assume a platform error.
 
 ## When This Is Used
 
-Use this guide when:
-
-* A published asset sale deal is available for investment
-* You want to commit capital to a loan portfolio purchase
-* You need to sign an investor agreement for a deal
-* You need to confirm fund transfer during settlement
+Use this when a deal is **Published**, **Commit**, **Invest**, or in settlement and you are the buyer.
 
 ## Step-by-Step Process
 
-### Part 1: Deal Review
+### Review
 
-#### Step 1: Browse Available Deals
-
-1. Navigate to **Asset Sale** from the left sidebar menu
-2. The dashboard shows available deals, including published deals open for commitment
-3. Filter or sort deals to find relevant opportunities
-
-#### Step 2: Review Deal Details
-
-1. Click on the deal to open the deal details page
-2. Review the following:
-   * **Deal Summary**: Deal name, description, key dates
-   * **Loan Portfolio**: Assigned loans with balances, rates, and collateral details
-   * **Sale Terms**: Pricing, recourse options, settlement terms
-   * **Documentation**: Offering memorandums and supporting documents
-3. Evaluate the risk-return profile of the deal
+Open **Asset Sale**, select the deal, and review the summary, loan list, sale terms (price, dates, recourse), and documents. Check servicing setup and whether the sale is Marketed or Bilateral. Use **Asset Analysis** if you need stratifications or risk checks before you commit.
 
 ![Investor Asset Sale View](.gitbook/assets/investor-asset-sale.png)
 
-### Part 2: Commitment
+### Commit
 
-#### Step 3: Submit Your Commitment
+Enter your amount and click **Submit**. You can change it until the underwriter finalizes allocation. If the deal is over-subscribed, your final amount may be lower than you submitted. You are notified when the deal moves to **Invest**.
 
-1. Navigate to the commitment section within the deal
-2. Enter the amount you wish to invest
-3. Review the commitment details
-4. Click **Submit** to confirm your commitment
-5. Your commitment is recorded and visible to the underwriter
+### Sign
 
-#### Step 4: Await Allocation
+Open the investor agreement from deal details. Sign in Adobe Sign inside the platform (no separate Adobe account), or wait if the issuer is uploading a signed PDF. Status must become **Signed**. Signing is blocked unless the deal is **Invest**.
 
-1. The underwriter reviews all investor commitments
-2. If the deal is over-subscribed, the underwriter manages allocation
-3. You will be notified of your final allocation amount
-4. The deal status progresses as allocation is finalized
+### Settle
 
-### Part 3: Agreement Signing
-
-#### Step 5: Sign the Investor Agreement
-
-1. When your agreement is ready for signing, you receive a notification
-2. Navigate to the deal details and open your investor agreement
-3. Review the agreement terms carefully
-4. Sign electronically via Adobe Sign within the platform
-5. Your agreement status updates to **Signed**
-
-### Part 4: Settlement
-
-#### Step 6: Transfer Funds
-
-1. Once the deal enters settlement, you receive settlement details
-2. Review the transfer amount and bank wire instructions
-3. Initiate the bank wire transfer to the issuer for your allocated amount
-4. Retain your wire confirmation for reference
-
-#### Step 7: Confirm Fund Transfer
-
-1. Navigate to the deal details after completing your wire transfer
-2. Confirm that you have sent the payment on the platform
-3. The issuer will separately confirm receipt of your payment
-4. Once both confirmations are recorded, your settlement is complete
-
-#### Step 8: Receive NFT Ownership
-
-1. After settlement confirmation, the platform mints and transfers receivables NFTs to your wallet
-2. The NFTs represent your ownership of the loan receivables
-3. NFT transfer details (asset IDs, transaction hashes) appear in the deal details
-4. The deal status moves to **Active**
+1. When the deal is **Settlement In Progress**, open Confirm and Settle and use the selected rail.
+2. **Bank (Wire/ACH)** — send the wire for your allocated amount, upload the confirmation, click **Confirm Payment**. The issuer then confirms receipt and starts NFT transfer (MFA on their side).
+3. **Stablecoin** — connect the MetaMask account that matches your verified settlement address, approve USDC, and deposit into escrow. Delivery is automatic if the wallet and network are correct.
+4. After NFTs arrive, the deal is **Active**. Your position is on-chain.
 
 ## Rules & Validations
 
-* Only published deals are available for investor commitment
-* You can submit one commitment per deal (amount can be updated before finalization)
-* Investor agreement must be signed before settlement can proceed
-* Fund transfer is via bank wire (off-chain) — follow the settlement instructions exactly
-* Both your confirmation and the issuer's confirmation are required for settlement completion
-* After NFT transfer, your investment is recorded on the blockchain
+* Only **Published** / **Commit** deals accept new commitments.
+* One commitment per deal; locked after allocation.
+* Bank wire needs both your confirmation and the issuer’s receipt confirmation.
+* Stablecoin needs a verified wallet and enough USDC plus gas.
+* After NFT transfer, settlement is not reversed from the UI.
+* Your MetaMask account must match the verified settlement address. A different account will be rejected.
+
+### If a step is missing
+
+No **Submit** on commitment usually means the deal is not Published/Commit or the commit window ended. No signing action means the deal is not **Invest** or you are not the selected investor. No settle action means the agreement is still **Not Signed**.
 
 ## What Happens Next
 
-After settlement is complete and you hold receivables NFTs:
+The issuer may upload loan tapes on the Active deal. When they record repayment, use [Repayment Receipt & NFT Burn](64_Repayment_Receipt_and_NFT_Burn_Investor.md). Keep wire confirmations until the deal is **Active**. If NFT transfer is delayed on a bank settlement, the issuer still needs to complete MFA and start the transfer — you cannot mint the token yourself.
 
-* The deal enters its active post-sale lifecycle
-* The issuer manages ongoing loan tape updates
-* When the issuer initiates repayment, you will be notified
-* See **Repayment Receipt & NFT Burn** (article 64) for the repayment and closure process
+Settlement rails: [Settlement & NFT Transfer](36_Settlement_and_NFT_Transfer.md).

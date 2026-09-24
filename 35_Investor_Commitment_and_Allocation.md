@@ -1,102 +1,81 @@
 ---
 title: Investor Commitment and Allocation
 description: >-
-  Step-by-step guide for investor commitment and underwriter allocation in asset
-  sales
+  How investors commit to a published Asset Sale deal and how the underwriter
+  finalizes allocation
 ---
 
 # Investor Commitment & Allocation
 
 ## Overview
 
-After an asset sale deal is published and approved by the underwriter, investors can review the deal and submit commitments indicating their investment interest. The underwriter then manages the allocation process, deciding how much of the deal each investor receives. This guide covers the complete commitment and allocation workflow.
+After a deal is **Published**, investors submit a commitment amount. The underwriter reviews those amounts, fits them to deal capacity, and finalizes allocation. The deal then moves to **Invest** so the investor agreement can be signed. This stage does not move money yet — it only locks who is buying and for how much.
 
 ## Who Can Use This
 
-* **Investors**: Review published deals and submit commitments
-* **Underwriters (Market Makers)**: Manage investor commitments and finalize allocation
+* **Investors** — review the deal and submit or update a commitment
+* **Underwriters (Market Makers)** — see all commitments and finalize allocation
+
+Issuers can watch progress on deal details but do not enter or change commitment amounts.
 
 ## When This Is Used
 
-Use this process when:
+Use this when:
 
-* A deal has been published and is available for investor participation
-* You are an investor who wants to commit capital to an asset sale deal
-* You are an underwriter who needs to allocate a deal across multiple investors
-* You need to understand how commitments progress to finalized allocations
+* The underwriter has approved the deal and status is **Published** or **Commit**
+* You are an investor deciding how much to buy
+* You are an underwriter and commitments need to be reduced so they fit the deal
+* Allocation must be locked before agreement signing and settlement
 
 ## Step-by-Step Process
 
-### Part 1: Investor Commitment
+### Investor: review the deal
 
-#### Step 1: Review the Published Deal
-
-1. **Navigate to Asset Sale**
-   * Log in with your Investor credentials
-   * From the left sidebar menu, click on **Asset Sale**
-   * The dashboard shows published deals available for commitment
-2. **Open Deal Details**
-   * Click on the deal to view full details
-   * Review the loan portfolio, sale terms, recourse options, and documentation
-   * Evaluate the deal's risk-return profile before committing
+1. Log in as Investor and open **Asset Sale**. Draft, Pending Review, and Approved deals are hidden.
+2. Open the deal. Review the loan list, sale terms (price basis, cutoff, settlement date, commit window), recourse, and documents.
+3. Use **Asset Analysis** if you need stratifications or risk checks before you commit.
 
 ![Investor Deals View](.gitbook/assets/investor-deals-view.png)
 
-#### Step 2: Submit a Commitment
+### Investor: submit a commitment
 
-1. **Enter Commitment Details**
-   * Navigate to the commitment section of the deal
-   * Enter the amount you wish to invest
-   * Review the commitment terms
-2. **Confirm Commitment**
-   * Review your commitment details
-   * Click **Submit** to confirm your commitment
-   * Your commitment is recorded and visible to the underwriter
+1. Open the commitment section on the deal.
+2. Enter the amount you want to invest. It cannot be higher than the remaining available amount.
+3. Review the amount and click **Submit**.
+4. The underwriter sees your commitment immediately. You can change the amount until allocation is finalized.
 
-### Part 2: Underwriter Allocation
+If the commit window has ended, new or updated commitments are not accepted.
 
-#### Step 3: Review All Commitments
+### Underwriter: review and allocate
 
-1. **Access Commitment Overview**
-   * The underwriter logs in and navigates to the deal
-   * The commitment section shows all investor commitments with amounts
-   * Review total committed amount versus deal size
+1. Open the deal and the commitment list (investor name and amount).
+2. Compare **total committed** to deal size:
+   * Under-subscribed — you can wait for more commitments or allocate what you have.
+   * Fully subscribed — amounts already fit.
+   * Over-subscribed — reduce amounts so they fit capacity.
+3. Confirm the final allocation. Status becomes **Invest**. Investors are notified of their locked amount.
 
-#### Step 4: Finalize Allocation
+### Agreement signing
 
-1. **Manage Allocation**
-   * Review each investor's commitment amount
-   * Adjust allocations if commitments exceed deal size (over-subscription)
-   * Ensure allocation amounts align with deal terms and investor agreements
-2. **Confirm Final Allocation**
-   * Once allocation is finalized, confirm the allocation
-   * The deal status progresses to **Invest**
-   * Investors are notified of their final allocation amounts
+Signing is allowed only in **Invest**. The selected investor signs in Adobe Sign, or the issuer uploads a signed PDF. Status must be **Signed** before settlement. Details: [Investor Agreement & E-Signature](40_Investor_Agreement_and_E-Signature.md).
 
-### Part 3: Agreement Execution
+### What you will see
 
-#### Step 5: Investor Agreement Signing
+On the investor dashboard, committed deals show your amount and whether allocation is still open. On the underwriter view, the Investor(s) column and commitment list show every submitted amount so you can see over-subscription before you lock allocation. After **Invest**, amounts are read-only and the agreement action becomes the next step.
 
-1. **Sign Investor Agreements**
-   * Each investor must sign their investor agreement before settlement
-   * Agreements can be signed electronically via Adobe Sign
-   * Alternatively, the issuer can upload manually signed agreements
-   * Agreement status is tracked per investor (Pending, Signed)
+If you cannot find a deal, check Buyer Visibility and that status is at least **Published**. Draft deals never appear for investors.
 
 ## Rules & Validations
 
-* Only published deals are available for investor commitments
-* Investors can only commit once per deal (commitment amount can be updated before finalization)
-* The underwriter must finalize allocation before the deal can proceed to settlement
-* All investor agreements must be signed or uploaded before settlement begins
-* Commitment amounts cannot exceed the deal's total available amount
-* Once allocation is finalized, commitment amounts are locked
+* Only **Published** or **Commit** deals accept commitments.
+* One commitment per investor per deal; the amount can change until allocation is locked.
+* Allocation cannot exceed deal capacity.
+* After finalize, amounts cannot be edited.
+* Settlement cannot start until the agreement is **Signed**.
+* Buyer Visibility (**All** or **Selected**) controls which investors can see the deal.
 
 ## What Happens Next
 
-After commitments are finalized and agreements are signed:
+After allocation and signing, the deal is ready for [Settlement & NFT Transfer](36_Settlement_and_NFT_Transfer.md). Investors prepare the selected rail (bank wire or stablecoin). The issuer and underwriter watch settlement from the same deal page.
 
-* The deal is ready to proceed to settlement
-* The next step is **Settlement & NFT Transfer** (see article 36)
-* Investors prepare for fund transfer via bank wire
-* The platform begins recording settlement events on the blockchain
+If allocation must change after **Invest**, that is not an in-place edit — the deal would need a controlled unwind with your operations team. Do not assume you can reopen commitments from the UI.

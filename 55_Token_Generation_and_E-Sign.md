@@ -41,7 +41,7 @@ E-signatures are required at several points in the credit facility workflow:
 1. Borrower creates term sheet
 2. Clicks to sign via Adobe Sign
 3. Completes e-signature
-4. Status changes to **BorrowerSigned**
+4. Status changes to **Signed by the borrower**
 5. Can now submit to FA
 
 ### 2. Master Commitment E-Sign (Lender)

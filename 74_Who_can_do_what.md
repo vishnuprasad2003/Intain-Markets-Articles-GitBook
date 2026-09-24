@@ -10,214 +10,200 @@ description: >-
 
 ## Overview
 
-This reference guide provides a comprehensive view of what each role can do in Intain Markets. The platform enforces these permissions at the API level — not just in the UI — so they cannot be bypassed. Your role is assigned when your account is created and determines both what you can see and what actions are available to you.
+Your role decides what you can see and which actions are offered to you. The platform checks that role, and the status of the item, before it lets an action through. Hiding a button is not the only control. If you are the wrong role, or the item is in the wrong status, the action is refused.
 
-Two factors control whether you can perform an action: your **role** (are you the right type of user?) and the **status** of the item (is it in the right state for this action?). Both must be satisfied.
+Two things must both be true: you are the right role, and the item is in a status that allows that action.
 
 ## Roles Covered
 
-The platform defines the following roles:
+| Role                              | Primary Function                                                               |
+| --------------------------------- | ------------------------------------------------------------------------------ |
+| **Issuer / Borrower**             | Creates pools, loans, and term sheets, and starts transactions                 |
+| **Market Maker / Facility Agent** | Reviews pools, structures deals, and approves term sheets and funding requests |
+| **Investor / Lender**             | Reviews opportunities, approves facilities, and provides funds                 |
+| **Underwriter**                   | Reviews Asset Sale deals before investors can commit                           |
+| **Servicer**                      | Uploads loan tapes for deals assigned to them                                  |
+| **Rating Agency**                 | Reviews pools that were shared with them and leaves feedback                   |
+| **Paying Agent**                  | Moves funds for securitization                                                 |
+| **Admin**                         | Manages organizations, users, and KYC, and supports the platform               |
 
-| Role                              | Primary Function                                                                               |
-| --------------------------------- | ---------------------------------------------------------------------------------------------- |
-| **Issuer / Borrower**             | Creates and manages pools, loans, and term sheets. Originates transactions.                    |
-| **Market Maker / Facility Agent** | Reviews pools, structures deals, approves term sheets and funding requests. Intermediary role. |
-| **Investor / Lender**             | Reviews opportunities, approves commitments, provides funding. Capital provider role.          |
-| **Underwriter**                   | Reviews and approves asset sale deals before they reach investors. Gatekeeper role.            |
-| **Servicer**                      | Uploads loan tapes for assigned deals. Operational support role.                               |
-| **Rating Agency**                 | Reviews shared pools and provides feedback. Advisory role.                                     |
-| **Paying Agent**                  | Executes fund transfers for securitization. Settlement role.                                   |
-| **Admin**                         | Manages organizations, users, KYC, and platform-wide operations. Administrative role.          |
+The same organization can hold more than one of these roles, but each session uses one role. What you see changes when you sign in as a different role.
 
 ## What Each Role Can Do
 
 ### Issuer / Borrower
 
-**Pools Module:**
+**Pools**
 
-| Action                              | When Available                                 |
-| ----------------------------------- | ---------------------------------------------- |
-| Create Pool                         | Always (via Set-up Pool button)                |
-| Edit Pool                           | Pool status: Created                           |
-| Share Pool                          | Pool status: Created or Preview                |
-| Submit to Market Maker (Start Deal) | After NFT minting complete                     |
-| Accept / Reject Loan Removal        | When market maker or investor requests removal |
-| Provide Feedback                    | On own pools only                              |
+| Action                                | When Available                                                     |
+| ------------------------------------- | ------------------------------------------------------------------ |
+| Create a pool                         | Any time, from **Set-up Pool**                                     |
+| Edit a pool                           | Pool status is Created                                             |
+| Share a pool                          | Pool status is Created or Preview                                  |
+| Submit to a market maker (Start Deal) | After loan NFTs for the pool have been minted                      |
+| Accept or decline a loan removal      | When a market maker or investor has asked for a loan to be removed |
+| Leave feedback                        | On your own pools                                                  |
 
-**Loans Module:**
+**Loans**
 
-| Action                                  | When Available                                   |
-| --------------------------------------- | ------------------------------------------------ |
-| Upload Loan File                        | Always (via Imports section)                     |
-| Trigger LTS (Loan Tape Standardization) | After upload                                     |
-| Save Mapping                            | After LTS mapping                                |
-| Map Loans to Pool                       | From Loan Registry; loan not already mapped      |
-| Add Loans to Batch                      | From Loan Registry; loan not already in batch    |
-| Self Certify Batch                      | Batch status: Pending (MFA required: `NFT_MINT`) |
-| Mint NFT                                | Batch status: Reviewed                           |
-| View NFT                                | After minting                                    |
+| Action                    | When Available                                                |
+| ------------------------- | ------------------------------------------------------------- |
+| Upload a loan file        | Any time, from Imports                                        |
+| Standardize the loan tape | After the file is uploaded                                    |
+| Save the field mapping    | After standardization                                         |
+| Map loans to a pool       | From the Loan Registry, if the loan is not already mapped     |
+| Add loans to a batch      | From the Loan Registry, if the loan is not already in a batch |
+| Self-certify a batch      | Batch status is Pending. You confirm with a one-time code     |
+| Mint NFTs                 | Batch status is Reviewed                                      |
+| View NFTs                 | After they are minted                                         |
 
-**Credit Facility Module (as Borrower):**
+**Credit Facility (as borrower)**
 
-| Action                                    | When Available                                                         |
-| ----------------------------------------- | ---------------------------------------------------------------------- |
-| Create Term Sheet                         | Always (via Term Sheet Setup)                                          |
-| Sign Term Sheet                           | Term sheet status: Draft                                               |
-| Submit Term Sheet to FA                   | Term sheet status: BorrowerSigned                                      |
-| Edit Term Sheet (after changes requested) | Term sheet status: CHANGES\_REQUESTED                                  |
-| Map Loans to Facility                     | MC status: ACTIVE and deal modelling completed                         |
-| Create Funding Request                    | MC status: ACTIVE and deal modelling completed                         |
-| Edit Funding Request                      | Funding request status: DRAFT or CHANGES\_REQUESTED                    |
-| Submit Funding Request                    | Funding request status: DRAFT (with all required fields and documents) |
+| Action                    | When Available                                                          |
+| ------------------------- | ----------------------------------------------------------------------- |
+| Create a term sheet       | Any time, from Term Sheet Setup                                         |
+| Sign a term sheet         | Status is **Draft**                                                     |
+| Submit a term sheet       | Status is **Signed**                                                    |
+| Edit a term sheet         | Status is **Changes Requested**                                         |
+| Map loans to the facility | The facility is **Active** and deal modelling is complete               |
+| Create a funding request  | The facility is **Active** and deal modelling is complete               |
+| Edit a funding request    | Status is **Draft** or **Changes Requested**                            |
+| Submit a funding request  | Status is **Draft**, and the required fields and documents are complete |
 
-**Asset Sale Module (as Issuer):**
+**Asset Sale (as issuer)**
 
-| Action                      | When Available                                                     |
-| --------------------------- | ------------------------------------------------------------------ |
-| Create Deal                 | Always (via Asset Sale module)                                     |
-| Assign Loans to Deal        | Deal status: Draft                                                 |
-| Publish Deal                | After loan assignment complete                                     |
-| Initiate Repayment          | Deal status: Active (post-settlement)                              |
-| Transfer NFTs               | Deal status: Settlement In Progress (MFA required: `NFT_TRANSFER`) |
-| Approve Token Transfer (FT) | When token approval is needed (MFA required: `FT_APPROVE`)         |
+| Action                   | When Available                                                              |
+| ------------------------ | --------------------------------------------------------------------------- |
+| Create a deal            | Any time, from Asset Sale                                                   |
+| Assign loans to a deal   | Deal status is **Draft**                                                    |
+| Publish a deal           | After the loans are assigned                                                |
+| Start repayment          | Deal status is **Active**, after settlement                                 |
+| Transfer NFTs            | Deal status is **Settlement In Progress**. You confirm with a one-time code |
+| Approve a token transfer | When a token approval is required. You confirm with a one-time code         |
 
-**Data Room:**
+**Data room**
 
-| Action         | When Available                           |
-| -------------- | ---------------------------------------- |
-| Upload Files   | For pools/deals where you are the issuer |
-| Delete Files   | For pools/deals where you are the issuer |
-| Rename Files   | For pools/deals where you are the issuer |
-| Download Files | For your own pools/deals                 |
-| Create Folders | For pools/deals where you are the issuer |
+| Action                          | When Available                              |
+| ------------------------------- | ------------------------------------------- |
+| Upload, delete, or rename files | On pools and deals where you are the issuer |
+| Download files                  | On your own pools and deals                 |
+| Create folders                  | On pools and deals where you are the issuer |
 
 ### Market Maker / Facility Agent
 
-**Pools Module:**
+**Pools**
 
-| Action               | When Available               |
-| -------------------- | ---------------------------- |
-| Review Pool          | When shared with you         |
-| Accept Mandate       | Pool status: Mandate Pending |
-| Reject Mandate       | Pool status: Mandate Pending |
-| Provide Feedback     | After accepting mandate      |
-| Request Loan Removal | After accepting mandate      |
-| Share to Investor    | Pool status: Deal            |
+| Action                 | When Available                   |
+| ---------------------- | -------------------------------- |
+| Review a pool          | When it has been shared with you |
+| Accept the mandate     | Pool status is Mandate Pending   |
+| Decline the mandate    | Pool status is Mandate Pending   |
+| Leave feedback         | After you accept the mandate     |
+| Request loan removal   | After you accept the mandate     |
+| Share with an investor | Pool status is Deal              |
 
-**Credit Facility Module (as Facility Agent):**
+**Credit Facility (as facility agent)**
 
-| Action                                        | When Available                                      |
-| --------------------------------------------- | --------------------------------------------------- |
-| Review Term Sheet                             | Term sheet status: FAReview                         |
-| Approve Term Sheet                            | Term sheet status: FAReview                         |
-| Reject Term Sheet                             | Term sheet status: FAReview                         |
-| Request Changes on Term Sheet                 | Term sheet status: FAReview                         |
-| Configure Master Commitment (Create Facility) | MC status: Draft                                    |
-| Add Lenders to Facility                       | MC status: Draft                                    |
-| Create Sub-Facility                           | MC status: Draft, contract type: multiple           |
-| Submit MC for Lender Approval                 | MC status: Draft (after configuration complete)     |
-| Set Up Deal (Deal Modelling)                  | MC status: ACTIVE                                   |
-| Review Funding Request                        | Funding request status: FAReview                    |
-| Approve Funding Request                       | Funding request status: FAReview                    |
-| Reject Funding Request                        | Funding request status: FAReview                    |
-| Request Changes on Funding Request            | Funding request status: FAReview                    |
-| Approve Funding Notice                        | After funding request approved and notice generated |
-| E-sign for Each Lender                        | After funding notice approved                       |
+| Action                                                           | When Available                                                           |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Review, approve, reject, or request changes on a term sheet      | The term sheet is **In review**                                          |
+| Set up the facility and add lenders                              | Facility status is **Draft**                                             |
+| Create a sub-facility                                            | Facility status is **Draft**, and the contract type allows more than one |
+| Send the facility for lender approval                            | Facility status is **Draft**, and setup is complete                      |
+| Set up the deal (deal modelling)                                 | Facility status is **Active**                                            |
+| Review, approve, reject, or request changes on a funding request | The request is **In review**                                             |
+| Approve a funding notice                                         | After the funding request is approved and the notice exists              |
+| Sign for each lender                                             | After the funding notice is approved                                     |
 
 ### Investor / Lender
 
-**Pools Module:**
+**Pools**
 
-| Action               | When Available                          |
-| -------------------- | --------------------------------------- |
-| Review Pool          | When shared with you (Pools section)    |
-| Provide Feedback     | If feedback permission enabled on share |
-| Download Data        | If download permission enabled on share |
-| Request Loan Removal | After pool shared with you              |
+| Action               | When Available                                   |
+| -------------------- | ------------------------------------------------ |
+| Review a pool        | When it has been shared with you                 |
+| Leave feedback       | If feedback was allowed when the pool was shared |
+| Download data        | If download was allowed when the pool was shared |
+| Request loan removal | After the pool is shared with you                |
 
-**Credit Facility Module (as Lender):**
+**Credit Facility (as lender)**
 
-| Action                             | When Available                                           |
-| ---------------------------------- | -------------------------------------------------------- |
-| Review Master Commitment           | MC status: PendingLenderApproval (Opportunities section) |
-| Approve & E-Sign Master Commitment | MC status: PendingLenderApproval                         |
-| Review Funding Notice              | After FA completes e-sign for your lender entry          |
-| Select Payment Method              | During funding notice review                             |
-| Confirm and Settle                 | After transferring funds                                 |
+| Action                        | When Available                                            |
+| ----------------------------- | --------------------------------------------------------- |
+| Review the facility           | Status is **Pending**, in Opportunities                   |
+| Approve and sign the facility | Status is **Pending**                                     |
+| Review a funding notice       | After the facility agent has signed for your organization |
+| Choose a payment method       | While you are reviewing the notice                        |
+| Confirm and settle            | After you have transferred the funds                      |
 
-**Asset Sale Module (as Investor):**
+**Asset Sale (as investor)**
 
-| Action                  | When Available                                  |
-| ----------------------- | ----------------------------------------------- |
-| View Available Deals    | When deals are published and approved           |
-| Commit to Deal          | Deal status: Approved / Commit                  |
-| Sign Investor Agreement | After commitment                                |
-| Confirm Settlement      | After agreement signed and settlement initiated |
-| Confirm Repayment       | When repayment initiated                        |
-| Burn NFTs               | After repayment confirmed                       |
+| Action                      | When Available                                           |
+| --------------------------- | -------------------------------------------------------- |
+| View deals                  | When they are published                                  |
+| Commit to a deal            | The deal is open for commitment                          |
+| Sign the investor agreement | After you commit                                         |
+| Confirm settlement          | After the agreement is signed and settlement has started |
+| Confirm repayment           | When the issuer has started repayment                    |
+| Burn NFTs                   | After repayment is confirmed                             |
 
 ### Underwriter
 
-**Asset Sale Module:**
-
-| Action                     | When Available                                  |
-| -------------------------- | ----------------------------------------------- |
-| Review Deal                | When deal is published (status: Pending Review) |
-| Approve Deal               | After review                                    |
-| Reject Deal                | After review                                    |
-| Manage Investor Allocation | After deal approval                             |
+| Action                     | When Available                 |
+| -------------------------- | ------------------------------ |
+| Review a deal              | The deal is **Pending Review** |
+| Approve or reject a deal   | After you review it            |
+| Manage investor allocation | After you approve the deal     |
 
 ### Servicer
 
-| Action                   | When Available                      |
-| ------------------------ | ----------------------------------- |
-| View Assigned Deals      | Always (only deals assigned to you) |
-| Upload Monthly Loan Tape | For assigned deals                  |
-| View Deal Details        | For assigned deals                  |
+| Action                       | When Available                               |
+| ---------------------------- | -------------------------------------------- |
+| View assigned deals          | Any time. You only see deals assigned to you |
+| Upload the monthly loan tape | For those deals                              |
+| View deal details            | For those deals                              |
 
 ### Rating Agency
 
-| Action            | When Available                 |
-| ----------------- | ------------------------------ |
-| View Shared Pools | When pools are shared with you |
-| Provide Feedback  | If feedback permission enabled |
-| Download Data     | If download permission enabled |
+| Action            | When Available                       |
+| ----------------- | ------------------------------------ |
+| View shared pools | When a pool is shared with you       |
+| Leave feedback    | If feedback was allowed on the share |
+| Download data     | If download was allowed on the share |
 
-Rating agencies cannot request loan removal, create pools, or approve anything.
+A rating agency cannot request loan removal, create pools, or approve items.
 
 ### Paying Agent
 
-| Action                  | When Available                                                 |
-| ----------------------- | -------------------------------------------------------------- |
-| Execute FT Transfer     | When fund distribution is needed (MFA required: `FT_TRANSFER`) |
-| View Settlement Details | For assigned securitization deals                              |
+| Action                  | When Available                                                                |
+| ----------------------- | ----------------------------------------------------------------------------- |
+| Transfer funds          | When a securitization distribution is ready. You confirm with a one-time code |
+| View settlement details | For the securitization deals assigned to you                                  |
 
 ### Admin
 
-| Action                            | When Available                                 |
-| --------------------------------- | ---------------------------------------------- |
-| Manage Organizations              | Always                                         |
-| Approve / Reject KYC              | When KYC submissions are pending               |
-| Process LTS Delegation            | When delegated by issuer                       |
-| Process Deal Modelling Delegation | When delegated by facility agent               |
-| View Platform-Wide Analytics      | Always                                         |
-| View-As (Impersonate) User        | Always (read-only mode only)                   |
-| Run Status Migrations             | When administrative data fixes are needed      |
-| Access Audit Module               | Always (sees all organizations' events)        |
-| Manage User Accounts              | Always (activate, deactivate, update profiles) |
+| Action                                        | When Available                                      |
+| --------------------------------------------- | --------------------------------------------------- |
+| Manage organizations                          | Any time                                            |
+| Approve or reject KYC                         | When a KYC submission is waiting                    |
+| Process a delegated loan-tape standardization | When an issuer has delegated it                     |
+| Process delegated deal modelling              | When a facility agent has delegated it              |
+| View platform-wide analytics                  | Any time                                            |
+| View the platform as another user             | Any time. This view is read-only                    |
+| Apply an administrative status correction     | When a data fix is required                         |
+| Open the activity log                         | Any time. Admins see events across organizations    |
+| Manage user accounts                          | Any time. Activate, deactivate, or update a profile |
 
 ## Important Access Notes
 
-**Role determines visibility and actions** — You only see items that are shared with you, assigned to you, or where you have a defined role. An investor cannot see a pool that has not been shared with them. A lender cannot see a funding notice until the facility agent has completed the e-signature for their specific entry.
+**Your role limits the list.** You see items that are shared with you, assigned to you, or created by your organization. An investor does not see a pool that was never shared. A lender does not see a funding notice until the facility agent has signed for that lender.
 
-**Status determines action availability** — Actions are enabled and disabled based on the current status of the item. A term sheet in Draft status can be edited; a term sheet in FAReview cannot be edited by the borrower. These rules are enforced at the backend, not just in the UI.
+**Status limits the buttons.** A term sheet in **Draft** can be edited. A term sheet **In review** cannot be edited by the borrower. A facility agent cannot approve a term sheet that is still **Draft**.
 
-**Both role AND status must be satisfied** — Having the right role is necessary but not sufficient. You also need the item to be in the right status. A facility agent with the role to approve term sheets cannot approve one that is still in Draft status — it must be in FAReview.
+**Both checks apply together.** The right role is not enough. The item also has to be in the right status.
 
-**MFA is required for blockchain operations** — NFT minting, NFT transfer, FT approval, and FT transfer all require multi-factor authentication. Even if you have the correct role and the item is in the correct status, you must verify your identity with a one-time password before these operations can proceed.
+**Sensitive blockchain steps ask for a one-time code.** Minting NFTs, transferring NFTs, approving a token transfer, and moving funds all ask you to confirm with a one-time code, even when your role and the status already allow the action.
 
-**Platform enforces permissions automatically** — You cannot bypass role restrictions. The platform checks your role and the item's status on every request. If an action is not available to you, the API returns an error regardless of how the request is made.
+**Sharing decides who sees a pool.** The issuer chooses who receives the pool, and separately whether those people can leave feedback or download data.
 
-**Sharing controls visibility** — For pools, the issuer controls who can see the pool through sharing settings. Sharing permissions separately control feedback access and download access. Recipients only see pools that have been shared with them.
-
-**Per-lender visibility on funding notices** — A lender can only see a funding notice after the facility agent has completed the e-signature for that specific lender. Until the FA signs for you, the funding notice does not appear in your view, even though it may already be visible to other lenders whose signatures are complete.
+**Funding notices are per lender.** You see a notice after the facility agent signs for your organization. Other lenders may already see theirs.

@@ -7,303 +7,183 @@ description: Understand why actions are enabled or disabled in Intain Markets
 
 ## Overview
 
-Intain Markets automatically enables or disables actions based on your role, the item's status, and whether prerequisites are met.
+A button is on or off based on your role, the item’s status, and whether earlier steps are finished.
 
-## Pool Actions
+## Roles Covered
 
-### Created Status
+Actions below are grouped by the person who can take them: Issuer, Market Maker, Investor, Borrower, Facility Agent, Lender, and Underwriter. If you are in a different role, the button stays off.
 
-**As Issuer:**
+## What Each Role Can Do
 
-* **Enabled:** Edit pool details (Edit button)
-* **Enabled:** Add/remove loans
-* **Enabled:** Share pool with organizations
-* **Disabled:** Start Deal (NFT minting not complete)
+### Pool actions
 
-### Preview Status
+**Created — Issuer**
 
-**As Issuer:**
+* On: Edit pool details, add or remove loans, share the pool
+* Off: Start Deal, until NFT minting is complete
 
-* **Enabled:** Edit pool details
-* **Enabled:** Respond to feedback
-* **Enabled:** Share with additional organizations
-* **Enabled:** Start Deal (if NFT minting complete)
-* **Enabled:** Accept/reject loan removal requests
+**Preview — Issuer**
 
-**As Market Maker:**
+* On: Edit, respond to feedback, share with more organizations, Start Deal if NFTs are minted, accept or reject loan removal requests
 
-* **Enabled:** View pool details
-* **Enabled:** Accept or Reject mandate
-* **Disabled:** Edit pool (issuer only)
-* **Disabled:** Provide feedback (must accept mandate first)
+**Preview — Market Maker**
 
-### Under Review Status (After Accept)
+* On: View, Accept, Reject
+* Off: Edit (issuer only), feedback until you accept the mandate
 
-**As Market Maker:**
+**Under Review — Market Maker**
 
-* **Enabled:** Provide feedback
-* **Enabled:** Request loan removal
-* **Enabled:** Share to investors
-* **Disabled:** Edit pool
+* On: Feedback, request loan removal, share to investors
+* Off: Edit
 
-**As Investor:**
+**Under Review — Investor**
 
-* **Enabled:** View pool details
-* **Enabled:** Provide feedback (if permission enabled)
-* **Enabled:** Download data (if permission enabled)
-* **Disabled:** Edit pool
+* On: View. Feedback and download only if those permissions were turned on for your share
+* Off: Edit
 
-### Deal Status
+**Deal — Issuer**
 
-**As Issuer:**
+* On: View
+* Off: Edit and Share. The deal is committed
 
-* **Enabled:** View pool details
-* **Disabled:** Edit pool (finalized)
-* **Disabled:** Share (deal committed)
+### Loan actions
 
-## Loan Actions
+**Loan Registry — Issuer**
 
-### Loan Registry
+* On: Map to Pool if the loan is not already in a pool. Add to Batch if the loan is not already in a batch
+* Off: Map to Pool if it is already in another pool. Add to Batch if it is already in a batch
 
-**As Issuer:**
+**Batch Verification**
 
-* **Enabled:** Map to Pool (if loan not already mapped)
-* **Enabled:** Add to Batch (if loan not already in batch)
-* **Disabled:** Map to Pool (if loan already mapped to another pool)
-* **Disabled:** Add to Batch (if loan already in batch)
+* Pending: Self Certify is on. Mint NFT is off
+* Reviewed: View details is on. Mint NFT is on in Certificates
 
-### Batch Verification
+**Certificates**
 
-**Status: Pending**
+* Pending: View NFT and Mint NFT are off
+* Reviewed: View NFT and Mint NFT are on
+* Verified: View NFT is on. Mint NFT is off because minting is already done
 
-* **Enabled:** Self Certify
-* **Disabled:** Mint NFT
+### Term sheet actions
 
-**Status: Reviewed**
+**Draft — Borrower**
 
-* **Enabled:** View details
-* **Enabled:** Mint NFT (in Certificates section)
+* On: Edit, upload documents, Create Draft (starts e-sign)
+* Off: Submit to FA until you have signed
 
-### Certificates Section
+**Signed by the borrower — Borrower**
 
-**Status: Pending**
+* On: Submit to FA, view
+* Off: Edit, unless the facility agent requests changes
 
-* **Disabled:** View NFT
-* **Disabled:** Mint NFT
+**Under Review — Borrower**
 
-**Status: Reviewed**
+* On: View
+* Off: Edit, while you wait for the facility agent
 
-* **Enabled:** View NFT
-* **Enabled:** Mint NFT
+**Under Review — Facility Agent**
 
-**Status: Verified**
+* On: Approve, Reject, Request Changes
+* Off: Edit
 
-* **Enabled:** View NFT
-* **Disabled:** Mint NFT (already minted)
+**Changes Requested — Borrower**
 
-## Term Sheet Actions
+* On: Edit, update, resubmit, and sign again
 
-### Draft Status
+**Accepted — Borrower**
 
-**As Borrower:**
+* On: View
+* Off: Edit. The master commitment has been created
 
-* **Enabled:** Edit all fields
-* **Enabled:** Upload documents
-* **Enabled:** Create Draft (initiates e-sign)
-* **Disabled:** Submit to FA (must sign first)
+### Master commitment actions
 
-### BorrowerSigned Status
+**Draft — Facility Agent**
 
-**As Borrower:**
+* On: Edit the configuration, add lenders, create sub-facilities if the facility is multiple branch, Create Facility
 
-* **Enabled:** Submit to FA
-* **Enabled:** View term sheet
-* **Disabled:** Edit (must get changes requested)
+**Pending Lender Approval — Facility Agent**
 
-### FAReview Status
+* On: View
+* Off: Edit
 
-**As Borrower:**
+**Pending Lender Approval — Lender**
 
-* **Enabled:** View term sheet
-* **Disabled:** Edit (waiting for FA decision)
+* On: Review & Approve, including e-sign
+* Off: Edit
 
-**As Facility Agent:**
+**Active — Facility Agent**
 
-* **Enabled:** Approve
-* **Enabled:** Reject
-* **Enabled:** Request Changes
-* **Disabled:** Edit
+* On: Set Up Deal, review funding requests
+* Off: Edit the facility structure
 
-### CHANGES\_REQUESTED Status
+**Active — Borrower**
 
-**As Borrower:**
+* On: Map loans and create a funding request after deal modelling is complete
+* Off: Create a funding request while deal modelling is still in progress
 
-* **Enabled:** Edit term sheet
-* **Enabled:** Update and resubmit
-* **Enabled:** Re-sign via e-sign
+### Funding request actions
 
-### Accepted Status
+**DRAFT — Borrower**
 
-**As Borrower:**
+* On: Edit, Submit to FA
+* Off: Approve. That is the facility agent’s action
 
-* **Enabled:** View term sheet
-* **Disabled:** Edit (approved, MC auto-created)
+**Under Review — Borrower**
 
-## Master Commitment Actions
+* On: View
+* Off: Edit
 
-### Draft Status
+**Under Review — Facility Agent**
 
-**As Facility Agent:**
+* On: Approve, Reject, Request Changes
 
-* **Enabled:** Edit facility configuration
-* **Enabled:** Add lenders
-* **Enabled:** Create sub-facilities (if Multiple Branch)
-* **Enabled:** Create Facility (submit to lenders)
+### Funding notice actions
 
-### PendingLenderApproval Status
+**Pending Token Generated — Facility Agent**
 
-**As Facility Agent:**
+* On: Approve
+* Off: E-sign until you approve
 
-* **Enabled:** View details
-* **Disabled:** Edit configuration
+**After the facility agent approves**
 
-**As Lender:**
+* On: E-sign, from 0/n through n/n
 
-* **Enabled:** Review & Approve (with e-sign)
-* **Disabled:** Edit configuration
+**After your e-sign is complete — Lender**
 
-### Active Status
+* On: Review Funding Notice, select a payment method, Confirm and Settle
 
-**As Facility Agent:**
+### Asset sale actions
 
-* **Enabled:** Set Up Deal (deal modelling)
-* **Enabled:** Review funding requests
-* **Disabled:** Edit facility structure
+**Create Deal — Issuer:** on when you are signed in as Issuer. Off for Underwriter and Investor.
 
-**As Borrower:**
+**Publish Deal — Issuer:** on in Draft when at least one loan is assigned. Off in any other status, or when no loans are assigned.
 
-* **Enabled:** Map loans (if deal modelling complete)
-* **Enabled:** Create funding request (if deal modelling complete)
-* **Disabled:** Create funding request (if deal modelling not complete)
+**Approve or Reject — Underwriter:** on in Pending Review. Off in every other status, and off if you are not an Underwriter.
 
-## Funding Request Actions
+**Submit Commitment — Investor:** on when the deal is Published. Off otherwise, and off if you are not an Investor.
 
-### DRAFT Status
+**Finalize Allocation — Underwriter:** on after at least one commitment is in. Off before that.
 
-**As Borrower:**
+**Initiate Repayment — Issuer:** on when the deal is Active and a loan tape has been uploaded. Off otherwise.
 
-* **Enabled:** Edit request details
-* **Enabled:** Submit to FA
-* **Disabled:** Approve (FA role only)
+**Confirm Repayment Receipt — Investor:** on during Repayment In Progress. Off otherwise.
 
-### FAReview Status
+**Burn NFT — Investor:** on after you confirm repayment receipt. Off before that.
 
-**As Borrower:**
+## Important Access Notes
 
-* **Enabled:** View request
-* **Disabled:** Edit
+| Reason                   | Example                                                                        |
+| ------------------------ | ------------------------------------------------------------------------------ |
+| Wrong status             | A term sheet in Draft cannot be submitted until it is signed                   |
+| Missing step             | A funding request stays off until deal modelling is complete                   |
+| Waiting for someone else | A lender does not see a funding notice until the facility agent signs for them |
+| Wrong role               | Only the facility agent can approve a term sheet                               |
+| Already done             | You cannot approve an item that is already approved                            |
 
-**As Facility Agent:**
+To turn an action on:
 
-* **Enabled:** Approve
-* **Enabled:** Reject
-* **Enabled:** Request Changes
-
-## Funding Notice Actions
-
-### Pending Token Generated Status
-
-**As Facility Agent:**
-
-* **Enabled:** Approve
-* **Disabled:** E-sign (must approve first)
-
-### After FA Approves
-
-**As Facility Agent:**
-
-* **Enabled:** E-sign (0/n → n/n)
-
-### After E-Sign Complete (Per Lender)
-
-**As Lender:**
-
-* **Enabled:** Review Funding Notice
-* **Enabled:** Select Payment Method
-* **Enabled:** Confirm and Settle
-
-## Common Reasons Actions Are Disabled
-
-| Reason                  | Example                                                     |
-| ----------------------- | ----------------------------------------------------------- |
-| Wrong Status            | Cannot submit term sheet in Draft (must sign first)         |
-| Missing Prerequisites   | Cannot create funding request (deal modelling not complete) |
-| Waiting for Other Party | FA must e-sign for each lender before they see notice       |
-| Role Permissions        | Only FA can approve term sheets                             |
-| Already Completed       | Cannot approve already approved item                        |
-
-## How to Enable Disabled Actions
-
-1. **Check Status** - Verify item is in correct status
-2. **Complete Prerequisites** - Fill required fields, upload documents, complete e-signatures
-3. **Verify Role** - Confirm you're logged in with correct role
-4. **Wait for Others** - Some actions require another party to act first
-5. **Check Tooltips** - Hover over disabled buttons for explanations
-
-## Asset Sale Actions
-
-### Create Deal
-
-**As Issuer:**
-
-* **Enabled:** When logged in with an Issuer role
-* **Disabled:** For non-Issuer roles (Underwriter, Investor)
-
-### Publish Deal
-
-**As Issuer:**
-
-* **Enabled:** When deal is in Draft status and at least one loan has been assigned to the deal
-* **Disabled:** When deal is not in Draft, or no loans are assigned
-
-### Approve / Reject Deal
-
-**As Underwriter:**
-
-* **Enabled:** When deal is in Pending Review status
-* **Disabled:** When deal is in any other status, or user is not an Underwriter
-
-### Submit Commitment
-
-**As Investor:**
-
-* **Enabled:** When deal is in Published status
-* **Disabled:** When deal is not in Published status, or user is not an Investor
-
-### Finalize Allocation
-
-**As Underwriter:**
-
-* **Enabled:** After investor commitments have been received
-* **Disabled:** Before any commitments are submitted
-
-### Initiate Repayment
-
-**As Issuer:**
-
-* **Enabled:** When deal is in Active status and a loan tape has been uploaded
-* **Disabled:** When deal is not Active, or loan tape has not been uploaded
-
-### Confirm Repayment Receipt
-
-**As Investor:**
-
-* **Enabled:** When deal is in Repayment In Progress status
-* **Disabled:** When deal is not in Repayment In Progress
-
-### Burn NFT
-
-**As Investor:**
-
-* **Enabled:** After repayment receipt has been confirmed
-* **Disabled:** Before repayment receipt is confirmed
+1. Check the status.
+2. Finish required fields, documents, and signatures.
+3. Confirm you are in the correct role.
+4. Wait if another party must act first.
+5. Hover the button and read the tooltip.
