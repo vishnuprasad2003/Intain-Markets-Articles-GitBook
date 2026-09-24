@@ -15,15 +15,9 @@ Full asset sale workflow is live: create a deal, send for underwriter review, ta
 
 ---
 
-### Credit Facility Deal Setup Wizard *(September 2026)*
-
-Facility agents configure a new deal in a guided wizard: General, Facilities, Fees, Expenses, Accounts, Triggers, Borrowing Base, Calculations, Waterfall, and Review.
-
----
-
 ### Pool Analysis via IDA *(September 2026)*
 
-Market makers and investors can open IDA analytics directly on a pool preview.
+Underwriters, facility agents, and investors can open IDA analytics directly on a pool preview.
 
 ---
 
