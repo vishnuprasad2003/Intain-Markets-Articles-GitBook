@@ -8,24 +8,23 @@ description: Stages loans go through from upload through NFT minting
 ## Lifecycle at a Glance
 
 ```
-Upload tape → Trigger LTS → Map fields → Loan Registry → Map to Pool → Add to Batch → Self Certify / Verify → Mint NFT
+Upload tape → Trigger LTS → Map fields → Asset Registry → Map to Pool → Add to Batch → Self Certify / Verify → Mint NFT
 ```
 
 ## Mapping Status
 
 | Status | Meaning | Next action |
 |---|---|---|
-| **Unmapped** | In Loan Registry; not in any pool | Map to Pool |
+| **Unmapped** | In Asset Registry; not in any pool | Map to Pool |
 | **Mapped** | In a pool; included in pool metrics | Add to Batch |
 
 ## Loan Status Within Pools
 
 | Status | Meaning | Who decides |
 |---|---|---|
-| **Pending** | Pool shared; market maker not yet accepted | — |
+| **Pending** | Pool shared; underwriter / facility agent not yet accepted | — |
 | **Accepted** | Mandate accepted; loan confirmed in pool | — |
 | **Reconsider** (issuer view) / **Under Reconsider** (others) | Removal requested | Issuer (tick/cross) |
-| **Removed** | Issuer accepted removal; excluded from metrics | Reinstated by issuer |
 | **Reinstated** | Previously removed; back in metrics | — |
 
 > Loan stays in pool calculations during **Reconsider/Under Reconsider** until issuer decides.
@@ -51,11 +50,9 @@ Upload tape → Trigger LTS → Map fields → Loan Registry → Map to Pool →
 |---|---|---|
 | (uploaded) | Save Mapping | Unmapped |
 | Unmapped | Map to Pool | Mapped |
-| Mapped | Pool shared, market maker accepts | Accepted |
+| Mapped | Pool shared, underwriter / facility agent accepts | Accepted |
 | Accepted | Removal requested | Under Reconsider / Reconsider |
-| Reconsider | Issuer accepts (tick) | Removed |
 | Reconsider | Issuer rejects (cross) | Accepted |
-| Removed | Reinstate | Reinstated |
 | (in batch) | Add to Batch | Pending |
 | Pending | Self Certify or verification agent | Reviewed |
 | Reviewed | Mint NFT | Verified |

@@ -67,3 +67,7 @@ An action stays blocked until **your role**, the **item's status**, and any **ea
 3. Confirm your role matches the required one
 4. Check that all earlier steps are complete
 5. If unresolved, contact support with the item reference and status
+
+→ See [Enabled vs Disabled Actions](69_Enabled_vs_Disabled_actions.md) for the full role-and-status action table.
+→ See [Who Can Do What](74_Who_can_do_what.md) for the complete role-permission matrix.
+→ See [Why Can't I Act](83_Why_cant_I_act.md) for symptom-based troubleshooting.

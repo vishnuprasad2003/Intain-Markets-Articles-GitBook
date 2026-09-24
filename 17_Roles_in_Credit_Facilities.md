@@ -11,7 +11,7 @@ In credit facilities, platform roles use different names:
 | Platform Role | Credit Facility Name |
 |---|---|
 | Issuer | **Borrower** |
-| Market Maker | **Facility Agent** |
+| Underwriter / Facility Agent | **Facility Agent** |
 | Investor | **Lender** |
 
 ## What Each Role Does
@@ -26,7 +26,7 @@ In credit facilities, platform roles use different names:
 
 **Dashboard:** **Credit Facility** — shows term sheets, master commitments, and funding requests.
 
-### Facility Agent (Market Maker)
+### Facility Agent
 
 - Review term sheets → Approve (creates master commitment), Reject, or Request Changes
 - Configure master commitment: add lenders, set shares, create sub-facilities if needed, submit for lender approval

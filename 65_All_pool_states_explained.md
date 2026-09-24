@@ -23,7 +23,7 @@ description: Reference for all pool statuses and loan statuses within a pool
 | **Under Review** | Market maker / investor | Mandate accepted | Feedback, loan removal, share with investors |
 | **Ready for Deal** | Market maker | Start Deal sent | View, Accept, Reject |
 
-> Market makers cannot provide feedback until they accept the mandate.
+> Underwriters / Facility Agents cannot provide feedback until they accept the mandate.
 
 ## Status Transitions
 
@@ -32,10 +32,10 @@ description: Reference for all pool statuses and loan statuses within a pool
 | (new) | Create Pool | Created | Issuer |
 | Created | Share (Preview) | Preview | Issuer |
 | Created or Preview | Start Deal | Deal | Issuer |
-| Mandate Pending | Accept | Under Review | Market Maker |
-| Mandate Pending | Reject | Can be re-shared | Market Maker |
-| Ready for Deal | Accept | Deal confirmed | Market Maker |
-| Ready for Deal | Reject | Can be re-shared | Market Maker |
+| Mandate Pending | Accept | Under Review | Underwriter / Facility Agent |
+| Mandate Pending | Reject | Can be re-shared | Underwriter / Facility Agent |
+| Ready for Deal | Accept | Deal confirmed | Underwriter / Facility Agent |
+| Ready for Deal | Reject | Can be re-shared | Underwriter / Facility Agent |
 
 ## Editing Rights by Status
 
@@ -53,7 +53,7 @@ description: Reference for all pool statuses and loan statuses within a pool
 | **Mapped** | Loan is in pool; counts in metrics |
 | **Pending** | Market maker has not accepted mandate yet |
 | **Accepted** | Mandate accepted; loan confirmed |
-| **Under Reconsider** | Removal requested (market maker / investor view) |
+| **Under Reconsider** | Removal requested (underwriter / facility agent / investor view) |
 | **Reconsider** | Removal requested; awaiting issuer decision (issuer view) |
 | **Removed** | Issuer accepted removal; loan excluded from metrics but still visible |
 | **Reinstated** | Previously removed loan put back; included in metrics |

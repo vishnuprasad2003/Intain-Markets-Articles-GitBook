@@ -27,7 +27,7 @@ Each step is a financial or legal commitment:
 * Approving a term sheet means the facility agent accepts the borrower and the terms.
 * Approving a master commitment means a lender is committing capital.
 * Approving a funding request means the draw fits the facility rules.
-* Accepting a pool mandate means the market maker will structure the deal.
+* Accepting a pool mandate means the underwriter / facility agent will structure the deal.
 
 An approval gives the affected party a chance to stop incomplete documents or terms that should not proceed.
 
@@ -39,7 +39,7 @@ An approval gives the affected party a chance to stop incomplete documents or te
 | Master commitment          | Lender                          | The lender, before capital is committed                                |
 | Funding request            | Facility Agent                  | Lenders, because the draw is checked against facility rules            |
 | Funding notice e-signature | Facility Agent, for each lender | The lender, before funds are sent                                      |
-| Pool mandate               | Market Maker                    | The market maker, before they commit to structure the pool             |
+| Pool mandate               | Underwriter / Facility Agent    | The underwriter / facility agent, before they commit to structure the pool |
 | Asset sale deal            | Underwriter                     | Investors, before the deal is shown to them                            |
 | Token approval             | Issuer                          | All parties. A one-time code is required before tokens are distributed |
 | KYC approval               | Admin                           | The platform, before access is granted                                 |

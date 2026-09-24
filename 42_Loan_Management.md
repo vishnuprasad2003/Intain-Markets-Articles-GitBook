@@ -29,11 +29,11 @@ description: >-
 
 **3. View Mapped Loans**
 - Click **View Mapped** → see standardized loans → **Open in Registry**
-- Or navigate directly to **Loan Registry** from the sidebar
+- Or navigate directly to **Asset Registry** from the sidebar
 
-## Part 2 — Loan Registry
+## Part 2 — Asset Registry
 
-The Loan Registry shows all onboarded loans. Mapped columns appear first; unmapped columns have italic headers.
+The Asset Registry shows all onboarded loans. Mapped columns appear first; unmapped columns have italic headers.
 
 | Button | When enabled |
 |---|---|
@@ -48,11 +48,11 @@ The Loan Registry shows all onboarded loans. Mapped columns appear first; unmapp
 ![Choose Pool to Map](.gitbook/assets/ChoosePoolToMap.png)
 ![Confirm Mapping](.gitbook/assets/ConfirmMapping.png)
 
-![Access Loan Registry](.gitbook/assets/accessLoanRegistry.png)
+![Access Asset Registry](.gitbook/assets/accessLoanRegistry.png)
 
 ## Part 3 — Batch Verification
 
-**Add to batch:** Select loans in the Loan Registry → **Add to Batch**
+**Add to batch:** Select loans in the Asset Registry → **Add to Batch**
 
 **Batch Verification** (sidebar) → click a **Batch ID** → two tabs: **Loans** and **Documents**
 

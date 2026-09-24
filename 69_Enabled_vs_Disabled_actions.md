@@ -15,8 +15,8 @@ A button is enabled when your role, the item's status, and all earlier steps are
 |---|---|---|---|
 | Created | Issuer | Edit, share, map loans | Start Deal (until NFTs minted) |
 | Preview | Issuer | Edit, share more, Start Deal (if NFTs minted), respond to removal requests | — |
-| Preview | Market Maker | View, Accept, Reject | Feedback (until accepted) |
-| Under Review | Market Maker | Feedback, loan removal requests, share to investors | Edit |
+| Preview | Underwriter / Facility Agent | View, Accept, Reject | Feedback (until accepted) |
+| Under Review | Underwriter / Facility Agent | Feedback, loan removal requests, share to investors | Edit |
 | Under Review | Investor | View, feedback/download if permitted | Edit |
 | Deal | Issuer | View | Edit, Share |
 

@@ -7,17 +7,16 @@ description: What each role can do on the platform
 
 Your role determines what actions you can take, what you can see, and what you are responsible for.
 
-![Role Selection showing all 7 roles](.gitbook/assets/role-selection.png)
-
 ## Roles at a Glance
 
 | Role | Key responsibilities |
 |---|---|
 | **Issuer / Borrower** | Create pools, onboard loans, mint NFTs, create deals and term sheets, initiate repayment |
-| **Market Maker / Facility Agent** | Accept pool mandates, review term sheets, configure and manage credit facilities, approve asset sale deals |
+| **Underwriter / Facility Agent** | Accept pool mandates, review term sheets, configure and manage credit facilities, approve asset sale deals |
 | **Investor / Lender** | Review pools and deals, approve master commitments, confirm fund transfers, burn NFTs |
-| **Servicer** | Upload monthly loan tapes for assigned deals |
+| **Servicer** | Upload monthly loan tapes for assigned deals; dashboard shows deals split by transaction type |
 | **Paying Agent** | View pools/facilities, manage payment distributions |
+| **Verification Agent** | Review and certify loan batches submitted by issuers |
 | **Rating Agency** | View and download items shared with them (read-only) |
 | **Admin** | Manage organizations/users, KYC approval, handle delegation tasks |
 

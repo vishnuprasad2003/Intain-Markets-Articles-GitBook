@@ -9,13 +9,13 @@ description: >-
 
 ## Overview
 
-The underwriter (Market Maker / Arranger) reviews the issuer’s deal, publishes it to investors, then allocates commitments so settlement can start. You do not create the deal or record repayment. You decide whether the package is ready for the market and how much each investor receives.
+The underwriter (Arranger) reviews the issuer’s deal, publishes it to investors, then allocates commitments so settlement can start. You do not create the deal or record repayment. You decide whether the package is ready for the market and how much each investor receives.
 
 ## Who Can Use This
 
-* **Underwriters (Market Makers)** named as Arranger on the deal
+* **Underwriters** named as Arranger on the deal
 
-Issuers submit the package. Investors commit after you publish. If you are not the Arranger on the deal, you will not see review actions. Ask the issuer to set the correct Market Maker on Basics before they publish. Changing Arranger after review is not an underwriter action. Send the issuer back to Draft if the wrong firm is listed.
+Issuers submit the package. Investors commit after you publish. If you are not the Arranger on the deal, you will not see review actions. Ask the issuer to set the correct Underwriter on Basics before they publish. Changing Arranger after review is not an underwriter action. Send the issuer back to Draft if the wrong firm is listed.
 
 ## When This Is Used
 

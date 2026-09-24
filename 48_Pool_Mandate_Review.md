@@ -1,13 +1,13 @@
 ---
 title: Pool Mandate Review
-description: How market makers review shared pools and make mandate decisions
+description: How underwriters / facility agents review shared pools and make mandate decisions
 ---
 
 # Pool Mandate Review
 
 ## Who Can Use This
 
-Market Makers / Facility Agents — when a pool appears in your dashboard with **Mandate Pending** (Preview) or **Ready for Deal** (Start Deal) status.
+Underwriters / Facility Agents — when a pool appears in your dashboard with **Mandate Pending** (Preview) or **Ready for Deal** (Start Deal) status.
 
 ## Review Process
 
@@ -45,7 +45,7 @@ Market Makers / Facility Agents — when a pool appears in your dashboard with *
 ## Key Rules
 
 - Feedback is only available after mandate acceptance
-- You can share with investors but not with other market makers
+- You can share with investors but not with other underwriters / facility agents
 - Accept and reject decisions are recorded with timestamps
 
 → See [Pool Feedback Workflow](09_Pool_Feedback_Workflow.md) for feedback and removal steps.

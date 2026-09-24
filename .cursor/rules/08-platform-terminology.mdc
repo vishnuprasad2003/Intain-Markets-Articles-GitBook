@@ -23,16 +23,38 @@ In technical context, "Whole Loan Sale (WLS)" is acceptable.
 
 | Canonical Name | Context | Backend Value |
 |----------------|---------|---------------|
-| **Issuer** | All product lines | `Issuer` |
-| **Investor** | Asset Sale, Securitization | `Investor` |
-| **Lender** | Credit Facilities | `Investor` (same account) |
-| **Market Maker** | Credit Facilities | `MarketMaker` |
-| **Underwriter** | Asset Sale | `MarketMaker` (same account) |
-| **Facility Agent** | Credit Facilities | `MarketMaker` (same account) |
-| **Servicer** | Post-close servicing | `Servicer` |
-| **Paying Agent** | Securitization payments | `PayingAgent` |
-| **Verification Agent** | Batch verification / ABDP | `VerificationAgent` |
+| **Issuer / Borrower** | All product lines — creates pools, loans, deals, term sheets | `Issuer` |
+| **Underwriter / Facility Agent** | Asset Sale (Underwriter) + Credit Facilities (Facility Agent) — same account, different label per module | `MarketMaker` |
+| **Investor / Lender** | Asset Sale / Securitization (Investor) + Credit Facilities (Lender) — same account | `Investor` |
+| **Servicer** | Post-close servicing — uploads loan tapes | `Servicer` |
+| **Paying Agent** | Securitization — manages payment distributions | `PayingAgent` |
+| **Verification Agent** | Batch verification / ABDP — reviews and certifies loan batches | `VerificationAgent` |
 | **Admin** | Platform administration | `Admin` |
+| **Rating Agency** | Pool review only (read access) | `RatingAgency` |
+
+### Role display rules
+- In general/platform-wide context: use **Underwriter / Facility Agent** (not "Market Maker")
+- In Credit Facilities context specifically: use **Facility Agent**
+- In Asset Sale context specifically: use **Underwriter**
+- Never use "Market Maker" in user-facing documentation
+- **Servicer** dashboard shows only Home / Dashboard split by transaction type (Securitization, Credit Facility, Asset Sale tabs) — no pool or loan management sidebar items
+
+---
+
+## Feature Naming (Consistency Rules)
+
+These feature names must be used exactly and consistently across ALL articles:
+
+| Correct Name | Do NOT Use |
+|---|---|
+| **Asset Registry** | "Loan Registry", "Loan Registry / Asset Registry" |
+| **Asset Sale** | "Loan Sale", "WLS" (in user-facing docs) |
+| **Credit Facilities** | "Credit Facility" (use plural in section titles) |
+| **Batch Verification** | "Batch" alone |
+| **Activity Audit** | "Audit Log", "Activity Log" |
+| **IDA Dashboard** | "IDA", "Analytics Dashboard" |
+
+> **Important:** The left sidebar item formerly called "Loan Registry" is now "Asset Registry". Use "Asset Registry" everywhere in user-facing documentation.
 
 ## Settlement Terms
 

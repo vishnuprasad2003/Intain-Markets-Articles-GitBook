@@ -19,16 +19,16 @@ There are two ways to share a pool.
 
 * The issuer creates the pool. Its status is **Created**.
 * The issuer clicks **Share**. Recipients see **Mandate Pending** and can **Accept** or **Reject**.
-* After a market maker accepts, their view shows **Under Review**.
-* If a market maker rejects, the pool leaves their dashboard.
+* After an underwriter / facility agent accepts, their view shows **Under Review**.
+* If an underwriter / facility agent rejects, the pool leaves their dashboard.
 * The issuer can still edit the pool, share it with more organizations, or click **Start Deal** when ready.
 
 **Start Deal Flow**
 
 * **Start Deal** turns on when the pool is ready, typically after every loan in the pool has an NFT.
 * Recipients then see **Ready for Deal** and can **Accept** or **Reject**.
-* When a market maker accepts, the status becomes **Deal** and structural editing stops.
-* That market maker continues with deal structuring.
+* When an underwriter / facility agent accepts, the status becomes **Deal** and structural editing stops.
+* That underwriter / facility agent continues with deal structuring.
 
 You prepare a pool in private, share it for review while you can still edit, then commit it when you are ready.
 
@@ -38,11 +38,11 @@ What you see depends on your role.
 
 ### For Issuers
 
-**Created** — The pool exists with its name, asset class, transaction type, and organization assignments. Only you can see it. Add loans from the Loan Registry and finish setup before you share.
+**Created** — The pool exists with its name, asset class, transaction type, and organization assignments. Only you can see it. Add loans from the Asset Registry and finish setup before you share.
 
-**Deal** — A market maker accepted **Start Deal**. Structural editing is restricted. That market maker continues deal structuring and later transaction steps.
+**Deal** — An underwriter / facility agent accepted **Start Deal**. Structural editing is restricted. That underwriter / facility agent continues deal structuring and later transaction steps.
 
-### For Market Makers, Investors, and Rating Agencies
+### For Underwriters / Facility Agents, Investors, and Rating Agencies
 
 **Mandate Pending** — Someone shared the pool with you using **Share**. You can **Accept** or **Reject**. Market makers cannot give feedback until they accept.
 
@@ -50,7 +50,7 @@ What you see depends on your role.
 
 **Ready for Deal** — The issuer clicked **Start Deal**. Loans are finalized, typically with NFTs minted. You can **Accept** or **Reject**.
 
-**Deal** — You accepted Ready for Deal. Structural editing is restricted. The accepting market maker continues deal structuring.
+**Deal** — You accepted Ready for Deal. Structural editing is restricted. The accepting underwriter / facility agent continues deal structuring.
 
 ## What Each Status Indicates
 
@@ -58,8 +58,8 @@ What you see depends on your role.
 
 **Mandate Pending** (recipient) — You need to accept or reject. You can view details, metrics, and loans. Market makers cannot give feedback until they accept.
 
-**Under Review** (market maker, after accept) — Feedback is available at pool level and loan level. You can request loan removals. The issuer may still change the pool.
+**Under Review** (underwriter / facility agent, after accept) — Feedback is available at pool level and loan level. You can request loan removals. The issuer may still change the pool.
 
 **Ready for Deal** (recipient) — Start Deal has been clicked and the usual prerequisites, including NFT minting, are done. Accept commits you to the deal. Reject declines it.
 
-**Deal** — The pool is committed. The structure is locked. The accepting market maker continues with structuring, investor allocations, and later steps.
+**Deal** — The pool is committed. The structure is locked. The accepting underwriter / facility agent continues with structuring, investor allocations, and later steps.

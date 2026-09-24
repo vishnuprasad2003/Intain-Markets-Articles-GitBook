@@ -13,32 +13,64 @@ description: How to log in and navigate the platform
 
 > To switch roles, log out and sign in again with the other role.
 
-![Intain Markets Login Page](.gitbook/assets/login-page.png)
-![Role Dropdown on Login Page](.gitbook/assets/role-dropdown.png)
+![Intain Markets Login Page](.gitbook/assets/IntainMarketsLoginPage.png)
 
 ## Dashboard
 
 Your dashboard shows pools, deals, and items for your role, plus pending actions and recent activity.
 
-![Issuer Dashboard](.gitbook/assets/issuer-dashboard.png)
-![Dashboard - Investor View](.gitbook/assets/Dashboard_Investor.png)
-![Dashboard - Market Maker View](.gitbook/assets/Dashboard_MarketMaker.jpg)
-![Dashboard Notification Panel](.gitbook/assets/Dashboard_Notification_Panel.png)
+| Role | Dashboard view |
+|---|---|
+| **Issuer** | Pools, deals, batches, certificates; full sidebar |
+| **Underwriter / Facility Agent** | Deals for review, credit facilities, pools |
+| **Investor / Lender** | Opportunities, portfolio, deals committed to |
+| **Servicer** | Home / Dashboard split into Securitization, Credit Facility, Asset Sale tabs — no pool/loan management |
+| **Admin** | All organizations, KYC queue, delegation tasks |
+
+![Issuer Dashboard](.gitbook/assets/Dashboard_Investor.png)
 
 ## Left Sidebar Navigation
 
-Hover the sidebar to expand it. Sections shown depend on your role:
+Hover the sidebar to expand it. Items shown depend on your role:
 
-| Section | Who sees it |
+### Issuer
+
+| Sidebar item | Purpose |
 |---|---|
-| **Pools** | Issuers, Market Makers, Investors |
-| **Asset Registry / Loan Registry** | Issuers, Servicers |
-| **Credit Facility** | Borrowers, Facility Agents, Lenders |
-| **Asset Sale** | Issuers, Underwriters, Investors |
-| **Imports / Batch Verification** | Issuers, Servicers |
-| **Activity Audit** | Most roles |
+| **Dashboard** | Overview tiles and deal summary |
+| **Pools** | Create, share, and manage pools |
+| **Asset Registry** | View, filter, and map loans |
+| **Historical Tape** | Past loan tape uploads |
+| **Asset NFTs** | View and manage loan NFTs |
+| **Batch Verification** | Certify or send batches for verification |
+| **Certificates** | Mint NFTs after batch verification |
+| **Imports** | Upload loan tapes |
+| **Credit Facility** | Term sheets, funding requests |
+| **Securitization** | Structured deals |
+| **Asset Sale** | Whole loan sale deals |
+| **Participation Agreements** | Participation workflows |
+| **Activity Audit** | Full platform activity log |
 
-![Issuer Sidebar Navigation](.gitbook/assets/issuer-sidebar-navigation.png)
+### Underwriter / Facility Agent
+
+Same deal and pool sections as Issuer, scoped to deals assigned to or shared with the organization.
+
+### Investor / Lender
+
+| Sidebar item | Purpose |
+|---|---|
+| **Dashboard / Home** | Portfolio overview |
+| **Opportunities** | Deals open for commitment (Investor only) |
+| **Pools** | Pools shared with the organization |
+| **Credit Facility** | Funding notices, facility approvals |
+| **Securitization** | Deals for review |
+| **Asset Sale** | Deals for commitment and settlement |
+| **Participation Agreements** | Participation workflows |
+| **Activity Audit** | Activity log |
+
+### Servicer
+
+Dashboard only — split into **Securitization**, **Credit Facility**, and **Asset Sale** tabs. No pool or loan management items.
 
 ## Tips
 
@@ -47,5 +79,4 @@ Hover the sidebar to expand it. Sections shown depend on your role:
 - **Use search / filters** to find items in long lists
 - You only see items shared with your organization or created by you
 
-![Signup Page](.gitbook/assets/signup-page.png)
-![IntainMarketsLoginPage](.gitbook/assets/IntainMarketsLoginPage.png)
+→ See [User Roles & Responsibilities](02_User_Roles_and_Responsibilities.md) for role descriptions.

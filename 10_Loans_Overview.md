@@ -5,12 +5,12 @@ description: What loans are and how they move through upload, standardization, p
 
 # Loans Overview
 
-A loan is one credit agreement. After uploading a loan tape, loans are saved to your organisation and managed in the Loan Registry. Standard (mapped) columns show Intain field names; unmatched columns show original headers in italic.
+A loan is one credit agreement. After uploading a loan tape, loans are saved to your organisation and managed in the Asset Registry. Standard (mapped) columns show Intain field names; unmatched columns show original headers in italic.
 
 ## Loan Journey
 
 ```
-Upload (Imports) → LTS field mapping → Loan Registry (Unmapped) → Map to Pool → Add to Batch → Verify → Mint NFT
+Upload (Imports) → LTS field mapping → Asset Registry (Unmapped) → Map to Pool → Add to Batch → Verify → Mint NFT
 ```
 
 ## Key Sections
@@ -19,7 +19,7 @@ Upload (Imports) → LTS field mapping → Loan Registry (Unmapped) → Map to P
 |---|---|
 | **Imports** | Upload loan tape (Excel/CSV); choose As Of Date and Asset Class |
 | **Loan Tape Standardization (LTS)** | Match column headers to Intain standard fields; AI suggests matches; delegate to Admin if needed |
-| **Loan Registry** | View all loans; Map to Pool; Add to Batch |
+| **Asset Registry** | View all loans; Map to Pool; Add to Batch |
 | **Batch Verification** | Self Certify (via Adobe Sign) or submit to Verification Agent |
 | **Certificates** | Mint NFTs when batch is Reviewed; View NFTs |
 
@@ -29,7 +29,7 @@ Upload (Imports) → LTS field mapping → Loan Registry (Unmapped) → Map to P
 
 **2. Standardize (LTS)** — **Trigger LTS** → Map Fields popup → AI pre-fills matches → review/adjust dropdowns → **Save Mapping** → action changes to **View Mapped**
 
-**3. Loan Registry** — **View Mapped → Open in Registry** (or navigate directly). Select loans → **Map to Pool** or **Add to Batch**. Pool metrics auto-update on mapping.
+**3. Asset Registry** — **View Mapped → Open in Registry** (or navigate directly). Select loans → **Map to Pool** or **Add to Batch**. Pool metrics auto-update on mapping.
 
 **4. Batch Verification** — **Batch Verification** sidebar → click Batch ID → Loans tab → **Self Certify** (sign via Adobe Sign) or submit to Verification Agent. After verification → batch status **Reviewed**.
 

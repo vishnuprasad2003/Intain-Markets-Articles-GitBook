@@ -9,7 +9,7 @@ description: How to provide and respond to pool-level and loan-level feedback
 
 | Role | Pool-level feedback | Loan-level feedback | Request loan removal |
 |---|---|---|---|
-| Market Maker / Investor | ✓ (after accepting mandate) | ✓ | ✓ |
+| Underwriter / Facility Agent / Investor | ✓ (after accepting mandate) | ✓ | ✓ |
 | Rating Agency | ✓ | ✓ | ✗ |
 | Issuer | View only | ✓ (respond via chat) | N/A (accept or reject requests) |
 
@@ -19,7 +19,7 @@ description: How to provide and respond to pool-level and loan-level feedback
 2. Click to add feedback → type message → **Submit**
 3. Issuer receives a notification
 
-> Market makers must accept the mandate before feedback is available.
+> Underwriters / Facility Agents must accept the mandate before feedback is available.
 
 ## Providing Loan-Level Feedback
 
@@ -30,7 +30,7 @@ description: How to provide and respond to pool-level and loan-level feedback
 ![Pools Feedback - Market Maker](.gitbook/assets/Pools_Feedback_MarketMaker.png)
 ![Enter Feedback](.gitbook/assets/EnterFeedback.png)
 
-## Requesting Loan Removal (Market Makers and Investors)
+## Requesting Loan Removal (Underwriters / Facility Agents and Investors)
 
 1. **Loans** tab → click the **cross icon** on the loan
 2. System records the request; issuer is notified

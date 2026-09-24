@@ -57,7 +57,7 @@ These 10 rule files contain all detailed standards. **Read the relevant ones bef
 
 - **Product:** Intain Markets — structured finance platform
 - **Product Lines:** Asset Sale (WLS), Credit Facilities, Securitization, Participation Agreements
-- **Roles:** Issuer, Investor, Market Maker (Underwriter/Facility Agent), Servicer, Paying Agent, Verification Agent, Admin, Rating Agency, Partner
+- **Roles:** Issuer, Investor, Underwriter / Facility Agent, Servicer, Paying Agent, Verification Agent, Admin, Rating Agency, Partner
 - **Backend:** `intain-markets-node-app/` — Node.js, MongoDB, PostgreSQL, Snowflake
 - **UI:** `intain-markets-ui/` — React, Ant Design, Redux
 - **Blockchain:** Avalanche L1 subnet (NFTs), Ethereum/Avalanche C-Chain (USDC settlement)

@@ -10,7 +10,7 @@ Two sharing flows: **Share (Preview)** for review and feedback; **Start Deal** f
 ## Share (Preview Flow)
 
 1. Pool details → **Share** button (top right) → sharing pop-up opens
-2. Select **Recipient** type (Market Maker, Investor, Rating Agency, etc.) → select organisations
+2. Select **Recipient** type (Underwriter / Facility Agent, Investor, Rating Agency, etc.) → select organisations
 3. Set permissions:
    - **Allow Feedback** (default on) — recipients can comment on pool and loans
    - **Allow Download** (default on) — recipients can download loan tape
@@ -56,8 +56,8 @@ Pool details → **Sharing** tab — view all shared organisations; toggle **All
 |---|---|
 | Pool status for Share | Created or Preview |
 | Start Deal prerequisite | All pool loans must be NFT-minted |
-| Feedback timing | Market makers cannot give feedback until mandate accepted |
-| Who can share further | Market makers can share with investors; investors cannot share further |
+| Feedback timing | Underwriters / Facility Agents cannot give feedback until mandate accepted |
+| Who can share further | Underwriters / Facility Agents can share with investors; investors cannot share further |
 | Editing window | Created, Preview, Under Review — editable; Deal — locked |
 
 → See [Pool Feedback Workflow](09_Pool_Feedback_Workflow.md) for feedback and loan removal steps.

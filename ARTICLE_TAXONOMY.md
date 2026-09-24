@@ -14,7 +14,7 @@ Total: **87 articles**.
 | 03 | 03_Login_and_Navigation.md | Login & Navigation | C | existing |
 | 04 | 04_Status_and_Approval_Philosophy.md | Status & Approval Philosophy | A | existing |
 
-## Core Product Lines — Pools & Loans
+## Asset Onboarding & Pools
 
 | # | Filename | Title | Type | Source |
 |---|----------|-------|------|--------|
@@ -61,7 +61,7 @@ Total: **87 articles**.
 | 35 | 35_Investor_Commitment_and_Allocation.md | Investor Commitment & Allocation | D | NEW |
 | 36 | 36_Settlement_and_NFT_Transfer.md | Settlement & NFT Transfer | K | NEW |
 | 37 | 37_Repayment_Flow.md | Repayment Flow | D | NEW |
-| 38 | 38_Receivables_and_NFT_Burn.md | Receivables & NFT Burn | D | NEW |
+| 38 | 38_Receivables_and_NFT_Burn.md | NFT Burn | D | NEW |
 | 39 | 39_Asset_Sale_Analytics.md | Asset Sale Analytics | C | NEW |
 | 40 | 40_Investor_Agreement_and_E-Signature.md | Investor Agreement & E-Signature | K | NEW |
 
@@ -77,7 +77,7 @@ Total: **87 articles**.
 | 46 | 46_Asset_Sale_Deal_Setup_Issuer.md | Asset Sale Deal Setup | D | NEW |
 | 47 | 47_Repayment_Initiation_Issuer.md | Repayment Initiation | D | NEW |
 
-## Workflows by Role — Market Maker / Facility Agent
+## Workflows by Role — Underwriter / Facility Agent
 
 | # | Filename | Title | Type | Source |
 |---|----------|-------|------|--------|

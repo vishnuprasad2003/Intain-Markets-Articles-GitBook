@@ -1,13 +1,13 @@
 ---
 title: Pool and Loan Review
-description: How market makers and investors review shared pools and loans
+description: How underwriters / facility agents and investors review shared pools and loans
 ---
 
 # Pool and Loan Review
 
 ## Who Can Use This
 
-- **Market Makers** — review shared pools, provide feedback, request loan removal, share with investors
+- **Underwriters / Facility Agents** — review shared pools, provide feedback, request loan removal, share with investors
 - **Investors** — review shared pools, provide feedback, request loan removal; cannot share further
 
 ## Accessing Shared Pools
@@ -39,7 +39,7 @@ description: How market makers and investors review shared pools and loans
 
 **Download** — Loan Tape section → Download (if issuer enabled download permission for your organisation).
 
-**Share with investors** (market makers only) — **Share** button at top of pool details.
+**Share with investors** (underwriters / facility agents only) — **Share** button at top of pool details.
 
 ## Key Rules
 

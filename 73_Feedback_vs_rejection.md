@@ -37,10 +37,10 @@ description: >-
 | **Request Changes** | Changes Requested | Edit and resubmit |
 | **Reject** | Rejected (final) | Create a new funding request |
 
-### Pools (market maker / investor)
+### Pools (underwriter / facility agent / investor)
 
 - **Feedback** — Comment on pool or loan; pool stays in its current workflow; comments can be updated
-- **Mandate declined** — Issuer can re-share with another market maker or improve and re-share
+- **Mandate declined** — Issuer can re-share with another underwriter / facility agent or improve and re-share
 
 ### Loans inside a pool
 

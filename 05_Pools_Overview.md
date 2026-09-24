@@ -5,7 +5,7 @@ description: What pools are, how they work, and their key components in structur
 
 # Pools Overview
 
-A pool is a collection of loans grouped together for securitization, whole loan sales, or other structured finance transactions. Issuers create pools, map loans from the Loan Registry, and share them with market makers, investors, and rating agencies.
+A pool is a collection of loans grouped together for securitization, whole loan sales, or other structured finance transactions. Issuers create pools, map loans from the Asset Registry, and share them with underwriters / facility agents, investors, and rating agencies.
 
 ## Key Components
 
@@ -13,7 +13,7 @@ A pool is a collection of loans grouped together for securitization, whole loan 
 |---|---|
 | **Pool Info** | Name (unique), asset class, transaction type, description, closing deal flag |
 | **Organisation Assignments** | Market makers, investors, servicers, paying agents, rating agencies, verification agents |
-| **Mapped Loans** | Loans assigned from the Loan Registry; one pool per loan |
+| **Mapped Loans** | Loans assigned from the Asset Registry; one pool per loan |
 | **Pool Metrics** | Auto-calculated from mapped loans; update when loans are added, removed, or reinstated |
 | **Status** | Current workflow stage: Created → Preview → Deal |
 | **Sharing Config** | Per-organisation permissions (feedback, download) |
@@ -33,7 +33,7 @@ A pool is a collection of loans grouped together for securitization, whole loan 
 ## How Pools Work
 
 1. **Create** — **Pools → Set-up Pool**; enter details and assign organisations
-2. **Map loans** — **Loan Registry → select loans → Map to Pool**; metrics calculate automatically
+2. **Map loans** — **Asset Registry → select loans → Map to Pool**; metrics calculate automatically
 3. **Share (Preview)** — Share button; recipients see **Mandate Pending**; accept/reject mandate
 4. **Start Deal** — Enabled after all loans are NFT-minted; recipients see **Ready for Deal**; accept locks pool to **Deal** status
 
@@ -46,7 +46,7 @@ A pool is a collection of loans grouped together for securitization, whole loan 
 
 - Loans belong to one pool at a time — unmap to reassign
 - Editing is allowed in Created, Preview, and Under Review; locked in Deal
-- Market makers cannot give feedback until mandate is accepted
+- Underwriters / Facility Agents cannot give feedback until mandate is accepted
 - Preview sharing retains issuer editing rights; Start Deal locks structure on acceptance
 
 → See [Pool Creation and Sharing](41_Pool_Creation_and_Sharing.md) for step-by-step instructions.

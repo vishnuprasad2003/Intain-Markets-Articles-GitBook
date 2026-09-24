@@ -15,7 +15,7 @@ The person who prepares an item is never the person who approves it.
 | Role | Cannot |
 |---|---|
 | Issuer / Borrower | Approve own term sheet or funding request; accept pool mandate |
-| Facility Agent / Market Maker | Create term sheets, pools, or funding requests |
+| Facility Agent / Underwriter | Create term sheets, pools, or funding requests |
 | Lender / Investor | Create a facility, approve a funding request, or publish a deal |
 | Underwriter | Create a deal or commit as an investor |
 | Admin | Skip an approval; change data while viewing as another user |

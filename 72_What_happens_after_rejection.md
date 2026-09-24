@@ -34,13 +34,13 @@ Rejection closes the current item permanently. The rejected item is read-only �
 
 ### Pool Mandate Rejected
 
-- That market maker will not structure the deal; pool is not deleted
-- **Next:** Improve the pool (add/remove loans, update documents) → share with a different market maker or share with investors directly
+- That underwriter / facility agent will not structure the deal; pool is not deleted
+- **Next:** Improve the pool (add/remove loans, update documents) → share with a different underwriter / facility agent or share with investors directly
 
 ### Loan Removal Request Rejected (by Issuer)
 
 - Loan stays in the pool and in all calculations
-- This protects the original item — market maker / investor cannot force removal
+- This protects the original item — underwriter / facility agent / investor cannot force removal
 
 ### Lender Declines a Funding Notice
 

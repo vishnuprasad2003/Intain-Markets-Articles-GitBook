@@ -7,9 +7,9 @@ description: How loan removal requests work — requesting, deciding, and reinst
 
 ## Overview
 
-Market makers and investors can request that a loan be removed from a pool. The issuer decides whether to accept or reject. Removed loans can be reinstated.
+Underwriters / Facility Agents and investors can request that a loan be removed from a pool. The issuer decides whether to accept or reject. Removed loans can be reinstated.
 
-## Requesting Removal (Market Maker / Investor)
+## Requesting Removal (Underwriter / Facility Agent / Investor)
 
 1. Pool details → **Loans tab** → click **cross icon** on the loan
 2. System sends removal request to issuer; your view shows loan as **Under Reconsider**
@@ -37,7 +37,7 @@ Removed loans can be reinstated when circumstances change or the issue is resolv
 
 ## Key Rules
 
-- Only market makers and investors can request removal; rating agencies cannot
+- Only underwriters / facility agents and investors can request removal; rating agencies cannot
 - Only the issuer can accept or reject removal requests
 - Removed loans remain visible in the Loans tab for record-keeping
 - All actions (request, decision, reinstatement) are recorded for audit purposes

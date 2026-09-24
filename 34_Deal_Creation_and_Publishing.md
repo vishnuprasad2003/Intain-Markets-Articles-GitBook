@@ -14,7 +14,7 @@ The issuer creates an Asset Sale deal in a 3-step wizard, assigns loans, sets sa
 ## Who Can Use This
 
 * **Issuers** — create, edit, and publish
-* **Underwriters (Market Makers)** — approve or reject after publish
+* **Underwriters** — approve or reject after publish
 
 ## When This Is Used
 
@@ -37,7 +37,7 @@ Use this when you are packaging loans to sell and need a deal ready for underwri
 | **Target Settlement Date**     | Cannot be in the past, or before cutoff / settlement dates already set.         |
 | **Governing Law**              | Free text (for example, New York).                                              |
 | **Buyer Visibility**           | **All** (default) or **Selected** (then pick investor organizations).           |
-| **Arranger / Placement Agent** | Required. Market Maker who will review the deal.                                |
+| **Arranger / Placement Agent** | Required. Underwriter who will review the deal.                                 |
 | **Servicing Setup**            | **Servicer Retained** (default) or **Servicer Released**.                       |
 | **Servicing Fee**              | 0–100, one decimal allowed.                                                     |
 

@@ -5,7 +5,7 @@ description: How each role sees pools — what's visible, what actions are avail
 
 # Role-Based Pool Views
 
-What you see in **Pools** depends on your role. Issuers see pools they created; market makers, investors, and rating agencies see only pools shared with them.
+What you see in **Pools** depends on your role. Issuers see pools they created; underwriters / facility agents, investors, and rating agencies see only pools shared with them.
 
 ## Issuer View
 
@@ -14,7 +14,7 @@ What you see in **Pools** depends on your role. Issuers see pools they created; 
 **Pool details actions:**
 - **Edit Pool Details** — modify name, asset class, organisations
 - **Edit Loan Tape** — upload recurring loan tape with As Of Date
-- **Share** — share with market makers, investors, rating agencies
+- **Share** — share with underwriters / facility agents, investors, rating agencies
 - **Start Deal** — enabled after all loans are NFT-minted
 
 **Loans tab icons:**
@@ -26,7 +26,7 @@ What you see in **Pools** depends on your role. Issuers see pools they created; 
 
 ![Pools Screen - Issuer](.gitbook/assets/Pools_Screen_Issuer.png)
 
-## Market Maker View
+## Underwriter / Facility Agent View
 
 **Dashboard:** Pools shared with your organisation. Status shows **Mandate Pending** (Preview) or **Ready for Deal** (Start Deal).
 
@@ -42,7 +42,7 @@ No Edit, Start Deal, or Sharing tab.
 
 ## Investor View
 
-Same as market maker view, except:
+Same as underwriter / facility agent view, except:
 - **No Share button** — investors cannot share pools further
 - Cross icon and chat box available in Loans tab if permissions allow
 

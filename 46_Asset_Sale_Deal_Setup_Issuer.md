@@ -15,7 +15,7 @@ This is the issuer’s task list for the pre-sale phase: create the deal, assign
 
 * **Issuers** — all steps below
 
-The Arranger / Placement Agent you pick on Basics is the Market Maker who will review the deal. They do not fill this wizard for you.
+The Arranger / Placement Agent you pick on Basics is the Underwriter who will review the deal. They do not fill this wizard for you.
 
 ## When This Is Used
 

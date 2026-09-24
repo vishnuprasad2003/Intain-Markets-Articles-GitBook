@@ -18,9 +18,9 @@ description: Reference for all loan statuses across mapping, pool context, batch
 
 | Status | Meaning |
 |---|---|
-| **Pending** | Pool shared; market maker has not yet accepted mandate |
+| **Pending** | Pool shared; underwriter / facility agent has not yet accepted mandate |
 | **Accepted** | Mandate accepted; loan confirmed in pool; feedback and removal requests allowed |
-| **Under Reconsider** | Recipient requested removal; shown to the market maker / investor |
+| **Under Reconsider** | Recipient requested removal; shown to the underwriter / facility agent / investor |
 | **Reconsider** | Removal request received; shown to the issuer — tick to accept removal, cross to reject |
 | **Removed** | Issuer accepted removal; loan excluded from pool calculations |
 | **Reinstated** | Previously removed loan put back; included in calculations again |

@@ -14,7 +14,7 @@ After a deal is **Published**, investors submit a commitment amount. The underwr
 ## Who Can Use This
 
 * **Investors** — review the deal and submit or update a commitment
-* **Underwriters (Market Makers)** — see all commitments and finalize allocation
+* **Underwriters** — see all commitments and finalize allocation
 
 Issuers can watch progress on deal details but do not enter or change commitment amounts.
 

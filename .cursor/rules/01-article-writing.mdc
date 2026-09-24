@@ -17,37 +17,95 @@ description: One-line SEO description (50-160 characters)
 ---
 ```
 
-## Content Quality Standards — SHORT, SIMPLE, CONCISE
+## Content Quality Standards
 
-> **Golden Rule: If a user won't read it, remove it. Keep only what they need to act.**
+> **Two non-negotiable principles that must be balanced:**
+> 1. **Complete** — every important concept, rule, workflow step, and validation must be present
+> 2. **Direct** — explained in the fewest words possible, straight to the point
 
 ### Writing must be
-- **Short and sweet.** One-liners preferred. Every sentence must earn its place.
+- **Complete AND concise.** Never omit important details to hit a word target — shorten the wording instead.
 - **Plain language.** Write as if explaining to a first-time user, not a developer.
-- **Actionable.** Tell users what to click, what to expect, what it means — nothing else.
-- **No fluff.** Remove all background context, "why it exists" explanations, and philosophy unless it is the literal purpose of the article (Type A only).
+- **Actionable.** Tell users what to click, what to expect, what it means.
+- **Direct.** Lead with the answer; skip background. No "it is important to understand…"
 
 ### What to REMOVE from every article
-- Backend field names (`installmentNumber`, `BorrowerSigned`, API paths, status codes)
+- Backend field names, API paths, internal status codes (unless shown to users on screen)
 - System internals (webhooks, middleware, Snowflake, blob storage, rate limiting, code refactoring)
-- Repeated explanations of the same rule or concept in different sections
-- "This section explains…" / "It is important to note…" filler sentences
-- Bullet lists that repeat what a table already says
-- "Impact on Existing Users" sections (merge into the feature description if needed)
-- Long paragraph introductions — get to the point in line one
+- Filler sentences: "This section explains…", "It is important to note…"
+- "Impact on Existing Users" sections
+- Long paragraph introductions — one clear sentence is enough
 
-### What to KEEP
+### What to KEEP (never remove)
+- Every business rule, validation constraint, and workflow step that affects the user
 - Button names, field labels, status names exactly as shown on screen
-- Step-by-step actions (numbered, short)
-- Status tables (who → what → when)
-- Cross-reference links to related articles at the end of each answer or section
-- Screenshots (one per major step)
+- Numbered steps — one line per step, but cover ALL steps completely
+- Status tables with all statuses and their meaning
+- Cross-reference links to related articles (instead of repeating content)
+- Screenshots placed immediately below the step or section they illustrate
 
-### Word targets
-- Process articles (Type D, L): 400–600 words maximum
-- All other articles: 200–400 words maximum
-- FAQ answers: 1–4 sentences per answer, then a backlink
-- Status glossary entries: 1–2 sentences per status
+### Word targets (guidelines, not hard limits — completeness always wins)
+- Process articles (Type D, L): aim for 400–600 words
+- Concept / Overview articles (Type J): aim for 300–500 words
+- Status / Reference articles (Type E, G): aim for 250–400 words
+- FAQ answers: 2–5 sentences per answer, then a back-link
+- If an article cannot be complete under the target, keep the content and review the structure
+
+---
+
+## Screenshot Rules (MANDATORY)
+
+### Placement
+- Place screenshots **immediately below** the step or explanation they illustrate
+- Never group all screenshots at the end of an article
+
+### Layout
+- **Default: one screenshot per line** with a caption directly below it
+- **Maximum two screenshots side-by-side** (only when directly comparing two views)
+- Never place 3+ screenshots in one row
+- Every screenshot must have a caption describing what it shows
+
+### Format
+```markdown
+![Caption describing the screenshot](images/NN-article-name/filename.png)
+*Caption describing the screenshot*
+```
+
+---
+
+## No Information Repetition Rule
+
+- **Never repeat the same information in two articles.**
+- If another article explains something in detail, give a one-line summary and link: `→ See [Article Title](filename.md) for details.`
+- Only repeat information if it is essential for the user to act without navigating away (e.g., a critical warning).
+
+---
+
+## Section Flow Order Rule
+
+Articles within each sidebar section **must follow the platform's workflow order** — the sequence a user encounters features in practice.
+
+- **Asset Sale order:** Overview → Analytics → Deal Lifecycle → Deal Creation → Investor Commitment → Investor Agreement & E-Signature → Settlement → Repayment → NFT Burn
+- **Credit Facilities order:** Overview → Roles → Term Sheet → Master Commitment → Facility Setup → Funding Requests → Funding Notices → Token/E-Sign
+- Any new section must be inserted at the position that matches when the user encounters it in the workflow.
+
+---
+
+## Frontmatter (REQUIRED)
+
+Every `.md` article MUST start with YAML frontmatter:
+
+```yaml
+---
+title: Human-Readable Title
+description: One-line description (50-120 characters)
+---
+```
+
+- **No placeholders:** Never use TODO, TBD, "coming soon", or "[insert content]"
+- **No fiction:** Only document features that exist in the platform
+- **Tables:** Use for status definitions, role permissions, comparisons
+- **Cross-references:** Add back-links at end of FAQ answers and status articles
 
 ### Frontmatter (REQUIRED)
 
@@ -288,12 +346,14 @@ Before writing or editing an article, check `ARTICLE_TAXONOMY.md` for its assign
 
 ---
 
-## Golden Rule
+## Golden Rules
 
-> **Simple. Short. Sweet.** If a user won't read it, it should not be there.
+> **Complete. Direct. Simple.** — All three, in that priority order.
 
-1. Every sentence must be useful to the user right now
-2. One sentence per idea — never pad
-3. Remove repeated explanations, background history, and developer context
-4. Add a back-link at the end of FAQ answers and status glossary entries
-5. Use tables for comparisons; bullets for short lists; paragraphs only when the flow demands it
+1. **Completeness first** — every important rule, step, status, and validation must be in the article
+2. **Direct second** — say it in the fewest words; never pad or repeat
+3. **Simple third** — plain English, no jargon, no developer internals
+4. Never sacrifice completeness for brevity; shorten the wording instead of removing the concept
+5. Use tables for comparisons; bullets for short lists; numbered steps for processes
+6. Add a back-link instead of repeating content from another article
+7. Place screenshots immediately below the step they illustrate; max 2 per row; captions required

@@ -10,7 +10,7 @@ Available for deals configured as **ESMA Compliant** during deal setup. Generate
 
 ## Who Can Use This
 
-Market Makers, Issuers, and Admin users on ESMA-compliant securitization deals.
+Underwriters / Facility Agents, Issuers, and Admin users on ESMA-compliant securitization deals.
 
 ## Prerequisites
 

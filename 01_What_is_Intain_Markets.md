@@ -1,7 +1,6 @@
 ---
 title: What is Intain Markets
-description: >-
-  Blockchain-based digital infrastructure platform for structured finance — securitization, credit facilities, asset sales, and participation agreements
+description: Blockchain-based digital infrastructure platform for structured finance — securitization, credit facilities, asset sales, and participation agreements
 ---
 
 # What is Intain Markets
@@ -22,11 +21,11 @@ description: >-
 | Role | Works in |
 |---|---|
 | **Issuer / Borrower** | All — creates pools, loans, deals, term sheets |
-| **Market Maker / Facility Agent** | Securitization, Credit Facilities — structures deals, approves requests |
+| **Underwriter / Facility Agent** | Asset Sale (Underwriter) + Credit Facilities (Facility Agent) — structures deals, approves requests |
 | **Investor / Lender** | All — reviews, commits, settles, receives repayment |
-| **Underwriter** | Asset Sale — approves deals before investors can commit |
 | **Servicer** | Uploads loan tapes for assigned deals |
 | **Paying Agent** | Manages payment distributions in securitization |
+| **Verification Agent** | Reviews and certifies loan batches |
 | **Rating Agency** | Read-only review and feedback on shared pools |
 | **Admin** | Platform administration, KYC, delegation support |
 
@@ -42,5 +41,5 @@ description: >-
 
 **ESMA reporting** — Automated Annex 2, 12, and 14 reports for European securitization compliance.
 
-→ See [User Roles and Responsibilities](02_User_Roles_and_Responsibilities.md) to understand what each role can do.
+→ See [User Roles and Responsibilities](02_User_Roles_and_Responsibilities.md) for what each role can do.
 → See [Status and Approval Philosophy](04_Status_and_Approval_Philosophy.md) for how approvals work.

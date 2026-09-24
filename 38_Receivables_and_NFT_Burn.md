@@ -1,11 +1,11 @@
 ---
-title: Receivables and NFT Burn
+title: NFT Burn
 description: >-
   What receivables NFTs represent after settlement and how investors burn them
   after repayment
 ---
 
-# Receivables & NFT Burn
+# NFT Burn
 
 ## Overview
 

@@ -1,6 +1,6 @@
 ---
 title: Pool Creation and Sharing
-description: Create a pool, map loans, and share with market makers, investors, or rating agencies
+description: Create a pool, map loans, and share with underwriters / facility agents, investors, or rating agencies
 ---
 
 # Pool Creation & Sharing
@@ -9,14 +9,14 @@ description: Create a pool, map loans, and share with market makers, investors, 
 
 1. **Pools → Set-up Pool** (top right)
 2. Fill in: **Pool Name** (must be unique), **Asset Class**, **Transaction Type**, **Description** (optional), **Closing Deal** flag
-3. Assign organisations: Market Makers, Investors, Servicers, Paying Agents, Rating Agencies, Verification Agents
+3. Assign organisations: Underwriters / Facility Agents, Investors, Servicers, Paying Agents, Rating Agencies, Verification Agents
 4. Click **Create** → pool status is **Created**; metrics start at zero until loans are mapped
 
 ![Pool Creation - Issuer](<.gitbook/assets/PoolCreation_Issuer (1).png>)
 
-## Mapping Loans from Loan Registry
+## Mapping Loans from Asset Registry
 
-1. **Loan Registry → select loans** (checkbox) → click **Map to Pool**
+1. **Asset Registry → select loans** (checkbox) → click **Map to Pool**
 2. Choose the target pool from the dropdown → confirm
 3. Loans move to **Mapped** status; pool metrics update automatically
 
@@ -76,7 +76,7 @@ Use **Start Deal** when pool composition is final and all pool loans have been N
 | Preview permissions | Feedback and download are on by default; set per organisation |
 | Start Deal prerequisite | All pool loans must be NFT-minted |
 | Editing window | Created, Preview, Under Review — editing allowed; Deal — locked |
-| Feedback before acceptance | Market makers cannot leave feedback until mandate accepted |
+| Feedback before acceptance | Underwriters / Facility Agents cannot leave feedback until mandate accepted |
 
 → See [Pool Feedback Workflow](09_Pool_Feedback_Workflow.md) for detailed feedback steps.
 → See [Loan Management](42_Loan_Management.md) for NFT minting prerequisites.

@@ -9,7 +9,7 @@
 * [Login & Navigation](03_Login_and_Navigation.md)
 * [Status & Approval Philosophy](04_Status_and_Approval_Philosophy.md)
 
-## Asset Onboarding
+## Asset Onboarding & Pools
 
 * [Pools Overview](05_Pools_Overview.md)
 * [Pool Lifecycle & Statuses](06_Pool_Lifecycle_and_Statuses.md)
@@ -45,14 +45,14 @@
 ## Asset Sale
 
 * [Asset Sale Overview](32_Asset_Sale_Overview.md)
+* [Asset Sale Analytics](39_Asset_Sale_Analytics.md)
 * [Asset Sale Deal Lifecycle & Statuses](33_Asset_Sale_Deal_Lifecycle_and_Statuses.md)
 * [Deal Creation & Publishing](34_Deal_Creation_and_Publishing.md)
 * [Investor Commitment & Allocation](35_Investor_Commitment_and_Allocation.md)
+* [Investor Agreement & E-Signature](40_Investor_Agreement_and_E-Signature.md)
 * [Settlement & NFT Transfer](36_Settlement_and_NFT_Transfer.md)
 * [Repayment Flow](37_Repayment_Flow.md)
-* [Receivables & NFT Burn](38_Receivables_and_NFT_Burn.md)
-* [Asset Sale Analytics](39_Asset_Sale_Analytics.md)
-* [Investor Agreement & E-Signature](40_Investor_Agreement_and_E-Signature.md)
+* [NFT Burn](38_Receivables_and_NFT_Burn.md)
 
 ## Issuer / Borrower Workflows
 
@@ -64,7 +64,7 @@
 * [Asset Sale Deal Setup](46_Asset_Sale_Deal_Setup_Issuer.md)
 * [Repayment Initiation](47_Repayment_Initiation_Issuer.md)
 
-## Market Maker / Facility Agent Workflows
+## Underwriter / Facility Agent Workflows
 
 * [Pool Mandate Review](48_Pool_Mandate_Review.md)
 * [Term Sheet Review](49_Term_Sheet_Review.md)

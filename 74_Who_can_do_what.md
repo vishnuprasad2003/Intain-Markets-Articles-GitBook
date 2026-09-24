@@ -18,7 +18,7 @@ Two checks must both pass: **you are the right role** and **the item is in the r
 | **Asset Sale** | Create deal, assign loans, publish, initiate repayment, transfer NFTs, approve token transfers |
 | **Data Room** | Upload, delete, rename, create folders on own pools and deals |
 
-## Market Maker / Facility Agent
+## Underwriter / Facility Agent
 
 | Area | Actions |
 |---|---|
@@ -41,6 +41,7 @@ Two checks must both pass: **you are the right role** and **the item is in the r
 | **Servicer** | View assigned deals, upload monthly loan tape |
 | **Rating Agency** | View and leave feedback on shared pools (cannot request loan removal) |
 | **Paying Agent** | Transfer funds for securitization distributions (OTP required) |
+| **Verification Agent** | Certify loan batches in Batch Verification; review uploaded loan documents and confirm data quality |
 | **Admin** | Manage organisations and users, approve/reject KYC, process delegated tasks, view activity log, apply status corrections |
 
 ## Key Notes

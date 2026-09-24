@@ -55,15 +55,10 @@ Minting is now in **Certificates**. Issuers use **View NFT** and **Mint NFT** th
 
 ### 7. Who can share a pool — expanded
 
-Only the issuer could share a pool, and a market maker could not pass it to investors.
+Only the issuer could share a pool, and an underwriter / facility agent could not pass it to investors.
 
-The issuer can still share with market makers and investors. A market maker can also share an accepted pool with investors.
+The issuer can still share with underwriters / facility agents and investors. An underwriter / facility agent can also share an accepted pool with investors.
 
-### 8. Removed loans — now visible
-
-Removed loans used to disappear from some screens. Reinstated loans were not labeled.
-
-Removed loans stay on the list with status **Removed**. Reinstated loans show **Reinstated**. The history of each change, including who made it, stays with the loan.
 
 ## Impact on Existing Users
 

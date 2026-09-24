@@ -81,7 +81,7 @@ This file tracks which screenshots are needed for each article. Screenshots shou
 | 46 | Asset Sale Deal Setup (Issuer) | NEEDS: deal creation, loan assignment, sale terms, publish |
 | 47 | Repayment Initiation (Issuer) | NEEDS: loan tape upload, repayment wizard, confirmation |
 
-## Market Maker/FA Workflows (48–56)
+## Underwriter / FA Workflows (48–56)
 
 | # | Article | Screenshot Status |
 |---|---------|-------------------|

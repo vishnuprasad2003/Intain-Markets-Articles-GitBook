@@ -31,7 +31,7 @@ The deal is the unit of work. It packages loans, sale terms, and documents, then
 
 * **Issuers** package and sell loan portfolios with a clear review and settlement trail.
 * **Investors** review, commit, sign, settle, and hold tokenized ownership.
-* **Underwriters (Market Makers)** review terms, allocate investors, and oversee publication.
+* **Underwriters** review terms, allocate investors, and oversee publication.
 * **Servicers** keep loan tapes current after the deal is Active.
 
 ## Key Components
