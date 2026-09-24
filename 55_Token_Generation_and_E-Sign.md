@@ -1,9 +1,11 @@
 ---
 title: Token Generation and E-Sign
-description: Understanding token generation and the e-signature process in credit facilities
+description: >-
+  Understanding token generation and the e-signature process in credit
+  facilities
 ---
 
-# Token Generation and E-Sign
+# Token Generation & E-Sign
 
 ## Overview
 
@@ -21,10 +23,10 @@ Tokens are generated at the funding notice stage:
 
 ### Token Generation Status
 
-| Status | Meaning |
-|--------|---------|
+| Status                      | Meaning                                       |
+| --------------------------- | --------------------------------------------- |
 | **Pending Token Generated** | Funding notice created, tokens being prepared |
-| **Token Generated** | Tokens ready, awaiting FA approval and e-sign |
+| **Token Generated**         | Tokens ready, awaiting FA approval and e-sign |
 
 ## E-Signature Workflow
 
@@ -32,22 +34,22 @@ E-signatures are required at several points in the credit facility workflow:
 
 ### 1. Term Sheet E-Sign (Borrower)
 
-**Who Signs:** Borrower
-**When:** After creating the term sheet, before submitting to FA
+**Who Signs:** Borrower **When:** After creating the term sheet, before submitting to FA
 
 **Process:**
+
 1. Borrower creates term sheet
 2. Clicks to sign via Adobe Sign
 3. Completes e-signature
-4. Status changes to **Signed by the borrower**
+4. Status changes to **BorrowerSigned**
 5. Can now submit to FA
 
 ### 2. Master Commitment E-Sign (Lender)
 
-**Who Signs:** Lender
-**When:** When approving the master commitment
+**Who Signs:** Lender **When:** When approving the master commitment
 
 **Process:**
+
 1. Lender reviews the master commitment
 2. Clicks **Review & Approve**
 3. Adobe Sign popup opens
@@ -56,10 +58,10 @@ E-signatures are required at several points in the credit facility workflow:
 
 ### 3. Funding Notice E-Sign (Facility Agent)
 
-**Who Signs:** Facility Agent (for each lender)
-**When:** After approving the funding notice
+**Who Signs:** Facility Agent (for each lender) **When:** After approving the funding notice
 
 **Process:**
+
 1. FA approves the funding notice
 2. Action shows **E-sign (0/n)**
 3. FA clicks E-sign
@@ -68,16 +70,16 @@ E-signatures are required at several points in the credit facility workflow:
 6. Count updates: (1/n), (2/n), ... (n/n)
 7. Each lender can see the notice once their e-sign is complete
 
-![FA - Token Generation and E-Sign](images/55-token-generation-and-e-sign/FA_FundingNotice_Save_TokenGeneration.png)
+![FA - Token Generation and E-Sign](<.gitbook/assets/FA_FundingNotice_Save_TokenGeneration (2).png>)
 
 ### E-Sign Progress Tracking
 
-| E-Sign Status | Meaning |
-|---------------|---------|
-| E-sign (0/3) | No lenders signed yet |
-| E-sign (1/3) | Signed for 1 lender |
-| E-sign (2/3) | Signed for 2 lenders |
-| E-sign (3/3) | All lenders signed |
+| E-Sign Status | Meaning               |
+| ------------- | --------------------- |
+| E-sign (0/3)  | No lenders signed yet |
+| E-sign (1/3)  | Signed for 1 lender   |
+| E-sign (2/3)  | Signed for 2 lenders  |
+| E-sign (3/3)  | All lenders signed    |
 
 ## Complete Flow
 

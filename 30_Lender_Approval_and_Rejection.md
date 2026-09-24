@@ -3,7 +3,7 @@ title: Lender Approval and Rejection
 description: How lenders approve or reject master commitments in credit facilities
 ---
 
-# Lender Approval and Rejection
+# Lender Approval & Rejection
 
 ## Overview
 
@@ -11,18 +11,20 @@ This guide explains how lenders approve or reject master commitments in the cred
 
 ## Who Can Use This
 
-- **Lenders** who have been added to a master commitment by the facility agent
+* **Lenders** who have been added to a master commitment by the facility agent
 
 ## When This Is Used
 
 Use this process when:
-- A facility agent has created a master commitment
-- You have been added as a lender to the facility
-- You need to review and decide on your participation
+
+* A facility agent has created a master commitment
+* You have been added as a lender to the facility
+* You need to review and decide on your participation
 
 ## Prerequisites
 
 Before you can approve or reject:
+
 1. A term sheet has been approved
 2. Master commitment has been auto-created
 3. Facility agent has configured the facility and added you as a lender
@@ -33,44 +35,40 @@ Before you can approve or reject:
 ### Step 1: Access the Master Commitment
 
 1. **Navigate to Oppurtunities**
-   - Log in with your Lender credentials
-   - From the left expandable menu, click on **Oppurtunities**
-   - Find the master commitment pending your review
-
+   * Log in with your Lender credentials
+   * From the left expandable menu, click on **Oppurtunities**
+   * Find the master commitment pending your review
 2. **Review Facility Details**
-   - Review the facility terms and conditions
-   - Check your allocated commitment amount
-   - Review the borrower information
+   * Review the facility terms and conditions
+   * Check your allocated commitment amount
+   * Review the borrower information
 
-![Lender Approval - Master Commitment](images/20-master-commitment-overview/LenderApproval_MasterCommitment.png)
+![Lender Approval - Master Commitment](.gitbook/assets/LenderApproval_MasterCommitment.png)
 
 ### Step 2: Make Your Decision
 
 #### To Approve
 
 1. **Click Review & Approve**
-   - Review all facility details
-   - Ensure terms are acceptable
-
+   * Review all facility details
+   * Ensure terms are acceptable
 2. **E-Sign via Adobe Sign**
-   - Adobe Sign popup opens
-   - Complete the electronic signature
-   - Your approval is recorded
-
+   * Adobe Sign popup opens
+   * Complete the electronic signature
+   * Your approval is recorded
 3. **Facility Becomes Active**
-   - Once any lender approves, the master commitment becomes **Active**
-   - The facility is now operational
+   * Once any lender approves, the master commitment becomes **Active**
+   * The facility is now operational
 
 #### To Reject
 
 1. **Click Reject** (if available)
-   - Provide a reason for rejection
-   - Your rejection is recorded
-
+   * Provide a reason for rejection
+   * Your rejection is recorded
 2. **What Happens After Rejection**
-   - Facility agent is notified
-   - Facility agent may need to find alternative lenders
-   - You are removed from this facility
+   * Facility agent is notified
+   * Facility agent may need to find alternative lenders
+   * You are removed from this facility
 
 ## Approval Flow
 
@@ -81,7 +79,7 @@ Master Commitment Auto-Created (Draft)
        ↓
 FA Configures Facility → Adds Lenders → Create Facility
        ↓
-Master Commitment Status: Pending Lender Approval
+Master Commitment Status: PendingLenderApproval
        ↓
 Lender Reviews → Approve (E-Sign) or Reject
        ↓
@@ -91,35 +89,39 @@ Any Lender Approves → Master Commitment becomes Active
 ## What Lenders See
 
 ### In Credit Facility Section
-- Master commitments pending your approval
-- Facility details and terms
-- Your allocated commitment amount
+
+* Master commitments pending your approval
+* Facility details and terms
+* Your allocated commitment amount
 
 ### Actions Available
-| Action | Description |
-|--------|-------------|
+
+| Action               | Description                    |
+| -------------------- | ------------------------------ |
 | **Review & Approve** | Accept the facility and e-sign |
-| **Reject** | Decline participation |
+| **Reject**           | Decline participation          |
 
 ## Rules & Validations
 
-- **E-Sign Required**: Approval requires e-signature via Adobe Sign
-- **One Approval Activates**: The master commitment becomes Active when any lender approves
-- **Review Before Signing**: Carefully review all terms before e-signing
-- **Rejection Is Final**: Once rejected, you cannot reverse the decision
+* **E-Sign Required**: Approval requires e-signature via Adobe Sign
+* **One Approval Activates**: The master commitment becomes Active when any lender approves
+* **Review Before Signing**: Carefully review all terms before e-signing
+* **Rejection Is Final**: Once rejected, you cannot reverse the decision
 
 ## What Happens Next
 
 **After Approval:**
-- Master commitment becomes **Active**
-- Facility agent can complete deal modelling
-- Borrower can map loans and raise funding requests
-- You will receive funding notices for settlement
+
+* Master commitment becomes **Active**
+* Facility agent can complete deal modelling
+* Borrower can map loans and raise funding requests
+* You will receive funding notices for settlement
 
 **After Rejection:**
-- Facility agent is notified
-- You are removed from the facility
-- No further actions required from you
+
+* Facility agent is notified
+* You are removed from the facility
+* No further actions required from you
 
 ## Key Points
 
@@ -131,6 +133,4 @@ Any Lender Approves → Master Commitment becomes Active
 
 **Ongoing Participation** - After approval, you'll participate in funding notices and settlements.
 
-![LenderApprovalFundingNotice](images/30-lender-approval-and-rejection/LenderApprovalFundingNotice.png)
-
-
+![LenderApprovalFundingNotice](<.gitbook/assets/LenderApprovalFundingNotice (3).png>)

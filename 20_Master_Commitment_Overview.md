@@ -30,15 +30,17 @@ Master commitments are **automatically created** from approved term sheets—you
 **Facility Terms** - Basic facility information from the approved term sheet: maximum facility amount, interest rates, advance rate, maturity date. This information is pre-populated and read-only.
 
 **Lender Groups** - Configuration of lenders participating in the facility, including:
-- Lender organization
-- Commitment amount
-- Voting percentage
-- Individual approval tracking
+
+* Lender organization
+* Commitment amount
+* Voting percentage
+* Individual approval tracking
 
 **Sub-Facilities** - For multiple-branch master commitments:
-- Main facility with all selected lenders
-- Sub-facilities assigned to specific lender groups
-- No two sub-facilities can have the same lenders
+
+* Main facility with all selected lenders
+* Sub-facilities assigned to specific lender groups
+* No two sub-facilities can have the same lenders
 
 **Deal Modelling** - After activation, the facility agent sets up deal modelling to configure calculations and parameters needed before funding requests can be created.
 
@@ -51,58 +53,60 @@ When a term sheet is approved by the facility agent, a master commitment is auto
 **2. Facility Agent Configuration**
 
 The facility agent clicks **Create Facility** to open a comprehensive configuration popup with multiple sections:
-- **Basic**: Select single or multiple branch facility
-- **Parties & Accounts**: Add lenders and their commitment amounts
-- **Economic & Fees**: Configure interest rates and fee structures
-- **Additional Sections**: Complete all required configurations
-- **Review & Create**: Final review and submission
 
-![Create Master Commitment Facility](images/16-credit-facilities-overview/CreateMasterCommitmentFacility.png)
+* **Basic**: Select single or multiple branch facility
+* **Parties & Accounts**: Add lenders and their commitment amounts
+* **Economic & Fees**: Configure interest rates and fee structures
+* **Additional Sections**: Complete all required configurations
+* **Review & Create**: Final review and submission
+
+![Create Master Commitment Facility](.gitbook/assets/CreateMasterCommitmentFacility.png)
 
 All data is auto-saved as the facility agent enters it.
 
 **3. Sub-Facility Creation (Multiple Branch)**
 
 If multiple branch is selected, the facility agent can create sub-facilities:
-- Click **Create Sub-Facility** in the Review & Create section
-- A new sub-master commitment is created
-- Use the dropdown at the top to switch between main and sub-facilities
-- Assign lenders from the main facility to each sub-facility
-- No two sub-facilities can have the same lenders
+
+* Click **Create Sub-Facility** in the Review & Create section
+* A new sub-master commitment is created
+* Use the dropdown at the top to switch between main and sub-facilities
+* Assign lenders from the main facility to each sub-facility
+* No two sub-facilities can have the same lenders
 
 **4. Submission for Lender Approval**
 
-Click **Create Facility** to finalize. Status changes from **Draft** to **Pending Lender Approval**. The facility is shared with selected lenders in their **Opportunities** section.
+Click **Create Facility** to finalize. Status changes from **Draft** to **PendingLenderApproval**. The facility is shared with selected lenders in their **Opportunities** section.
 
 **5. Lender Approval**
 
 Lenders see the facility in their Opportunities section with **Review & Approve** action. They review the facility details and click **Approve & E-Sign** to sign via Adobe Sign.
 
-![Lender Approval - Master Commitment](images/20-master-commitment-overview/LenderApproval_MasterCommitment.png)
+![Lender Approval - Master Commitment](.gitbook/assets/LenderApproval_MasterCommitment.png)
 
 After any one lender approves and signs, the master commitment status changes to **Active**.
 
 **6. Deal Modelling**
 
 After activation, the facility agent completes deal modelling:
-- Navigate to Active Facilities tab
-- Click **Set Up Deal**
-- Complete all sections in the deal modelling screen
-- Click **Create** in the Review section
-- Facility Setup Status changes to **Completed**
+
+* Navigate to Active Facilities tab
+* Click **Set Up Deal**
+* Complete all sections in the deal modelling screen
+* Click **Create** in the Review section
+* Facility Setup Status changes to **Completed**
 
 **7. Operational Use**
 
 After deal modelling is complete:
-- Borrower can map NFT-minted loans to the facility
-- Borrower can create funding requests
-- Funding workflow proceeds
 
+* Borrower can map NFT-minted loans to the facility
+* Borrower can create funding requests
+* Funding workflow proceeds
 
+![Create Master Commitment Modal Create On Click Configure Collateral Eligibility Rules Modal 75](.gitbook/assets/create_master_commitment_modal_create_on_click_configure_collateral_eligibility_rules_modal_75.png)
 
-![Create Master Commitment Modal Create On Click Configure Collateral Eligibility Rules Modal 75](images/20-master-commitment-overview/create_master_commitment_modal_create_on_click_configure_collateral_eligibility_rules_modal_75.png)
-
-![Create Master Commitment Modal Scroll State B 74](images/20-master-commitment-overview/create_master_commitment_modal_scroll_state_b_74.png)
+![Create Master Commitment Modal Scroll State B 74](.gitbook/assets/create_master_commitment_modal_scroll_state_b_74.png)
 
 ## Important Points to Know
 
@@ -113,8 +117,9 @@ After deal modelling is complete:
 **FA Configuration Required** - The facility agent must complete all configuration before submitting for lender approval.
 
 **Sub-Facility Rules** - For multiple-branch facilities:
-- Sub-facilities can only include lenders from the main facility
-- No two sub-facilities can have the same lenders
+
+* Sub-facilities can only include lenders from the main facility
+* No two sub-facilities can have the same lenders
 
 **Any Lender Activates** - Once any one lender approves, the master commitment becomes Active.
 

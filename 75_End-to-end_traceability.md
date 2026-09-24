@@ -1,103 +1,122 @@
 ---
 title: End-to-End Traceability
-description: How Intain Markets provides complete traceability for every action, decision, and change — from centralized audit logging and status history to blockchain records and e-signature evidence
+description: >-
+  How Intain Markets provides complete traceability for every action, decision,
+  and change — from centralized audit logging and status history to blockchain
+  records and e-signature evidence
 ---
 
 # End-to-End Traceability
 
 ## Overview
 
-Intain Markets keeps a record of meaningful actions: creating an item, changing a status, approving or rejecting, uploading a document, signing, transferring tokens, and confirming settlement. Each record says who did it, what they did, when it happened, and whether it succeeded.
+Intain Markets is designed so that every meaningful action — creating an item, changing a status, approving or rejecting a request, uploading a document, signing an agreement, transferring tokens, or confirming settlement — is recorded with full attribution. The platform provides multiple, overlapping layers of traceability: per-item status and action histories, a centralized audit module that spans all modules, document storage with hash verification, e-signature evidence, and blockchain records for on-chain operations.
 
-That record is not optional. It is written as you work. You do not turn it on, and you cannot edit it later. The same history is available on the item itself and in the activity log for your organization.
+This is not a feature that was added after the fact. Traceability is built into the platform's architecture. Every module writes to the same centralized audit trail, every status change is captured with who made it and when, and blockchain operations produce immutable records that exist independently of the platform's database.
 
 ## How the Platform Is Designed
 
-### The activity log
+### Centralized Audit Module
 
-Open **Activity Audit** from the left sidebar. It lists activity from across the platform in one place. Every event shows:
+The platform includes a centralized audit module that consolidates activity from every module into a single, queryable log. All modules write to this log through a single function — `audit.helper.record()` — which ensures that every event follows the same structure and meets the same quality standards.
 
-| What you see | What it tells you |
-|---|---|
-| **Reference** | A unique id for that event, so you can find it again |
-| **When** | The date and time of the action |
-| **Who** | The person, their role, and their organization |
-| **What happened** | A short description written for people, such as a term sheet being approved |
-| **Result** | Succeeded, failed, denied, or still pending |
-| **Which item** | The pool, deal, term sheet, notice, or other record the action was about |
+**What every audit event contains:**
 
-The log covers sign-in, permission checks, creates and updates, approvals and rejections, document access, blockchain steps, signatures, and platform jobs. You do not need to know internal category names. Use the description, the person, the item, and the result.
+| Field               | Description                                                                                                                 |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **Audit ID**        | A unique identifier for the event (format: `AUD-<uuid>`)                                                                    |
+| **Occurred At**     | Timestamp of when the action happened                                                                                       |
+| **Actor**           | Who performed the action — user ID, email, role, and organization ID                                                        |
+| **Event Type**      | What kind of action occurred (e.g., `credit_facility.term_sheet.created`, `whole_loan_sale.deal.approved`)                  |
+| **Category**        | The concern the event belongs to — Authentication, Authorization, Data Mutation, Data Access, Chain, Integration, or System |
+| **Outcome**         | Whether the action succeeded, failed, was denied, or is pending                                                             |
+| **Resource**        | What the action was performed on — resource type and resource ID                                                            |
+| **Summary**         | A human-readable sentence describing what happened, written for the activity feed                                           |
+| **Request Context** | The HTTP request that triggered the action — request ID, IP address, method, path                                           |
+| **Metadata**        | Additional details specific to the event — change details, blockchain transaction hashes, related entity IDs                |
 
-On the activity screen you can:
+**Resource types tracked across the platform:**
 
-- Search by the summary or the item’s reference
-- Filter by module, such as loans or pools
-- Sort the list
-- Move through the list page by page
-- Export the current results to a spreadsheet or a CSV file
-- Open an event and go to the related item
+The audit module defines a fixed set of resource types that cover every module: `auth`, `mfa`, `user`, `organization`, `pool`, `batch`, `loan`, `dataroom`, `delegation`, `settlement`, `securitization`, `whole_loan_sale`, `credit_facility`, `adobesign`, `zohosign`, `notification`, `feedback`, `wallet_onboarding`, `xft`, `nft`, `blob_files`, `ipfs_files`, `receivables_rnft`, `blockchain`, `deal`, and more. Every audit event must specify one of these types, ensuring that the log is consistently categorized and filterable.
 
-A single export is limited to 50,000 events so the file stays usable.
+**Event categories provide a second dimension of organization:**
 
-People who are not admins see only their own organization’s events. Admins can see activity across organizations. You cannot switch that scope yourself.
+* **Authentication** — Sign-in attempts, SSO logins, token refreshes, session management
+* **Authorization** — Access grants, role checks, permission denials
+* **Data Mutation** — Creations, updates, status changes, approvals, rejections
+* **Data Access** — Reads, exports, downloads
+* **Chain** — Blockchain operations — NFT minting, token transfers, settlement events
+* **Integration** — E-signature events, external system interactions
+* **System** — Platform-level operations, migrations, background jobs
 
-### History on the item
+### Per-Item Status and Action History
 
-Each pool, term sheet, facility, funding request, funding notice, and deal also keeps its own history. Open the item to see how its status changed and what else was done to it.
+In addition to the centralized audit log, each item in the platform maintains its own status history and action history directly on the item record:
 
-**Status history** records each change of status: who changed it, when, the previous status, the new status, and any comment.
+**Status history** records every status transition with attribution:
 
-Typical paths:
+* Pools: Created → Preview → Mandate Pending → Under Review → Deal
+* Term Sheets: Draft → BorrowerSigned → FAReview → Accepted / Rejected / CHANGES\_REQUESTED
+* Master Commitments: Draft → PendingLenderApproval → ACTIVE
+* Funding Requests: DRAFT → FAReview → APPROVED / REJECTED / CHANGES\_REQUESTED
+* Funding Notices: Pending Token Generated → FA Approved → E-signed for each lender
+* Asset Sale Deals: Draft → Pending Review → Published → Commit → Invest → Settlement In Progress → Settled → Active → Repayment In Progress → Closed
 
-- Pools: Created → Preview → Mandate Pending → Under Review → Deal
-- Term sheets: Draft → Signed → In review → Accepted, Rejected, or Changes Requested
-- Facilities: Draft → Pending → Active
-- Funding requests: Draft → In review → Approved, Rejected, or Changes Requested
-- Funding notices: Pending Token Generated → approved by the facility agent → signed for each lender
-- Asset Sale deals: Draft → Pending Review → Published → Commit → Invest → Settlement In Progress → Settled → Active → Repayment In Progress → Closed
+Each status history entry records who changed the status, when, the previous status, the new status, and any comments or reasons.
 
-**Action history** records work that is not only a status change: edits, sharing, document uploads, signatures, loan mapping, and similar steps. Each line has the person, the time, and what they did.
+**Action history** records every operation performed on an item — creation, editing, sharing, submission, approval, rejection, document uploads, e-signature events, loan mapping, and more. Each entry includes the actor, timestamp, action type, and relevant details.
 
-### Documents
+### Document Traceability
 
-When someone uploads a file, the platform keeps who uploaded it and when. Earlier versions stay in the history. They are not replaced without a trace. You can use that history to see which file a reviewer actually had.
+Documents uploaded to the platform are stored with IPFS hash verification. Each upload generates a content-addressable hash that serves as proof of the document's contents at the time of upload. Document history arrays maintain the complete upload history with timestamps, uploader attribution, and IPFS hashes, so you can trace every version of every document back to who uploaded it and when.
 
-### Signatures
+### E-Signature Evidence
 
-Adobe Sign and ZohoSign record that a person signed, and when. That evidence stays with the term sheet, facility, or notice. On a funding notice, the facility agent’s signature is tracked separately for each lender, so you can see which lenders have a signed notice and which are still waiting.
+E-signatures (via Adobe Sign or ZohoSign) create formal, timestamped records of consent. The platform tracks the e-signature lifecycle — envelope creation, signing events, completion — and stores this evidence alongside the item being signed. For credit facility workflows, the facility agent's e-signature for each lender on a funding notice is tracked individually, providing per-lender evidence of authorization.
 
-### Blockchain records
+### Blockchain Records
 
-Minting a loan NFT, transferring tokens, settling, and recording repayment are also written to the blockchain. Each of those steps has a transaction reference. The activity log stores that reference next to the platform event, so you can connect what you see on screen with the blockchain record. The blockchain copy cannot be edited from inside Intain Markets.
+Operations that involve the blockchain — NFT minting, token transfers, settlement, repayment — produce on-chain records with transaction hashes. These records are immutable and exist independently of the platform's database. The audit module captures blockchain transaction hashes (`metadata.chain.txHash`) alongside the platform event, creating a link between the platform's audit trail and the blockchain's permanent record.
+
+Settlement events in the asset sale workflow record on-chain delivery and payment confirmations, each with its own transaction hash. Repayment events are similarly recorded on-chain, ensuring that the complete financial lifecycle of a deal has permanent, tamper-proof evidence.
 
 ## What This Enables for Users
 
-### Rebuild what happened
+### Complete Reconstruction of Any Transaction
 
-For a pool, term sheet, funding request, or deal, you can follow who created it, what was edited, which statuses it passed through, who approved or rejected it, which documents were uploaded, who signed, and which blockchain steps completed. Start on the item. Use Activity Audit when you need a wider list than one item.
+For any item in the system — a pool, a term sheet, a funding request, a deal — you can reconstruct the complete history: who created it, every edit made, every status change, every approval or rejection, every document uploaded, every signature completed, and every blockchain transaction. This history is available on the item's detail page and through the centralized audit log.
 
-### See activity across modules
+### Cross-Module Activity View
 
-Activity Audit is a single feed instead of opening every deal and facility. Search or filter when you are looking for one event: a person’s name, an item reference, a module, or words from the summary. Export when you need the same list outside the platform. The export includes when it happened, the event reference, what happened, the result, the person’s email, role, and organization, the item, and the summary.
+The centralized audit module provides a unified view across all modules. Rather than checking individual items, you can access the Activity Audit from the sidebar to see a chronological feed of all actions taken across the platform. This feed supports:
 
-### View-as stays visible
+* **Filtering** by event type, category, outcome, actor, resource type, organization, and more
+* **Sorting** by time, event type, category, or outcome
+* **Cursor-based pagination** for efficient browsing through large activity logs
+* **Distinct-value lookups** for building filter dropdowns dynamically
 
-An administrator can open the platform as another user to help with support. That session is read-only. The administrator can see what that user sees and cannot create, edit, approve, or submit. The activity log records both the administrator and the user they were viewing.
+### Compliance Exports
+
+The audit module supports exporting the activity log to CSV or XLSX format for compliance and reporting needs. Exports follow a fixed column template that includes: Occurred At, Audit ID, Event Type, Category, Action, Outcome, Actor Email, Actor Role, Actor Org ID, Resource Type, Resource ID, and Summary. Exports are capped at 50,000 rows per download to maintain performance, and the exported file is generated as a streaming download.
+
+### Impersonation Transparency
+
+When an administrator uses the view-as (impersonation) feature for support or troubleshooting, the audit trail records both the administrator's identity and the impersonated user's identity. View-as mode is strictly read-only — no mutations are allowed — and every action taken during an impersonation session is tagged with the `impersonatedBy` field, ensuring complete transparency.
 
 ## Key Principles to Understand
 
-### Recording is automatic
+### Traceability Is Automatic
 
-You do not enable an audit setting. Actions are recorded as part of normal work. The history cannot be switched off, and an existing line cannot be rewritten.
+You do not need to enable logging or opt into audit tracking. Every action is recorded automatically as part of the platform's normal operation. The audit trail cannot be turned off, and it cannot be modified after the fact.
 
-### Records are kept
+### Audit Records Are Retained Indefinitely
 
-Activity events are kept for the life of the data. They are not expired or deleted on a schedule.
+Audit events are stored permanently. There is no expiration or automatic deletion of audit records. The platform maintains the complete history of every action for the lifetime of the data.
 
-### More than one record of the same event
+### Multiple Layers Provide Redundancy
 
-The item’s own history, the activity log, the document history, the signature record, and the blockchain transaction reference describe the same work from different places. If you need to confirm a payment or a token transfer, the transaction reference is the record that sits outside the platform.
+The combination of per-item history (embedded in the item record), centralized audit log (queryable across modules), document hashes (content-addressable proof), e-signature records (legally binding evidence), and blockchain records (immutable on-chain proof) means that traceability does not depend on any single system. Even if one layer were compromised, the others would provide independent evidence.
 
-### You see your own organization
+### Non-Admin Users Are Auto-Scoped
 
-Unless you are an admin, the activity log is limited to your organization. Another organization’s users, approvals, and documents do not appear in your feed.
+When non-Admin users query the audit log, they automatically see only events related to their own organization. This scoping is applied server-side and cannot be bypassed, ensuring that organizations cannot see each other's activity while still having full visibility into their own.

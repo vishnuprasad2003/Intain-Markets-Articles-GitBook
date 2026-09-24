@@ -1,172 +1,194 @@
 ---
 title: What Happens After Rejection
-description: Detailed guide to understanding rejection outcomes, their implications, and how to proceed after an item is rejected in Intain Markets
+description: >-
+  Detailed guide to understanding rejection outcomes, their implications, and
+  how to proceed after an item is rejected in Intain Markets
 ---
 
 # What Happens After Rejection
 
 ## Overview
 
-Rejection closes one item for good. Unlike a request for changes, which sends the same item back so you can edit and resubmit it, a rejection cannot be undone, edited, or appealed. The rejected term sheet, funding request, or mandate stays on the platform as a record you can open and read. To try again, you create a new item and address the reason you were given. This article explains what each kind of rejection does, what remains available, and how to move on.
+Rejection is a final, irreversible decision in Intain Markets that permanently closes the workflow for the rejected item. Unlike a change request (which allows editing and resubmission), a rejection means the specific term sheet, funding request, or mandate cannot be modified, resubmitted, or appealed. However, rejection is not a dead end — submitters can always create a new item that addresses the issues identified in the rejection. This article explains exactly what happens when each type of item is rejected, what data is preserved, and what steps are available to move forward.
 
 ## Possible Outcomes
 
-Rejection can happen on a term sheet, a funding request, a pool mandate, a request to remove a loan, or one lender’s part in a funding notice. In each case the decision is recorded with who decided, when, and why. What you can do next depends on which item was rejected.
+Rejection can occur on several item types across the platform. Each rejection follows a consistent pattern — the item becomes read-only, the rejection reason is recorded, and the submitter is notified — but the specific implications differ based on what was rejected and where it sits in the workflow.
 
 ## What Each Outcome Means
 
 ### Term Sheet Rejected
 
-**When it happens:** The facility agent chooses **Reject** while the term sheet is in review.
+**Trigger:** The facility agent clicks **Reject** while reviewing a term sheet in `PENDING_REVIEW` status.
 
-**What you see:**
-- The status changes to **Rejected**
-- The date and time of the decision are saved
-- The facility agent who rejected it is recorded
-- Their comments are saved with the term sheet. If they left the comments blank, the record notes that no comments were provided
-- The history of the term sheet keeps this decision, including any earlier rounds where changes were requested
-- You are notified that the term sheet was rejected
+**What the System Does:**
 
-**What stays available:**
-- You can open the rejected term sheet and read it
-- Documents already uploaded — collateral profile, financial statements, KYC documents, collateral data, and the funding sheet — remain available
-- The full history of status changes and actions remains available
-- A signed copy from an earlier signing attempt remains available to view
+* Status changes to **Rejected** (displayed as "Rejected by Facility Agent")
+* The `rejectedAt` timestamp is recorded using `DateUtils.nowUTC()`
+* The `rejectedBy` field stores the facility agent's user ID
+* The `rejectionComments` field stores the facility agent's explanation (defaults to "No comments provided" if left blank)
+* A status history entry is appended: `{ status: 'Rejected', updatedAt: timestamp, updatedBy: userId }`
+* An action history entry is appended: `{ action: 'Reject', comments: 'Term sheet rejected by facility agent', metadata: { newStatus: 'Rejected' } }`
+* An audit event `credit_facility.term_sheet.rejected` is emitted
 
-**What does not happen:**
-- No facility is created
-- No lenders are added to a facility
-- Nothing is sent on for signature or funding
+**What Is Preserved:**
 
-**What the borrower can do:**
-- Open the rejected term sheet and its documents
-- Read the comments to see why it was declined
-- Create a new term sheet
-- Change the terms or documents to address those comments
-- Sign the new term sheet and submit it for review
+* The complete term sheet record remains in the database as a read-only reference
+* All previously uploaded documents (collateral profile, financial statements, KYC documents, collateral data, funding sheet) remain accessible
+* The full status history and action history, including all prior change request cycles (if any), are preserved
+* Any signed PDF from a previous signing attempt remains stored
 
-**What the borrower cannot do:**
-- Edit the rejected term sheet
-- Submit the same term sheet again
-- Appeal or reverse the rejection
+**What Is NOT Created:**
+
+* No master commitment is generated
+* No facility is created
+* No lender groups are assembled
+
+**What the Borrower Can Do:**
+
+* View the rejected term sheet and its documents
+* Read the rejection comments to understand why it was declined
+* Create a **new term sheet** with a fresh `termSheetId` (format: `TS-MMDDYYYY-xxxx`)
+* Address the issues identified in the rejection comments
+* Submit the new term sheet through the standard workflow
+
+**What the Borrower Cannot Do:**
+
+* Edit the rejected term sheet
+* Resubmit the rejected term sheet
+* Appeal or reverse the rejection
 
 ### Funding Request Rejected
 
-**When it happens:** The facility agent chooses **Reject** while the funding request is in review.
+**Trigger:** The facility agent clicks **Reject** while reviewing a funding request in `FAReview` status.
 
-**What you see:**
-- The status changes to **Rejected**
-- The date and time, the facility agent, and the reason are saved on the request
-- The history of the request keeps the decision
-- The borrower’s organization is notified
+**What the System Does:**
 
-Only a request that is in review can be rejected. If it is already **Rejected**, opening it again shows the existing decision. It is not rejected a second time.
+* Status changes to **REJECTED**
+* The `rejectedAt` timestamp is recorded
+* The `rejectedBy` field stores the facility agent's user ID
+* The `rejectionReason` field stores the facility agent's explanation
+* A status history entry is appended: `{ status: 'REJECTED', updatedAt: timestamp, updatedBy: userId }`
+* An action history entry is appended: `{ action: 'Reject', comments: rejectionReason || 'Funding request rejected by market maker', metadata: { newStatus: 'REJECTED', rejectionReason: rejectionReason } }`
+* An audit event `credit_facility.funding_request.rejected` is emitted with summary: "Funding request {id} rejected and closed; no further changes allowed"
+* A notification is sent to the borrower's organization confirming the rejection
 
-**What stays available:**
-- The request, the information you entered, and the collateral documents
-- The history of actions and status changes
-- The request’s own reference, so you can find it later
+**Status Validation:** The system enforces that only funding requests in `FAReview` status can be rejected. If the request is already `REJECTED`, the system returns an informational response with the existing rejection details (status, `rejectedAt`, `rejectedBy`, `rejectionReason`) instead of re-processing.
 
-**What does not happen:**
-- No funding notice is created
-- No tokens are recorded for this request
-- No signatures are started for a notice
+**What Is Preserved:**
 
-**What the borrower can do:**
-- Open the rejected request and its documents
-- Read the reason
-- Create a new funding request on the same facility
-- Change the draw amount, the date, or the documents
-- Submit the new request for review
+* The complete funding request record, including `preFilledData`, `userData`, `collateralAddendum`, and `collateralAddendumHistory`
+* The full `actionHistory` and `statusHistory` arrays
+* The `fundingRequestId` for reference
 
-**What the borrower cannot do:**
-- Edit the rejected request
-- Submit the same request again
-- Appeal the rejection
+**What Is NOT Created:**
+
+* No funding notice is generated
+* No tokens are minted
+* No e-signatures are initiated
+
+**What the Borrower Can Do:**
+
+* View the rejected funding request and its documents
+* Read the rejection reason
+* Create a **new funding request** with a fresh `fundingRequestId` (format: `FR-MMDDYYYY-xxxx`)
+* Adjust the draw amount, documentation, or other parameters
+* Submit the new request through the standard workflow
+
+**What the Borrower Cannot Do:**
+
+* Edit the rejected funding request
+* Resubmit the rejected funding request
+* Appeal the rejection
 
 ### Pool Mandate Rejected
 
-**When it happens:** A market maker declines to take the mandate while reviewing the pool.
+**Trigger:** A market maker declines to structure the deal during the pool mandate review process.
 
-**What happens:**
-- That market maker will not structure the deal
-- The pool stays in the platform. It is not deleted
+**What Happens:**
 
-**What the issuer can do:**
-- Open the pool and its loans
-- Send the pool to a different market maker
-- Improve the pool first — add or remove loans, update documents, or respond to comments — and then share it again
-- Share the pool with investors directly, if your organization is allowed to do that
+* The market maker indicates they will not take on the mandate
+* The pool remains in the system and is not deleted or archived
 
-**What the issuer cannot do:**
-- Require the original market maker to reconsider
-- Expect the first market maker’s comments to transfer automatically to the next one. Share the improved pool and the relevant comments yourself
+**What the Issuer Can Do:**
+
+* View the pool and all associated loans
+* Submit the pool to a **different market maker** for mandate consideration
+* Make improvements to the pool (add or remove loans, update documentation, address the market maker's feedback) before resubmitting
+* Share the pool directly with investors if the issuer has that capability
+
+**What the Issuer Cannot Do:**
+
+* Force the original market maker to reconsider
+* Automatically transfer the mandate rejection feedback to a new market maker
 
 ### Loan Removal Request Rejected (by Issuer)
 
-**When it happens:** A market maker or investor asks for a loan to be removed from a pool, and the issuer declines that request.
+**Trigger:** A market maker or investor requests removal of a specific loan from a pool, and the issuer clicks the **cross icon** (reject removal).
 
-**What happens:**
-- The loan stays in the pool
-- It stays in the pool’s calculations
-- It is not marked as removed
+**What Happens:**
 
-**What this means:**
-This is the one rejection that protects the original item. The issuer is declining a removal request, so the loan remains. The market maker or investor can still leave comments. They cannot force the loan out of the pool.
+* The loan remains in the pool
+* The loan continues to be included in all pool calculations (amortization, collateral, etc.)
+* The loan retains its current status (it is not marked as "Removed")
 
-### Lender Declines a Funding Notice
+**What This Means:** This is the only "rejection" scenario in Intain Markets where rejection is not a negative outcome for the submitter of the original item. Here, the issuer is rejecting the removal request, which means the loan stays in the pool — the issuer's preferred outcome. The market maker or investor who requested the removal can continue to provide feedback through the feedback module but cannot force the removal.
 
-**When it happens:** One lender declines their part of a funding notice.
+### Lender Approval Status Rejected (Funding Notice)
 
-**What happens:**
-- That lender’s decision is recorded as **Rejected**, with the time and the person who recorded it
-- The notice history shows the update for that lender
+**Trigger:** A lender's approval status on a funding notice token distribution entry is set to `REJECTED`.
 
-**What this means:**
-The decline applies to that lender on that notice. It does not reject the notice for the other lenders, and it does not by itself close the notice.
+**What Happens:**
+
+* The specific lender's `lenderApprovalStatus` in the `tokenDistribution` array is updated to `REJECTED`
+* The `lenderApprovalStatusAt` and `lenderApprovalStatusBy` fields are recorded
+* An action history entry with `action: 'LENDER_STATUS_UPDATED'` is appended
+* A status history entry for the specific `lenderOrgId` is recorded
+
+**What This Means:** This rejection is scoped to a single lender's participation in a specific funding notice. It does not affect other lenders in the same funding notice or the overall funding notice status.
 
 ## Rejection vs Change Request — Summary
 
-| Aspect | Rejection | Change Request |
-|--------|-----------|----------------|
-| **Final?** | Yes. It cannot be undone | No. The item returns to the person who submitted it |
-| **Editable?** | No. It is read-only | Yes. They can change it |
-| **Send the same item again?** | No. Create a new item | Yes. Edit and resubmit |
-| **Status** | **Rejected** | **Changes Requested** |
-| **Earlier version kept?** | The final state is kept, with its history | Each request for changes keeps a copy of the item at that moment |
-| **Record of the decision** | The reason or comments are saved | The requested changes are saved |
-| **Next records created?** | No facility, funding notice, or tokens | Not yet. Those are created only if the item is later approved |
+| Aspect                        | Rejection                                               | Change Request                                |
+| ----------------------------- | ------------------------------------------------------- | --------------------------------------------- |
+| **Final?**                    | Yes — cannot be undone                                  | No — item returns to submitter                |
+| **Editable?**                 | No — becomes read-only                                  | Yes — submitter can modify                    |
+| **Resubmit same item?**       | No — must create new item                               | Yes — edit and resubmit                       |
+| **Status**                    | `Rejected` / `REJECTED`                                 | `CHANGES_REQUESTED`                           |
+| **Version snapshot?**         | No — single final state                                 | Yes — snapshot preserved per change request   |
+| **Audit trail**               | Recorded with rejection reason/comments                 | Recorded with change request details          |
+| **Downstream items created?** | No (no master commitment, no funding notice, no tokens) | Not yet — created only upon eventual approval |
 
 ## Next Steps for Users
 
 ### For Borrowers (Term Sheets)
 
-1. **Read the comments.** Open the rejected term sheet and read why the facility agent declined it.
-2. **Decide whether a new proposal can work.** If the issue is eligibility or structure, talk with the facility agent before you start again.
-3. **Create a new term sheet.** In Credit Facility, start a new term sheet and enter terms that address the comments.
-4. **Upload updated documents.** Replace or add the collateral profile, financial statements, or KYC documents if those were the problem.
-5. **Sign and submit.** Sign with Adobe Sign, then submit the new term sheet for review.
+1. **Review the rejection comments** — Open the rejected term sheet and read the `rejectionComments` field. These comments explain what was unacceptable about the proposal.
+2. **Assess feasibility** — Determine whether the issues can be addressed. If the rejection was due to eligibility or structural concerns, consult with the facility agent before creating a new term sheet.
+3. **Create a new term sheet** — Navigate to Credit Facility and initiate a new term sheet. The system generates a fresh `termSheetId`. Fill in the facility terms, addressing the issues from the rejection.
+4. **Upload updated documentation** — Provide updated collateral profiles, financial statements, and KYC documents if the rejection was documentation-related.
+5. **Sign and submit** — Complete the e-signature (Create Draft → Adobe Sign) and submit for facility agent review.
 
 ### For Borrowers (Funding Requests)
 
-1. **Read the reason.** Open the rejected funding request and read the facility agent’s explanation.
-2. **Adjust the request.** If the draw was too large, reduce it. If the date was the problem, change the funding date. If documents were missing, prepare them.
-3. **Create a new funding request** from the active facility.
-4. **Check it before you submit.** Confirm the amount fits the remaining capacity and the required documents are attached.
-5. **Submit for review.** The new request goes to the facility agent. It does not revive the rejected one.
+1. **Review the rejection reason** — Open the rejected funding request and read the `rejectionReason` field.
+2. **Adjust parameters** — If the rejection was due to the draw amount exceeding capacity, reduce the amount. If it was due to timing, adjust the funding date. If documentation was insufficient, prepare additional collateral.
+3. **Create a new funding request** — Navigate to the master commitment and create a new funding request with a fresh `fundingRequestId`.
+4. **Verify before submitting** — Ensure the request fits within the available borrowing capacity and all required documents are attached.
+5. **Submit for review** — The new request will enter `FAReview` status for the facility agent.
 
 ### For Issuers (Pool Mandates)
 
-1. **Read the market maker’s comments** in Feedback on the pool.
-2. **Choose a path.** Send the pool to another market maker, or improve it first.
-3. **Improve the pool if you need to.** Add stronger loans, remove loans that were a problem, or update the documents.
-4. **Share it again** with a market maker who can consider the mandate.
+1. **Review market maker feedback** — Read any comments or feedback the market maker provided via the feedback module.
+2. **Evaluate alternatives** — Decide whether to submit to a different market maker or to improve the pool first.
+3. **Improve the pool** — If needed, add stronger loans, remove problematic loans, or update supporting documentation.
+4. **Resubmit or share** — Share the improved pool with a new market maker for mandate consideration.
 
 ## Key Points
 
-- **Rejection is final for that item.** There is no appeal, undo, or admin override that reopens it.
-- **You can start a new item.** The platform does not block a fresh term sheet, funding request, or pool share.
-- **The reason stays with the item.** Use it when you prepare the next submission. It also remains part of the history.
-- **Rejected items stay visible** as read-only records, with their documents and history.
-- **You are notified** in the platform and by email when a rejection happens.
-- **Earlier history is kept.** If the item went through several rounds of changes before it was rejected, those rounds remain on the record.
+* **Rejection is final and irreversible** for the specific item — there is no appeal process, undo capability, or administrative override
+* **Create new items to try again** — the platform always allows submitters to create fresh items
+* **Rejection reasons are permanently recorded** — they serve as a learning tool and are part of the audit trail
+* **Rejected items remain visible** as read-only records, ensuring full traceability and reference for future submissions
+* **Notifications are sent** — borrowers and issuers receive real-time (SSE) and/or email notifications when rejections occur
+* **Status history is preserved** — even if an item went through multiple change request cycles before being rejected, the entire history is maintained

@@ -3,21 +3,25 @@ title: Loan Lifecycle and Statuses
 description: Understand the different stages loans go through and what each status means
 ---
 
-# Loan Lifecycle and Statuses
+# Loan Lifecycle & Statuses
 
 ## Overview
 
-A loan’s status shows where it is, which actions are available, and what comes next. This guide covers the path from upload through verification and NFT minting.
+Loans progress through various statuses as they move through the platform workflow. Understanding these statuses helps you track where loans are in their lifecycle, what actions are available, and what comes next. This guide explains the loan journey from upload through verification and NFT minting.
 
 ## Lifecycle Overview
 
-**Onboarding** — Upload the loan tape, click **Trigger LTS**, match fields, save, then open the Loan Registry.
+Loans follow this general progression:
 
-**Pool mapping** — Select loans and click **Map to Pool**. Those loans count in the pool’s metrics.
+**Onboarding Stage**: Upload loan tape file → Trigger LTS → Map fields → Save mapping → View in Loan Registry
 
-**Verification** — Add loans to a batch, then **Self Certify** or send the batch to a verification agent.
+**Pool Mapping Stage**: Select loans in Loan Registry → Map to Pool → Loans contribute to pool metrics
 
-**NFT minting** — Open the batch in **Certificates** and click **Mint NFT**.
+**Verification Stage**: Add loans to batch → Self Certify or submit to Verification Agent → Batch verified
+
+**NFT Minting Stage**: View batch in Certificates → Mint NFT → Loans tokenized on blockchain
+
+Throughout this journey, loans have different statuses that indicate their current state and what actions are possible.
 
 ## Status Meanings
 
@@ -25,124 +29,183 @@ A loan’s status shows where it is, which actions are available, and what comes
 
 **Unmapped**
 
-The loan is in the Loan Registry and is not in a pool. This is the state after you save field mapping.
+The loan has been onboarded and exists in the Loan Registry but is not assigned to any pool. This is the initial state after loan tape standardization is complete.
 
-- You can map it to a pool
-- It does not affect any pool’s metrics
-- You can add it to a batch
+* The loan is available for mapping to pools
+* The loan does not contribute to any pool metrics
+* You can select this loan in the Loan Registry and click Map to Pool
+* You can select this loan and click Add to Batch for verification
 
 **Mapped**
 
-The loan is in a pool and counts in that pool’s calculations.
+The loan has been assigned to a pool from the Loan Registry. The loan is part of a pool and contributes to pool calculations.
 
-- The pool’s Loans tab includes it
-- A market maker or investor can ask for it to be removed
-- The Loan Registry Status column shows **Mapped**
+* Pool metrics include this loan's balance and characteristics
+* The loan appears in the pool's Loans tab
+* The loan can be subject to removal requests from market makers or investors
+* In the Loan Registry, the Status column shows "Mapped"
 
 ### Loan Status Within Pools
 
-These statuses appear after the pool is shared.
+When loans are mapped to pools and the pool is shared with other parties, additional statuses track loan acceptance and removal:
 
 **Pending**
 
-The loan is in a shared pool, and the market maker has not accepted the preview mandate yet.
+The loan is mapped to a pool that has been shared, but the market maker hasn't yet accepted the Preview mandate.
+
+* Loan is waiting for market maker's decision
+* Once market maker accepts, loan status progresses
 
 **Accepted**
 
-The market maker accepted the mandate, so the loan stays in the pool. A market maker or investor can still request removal.
+The loan's inclusion in the pool has been confirmed after the market maker accepts the mandate.
+
+* Loan is confirmed as part of the pool composition
+* Market maker or investor can now request removal if needed
 
 **Under Reconsider / Reconsider**
 
-Someone requested removal. The issuer decides whether to accept or reject that request.
+A market maker or investor has requested removal of this loan from the pool. The issuer needs to decide whether to accept or reject the removal request.
 
-- Market makers and investors see **Under Reconsider**
-- The issuer sees **Reconsider**, with a tick to accept removal and a cross to reject it
-- The loan stays in pool calculations until the issuer decides
+* **Market Maker/Investor view**: Shows as "Under Reconsider"
+* **Issuer view**: Shows as "Reconsider" with tick (accept) and cross (reject) icons in the Loans tab
+* The loan remains in pool calculations until the issuer makes a decision
 
 **Removed**
 
-The issuer accepted the removal request.
+The loan has been removed from the pool after the issuer accepted a removal request (clicked the tick icon).
 
-- The loan is left out of pool calculations
-- Metrics update without it
-- It stays visible for tracking
-- It can be reinstated
+* Loan is excluded from pool calculations
+* Pool metrics automatically recalculate without this loan
+* Loan remains visible in the pool for tracking purposes
+* Loan can potentially be reinstated
 
 **Reinstated**
 
-A removed loan is back in the pool and counts in calculations again.
+A previously removed loan has been put back into the pool and is included in calculations again.
+
+* Loan is back in pool calculations
+* Pool metrics recalculate to include this loan
+* Loan fully participates in the pool
 
 ### Batch Verification Status
 
+Loans added to batches have verification-related statuses:
+
 **Pending**
 
-The batch exists and is not verified yet. Self Certify and the verification agent path are available. NFT minting is off.
+The batch has been created but verification has not been completed.
+
+* Loans are grouped in the batch
+* Self Certify and verification agent options are available
+* NFT minting is not yet enabled
 
 **Reviewed**
 
-The batch was self-certified or verified by a verification agent. **View NFT** and **Mint NFT** are on in Certificates.
+The batch verification process has been completed (self-certified or verified by verification agent).
+
+* Loans have passed the verification stage
+* NFT minting is now enabled for these loans
+* Both View NFT and Mint NFT buttons are active in Certificates section
 
 **Verified**
 
-Every loan in the batch has been minted. Only **View NFT** is on.
+All loans in the batch have been minted as NFTs.
+
+* NFT minting is complete
+* Only View NFT button is enabled
+* Loans are tokenized on the blockchain
 
 ### Verification Status
 
-**No** — The batch is not verified yet.
+The verification status indicates how the loans were verified:
 
-**Certified** — A third-party verification agent verified the batch.
+**No**
 
-**Self Certified** — The issuer signed in as a verification agent and verified the batch.
+Initial status. The batch has not been verified yet.
 
-**Self Certify (Data Only)** — The issuer used **Self Certify** on the batch directly.
+**Certified**
+
+The batch was verified by a third-party verification agent (not the issuer).
+
+**Self Certified**
+
+The issuer logged in as a verification agent and verified the batch themselves.
+
+**Self Certify (Data Only)**
+
+The issuer used the Self Certify button directly in the batch details (without logging in as verification agent).
 
 ### NFT Loan Status
 
-**Not Minted** — The loan has no NFT yet. It may not be in a reviewed batch, or minting has not been started.
+**Not Minted**
 
-**Minted** — The loan has an NFT and can be used in a credit facility.
+The loan has not been minted as an NFT yet. The loan is either not in a verified batch, or minting has not been initiated.
+
+**Minted**
+
+The loan has been minted as an NFT on the blockchain. The loan now has a digital token representation and can be used in credit facility transactions.
 
 ## What Each Status Indicates
 
-### Unmapped
+### Unmapped Status Indicates
 
-The loan is available in the Loan Registry. **Map to Pool** assigns it. It does not affect pool metrics yet.
+* The loan is in the Loan Registry and available for assignment
+* You can map this loan to any pool using the Map to Pool button
+* The loan doesn't affect any pool metrics yet
+* This is the starting point for newly onboarded loans
 
-### Mapped
+### Mapped Status Indicates
 
-The loan belongs to one pool and is included in that pool’s metrics. It appears on the pool’s Loans tab. The Loan Registry can show the pool name.
+* The loan is part of a specific pool
+* Pool metrics include this loan
+* In pool details, this loan appears in the Loans tab
+* The Status column in Loan Registry shows the pool name
 
-### Under Reconsider / Reconsider
+### Under Reconsider / Reconsider Status Indicates
 
-Someone asked to remove the loan. As issuer, use the tick or the cross. Until you decide, the loan still counts in the pool.
+* Someone has requested this loan be removed from the pool
+* As issuer, you see tick and cross icons to accept or reject the request
+* The loan is still in pool calculations until you decide
+* This requires your attention and decision
 
-### Removed
+### Removed Status Indicates
 
-You accepted a removal request. Metrics no longer include the loan. It remains visible, and you can reinstate it later.
+* The loan was removed from pool calculations (you accepted a removal request)
+* Pool metrics have been updated without this loan
+* The loan is still visible for record-keeping
+* You can potentially reinstate this loan later
 
-### Pending (batch)
+### Pending (Batch) Status Indicates
 
-The batch is waiting for verification. Self-certify it or send it to a verification agent. Minting is not available yet.
+* The batch is waiting for verification
+* You can self-certify or submit to verification agent
+* NFT minting is not yet available
+* Complete verification to proceed
 
-### Reviewed (batch)
+### Reviewed (Batch) Status Indicates
 
-Verification is done. Open Certificates and click **Mint NFT**.
+* Verification is complete
+* NFT minting is now available
+* Click Mint NFT in Certificates section to tokenize loans
 
-### Verified (batch)
+### Verified (Batch) Status Indicates
 
-Minting is finished. Loans with NFTs can be mapped to a credit facility.
+* All loans have been minted as NFTs
+* Tokenization is complete
+* Loans can now be used in credit facilities (if NFTs minted)
 
 ## Status Transitions Summary
 
-| From | Action | To |
-|------|--------|-----|
-| (Uploaded) | Save Mapping | Unmapped |
-| Unmapped | Map to Pool | Mapped (shows pool name) |
-| Mapped | Pool shared, market maker accepts | Accepted |
-| Accepted | Market maker or investor requests removal | Under Reconsider / Reconsider |
-| Reconsider | Issuer clicks the tick | Removed |
-| Reconsider | Issuer clicks the cross | Accepted (stays in the pool) |
-| Removed | Reinstate | Reinstated |
-| (In batch) | Batch created | Pending |
-| Pending | Self Certify or verification agent | Reviewed |
-| Reviewed | Mint NFT | Verified |
+| From       | Action                       | To                            |
+| ---------- | ---------------------------- | ----------------------------- |
+| (Uploaded) | Save Mapping                 | Unmapped                      |
+| Unmapped   | Map to Pool                  | Mapped (shows pool name)      |
+| Mapped     | Pool shared, MM accepts      | Accepted                      |
+| Accepted   | MM/Investor requests removal | Under Reconsider / Reconsider |
+| Reconsider | Issuer clicks tick           | Removed                       |
+| Reconsider | Issuer clicks cross          | Accepted (remains in pool)    |
+| Removed    | Reinstate action             | Reinstated                    |
+| (In Batch) | Created                      | Pending                       |
+| Pending    | Self Certify / Verified      | Reviewed                      |
+| Reviewed   | Mint NFT                     | Verified                      |

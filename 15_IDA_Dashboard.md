@@ -9,31 +9,25 @@ description: Ask questions across data and documents and review answers with cit
 
 IDA is a structured finance chatbot that lets you ask questions about data and documents in one place. The Data side is for tables and visuals. The Document side is for searching and comparing text.
 
-![[IDA Dashboard]](images/15-ida-dashboard/ida-dashboard.png)
+![\[IDA Dashboard\]](.gitbook/assets/ida-dashboard.png)
 
+![IDA Dashboard Overview](.gitbook/assets/ida-dashboard.png)
 
-![IDA Dashboard Overview](images/15-ida-dashboard/ida-dashboard.png)
+![IDA Clause Comparison](.gitbook/assets/ida-clause-comparison.png)
 
-![IDA Clause Comparison](images/15-ida-dashboard/ida-clause-comparison.png)
-
-![IDA Document Intelligence](images/15-ida-dashboard/ida-document-intelligence.png)
+![IDA Document Intelligence](.gitbook/assets/ida-document-intelligence.png)
 
 ## Data Side Tabs
 
 Use the Data side to explore numbers and charts. Ask table or visualization questions and follow up as needed.
 
-**Table** for questions that return a table
-**Visualization** for questions that return a chart
-**Follow-ups** to refine or extend your last question
+**Table** for questions that return a table **Visualization** for questions that return a chart **Follow-ups** to refine or extend your last question
 
 ## Document Side Tabs
 
 Use the Document side to search and compare text.
 
-**Table Search** to find results in a structured view
-**Document RAG** to ask questions about the document
-**Summaries** to get a summary of the dashboard
-**Clause Comparison** to compare two clauses
+**Table Search** to find results in a structured view **Document RAG** to ask questions about the document **Summaries** to get a summary of the dashboard **Clause Comparison** to compare two clauses
 
 The Summary tab gives a quick summary of the dashboard.
 
@@ -41,23 +35,15 @@ The Summary tab gives a quick summary of the dashboard.
 
 IDA also includes:
 
-**History** to revisit past questions
-**Export/Download** to save results
+**History** to revisit past questions **Export/Download** to save results
 
 ## Demo Questions
 
 These questions are selected to match available data in the demo.
 
-**Data Module:**
-What is the top 5 property state-wise distribution and its percentage?
-Follow-up: Visualize it (as a pie chart).
-What are the top 10 largest loans?
+**Data Module:** What is the top 5 property state-wise distribution and its percentage? Follow-up: Visualize it (as a pie chart). What are the top 10 largest loans?
 
-**Document Module:**
-Present the complete Applicable Margin table, outlining all relevant categories and associated values.
-What is the Adjusted Pool Balance?
-When is the closing date?
-What are the conditions precedent to the closing date?
+**Document Module:** Present the complete Applicable Margin table, outlining all relevant categories and associated values. What is the Adjusted Pool Balance? When is the closing date? What are the conditions precedent to the closing date?
 
 ## Confidence and Citations
 
@@ -67,11 +53,9 @@ Each answer shows a confidence score and page citations. Select a page citation 
 
 IDA includes two new features:
 
-**Clause Comparison** to compare two clauses side by side
-**Document Intelligence** to show source context and page numbers with answers
+**Clause Comparison** to compare two clauses side by side **Document Intelligence** to show source context and page numbers with answers
 
-![[Clause Comparison]](images/15-ida-dashboard/ida-clause-comparison.png)
-![[Document Intelligence]](images/15-ida-dashboard/ida-document-intelligence.png)
+![\[Clause Comparison\]](.gitbook/assets/ida-clause-comparison.png) ![\[Document Intelligence\]](.gitbook/assets/ida-document-intelligence.png)
 
 ## Feedback
 
@@ -79,9 +63,4 @@ You can give feedback on each answer to improve future responses.
 
 ## Getting Started
 
-**Process Workflow:**
-Open IDA
-Choose Data or Document
-Select a tab and enter your question
-Review the answer and use follow-up questions if needed
-
+**Process Workflow:** Open IDA Choose Data or Document Select a tab and enter your question Review the answer and use follow-up questions if needed

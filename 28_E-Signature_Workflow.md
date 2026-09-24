@@ -1,151 +1,192 @@
 ---
 title: E-Signature Workflow
-description: Understand how electronic signatures work across credit facility workflows, including provider integration, per-lender tracking, and document lifecycle
+description: >-
+  Understand how electronic signatures work across credit facility workflows,
+  including provider integration, per-lender tracking, and document lifecycle
 ---
 
 # E-Signature Workflow
 
 ## Overview
 
-Electronic signatures are used in the credit facility so people can sign binding documents on the platform. Each signature records who signed, when they signed, and which document they signed. Signed copies stay available for people who are allowed to download them.
+E-signatures are used throughout the credit facility workflow to digitally sign legally binding documents. The Intain Markets platform integrates with professional e-signature providers to ensure that all signed documents are legally enforceable, fully traceable, and securely stored. Every signature is recorded with complete audit details — who signed, when they signed, and what document was signed.
 
-The platform uses **Adobe Sign** or **ZohoSign**. In a test environment, a practice signing mode can complete the signature immediately so teams can rehearse the steps. The signing windows follow the same pattern at each step, whichever service your organization uses. DocuSign is no longer used.
+The platform supports two e-signature providers: **Adobe Sign** and **ZohoSign**. A **mock signing** mode is also available in test and UAT environments for development and testing purposes. All three options use a shared e-signature architecture with consistent workflows across all signing points, ensuring that the signing experience is uniform regardless of which provider is configured.
 
 ## Workflow Overview
 
-Signatures are required at three points. Each point has a different signer and a different result:
+E-signatures are required at three key points in the credit facility lifecycle. Each signing point serves a different purpose, involves a different signer, and triggers a different status transition:
 
-| Signing Point | Who Signs | What Is Signed | When It Happens | Status After Signing |
-|---------------|-----------|----------------|-----------------|---------------------|
-| **Term Sheet Signing** | Borrower | Term sheet | After the borrower clicks **Create Draft** | **Draft** → **Borrower signed** |
-| **Master Commitment Signing** | Lender | Master commitment | When the lender clicks **Approve & E-Sign** | Pending lender approval → **Active** |
-| **Funding Notice Signing** | Facility agent, once per lender | Funding notice for that lender | After the facility agent approves the funding notice | **E-sign (0/n)** through **E-sign (n/n)** |
+| Signing Point                 | Who Signs                   | What Is Signed                 | When It Happens                         | Status After Signing             |
+| ----------------------------- | --------------------------- | ------------------------------ | --------------------------------------- | -------------------------------- |
+| **Term Sheet Signing**        | Borrower                    | Term sheet document            | After borrower clicks **Create Draft**  | Draft → BorrowerSigned           |
+| **Master Commitment Signing** | Lender                      | Master commitment document     | When lender clicks **Approve & E-Sign** | PendingLenderApproval → Active   |
+| **Funding Notice Signing**    | Facility Agent (per lender) | Funding notice for each lender | After FA approves the funding notice    | Per-lender: E-sign (0/n) → (n/n) |
 
 ## Key Stages
 
 ### Stage 1: Term Sheet E-Signature (Borrower)
 
-**When it happens:**
-After the borrower finishes the term sheet and clicks **Create Draft**, signing starts on its own.
+**When It Happens:** After the borrower completes a term sheet and clicks **Create Draft**, the e-signature process begins automatically.
 
-**How it works:**
+**How It Works:**
 
-1. The borrower clicks **Create Draft**
-2. A signing window opens with the term sheet
-3. The borrower reviews the document and signs
-4. The signed copy is saved on the platform
-5. The status changes from **Draft** to **Borrower signed**
+1. The borrower clicks **Create Draft** on a term sheet
+2. The platform generates a PDF of the term sheet document
+3. The PDF is uploaded to the configured e-signature provider (Adobe Sign or ZohoSign) as a transient document
+4. The provider creates a signing agreement and returns a signing URL
+5. The e-signature popup opens automatically in the borrower's browser
+6. The borrower reviews the term sheet document within the provider's signing interface
+7. The borrower completes the electronic signature
+8. The provider notifies the platform of the completed signature
+9. The signed document is downloaded from the provider and stored on the platform
+10. The term sheet status changes from **Draft** to **BorrowerSigned**
 
-**What this means:**
-- The borrower has signed the term sheet
-- The borrower can now submit it to the facility agent
-- Authorized users can download the signed copy
-- Without this signature, the term sheet cannot be submitted
+**What This Means:**
+
+* The term sheet is formally signed by the borrower
+* The borrower can now submit the term sheet to the facility agent for review
+* The signed document is permanently stored and available for download by authorized users
+* Without the borrower's signature, the term sheet cannot be submitted to the facility agent
+
+**E-Sign Details Tracked:**
+
+* `agreementId` — The provider's unique agreement identifier
+* `signingUrl` — The URL used for the signing session
+* `status` — Current e-sign status
+* `signProvider` — Which provider was used (Adobe Sign or ZohoSign)
+* `signedDocumentUrl` — URL to the stored signed document
 
 ### Stage 2: Master Commitment E-Signature (Lender)
 
-**When it happens:**
-A lender opens the master commitment under **Opportunities** and clicks **Approve & E-Sign**.
+**When It Happens:** When a lender reviews a master commitment in their Opportunities section and clicks **Approve & E-Sign** to formally approve and commit to the credit facility.
 
-**How it works:**
+**How It Works:**
 
-1. The lender opens **Opportunities** in Credit Facility
-2. The lender clicks **Review & Approve**
-3. The lender reviews the facility details: basic information, parties, conditions, pricing, and covenants
+1. The lender navigates to their **Opportunities** section in Credit Facility
+2. The lender clicks **Review & Approve** on the master commitment
+3. The lender reviews all facility configuration details — basic information, parties, conditions, pricing, covenants
 4. The lender clicks **Approve & E-Sign**
-5. A signing window opens
-6. The lender reviews and signs
-7. The signed copy is saved
-8. That lender's decision is recorded as approved, with the date and time
-9. The master commitment status changes to **Active**, even if other lenders have not approved yet
+5. The platform generates a PDF of the master commitment document
+6. The PDF is uploaded to the e-signature provider
+7. The e-signature popup opens for the lender
+8. The lender reviews and signs the document
+9. The signed document is downloaded and stored
+10. The lender's individual `approvalStatus` changes to **approved** with a timestamp
+11. The master commitment status changes to **Active** — even if only one lender out of multiple has approved
 
-**What this means:**
-- The lender commits to the credit facility
-- **One lender's approval makes the facility active.** The other lenders do not all have to approve first.
-- Each lender's decision is tracked on its own
-- The facility agent can continue facility setup once the commitment is active
-- The signed commitment is the lender's formal approval
+**What This Means:**
 
-Each lender is tracked separately. A lender can be waiting, approved, or rejected. Their signature is either still pending or signed, and the approval time is shown after they approve.
+* The lender formally approves and commits to the credit facility
+* **Any single lender's approval activates the entire facility** — all lenders do not need to approve for the facility to become active
+* Each lender's approval is tracked independently — one lender's decision does not affect another's
+* The facility agent can proceed with deal modelling once the commitment is active
+* The signed commitment document is legally binding
+
+**Per-Lender Tracking:** Each lender in the master commitment has individual e-sign tracking:
+
+* `approvalStatus` — `pending` → `approved` or `rejected`
+* `esignStatus` — Tracks the e-sign completion status
+* `esignDetails` — Provider-specific details (agreement ID, signing URL, signed timestamp)
+* `approvedAt` — Timestamp of when the lender approved
 
 ### Stage 3: Funding Notice E-Signature (Facility Agent)
 
-**When it happens:**
-After a funding request is approved, a funding notice is created. The facility agent signs that notice once for each lender.
+**When It Happens:** After a funding request is approved and a funding notice is automatically generated, the facility agent must individually e-sign the notice for each participating lender.
 
-**How it works:**
+**How It Works:**
 
-1. The funding request is approved and a funding notice is created with status **Pending token generation**
+1. A funding request is approved → A funding notice is auto-generated with status **PendingTokenGenerated**
 2. The facility agent clicks **Approve** on the funding notice
-3. The action shows **E-sign (0/n)**. The number n is the count of lenders on the notice.
-4. The facility agent opens the signing action
-5. A signing window opens for the next lender who is not yet signed
-6. The facility agent signs for that lender
-7. The counter updates, for example **E-sign (1/n)**
-8. The facility agent repeats this until every lender is signed
-9. A lender can see and act on the notice as soon as their own signature is done. They do not wait for the other lenders.
-10. When every lender is signed, the action shows **E-sign (n/n)**
+3. The action button displays **E-sign (0/n)** where n is the total number of participating lenders
+4. The facility agent clicks the E-sign action
+5. The e-signature popup opens for the first unsigned lender
+6. The facility agent signs the funding notice for that specific lender
+7. The counter updates — **E-sign (1/n)**
+8. The facility agent repeats the process for each remaining lender: (2/n), (3/n), and so on
+9. Each lender can see and act on the funding notice **immediately after their individual e-sign is complete** — they do not need to wait for all lenders to be signed
+10. When all lenders are signed — **E-sign (n/n)** — the overall e-sign process is complete
 
-**What this means:**
-- The facility agent signs a copy for each lender
-- Each lender has their own signature record, including when it was completed
-- That lender can review the notice as soon as their signature is done
+**What This Means:**
 
-**Signature progress:**
+* The facility agent formally signs the funding notice for each lender individually
+* Each lender has a separate e-sign record with their own agreement ID, signing URL, and completion timestamp
+* Lenders can begin reviewing and acting on the funding notice as soon as their individual e-sign is done
+* The per-lender signing ensures each lender receives a legally valid, individually signed document
 
-| Counter | Meaning |
-|---------|---------|
-| **E-sign (0/3)** | None of the 3 lenders is signed yet |
-| **E-sign (1/3)** | Signed for 1 lender. That lender can see the notice. |
-| **E-sign (2/3)** | Signed for 2 lenders. Both can see the notice. |
-| **E-sign (3/3)** | All lenders are signed |
+**E-Sign Progress Tracking:** The E-sign counter provides real-time visibility into the signing progress:
 
-Until a lender is signed, their signature status stays **pending signature**. After the facility agent signs for them, that lender's status is **signed**.
+| Counter          | Meaning                                                  |
+| ---------------- | -------------------------------------------------------- |
+| **E-sign (0/3)** | No lenders signed yet (3 total lenders in this notice)   |
+| **E-sign (1/3)** | Signed for 1 lender — that lender can now see the notice |
+| **E-sign (2/3)** | Signed for 2 lenders — both can now see the notice       |
+| **E-sign (3/3)** | All lenders signed — e-sign process complete             |
+
+**Per-Lender E-Sign Fields:**
+
+* `lenderId` — Which lender this e-sign is for
+* `esignStatus` — `pending` or `signed`
+* `agreementId` — Provider agreement ID for this lender's signing
+* `signingUrl` — Signing URL for this lender's document
+* `signedAt` — Timestamp when the signing was completed
 
 ## How the Workflow Progresses
 
 ### E-Signature Provider Architecture
 
-Your organization uses one signing service for these steps: **Adobe Sign** or **ZohoSign**. You do not choose a different service at each step.
+The platform uses a provider abstraction layer that allows seamless switching between e-signature providers. The configured provider is set at the platform level, and all signing points use the same provider consistently.
 
-**Adobe Sign:**
-1. A signing window opens with your document
-2. You review and sign
-3. When signing is finished, the signed copy is saved on the platform
-4. The related status updates, such as **Borrower signed** or the **E-sign** count
+**Adobe Sign Integration:**
 
-**ZohoSign:**
-1. A signing window opens with your document
-2. You review and sign
-3. When signing is finished, the signed copy is saved on the platform
-4. The related status updates in the same way as Adobe Sign
+1. The platform uploads the document as a "transient document" to Adobe Sign
+2. Adobe Sign creates an agreement with the transient document
+3. The signer's email and a signing redirect URL are configured
+4. Adobe Sign returns an agreement ID and a signing URL
+5. The platform polls for agreement completion status (checking for the `SIGNED` status)
+6. On completion, the signed document is downloaded and stored
 
-**Practice signing in a test environment:**
-- Test environments can complete the signature immediately
-- No Adobe Sign or ZohoSign account is required for that practice mode
-- The document is marked signed so you can continue the workflow
+**ZohoSign Integration:**
+
+1. The platform uploads the document to ZohoSign
+2. ZohoSign creates a sign request with signer details
+3. A redirect URL is configured for post-signing
+4. ZohoSign returns a request ID and signing URL
+5. The platform checks for completion status
+6. On completion, the signed document is downloaded and stored
+
+**Mock Signing (Test/UAT):**
+
+* Mock signing is available for test and UAT environments
+* When enabled, the signing completes instantly without calling any external provider
+* The document is immediately marked as signed
+* A mock signed document is generated
+* This allows rapid testing of workflows without requiring real e-signature accounts
 
 ### Document Lifecycle
 
+Every signed document follows this lifecycle:
+
 ```
-Document prepared → Signing window opens → You sign → Signed copy is saved → You can download it
+Document Generated (PDF) → Uploaded to Provider → Signing Agreement Created → Signer Completes Signature → Platform Notified → Signed Document Downloaded → Stored in Platform → Available for Download
 ```
 
 ## Important Points to Know
 
-**The signature is binding** — Signatures completed in Adobe Sign or ZohoSign are the formal sign-off for that document.
+**Legally Binding** — All electronic signatures completed through Adobe Sign or ZohoSign are legally binding and enforceable. They comply with electronic signature regulations.
 
-**The workflow waits for the signature:**
-- A term sheet cannot be submitted until the borrower has signed
-- A master commitment does not become **Active** until at least one lender has signed
-- A lender cannot see or act on a funding notice until the facility agent has signed for that lender
+**Required for Progression** — Documents cannot progress through the workflow without the required signatures:
 
-**Each lender is separate on a funding notice** — The facility agent signs once per lender. That lender gets access as soon as their own signature is complete.
+* Term sheets cannot be submitted to the facility agent without the borrower's signature
+* Master commitments cannot become active without at least one lender's signature
+* Lenders cannot see or act on funding notices without the facility agent's per-lender e-sign
 
-**One signing service at a time** — The platform uses Adobe Sign or ZohoSign. DocuSign is retired.
+**Per-Lender Tracking** — For funding notices, each lender has their own independent e-signature status. The facility agent signs individually for each lender, and each lender gains access to the notice as soon as their signature is complete.
 
-**You can see who signed** — The record shows who signed, when they signed, and which service was used. Authorized users can download the signed document.
+**Provider Flexibility** — The platform supports both Adobe Sign and ZohoSign. The active provider is configured at the platform level. DocuSign has been retired and is no longer supported.
 
-**The status updates after you finish** — When the signing window is complete, the term sheet, commitment, or funding notice updates to the next status.
+**Complete Audit Trail** — Every e-signature action is recorded with full audit details: who signed, when they signed, which provider was used, the agreement ID, and a reference to the stored signed document. This audit trail is immutable and available for compliance review.
 
-**Signed copies stay available** — Authorized users can download signed documents later for their records.
+**Callback and Polling** — The platform uses both callback notifications and status polling to detect when a signing session is completed, ensuring reliable status updates regardless of how the signer completes the process.
+
+**Signed Document Storage** — All signed documents are downloaded from the provider and stored permanently on the platform. Authorized users can download signed documents at any time for reference, compliance, or legal purposes.

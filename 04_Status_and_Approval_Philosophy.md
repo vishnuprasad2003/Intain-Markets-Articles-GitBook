@@ -1,99 +1,111 @@
 ---
 title: Status and Approval Philosophy
-description: Why Intain Markets uses status-driven workflows and approval gates to ensure trust, accountability, and structured progression across every transaction
+description: >-
+  Why Intain Markets uses status-driven workflows and approval gates to ensure
+  trust, accountability, and structured progression across every transaction
 ---
 
-# Status and Approval Philosophy
+# Status & Approval Philosophy
 
 ## Overview
 
-Every transaction on Intain Markets moves through defined stages. A qualified person must authorize each move to the next stage. That matches how institutional deals work: preparation, review, commitment, execution, and settlement, with a sign-off at each boundary.
+Intain Markets is built on a foundational principle: every transaction should progress through clearly defined stages, with proper authorization at each transition. This is not merely a technical design choice — it reflects a deliberate philosophy rooted in how institutional financial markets operate. In traditional capital markets, deals move through stages of preparation, review, commitment, execution, and settlement, with checks and sign-offs at every boundary. Intain Markets brings this same rigor to a digital platform, ensuring that no action happens without the right person authorizing it at the right time.
 
-A **status** shows where an item is and which actions are available. An **approval** is the gate between stages. Together they keep the workflow predictable and make every decision traceable.
+Statuses and approvals are the two mechanisms that enforce this philosophy. Statuses represent where an item is in its journey — they control what actions are available and who can act. Approvals are the gates between stages — they ensure that a qualified party has reviewed and authorized the transition before it happens.
+
+Together, these mechanisms create workflows that are predictable, auditable, and resistant to errors or unauthorized actions.
 
 ## How the Platform Is Designed
 
 ### Status-Driven Workflows
 
-Pools, loans, term sheets, master commitments, funding requests, and asset sale deals each have one status. That status decides what can happen next.
+Every major item on the platform — pools, loans, term sheets, master commitments, funding requests, asset sale deals — carries a status that defines its current state. This status is the single source of truth for what can happen next.
 
-- **Actions follow the status.** Buttons turn on or off with the status. A term sheet in **Draft** can be edited. In **Under Review**, editing stays locked until the facility agent decides. A deal in **Active** can start repayment. A deal in **Settlement In Progress** cannot.
+The platform enforces strict rules based on status:
 
-- **Stages stay in order.** A pool moves from **Created** to **Preview** to **Under Review** to **Deal**. It cannot jump from Created to Deal. An asset sale deal moves through Draft, Pending Review, Published, Commit, Invest, Settlement In Progress, Settled, and Active in that order. Each change is recorded.
-
-- **Moving backward takes a decision.** A term sheet returns from **Under Review** to **Changes Requested** only when an authorized person asks for changes. It does not slip backward on its own.
-
-- **Some statuses are final.** **Cancelled**, **Rejected**, and **Closed** end the workflow. The item cannot re-enter it. If you need to try again, create a new item.
+* **Action availability is status-dependent.** Buttons and actions are enabled or disabled based on the item's current status. For example, a term sheet in **Draft** status can be edited, but once it moves to **FAReview**, editing is locked until the facility agent makes a decision. A deal in **Active** status allows repayment initiation, but a deal in **Settlement In Progress** does not.
+* **Sequential progression is enforced.** Items cannot skip stages. A pool must move from **Created** to **Preview** to **Under Review** to **Deal** — there is no shortcut from Created directly to Deal. An asset sale deal must progress through Draft, Pending Review, Published, Commit, Invest, Settlement In Progress, Settled, and Active in order. Each status transition is a deliberate, recorded event.
+* **Backward movement is controlled.** When an item moves backward (for example, a term sheet returning from **FAReview** to **CHANGES\_REQUESTED**), it is always the result of an explicit decision by an authorized party, never an automatic or accidental regression.
+* **Terminal statuses are final.** Statuses like **Cancelled**, **Rejected**, and **Closed** are endpoints. Once an item reaches a terminal status, it cannot be reactivated or re-entered into the workflow. This prevents confusion about whether a cancelled or rejected item might still be acted upon.
 
 ### The Maker-Checker Principle
 
-The person who creates an item is not the person who approves it.
+At the heart of the approval philosophy is the **maker-checker** pattern — a well-established control principle in financial services. The idea is simple but powerful: the person who creates or initiates something should not be the same person who approves it.
 
-- **Borrowers** create term sheets. **Facility Agents** review and approve them.
-- **Issuers** create asset sale deals. **Underwriters** review and approve them.
-- **Borrowers** submit funding requests. **Facility Agents** review and approve them.
-- **Issuers** start repayment. **Investors** confirm receipt.
-- **Facility Agents** set up master commitments. **Lenders** approve and e-sign them.
+On Intain Markets, this principle appears throughout:
 
-No single party can move a transaction forward alone.
+* **Borrowers create** term sheets; **Facility Agents review** and approve them.
+* **Issuers create** asset sale deals; **Underwriters (Market Makers) review** and approve them.
+* **Borrowers submit** funding requests; **Facility Agents review** and approve them.
+* **Issuers initiate** repayment; **Investors confirm** receipt.
+* **Facility Agents configure** master commitments; **Lenders approve** and e-sign them.
+
+This separation ensures that no single party can unilaterally advance a transaction. Every progression requires at least two parties to agree, reducing the risk of errors, fraud, or miscommunication.
 
 ### Role-Based Action Controls
 
-The platform checks the status and your role.
+The platform does not merely check whether an action is available — it also checks whether the current user has the authority to perform it. Actions are gated by both status and role:
 
-- Only **Facility Agents** can approve or reject term sheets and funding requests.
-- Only **Lenders** can approve master commitments.
-- Only **Market Makers** can accept or reject pool mandates.
-- Only **Issuers** can publish deals, start repayment, and upload loan tapes.
-- Only **Investors** can confirm repayment receipt and burn receivables NFTs.
+* Only **Facility Agents** can approve or reject term sheets and funding requests.
+* Only **Lenders** can approve master commitments.
+* Only **Market Makers** can accept or reject pool mandates.
+* Only **Issuers** can publish deals, initiate repayment, and upload loan tapes.
+* Only **Investors** can confirm repayment receipt and burn receivables NFTs.
 
-If you do not hold the role, the action is not shown. A borrower looking at a term sheet in **Under Review** does not see approval buttons. The facility agent does.
+Even if an item is in a status that theoretically allows an action, the action will not appear unless the logged-in user holds the correct role. This means a borrower viewing a term sheet in **FAReview** status will not see approval buttons — only the facility agent will.
 
 ### Change Requests vs. Rejection
 
-- A **change request** sends the item back to the submitter. They can edit it and send it again. The workflow continues.
+The platform distinguishes between two types of negative decisions:
 
-- A **rejection** is final. The item cannot be edited or sent again. To try again, create a new item.
+* **Change Requests** return the item to the submitter for revision. The item remains editable, and the submitter can make modifications and resubmit. The workflow continues. This is a collaborative mechanism that allows iterative refinement.
+* **Rejection** is final. The item cannot be edited or resubmitted. The workflow stops. If the submitter wants to try again, they must create a new item from scratch.
 
-| Aspect | Change Request | Rejection |
-|--------|---------------|-----------|
-| **Item editable?** | Yes | No |
-| **Can resubmit?** | Yes | No |
-| **Workflow** | Returns for revision | Stops |
-| **Next step** | Edit and resubmit | Create a new item |
+This distinction matters because it preserves workflow integrity while enabling practical collaboration. Most real-world negotiations involve back-and-forth refinement, and change requests accommodate that. Rejection is reserved for situations where the submission is fundamentally unsuitable.
+
+| Aspect             | Change Request                    | Rejection         |
+| ------------------ | --------------------------------- | ----------------- |
+| **Item editable?** | Yes                               | No                |
+| **Can resubmit?**  | Yes                               | No                |
+| **Workflow**       | Returns to submitter for revision | Stops permanently |
+| **Next step**      | Make changes, resubmit            | Create a new item |
 
 ## What This Enables for Users
 
 ### Predictability
 
-A deal in **Published** has already been created, reviewed, and approved. The next stage is investor commitment. You can tell what has happened and what comes next from the status.
+Because workflows follow fixed status progressions, users always know what to expect. When you see a deal in **Published** status, you know it has already been created, reviewed, and approved — and you know the next stage is investor commitment. There are no surprises about what comes next or what has already happened.
 
 ### Accountability
 
-Each status change records the time, the person, and any notes. If a term sheet is rejected, you can see who rejected it, when, and why. The same record exists for an approved funding request.
+Every status change is recorded with a timestamp, the identity of the user who triggered it, and any associated notes or decisions. This creates a complete, immutable audit trail. If a term sheet was rejected, you can see who rejected it, when, and why. If a funding request was approved, the approval decision and the approver's identity are permanently recorded.
+
+This audit trail is not just for compliance — it gives all participants confidence that the process is transparent and that every decision can be traced back to a specific person and moment.
 
 ### Safety and Error Prevention
 
-- An issuer cannot publish a deal until loans are assigned and the required terms are set.
-- A facility agent approves a term sheet only by making an explicit decision.
-- An investor cannot burn a receivables NFT until repayment receipt is confirmed.
+The combination of status controls, role-based gates, and maker-checker separation creates multiple layers of protection against errors:
+
+* An issuer cannot accidentally publish an incomplete deal because the platform validates that loans are assigned and terms are configured before allowing publication.
+* A facility agent cannot accidentally approve a term sheet they haven't reviewed because the approval action requires an explicit decision.
+* An investor cannot burn a receivables NFT before confirming repayment receipt because the burn action is only available after repayment confirmation.
 
 ### Trust Between Parties
 
-Investors see asset sale deals after an underwriter has reviewed them. Lenders see facility terms after a facility agent has reviewed them. Issuers know an approved deal continues in a set order.
+In multi-party financial transactions, trust is essential but difficult to establish. The platform's structured workflows create trust by ensuring that every party's interests are protected by the process itself. Investors know that deals have been reviewed by underwriters before they see them. Lenders know that facility terms have been reviewed by facility agents. Issuers know that their deals will proceed in an orderly fashion once approved.
 
 ## Key Principles to Understand
 
-**Every item has one status.** That status answers where the item stands right now.
+**Every item has exactly one status at any time.** There is no ambiguity about where something stands. The status is the definitive answer to "What is happening with this item right now?"
 
-**Status controls actions.** Buttons, edits, and allowed moves all follow the current status.
+**Status controls everything.** Available actions, visible buttons, permitted edits, and allowed transitions are all determined by the current status. The status is not just a label — it is a control mechanism.
 
-**Approvals are active decisions.** Someone with the right role must choose. Nothing is approved automatically because time passed.
+**Approvals are gates, not rubber stamps.** Every approval point exists because there is a genuine business need for review at that stage. Approvals require an authorized party to make an active decision — there is no automatic approval or timeout-based progression.
 
-**The history stays on the record.** Status changes, approvals, and actions stay available to review.
+**The audit trail is permanent and complete.** Every status change, every approval decision, every action is recorded. This trail cannot be modified after the fact and serves as the authoritative record of what happened.
 
-**Duties stay separate.** The platform does not let the same person both create and approve the same item.
+**Separation of duties is enforced by the platform.** The maker-checker principle is not a guideline — it is a technical enforcement. The platform will not allow a user to both create and approve the same item, regardless of their role.
 
-**The usual direction is forward.** A change request is the exception, and it requires an explicit decision.
+**Forward momentum is the default.** The workflow is designed to move items forward through their lifecycle. Backward movement (change requests) is an exception that requires an explicit decision. This keeps transactions progressing toward completion.
 
-A disabled button is the workflow protecting the parties. It is not a broken control.
+Understanding these principles helps you navigate the platform with confidence. When you encounter a disabled button or an unavailable action, it is not a bug — it is the platform enforcing the structured workflow that protects all participants.

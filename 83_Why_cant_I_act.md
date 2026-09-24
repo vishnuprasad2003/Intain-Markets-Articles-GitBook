@@ -3,160 +3,161 @@ title: Why Can't I Act
 description: Troubleshooting guide for when actions are unavailable in Intain Markets
 ---
 
-# Why Can't I Act
+# Why Can't I Act?
 
 ## Overview
 
-Use this page when a button is missing or disabled. Match the question to your screen, then follow the fix.
+This troubleshooting guide helps you understand why you can't take certain actions and how to resolve common issues.
 
-## Frequently Asked Questions
+## Common Issues and Solutions
 
 ### Pools
 
-**Why can’t I edit my pool?**
+**Q: Why can't I edit my pool?**
 
-| Cause | What to do |
-|-------|------------|
-| The pool is in Deal | Pools cannot be edited after the deal is final |
-| You are not the issuer | Only the issuer who created the pool can edit it |
+| Possible Cause         | Solution                                       |
+| ---------------------- | ---------------------------------------------- |
+| Pool is in Deal status | Pools cannot be edited after deal finalization |
+| You're not the issuer  | Only the issuer who created the pool can edit  |
 
-**Why can’t I share my pool?**
+**Q: Why can't I share my pool?**
 
-| Cause | What to do |
-|-------|------------|
-| The pool is not Created or Preview | Sharing is available only in those statuses |
-| No organizations were selected | Edit the pool and add organizations |
+| Possible Cause                         | Solution                                    |
+| -------------------------------------- | ------------------------------------------- |
+| Pool not in Created/Preview status     | Can only share in Created or Preview status |
+| No organizations selected during setup | Edit pool and add organizations first       |
 
-**Why can’t I click Start Deal?**
+**Q: Why can't I click Start Deal?**
 
-| Cause | What to do |
-|-------|------------|
-| NFT minting is not finished | Every loan in the pool needs an NFT |
-| Verification is incomplete | Check Certificates. Finish verification, then mint |
+| Possible Cause             | Solution                                              |
+| -------------------------- | ----------------------------------------------------- |
+| NFT minting not complete   | All loans in pool must have NFTs minted               |
+| Check Certificates section | Verify batch verification is complete and NFTs minted |
 
 ### Loans
 
-**Why can’t I map a loan to a pool?**
+**Q: Why can't I map a loan to a pool?**
 
-| Cause | What to do |
-|-------|------------|
-| The loan is already in a pool | Unmap it first. A loan can be in only one pool |
-| You have no pools | Create a pool with Set-up Pool |
+| Possible Cause      | Solution                                     |
+| ------------------- | -------------------------------------------- |
+| Loan already mapped | A loan can only be in one pool. Unmap first. |
+| No pools created    | Create a pool first via Set-up Pool          |
 
-**Why can’t I mint NFTs?**
+**Q: Why can't I mint NFTs?**
 
-| Cause | What to do |
-|-------|------------|
-| The batch is not Reviewed | Finish batch verification first |
-| You are in the wrong section | Mint from Certificates, not from Batch Verification |
+| Possible Cause             | Solution                                                      |
+| -------------------------- | ------------------------------------------------------------- |
+| Batch not verified         | Complete batch verification first (status: Reviewed)          |
+| Go to Certificates section | NFT minting is done from Certificates, not Batch Verification |
 
-**Why is Mint NFT disabled?**
+**Q: Why is Mint NFT button disabled?**
 
-| Cause | What to do |
-|-------|------------|
-| The batch is Pending | Self Certify, or send it to a verification agent |
-| Minting is already done | Use View NFT |
+| Possible Cause          | Solution                                                       |
+| ----------------------- | -------------------------------------------------------------- |
+| Batch status is Pending | Complete verification (Self Certify or via verification agent) |
+| Already minted          | Check if NFTs are already minted (View NFT button enabled)     |
 
-### Term sheets
+### Term Sheets
 
-**Why can’t I submit my term sheet?**
+**Q: Why can't I submit my term sheet?**
 
-| Cause | What to do |
-|-------|------------|
-| It is not signed | Click Create Draft and finish Adobe Sign |
-| Required fields are empty | Fill them in |
-| Documents are missing | Upload the required documents |
+| Possible Cause          | Solution                                 |
+| ----------------------- | ---------------------------------------- |
+| Not signed yet          | Click Create Draft → complete Adobe Sign |
+| Required fields missing | Fill all required fields                 |
+| Documents not uploaded  | Upload required documents                |
 
-**Why can’t I edit my term sheet?**
+**Q: Why can't I edit my term sheet?**
 
-| Cause | What to do |
-|-------|------------|
-| Status is Under Review | Wait for the facility agent |
-| Status is Accepted | Approved term sheets cannot be edited |
-| Status is Rejected | Create a new term sheet |
+| Possible Cause     | Solution                         |
+| ------------------ | -------------------------------- |
+| Status is FAReview | Wait for FA decision             |
+| Status is Accepted | Cannot edit approved term sheets |
+| Status is Rejected | Create a new term sheet          |
 
-### Master commitments
+### Master Commitments
 
-**Why can’t I create a funding request?**
+**Q: Why can't I create a funding request?**
 
-| Cause | What to do |
-|-------|------------|
-| The commitment is not Active | At least one lender must approve |
-| Deal modelling is not finished | The facility agent must complete Set Up Deal |
-| Facility Setup Status is not Completed | Wait until it shows Completed |
+| Possible Cause              | Solution                           |
+| --------------------------- | ---------------------------------- |
+| MC not Active               | At least one lender must approve   |
+| Deal modelling not complete | FA must complete Set Up Deal first |
+| Check Facility Setup Status | Must show "Completed"              |
 
-**Why can’t I see the master commitment?**
+**Q: Why can't I see the master commitment?**
 
-| Cause | What to do |
-|-------|------------|
-| The term sheet is not approved | Wait for the facility agent to approve it |
-| You are on the wrong screen | Open Credit Facility. The commitment is listed under the term sheet |
+| Possible Cause                | Solution                          |
+| ----------------------------- | --------------------------------- |
+| Term sheet not approved       | Wait for FA to approve term sheet |
+| Check Credit Facility section | MC appears under the term sheet   |
 
-### Funding requests
+### Funding Requests
 
-**Why can’t I approve a funding request?**
+**Q: Why can't I approve a funding request?**
 
-| Cause | What to do |
-|-------|------------|
-| It is not in Under Review | The borrower must submit it first |
-| You are not the facility agent | Sign in as Facility Agent |
+| Possible Cause         | Solution                      |
+| ---------------------- | ----------------------------- |
+| Not in FAReview status | Borrower must submit first    |
+| Not logged in as FA    | Switch to Facility Agent role |
 
-### Funding notices
+### Funding Notices
 
-**Why can’t I see the funding notice as a lender?**
+**Q: Why can't I see the funding notice as a lender?**
 
-| Cause | What to do |
-|-------|------------|
-| The facility agent has not signed for you | They must finish your e-sign first |
+| Possible Cause                  | Solution                      |
+| ------------------------------- | ----------------------------- |
+| FA hasn't completed your e-sign | FA must e-sign for you first  |
+| Check with FA                   | Your e-sign must be completed |
 
-**Why can’t I Confirm and Settle?**
+**Q: Why can't I Confirm and Settle?**
 
-| Cause | What to do |
-|-------|------------|
-| You have not opened the notice | Click Review Funding Notice |
-| No payment method is selected | Choose one during review |
+| Possible Cause                  | Solution                            |
+| ------------------------------- | ----------------------------------- |
+| Haven't reviewed the notice     | Click Review Funding Notice first   |
+| Haven't selected payment method | Select payment method during review |
 
 ### General
 
-**Why can’t I see an item?**
+**Q: Why can't I see certain items?**
 
-| Cause | What to do |
-|-------|------------|
-| It was not shared with you | It must be shared with your organization |
-| You are in the wrong role | Log out and sign in with the correct role |
+| Possible Cause      | Solution                                   |
+| ------------------- | ------------------------------------------ |
+| Not shared with you | Item must be shared with your organization |
+| Wrong role selected | Log out and log in with correct role       |
 
-**Why are all my buttons disabled?**
+**Q: Why are all my buttons disabled?**
 
-| Cause | What to do |
-|-------|------------|
-| Your session expired | Log out and sign in again |
-| The status does not allow the action | Read the status on the item |
-| Someone else must act first | Check who the next actor is |
+| Possible Cause            | Solution                       |
+| ------------------------- | ------------------------------ |
+| Session expired           | Log out and log back in        |
+| Item in wrong status      | Check status badge on the item |
+| Waiting for another party | Check who needs to act next    |
 
-**How do I narrow it down?**
+## How to Diagnose Issues
 
-1. Read the status.
-2. Hover the button for the tooltip.
-3. Confirm your role.
-4. Confirm earlier steps are done.
-5. If it still fails, contact support and include the item and the status.
+1. **Check Status** - Look at the item's status badge
+2. **Hover Over Button** - Tooltips explain why buttons are disabled
+3. **Verify Role** - Ensure you're logged in with correct role
+4. **Check Prerequisites** - Review if all required steps are complete
+5. **Contact Support** - If issue persists, contact support with details
 
-### Asset sale
+### Asset Sale
 
-**I can see a deal but cannot act. Why?**
+**Q: I can see an asset sale deal but can't take any action. Why?**
 
-| Cause | What to do |
-|-------|------------|
-| The status does not match your action | Investors commit when the deal is Published, and confirm repayment during Repayment In Progress |
-| Your role cannot take that action | Sign in as the role that owns it |
-| The deal has not reached that step | Wait for the required status |
+| Possible Cause                        | Solution                                                                               |
+| ------------------------------------- | -------------------------------------------------------------------------------------- |
+| Deal status doesn't match your action | Investors can only commit when Published, confirm repayment when Repayment In Progress |
+| Wrong role for this action            | Check that your role has permissions for the intended action                           |
+| Deal not yet in actionable status     | Wait for the deal to progress to the required status                                   |
 
-### Admin and View As
+### Admin & Impersonation
 
-**View As shows a different screen. Does that change my account?**
+**Q: The "View As" feature shows me a different view. Is this affecting my account?**
 
-| Cause | What to do |
-|-------|------------|
-| You are worried the view will change data | View As is read-only. You cannot save changes |
-| The data looks unfamiliar | You are looking at the platform as another user, for support |
-| You want your own screen back | Leave View As. Your account is unchanged |
+| Possible Cause               | Solution                                                          |
+| ---------------------------- | ----------------------------------------------------------------- |
+| Concerned about data changes | "View As" (impersonation) is read-only — no changes can be made   |
+| Seeing unfamiliar data       | You are viewing the platform as another user for support purposes |
+| Your account is not affected | Log out of impersonation to return to your normal view            |

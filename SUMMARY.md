@@ -1,17 +1,15 @@
-# Summary
+# Table of contents
 
-## Getting Started
+* [README](README.md)
 
-### Platform Overview
+## Platform Overview
 
 * [What is Intain Markets](01_What_is_Intain_Markets.md)
 * [User Roles & Responsibilities](02_User_Roles_and_Responsibilities.md)
 * [Login & Navigation](03_Login_and_Navigation.md)
 * [Status & Approval Philosophy](04_Status_and_Approval_Philosophy.md)
 
-## Core Product Lines
-
-### Pools & Loans
+## Pools & Loans
 
 * [Pools Overview](05_Pools_Overview.md)
 * [Pool Lifecycle & Statuses](06_Pool_Lifecycle_and_Statuses.md)
@@ -25,7 +23,7 @@
 * [Analytics](14_Analytics.md)
 * [IDA Dashboard](15_IDA_Dashboard.md)
 
-### Credit Facilities
+## Credit Facilities
 
 * [Credit Facilities Overview](16_Credit_Facilities_Overview.md)
 * [Roles in Credit Facilities](17_Roles_in_Credit_Facilities.md)
@@ -44,7 +42,7 @@
 * [Lender Approval & Rejection](30_Lender_Approval_and_Rejection.md)
 * [Funds Transfer Confirmation](31_Funds_Transfer_Confirmation.md)
 
-### Asset Sale
+## Asset Sale
 
 * [Asset Sale Overview](32_Asset_Sale_Overview.md)
 * [Asset Sale Deal Lifecycle & Statuses](33_Asset_Sale_Deal_Lifecycle_and_Statuses.md)
@@ -56,9 +54,7 @@
 * [Asset Sale Analytics](39_Asset_Sale_Analytics.md)
 * [Investor Agreement & E-Signature](40_Investor_Agreement_and_E-Signature.md)
 
-## Workflows by Role
-
-### Issuer / Borrower Workflows
+## Issuer / Borrower Workflows
 
 * [Pool Creation & Sharing](41_Pool_Creation_and_Sharing.md)
 * [Loan Management](42_Loan_Management.md)
@@ -68,7 +64,7 @@
 * [Asset Sale Deal Setup](46_Asset_Sale_Deal_Setup_Issuer.md)
 * [Repayment Initiation](47_Repayment_Initiation_Issuer.md)
 
-### Market Maker / Facility Agent Workflows
+## Market Maker / Facility Agent Workflows
 
 * [Pool Mandate Review](48_Pool_Mandate_Review.md)
 * [Term Sheet Review](49_Term_Sheet_Review.md)
@@ -80,7 +76,7 @@
 * [Token Generation & E-Sign](55_Token_Generation_and_E-Sign.md)
 * [Asset Sale Review & Allocation](56_Asset_Sale_Review_and_Allocation.md)
 
-### Investor / Lender Workflows
+## Investor / Lender Workflows
 
 * [Pool & Loan Review](57_Pool_and_Loan_Review.md)
 * [Facility Approval](58_Facility_Approval.md)

@@ -14,10 +14,11 @@ Funding notices are official documents generated when funding requests are appro
 A funding notice is the formal documentation of an approved drawdown from a credit facility. When a borrower's funding request is approved by the facility agent, the system automatically generates a funding notice. This notice tracks the e-signature process and fund transfer from lenders.
 
 Funding notices contain:
-- Drawdown amount and date
-- Allocation to each lender
-- E-signature status for each lender
-- Fund transfer confirmation status
+
+* Drawdown amount and date
+* Allocation to each lender
+* E-signature status for each lender
+* Fund transfer confirmation status
 
 ## Purpose and Use Cases
 
@@ -45,7 +46,7 @@ In the facility agent's Credit Facility section (Active Facilities tab), the fun
 
 The facility agent clicks E-sign and signs the document for each lender individually using Adobe Sign. Each time the facility agent signs, the count updates (1/n, 2/n, etc.).
 
-![Funding Notice Details - FA](images/26-funding-notices-overview/FundingNoticeDetailsFA.png)
+![Funding Notice Details - FA](<.gitbook/assets/FundingNoticeDetailsFA (1).png>)
 
 **4. Lender Visibility**
 
@@ -55,7 +56,7 @@ As the facility agent completes each lender's e-sign, that lender can see the fu
 
 Lenders go to their Credit Facility section and see **Review Funding Notice**. They review the notice, select a payment method, transfer funds, and click **Confirm and Settle**.
 
-![Confirm and Settle - Lender](images/60-funds-transfer-confirmation-investor/ConfirmAndSettleInvestor.png)
+![Confirm and Settle - Lender](.gitbook/assets/ConfirmAndSettleInvestor.png)
 
 **6. Process Completion**
 
@@ -65,22 +66,20 @@ After lenders confirm settlement, tokens are transferred and the borrower receiv
 
 Each lender in the funding notice has individual tracking:
 
-| Field | Description |
-|-------|-------------|
-| E-signature Status | Whether FA has signed for this lender |
+| Field                | Description                           |
+| -------------------- | ------------------------------------- |
+| E-signature Status   | Whether FA has signed for this lender |
 | Fund Transfer Status | Whether lender has confirmed transfer |
 
+![FA FundingNotice Save TokenGeneration](.gitbook/assets/FA_FundingNotice_Save_TokenGeneration.png)
 
+![Fund Transfer Confirmation](.gitbook/assets/Fund-Transfer-Confirmation.png)
 
-![FA FundingNotice Save TokenGeneration](images/26-funding-notices-overview/FA_FundingNotice_Save_TokenGeneration.png)
+![Issuer Token Approval](.gitbook/assets/Issuer_Token_Approval.png)
 
-![Fund Transfer Confirmation](images/26-funding-notices-overview/Fund-Transfer-Confirmation.png)
+![LenderApprovalFundingNotice](<.gitbook/assets/LenderApprovalFundingNotice (1).png>)
 
-![Issuer Token Approval](images/26-funding-notices-overview/Issuer_Token_Approval.png)
-
-![LenderApprovalFundingNotice](images/26-funding-notices-overview/LenderApprovalFundingNotice.png)
-
-![ProcessCompletion](images/26-funding-notices-overview/ProcessCompletion.png)
+![ProcessCompletion](.gitbook/assets/ProcessCompletion.png)
 
 ## Important Points to Know
 

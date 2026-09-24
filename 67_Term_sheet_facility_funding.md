@@ -3,205 +3,201 @@ title: Term Sheet, Facility, and Funding
 description: Complete guide to the credit facility workflow from term sheet to funding
 ---
 
-# Term Sheet, Facility, and Funding
+# Term Sheet, Facility & Funding Statuses
 
 ## Overview
 
-This guide walks through a credit facility from the first proposal to the moment funds are paid. The work happens in three phases: the term sheet, the facility (also called the master commitment), and funding. Each phase has to finish before the next one starts. Borrowers propose terms and request draws. The facility agent reviews and sets up the facility. Lenders approve the facility and pay the draws.
+This guide provides a complete walkthrough of the credit facility workflow, from creating a term sheet through facility setup to funding. It covers all three major phases: Term Sheet, Facility (Master Commitment), and Funding.
 
 ## Phase 1: Term Sheet
 
 ### What Is a Term Sheet
 
-A term sheet is the preliminary agreement between the borrower and the lenders. It sets the proposed terms of the credit facility before anyone is formally committed.
+A term sheet defines the preliminary terms of the credit facility agreement between the borrower and lenders.
 
 ### Term Sheet Flow
 
 ```
-Borrower creates the term sheet (Draft)
+Borrower creates Term Sheet (Draft)
        ↓
-Borrower signs with Adobe Sign (Signed)
+Borrower signs via Adobe Sign (BorrowerSigned)
        ↓
-Borrower submits it to the facility agent (In review)
+Borrower submits to FA (FAReview)
        ↓
-Facility agent approves, rejects, or requests changes
+FA reviews → Approve / Reject / Request Changes
        ↓
-If approved → Accepted → the facility is created automatically
+If Approved → Accepted → Master Commitment auto-created
 ```
 
 ### Term Sheet Statuses
 
-| Status | Description |
-|--------|-------------|
-| **Draft** | Created and still editable |
-| **Signed** | The borrower has signed and can submit it |
-| **In review** | Waiting for the facility agent |
-| **Accepted** | Approved. The facility is created from this term sheet |
-| **Rejected** | Declined. This term sheet cannot be reused |
-| **Changes Requested** | The facility agent asked for edits. The borrower can update and submit again |
+| Status                 | Description                 |
+| ---------------------- | --------------------------- |
+| **Draft**              | Created, can be edited      |
+| **BorrowerSigned**     | Signed, ready to submit     |
+| **FAReview**           | Under facility agent review |
+| **Accepted**           | Approved, MC created        |
+| **Rejected**           | Declined (final)            |
+| **CHANGES\_REQUESTED** | FA requested modifications  |
 
----
+***
 
 ## Phase 2: Facility (Master Commitment)
 
 ### What Is a Master Commitment
 
-A master commitment is the formal facility. It records the agreed terms, the lenders, and how much each lender has committed. It is created automatically when the facility agent accepts the term sheet.
+A master commitment is the formal facility agreement that defines the terms, lenders, and commitment amounts.
 
 ### Facility Flow
 
 ```
-Term sheet accepted → facility created (Draft)
+Term Sheet Accepted → MC auto-created (Draft)
        ↓
-Facility agent sets the facility details
+FA configures facility details
        ↓
-Facility agent adds lenders and their shares
+FA adds lenders and allocations
        ↓
-Facility agent clicks Create Facility (Pending)
+FA clicks Create Facility (PendingLenderApproval)
        ↓
-Each lender reviews and signs
+Lender reviews → E-Sign approval
        ↓
-When any lender approves → the facility becomes Active
+Any lender approves → MC becomes Active
        ↓
-Facility agent finishes deal modelling (Set Up Deal → Create)
+FA completes Deal Modelling (Set Up Deal → Create)
 ```
 
 ### Master Commitment Statuses
 
-| Status | Description |
-|--------|-------------|
-| **Draft** | The facility agent is still setting up the facility |
-| **Pending** | Waiting for lenders to review and sign |
-| **Active** | At least one lender has approved. The facility can be used |
+| Status                    | Description             |
+| ------------------------- | ----------------------- |
+| **Draft**                 | FA configuring facility |
+| **PendingLenderApproval** | Awaiting lender review  |
+| **Active**                | Approved, operational   |
 
 ### Facility Setup Status
 
-| Status | Description | Borrower Can Request Funding |
-|--------|-------------|------------------------------|
-| **In Progress** | Deal modelling is not finished | No |
-| **Completed** | Deal modelling is finished | Yes |
+| Status          | Description                 | Borrower Can Request Funding |
+| --------------- | --------------------------- | ---------------------------- |
+| **In Progress** | Deal modelling not complete | No                           |
+| **Completed**   | Deal modelling complete     | Yes                          |
 
-The borrower cannot map loans or create a funding request until the facility is **Active** and setup is **Completed**.
-
----
+***
 
 ## Phase 3: Funding
 
 ### What Is Funding
 
-Funding is how the borrower asks for money under an active facility and how lenders pay that draw. A borrower can request funding more than once while the facility stays active, as long as each request fits the remaining capacity.
+Funding is the process by which borrowers request and receive funds from lenders through the facility.
 
 ### Funding Flow
 
 ```
-Borrower maps loans to the facility
+Borrower maps loans to facility
        ↓
-Borrower creates a funding request (Draft)
+Borrower creates Funding Request (Draft)
        ↓
-Borrower submits it to the facility agent (In review)
+Borrower submits to FA (FAReview)
        ↓
-Facility agent approves, rejects, or requests changes
+FA reviews → Approve / Reject / Request Changes
        ↓
-If approved → a funding notice is created automatically
+If Approved → Funding Notice auto-created
        ↓
-Facility agent approves the funding notice
+FA approves Funding Notice
        ↓
-Facility agent signs for each lender (0 of n, then all of n)
+FA e-signs for each lender (0/n → n/n)
        ↓
-Each lender sees the notice only after it is signed for them
+Each lender sees notice once signed for
        ↓
-Lenders review, transfer funds, then Confirm and Settle
+Lenders review → Transfer funds → Confirm and Settle
        ↓
-Tokens are recorded to the borrower
+Tokens transferred to Borrower
 ```
 
 ### Funding Request Statuses
 
-| Status | Description |
-|--------|-------------|
-| **Draft** | Created and still editable |
-| **In review** | Waiting for the facility agent |
-| **Approved** | Approved. A funding notice has been created |
-| **Rejected** | Declined. This request cannot be reused |
-| **Changes Requested** | The facility agent asked for edits. The borrower can update and submit again |
+| Status                 | Description                |
+| ---------------------- | -------------------------- |
+| **DRAFT**              | Created, can be edited     |
+| **FAReview**           | Under FA review            |
+| **APPROVED**           | Approved, notice generated |
+| **REJECTED**           | Declined (final)           |
+| **CHANGES\_REQUESTED** | FA requested modifications |
 
 ### Funding Notice Process
 
-| Step | Who Acts | Action |
-|------|----------|--------|
-| 1 | Platform | Creates the notice when the request is approved |
-| 2 | Facility agent | Approves the notice |
-| 3 | Facility agent | Signs for each lender, one at a time |
-| 4 | Lender | Reviews the notice and transfers funds |
-| 5 | Lender | Confirms and settles |
+| Step | Who Acts | Action                    |
+| ---- | -------- | ------------------------- |
+| 1    | System   | Auto-generate notice      |
+| 2    | FA       | Approve                   |
+| 3    | FA       | E-sign for each lender    |
+| 4    | Lender   | Review and transfer funds |
+| 5    | Lender   | Confirm and Settle        |
 
-A lender does not see the notice until the facility agent has signed for that lender. Other lenders may already see theirs.
-
----
+***
 
 ## Complete End-to-End Flow
 
 ```
-TERM SHEET
-1. Borrower: Create the term sheet
-2. Borrower: Sign with Adobe Sign
-3. Borrower: Submit to the facility agent
-4. Facility agent: Review and approve
+TERM SHEET PHASE
+1. Borrower: Create Term Sheet
+2. Borrower: Sign via Adobe Sign
+3. Borrower: Submit to FA
+4. FA: Review → Approve
 
-FACILITY
-5. Platform: Create the master commitment
-6. Facility agent: Set facility details
-7. Facility agent: Add lenders and their shares
-8. Facility agent: Create the facility
-9. Lender: Review and approve by signing
-10. Facility agent: Finish deal modelling
+FACILITY PHASE
+5. System: Auto-create Master Commitment
+6. FA: Configure facility details
+7. FA: Add lenders and allocations
+8. FA: Create Facility
+9. Lender: Review & Approve (E-Sign)
+10. FA: Complete Deal Modelling
 
-FUNDING
-11. Borrower: Map loans to the facility
-12. Borrower: Create a funding request and submit it
-13. Facility agent: Review and approve
-14. Platform: Create the funding notice
-15. Facility agent: Approve the notice and sign for each lender
-16. Lender: Review, transfer funds, then Confirm and Settle
-17. Tokens are recorded to the borrower
+FUNDING PHASE
+11. Borrower: Map loans to facility
+12. Borrower: Create Funding Request → Submit
+13. FA: Review → Approve
+14. System: Auto-create Funding Notice
+15. FA: Approve → E-sign for each lender
+16. Lender: Review → Transfer funds → Confirm and Settle
+17. Tokens transferred to Borrower
 ```
 
 ## Role Actions Summary
 
 ### Borrower Actions
 
-| Phase | Actions |
-|-------|---------|
-| Term Sheet | Create, sign, and submit |
-| Facility | Wait until the facility is active and setup is complete |
-| Funding | Map loans, create a request, and submit it |
+| Phase      | Actions                           |
+| ---------- | --------------------------------- |
+| Term Sheet | Create, Sign, Submit              |
+| Facility   | Wait for activation               |
+| Funding    | Map loans, Create request, Submit |
 
 ### Facility Agent Actions
 
-| Phase | Actions |
-|-------|---------|
-| Term Sheet | Review, then approve, reject, or request changes |
-| Facility | Configure details, add lenders, create the facility, and finish deal modelling |
-| Funding | Review the request, approve the notice, and sign for each lender |
+| Phase      | Actions                                        |
+| ---------- | ---------------------------------------------- |
+| Term Sheet | Review, Approve/Reject/Request Changes         |
+| Facility   | Configure, Add lenders, Create, Deal modelling |
+| Funding    | Review request, Approve, E-sign for lenders    |
 
 ### Lender Actions
 
-| Phase | Actions |
-|-------|---------|
-| Term Sheet | None |
-| Facility | Review and approve by signing |
-| Funding | Review the notice, transfer funds, then Confirm and Settle |
+| Phase      | Actions                                           |
+| ---------- | ------------------------------------------------- |
+| Term Sheet | None                                              |
+| Facility   | Review & Approve (E-Sign)                         |
+| Funding    | Review notice, Transfer funds, Confirm and Settle |
 
 ## Key Points
 
-**One phase at a time.** The facility does not exist until the term sheet is accepted. Funding does not start until the facility is active and deal modelling is complete.
+**Sequential Phases** - Each phase must complete before the next can begin.
 
-**Some records are created for you.** Accepting a term sheet creates the facility. Approving a funding request creates the funding notice.
+**Auto-Creation** - Master commitments and funding notices are auto-created from approvals.
 
-**Signatures are part of the workflow.** Adobe Sign is used for the borrower’s term sheet, each lender’s facility approval, and the facility agent’s signature on the funding notice.
+**E-Sign Integration** - Adobe Sign is used for legal signatures throughout.
 
-**Different people approve different steps.** The borrower cannot approve their own term sheet or funding request. Lenders approve the facility and pay the draw. The facility agent stands between them.
+**Multiple Approvals** - Different parties approve at different stages.
 
-**Funding can repeat.** An active facility can support more than one funding request over its life.
+**Funding Cycle** - Funding requests can be repeated multiple times within an active facility.
 
-> **Note:** These statuses apply to the **Credit Facility** workflow. Asset Sale deals follow a different path (Draft → Published → Active → Closed). See [Asset Sale Statuses](70_Asset_Sale_Statuses.md).
+> **Note:** The term sheet, facility, and funding statuses described in this article apply specifically to the **Credit Facility** workflow. Asset Sale deals use a separate status progression with their own lifecycle (Draft → Published → Active → Closed). For details on Asset Sale statuses, see article 70 (Asset Sale Statuses).

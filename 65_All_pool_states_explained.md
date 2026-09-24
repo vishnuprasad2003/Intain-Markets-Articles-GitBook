@@ -7,127 +7,217 @@ description: Understand all possible pool statuses and what each means
 
 ## Overview
 
-This reference lists pool statuses and the loan statuses you see inside a pool. The label can differ by role. The status tells you which actions are available and whether the pool can still be edited.
+This comprehensive reference guide explains all possible pool statuses in the platform. Pools progress through different statuses as they move from creation to deal completion, and the status shown may differ depending on your role and perspective. Understanding these statuses helps you know where a pool is in the workflow, what actions are available, and what to expect next.
 
 ## Lifecycle Overview
 
-**Preview flow (Share)**
+Pools follow two distinct sharing flows, each with its own status progression:
+
+**Preview Flow (Share Button)**
 
 ```
-Created → Preview → recipient sees Mandate Pending → after accept, Under Review → Deal
+Created → Preview → (recipient sees: Mandate Pending) → (after accept: Under Review) → Deal
 ```
 
-**Start Deal flow**
+**Start Deal Flow**
 
 ```
-Created or Preview → Deal → recipient sees Ready for Deal → after accept, Deal confirmed
+Created/Preview → Deal → (recipient sees: Ready for Deal) → (after accept: Deal confirmed)
 ```
 
-Issuers see Created, Preview, or Deal. Recipients see Mandate Pending, Under Review, or Ready for Deal, depending on the share and whether they have accepted.
+The issuer's view shows the pool status (Created, Preview, Deal). Recipients see different status indicators depending on whether they received a Preview share or a Start Deal invitation, and whether they've accepted or rejected.
 
-Editing becomes more limited as the pool moves toward Deal.
+**Key Principle**: Pool status controls what actions are available and what editing is permitted. As pools progress toward Deal, editing becomes increasingly restricted.
 
 ## Status Meanings
 
-### Issuer view
+### Pool Statuses (Issuer Perspective)
 
 **Created**
 
-Only the issuer who created the pool can see it.
+The pool has been created with basic information and is visible only to the issuer who created it. This is the initial stage where the issuer prepares the pool before sharing with anyone.
 
-- Full editing: details, organizations, loans, and loan tapes
-- Actions: Edit Pool Details, Edit Loan Tape, Share, and map loans from the Loan Registry
-- Next: Share, or Start Deal after the pool is ready
+* **Who sees this**: Only the issuer who created the pool
+* **Editing**: Full editing capabilities—can modify pool details, organization assignments, map/unmap loans, upload loan tapes
+* **Available actions**: Edit Pool Details, Edit Loan Tape, Share, map loans from Loan Registry
+* **Next step**: Share with organizations using the Share button, or wait to Start Deal after prerequisites are met
 
 **Preview**
 
-The issuer used **Share**. Recipients can review the pool. The issuer can still edit.
+The pool has been shared with other organizations using the Share button. Recipients can view and analyze the pool, and the issuer can continue making changes based on feedback.
 
-- Recipients see Mandate Pending, or Under Review after they accept
-- Issuer actions: edit, share with more organizations, manage permissions, and Start Deal when ready
-- Next: respond to feedback, then Start Deal
+* **Who sees this**: Issuer sees "Preview" status; recipients see "Mandate Pending" or "Under Review" depending on acceptance
+* **Editing**: Issuer retains full editing capabilities—can still modify pool, add/remove loans, respond to feedback
+* **Available actions**: Edit Pool Details, Edit Loan Tape, Share (with additional orgs), manage sharing permissions, Start Deal (when prerequisites met)
+* **Next step**: Wait for recipient decisions, respond to feedback, proceed to Start Deal when ready
 
 **Deal**
 
-The pool is committed. Structural editing is off.
+The pool has reached the committed deal stage. Either the issuer initiated Start Deal and it was accepted, or the workflow has progressed to deal commitment. Structural editing is restricted.
 
-- Recipients who have not accepted Start Deal still see Ready for Deal. After they accept, they see Deal
-- Actions: view the pool and continue deal structuring
-- Next: structuring, investor allocation, documents, and closing
+* **Who sees this**: All parties see "Deal" status (recipients who accepted Start Deal see "Ready for Deal" before accepting, then "Deal" after)
+* **Editing**: Structural editing is restricted—pool composition is locked
+* **Available actions**: View pool details, proceed with deal structuring and downstream activities
+* **Next step**: Deal structuring, investor allocation, documentation, closing
 
-### Recipient view
+### Recipient-View Statuses
 
 **Mandate Pending**
 
-You received a preview share and have not accepted or rejected.
+This is what recipients (market makers, investors, rating agencies) see when a pool has been shared with them through Preview sharing. The recipient has not yet made an Accept/Reject decision.
 
-- Actions: view, Accept, Reject
-- Market makers cannot give feedback until they accept
+* **Who sees this**: Recipients who received a Preview share but haven't decided yet
+* **Available actions**: View pool details, Accept, Reject
+* **Feedback**: Market makers cannot provide feedback until they accept
+* **Next step**: Make Accept or Reject decision
 
 **Under Review**
 
-You accepted the preview share.
+This is what market makers see after they accept a Preview share. The market maker has committed to reviewing the pool and can now provide feedback.
 
-- Actions: pool feedback, loan feedback, loan removal requests, and share with investors
-- The issuer can still edit
+* **Who sees this**: Market makers who accepted a Preview mandate
+* **Available actions**: View pool details, provide pool-level feedback, provide loan-level feedback, request loan removals, share with investors
+* **Editing**: Issuer still has editing rights; market maker can influence through feedback
+* **Next step**: Work with issuer on pool refinement, prepare for Start Deal
 
 **Ready for Deal**
 
-The issuer clicked **Start Deal**. Loans are finalized, typically with an NFT on each loan.
+This is what recipients see when the issuer has initiated Start Deal. The pool is finalized (prerequisites met, typically all loans NFT-minted) and ready for deal commitment.
 
-- Actions: view, Accept, Reject
-- Accept confirms the deal
+* **Who sees this**: Recipients who received a Start Deal invitation but haven't decided yet
+* **Available actions**: View pool details, Accept, Reject
+* **Next step**: Make Accept or Reject decision; acceptance confirms the deal
 
-### Loan statuses inside a pool
+### Loan Statuses Within Pools
 
-**Mapped** — The loan is in the pool and counts in metrics. It appears on the Loans tab and in the Loan Tape. Someone can request its removal.
+Loans mapped to pools have their own status indicators:
 
-**Pending** — The loan is mapped, and the market maker has not accepted the preview mandate. Acceptance moves it to Accepted.
+**Mapped**
 
-**Accepted** — The market maker accepted the mandate. The loan is confirmed in the pool.
+The loan has been mapped to the pool from the Loan Registry and is part of the pool's composition.
 
-**Under Reconsider / Reconsider** — Removal was requested. Market makers and investors see Under Reconsider. The issuer sees Reconsider, with a tick to accept removal and a cross to reject it. The loan still counts until the issuer decides.
+* Loan contributes to pool metrics (balance, counts, weighted averages)
+* Loan appears in the Loans tab and Loan Tape section
+* Loan can be subject to removal requests
 
-**Removed** — The issuer accepted the removal. The loan is out of the metrics, stays visible, and can be reinstated.
+**Pending**
+
+The loan is mapped to a pool, but the market maker hasn't yet accepted the Preview mandate.
+
+* Loan is in a holding state awaiting mandate decision
+* If market maker accepts, loan status progresses to Accepted
+
+**Accepted**
+
+The loan's inclusion in the pool has been confirmed after a market maker accepts the Preview mandate.
+
+* All loans in the pool move to Accepted status when market maker accepts
+* Loan is confirmed as part of the pool composition
+
+**Under Reconsider / Reconsider**
+
+A market maker or investor has requested removal of this loan. The issuer is deciding whether to accept or reject the removal request.
+
+* Market maker/investor view shows: "Under Reconsider"
+* Issuer view shows: "Reconsider" with tick (accept) and cross (reject) icons
+* Loan remains in calculations until issuer makes decision
+
+**Removed**
+
+The loan has been removed from the pool after the issuer accepted a removal request.
+
+* Loan is excluded from pool calculations (metrics no longer include this loan)
+* Loan remains visible in the pool for tracking purposes
+* Loan can potentially be reinstated if needed
 
 ## What Each Status Indicates
 
-**Created** — The pool is private. Finish the name, asset class, transaction type, organizations, and loan mapping before you share.
+### Created Status Indicates
 
-**Preview** — Other organizations are reviewing it. You can still edit. Use feedback before you commit.
+* You (as issuer) are still preparing the pool privately
+* No other organization can see the pool yet
+* You have complete control over pool composition and settings
+* The pool is in its early preparation phase
+* You should complete setup, loan mapping, and configuration before sharing
+* This is the right time to ensure pool name, asset class, transaction type, and organization assignments are correct
 
-**Mandate Pending** — Decide whether to accept. Accept moves a market maker to Under Review and turns feedback on. Reject declines the share. The issuer can share again.
+### Preview Status Indicates
 
-**Under Review** — You can comment, request removals, and share with investors. The issuer may change the pool from your feedback.
+* The pool is being reviewed by other organizations
+* Collaboration has begun—recipients can view and analyze
+* You (as issuer) still have full editing capabilities
+* Feedback may be coming from recipients who have accepted
+* The pool is moving toward deal readiness but not yet committed
+* This is the phase for iteration and refinement based on feedback
 
-**Ready for Deal** — Start Deal has been clicked and the usual prerequisites are met. Accept commits the deal. Reject declines it.
+### Mandate Pending Indicates (Recipient View)
 
-**Deal** — The structure is locked. The accepting market maker continues structuring and later steps.
+* You (as recipient) have received a Preview share and need to decide
+* You can view pool details to evaluate before deciding
+* Accept will show you as Under Review and enable feedback
+* Reject will decline the mandate; issuer may re-share or work with others
+* Market makers: you cannot provide feedback until you accept
 
-**Removed** — The loan is out of the calculations. It remains visible and can be reinstated.
+### Under Review Indicates (Market Maker View)
+
+* You (as market maker) have accepted the Preview mandate
+* You can now provide feedback at pool and loan levels
+* You can request loan removals if you believe certain loans should be excluded
+* You can share the pool with investors
+* The issuer may make changes based on your feedback
+* The pool is being refined collaboratively before deal commitment
+
+### Ready for Deal Indicates (Recipient View)
+
+* The issuer has initiated Start Deal
+* Prerequisites have been met (typically all loans NFT-minted)
+* The pool composition is finalized
+* Your Accept decision commits the deal
+* Reject will decline; issuer may work with other parties
+* This is the final decision point before deal commitment
+
+### Deal Status Indicates
+
+* The transaction is finalized and committed
+* Structural editing is restricted
+* The accepting market maker proceeds with deal structuring
+* Downstream activities (investor allocation, documentation, closing) proceed
+* The pool has reached its final committed state
+
+### Removed Loan Status Indicates
+
+* The loan was removed from the pool after issuer accepted a removal request
+* The loan is excluded from pool calculations
+* Pool metrics have been updated to exclude this loan
+* The loan remains visible for tracking and audit purposes
+* The loan can potentially be reinstated if circumstances change
 
 ## Status Transitions Summary
 
-| From Status | Action | To Status | Who |
-|-------------|--------|-----------|-----|
-| (none) | Create Pool | Created | Issuer |
-| Created | Share (Preview) | Preview | Issuer |
-| Created or Preview | Start Deal | Deal | Issuer |
-| Mandate Pending | Accept | Under Review | Market Maker |
-| Mandate Pending | Reject | Can be shared again | Market Maker |
-| Ready for Deal | Accept | Deal (confirmed) | Market Maker |
-| Ready for Deal | Reject | Can be shared again | Market Maker |
-| Mapped (loan) | Removal requested | Under Reconsider | Market Maker or Investor |
-| Under Reconsider (loan) | Issuer accepts | Removed | Issuer |
-| Under Reconsider (loan) | Issuer rejects | Mapped or Accepted | Issuer |
+| From Status             | Action              | To Status                      | Who                   |
+| ----------------------- | ------------------- | ------------------------------ | --------------------- |
+| (none)                  | Create Pool         | Created                        | Issuer                |
+| Created                 | Share (Preview)     | Preview                        | Issuer                |
+| Created/Preview         | Start Deal          | Deal                           | Issuer                |
+| Mandate Pending         | Accept              | Under Review                   | Market Maker          |
+| Mandate Pending         | Reject              | Mandate Pending (can re-share) | Market Maker          |
+| Ready for Deal          | Accept              | Deal (confirmed)               | Market Maker          |
+| Ready for Deal          | Reject              | Ready for Deal (can re-share)  | Market Maker          |
+| Mapped (loan)           | MM requests removal | Under Reconsider               | Market Maker/Investor |
+| Under Reconsider (loan) | Issuer accepts      | Removed                        | Issuer                |
+| Under Reconsider (loan) | Issuer rejects      | Mapped/Accepted                | Issuer                |
 
 ## Editing Rights by Status
 
-| Pool Status | Issuer can edit | Recipient actions |
-|-------------|-----------------|-------------------|
-| Created | Yes, fully | Pool is not visible |
-| Preview | Yes, fully | View, Accept or Reject, feedback after accept |
-| Under Review (market maker view) | Yes, fully | Feedback, removal requests, share to investors |
-| Deal | No, structure is locked | View and deal structuring |
+| Pool Status            | Issuer Edit Rights | Recipient Actions                                   |
+| ---------------------- | ------------------ | --------------------------------------------------- |
+| Created                | Full editing       | (not visible to recipients)                         |
+| Preview                | Full editing       | View, Accept/Reject, Feedback (after accept)        |
+| Under Review (MM view) | Full editing       | Feedback, Loan removal requests, Share to investors |
+| Deal                   | Restricted         | View, Deal structuring activities                   |
 
-Pool status is separate from Asset Sale deal status. A pool can stay Created, Preview, or Deal while its Asset Sale deal moves through Draft, Published, Active, Closed, and the other deal statuses. See [Asset Sale Statuses](70_Asset_Sale_Statuses.md).
+## Pool Statuses vs. Asset Sale Statuses
+
+Pool statuses described in this article are separate from Asset Sale deal statuses. When a pool is assigned to an Asset Sale deal, the pool retains its own lifecycle status (Created, Preview, Deal) while the Asset Sale deal tracks its transaction lifecycle independently (Draft, Published, Active, Closed, etc.). The pool status reflects the pool's readiness and sharing state; the Asset Sale deal status reflects the progress of the sale transaction. For details on Asset Sale statuses, see article 70 (Asset Sale Statuses).
+
+Understanding these statuses helps you navigate the pool workflow effectively, know what actions are available at each stage, and collaborate with other parties to move pools toward successful deal completion.

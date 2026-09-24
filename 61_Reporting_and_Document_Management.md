@@ -5,7 +5,7 @@ description: >-
   cycle
 ---
 
-# Reporting and Document Management
+# Reporting & Document Management
 
 This article explains how to view, publish, and manage deal reports and documents generated after the monthly deal cycle in the Intain Admin platform.
 
@@ -32,7 +32,7 @@ The Collateral Report displays detailed performance metrics for the loan pool fo
 
 This report is typically reviewed by the Trustee before being shared with investors.
 
-![Collateral report view](images/61-reporting-and-document-management/collateral-report.png)
+![Collateral report view](.gitbook/assets/collateral-report.png)
 
 ### Loan Tape
 
@@ -42,7 +42,7 @@ The Loan Tape report provides access to the standardized monthly loan tape gener
 * Available for download in **Excel** format
 * Useful for offline analysis and reconciliation
 
-![Loan tape report view](images/61-reporting-and-document-management/loan-tape-report.png)
+![Loan tape report view](.gitbook/assets/loan-tape-report.png)
 
 ### Consolidated Report
 
@@ -52,7 +52,7 @@ The Consolidated Report provides a high-level summary of the entire deal for the
 * Available for download in **PDF** or **Excel** formats
 * Commonly used for investor reporting and internal review
 
-![Consolidated report view](images/61-reporting-and-document-management/consolidated-report.png)
+![Consolidated report view](.gitbook/assets/consolidated-report.png)
 
 ## Publishing Reports to Investors
 
@@ -84,11 +84,9 @@ Trustees can upload various document types, including:
 * Investors have **view-only access** to documents that are shared with them
 * All files remain securely stored on the platform for reference
 
+![Reporting and Document Management](.gitbook/assets/page_51_image.png)
 
-
-![Reporting and Document Management](images/61-reporting-and-document-management/page_51_image.png)
-
-![Reporting and Document Management](images/61-reporting-and-document-management/page_52_image.png)
+![Reporting and Document Management](.gitbook/assets/page_52_image.png)
 
 ## Important Notes
 

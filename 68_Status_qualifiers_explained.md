@@ -3,195 +3,188 @@ title: Status Qualifiers Explained
 description: Understand status qualifiers that provide additional context about item states
 ---
 
-# Status Qualifiers Explained
+# Status + Qualifiers Explained
 
 ## Overview
 
-A status tells you where an item sits in its workflow. Many statuses also carry a qualifier — a word such as Pending, In review, or Changes Requested — that tells you who needs to act next. This guide explains those words and what you should do when you see them. The same word can appear on a term sheet, a funding request, a pool, or a deal. The meaning stays the same even when the item type changes.
+Statuses in Intain Markets often include qualifiers that provide additional context. This guide explains what each qualifier means.
 
 ## Common Status Qualifiers
 
 ### "Pending" Qualifier
 
-**Meaning:** Someone still has to act. The item is waiting.
+**Meaning:** Waiting for someone to take action
 
 **Examples:**
 
-| Status | Meaning |
-|--------|---------|
-| Mandate Pending | A pool is waiting for the market maker to accept or decline the mandate |
-| Pending | A facility is waiting for a lender to approve it |
-| Pending Token Generated | A funding notice is waiting for the facility agent to finish processing tokens |
+| Status                  | Meaning                                        |
+| ----------------------- | ---------------------------------------------- |
+| Mandate Pending         | Pool waiting for market maker to accept/reject |
+| PendingLenderApproval   | MC waiting for lender to approve               |
+| Pending Token Generated | Funding notice waiting for FA to process       |
 
-**What to Do:** If you are the person named in the status, take the action. If you are waiting on someone else, the item stays as it is until they do.
+**What to Do:** Wait for the other party to act, or if you're that party, take action
 
 ### "Review" Qualifier
 
-**Meaning:** A reviewer has the item and has not decided yet. On screen this often appears as **In review**.
+**Meaning:** Being reviewed by someone
 
 **Examples:**
 
-| Status | Who Reviews |
-|--------|-------------|
-| In review (term sheet) | Facility agent |
-| In review (funding request) | Facility agent |
-| Under Review (pool) | Market maker or investor |
-| Pending Review (Asset Sale deal) | Underwriter |
+| Status                     | Who Reviews              |
+| -------------------------- | ------------------------ |
+| FAReview (Term Sheet)      | Facility Agent           |
+| FAReview (Funding Request) | Facility Agent           |
+| Under Review (Pool)        | Market Maker or Investor |
 
-**What to Do:** If you are the reviewer, approve, reject, or request changes. If you submitted the item, wait for that decision. You usually cannot edit it while it is in review.
+**What to Do:** If you're the reviewer, make a decision. If you're the submitter, wait.
 
 ### "Requested" Qualifier
 
-**Meaning:** The reviewer needs changes before they can continue. On screen this appears as **Changes Requested**.
+**Meaning:** Changes needed before proceeding
 
 **Examples:**
 
-| Status | What's Needed |
-|--------|---------------|
-| Changes Requested (term sheet) | The borrower edits the term sheet and submits it again |
-| Changes Requested (funding request) | The borrower edits the request and submits it again |
+| Status                               | What's Needed                   |
+| ------------------------------------ | ------------------------------- |
+| CHANGES\_REQUESTED (Term Sheet)      | Borrower must edit and resubmit |
+| CHANGES\_REQUESTED (Funding Request) | Borrower must edit and resubmit |
 
-**What to Do:** Read the comments, make the changes, and resubmit the same item. For a term sheet, you also sign again before you submit. This is not a rejection. The same item stays open.
+**What to Do:** Make the requested changes and resubmit
 
 ### "Active" Qualifier
 
-**Meaning:** The item is in force and can be used.
+**Meaning:** Item is operational and ready for use
 
 **Examples:**
 
-| Status | What It Means |
-|--------|---------------|
-| Active (facility) | Lenders have approved. The borrower can map loans and create funding requests after deal modelling is complete |
-| Active (Asset Sale deal) | Settlement is finished. The issuer can start repayment when it is due |
+| Status                     | What It Means                                                 |
+| -------------------------- | ------------------------------------------------------------- |
+| ACTIVE (Master Commitment) | Facility is operational, borrower can create funding requests |
 
-**What to Do:** Continue the work that this status unlocks. Do not treat Active as “finished.” It means the next operating step is available.
+**What to Do:** Proceed with operations (funding requests, etc.)
 
 ### "Approved" Qualifier
 
-**Meaning:** A reviewer has accepted the item, and the next record is created from that decision.
+**Meaning:** Item has been approved
 
 **Examples:**
 
-| Status | What Happens Next |
-|--------|-------------------|
-| Approved (funding request) | A funding notice is created automatically |
-| Accepted (term sheet) | The facility is created automatically |
-| Published (Asset Sale deal) | Investors can see the deal and commit |
+| Status                     | What Happens Next              |
+| -------------------------- | ------------------------------ |
+| APPROVED (Funding Request) | Funding notice auto-generated  |
+| Accepted (Term Sheet)      | Master commitment auto-created |
 
-Term sheets use **Accepted** for this outcome. Funding requests use **Approved**. Both mean the reviewer said yes and the workflow moves forward.
-
-**What to Do:** Open the next item the platform created, or wait for the next party if the next step is theirs.
+**What to Do:** Proceed to next stage
 
 ### "Rejected" Qualifier
 
-**Meaning:** The reviewer declined this item. The decision is final for this item.
+**Meaning:** Item has been declined (final)
 
 **Examples:**
 
-| Status | What to Do |
-|--------|------------|
-| Rejected (term sheet) | Create a new term sheet |
-| Rejected (funding request) | Create a new funding request |
+| Status                     | What to Do                 |
+| -------------------------- | -------------------------- |
+| Rejected (Term Sheet)      | Create new term sheet      |
+| REJECTED (Funding Request) | Create new funding request |
 
-**What to Do:** Read the reason, then start a new item that addresses it. You can still open the rejected item, but you cannot edit it or send it back.
+**What to Do:** Create a new item addressing the rejection reasons
 
 ### "Signed" Qualifier
 
-**Meaning:** The required electronic signature is done.
+**Meaning:** E-signature completed
 
 **Examples:**
 
-| Status | What It Means |
-|--------|---------------|
-| Signed (term sheet) | The borrower has signed and can submit the term sheet to the facility agent |
+| Status                      | What It Means                             |
+| --------------------------- | ----------------------------------------- |
+| BorrowerSigned (Term Sheet) | Borrower has signed, can now submit to FA |
 
-**What to Do:** Submit the item if you are the person who just signed. If someone else must sign next, wait until their signature is recorded. A funding notice shows signature progress as a count, such as 1 of 3, until every required signature is complete.
+**What to Do:** Proceed to submission
 
 ### "Mapped/Unmapped" Qualifier (Loans)
 
-**Meaning:** Whether a loan has been assigned to a pool.
+**Meaning:** Loan pool assignment status
 
-| Status | Meaning |
-|--------|---------|
-| Mapped | The loan is assigned to a pool |
-| Unmapped | The loan exists and is not assigned to any pool |
+| Status   | Meaning                                  |
+| -------- | ---------------------------------------- |
+| Mapped   | Loan is assigned to a pool               |
+| Unmapped | Loan exists but not assigned to any pool |
 
-**What to Do:** From the Loan Registry, use **Map to Pool** for loans that should be included. A loan cannot be mapped twice.
+**What to Do:** Map loans from Loan Registry using Map to Pool button
 
 ### Verification Status Qualifiers (Batches)
 
-| Status | Meaning |
-|--------|---------|
-| Pending | Not yet verified |
-| Reviewed | Verification is complete |
-| Certified | A verification agent certified the batch |
-| Self Certified | The issuer certified the batch through a verification agent sign-in |
-| Self Certify (Data Only) | The issuer self-certified the batch directly |
-
-**What to Do:** Leave Pending batches until verification finishes. Reviewed, Certified, and self-certified batches can move on to the next step, such as minting, when your role allows it.
+| Status                   | Meaning                                           |
+| ------------------------ | ------------------------------------------------- |
+| Pending                  | Not yet verified                                  |
+| Reviewed                 | Verification complete                             |
+| Certified                | Verified by third-party agent                     |
+| Self Certified           | Verified by issuer (via verification agent login) |
+| Self Certify (Data Only) | Self-certified by issuer directly                 |
 
 ## How Qualifiers Help
 
-**They show position.** You can tell whether an item is still being prepared, waiting on a reviewer, or already decided.
+**Clarify Position:** Know exactly where an item is in its workflow
 
-**They show the next step.** Pending means wait or act, depending on whether you are the party named. Changes Requested means you edit and resubmit. Rejected means you start over.
+**Indicate Next Steps:** Understand what needs to happen next
 
-**They explain the buttons.** A button is available only when the status allows that action. If **Submit** is missing, the item is probably not signed yet. If **Edit** is missing, the item is in review, approved, or rejected.
+**Explain Actions:** Understand why certain buttons are enabled/disabled
 
-**They show progress.** Watching the qualifier change is how you follow a term sheet, a pool, or a deal without opening every screen.
+**Track Progress:** Monitor progression through workflows
 
 ## Quick Reference
 
-| Qualifier | You're Waiting? | Action Required By |
-|-----------|-----------------|-------------------|
-| Pending | Yes | The other party |
-| In review | Maybe | The reviewer |
-| Changes Requested | No | You (make the changes) |
-| Active | No | Ready for the next operating step |
-| Approved or Accepted | No | Continue to the next stage |
-| Rejected | No | Create a new item |
-| Signed | No | Submit, if you are the signer |
+| Qualifier | You're Waiting? | Action Required By   |
+| --------- | --------------- | -------------------- |
+| Pending   | Yes             | Other party          |
+| Review    | Maybe           | Reviewer decides     |
+| Requested | No              | You (make changes)   |
+| Active    | No              | Ready for operations |
+| Approved  | No              | Proceed to next step |
+| Rejected  | No              | Create new item      |
+| Signed    | No              | Proceed to submit    |
 
 ## Asset Sale Status Qualifiers
 
-Asset Sale deals use their own statuses. They track the deal from creation through settlement and repayment. These names appear on the deal itself.
+Asset Sale deals use a distinct set of status qualifiers that track the transaction lifecycle from deal creation through settlement and repayment.
 
 ### Asset Sale Deal Statuses
 
-| Status | Meaning |
-|--------|---------|
-| **Draft** | The issuer is still setting up the deal and assigning loans |
-| **Pending Review** | The issuer has sent the deal to the underwriter |
-| **Published** | The underwriter approved it. Investors can commit |
-| **Cancelled** | The deal was cancelled before it went further |
-| **Commit** | Investors are submitting commitments |
-| **Invest** | Commitments are set. Investors are allocated and ready to fund |
-| **Settlement In Progress** | Funds and loan NFTs are being exchanged |
-| **Settled** | Settlement steps are complete |
-| **Active** | The deal is operating after settlement |
-| **Repayment In Progress** | The issuer has started repayment to investors |
-| **Closed** | Repayment is complete and the deal is closed |
-| **Defaulted** | The deal has defaulted on repayment |
+| Status                     | Meaning                                                           |
+| -------------------------- | ----------------------------------------------------------------- |
+| **Draft**                  | Deal created, issuer is configuring details and assigning loans   |
+| **Pending Review**         | Issuer has submitted the deal for underwriter review              |
+| **Published**              | Underwriter approved; deal is visible to investors for commitment |
+| **Cancelled**              | Deal was cancelled before progressing further                     |
+| **Commit**                 | Investors are submitting commitments to the deal                  |
+| **Invest**                 | Commitments finalized; investors are allocated and ready to fund  |
+| **Settlement In Progress** | Funds and NFTs are being exchanged between parties                |
+| **Settled**                | All settlement steps completed successfully                       |
+| **Active**                 | Deal is active and operational post-settlement                    |
+| **Repayment In Progress**  | Issuer has initiated repayment to investors                       |
+| **Closed**                 | Repayment completed and deal is closed                            |
+| **Defaulted**              | Deal has defaulted on repayment obligations                       |
 
 ### How Deal Status Drives Actions
 
-The deal status controls which buttons you see:
+The Asset Sale deal status determines which call-to-action (CTA) buttons are available at each stage. For example:
 
-- **Publish** is available when the deal is **Draft**
-- **Approve** and **Reject** are available when the deal is **Pending Review**
-- **Submit Commitment** is available when the deal is **Published**
-- **Initiate Repayment** is available when the deal is **Active**
+* **"Publish"** is only available when the deal is in **Draft**
+* **"Approve/Reject"** is only available when the deal is in **Pending Review**
+* **"Submit Commitment"** is only available when the deal is **Published**
+* **"Initiate Repayment"** is only available when the deal is **Active**
 
-The sequence keeps each action with the right role. An issuer cannot approve their own deal, and an investor cannot commit before the deal is published.
+This ensures that actions are performed in the correct sequence and by the correct role.
 
 ### Settlement Substates
 
-While a deal is **Settlement In Progress**, each investor is tracked separately:
+During **Settlement In Progress**, the platform tracks per-investor settlement progress through substates:
 
-| Substate | Meaning |
-|----------|---------|
-| Payment Sent | The investor has sent payment to the issuer |
-| Payment Confirmed | The issuer has confirmed that payment |
-| NFT Transferred | The loan NFTs have moved to the investor |
+| Substate          | Meaning                                         |
+| ----------------- | ----------------------------------------------- |
+| Payment Sent      | Investor has sent payment to the issuer         |
+| Payment Confirmed | Issuer has confirmed receipt of payment         |
+| NFT Transferred   | Loan NFTs have been transferred to the investor |
 
-One investor can be at Payment Confirmed while another is still at Payment Sent. The deal stays in Settlement In Progress until the required investors finish.
+Each investor's settlement progresses independently, allowing the platform to track partial settlement across multiple investors.

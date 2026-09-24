@@ -1,134 +1,141 @@
 ---
 title: Funding and Approval Questions
-description: Frequently asked questions about the credit facility funding and approval process
+description: >-
+  Frequently asked questions about the credit facility funding and approval
+  process
 ---
 
-# Funding and Approval Questions
+# Funding & Approval Questions
 
 ## Overview
 
-Answers to common questions about credit facility funding and approvals, plus a short comparison with asset sale settlement.
+This guide answers common questions about the credit facility funding and approval process. Use this as a quick reference for understanding how different parts of the workflow operate.
 
-## Frequently Asked Questions
+## Term Sheet Questions
 
-### Term sheets
+### Q: How do I create a term sheet?
 
-**How do I create a term sheet?**
+Navigate to **Credit Facility** from the left menu, click **Term Sheet Setup** at the top right, select **Create Via Wizard**, fill in the details, and click **Create Draft**.
 
-Open **Credit Facility**, click **Term Sheet Setup**, choose **Create Via Wizard**, enter the details, and click **Create Draft**.
+### Q: Do I need to sign the term sheet?
 
-**Do I need to sign the term sheet?**
+Yes. After clicking Create Draft, an Adobe Sign popup opens automatically. You must complete the electronic signature before you can submit to the facility agent.
 
-Yes. Adobe Sign opens after Create Draft. You must finish the signature before you can submit to the facility agent.
+### Q: Can I edit a term sheet after submitting?
 
-**Can I edit a term sheet after I submit it?**
+No. Once submitted (FAReview status), you cannot edit. You can only edit if the facility agent requests changes (CHANGES\_REQUESTED status).
 
-No. In **Under Review** you cannot edit. You can edit again only if the facility agent requests changes (**Changes Requested**).
+### Q: What happens when my term sheet is approved?
 
-**What happens when my term sheet is approved?**
+A master commitment is automatically created with Draft status. The facility agent then configures the facility.
 
-A master commitment is created in **Draft**. The facility agent then configures the facility.
+### Q: What if my term sheet is rejected?
 
-**What if my term sheet is rejected?**
+Rejected term sheets cannot be resubmitted. You must create a new term sheet.
 
-You cannot send the same term sheet again. Create a new one.
+## Master Commitment Questions
 
-### Master commitments
+### Q: How is a master commitment created?
 
-**How is a master commitment created?**
+Master commitments are automatically created when term sheets are approved. You cannot create them manually.
 
-It is created when a term sheet is approved. You cannot create one on your own.
+### Q: Who configures the master commitment?
 
-**Who configures it?**
+The facility agent configures the master commitment by adding lenders, setting up facility rules, and completing all required sections.
 
-The facility agent adds lenders, sets the facility rules, and completes the required sections.
+### Q: What are sub-facilities?
 
-**What are sub-facilities?**
+For multiple-branch master commitments, sub-facilities allow the facility agent to assign different lender groups. Each sub-facility has its own lenders, and no two sub-facilities can have the same lenders.
 
-On a multiple-branch commitment, sub-facilities let the facility agent assign different groups of lenders. Two sub-facilities cannot share the same lenders.
+### Q: When does the facility become active?
 
-**When does the facility become active?**
+The facility becomes Active when any one lender approves and e-signs the master commitment.
 
-When any one lender approves and e-signs the master commitment.
+## Deal Modelling Questions
 
-### Deal modelling
+### Q: What is deal modelling?
 
-**What is deal modelling?**
+Deal modelling is when the facility agent configures operational parameters after the master commitment becomes Active. This must be completed before borrowers can raise funding requests.
 
-It is the facility agent’s setup of operating terms after the master commitment is **Active**. Borrowers cannot raise funding requests until it is finished.
+### Q: Can I delegate deal modelling?
 
-**Can I delegate deal modelling?**
+Yes. Facility agents can click the **Delegation** button to ask the admin to complete deal modelling on their behalf.
 
-Yes. The facility agent can click **Delegation** and ask an admin to finish it.
+### Q: Why can't I raise a funding request?
 
-**Why can’t I raise a funding request?**
+Check if:
 
-Check both of these:
+1. The master commitment is Active
+2. Deal modelling is complete (Facility Setup Status: Completed)
 
-1. The master commitment is **Active**.
-2. Facility Setup Status is **Completed**.
+You can only raise funding requests after both conditions are met.
 
-### Funding requests
+## Funding Request Questions
 
-**What do I need to create a funding request?**
+### Q: What do I need to create a funding request?
 
-- An active master commitment
-- Completed deal modelling
-- Loans with NFTs mapped to the facility, when mapping is required
-- Draw amount, funding date, purpose, and a collateral addendum
+You need:
 
-**Is a signature required to approve a funding request?**
+* Active master commitment
+* Completed deal modelling
+* NFT-minted loans mapped to the facility (if required)
+* Draw amount, funding date, purpose, and collateral addendum
 
-No. The facility agent does not e-sign to approve the request.
+### Q: Is e-signature required for funding requests?
 
-**What happens after approval?**
+No. Unlike term sheets, facility agents don't need to e-sign to approve funding requests.
 
-A funding notice is created. The facility agent approves it and e-signs for each lender. A lender sees the notice after their signature is done, then sends funds.
+### Q: What happens after my funding request is approved?
 
-**Can I resubmit a rejected funding request?**
+A funding notice is automatically generated. The facility agent approves it and e-signs for each lender individually. Each lender can see the notice once their e-sign is complete and can then transfer funds.
 
-No. Create a new funding request.
+### Q: Can I resubmit a rejected funding request?
 
-### Funding notices
+No. Rejected funding requests cannot be resubmitted. You must create a new funding request.
 
-**How is a funding notice created?**
+## Funding Notice Questions
 
-It is created when a funding request is approved. You cannot create one on your own.
+### Q: How is a funding notice created?
 
-**What does E-sign (0/n) mean?**
+Funding notices are automatically created when funding requests are approved. You cannot create them manually.
 
-The facility agent signs once for each lender. 0/n means none are signed. n/n means all are signed.
+### Q: What does E-sign (0/n) mean?
 
-**When do lenders see the funding notice?**
+The facility agent must e-sign the funding notice for each lender individually. The count shows progress (0/n means none signed, n/n means all signed).
 
-After the facility agent approves the notice and completes the e-signature for that lender.
+### Q: When do lenders see the funding notice?
 
-**How do lenders finish?**
+Lenders see funding notices after:
 
-Open the notice in **Credit Facility**, choose a payment method, send the funds, and click **Confirm and Settle**.
+1. Facility agent approves the funding notice
+2. Facility agent e-signs for each lender individually
 
-### Roles
+### Q: How do lenders complete the process?
 
-**What are the role names in a credit facility?**
+Lenders review the funding notice in their Credit Facility section, select a payment method, transfer funds, and click **Confirm and Settle**.
 
-- Issuer is the **Borrower**
-- Market Maker is the **Facility Agent**
-- Investor is the **Lender**
+## Role-Related Questions
 
-**Where do lenders see facilities waiting for approval?**
+### Q: What are the role names in credit facility?
 
-In **Opportunities**.
+* Issuer → **Borrower**
+* Market Maker → **Facility Agent**
+* Investor → **Lender**
 
-**Where do lenders see approved facilities?**
+### Q: Where do lenders see pending facilities?
 
-In **Credit Facility**, along with funding notices.
+Lenders see master commitments awaiting approval in their **Opportunities** section from the left menu.
 
-### Asset sale settlement
+### Q: Where do lenders see approved facilities?
 
-**How does settlement work in an asset sale?**
+Lenders see approved facilities and funding notices in their **Credit Facility** section from the left menu.
 
-Investors send funds to the issuer by bank wire. Both sides confirm the transfer on the platform. The platform then mints receivables NFTs and transfers them to investor wallets. See [Settlement and NFT Transfer](36_Settlement_and_NFT_Transfer.md).
+## Asset Sale Settlement Questions
 
-**How is that different from credit facility funding?**
+### Q: How does settlement work in asset sales?
 
-A credit facility draw is a request against an approved facility, reviewed by the facility agent. An asset sale settlement is a one-time purchase of loan assets. Both use signatures and approvals. The steps are different.
+Asset sale settlement uses bank wire (off-chain) for fund transfer. Investors transfer funds to the issuer, both parties confirm the transfer on the platform, and the platform mints and transfers receivables NFTs to investor wallets. See article 36 (Settlement & NFT Transfer) for full details.
+
+### Q: What is the difference between credit facility funding and asset sale settlement?
+
+Credit facility funding involves drawdowns from an approved facility via funding requests reviewed by the facility agent. Asset sale settlement is a one-time purchase transaction where investors buy loan assets from the issuer. Both use e-signatures and approval gates, but the workflows are distinct.

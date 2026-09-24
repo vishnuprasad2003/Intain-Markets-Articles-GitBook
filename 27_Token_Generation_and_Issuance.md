@@ -3,7 +3,7 @@ title: Token Generation and Issuance
 description: Understand how tokens are generated and distributed for funding notices
 ---
 
-# Token Generation and Issuance
+# Token Generation & Issuance
 
 ## Overview
 
@@ -28,12 +28,13 @@ The facility agent reviews the funding notice and clicks **Approve**. This prepa
 The facility agent signs the funding notice for each lender individually using Adobe Sign. The progress shows as **E-sign (0/n)** where n is the number of lenders.
 
 Each time the facility agent signs for a lender:
-- The count updates (1/n, 2/n, etc.)
-- That lender's e-signature status changes to completed
-- That lender can now see the funding notice
-- Continue until all lenders are signed (n/n)
 
-![Funding Notice Details - FA](images/27-token-generation-and-issuance/FundingNoticeDetailsFA.png)
+* The count updates (1/n, 2/n, etc.)
+* That lender's e-signature status changes to completed
+* That lender can now see the funding notice
+* Continue until all lenders are signed (n/n)
+
+![Funding Notice Details - FA](<.gitbook/assets/FundingNoticeDetailsFA (2).png>)
 
 **Stage 4: Lender Visibility**
 
@@ -43,7 +44,7 @@ As each lender's e-sign is completed, that lender can see the funding notice in 
 
 Lenders review the funding notice, see their allocated portion, select a payment method, and transfer funds. After transferring, they click **Confirm and Settle**.
 
-![Confirm and Settle - Lender](images/60-funds-transfer-confirmation-investor/ConfirmAndSettleInvestor.png)
+![Confirm and Settle - Lender](.gitbook/assets/ConfirmAndSettleInvestor.png)
 
 **Stage 6: Process Completion**
 
@@ -76,19 +77,18 @@ After lenders confirm settlement, tokens are transferred and the borrower receiv
 ## Individual Lender Tracking
 
 Throughout the workflow, each lender's participation is tracked individually:
-- E-signature status (completed by FA)
-- Fund transfer confirmation status
-- Individual allocation amounts
 
+* E-signature status (completed by FA)
+* Fund transfer confirmation status
+* Individual allocation amounts
 
+![FA FundingNotice Save TokenGeneration](<.gitbook/assets/FA_FundingNotice_Save_TokenGeneration (1).png>)
 
-![FA FundingNotice Save TokenGeneration](images/27-token-generation-and-issuance/FA_FundingNotice_Save_TokenGeneration.png)
+![FundTransferConfirmation](<.gitbook/assets/FundTransferConfirmation (1).png>)
 
-![FundTransferConfirmation](images/27-token-generation-and-issuance/FundTransferConfirmation.png)
+![Issuer Token Approval](<.gitbook/assets/Issuer_Token_Approval (1).png>)
 
-![Issuer Token Approval](images/27-token-generation-and-issuance/Issuer_Token_Approval.png)
-
-![LenderApprovalFundingNotice](images/27-token-generation-and-issuance/LenderApprovalFundingNotice.png)
+![LenderApprovalFundingNotice](<.gitbook/assets/LenderApprovalFundingNotice (2).png>)
 
 ## Important Points to Know
 

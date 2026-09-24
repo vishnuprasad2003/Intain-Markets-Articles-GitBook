@@ -1,6 +1,9 @@
 ---
 title: Repayment Flow
-description: Complete step-by-step guide for the asset sale repayment process — from loan tape upload through repayment initiation, investor confirmation, NFT burn, and deal closure
+description: >-
+  Complete step-by-step guide for the asset sale repayment process — from loan
+  tape upload through repayment initiation, investor confirmation, NFT burn, and
+  deal closure
 ---
 
 # Repayment Flow
@@ -13,28 +16,29 @@ The process involves multiple phases: the issuer uploads the latest loan tape, i
 
 ## Who Can Use This
 
-- **Issuers**: Upload loan tapes, configure repayment details, initiate repayment, and submit wire confirmation
-- **Investors**: Review repayment details, accept or reject repayments, confirm defaults, and burn receivables NFTs
-- **Intain internal team**: Where applicable, can prepare the latest loan tape and upload it on behalf of the Issuer
+* **Issuers**: Upload loan tapes, configure repayment details, initiate repayment, and submit wire confirmation
+* **Investors**: Review repayment details, accept or reject repayments, confirm defaults, and burn receivables NFTs
+* **Intain (Support)**: Optional assistance with loan tape preparation and formatting
 
 ## When This Is Used
 
 Use this process when:
-- Borrowers have made payments on the underlying loans in an active asset sale deal
-- The issuer needs to pass through repayment to investors
-- You want to understand the complete repayment lifecycle from initiation through deal closure
-- A deal is ready to be fully or partially repaid
-- A default needs to be declared on a deal
+
+* Borrowers have made payments on the underlying loans in an active asset sale deal
+* The issuer needs to pass through repayment to investors
+* You want to understand the complete repayment lifecycle from initiation through deal closure
+* A deal is ready to be fully or partially repaid
+* A default needs to be declared on a deal
 
 ## Repayment Types
 
 The platform supports three types of repayment, each with different behaviors and outcomes:
 
-| Repayment Type | Description | Amount Required | Deal Outcome |
-|---------------|-------------|-----------------|-------------- |
-| **Full Repayment** | Pay the entire outstanding balance | Must equal outstanding balance | Deal closes after confirmation and NFT burn |
-| **Partial Repayment** | Pay a portion of the outstanding balance | Must be > 0 and ≤ outstanding balance | Deal remains active; issuer can record next installment |
-| **Declare Default** | Declare a default on the deal | Not required (no amount) | Deal status changes to Defaulted after investor confirmation |
+| Repayment Type        | Description                              | Amount Required                       | Deal Outcome                                                 |
+| --------------------- | ---------------------------------------- | ------------------------------------- | ------------------------------------------------------------ |
+| **Full Repayment**    | Pay the entire outstanding balance       | Must equal outstanding balance        | Deal closes after confirmation and NFT burn                  |
+| **Partial Repayment** | Pay a portion of the outstanding balance | Must be > 0 and ≤ outstanding balance | Deal remains active; issuer can record next installment      |
+| **Declare Default**   | Declare a default on the deal            | Not required (no amount)              | Deal status changes to Defaulted after investor confirmation |
 
 ## Step-by-Step Process
 
@@ -60,7 +64,7 @@ The platform supports three types of repayment, each with different behaviors an
 2. Map the loan tape columns to the platform's expected fields
 3. Click **Save Mapping** to confirm the field mapping
 
-> **Note:** Where applicable, the Intain internal team can prepare the latest loan tape and upload it on behalf of the Issuer. The Issuer still reviews the deal and records the repayment.
+> **Note:** With Intain's assistance, the issuer can prepare the latest loan tape in Excel. Intain guides the process, and the prepared document is then uploaded to the platform.
 
 ### Phase 2: Initiate Repayment (Issuer)
 
@@ -73,29 +77,29 @@ The platform supports three types of repayment, each with different behaviors an
 
 Fill in the following fields:
 
-1. **Repayment Type** — Select **Full Repayment**, **Partial Repayment**, or **Declare Default**. What each type does is in the table above.
-
-2. **Repayment Date** — Enter the date of the repayment. The date **cannot be a future date**. It must be today or a past date.
-
-3. **Repayment Amount** — Enter or verify the amount:
-   - **Full Repayment**: must equal the outstanding balance
-   - **Partial Repayment**: greater than zero, and not above the outstanding balance
-   - **Declare Default**: no amount
-   - **Receivables deals**: the amount comes from the loan tape and cannot be typed over. Confirm it matches the wire before you submit.
-
-4. **Wire Reference** — Enter the bank wire reference number. Required for Full and Partial repayment.
-
-5. **Wire Confirmation Document** — Upload proof of the wire. Accepted formats are **PNG**, **JPEG**, or **PDF**, up to **10 MB**.
-
+1. **Repayment Type** — Select the type of repayment:
+   * **Full Repayment** — Pay the entire outstanding balance, closing the deal after investor confirmation and NFT burn
+   * **Partial Repayment** — Pay a portion of the balance; the deal remains active for future installments
+   * **Declare Default** — Declare a default on the deal. No repayment amount is required for this option.
+2. **Repayment Date** — Enter the date of the repayment. This field has a validation rule: the date **cannot be a future date**. It must be today or a past date.
+3. **Repayment Amount** — Enter or verify the repayment amount:
+   * For **Full Repayment**: The amount must equal the total outstanding balance
+   * For **Partial Repayment**: The amount must be greater than zero and must not exceed the outstanding balance
+   * For **Declare Default**: This field is not required
+   * For **receivables asset sales**: The repayment amount is **pre-calculated** from the uploaded loan tape's invoice totals (`invoiceTotal` field). The issuer cannot manually override this value for receivables deals. Always verify this matches your actual wire transfer before submitting.
+4. **Wire Reference** — Enter the bank wire reference number. This is required for Full and Partial repayment types and identifies your bank wire transfer.
+5. **Wire Confirmation Document** — Upload the bank wire confirmation document. Accepted formats are **PNG**, **JPEG**, or **PDF**, with a maximum file size of **10 MB**. This document serves as proof of the wire transfer.
 6. Click **Next** to proceed to the review screen.
+
+> **Note:** For receivables asset sales, the repayment amount is pre-calculated from the uploaded loan tape's invoice totals. Always verify this matches your actual wire transfer before submitting.
 
 #### Step 6: Review and Confirm
 
 1. Review all repayment details on the confirmation screen
 2. Verify the repayment type, amount, date, wire reference, and wire confirmation document
-3. Click **Review & Confirm**, then confirm on the summary
-4. The deal status changes to **Repayment In Progress**
-5. The status step shows **Awaiting Investor Confirmation**
+3. Click **Review & Confirm**, then confirm in the inline confirmation panel
+4. An **installment record** is created with status **INITIATED**
+5. The deal status changes to **Repayment In Progress**
 
 ### Phase 3: Confirm Receipt (Investor)
 
@@ -109,11 +113,11 @@ Fill in the following fields:
 1. Navigate to **Investment Operations** within the deal details
 2. Click **Confirm Repayment Receipt**
 3. Review the repayment details:
-   - Repayment type (Full, Partial, or Default)
-   - Repayment amount
-   - Repayment date
-   - Wire reference number
-   - Wire confirmation document (viewable/downloadable)
+   * Repayment type (Full, Partial, or Default)
+   * Repayment amount
+   * Repayment date
+   * Wire reference number
+   * Wire confirmation document (viewable/downloadable)
 
 #### Step 9: Accept or Reject the Repayment
 
@@ -121,28 +125,60 @@ Fill in the following fields:
 2. Choose your decision:
 
 **Accept Repayment:**
-- Select **Accept** and confirm
-- For a full repayment, the investor can then burn the NFT and the deal can close
-- For a partial repayment, the status step shows **Installment Recorded**. The issuer can click **Record Next Installment** for the next payment
+
+* Select **Accept** and confirm
+* The installment status changes from **INITIATED** to **CONFIRMED**
+* For Full Repayment: The deal progresses toward closure
+* For Partial Repayment: The deal remains active, and the issuer gains access to **Record Next Installment** to initiate additional payments
 
 **Reject Repayment:**
-- Select **Reject**
-- Enter a reason (required, up to 1,000 characters)
-- The issuer is notified and can submit a new repayment
 
-**Confirm Default (only when the issuer declared default):**
-- **Reject** is not available
-- Confirm the declaration
-- The deal status changes to **Defaulted**, and the status step shows **Default Declared**
+* Select **Reject**
+* Provide a **rejection reason** (required, up to **1,000 characters**)
+* The installment status changes from **INITIATED** to **REJECTED**
+* The issuer is notified and can submit a new repayment to correct the issue
 
-## What the status step shows
+**Confirm Default (for Default Declarations only):**
 
-| What you see | Meaning |
-|--------------|---------|
-| **Awaiting Investor Confirmation** | The issuer submitted the repayment. The investor has not responded yet. |
-| **Repayment Complete** | A full repayment was accepted. |
-| **Installment Recorded** | A partial repayment was accepted. The issuer can record the next payment. |
-| **Default Declared** | The investor confirmed the default. |
+* If the issuer declared a default, the only available action is **Confirm Default** — reject is not available for default declarations
+* The installment status changes to **CONFIRMED**
+* The deal status changes to **Defaulted** with status detail **Default Confirmed**
+
+## Installment Status Lifecycle
+
+Each repayment creates an installment record that tracks its progress:
+
+| Status        | Meaning                                                  | What Happens Next                                                                            |
+| ------------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **INITIATED** | Issuer has submitted the repayment with wire details     | Investor reviews and decides (Accept/Reject)                                                 |
+| **CONFIRMED** | Investor has accepted the repayment or confirmed default | NFT burn becomes available (for Full Repayment), or next installment available (for Partial) |
+| **REJECTED**  | Investor has rejected the repayment with a reason        | Issuer can submit a new repayment                                                            |
+
+### Installment Record Fields
+
+Each installment record contains:
+
+* `installmentNumber` — Sequential installment number
+* `repaymentType` — Full Repayment, Partial Repayment, or Declare Default
+* `repaymentDate` — Date of the repayment
+* `repaymentAmount` — Amount repaid
+* `wireReference` — Bank wire reference number
+* `wireConfirmationDoc` — Uploaded wire confirmation document
+* `status` — INITIATED, CONFIRMED, or REJECTED
+* `receiptDecision` — Accept or Reject (investor's decision)
+* `rejectionReason` — Reason for rejection (if rejected, max 1,000 characters)
+* `confirmedAt` — Timestamp of confirmation
+* `confirmedBy` — Who confirmed the receipt
+* `invoiceTotal` — For receivables deals, the loan tape invoice total
+* `paymentRail` — Currently only `bankWire` is supported
+
+## Investor Decision Reference
+
+| Decision            | Available For                     | Effect                                    | Next Step                                     |
+| ------------------- | --------------------------------- | ----------------------------------------- | --------------------------------------------- |
+| **Accept**          | Full Repayment, Partial Repayment | Installment → CONFIRMED                   | NFT burn (Full) or next installment (Partial) |
+| **Reject**          | Full Repayment, Partial Repayment | Installment → REJECTED                    | Issuer submits new repayment                  |
+| **Confirm Default** | Declare Default only              | Installment → CONFIRMED, Deal → Defaulted | Deal closed as defaulted                      |
 
 ### Phase 4: Burn the NFT (Investor)
 
@@ -165,11 +201,11 @@ After a Full Repayment is confirmed, the investor must burn their receivables NF
 
 The NFT progresses through defined states during repayment:
 
-| NFT Status | Meaning |
-|-----------|---------|
-| **Transferred** | The investor holds the receivables NFT after settlement — the normal state during an active deal |
-| **Retirement pending** | Repayment is confirmed; the investor can retire (burn) the NFT |
-| **Retired** | The NFT has been permanently burned on the blockchain — the investor's tokenized claim is removed |
+| NFT Status             | Meaning                                                                                           |
+| ---------------------- | ------------------------------------------------------------------------------------------------- |
+| **Transferred**        | The investor holds the receivables NFT after settlement — the normal state during an active deal  |
+| **Retirement pending** | Repayment is confirmed; the investor can retire (burn) the NFT                                    |
+| **Retired**            | The NFT has been permanently burned on the blockchain — the investor's tokenized claim is removed |
 
 ```
 Transferred → (investor retires NFT after repayment confirmed) → Retirement pending → (blockchain confirms) → Retired
@@ -195,54 +231,65 @@ Transferred → (investor retires NFT after repayment confirmed) → Retirement 
 
 The deal status tracks the overall state of the transaction throughout the repayment process:
 
-| Deal Status | Status Detail | When This Occurs |
-|------------|---------------|-----------------|
-| **Active** | — | Deal is operational, before any repayment |
-| **Repayment In Progress** | — | After issuer initiates repayment |
-| **Active** | Partially Repaid | After a partial repayment is confirmed and deal returns to active for next installment |
-| **Closed** | Fully Repaid | After full repayment confirmed and NFT burned |
-| **Defaulted** | Default Declared → Default Confirmed | After default is declared and investor confirms |
+| Deal Status               | Status Detail                        | When This Occurs                                                                       |
+| ------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------- |
+| **Active**                | —                                    | Deal is operational, before any repayment                                              |
+| **Repayment In Progress** | —                                    | After issuer initiates repayment                                                       |
+| **Active**                | Partially Repaid                     | After a partial repayment is confirmed and deal returns to active for next installment |
+| **Closed**                | Fully Repaid                         | After full repayment confirmed and NFT burned                                          |
+| **Defaulted**             | Default Declared → Default Confirmed | After default is declared and investor confirms                                        |
 
 ### Partial Repayment Cycle
 
 For partial repayments, the process can repeat multiple times:
 
-The issuer records a partial payment. The deal shows **Repayment In Progress** until the investor accepts. After acceptance, the issuer uses **Record Next Installment**. This repeats until the deal is fully repaid or a default is confirmed.
+```
+Active → Initiate Partial Repayment → Repayment In Progress
+  → Investor Accepts → CONFIRMED
+    → Record Next Installment → Active (Partially Repaid)
+      → Initiate Next Partial Repayment → Repayment In Progress
+        → (repeat until full repayment or default)
+```
 
 ## Rules & Validations
 
-- **Deal Must Be Active** — Repayment can only be initiated on deals in **Active** status
-- **Loan Tape Required** — The loan tape must be uploaded and field mapping completed before repayment can be initiated
-- **Repayment Date** — Cannot be a future date
-- **Repayment Amount** — Must be greater than zero for Full and Partial types; must equal outstanding balance for Full; must not exceed outstanding balance for Partial; not required for Declare Default
-- **Receivables Pre-Calculation** — For receivables asset sales, the repayment amount is auto-calculated from the loan tape's invoice totals and cannot be manually overridden
-- **Wire Reference** — Required for Full and Partial repayment types
-- **Wire Confirmation Document** — Required; must be PNG, JPEG, or PDF; maximum 10 MB
-- **Payment method** — Repayment uses bank wire only
-- **Rejection reason** — Required when the investor rejects a repayment; maximum 1,000 characters
-- **NFT burn** — The investor can burn the NFT only after they accept a full repayment
-- **NFT Burn Is Irreversible** — Once burned, the receivable position is permanently closed on the blockchain
-- **Next Installment** — Record Next Installment is only available after a partial repayment has been confirmed
-- **Default Cannot Be Rejected** — When the issuer declares a default, the investor can only Confirm Default; the reject option is not available
+* **Deal Must Be Active** — Repayment can only be initiated on deals in **Active** status
+* **Loan Tape Required** — The loan tape must be uploaded and field mapping completed before repayment can be initiated
+* **Repayment Date** — Cannot be a future date
+* **Repayment Amount** — Must be greater than zero for Full and Partial types; must equal outstanding balance for Full; must not exceed outstanding balance for Partial; not required for Declare Default
+* **Receivables Pre-Calculation** — For receivables asset sales, the repayment amount is auto-calculated from the loan tape's invoice totals and cannot be manually overridden
+* **Wire Reference** — Required for Full and Partial repayment types
+* **Wire Confirmation Document** — Required; must be PNG, JPEG, or PDF; maximum 10 MB
+* **Payment Rail** — Currently only bank wire (off-chain) is supported
+* **Rejection Reason** — Required when investor rejects a repayment; maximum 1,000 characters
+* **NFT Burn Prerequisite** — Investors must confirm receipt (installment status: CONFIRMED) before the NFT burn step becomes available
+* **NFT Burn Is Irreversible** — Once burned, the receivable position is permanently closed on the blockchain
+* **Next Installment** — Record Next Installment is only available after a partial repayment has been confirmed
+* **Default Cannot Be Rejected** — When the issuer declares a default, the investor can only Confirm Default; the reject option is not available
 
 ## What Happens Next
 
 **After Full Repayment and NFT Burn:**
-- The deal status shows **Closed** with **Fully Repaid** and **100% repaid**
-- All settlement and repayment events are preserved in the audit trail
-- The deal remains accessible for reporting and compliance review
-- No further operational actions are available on a closed deal
+
+* The deal status shows **Closed** with **Fully Repaid** and **100% repaid**
+* All settlement and repayment events are preserved in the audit trail
+* The deal remains accessible for reporting and compliance review
+* No further operational actions are available on a closed deal
 
 **After Partial Repayment:**
-- The deal returns to **Active** status with a partially repaid indicator
-- The issuer can click **Record Next Installment** to initiate the next partial payment
-- This cycle continues until the deal is fully repaid or a default is declared
+
+* The deal returns to **Active** status with a partially repaid indicator
+* The issuer can click **Record Next Installment** to initiate the next partial payment
+* This cycle continues until the deal is fully repaid or a default is declared
 
 **After Default Confirmation:**
-- The deal status changes to **Defaulted** with **Default Confirmed**
-- The deal is effectively closed with default status
-- All events are preserved in the audit trail
+
+* The deal status changes to **Defaulted** with **Default Confirmed**
+* The deal is effectively closed with default status
+* All events are preserved in the audit trail
 
 **After Rejection:**
-- The issuer sees the investor’s reason and can submit a new repayment
-- The deal remains in **Repayment In Progress** status until a new repayment is submitted and confirmed
+
+* The installment is marked as **REJECTED** with the investor's rejection reason
+* The issuer reviews the rejection reason and can submit a new repayment addressing the issue
+* The deal remains in **Repayment In Progress** status until a new repayment is submitted and confirmed

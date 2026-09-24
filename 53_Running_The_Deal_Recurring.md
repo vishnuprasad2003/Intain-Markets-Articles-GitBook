@@ -3,7 +3,7 @@ title: Running the Deal (Recurring Module)
 description: Execute monthly deal calculations after loan processing is committed
 ---
 
-# Running the Deal (Recurring)
+# Running The Deal (Recurring)
 
 This article explains how to execute the monthly deal calculation after loan processing has been completed and committed for the selected payment period.
 
@@ -18,16 +18,15 @@ to calculate payment distributions, evaluate tests, and generate official result
 
 This step represents the point where the deal logic is applied to finalized loan data.
 
+![Recurring Deal Dashboard](.gitbook/assets/recurring-dashboard.png)
 
-![Recurring Deal Dashboard](images/53-running-the-deal-recurring/recurring-dashboard.png)
+![Deal Dashboard](.gitbook/assets/dashboard.png)
 
-![Deal Dashboard](images/53-running-the-deal-recurring/dashboard.png)
+![Loan Processing Dashboard](.gitbook/assets/loan-processing-dashboard.png)
 
-![Loan Processing Dashboard](images/53-running-the-deal-recurring/loan-processing-dashboard.png)
+![Loan Summary](.gitbook/assets/loan-summary.png)
 
-![Loan Summary](images/53-running-the-deal-recurring/loan-summary.png)
-
-![Deal Processing Details](images/53-running-the-deal-recurring/page_46_image.png)
+![Deal Processing Details](.gitbook/assets/page_46_image.png)
 
 ## Prerequisites
 

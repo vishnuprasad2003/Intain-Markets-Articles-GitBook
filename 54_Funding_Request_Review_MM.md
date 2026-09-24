@@ -1,160 +1,169 @@
 ---
 title: Funding Request Review (Facility Agent)
-description: Complete guide for facility agents on how to review, evaluate, and make decisions on funding requests submitted by borrowers
+description: >-
+  Complete guide for facility agents on how to review, evaluate, and make
+  decisions on funding requests submitted by borrowers
 ---
 
 # Funding Request Review (Facility Agent)
 
 ## Overview
 
-This guide explains how a facility agent reviews a funding request. When a borrower asks to draw funds, you check the request against the facility terms, the capacity that is still available, and the collateral. You then approve, reject, or ask for changes. Approval creates a funding notice and starts the token steps for that draw.
+This guide covers the end-to-end process by which facility agents review funding requests submitted by borrowers in the Credit Facility module. When a borrower submits a drawdown request, the facility agent is responsible for evaluating the request against the facility terms, available capacity, and collateral requirements — then making one of three decisions: approve, reject, or request changes. This review step is a critical control point in the credit facility workflow, as approval triggers the automatic generation of a funding notice and begins the token issuance process.
 
 ## Who Can Use This
 
-- **Facility agents**: Only a facility agent can review a funding request and approve it, reject it, or ask for changes.
+* **Facility Agents (Market Makers with Underwriter role)** — Only users with the Underwriter role permission can review and act on funding requests. The system enforces this through the `requireRole('Underwriter')` middleware, ensuring that only authorized facility agents can approve, reject, or request changes on funding requests.
 
 ## When This Is Used
 
-Review a funding request when:
-- A borrower has submitted one and the status is **In review (facility agent)**
-- You need to check the draw against the facility terms and the remaining capacity
-- A borrower has sent the request back after you asked for changes, and the status is **In review (facility agent)** again
+This review process is triggered when:
 
-You can act only while the status is **In review (facility agent)**. If the status is something else, the approve, reject, and request-changes actions are not available.
+* A borrower has submitted a funding request and its status shows **FAReview**
+* The facility agent needs to evaluate a drawdown request against the facility's terms and available capacity
+* A previously returned funding request (after a change request) has been resubmitted by the borrower and is again in **FAReview** status
+
+Funding requests can only be acted upon when they are in **FAReview** status. The system enforces this rule — attempts to approve, reject, or request changes on a funding request in any other status will fail with an error message indicating the current status.
 
 ## Review Process
 
 ### Step 1: Access the Funding Request
 
-1. Open **Credit Facility** from the left menu
-2. Open the **Active Facilities** tab
-3. Find the master commitment
-4. Find the funding request. It shows **In review (facility agent)**.
-5. Click **Review Funding Request**
+1. Navigate to **Credit Facility** from the left expandable menu
+2. Go to the **Active Facilities** tab
+3. Locate the relevant master commitment
+4. Find the funding request under that commitment — it will show **FAReview** status
+5. Click the **Review Funding Request** action button
 
 ### Step 2: Evaluate the Request Details
 
-Check these areas:
+When reviewing a funding request, the facility agent should examine the following areas:
 
-**Request details:**
+**Request Details:**
 
-| What you see | What to check |
-|--------------|----------------|
-| Funding request ID | The identifier for this request, so you are reviewing the right one |
-| Draw amount | The amount the borrower wants to draw |
-| Funding date | The date the borrower needs the funds |
-| Purpose of funds | Why they want the draw |
-| Draw currency | The currency of the request |
+| Field              | What to Check                                                         |
+| ------------------ | --------------------------------------------------------------------- |
+| `fundingRequestId` | Unique identifier in the format **FR-MMDDYYYY-xxxx** (auto-generated) |
+| Draw Amount        | The amount the borrower is requesting to draw down                    |
+| Funding Date       | The date the borrower needs the funds                                 |
+| Purpose of Funds   | The stated reason for the drawdown                                    |
+| Draw Currency      | The currency of the requested draw                                    |
 
-**Facility terms and capacity:**
+**Facility Terms and Capacity:**
 
-| What you see | What to check |
-|--------------|----------------|
-| Available borrowing capacity | Whether the draw fits the amount still available |
-| Facility utilization | How much of the facility is already in use |
-| Advance rate | Whether the draw stays within the approved advance rate. The advance rate is the share of collateral value that can be borrowed. |
-| Commitment amount | The total commitment on the master commitment |
+| Field                        | What to Check                                                                 |
+| ---------------------------- | ----------------------------------------------------------------------------- |
+| Available Borrowing Capacity | Whether the requested draw amount fits within the remaining facility capacity |
+| Facility Utilization         | Current utilization level of the overall credit facility                      |
+| Advance Rate                 | Whether the draw is within the approved advance rate                          |
+| Commitment Amount            | Total commitment amount from the master commitment                            |
 
-**Documents:**
+**Documentation:**
 
-| Document | What to verify |
-|----------|----------------|
-| Collateral addendum | The collateral document, including earlier versions if they are shown |
-| Supporting documents | Any other files the borrower uploaded |
-| Funding sheet | The funding sheet, if one was provided |
+| Document             | What to Verify                                                                        |
+| -------------------- | ------------------------------------------------------------------------------------- |
+| Collateral Addendum  | Review the collateral addendum document and its history (`collateralAddendumHistory`) |
+| Supporting Documents | Any additional documents uploaded by the borrower                                     |
+| Funding Sheet        | If applicable, the funding sheet supporting the request                               |
 
-**Lender participation:**
-The request includes lenders who have finished signing the master commitment. Check that their shares and commitment amounts look right.
+**Lender Participation:** The system automatically includes only lenders with `esignature_completed` status from the master commitment's lender groups. Review the lender participation breakdown to ensure the allocation percentages and commitment amounts are correct.
 
 ### Step 3: Review Status History and Action History
 
-The request keeps a history you can read:
-- **Status history** shows each status change, when it happened, and who did it
-- **Action history** shows submit, approve, reject, and change-request actions, including comments
+Each funding request maintains two audit trails:
 
-Read the history when the request was sent back for changes and then submitted again. Confirm the borrower addressed the earlier comments.
+* **statusHistory** — records every status transition with timestamps and actors
+* **actionHistory** — records every action taken (submit, approve, reject, request changes) with comments
+
+Review these histories if the funding request has been through previous review cycles (e.g., returned via a change request and resubmitted).
 
 ## Evaluation Criteria
 
-When you evaluate a funding request, consider:
+When evaluating a funding request, consider:
 
-1. **Capacity** — Does the draw amount fit the borrowing capacity that is still available?
-2. **Terms** — Do the date, currency, and other terms match the master commitment?
-3. **Documents** — Did the borrower provide the collateral and other required files?
-4. **Lenders** — Are the participating lenders ready for this draw?
-5. **Earlier comments** — If this is a resubmission, did the borrower make the changes you asked for?
+1. **Capacity compliance** — Does the draw amount fit within the available borrowing capacity?
+2. **Terms alignment** — Are the request terms (rate, date, currency) consistent with the master commitment?
+3. **Documentation completeness** — Has the borrower provided all required collateral and supporting documents?
+4. **Lender readiness** — Are participating lenders in the correct status to support the drawdown?
+5. **Prior feedback** — If this is a resubmission, has the borrower addressed all previously requested changes?
 
 ## Making Decisions
 
-You have three choices.
+Three decision options are available to the facility agent:
 
 ### Option 1: Approve
 
-**When to use it:** The request meets the requirements and the draw can continue.
+**When to Use:** The funding request meets all requirements and the drawdown can proceed.
 
-**What happens:**
-- The status changes from **In review (facility agent)** to **Approved**
-- The screen records who approved it and when
-- A funding notice is created with status **Pending token generation**
-- The notice lists one share for each eligible lender
-- The borrower is notified by email and in the platform
-- Your approval and any comments are saved on the request history
+**What Happens:**
 
-**After you approve:**
-1. The funding notice shows **Pending token generation**
-2. Click **Approve** on the funding notice to create the tokens
-3. The status becomes **Tokens generated**
+* Status changes from **FAReview** to **APPROVED**
+* The system records `approvedAt` (timestamp) and `approvedBy` (user ID)
+* A **funding notice** is automatically generated with status `PENDING_TOKEN_GENERATION`
+* The funding notice includes a `tokenDistribution` array with one entry per eligible lender
+* A notification is sent to the borrower's organization via SSE and email confirming the approval
+* The approval is logged in both `statusHistory` and `actionHistory` with comments (e.g., "Funding request approved by market maker, pending e-signature")
+
+**After Approval — What Follows:**
+
+1. The auto-generated funding notice appears with `PENDING_TOKEN_GENERATION` status
+2. The facility agent clicks **Approve** on the funding notice to trigger FT token deployment
+3. Status advances to `TOKEN_GENERATED` once the FT contract is deployed on-chain
 4. The borrower approves the token transfer
-5. You sign for each lender. The action shows **E-sign (0/n)** and moves toward **E-sign (n/n)**.
-6. Each lender can see the notice after their signature is done
-7. Lenders send funds and click **Confirm and Settle**
-8. When every lender is finished, the status becomes **Tokens transferred**
+5. The facility agent initiates e-signature for each lender (progress shown as **E-sign 0/n → n/n**)
+6. Each lender receives visibility into the funding notice after their e-sign is complete
+7. Lenders transfer funds and click **Confirm and Settle**
+8. When all lenders complete, tokens are transferred to the borrower and status becomes `TOKEN_TRANSFERRED`
 
 ### Option 2: Reject
 
-**When to use it:** You cannot approve the request. Examples include a draw that is too large, collateral that is not enough, or terms the borrower does not qualify for.
+**When to Use:** The funding request cannot be approved — for example, it exceeds capacity, lacks sufficient collateral, or the borrower does not qualify for the requested terms.
 
-**What happens:**
-- You must enter a rejection reason
-- The status changes from **In review (facility agent)** to **Rejected**
-- The screen records who rejected it, when, and the reason
-- The borrower is notified
-- The request is closed. No further changes are allowed.
+**What Happens:**
 
-Rejection is final. The request becomes view only. The borrower cannot edit it or send it again. They must create a new funding request.
+* Facility agent must provide a `rejectionReason` explaining why the request was declined
+* Status changes from **FAReview** to **REJECTED**
+* The system records `rejectedAt`, `rejectedBy`, and `rejectionReason`
+* The action is logged with comments (e.g., "Funding request rejected by market maker")
+* A notification is sent to the borrower
+* An audit event `credit_facility.funding_request.rejected` is recorded with the summary: "Funding request {id} rejected and closed; no further changes allowed"
+
+**Important:** Rejection is **final**. The rejected funding request becomes read-only. The borrower cannot edit or resubmit it. To try again, the borrower must create an entirely new funding request.
 
 ### Option 3: Request Changes
 
-**When to use it:** The request is close, but something must change. Examples include a lower draw amount, a different funding date, or another document.
+**When to Use:** The funding request is close to acceptable but needs modifications — for example, reduce the draw amount, change the funding date, or provide additional documentation.
 
-**What happens:**
-- You enter comments that say what must change
-- The status changes from **In review (facility agent)** to **Changes Requested**
-- The comments are saved with the request so the borrower can see them
-- The borrower can edit the request and submit it again
-- After they resubmit, the status returns to **In review (facility agent)**
-- Each time you ask for changes, that round is kept on the request history
+**What Happens:**
 
-If the status is already **Changes Requested**, you cannot send another change request until the borrower resubmits.
+* Facility agent provides specific comments describing what changes are needed
+* A change request record is created with a unique `requestId` in the format **CR-{fundingRequestId}-{sequenceNumber}** (sequence increments with each change request)
+* Status changes from **FAReview** to **CHANGES\_REQUESTED**
+* The system captures a version snapshot of the current funding request state before the change request
+* The borrower can now edit the funding request and resubmit it
+* Upon resubmission, the status returns to **FAReview** for another review cycle
+* An audit event `credit_facility.funding_request.changes_requested` is recorded
+
+**Note:** If the funding request is already in `CHANGES_REQUESTED` status (e.g., the borrower has not yet resubmitted), the system prevents duplicate change requests.
 
 ## Rules & Validations
 
-| Rule | Details |
-|------|---------|
-| **Status** | You can approve, reject, or request changes only when the status is **In review (facility agent)** |
-| **Who can review** | Only a facility agent can take these actions |
-| **Rejection is final** | A rejected request stays closed. It cannot be edited or resubmitted. |
-| **Do not decide twice** | If the request is already approved or rejected, the action is not repeated |
-| **Change requests are kept** | Each request for changes is saved in order, with your comments |
-| **No signature on this step** | Approving a funding request does not require a signature. Signatures happen later on the funding notice. |
-| **The notice is created for you** | Approval creates the funding notice. You do not create it as a separate form. |
+| Rule                        | Details                                                                                                 |
+| --------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **Status Gate**             | Only funding requests in `FAReview` status can be approved, rejected, or have changes requested         |
+| **Role Gate**               | Only users with the `Underwriter` role can perform review actions                                       |
+| **Rejection Finality**      | Rejected requests are permanently closed — no edits or resubmission                                     |
+| **Duplicate Prevention**    | Already-approved or already-rejected requests return an informational response instead of re-processing |
+| **Change Request Tracking** | Each change request is numbered sequentially and preserves a version snapshot for audit purposes        |
+| **No E-Signature Required** | Funding request approval does not require an e-signature (unlike term sheet signing)                    |
+| **Auto-Generation**         | Approval automatically creates a funding notice — no separate action needed                             |
 
 ## What Happens Next
 
-| Your decision | What the borrower does | What happens on the platform |
-|---------------|------------------------|------------------------------|
-| **Approve** | Waits for the funding notice | A funding notice is created and the token steps begin |
-| **Reject** | Creates a new funding request | This request stays view only |
-| **Request Changes** | Edits the request and submits it again | The status returns to **In review (facility agent)** after they resubmit |
+| Your Decision       | Borrower's Next Step            | System's Next Step                                   |
+| ------------------- | ------------------------------- | ---------------------------------------------------- |
+| **Approve**         | Wait for funding notice process | Funding notice auto-generated, token workflow begins |
+| **Reject**          | Create a new funding request    | Request archived as read-only                        |
+| **Request Changes** | Edit and resubmit the request   | Request returns to FAReview after resubmission       |
 
-After approval, the notice continues in this order: tokens are created, the borrower approves the transfer, you sign for each lender, lenders send funds, and settlement is confirmed. Those later steps are covered in the funding notice and token approval guides.
+After approval, the workflow continues through the funding notice lifecycle: token generation → borrower token approval → facility agent e-signature per lender → lender fund transfer → settlement. Each of these stages has its own documentation and is covered in separate articles.

@@ -7,129 +7,141 @@ description: Understand common reasons actions are blocked and how to resolve th
 
 ## Overview
 
-An action stays blocked until the status, your role, and any earlier steps all line up. Use this page to see the usual cause and what to do next.
+Actions are blocked when certain conditions aren't met. This guide explains common blocking reasons and solutions.
 
-## Frequently Asked Questions
+## Common Blocking Reasons
 
-### Why is this action blocked?
+### 1. Wrong Status
 
-**Wrong status**
+**Examples:**
 
-- You cannot submit a term sheet in Draft until it is signed.
-- You cannot edit a term sheet in Under Review.
-- You cannot create a funding request until the master commitment is ACTIVE.
+* Cannot submit term sheet (status is Draft, must sign first)
+* Cannot edit term sheet (status is FAReview, waiting for FA)
+* Cannot create funding request (MC not ACTIVE)
 
-Check the status and finish the step that moves it forward.
+**Solution:** Check item status and complete required steps to progress
 
-**A required step is missing**
+### 2. Missing Prerequisites
 
-- The term sheet is not signed in Adobe Sign.
-- NFTs cannot be minted until batch verification is complete.
-- A funding request stays off until deal modelling is complete.
+**Examples:**
 
-Finish that step first.
+* Cannot submit term sheet (not signed via Adobe Sign)
+* Cannot mint NFT (batch verification not complete)
+* Cannot create funding request (deal modelling not complete)
 
-**Someone else must act**
+**Solution:** Complete the prerequisite step first
 
-- The term sheet is in Under Review.
-- The master commitment is in Pending Lender Approval.
-- You do not see a funding notice because the facility agent has not signed for you.
+### 3. Waiting for Another Party
 
-Wait for that person. You will be notified when it is your turn.
+**Examples:**
 
-**Wrong role**
+* Term sheet in FAReview (waiting for FA decision)
+* MC in PendingLenderApproval (waiting for lender)
+* Funding notice not visible (FA hasn't completed your e-sign)
 
-- Only a facility agent can approve a term sheet.
-- Only a lender can approve a master commitment.
-- Only the issuer who created a pool can edit it.
+**Solution:** Wait for the other party to complete their action
 
-Sign in with the role that owns the action.
+### 4. Role Permissions
 
-**Already done**
+**Examples:**
 
-- The term sheet was already submitted.
-- The NFTs were already minted.
-- The item was already approved.
+* Cannot approve term sheet (not logged in as FA)
+* Cannot approve MC (not logged in as Lender)
+* Cannot edit pool (not the issuer who created it)
 
-Go to the next step.
+**Solution:** Log in with the correct role
+
+### 5. Action Already Completed
+
+**Examples:**
+
+* Cannot submit term sheet again (already submitted)
+* Cannot mint NFT again (already minted)
+* Cannot approve again (already approved)
+
+**Solution:** Check if action was already taken; proceed to next step
+
+## Blocking Reasons by Module
 
 ### Pools
 
-| Blocked action | Usual reason | What to do |
-|----------------|--------------|------------|
-| Edit pool | Status is Deal | Editing stops after the deal is final |
-| Start Deal | NFTs are not minted | Finish NFT minting |
-| Share pool | No organizations selected | Edit the pool and add organizations |
+| Blocked Action | Common Reason    | Solution                         |
+| -------------- | ---------------- | -------------------------------- |
+| Edit pool      | Status is Deal   | Cannot edit after deal finalized |
+| Start Deal     | NFTs not minted  | Complete NFT minting first       |
+| Share pool     | No orgs selected | Edit pool, add organizations     |
 
 ### Loans
 
-| Blocked action | Usual reason | What to do |
-|----------------|--------------|------------|
-| Map to Pool | Already in a pool | Unmap it from that pool first |
-| Mint NFT | Batch is not verified | Finish batch verification |
-| Add to Batch | Already in a batch | Remove it from that batch first |
+| Blocked Action | Common Reason         | Solution                        |
+| -------------- | --------------------- | ------------------------------- |
+| Map to Pool    | Loan already mapped   | Unmap from current pool first   |
+| Mint NFT       | Batch not verified    | Complete batch verification     |
+| Add to Batch   | Loan already in batch | Remove from current batch first |
 
-### Term sheets
+### Term Sheets
 
-| Blocked action | Usual reason | What to do |
-|----------------|--------------|------------|
-| Submit to FA | Not signed | Create Draft and finish the e-sign |
-| Edit | Status is Under Review | Wait for the facility agent |
-| Edit | Status is Accepted | Approved term sheets cannot be edited |
+| Blocked Action | Common Reason      | Solution                            |
+| -------------- | ------------------ | ----------------------------------- |
+| Submit to FA   | Not signed         | Click Create Draft, complete e-sign |
+| Edit           | Status is FAReview | Wait for FA decision                |
+| Edit           | Status is Accepted | Cannot edit approved items          |
 
-### Master commitments
+### Master Commitments
 
-| Blocked action | Usual reason | What to do |
-|----------------|--------------|------------|
-| Create Funding Request | Not ACTIVE | Wait for a lender to approve |
-| Create Funding Request | Deal modelling is not done | The facility agent must finish Set Up Deal |
-| Edit configuration | Status is ACTIVE | An active facility cannot be reconfigured this way |
+| Blocked Action         | Common Reason           | Solution                      |
+| ---------------------- | ----------------------- | ----------------------------- |
+| Create Funding Request | MC not ACTIVE           | Wait for lender approval      |
+| Create Funding Request | Deal modelling not done | FA must complete Set Up Deal  |
+| Edit configuration     | Status is ACTIVE        | Cannot edit active facilities |
 
-### Funding requests
+### Funding Requests
 
-| Blocked action | Usual reason | What to do |
-|----------------|--------------|------------|
-| Approve | Status is DRAFT | The borrower must submit first |
-| Edit | Status is Under Review | Wait for the facility agent |
-| Edit | Status is APPROVED | Approved requests cannot be edited |
+| Blocked Action | Common Reason      | Solution                   |
+| -------------- | ------------------ | -------------------------- |
+| Approve        | Status is DRAFT    | Borrower must submit first |
+| Edit           | Status is FAReview | Wait for FA decision       |
+| Edit           | Status is APPROVED | Cannot edit approved items |
 
-### Funding notices
+### Funding Notices
 
-| Blocked action | Usual reason | What to do |
-|----------------|--------------|------------|
-| Lender cannot see it | Your e-sign is not done | The facility agent must sign for you |
-| Confirm and Settle | Review is not done | Open Review Funding Notice first |
+| Blocked Action     | Common Reason              | Solution                     |
+| ------------------ | -------------------------- | ---------------------------- |
+| Lender can't see   | FA hasn't e-signed for you | FA must complete your e-sign |
+| Confirm and Settle | Haven't reviewed           | Complete review first        |
 
-### How do I tell what is wrong?
+## How to Diagnose
 
-1. Read the status on the item.
-2. Hover the button. The tooltip explains why it is off.
-3. Confirm your role.
-4. Check that earlier steps are finished.
-5. Open notifications for anything still pending.
+1. **Check Status Badge** - Shows current status of item
+2. **Hover Over Button** - Tooltips explain why disabled
+3. **Check Your Role** - Verify you're logged in correctly
+4. **Review Prerequisites** - Check if required steps are complete
+5. **Check Notifications** - May indicate what's pending
 
-| If you cannot… | Check… |
-|----------------|--------|
-| Submit a term sheet | Is it signed? |
-| Create a funding request | Is the master commitment ACTIVE? Is deal modelling complete? |
-| Mint an NFT | Is the batch Reviewed? |
-| See a funding notice as a lender | Has the facility agent signed for you? |
-| Edit an item | Is the status Draft or Changes Requested? |
-| Approve an item | Are you in the approving role? |
-| Publish an asset sale deal | Are loans assigned and sale terms set? |
-| Start repayment | Is the deal Active? Is the loan tape uploaded and mapped? |
-| Burn an NFT | Have you confirmed repayment receipt? |
+## Quick Reference
 
-### Asset sale
+| If You Can't...                | Check...                                          |
+| ------------------------------ | ------------------------------------------------- |
+| Submit term sheet              | Is it signed?                                     |
+| Create funding request         | Is MC ACTIVE? Is deal modelling complete?         |
+| Mint NFT                       | Is batch verification complete (Reviewed)?        |
+| See funding notice (as lender) | Has FA completed your e-sign?                     |
+| Edit item                      | Is status Draft or CHANGES\_REQUESTED?            |
+| Approve item                   | Are you logged in as the approving role?          |
+| Publish asset sale deal        | Are loans assigned and sale terms configured?     |
+| Initiate repayment             | Is deal Active? Is loan tape uploaded and mapped? |
+| Burn NFT                       | Have you confirmed repayment receipt?             |
 
-**Why can’t I publish my asset sale deal?**
+## Asset Sale Blocking Reasons
 
-The deal must be in Draft, with at least one loan assigned and the required sale terms filled in.
+**Q: Why can't I publish my asset sale deal?**
 
-**Why can’t I start repayment?**
+A: Publishing requires at least one loan to be assigned to the deal and sale terms to be configured (unless marked optional). Check that your deal is in Draft status and that all required components are complete.
 
-The deal must be Active. Upload the latest loan tape and save the field mapping. Only an Issuer can start repayment.
+**Q: Why can't I initiate repayment?**
 
-**Why can’t I burn my NFT?**
+A: Repayment can only be initiated on deals in Active status. Additionally, you must upload the latest loan tape and save the field mapping before the Initiate Repayment option becomes available. Only the Issuer role can initiate repayment.
 
-Confirm repayment receipt first. Open Investment Operations, then Confirm Repayment Receipt. Return to Asset Analysis, then Receivables, to burn.
+**Q: Why can't I burn my NFT?**
+
+A: The NFT burn option is only available after you have confirmed repayment receipt. Navigate to Investment Operations → Confirm Repayment Receipt first, then return to Asset Analysis → Receivables to burn.

@@ -1,100 +1,149 @@
 ---
 title: Asset Sale FAQs
-description: Common questions about Asset Sale deals, settlement, repayment, and NFT burn
+description: Frequently asked questions about asset sales, repayment, and related workflows
 ---
 
 # Asset Sale FAQs
 
 ## Overview
 
-Short answers to common Asset Sale questions. For full steps, use the linked articles.
+This document answers the most common questions about the Asset Sale module, including deal creation, investor participation, settlement, repayment, and troubleshooting. If you have a question about how asset sales work on Intain Markets, you will likely find the answer here.
 
 ## Frequently Asked Questions
 
 ### General
 
-**Q: What is an Asset Sale?**
+**Q: What is an asset sale?**
 
-A: The issuer sells a loan or receivables portfolio to investors. The UI label is Asset Sale; internally it is also called Whole Loan Sale. The path is create → review → commit → settle → repay → close. See [Asset Sale Overview](32_Asset_Sale_Overview.md).
+A: An asset sale is a transaction where an issuer sells a portfolio of loans or receivables to investors. On Intain Markets, this is managed through the Asset Sale module (also referred to internally as Whole Loan Sale). The complete workflow covers deal creation, underwriter review, investor commitment, settlement with NFT ownership transfer, and post-sale repayment.
 
-**Q: How is this different from securitization?**
+***
 
-A: Asset Sale transfers the loans themselves. Securitization pools loans and issues tranches. Investors here buy the assets, not a sliced security.
+**Q: How is an asset sale different from securitization?**
 
-**Q: Who is involved?**
+A: In an asset sale, the actual loan assets are transferred directly from the issuer to investors. In securitization, loans are pooled into a special purpose vehicle and sliced into tranches with different risk profiles. Asset sales are simpler structurally — investors purchase the loans themselves rather than tranched securities backed by the loans.
 
-A: **Issuer** creates the deal and records repayment. **Underwriter (Market Maker)** reviews and allocates. **Investor** commits, signs, settles, and burns the NFT. **Servicer** keeps loan tapes current.
+***
 
-### Deal creation and review
+**Q: What roles are involved in an asset sale?**
 
-**Q: Can I edit after publish?**
+A: Four primary roles participate in asset sales:
 
-A: Not the package. The underwriter must reject the deal back to **Draft**. Then you edit and publish again.
+* **Issuer**: Creates deals, assigns loans, initiates repayment
+* **Underwriter (Market Maker)**: Reviews deals, manages investor allocation
+* **Investor**: Commits capital, signs agreements, confirms settlement and repayment
+* **Servicer**: Uploads and manages loan tapes throughout the deal lifecycle
 
-**Q: What if the underwriter rejects the deal?**
+***
 
-A: You get feedback. Revise in Draft and resubmit. The rejected history is kept for audit.
+### Deal Creation and Review
 
-**Q: Can one deal use loans from more than one pool?**
+**Q: Can I edit a deal after it has been published?**
 
-A: Yes. Assign loans one by one or map multiple pools.
+A: No. Once a deal is published (submitted for underwriter review), deal fundamentals cannot be edited. If changes are needed after publication, the underwriter would reject the deal, and you would need to create a new deal or revise the rejected one.
 
-### Commitment and allocation
+***
 
-**Q: Can I change my commitment?**
+**Q: What happens if the underwriter rejects my deal?**
 
-A: Yes, until the underwriter finalizes allocation. After that, amounts are locked.
+A: If the underwriter rejects your deal, you are notified with feedback. You can create a new deal addressing the feedback, with the same or a modified loan portfolio. The rejected deal is retained for audit purposes.
 
-**Q: What if the deal is over-subscribed?**
+***
 
-A: The underwriter reduces allocations so they fit capacity.
+**Q: Can I assign loans from multiple pools to a single deal?**
+
+A: Yes. You can assign loans individually or by pool. When assigning by pool, all loans in the selected pool are mapped to the deal. You can also assign individual loans from different pools to create a custom deal portfolio.
+
+***
+
+### Commitment and Allocation
+
+**Q: Can I change my commitment amount after submitting?**
+
+A: You can update your commitment amount before the underwriter finalizes allocation. Once allocation is finalized, commitment amounts are locked and cannot be changed.
+
+***
+
+**Q: What happens if a deal is over-subscribed?**
+
+A: If total investor commitments exceed the deal size, the underwriter manages the allocation to determine how much each investor receives. The underwriter may use pro-rata allocation, priority-based allocation, or custom adjustments to fit within the deal capacity.
+
+***
 
 ### Settlement
 
-**Q: How do funds move?**
+**Q: How are funds transferred during settlement?**
 
-A: **Bank (Wire/ACH)** — wire, upload confirmation, both sides confirm, issuer transfers NFTs after MFA. **Stablecoin** — MetaMask deposits USDC into escrow; delivery is automatic. **Kinexys** is planned. See [Settlement](36_Settlement_and_NFT_Transfer.md).
+A: Funds are transferred via bank wire (off-chain transaction). The platform provides settlement details and reference information, but the actual wire transfer happens through your banking channels. Both the investor and issuer confirm the transfer on the platform.
 
-**Q: What is a receivables NFT?**
+***
 
-A: An on-chain token minted at settlement that proves you own the receivables. After repayment you burn it to close.
+**Q: What are receivables NFTs?**
+
+A: After settlement, the platform mints NFTs (Non-Fungible Tokens) on the blockchain that represent investor ownership of the loan receivables. These NFTs serve as immutable proof of ownership and are transferred to investor wallets during settlement.
+
+***
 
 ### Repayment
 
-**Q: How is the amount set?**
+**Q: How is the repayment amount calculated?**
 
-A: From the latest loan tape. On receivables deals you cannot type over the tape total.
+A: The repayment amount is auto-calculated from the latest loan tape uploaded by the issuer. The loan tape reflects actual borrower payments on the underlying loans. The issuer cannot manually override the calculated amount — it is derived from the loan-level data.
 
-**Q: Full vs partial vs default?**
+***
 
-A: Full can close the deal after burn. Partial keeps the deal live for the next installment. Default, once confirmed, is permanent.
+**Q: What is the difference between full and partial repayment?**
 
-**Q: Which rails work for repayment?**
+A: A full repayment means the entire outstanding balance of the deal is being repaid, resulting in deal closure. A partial repayment means only a portion of the balance is being repaid, and the deal remains active for future repayment cycles. The type is auto-determined from the loan tape data.
 
-A: Bank wire only. Stablecoin and Kinexys are not enabled for repayment yet.
+***
 
-**Q: What happens after I accept?**
+**Q: What payment methods are supported for repayment?**
 
-A: On a full repayment, **Burn** appears under Asset Analysis → Receivables. After burn, the deal can close.
+A: Currently, only bank wire (off-chain transaction) is supported for repayment. The issuer transfers funds via bank wire and uploads a wire confirmation document as part of the repayment initiation.
 
-### NFT burn and troubleshooting
+***
 
-**Q: Can I undo a burn?**
+**Q: What happens after I confirm repayment receipt?**
 
-A: No. Confirm the wire first.
+A: After confirming receipt, the NFT burn step becomes available. You navigate to Asset Analysis → Receivables, click Burn next to your receivables NFT, and confirm the burn. Once the NFT is burned, the deal status moves to Closed.
 
-**Q: Why is Initiate Repayment missing?**
+***
 
-A: The deal must be **Active**, and you must be the issuer. It is hidden during settlement or if repayment is already in progress.
+### NFT Burn
 
-**Q: Why can’t I burn?**
+**Q: Can I undo an NFT burn?**
 
-A: Accept repayment first. NFT status must be **Retirement pending**.
+A: No. Burning an NFT is irreversible. The tokenized position is permanently destroyed on the blockchain. Make sure you have confirmed receipt of the repayment before burning.
 
-**Q: The repayment amount looks wrong.**
+***
 
-A: Fix the loan tape and re-map. On receivables deals the amount comes only from the tape.
+**Q: What happens to the deal after all NFTs are burned?**
 
-**Q: Why is the deal Defaulted?**
+A: When all investor NFTs are burned and repayment is confirmed, the deal status changes to Closed. The deal shows as Fully Repaid with 100% repaid. The complete audit trail (settlement → repayment → burn) is permanently preserved.
 
-A: The issuer declared default and you confirmed it. No further repayment can be recorded.
+***
+
+### Troubleshooting
+
+**Q: Why can't I see the Initiate Repayment button?**
+
+A: The Initiate Repayment option is only available on deals in **Active** status. If the deal is in a different status (e.g., Settlement In Progress, Settled, or already in Repayment In Progress), the button will not appear. Also ensure you have the Issuer role for the deal.
+
+***
+
+**Q: Why can't I burn my NFT?**
+
+A: The NFT burn option becomes available only after you have confirmed repayment receipt. Navigate to Investment Operations → Confirm Repayment Receipt first, then return to Asset Analysis → Receivables to burn.
+
+***
+
+**Q: I uploaded a loan tape but the repayment amount looks wrong. What should I do?**
+
+A: The repayment amount is calculated from the loan tape data. If it looks incorrect, check your loan tape file for accuracy. You can re-upload a corrected loan tape and re-map the fields. Contact Intain support if you need assistance preparing the loan tape.
+
+***
+
+**Q: Why is my deal status showing Defaulted?**
+
+A: The Defaulted status indicates that the underlying loan portfolio has encountered a default condition. This is typically set when loan performance metrics fall below the deal's threshold requirements. Contact your counterparties and review the deal's performance analytics for details.
