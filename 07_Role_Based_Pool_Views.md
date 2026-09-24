@@ -38,7 +38,7 @@ What you see in **Pools** depends on your role. Issuers see pools they created; 
 
 No Edit, Start Deal, or Sharing tab.
 
-![Pool Screen - Market Maker](.gitbook/assets/Pool_Screen_MarketMaker.png)
+![Pool Screen - Underwriter / Facility Agent](.gitbook/assets/Pool_Screen_MarketMaker.png)
 
 ## Investor View
 

@@ -30,7 +30,7 @@ Two sharing flows: **Share (Preview)** for review and feedback; **Start Deal** f
 | **Accept** | Under Review | Feedback and loan removal requests become available |
 | **Reject** | Pool Rejected | Issuer can revise and re-share |
 
-![Market Maker Makes Decision](.gitbook/assets/4.MarketMakerMakesDecision.png)
+![Underwriter / Facility Agent Makes Decision](.gitbook/assets/4.MarketMakerMakesDecision.png)
 
 ## Start Deal Flow
 

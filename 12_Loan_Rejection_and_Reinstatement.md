@@ -15,7 +15,7 @@ Underwriters / Facility Agents and investors can request that a loan be removed 
 2. System sends removal request to issuer; your view shows loan as **Under Reconsider**
 3. Loan remains in pool calculations until issuer decides
 
-![Loan Rejection Request - From Market Maker](.gitbook/assets/Loan_Rejection_Request_From_MarketMaker.png)
+![Loan Rejection Request - From Underwriter / Facility Agent](.gitbook/assets/Loan_Rejection_Request_From_MarketMaker.png)
 
 ## Issuer Response
 

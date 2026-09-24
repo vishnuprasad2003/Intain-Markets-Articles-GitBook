@@ -27,7 +27,7 @@ description: How to provide and respond to pool-level and loan-level feedback
 2. Type your message → send
 3. All parties with access can see the conversation thread
 
-![Pools Feedback - Market Maker](.gitbook/assets/Pools_Feedback_MarketMaker.png)
+![Pools Feedback - Underwriter / Facility Agent](.gitbook/assets/Pools_Feedback_MarketMaker.png)
 ![Enter Feedback](.gitbook/assets/EnterFeedback.png)
 
 ## Requesting Loan Removal (Underwriters / Facility Agents and Investors)
