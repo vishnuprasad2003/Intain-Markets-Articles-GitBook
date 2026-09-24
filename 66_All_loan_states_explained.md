@@ -7,7 +7,7 @@ description: Reference for all loan statuses across mapping, pool context, batch
 
 → Back to [Loans Overview](10_Loans_Overview.md) · [Loan Lifecycle & Statuses](11_Loan_Lifecycle_and_Statuses.md)
 
-## Mapping Status (Loan Registry)
+## Mapping Status (Asset Registry)
 
 | Status | Meaning | Next action |
 |---|---|---|
