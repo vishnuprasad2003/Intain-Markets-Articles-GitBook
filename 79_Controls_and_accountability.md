@@ -7,141 +7,135 @@ description: How Intain Markets enforces controls — role-based access, status-
 
 ## Overview
 
-Intain Markets implements multiple layers of controls and accountability measures throughout the platform. These controls are not optional features that can be turned on or off — they are built into the platform's architecture and operate automatically. Every action is constrained by role-based access, governed by status-driven workflows, protected by approval gates, and recorded in permanent audit trails.
+Intain Markets limits what each person can do, and it keeps a record of what they did. Those limits are part of normal use. You do not switch them on. Your role, the item’s status, and the approvals still outstanding decide whether an action is available. When you do act, the activity log stores who did it, what changed, and the result.
 
-This document explains what those controls are, how they work, and why they exist.
+This article explains those controls and why they are there.
 
 ## How the Platform Is Designed
 
-### Role-Based Access Controls
+### Role-based access
 
-Your role determines what you can see and what actions you can perform. The platform enforces these boundaries at the API level — not just in the UI — so they cannot be bypassed:
+Your role decides what you can see and which actions you can take. The platform checks the role on the action itself, not only by hiding a button.
 
-| Role | What They Can Do | What They Cannot Do |
+| Role | What they can do | What they cannot do |
 |---|---|---|
-| **Issuer / Borrower** | Create pools, upload loans, create term sheets, sign term sheets, submit funding requests | Approve their own term sheets, approve funding requests, accept pool mandates |
-| **Facility Agent / Market Maker** | Approve or reject term sheets, configure master commitments, approve funding requests, accept pool mandates, e-sign for lenders | Create term sheets, create pools, submit funding requests |
-| **Lender / Investor** | Review and approve master commitments, review funding notices, confirm settlement, commit to asset sale deals | Create facilities, approve funding requests, publish deals |
-| **Underwriter** | Review and approve/reject asset sale deals, manage investor allocation | Create deals, commit as an investor |
-| **Servicer** | Upload monthly loan tapes for assigned deals | Create deals, approve anything, access unassigned deals |
-| **Rating Agency** | View shared pools, provide feedback, download data (if permitted) | Create pools, approve anything, request loan removal |
-| **Paying Agent** | Execute fund transfers (FT transfer) | Create pools, approve term sheets |
-| **Admin** | Manage organizations, approve KYC, process delegated LTS and deal modelling, view platform-wide analytics | Bypass approval workflows or act on behalf of users without impersonation controls |
+| **Issuer / Borrower** | Create pools, upload loans, create and sign term sheets, submit funding requests | Approve their own term sheet or funding request, or accept a pool mandate |
+| **Facility Agent / Market Maker** | Approve or reject term sheets, set up facilities, approve funding requests, accept pool mandates, sign funding notices for lenders | Create term sheets, create pools, or submit funding requests |
+| **Lender / Investor** | Approve a facility, review funding notices, confirm settlement, commit to an Asset Sale deal | Create a facility, approve a funding request, or publish a deal |
+| **Underwriter** | Approve or reject an Asset Sale deal, and manage investor allocation | Create a deal, or commit as an investor |
+| **Servicer** | Upload monthly loan tapes for assigned deals | Create deals, approve items, or open deals that are not assigned |
+| **Rating Agency** | View pools shared with them, leave feedback, and download data when that was allowed | Create pools, approve items, or request loan removal |
+| **Paying Agent** | Move funds when a distribution is ready | Create pools or approve term sheets |
+| **Admin** | Manage organizations, approve KYC, complete delegated loan-tape work and deal modelling, and view platform-wide analytics | Skip an approval, or change data while viewing the platform as another user |
 
-The separation between roles follows the **maker-checker** principle: the person who creates or submits an item is never the same person who approves it.
+The person who prepares an item is not the person who approves it. A borrower submits a term sheet. A facility agent decides it. An issuer publishes a deal. An underwriter approves it before investors commit.
 
-### Status-Based Workflow Controls
+### Status controls the next action
 
-Status controls what actions are available at any given moment. Items must progress through statuses in a defined order, and actions are enabled or disabled based on the current status:
+An item moves through statuses in order. Buttons match the status you are in. You cannot skip ahead.
 
-**Pools:** Created → Preview → Mandate Pending → Under Review → Deal
-- Editing is allowed in Created status; once a pool reaches Deal status, the structure is locked.
+**Pools:** Created → Preview → Mandate Pending → Under Review → Deal. You can edit while the pool is Created. At Deal, the structure is locked.
 
-**Term Sheets:** Draft → BorrowerSigned → FAReview → Accepted / Rejected / CHANGES_REQUESTED
-- Editing is allowed in Draft; once submitted (BorrowerSigned), the borrower cannot edit until the facility agent responds.
+**Term sheets:** Draft → Signed → In review → Accepted, Rejected, or Changes Requested. You can edit in Draft, and again if changes were requested. After you submit, you wait for the facility agent.
 
-**Master Commitments:** Draft → PendingLenderApproval → ACTIVE
-- Configuration and lender additions are allowed in Draft; once submitted for lender approval, structural changes are locked.
+**Facilities:** Draft → Pending → Active. Lender names and setup can change in Draft. After the facility is sent for lender approval, those structural edits stop.
 
-**Funding Requests:** DRAFT → FAReview → APPROVED / REJECTED / CHANGES_REQUESTED
-- Editing is allowed in DRAFT; once submitted, the borrower cannot modify the request until the facility agent takes action.
+**Funding requests:** Draft → In review → Approved, Rejected, or Changes Requested. You can edit in Draft, and again after changes are requested. You cannot edit while the request is in review.
 
-**Funding Notices:** Pending Token Generated → FA Approved → E-signed (per lender)
-- Lenders cannot see a funding notice until the facility agent has completed the e-signature for their specific lender entry.
+**Funding notices:** Pending Token Generated, then approved by the facility agent, then signed for each lender. A lender does not see the notice until the facility agent has signed for them.
 
-**Asset Sale Deals:** Draft → Pending Review → Published → Commit → Invest → Settlement In Progress → Settled → Active → Repayment In Progress → Closed
-- Each status transition unlocks the next set of actions and locks the previous ones.
+**Asset Sale deals:** Draft → Pending Review → Published → Commit → Invest → Settlement In Progress → Settled → Active → Repayment In Progress → Closed. Each status opens the next actions and closes the earlier ones.
 
-Status progression cannot be skipped. A funding request cannot go from DRAFT directly to APPROVED — it must pass through FAReview. A term sheet cannot go from Draft directly to Accepted — it must pass through BorrowerSigned and FAReview.
+A funding request does not go from Draft straight to Approved. It has to be in review first. A term sheet does not go from Draft straight to Accepted. It has to be signed and then reviewed.
 
-### Approval Gates
+### Approvals that must happen first
 
-Approvals are required at specific points before a workflow can advance. These gates ensure that an independent reviewer has evaluated and accepted the work before it creates obligations:
+- A term sheet needs the facility agent’s approval before a facility is created
+- A facility needs at least one lender’s signed approval before it becomes **Active**
+- A funding request needs the facility agent’s approval before a funding notice is created
+- A funding notice needs the facility agent’s signature for a lender before that lender can see it
+- A pool needs the market maker to accept the mandate before it moves to Deal
+- An Asset Sale deal needs the underwriter’s approval before investors commit
+- A new user’s KYC needs an admin’s approval before they have full access
 
-- **Term sheets** require facility agent approval before a master commitment is created
-- **Master commitments** require at least one lender's approval (with e-signature) before the facility becomes active
-- **Funding requests** require facility agent approval before a funding notice is generated
-- **Funding notices** require the facility agent to e-sign for each lender individually before that lender can see the notice
-- **Pool mandates** require market maker acceptance before the pool moves to Deal status
-- **Asset sale deals** require underwriter approval before investors can commit
-- **KYC submissions** require admin approval before users gain full platform access
+### A one-time code for sensitive steps
 
-### Multi-Factor Authentication (MFA) for Sensitive Operations
+Some actions also ask you to confirm with a one-time code. The platform checks that you have just completed that code before it continues.
 
-Beyond role-based access and approval gates, certain high-stakes operations require additional identity verification through MFA:
+| Action | Who |
+|---|---|
+| Mint NFTs | Issuer |
+| Transfer NFTs during Asset Sale settlement | Issuer |
+| Approve a token transfer | Issuer |
+| Move funds in a distribution | Paying Agent |
 
-| Operation | Required Role | MFA Action |
-|---|---|---|
-| NFT Minting | Issuer | `NFT_MINT` |
-| NFT Transfer (Asset Sale Settlement) | Issuer | `NFT_TRANSFER` |
-| FT Approval (Token Approval) | Issuer | `FT_APPROVE` |
-| FT Transfer (Fund Distribution) | Paying Agent | `FT_TRANSFER` |
+A saved sign-in is not enough for these steps. If the code is missing or expired, the action stops until you enter a new one.
 
-The `requireMfaForAction` middleware enforces this: it checks that the user has recently verified their identity via one-time password before the operation can proceed. This means that even if a user's session is compromised, blockchain operations cannot be executed without a fresh OTP verification.
+### Checks before something is accepted
 
-### Data Validation Controls
+The platform checks required information before it accepts a submission.
 
-The platform validates data before accepting it at every submission point:
+**Required details**
 
-**Required field validation:**
-- Term sheets: requested commitment amount, advance rate, margin, pricing index, fixed rate, maturity date
-- Pool fields: pool name, asset class, and required metadata
-- Funding requests: draw amount, purpose of funds, funding date
+- Term sheets need the commitment amount, advance rate, margin, pricing index or fixed rate, and maturity date
+- Pools need a name, an asset class, and the other required details on the form
+- Funding requests need the draw amount, the purpose of the funds, and the funding date
 
-**Required document validation:**
-- Term sheets require: collateral profile, financial statements, KYC documents
-- Funding requests require: collateral addendum, financial statements, KYC documents
-- Missing documents prevent submission — the system will not accept a term sheet or funding request that lacks required documentation
+**Required documents**
 
-**Business rule validation:**
-- Borrowing capacity is validated against facility limits before a funding request can be approved
-- Token allocations are calculated automatically based on lender voting percentages and must match the total drawdown amount
-- Pool metrics calculate automatically from the mapped loans
+- Term sheets need a collateral profile, financial statements, and KYC documents
+- Funding requests need a collateral addendum, financial statements, and KYC documents
 
-Invalid data is rejected with clear error messages explaining what is missing or incorrect.
+If a required document is missing, submission is refused and the message says what is missing.
 
-### Rate Limiting
+**Other rules**
 
-All API endpoints are protected by tiered rate limiting. Requests are classified into tiers based on the endpoint's sensitivity and cost, and each tier has its own maximum request count and time window. If a user or client exceeds the allowed rate, subsequent requests are temporarily blocked with appropriate error responses.
+- A funding request is checked against the facility’s remaining capacity
+- Each lender’s token amount is calculated from their share and must add up to the draw
+- Pool figures are calculated from the loans mapped to the pool
 
-Rate limiting uses Redis as the backing store. If Redis is unavailable, the rate limiter fails open (requests are allowed through) rather than blocking legitimate traffic — but the unavailability is logged and monitored.
+If something does not pass, you get an error that says what to correct. The item is not half-saved as if it had been accepted.
 
-### Admin Impersonation Controls (View-As)
+### Too many requests
 
-Administrators can view the platform as another user for support and troubleshooting purposes. This capability is carefully controlled:
+If you or your session send too many requests in a short time, further requests are blocked for a while. Wait and try again. The block is temporary. It is there to protect the platform. It is not a change to your role or to the item’s status.
 
-- **Read-only enforcement**: During an impersonation session, all write operations are blocked. The `requireWriteAccess` middleware intercepts any mutation attempt and returns an error. Administrators in view-as mode can see exactly what the user sees, but they cannot create, edit, approve, or change anything.
-- **Audit trail transparency**: Every action during an impersonation session is tagged with `impersonatedBy` in the audit log, recording both the administrator's identity and the target user's identity.
-- **No nested impersonation**: An administrator who is already in a view-as session cannot start another view-as session. This prevents impersonation chains.
+### Viewing the platform as another user
+
+Administrators can open the platform as another user for support.
+
+- **Read-only.** While they are viewing as that user, they cannot create, edit, approve, or submit. They see the same screens. Actions that would change data are refused.
+- **The activity log names both people.** It shows the administrator and the user they were viewing.
+- **One view at a time.** An administrator who is already viewing as someone cannot start a second view-as session on top of it.
 
 ## What This Enables for Users
 
-### You Cannot Accidentally Bypass Controls
+### An action can be refused even if you see it
 
-The controls described above operate at the API level, not just in the UI. Even if a UI element were to malfunction and present an action that should not be available, the backend would reject the request based on role, status, or prerequisite checks. This means the platform's integrity does not depend on the UI correctly hiding buttons.
+The platform checks your role, the status, and any approval or one-time code that is still required. If a button were shown by mistake, the action would still be refused. Your work does not depend on the screen hiding every unavailable button.
 
-### Every Decision Has an Audit Trail
+### Decisions stay on the record
 
-All actions are tracked through the centralized audit module. Status changes record who changed the status, when, the previous value, and the new value. Approvals record the approver, timestamp, and comments. Rejections record the rejector, timestamp, and reason. Document uploads record the uploader, timestamp, and IPFS hash. This audit trail is permanent and cannot be modified.
+Status changes store who changed them, when, the old value, and the new value. Approvals store the approver, the time, and any comments. Rejections store who rejected the item, when, and the reason. Document uploads store who uploaded the file and when. This history is kept and is not edited later.
 
-### Blockchain Provides Independent Verification
+### Blockchain steps can be checked outside the platform
 
-For operations that touch the blockchain — NFT minting, token transfers, settlement, repayment — the on-chain record exists independently of the platform's database. Transaction hashes link platform events to their blockchain counterparts, providing an immutable, externally verifiable record that no single party controls.
+Minting an NFT, transferring tokens, settling, and recording repayment also produce a transaction reference. That reference ties the on-screen event to the blockchain. The blockchain record does not sit under any one party’s control inside Intain Markets.
 
 ## Key Principles to Understand
 
-**Automatic enforcement** — Controls are enforced automatically by the platform. You do not need to enable them, and they cannot be disabled.
+**Controls run on their own.** You do not enable them, and you cannot turn them off for your account.
 
-**Role-based access** — Your role determines your capabilities. The platform checks your role on every request, not just when you log in.
+**Your role is checked every time.** It is not checked only at sign-in.
 
-**Status-based control** — Status governs what actions are available. Status progression follows defined workflows and cannot be skipped.
+**Status decides what is open.** The path is fixed. Steps are not skipped.
 
-**Accountability** — All actions are tracked with full attribution. Every change is recorded with who did it, when, and what changed.
+**Someone is accountable.** Each change records who did it, when, and what changed.
 
-**Permanent records** — Audit trails are permanent and cannot be modified or deleted. Blockchain records provide additional immutability.
+**The record remains.** Activity history is kept. Blockchain references add a copy you can check outside the platform.
 
-**Validation before acceptance** — Data is validated before it is accepted. Invalid or incomplete submissions are rejected with clear error messages.
+**Incomplete submissions are stopped.** Missing fields or documents are rejected with a message, before the item is treated as submitted.
 
-**Prerequisite enforcement** — Steps cannot be skipped. Each action has prerequisites that must be met before it is enabled.
+**Earlier steps are required.** An action stays unavailable until the status, the approval, or the one-time code it depends on is in place.
 
-**Defense in depth** — Multiple overlapping controls (roles, status, approval gates, MFA, rate limiting, validation) mean that no single failure can compromise the platform's integrity.
+**Several checks overlap.** Role, status, approval, the one-time code, the request limit, and the field checks all apply. Missing one of them is enough to stop the action.

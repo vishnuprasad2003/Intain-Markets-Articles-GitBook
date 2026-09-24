@@ -7,7 +7,7 @@ description: Learn how to respond to change requests on term sheets
 
 ## Overview
 
-When a facility agent reviews a term sheet, they may request changes before approving it. This guide explains how borrowers respond to change requests by editing, re-signing, and resubmitting their term sheets.
+When a facility agent reviews a term sheet, they may ask for changes before they approve it. This is not a rejection. You update the term sheet, sign it again, and send it back for review. This guide explains that path for borrowers.
 
 ## Who Can Use This
 
@@ -16,113 +16,117 @@ When a facility agent reviews a term sheet, they may request changes before appr
 ## When This Is Used
 
 Use this process when:
-- Your term sheet status shows **CHANGES_REQUESTED**
-- The facility agent has requested modifications to your term sheet
-- You need to update and resubmit your term sheet
+- Your term sheet status shows **Changes Requested**
+- The facility agent has asked you to change the term sheet
+- You need to update the terms or documents and send the term sheet back
 
 ## Step-by-Step Process
 
 ### Step 1: Review the Change Request
 
 1. **Check Dashboard**
-   - Navigate to Credit Facility section
-   - Find your term sheet with status **CHANGES_REQUESTED**
+   - Log in as a borrower and open **Credit Facility** from the left menu
+   - Find the term sheet with status **Changes Requested**
    - The Action column shows **Edit Term Sheet**
 
 2. **Understand What Needs to Change**
-   - Review the change request details provided by the facility agent
-   - Note what specific changes are requested
-   - Understand the reasoning if provided
+   - Read the comments from the facility agent
+   - Note each change they asked for, such as the amount, the rate, the dates, or a document
+   - Use those comments as your checklist before you resubmit
 
 ![Review Changes Requested - Issuer](images/19-term-sheet-change-requests/ReviewChangesRequestedIssuer.png)
 
 ### Step 2: Edit the Term Sheet
 
 1. **Click Edit Term Sheet**
-   - Click the **Edit Term Sheet** action
-   - The term sheet opens for editing
+   - Click **Edit Term Sheet**
+   - The term sheet opens so you can change it
 
 2. **Make Requested Changes**
-   - Update the fields as requested by the facility agent
-   - Modify financial terms if needed (amount, rate, etc.)
-   - Upload new or revised documents if required
-   - Address all requested changes
+   - Update the fields the facility agent named
+   - You can change financial terms such as the commitment amount, advance rate, margin, or fixed rate
+   - You can change the maturity date or how often drawdowns are allowed
+   - Upload a new or revised document if they asked for one
+   - Collateral profile, financial statements, Know Your Customer (KYC) documents, and collateral data can all be replaced when needed
+   - Do not leave a requested item unchanged
 
 ### Step 3: Update and Re-sign
 
 1. **Click Update**
-   - After making all changes, click **Update**
-   - An Adobe Sign popup window opens automatically
+   - When the edits are complete, click **Update**
+   - An Adobe Sign window opens with the updated term sheet
 
 2. **Complete E-Signature**
-   - Review the updated term sheet document
-   - Complete the electronic signature process
-   - Status changes to **BorrowerSigned**
+   - Read the updated document
+   - Sign it electronically
+   - The status changes to **Borrower signed**
+   - The previous signature does not carry forward. Each update needs a new signature.
 
 ### Step 4: Resubmit to Facility Agent
 
 1. **Submit Term Sheet Popup Appears**
-   - After signing, the **Submit to FA** popup appears
-   - Review the submission details
+   - After you sign, the **Submit to FA** window opens. FA means facility agent.
+   - Check that you are sending the updated version
 
 2. **Click Submit**
-   - Click **Submit** to resubmit the updated term sheet
-   - Status changes from **BorrowerSigned** to **FAReview**
-   - Facility agent receives notification
+   - Click **Submit**
+   - The status changes from **Borrower signed** to **In review (facility agent)**
+   - The facility agent is notified
+   - If you close the window instead, use **Submit Term Sheet** on the dashboard when you are ready. The facility agent does not see the update until you submit it.
 
 ![Submit Term Sheet to FA](images/19-term-sheet-change-requests/SubmitTermSheetToFA.png)
 
 ### Step 5: Await Review
 
 1. **Monitor Status**
-   - The facility agent reviews your updated term sheet
-   - Possible outcomes:
-     - **Approved**: Status changes to Accepted, master commitment created
-     - **Rejected**: Status changes to Rejected (create new term sheet)
-     - **Changes Requested Again**: Repeat the process
+   - While the status is **In review (facility agent)**, you can view the term sheet. You cannot edit it.
+   - The facility agent reviews the update. The result is one of these:
+     - **Approved**: The status changes to **Accepted**, and a master commitment is created
+     - **Rejected**: The status changes to **Rejected**. Create a new term sheet if you still want a facility.
+     - **Changes requested again**: The status returns to **Changes Requested**. Repeat the edit, sign, and submit steps.
 
 ## Change Request Flow
 
 ```
-CHANGES_REQUESTED → Edit Term Sheet → Update → Sign (Adobe Sign) → Submit → FAReview
+Changes Requested → Edit Term Sheet → Update → Sign (Adobe Sign) → Submit → In review (facility agent)
 ```
 
 The facility agent may:
-- Approve → Accepted → Master commitment created
-- Reject → Rejected (final)
-- Request more changes → CHANGES_REQUESTED (repeat process)
+- Approve → **Accepted** → a master commitment is created
+- Reject → **Rejected** (final)
+- Ask for more changes → **Changes Requested** (repeat the process)
 
 ## Rules & Validations
 
-- **Only CHANGES_REQUESTED Can Edit**: You can only edit term sheets when they're in CHANGES_REQUESTED status.
+- **Edit only when changes are requested**: You can edit the term sheet when the status is **Changes Requested**. You cannot edit it while it is in review.
 
-- **Re-signing Required**: Every time you update a term sheet, you must sign it again via Adobe Sign.
+- **Sign again after every update**: Each time you click **Update**, you must sign again with Adobe Sign.
 
-- **Submit After Signing**: You must submit the term sheet after signing for the facility agent to review.
+- **Submit after you sign**: Signing alone does not send the term sheet back. Click **Submit** so the facility agent can review it.
 
-- **Multiple Rounds Possible**: The facility agent may request changes multiple times before approving.
+- **More than one round is allowed**: The facility agent can ask for changes more than once before they approve or reject.
 
-- **Address All Changes**: Make sure to address all requested changes before resubmitting.
+- **Cover every comment**: Address each requested change before you resubmit. A partial update can be sent back again.
+
+- **Rejection ends this term sheet**: If the facility agent rejects it, you cannot edit that same term sheet. Start a new one.
 
 ## What Happens Next
 
-**After Resubmitting:**
-- Facility agent reviews your updated term sheet
-- You receive notification of the decision
+**After you resubmit:**
+- The facility agent reviews the updated term sheet
+- You are notified of the decision
 
-**If Approved:**
-- Status changes to Accepted
-- Master commitment is automatically created
-- Facility configuration proceeds
+**If it is approved:**
+- The status changes to **Accepted**
+- A master commitment is created automatically with status **Draft**
+- The facility agent continues facility setup
 
-**If Rejected:**
-- Status changes to Rejected (final state)
-- You need to create a new term sheet
+**If it is rejected:**
+- The status changes to **Rejected**. This is final.
+- Create a new term sheet if you want to continue
 
-**If More Changes Requested:**
-- Status changes back to CHANGES_REQUESTED
-- Repeat the edit, sign, and submit process
+**If more changes are requested:**
+- The status returns to **Changes Requested**
+- Edit, sign, and submit again
 
 ![Review Term Sheet Fa](images/19-term-sheet-change-requests/review_term_sheet_FA.png)
-
-

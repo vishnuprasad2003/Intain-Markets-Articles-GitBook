@@ -72,7 +72,7 @@ If multiple branch is selected, the facility agent can create sub-facilities:
 
 **4. Submission for Lender Approval**
 
-Click **Create Facility** to finalize. Status changes from **Draft** to **PendingLenderApproval**. The facility is shared with selected lenders in their **Opportunities** section.
+Click **Create Facility** to finalize. Status changes from **Draft** to **Pending Lender Approval**. The facility is shared with selected lenders in their **Opportunities** section.
 
 **5. Lender Approval**
 

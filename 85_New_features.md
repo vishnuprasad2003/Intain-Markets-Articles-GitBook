@@ -7,229 +7,125 @@ description: Learn about new features and capabilities added to Intain Markets
 
 ## Overview
 
-This document tracks features and capabilities currently implemented in Intain Markets.
+This page lists capabilities that are available in Intain Markets, and a few that are still being added. Use it to see what you can do now and what to watch for next.
 
-## Implemented Features
+## What Changed
 
-### Credit Facility Module
+### Credit facilities
 
-**Automatic Master Commitment Creation:**
-- When term sheets are approved, master commitments are automatically created
-- Master commitment created with Draft status
-- Pre-populated with term sheet data
-- Facility agent configures facility structure and submits for lender approval
+**Master commitments are created for you.** When a term sheet is approved, a master commitment is created in Draft and filled from the term sheet. The facility agent then configures it and sends it to lenders.
 
-**Per-Lender E-Signature Tracking:**
-- Facility agents sign funding notices for each lender individually
-- E-sign progress shows as (0/n) → (n/n)
-- Each lender's signature status tracked separately
-- Each lender can see funding notices once their e-sign is complete
+**Funding notices are signed per lender.** The facility agent signs once for each lender. Progress shows as E-sign (0/n) through (n/n). A lender sees the notice after their signature is done.
 
-**Individual Lender Approval Tracking:**
-- Each lender's approval status tracked separately
-- Facility becomes ACTIVE when at least one lender approves
-- Each lender's approval tracked with timestamps
+**One lender can activate the facility.** Each lender’s decision is tracked separately, including when they approved. The facility becomes ACTIVE when the first lender approves.
 
-**Token Generation:**
-- Tokens automatically created for funding notices
-- Unique blockchain contract address stored
-- Token distribution calculated from lender participation percentages
-- Tokens created on Avalanche C-Chain
+**Tokens for a draw.** When a funding notice is ready, tokens are created and split by each lender’s share.
 
-### E-Signature Integration
+### E-signature
 
-**Adobe Sign Integration:**
-- Term sheets signed via Adobe Sign before submission
-- Master commitments signed via Adobe Sign for lender approval
-- Funding notices signed via Adobe Sign per lender
-- Signed documents stored securely
+Signing uses Adobe Sign for term sheets, master commitment approval, and funding notices. After a borrower signs a term sheet, the status becomes Signed by the borrower. Lender signatures and funding-notice signatures are tracked one lender at a time.
 
-**Signature Tracking:**
-- Term sheet status changes to BorrowerSigned after signing
-- Master commitment lender signatures tracked individually
-- Funding notice signatures tracked per lender (E-sign 0/n → n/n)
+Adobe Sign and ZohoSign are both supported. DocuSign is no longer available. In a test environment, signing can be simulated.
 
-### Status Tracking
+### Status history
 
-**Comprehensive Status History:**
-- All status changes tracked with who, when, and reason
-- Action history shows all actions taken
-- Complete audit trails maintained
+Status changes record who acted, when, and why. You can review that history on the item.
 
-**Status Workflows:**
-- Term Sheets: Draft → BorrowerSigned → FAReview → Accepted
-- Master Commitments: Draft → PendingLenderApproval → ACTIVE
-- Funding Requests: DRAFT → FAReview → APPROVED
-- Funding Notices: Pending Token Generated → FA Approved → E-signed for lenders
+Typical paths:
 
-### Pool Module
+- Term sheets: Draft → Signed by the borrower → Under Review → Accepted
+- Master commitments: Draft → Pending Lender Approval → Active
+- Funding requests: DRAFT → Under Review → APPROVED
+- Funding notices: Pending Token Generated → approved by the facility agent → e-signed for lenders
 
-**Loan Mapping from Loan Registry:**
-- Select loans and click Map to Pool
-- Loans can only be mapped to one pool at a time
+### Pools
 
-**NFT Minting:**
-- Batch verification required before minting
-- Certificates section for minting and viewing NFTs
+Select loans in the Loan Registry and click Map to Pool. A loan can be in only one pool. Share a pool with market makers, investors, and rating agencies, and set feedback and download permissions on each share. NFT minting stays in Certificates, after batch verification.
 
-**Pool Sharing:**
-- Share with market makers, investors, rating agencies
-- Control feedback and download permissions per share
+### Loans
 
-### Loans Module
+Upload a loan tape in Imports. Use Basic or Intelligent AI mapping, or save a mapping to reuse. In Batch Verification you can Self Certify or send the batch to a verification agent. Batch status moves from Pending to Reviewed, then to Certified when verification is complete.
 
-**Loan Tape Standardization (LTS):**
-- Upload loan files via Imports section
-- Basic and Intelligent AI mapping options
-- Save mappings for future use
+IDA suggests field matches while you standardize a tape. You can also upload tapes for past reporting periods.
 
-**Batch Verification:**
-- Self Certify option for issuers
-- Submit to verification agent option
-- Status: Pending → Reviewed → Certified
+You can send a batch to a verification agent from Batch Verification. The result is recorded on the batch. You and the verification agent both get an email when it is submitted and when it is finished.
 
-### Asset Sale Module (February–September 2026)
+### Asset sale (February–September 2026)
 
-**Whole Loan Sale Workflow:**
-- Complete deal creation, underwriter review, investor commitment, and settlement
-- NFT-based ownership transfer during settlement
-- Post-sale repayment lifecycle with loan tape upload, bank wire initiation, investor receipt confirmation, and NFT burn for deal closure
+You can create a deal, send it for underwriter review, take investor commitments, and settle. Settlement transfers ownership with NFTs.
 
-**Repayment Flow:**
-- Post-sale repayment process for asset sales
-- Loan tape upload and bank wire initiation
-- Investor receipt confirmation and NFT burn for deal closure
+After the sale, repayment uses a loan tape upload, a bank wire, investor confirmation of receipt, and an NFT burn when the deal closes.
 
-**Receivables Analytics Shell:**
-- Comprehensive analytics embedded within asset sale deals
+Analytics inside an asset sale deal include:
+
 - Asset Analysis: Overview, Strats, Performance, Receivables
 - Risk Surveillance: Overview, Concentration, Data Checks, Exceptions, Performance Triggers
-- Reports section for deal-level reporting
+- Reports for the deal
 
-**Receivables RNFT Burn (March 2026):**
-- Investor-initiated async burn of receivables NFTs on repaid asset sale deals
+From March 2026, an investor can burn receivables NFTs on a repaid asset sale. The burn finishes in the background.
 
-### Credit Facility Deal Creation RemoteV2 (September 2026)
+### Credit facility deal setup (September 2026)
 
-**11-Tab Wizard for Facility Agents:**
-- General, Facilities, Fees, Expenses, Manual Inputs, Accounts, Triggers, Borrowing Base, Calculations, Waterfall, Review
-- Streamlined deal setup flow for facility agents
+Facility agents set up a deal in a wizard with these sections: General, Facilities, Fees, Expenses, Manual Inputs, Accounts, Triggers, Borrowing Base, Calculations, Waterfall, and Review.
 
-### Microsoft Entra SSO (February 2026)
+### Sign-in with Microsoft (February 2026)
 
-**Single Sign-On:**
-- SSO via Microsoft Entra (formerly Azure AD)
-- OAuth callback and role selection flow
-- Seamless integration with existing authentication
+If your organization uses Microsoft Entra (formerly Azure AD), click **Sign in with Microsoft**. If you have more than one role, choose a role before you enter.
 
-### Admin View-As / Impersonation (February 2026)
+### View As (February 2026)
 
-**Read-Only Impersonation:**
-- Admins can view the platform as another user for support purposes
-- Read-only mode prevents unintended changes
+Admins can open the platform as another user for support. The view is read-only, so the admin cannot change that user’s data.
 
-### Audit Module (March 2026)
+### Activity Audit (March 2026)
 
-**Centralized Activity Logging:**
-- Cross-module activity logging with export capabilities
-- Centralized audit trail accessible via the Activity Audit sidebar item
+**Activity Audit** in the sidebar shows activity across the platform. You can filter it and export it.
 
-### E-Signature v2 (February 2026)
+### Modelling workbench (January–February 2026)
 
-**Refactored E-Signature System:**
-- Supports both Adobe Sign and ZohoSign
-- Shared helpers and mock signing for test environments
-- DocuSign support removed
+Market makers and investors can set up cashflow models for a pool and compare scenarios.
 
-### Modelling Workbench (January–February 2026)
+### Updated issuer screens (January 2026)
 
-**Scenario Comparison Tool:**
-- Configure and compare cashflow models for pools
-- Available to market makers and investors
+Issuer dashboard, pool details, batches, and profile use an updated layout.
 
-### Historical Tape Upload (February 2026)
+### Pool analysis (September 2026)
 
-**Historical Data Ingestion:**
-- New screen for uploading historical loan tape data
+On a pool preview, market makers and investors can open IDA analytics.
 
-### Issuer V2 Shell (January 2026)
+### Participation Agreements (2026)
 
-**Updated Issuer Screens:**
-- V2 dashboard, pool details, batches, and profile screens for issuers
+Participation Agreements appear alongside Asset Sale, Credit Facilities, and Securitization in the sidebar and on dashboard tiles. Issuers, market makers, and investors use them for participation workflows. Deal counts and statuses appear with the other product lines.
 
-### Pool Analysis IDA Button (September 2026)
+### Delegation (2026)
 
-**IDA-Powered Analytics:**
-- Analytics entry point on pool preview details for market makers and investors
+You can send a task, such as field mapping or deal setup, to an admin to finish for you.
 
-### v2 API Consolidation (January–September 2026)
+### Too many requests (2026)
 
-**API Migration:**
-- Pools, loans, batches, organizations, users, dataroom, and securitization migrated to versioned /api/v2 endpoints
-- Zod validation and cursor-based pagination
-- Standardized error handling
+If too many requests are sent in a short time, the platform pauses them briefly.
 
-**Batches v2 (March 2026):**
-- New batch management API with enhanced verification workflows
+### Wallet setup (2026)
 
-**Loan Registry v2 (2026):**
-- Updated asset registry with IDA (AI-assisted field mapping)
-- Reference ingestion ID support
+Each organization can set up a wallet. The platform screens the wallet before it can be used.
 
-### ABDP Verification Agent Integration (2026)
+### Notifications (March 2026)
 
-**Automated Batch Certification:**
-- Batch loan tapes are streamed from Snowflake directly to the ABDP (Verification Agent) platform for certification
-- ABDP exchanges JWT tokens via Entra SSO OBO (On-Behalf-Of) flow for secure machine-to-machine auth
-- Certification results are posted back to the platform and recorded on the batch
-- VA certification evidence (contract files + loan tape) is uploaded automatically
-- Issuers submit batches via the Batch Verification screen; the ABDP processes asynchronously
-- Notification emails sent to both issuer and verification agent on submission and completion
+The notification drawer updates while you work, so new alerts appear without a refresh.
 
-### Participation Agreements Module (2026)
+### Search and filter (March–September 2026)
 
-**New Product Line:**
-- Participation Agreements added as a fourth transaction type alongside Asset Sale, Credit Facilities, and Securitization
-- Visible in the sidebar navigation and dashboard overview tiles for all roles
-- Enables structured participation agreement workflows between issuers, market makers, and investors
-- Integrated with the unified dashboard showing deal counts and status alongside other product lines
+You can search and filter large lists, including batches, NFTs, pools, and admin lists.
 
-### Delegation Workflows (2026)
+## Impact on Existing Users
 
-**Typed Delegation Requests:**
-- Principal-to-delegatee typed delegation requests via v2 API
+- Sign term sheets, commitments, funding notices, and investor agreements with Adobe Sign or ZohoSign.
+- Use **Sign in with Microsoft** if your organization uses Entra. Direct username and password sign-in is still available.
+- Open **Activity Audit** for a single activity history.
+- Admins who need to see another user’s screen should use **View As**. It does not change that user’s data.
+- For an asset sale, follow the deal through settlement, then repayment, receipt confirmation, and NFT burn.
+- Facility agents should use the deal setup wizard before borrowers map loans or request funds.
+- Issuers can self-certify a batch or send it to a verification agent.
+- Kinexys and Circle fund transfers are still being added. When they are available, you will choose them during **Confirm and Settle**.
+- A choice of Avalanche or Solana for token transfer is still being added.
 
-### Rate Limiting (2026)
-
-**Security Hardening:**
-- Redis-backed rate limiting on all API routes
-
-### Wallet Onboarding (2026)
-
-**Per-Organization Wallet Setup:**
-- Per-organization wallet onboarding with sanctions screening
-
-### Notification Drawer v2 (March 2026)
-
-**Real-Time Notifications:**
-- App-wide real-time notifications with server-sent events (SSE)
-
-### Server-side Column Filters (March–September 2026)
-
-**Enhanced Table Filtering:**
-- Server-side filtering across batches, NFTs, pools, and admin lists
-
-## Current Development
-
-**Payment Integration:**
-- Kinexys integration for fund transfers
-- Circle integration for fund transfers
-- Payment methods selectable during Confirm and Settle
-
-**Multi-Blockchain Support:**
-- Solana integration for token transfers
-- Users can choose Avalanche or Solana
-
-## How to Stay Informed
-
-Check release notes, documentation updates, and platform notifications for new features and enhancements.
+Check release notes and in-product notifications when something new appears.

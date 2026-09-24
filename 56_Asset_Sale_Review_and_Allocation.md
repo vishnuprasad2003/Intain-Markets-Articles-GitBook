@@ -1,109 +1,72 @@
 ---
 title: Asset Sale Review and Allocation
-description: Task-based guide for underwriters to review deals and manage investor allocation
+description: How the underwriter reviews an Asset Sale deal and finalizes investor allocation
 ---
 
 # Asset Sale Review & Allocation
 
 ## Overview
 
-This guide provides underwriters (market makers) with step-by-step instructions for reviewing asset sale deals submitted by issuers and managing investor allocation. As an underwriter, you evaluate the deal package, approve or reject deals, manage investor commitments, and finalize allocation before settlement. This covers all underwriter-side tasks in the asset sale workflow.
+The underwriter (Market Maker / Arranger) reviews the issuer’s deal, publishes it to investors, then allocates commitments so settlement can start. You do not create the deal or record repayment. You decide whether the package is ready for the market and how much each investor receives.
 
 ## Who Can Use This
 
-- **Underwriters (Market Makers)**: All steps in this guide are performed by the underwriter role
+- **Underwriters (Market Makers)** named as Arranger on the deal
+
+Issuers submit the package. Investors commit after you publish. If you are not the Arranger on the deal, you will not see review actions. Ask the issuer to set the correct Market Maker on Basics before they publish. Changing Arranger after review is not an underwriter action. Send the issuer back to Draft if the wrong firm is listed.
 
 ## When This Is Used
 
-Use this guide when:
-- An issuer has published a deal for your review
-- You need to evaluate a deal's loan portfolio and terms
-- Investors have submitted commitments that need allocation management
-- You need to finalize allocation before settlement can proceed
+Use this when a deal is in **Pending Review**, or when a **Published** / **Commit** deal has commitments that need to be fitted to capacity.
 
 ## Step-by-Step Process
 
-### Part 1: Deal Review
+### Review the package
 
-#### Step 1: Access the Deal
-
-1. Navigate to **Asset Sale** from the left sidebar menu
-2. The dashboard shows deals requiring your review (status: Pending Review)
-3. Click on the deal to open the deal details page
+1. Open **Asset Sale**. Filter or scan for **Pending Review**.
+2. Open the deal.
 
 ![Underwriter Asset Sale View](images/56-asset-sale-review-and-allocation/mm-asset-sale.png)
 
-#### Step 2: Review the Deal Package
+3. Check:
+   - Basics — name, sale route, dates, buyer visibility, servicing
+   - Loans — balances, verification, NFT minted status, mix
+   - Sale terms — price basis, price, cutoff, settlement, commit window, recourse
+   - Documents — sale agreement and supporting files
+4. Decide:
+   - **Approve** — status becomes **Published**. Investors in the visibility set can open the deal and commit.
+   - **Reject** — status returns to **Draft**. The issuer revises and publishes again.
+   - **Cancel** — status becomes **Cancelled**. The deal is not reactivated.
 
-Evaluate the following components:
+You cannot edit issuer fields during review. If something is wrong, reject with feedback.
 
-1. **Deal Terms**: Review the deal name, description, key dates, and sale terms
-2. **Loan Portfolio**: Examine the assigned loans — balances, rates, collateral, and portfolio composition
-3. **Sale Terms**: Review pricing methodology, recourse options, and settlement terms
-4. **Documentation**: Review uploaded documents including offering memorandums and legal documents
+### Allocate commitments
 
-#### Step 3: Make an Approval Decision
+1. After publication, open the commitment list (investor and amount).
+2. Compare total committed to deal size:
+   - Under-subscribed — wait or allocate what you have.
+   - Fully subscribed — amounts already fit.
+   - Over-subscribed — reduce amounts so they fit capacity.
+3. Click **Finalize Allocation**. Status becomes **Invest**. Investors are notified of the locked amount.
+4. Watch agreement signing. Settlement stays blocked until the agreement is **Signed**.
 
-1. After reviewing the deal package, make your decision:
-   - **Approve**: The deal meets your standards and is ready for investor distribution
-   - **Reject**: The deal does not meet standards — the issuer is notified with feedback
-
-2. If you approve:
-   - The deal status changes to **Published**
-   - The deal becomes visible to investors
-   - Investors can begin submitting commitments
-
-3. If you reject:
-   - The issuer is notified of the rejection
-   - The issuer can revise the deal and resubmit
-
-### Part 2: Investor Allocation
-
-#### Step 4: Monitor Investor Commitments
-
-1. After the deal is published, investors submit commitments
-2. Navigate to the commitment section within the deal details
-3. Review all investor commitments:
-   - Investor names and commitment amounts
-   - Total committed amount vs. deal size
-   - Whether the deal is under-subscribed, fully subscribed, or over-subscribed
-
-#### Step 5: Manage Allocation
-
-1. Review each investor's commitment amount
-2. If the deal is over-subscribed, adjust allocations:
-   - Pro-rata allocation across investors
-   - Priority-based allocation
-   - Custom allocation adjustments
-3. Ensure final allocations align with deal terms and capacity
-
-#### Step 6: Finalize Allocation
-
-1. Confirm the final allocation for each investor
-2. Click **Finalize Allocation** to lock in the amounts
-3. The deal status progresses to **Invest**
-4. Investors are notified of their final allocation amounts
-5. Investor agreement signing begins
-
-#### Step 7: Monitor Settlement Readiness
-
-1. Track investor agreement signing progress
-2. Ensure all investor agreements are fully signed before settlement
-3. Once all agreements are signed, the deal is ready for settlement
+Do not finalize allocation until you are satisfied with the investor set. After **Invest**, amounts are locked and the next gate is signing, not another allocation pass.
 
 ## Rules & Validations
 
-- Only deals in Pending Review status appear for review
-- Approval or rejection is a one-time action per review cycle
-- Allocation can only be managed after the deal is published and commitments are received
-- Final allocation amounts must not exceed the deal's total capacity
-- All investor agreements must be signed before settlement can proceed
-- Once allocation is finalized, commitment amounts are locked
+- Only **Pending Review** deals can be approved or rejected in this cycle.
+- Allocation cannot exceed deal capacity.
+- After finalize, commitment amounts are locked.
+- Agreement signing is allowed only in **Invest**.
+- You cannot start settlement for the issuer or investor; you only confirm the deal is ready.
+- Buyer Visibility on the deal controls which investors appear after you publish. You cannot widen that set from the review screen.
+
+### What good review looks like
+
+Before you approve, confirm minted loans match the sale story, dates are in order (cutoff ≤ settlement ≤ target), and the sale agreement (if required by your process) is attached. If recourse is used, check that triggers match the recourse type. A thin review that misses a locked field is expensive — those fields cannot be edited after publish without a reject back to Draft.
 
 ## What Happens Next
 
-After allocation is finalized and agreements are signed:
-- The deal proceeds to the settlement phase
-- Investors transfer funds via bank wire
-- The platform manages settlement recording and NFT transfer
-- See **Settlement & NFT Transfer** (article 36) for the settlement process
+Investors and the issuer complete [Settlement & NFT Transfer](36_Settlement_and_NFT_Transfer.md). You can follow progress on the Settlement Activity trail. You do not sign for the investor and you do not confirm wires. Your job ends at a clean publish and a locked allocation.
+
+Signing detail: [Investor Agreement & E-Signature](40_Investor_Agreement_and_E-Signature.md).

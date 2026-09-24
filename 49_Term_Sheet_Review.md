@@ -7,7 +7,7 @@ description: Learn how facility agents review and make decisions on term sheets
 
 ## Overview
 
-As a facility agent, you review term sheets submitted by borrowers and decide whether to approve, reject, or request changes. This guide explains the review process and what happens with each decision.
+As a facility agent, you review term sheets that borrowers submit. You approve the term sheet, reject it, or ask for changes. This guide explains how to open a term sheet and what each decision does.
 
 ## Who Can Use This
 
@@ -16,131 +16,131 @@ As a facility agent, you review term sheets submitted by borrowers and decide wh
 ## When This Is Used
 
 Use term sheet review when:
-- A term sheet appears in your Credit Facility dashboard with status **FAReview**
-- You need to evaluate a borrower's credit facility proposal
-- You want to make an approval decision (approve, reject, or request changes)
+- A term sheet on your Credit Facility dashboard shows **In review (facility agent)**
+- You need to evaluate a borrower's proposed facility
+- You are ready to approve, reject, or request changes
 
 ## Step-by-Step Process
 
 ### Step 1: Access the Term Sheet for Review
 
 1. **Navigate to Credit Facility**
-   - Log in with your Facility Agent credentials
-   - From the left expandable menu, click on **Credit Facility**
-   - Find the term sheet in the **Set-up** tab
+   - Log in as a facility agent
+   - From the left menu, click **Credit Facility**
+   - Open the **Set-up** tab
 
 2. **Click Review Term Sheet**
-   - Locate the term sheet with status **FAReview**
+   - Find the term sheet with status **In review (facility agent)**
    - Click **Review Term Sheet** in the Actions column
-   - A popup opens showing all term sheet details
+   - A window opens with the term sheet details
 
 ![Review Term Sheet - FA](images/49-term-sheet-review/review_term_sheet_FA.png)
 
 ### Step 2: Evaluate the Term Sheet
 
 1. **Review Facility Terms**
-   - Check requested commitment amount
-   - Verify advance rate
-   - Review pricing index and margin
-   - Check maturity date
-   - Review drawdown frequency
+   - Requested commitment amount
+   - Advance rate, which is the share of collateral value the borrower can draw
+   - Pricing index and margin. The pricing index is the base interest rate, such as SOFR. The margin is the extra percentage added to that rate.
+   - Maturity date
+   - Drawdown frequency, which is how often the borrower may draw funds
 
 2. **Review Supporting Documents**
-   - Download and review collateral profile
-   - Check financial statements
-   - Review KYC documents
-   - Verify collateral data
+   - Collateral profile
+   - Financial statements
+   - KYC documents. KYC means Know Your Customer, the documents that identify the borrower.
+   - Collateral data
 
 3. **Assess the Proposal**
-   - Evaluate if terms are acceptable
-   - Check if documentation is complete
-   - Verify borrower information
-   - Consider risk factors
+   - Decide whether the terms are acceptable
+   - Check that the documents are complete
+   - Check the borrower information
+   - Consider the risks for your organization
 
 ### Step 3: Make Your Decision
 
-The Review Term Sheet popup shows three buttons:
+The review window has three buttons.
 
 #### Option 1: Approve
 
-**When to Approve:**
-- All requirements are met
-- Terms are acceptable
-- Documentation is complete
-- Borrower is creditworthy
+**When to approve:**
+- The requirements are met
+- The terms are acceptable
+- The documents are complete
+- The borrower meets your criteria
 
-**What Happens:**
+**What happens:**
 - Click **Approve**
-- Status changes to **Accepted**
-- Master commitment is automatically created with **Draft** status
-- Borrower receives notification
-- You can now configure the master commitment
+- The status changes to **Accepted**
+- A master commitment is created automatically with status **Draft**
+- The borrower is notified
+- You can then set up the master commitment
 
 #### Option 2: Reject
 
-**When to Reject:**
-- Requirements are not met
-- Terms are unacceptable
-- Significant issues that cannot be addressed
-- Borrower doesn't meet criteria
+**When to reject:**
+- The requirements are not met
+- The terms are not acceptable
+- The issues cannot be fixed with a revision
+- The borrower does not meet your criteria
 
-**What Happens:**
+**What happens:**
 - Click **Reject**
-- Provide a rejection reason
-- Status changes to **Rejected** (final state)
-- Borrower receives notification
-- Borrower must create a new term sheet if they want to proceed
+- Enter a rejection reason
+- The status changes to **Rejected**. This is final.
+- The borrower is notified
+- The borrower must create a new term sheet if they want to continue
 
 #### Option 3: Request Changes
 
-**When to Request Changes:**
-- Minor issues need addressing
-- Documentation is incomplete
-- Terms need adjustment
-- Additional information is needed
+**When to request changes:**
+- A smaller issue can be fixed
+- A document is missing
+- A term needs to change
+- You need more information
 
-**What Happens:**
+**What happens:**
 - Click **Request Changes**
-- Enter details about what needs to be changed
-- Status changes to **CHANGES_REQUESTED**
-- Borrower receives notification
-- Borrower can edit and resubmit the term sheet
+- Describe what must change
+- The status changes to **Changes Requested**
+- The borrower is notified
+- The borrower can edit the term sheet, sign it again, and resubmit it
 
 ## Review Checklist
 
-When reviewing a term sheet, consider:
+When you review a term sheet, consider:
 
-**Financial Terms:**
+**Financial terms:**
 - Is the commitment amount appropriate?
 - Is the advance rate reasonable?
-- Are the interest rate terms acceptable?
+- Are the interest terms acceptable?
 - Is the maturity date suitable?
 
 **Documentation:**
 - Is the collateral profile complete?
-- Are financial statements provided?
-- Is KYC documentation in order?
-- Is collateral data sufficient?
+- Are financial statements included?
+- Are the KYC documents in order?
+- Is the collateral data enough?
 
-**Compliance:**
+**Fit with your criteria:**
 - Does the proposal meet your organization's criteria?
-- Are there any regulatory concerns?
+- Are there regulatory concerns?
 - Is the borrower eligible?
 
 ## Decision Outcomes
 
-| Decision | Status Change | Master Commitment | Next Steps |
+| Decision | Status change | Master commitment | Next steps |
 |----------|---------------|-------------------|------------|
-| Approve | Accepted | Auto-created (Draft) | Configure facility |
-| Reject | Rejected | Not created | Borrower creates new term sheet |
-| Request Changes | CHANGES_REQUESTED | Not created | Borrower edits and resubmits |
+| Approve | **Accepted** | Created automatically as **Draft** | Set up the facility |
+| Reject | **Rejected** | Not created | Borrower creates a new term sheet |
+| Request Changes | **Changes Requested** | Not created | Borrower edits, signs again, and resubmits |
 
 ## Important Notes
 
-- **Approval Creates Master Commitment**: When you approve, a master commitment is automatically created with Draft status. You then configure it.
+- **Approval creates the master commitment**: When you approve, a master commitment is created with status **Draft**. You then configure it.
 
-- **Rejection Is Final**: Rejected term sheets cannot be resubmitted. The borrower must create a new term sheet.
+- **Rejection is final**: A rejected term sheet cannot be sent again. The borrower must create a new one.
 
-- **Changes Allow Iteration**: Requesting changes allows the borrower to address issues and resubmit.
+- **Changes let the borrower revise**: Requesting changes sends the term sheet back so the borrower can fix it and resubmit.
 
-- **Provide Clear Feedback**: When rejecting or requesting changes, provide clear reasons to help the borrower understand what's needed.
+- **Write a clear reason**: When you reject or request changes, say what is wrong so the borrower knows what to do next.

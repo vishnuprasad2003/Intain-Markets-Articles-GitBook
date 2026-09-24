@@ -7,150 +7,148 @@ description: Learn how to create and submit term sheets for credit facilities
 
 ## Overview
 
-Term sheet submission is the first step in requesting a credit facility. As a borrower, you create a term sheet proposing the key terms, sign it electronically via Adobe Sign, and submit it to the facility agent for review. This guide provides detailed steps for creating and submitting a term sheet.
+Term sheet submission is how you request a credit facility. As a borrower, you enter the key terms, sign the document with Adobe Sign, and send it to the facility agent. This guide covers creation and submission only. Review decisions are covered in the facility agent guide.
 
 ## Who Can Use This
 
-- **Borrowers**: Create and submit term sheets for new credit facility requests
+- **Borrowers**: Create and submit term sheets for a new credit facility
 
 ## When This Is Used
 
 Use term sheet submission when:
 - You want to request a new credit facility
 - You need to propose terms to a facility agent
-- You want to initiate the credit facility workflow
+- You are starting the credit facility workflow
 
 ## Step-by-Step Process
 
 ### Step 1: Access Credit Facility Dashboard
 
 1. **Navigate to Credit Facility**
-   - Log in to the platform with your Borrower credentials
-   - From the left expandable menu (expands when you hover), click on **Credit Facility**
-   - Your Credit Facility dashboard displays
+   - Log in with your Borrower account
+   - Hover over the left menu so it expands, then click **Credit Facility**
+   - Your Credit Facility dashboard opens
 
 ### Step 2: Start Term Sheet Setup
 
 1. **Click Term Sheet Setup**
-   - Click the **Term Sheet Setup** button at the top right
+   - Click **Term Sheet Setup** at the top right
    - Two options appear:
-     - **Create Via Wizard**: Create term sheet step-by-step
-     - **Upload Signed**: Upload an already-signed document
+     - **Create Via Wizard**: Enter the term sheet step by step
+     - **Upload Signed**: Upload a document that is already signed
 
 2. **Select Create Via Wizard**
    - Click **Create Via Wizard**
-   - A popup opens for entering term sheet details
+   - A window opens for the term sheet details
 
 ![Accessing Term Sheet - Create New Term Sheet](images/43-term-sheet-submission/AccessingTermsheetCreateNewTermSheet.png)
 
 ### Step 3: Enter Term Sheet Details
 
 1. **Fill in Facility Information**
-   - **Requested Commitment Amount**: Maximum amount you want to borrow
-   - **Advance Rate**: Percentage of collateral value that can be borrowed
-   - **Pricing Index**: Base interest rate index (SOFR, SOFR 1M, etc.)
-   - **Margin**: Spread added to the pricing index
-   - **Fixed Rate**: Fixed interest rate (if applicable)
-   - **Maturity Date**: When the facility expires
-   - **Drawdown Frequency**: How often you can draw funds (Monthly, Quarterly, etc.)
-   - **Covenant Template**: Applicable covenant template
+   - **Requested Commitment Amount**: The maximum amount you want to borrow
+   - **Advance Rate**: The share of collateral value you can borrow
+   - **Pricing Index**: The base interest rate, such as SOFR or SOFR 1M. SOFR is a published reference rate.
+   - **Margin**: The extra percentage added to the pricing index
+   - **Fixed Rate**: A single interest rate, if you are not using an index plus margin
+   - **Maturity Date**: The date the facility ends
+   - **Drawdown Frequency**: How often you can draw funds, such as Monthly or Quarterly
+   - **Covenant Template**: The set of ongoing conditions for the facility
 
 ![Add Term Sheet Details](images/43-term-sheet-submission/2_AddTermSheetDetails.png)
 
 ### Step 4: Upload Supporting Documents
 
 1. **Upload Required Documents**
-   - **Collateral Profile**: Your collateral profile document
+   - **Collateral Profile**: A description of the assets that support the facility
    - **Financial Statements**: Your financial statements
-   - **KYC Documents**: Know Your Customer documentation
-   - **Collateral Data**: Collateral data files
+   - **KYC Documents**: Know Your Customer documents that identify your organization
+   - **Collateral Data**: Files with collateral details
 
 ![Upload Documents](images/43-term-sheet-submission/UploadDocuments.png)
 
 ### Step 5: Create Draft
 
 1. **Review Information**
-   - Verify all fields are filled correctly
-   - Ensure all documents are uploaded
-   - Check for accuracy
+   - Check that required fields are filled
+   - Check that the documents uploaded
+   - Correct anything that is wrong before you continue
 
 2. **Click Create Draft**
-   - Click **Create Draft** to create the term sheet
-   - Status is **Draft**
+   - Click **Create Draft**
+   - The status is **Draft**
 
 ![Issuer - Term Sheet Creation](images/43-term-sheet-submission/Issuer_TermSheetCreation.png)
 
 ### Step 6: Sign the Term Sheet
 
 1. **Adobe Sign Popup Opens**
-   - After clicking Create Draft, an Adobe Sign popup window opens automatically
-   - The popup shows the term sheet document with your entered details
+   - After you click **Create Draft**, an Adobe Sign window opens
+   - It shows the term sheet with the details you entered
 
 2. **Complete E-Signature**
    - Review the document
-   - Complete the electronic signature
-   - Status changes to **BorrowerSigned**
+   - Sign it
+   - The status changes to **Borrower signed**
 
 ### Step 7: Submit to Facility Agent
 
 1. **Submit Popup Appears**
-   - After signing, a **Submit to FA** popup appears
+   - After you sign, a **Submit to FA** window opens. FA means facility agent.
 
 2. **Submit or Cancel**
-   - Click **Submit** to send to the facility agent
-   - Status changes to **FAReview**
-   - If you click Cancel, you can submit later
+   - Click **Submit** to send the term sheet
+   - The status changes to **In review (facility agent)**
+   - If you click **Cancel**, you can submit later
 
 ![Submit Term Sheet to FA](images/43-term-sheet-submission/SubmitTermSheetToFA.png)
 
 3. **After Submission**
-   - Facility agent receives notification
-   - Action in dashboard changes to **View Term Sheet**
-   - Wait for facility agent's decision
+   - The facility agent is notified
+   - The dashboard action changes to **View Term Sheet**
+   - Wait for the facility agent's decision. You cannot edit the term sheet while it is in review.
 
 ### If You Cancelled the Submit Popup
 
 1. **Submit Later from Dashboard**
-   - Your term sheet shows **BorrowerSigned** status
-   - Action column shows **Submit Term Sheet**
-   - Click **Submit Term Sheet** when ready
-   - Status changes to **FAReview**
+   - The term sheet shows **Borrower signed**
+   - The action column shows **Submit Term Sheet**
+   - Click **Submit Term Sheet** when you are ready
+   - The status changes to **In review (facility agent)**
 
 ## Rules & Validations
 
-- **All Required Fields**: Complete all required fields before creating draft.
+- **Required fields**: Fill in the required fields before you create the draft.
 
-- **Documents Required**: Upload all required supporting documents.
+- **Documents**: Upload the supporting documents the form asks for.
 
-- **Signing Required**: You must sign via Adobe Sign before submitting.
+- **Signature**: Sign with Adobe Sign before you submit. An unsigned term sheet cannot be submitted.
 
-- **One Submission**: Once submitted, wait for the facility agent's decision.
+- **One submission, then you wait**: After you submit, wait for the facility agent's decision.
 
-- **No Edit After Submit**: You cannot edit while in FAReview status.
+- **No edit while it is in review**: You cannot change the term sheet while the status is **In review (facility agent)**.
 
 ## What Happens Next
 
-**After Submitting:**
-- Facility agent reviews your term sheet
-- You receive notification of the decision
+**After you submit:**
+- The facility agent reviews the term sheet
+- You are notified of the decision
 
-**If Approved:**
-- Status changes to **Accepted**
-- Master commitment is auto-created
-- Facility configuration begins
+**If it is approved:**
+- The status changes to **Accepted**
+- A master commitment is created for you
+- Facility setup begins
 
-**If Rejected:**
-- Status changes to **Rejected**
-- Create a new term sheet if needed
+**If it is rejected:**
+- The status changes to **Rejected**
+- Create a new term sheet if you still want a facility. This term sheet cannot be sent again.
 
-**If Changes Requested:**
-- Status changes to **CHANGES_REQUESTED**
-- Edit and resubmit your term sheet
+**If changes are requested:**
+- The status changes to **Changes Requested**
+- Edit the term sheet, sign it again, and resubmit it
 
 ![SaveAsDraft](images/43-term-sheet-submission/SaveAsDraft.png)
 
 ![TermSheetSigning](images/43-term-sheet-submission/TermSheetSigning.png)
 
 ![Review Term Sheet Fa](images/43-term-sheet-submission/review_term_sheet_FA.png)
-
-

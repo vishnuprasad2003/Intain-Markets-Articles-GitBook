@@ -81,7 +81,7 @@ Master Commitment Auto-Created (Draft)
        ↓
 FA Configures Facility → Adds Lenders → Create Facility
        ↓
-Master Commitment Status: PendingLenderApproval
+Master Commitment Status: Pending Lender Approval
        ↓
 Lender Reviews → Approve (E-Sign) or Reject
        ↓

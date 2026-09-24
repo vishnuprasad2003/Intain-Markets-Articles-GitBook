@@ -7,56 +7,57 @@ description: Understand the different stages pools go through from creation to d
 
 ## Overview
 
-Pools progress through several statuses from creation to final deal completion. Each status represents a specific stage in the pool's journey and determines what actions are available, who can see the pool, and what editing is permitted. Understanding the lifecycle helps you navigate the workflow and know what to expect at each stage.
+A pool moves through statuses from creation to a committed deal. The status controls who can see the pool, what they can do, and whether the issuer can still edit it.
 
 ## Lifecycle Overview
 
-Pools follow two distinct flows depending on how you share them:
+There are two ways to share a pool.
 
 **Share Flow (Preview Sharing)**
-- Pool starts as **Created** when first created by the issuer
-- When shared using the **Share** button, recipients see the pool as **Mandate Pending** with Accept/Reject actions
-- When a market maker accepts, their view shows **Under Review**
-- When a market maker rejects, they no longer see the pool in their dashboard
-- Throughout this phase, the issuer retains full editing capabilities
-- The issuer can continue to share with additional organizations or proceed to Start Deal when ready
+
+- The issuer creates the pool. Its status is **Created**.
+- The issuer clicks **Share**. Recipients see **Mandate Pending** and can **Accept** or **Reject**.
+- After a market maker accepts, their view shows **Under Review**.
+- If a market maker rejects, the pool leaves their dashboard.
+- The issuer can still edit the pool, share it with more organizations, or click **Start Deal** when ready.
 
 **Start Deal Flow**
-- When prerequisites are met (typically all pool loans NFT-minted), the **Start Deal** button becomes enabled
-- When the issuer clicks Start Deal, recipients see the pool as **Ready for Deal** with Accept/Reject actions
-- When a market maker accepts, the pool status becomes **Deal** and structural editing is restricted
-- The accepting market maker proceeds with deal structuring and downstream activities
 
-The lifecycle is designed to support collaboration—you create and prepare pools privately, share them for review and feedback while retaining editing rights, then finalize them as committed deals when ready.
+- **Start Deal** turns on when the pool is ready, typically after every loan in the pool has an NFT.
+- Recipients then see **Ready for Deal** and can **Accept** or **Reject**.
+- When a market maker accepts, the status becomes **Deal** and structural editing stops.
+- That market maker continues with deal structuring.
+
+You prepare a pool in private, share it for review while you can still edit, then commit it when you are ready.
 
 ## Status Meanings
 
-The statuses you see depend on your role and where you are in the workflow:
+What you see depends on your role.
 
 ### For Issuers
 
-**Created** - The pool has been created with basic information (pool name, asset class, transaction type, organization assignments) and is visible only to you. This is the initial stage where you prepare the pool, add loans from the Loan Registry, and configure settings before sharing. Pools in Created status are completely private—no other organization can see them until you share.
+**Created** — The pool exists with its name, asset class, transaction type, and organization assignments. Only you can see it. Add loans from the Loan Registry and finish setup before you share.
 
-**Deal** - The pool has reached its final committed state after a market maker accepted via Start Deal. Structural editing is restricted at this stage. The accepting market maker proceeds with deal structuring, and downstream transaction activities continue from here.
+**Deal** — A market maker accepted **Start Deal**. Structural editing is restricted. That market maker continues deal structuring and later transaction steps.
 
-### For Market Makers / Investors / Rating Agencies (Recipients)
+### For Market Makers, Investors, and Rating Agencies
 
-**Mandate Pending** - This is what you see when a pool has been shared with you through the Share button. You have **Accept** and **Reject** action buttons. Before accepting the mandate, market makers cannot provide feedback on the pool—feedback functionality becomes available only after acceptance.
+**Mandate Pending** — Someone shared the pool with you using **Share**. You can **Accept** or **Reject**. Market makers cannot give feedback until they accept.
 
-**Under Review** - This is what market makers see after they click Accept on a Mandate Pending pool. You can now provide feedback, review loan details, request loan removals, and prepare for the next steps. The issuer can still edit the pool and respond to your feedback during this phase.
+**Under Review** — You accepted a Mandate Pending pool. You can give feedback, review loans, and request loan removals. The issuer can still edit and respond.
 
-**Ready for Deal** - This is what you see when the issuer has initiated Start Deal. The pool is finalized (all loans NFT-minted) and ready for deal commitment. You have **Accept** and **Reject** action buttons to decide whether to commit to the deal.
+**Ready for Deal** — The issuer clicked **Start Deal**. Loans are finalized, typically with NFTs minted. You can **Accept** or **Reject**.
 
-**Deal** - After you accept a Ready for Deal pool, the status becomes Deal. Structural editing is restricted. The accepting market maker proceeds with deal structuring, and downstream transaction activities continue.
+**Deal** — You accepted Ready for Deal. Structural editing is restricted. The accepting market maker continues deal structuring.
 
 ## What Each Status Indicates
 
-**Created Status** (Issuer view) indicates that you're still preparing the pool privately. You have full control: you can edit pool details, add or remove organization assignments, map or unmap loans from the Loan Registry, upload recurring loan tapes, and configure all settings. The pool is not visible to any other organization. Complete pool setup and loan mapping before sharing.
+**Created** (issuer) — The pool is private. You can edit details, change organization assignments, map or unmap loans, upload loan tapes, and change settings. Finish setup and loan mapping before you share.
 
-**Mandate Pending** (Recipient view) indicates that you have received a share and need to decide whether to accept or reject. You can view pool details, metrics, and loan information, but market makers cannot provide feedback until they accept. Your Accept or Reject decision affects your view of the pool and enables or disables subsequent actions.
+**Mandate Pending** (recipient) — You need to accept or reject. You can view details, metrics, and loans. Market makers cannot give feedback until they accept.
 
-**Under Review** (Market Maker view after accepting) indicates that you have accepted a mandate. Feedback functionality is now available—you can provide pool-level and loan-level feedback, request loan removals, and collaborate with the issuer. The issuer may continue making changes based on your input.
+**Under Review** (market maker, after accept) — Feedback is available at pool level and loan level. You can request loan removals. The issuer may still change the pool.
 
-**Ready for Deal** (Recipient view) indicates that the issuer has initiated Start Deal, meaning prerequisites (such as NFT minting for all pool loans) are complete and the pool is finalized. Your Accept or Reject decision here commits (or declines) the deal.
+**Ready for Deal** (recipient) — Start Deal has been clicked and the usual prerequisites, including NFT minting, are done. Accept commits you to the deal. Reject declines it.
 
-**Deal Status** indicates that the transaction is finalized and committed. The pool structure is locked, and structural editing is restricted. The accepting market maker proceeds with deal structuring, investor allocations, and other downstream activities.
+**Deal** — The pool is committed. The structure is locked. The accepting market maker continues with structuring, investor allocations, and later steps.

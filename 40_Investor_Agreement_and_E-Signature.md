@@ -1,119 +1,63 @@
 ---
 title: Investor Agreement and E-Signature
-description: Complete workflow for investor agreement generation, Adobe Sign e-signature integration, manual upload, and per-investor tracking in asset sale deals
+description: How the Asset Sale investor agreement is uploaded, signed, and used as the settlement gate
 ---
 
 # Investor Agreement & E-Signature
 
 ## Overview
 
-Investor agreements are legally binding documents that formalize the terms between the issuer and each investor in an asset sale deal. The Intain Markets platform supports electronic signature workflows via Adobe Sign (or Zoho Sign), allowing agreements to be created, distributed, signed, and tracked entirely within the platform. This workflow covers the complete agreement process from document preparation to fully executed signatures, including both the e-sign path and the manual upload alternative.
+The investor agreement is the legal document between the issuer and the selected investor. It can be signed in the platform with **Adobe Sign** (ZohoSign is also supported) or uploaded as a signed PDF. Settlement cannot start until the agreement status is **Signed**. This workflow is specific to Asset Sale; credit-facility signing is covered separately.
 
 ## Workflow Overview
 
-The investor agreement workflow ensures that all legal documentation is properly executed before settlement can proceed. Agreements are managed per investor, and each investor's signature status is tracked independently.
+1. The issuer uploads the sale agreement PDF during the create-deal wizard or from deal details.
+2. The underwriter finalizes allocation and the deal moves to **Invest**.
+3. The selected investor signs in the embedded e-sign view, or the issuer uploads a signed copy.
+4. Status becomes **Signed** and the deal advances to **Settlement In Progress**.
 
-**Document Preparation** — The issuer prepares the sale agreement document and uploads it to the deal, typically during deal creation (Step 3 of the wizard) or later from the deal details page.
-
-**Agreement Status Initialization** — When a deal reaches the **Invest** stage and an investor is allocated, the platform initializes an investor agreement record with a status of **Not Signed** for each investor.
-
-**Signature Routing** — The platform routes the document for electronic signature via Adobe Sign, creating individual signing requests for each allocated investor.
-
-**Investor Signing** — Each investor receives their agreement, reviews the terms, and signs electronically through the Adobe Sign interface embedded within the platform.
-
-**Tracking and Verification** — The platform tracks each investor's signing status and stores the executed documents securely.
+Signing is allowed only when deal status is exactly **Invest**. In any other status the action is blocked.
 
 ## Key Stages
 
-### Stage 1: Sale Agreement Upload
+### Sale agreement upload
 
-The issuer prepares the investor agreement document and uploads it to the deal. This happens in one of two places:
+Upload a PDF on the **Sale Terms** tab or later from deal documents. That file is the agreement for the selected (winning) investor on the deal. You can replace it before signing starts.
 
-- **During deal creation**: On the Sale Terms tab (Step 3 of the wizard), the footer area provides an **Upload** button to attach a sale agreement PDF before submitting the deal.
-- **From deal details**: After deal creation, the issuer can upload or replace the sale agreement from the deal's document management section.
+### Record creation
 
-The uploaded document serves as the template for all investor agreements in this deal. Accepted formats are PDF documents.
+When allocation is confirmed, the platform creates an agreement record with status **Not Signed**, tied to that investor. Deal details show **Not Signed** or **Signed**.
 
-### Stage 2: Agreement Record Creation
+### Electronic signature
 
-When the deal is created, the platform initializes an investor agreement record on the deal with a default status of **Not Signed**. Once the underwriter finalizes allocation and confirms the winning buyer (the selected investor), the agreement becomes actionable for that investor.
+1. The investor opens the agreement from deal details.
+2. Adobe Sign opens inside the platform — no separate Adobe account is required.
+3. After signing, the signed PDF is stored. The record updates to **Signed**, including signing method, organization, and timestamp.
 
-- **Status**: `Not Signed`
-- The agreement applies to the **selected investor** (winning buyer) on the deal — not all allocated investors
+ZohoSign follows the same path. DocuSign is not used.
 
-> **Important**: In the current workflow, there is one agreement per deal, tied to the selected investor. The selected investor is the party who signs the agreement.
+### Manual upload
 
-### Stage 3: Electronic Signature via Adobe Sign
+If the agreement was signed outside the platform, the issuer uploads the signed PDF from deal details. Status is still **Signed**. This also moves the deal to **Settlement In Progress**. Use this when wet-ink or an external process was required.
 
-Once the deal reaches the **Invest** status, the e-signature process becomes available. The platform's integration with Adobe Sign works as follows:
+### Settlement gate
 
-1. **Initiation**: The platform creates an Adobe Sign agreement for each investor, embedding the sale agreement document and the investor's signing fields.
-2. **Notification**: Each investor receives a notification (via the platform and/or email) that their agreement is ready for signing.
-3. **Embedded Signing**: The investor accesses the deal details page and opens their agreement. The Adobe Sign interface is embedded within the platform — no separate Adobe Sign account is needed.
-4. **Signing**: The investor reviews the terms and signs electronically within the embedded interface.
-5. **Completion**: Upon signing, the platform receives a webhook callback from Adobe Sign. The signed PDF is downloaded and stored in blob storage. The agreement record is updated, and the deal status automatically advances to **Settlement In Progress**.
-
-The updated agreement record contains:
-- **Status**: `Signed`
-- **Agreement ID**: The Adobe Sign agreement identifier
-- **Blob Pointer**: Storage reference (container, stored path, version ID) for the signed document
-- **Signed By Org ID**: The organization that signed
-- **Signed Via**: `adobeSign`
-- **Signed At**: UTC timestamp of when the signature was completed
-
-> **Important**: Investor agreement signing is only allowed when the deal status is **Invest**. If the deal is in any other status, the signing action is blocked with an error message.
-
-### Stage 4: Manual Agreement Upload (Alternative)
-
-For cases where electronic signing is not used — such as when agreements are signed physically or through an external process — the issuer can upload manually signed agreements:
-
-1. The issuer obtains the physically signed agreement from the investor
-2. From the deal details page, the issuer uploads the signed document for the specific investor
-3. The system records the manually uploaded agreement with:
-   - **Status**: `Signed`
-   - **Signed Via**: `upload`
-   - **Blob Pointer**: Storage reference for the uploaded document
-   - **Signed At**: UTC timestamp of the upload
-
-Both paths — Adobe Sign and manual upload — result in the same `Signed` status and both automatically advance the deal to **Settlement In Progress**. They provide equivalent tracking capabilities.
-
-### Stage 5: Agreement Completion and Settlement Gate
-
-Once all investor agreements are signed or uploaded, the deal is ready to proceed to settlement:
-
-- All investor agreements show **Signed** status
-- The platform validates that all required agreements are in place
-- The deal can proceed to the settlement phase
-- If any investor's agreement remains **Not Signed**, settlement cannot begin
+If the agreement is still **Not Signed**, Confirm and Settle stays blocked. Both e-sign and upload count as executed.
 
 ## How the Workflow Progresses
 
-The agreement workflow runs in sequence with the commitment and allocation process. The typical sequence is:
+Issuer uploads the template → investors commit → underwriter allocates → deal is **Invest** → investor signs or issuer uploads → **Settlement In Progress**.
 
-1. Issuer uploads sale agreement during deal creation or before the deal reaches Invest status
-2. Investors commit to the deal and the underwriter finalizes allocation, confirming the winning buyer
-3. Deal status moves to **Invest**
-4. The selected investor signs their agreement (via Adobe Sign or manual upload)
-5. Upon signing, the deal automatically advances to **Settlement In Progress**
-
-Each investor's agreement is independent — one investor signing does not affect another's process. The deal details page shows a summary of all investor agreement statuses, providing visibility into which investors have signed and which are still pending.
+The agreement is tied to the selected investor. You do not sign a separate copy per unallocated party.
 
 ## Important Points to Know
 
-**Adobe Sign Integration** — The platform uses Adobe Sign as the primary electronic signature provider. The signing experience is embedded directly within the platform interface. Investors do not need a separate Adobe Sign account to sign.
+- **Adobe Sign** is the primary provider; **ZohoSign** is supported.
+- Signed files are stored with version history for audit.
+- Attempts to sign outside **Invest** are rejected with a clear error.
+- Upload and e-sign are equivalent for the settlement gate.
+- Replacing the PDF after **Signed** is not a normal path; treat the stored signed file as the executed copy.
 
-**Zoho Sign Support** — The platform also supports Zoho Sign as an alternative e-signature provider. The flow is functionally equivalent to Adobe Sign.
+If signing fails, confirm the deal is still **Invest** and that you are the selected investor. Re-open the agreement from deal details rather than a stale email link.
 
-**Per-Investor Tracking** — Each investor has their own agreement instance with independent status tracking. The two statuses are:
-- **Not Signed** — agreement created but not yet executed
-- **Signed** — agreement fully executed (via e-sign or manual upload)
-
-**Pre-Settlement Gate** — Settlement cannot begin until all investor agreements are executed. This ensures legal documentation is complete before any financial transfer occurs.
-
-**Document Storage** — Signed agreements are stored securely in blob storage with versioning. Each agreement record maintains a full storage reference (container, stored path, version ID) linked to the deal for audit and compliance purposes.
-
-**Dual Path Support** — The platform supports both electronic signing (Adobe Sign / Zoho Sign) and manual upload of pre-signed documents, providing flexibility for different operational preferences.
-
-**Audit Trail** — Every signature event is logged with timestamps, the signing organization, and the signing method. The agreement record permanently captures who signed, when, and how — providing a complete audit trail for compliance and legal review.
-
-**Status Gate Enforcement** — The backend enforces that investor agreement signing is only permitted when the deal is in **Invest** status. Attempts to sign at any other stage are rejected with a clear error message.
+See [Deal Creation & Publishing](34_Deal_Creation_and_Publishing.md) for the upload step and [Settlement](36_Settlement_and_NFT_Transfer.md) for what follows.

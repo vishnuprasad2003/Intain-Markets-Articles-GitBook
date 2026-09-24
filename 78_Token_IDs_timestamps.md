@@ -7,118 +7,121 @@ description: Comprehensive reference for understanding token identifiers, contra
 
 ## Overview
 
-Every financial transaction on Intain Markets that involves tokens — whether fungible tokens (FT) for credit facility funding notices or non-fungible tokens (NFT) for loan-level collateral — is anchored to the blockchain with a set of permanent, verifiable identifiers. Understanding these identifiers is essential for audit, compliance, and independent verification. This article explains what each identifier means, where it comes from, and how to look it up.
+When Intain Markets records tokens — for a credit facility funding notice, or as a loan NFT — it also stores permanent references on the blockchain. You use those references to see which token belongs to which loan or notice, and to confirm that a step really happened. You do not need the technical layout of the token. You need to know where the reference appears on screen and what it proves.
+
+Two kinds of tokens show up in the product. A **funding notice** uses tokens that represent the draw and how it is split across lenders. A **loan** uses an NFT, which is a unique token for that loan. Both are recorded on the blockchain.
 
 ## Reference Details
 
 ### Contract Addresses
 
-A **contract address** is the on-chain location of a deployed smart contract. In Intain Markets, contract addresses appear in two main contexts:
+A contract address is the blockchain location of the token record for one notice or one set of loans. On screen, treat it as the token’s home address: it identifies which tokens belong together.
 
-**Fungible Token (FT) Contract Address (`ftContractAddress`)**
+**Funding notice**
 
-When a funding request is approved and the funding notice transitions from `PENDING_TOKEN_GENERATION` to `TOKEN_GENERATED`, the platform deploys a new ERC-20 fungible token contract on the Avalanche C-Chain. The resulting address — stored as `ftContractAddress` on the funding notice — is unique to that specific funding notice and never reused. This address is the definitive on-chain reference for the tokens associated with that drawdown.
+When a funding request is approved and the notice moves from **Pending Token Generated** to tokens generated, the platform creates a token record for that notice only. That address is not reused for another notice. It is the reference for the tokens on that draw. The token’s name and short symbol are built from the facility name and the notice, so you can recognize them if you look them up outside the platform.
 
-- Each funding notice receives its own dedicated FT contract
-- The FT contract name and symbol are generated automatically using the facility name and funding notice identifier (via `buildCreditFacilityFtTokenName` and `buildCreditFacilityFtSymbol` utilities)
-- Once deployed, the contract address is permanent and immutable
+**Loan NFTs**
 
-**NFT Contract Address (`tokenContract`)**
+Each loan NFT belongs to the token record for its pool or deal and has its own **token ID** inside that record. Together, the address and the token ID point to one loan. A different loan in the same pool has a different token ID.
 
-For loan-level collateral, NFTs (ERC-721 tokens) are minted against a contract that represents the pool or deal. Each NFT carries a unique `tokenId` within that contract. The combination of `tokenContract` + `tokenId` uniquely identifies a specific loan's on-chain representation.
+**Facility**
 
-**Credit Facility Blockchain Deal Contract**
+When a facility is finalized, the platform also records it on the blockchain. The facility stores that address and the transaction reference for the step that registered it. That pair shows the facility was registered, and which transaction did it.
 
-When a master commitment is finalized, the platform registers the facility on-chain by calling the `ScfDeal` contract. The resulting contract address and transaction hash are stored in the master commitment's `chain` field: `{ contract: contractAddress, txHash: transactionHash, chainId: chainId }`.
+These addresses do not change after they are created. If you need to confirm a token, start from the address shown on the notice, the certificate, or the facility, then use the transaction reference for the specific step.
 
-### Transaction Hashes (`transactionHash` / `txHash`)
+### Transaction reference
 
-A **transaction hash** is a unique identifier for a specific blockchain transaction. Every on-chain write operation in Intain Markets produces a transaction hash that can be used to verify the operation independently on a block explorer.
+A transaction reference identifies one blockchain step. Every on-chain action in Intain Markets produces one. You can use it to look the step up independently of what the screen says.
 
-Transaction hashes are recorded at several points in the workflow:
+| What happened | Where you see the reference | What it proves |
+|---------------|----------------------------|----------------|
+| Tokens created for a funding notice | The funding notice | The notice’s tokens were created |
+| Tokens recorded to a lender | That lender’s row on the notice | That lender’s tokens were delivered |
+| A loan NFT created | The loan certificate | The collateral NFT was created |
+| Facility registered | The facility | The facility was registered on the blockchain |
+| A token approval | The approval record | A party was allowed to move the tokens |
+| Settlement or delivery | The settlement record | Escrow or delivery was completed |
 
-| Event | Where the Hash Is Stored | What It Proves |
-|-------|--------------------------|----------------|
-| FT contract deployment | Funding notice record | Token contract was deployed |
-| FT token transfer to lender | Lender's token distribution entry | Tokens were delivered to the lender |
-| NFT minting | Loan certificate record | Collateral NFT was created |
-| Master commitment registration | Master commitment `chain.txHash` | Facility was registered on-chain |
-| ERC-20 approval | Approval transaction record | Spender was authorized |
-| Settlement lock/transfer | Settlement record | Escrow or delivery completed |
+The reference is a long code beginning with `0x`. On transaction details it is often a link. Open it to see the step on a blockchain explorer, including who sent it, who received it, and the time the network recorded.
 
-Each hash follows the Ethereum-standard 66-character hexadecimal format (e.g., `0x5d941bc5effe6edef1...521f`) and can be searched on the Avalanche C-Chain block explorer to view the full transaction details, including sender, receiver, gas used, and block number.
+### Block timestamps
 
-### Block Timestamps (`blockTimestamp`)
+A block timestamp is the time the blockchain recorded when the transaction was included. It is set by the network. It is not the same as the time Intain Markets shows from its own clock, and it cannot be edited afterward.
 
-A **block timestamp** is the time recorded by the blockchain when a transaction is included in a block. Unlike application-level timestamps (which come from the server clock), block timestamps are set by the network validators and cannot be altered after the fact.
+You will see blockchain times for:
 
-Block timestamps are used in Intain Markets to provide tamper-proof evidence of when key events occurred:
+- When the funding notice’s tokens were created
+- When tokens were recorded to a lender
+- When a loan NFT was created
+- When a token approval was granted
 
-- **Token creation time** — when the FT contract was deployed
-- **Token transfer time** — when tokens were delivered to a specific lender
-- **NFT mint time** — when a collateral NFT was created for a loan
-- **Approval time** — when a token approval was granted on-chain
+The screen also shows the platform’s own time for the same event, in UTC. Use the platform time to read the history. Use the blockchain time when you need a time that the platform cannot change.
 
-The platform stores both the application-level timestamp (e.g., `createdAt`, `updatedAt` using `DateUtils.nowUTC()`) and the blockchain timestamp. For audit purposes, the blockchain timestamp is the authoritative record.
+### Token IDs
 
-### Token IDs (`tokenId`)
+A **token ID** is the number that picks out one loan NFT inside its token record.
 
-A **token ID** is a unique numeric identifier within an NFT contract. In the ERC-721 standard, each token within a contract has a distinct `tokenId`. In Intain Markets:
+- Token IDs are assigned as NFTs are minted
+- The token record’s address plus the token ID identifies that loan
+- Funding-notice tokens do not use a token ID per coin. The notice’s token address identifies the token, and each lender’s balance is the amount recorded to them
+- Approving or transferring a loan NFT uses that loan’s token ID
 
-- NFT token IDs are assigned sequentially during minting
-- The combination of `tokenContract` (contract address) and `tokenId` forms a globally unique identifier
-- For ERC-20 fungible tokens, the concept of `tokenId` does not apply — the entire balance is tracked per wallet address, and the FT contract address is the identifier
-- Token IDs are used during approval (`getApproved(tokenId)`) and transfer operations
+If two loans share an address but have different token IDs, they are different loans. If a funding notice has an address and no token ID, you are looking at the draw’s tokens, not a single loan.
 
-### Per-Lender Token Tracking
+### Per-lender token tracking
 
-When a funding notice reaches `TOKEN_GENERATED` status, the `tokenDistribution` array contains one entry per lender with the following tracked fields:
+When a funding notice reaches tokens generated, each lender has a row. The row shows:
 
-| Field | Description |
-|-------|-------------|
-| `lenderOrgId` | Organization identifier of the lender |
-| `lenderName` | Display name of the lending organization |
-| `tokensAllocated` | Number of tokens allocated to this lender |
-| `participationPercentage` | Lender's share of the total commitment |
-| `commitmentAmount` | Lender's commitment amount in the facility |
-| `esignatureStatus` | E-signature status: `pending` or `ESIGN_COMPLETED` |
-| `lenderApprovalStatus` | Approval status: `PENDING`, `APPROVED`, or `REJECTED` |
-| `mintingStatus` | FT transfer status: tracked until `completed` |
-| `transactionHash` | Blockchain hash of the FT transfer to this lender |
+| What you see | What it means |
+|--------------|----------------|
+| Lender | The lending organization |
+| Tokens allocated | How many tokens that lender receives |
+| Share | That lender’s portion of the commitment |
+| Commitment amount | The amount they committed on the facility |
+| Signature | Pending, or signed |
+| Approval | Pending, Approved, or Rejected |
+| Transfer | In progress until it is completed |
+| Transaction reference | The blockchain step that recorded the transfer to this lender |
 
-Each lender's entry is updated independently as they progress through the e-signature and fund transfer steps. When all lenders have `mintingStatus: 'completed'`, the funding notice transitions to `TOKEN_TRANSFERRED`.
+Each lender moves through signature and payment on their own row. When every lender’s transfer is completed, the notice moves on to tokens transferred.
 
 ## Where Token Information Appears
 
-**Credit Facility → Funding Notice Details**
-- FT contract address (`ftContractAddress`)
-- Token distribution table with per-lender allocations, statuses, and transaction hashes
-- Token generation and transfer timestamps
-- E-signature progress counter (e.g., E-sign 2/3)
+**Credit Facility → funding notice**
 
-**Loan Certificates Section**
-- NFT contract address and token ID per loan
-- Mint transaction hash
-- Verification source and certificate details
+- The token address for that notice
+- A table of lenders with their amounts, signature, approval, and transaction reference
+- When the tokens were created and when they were transferred
+- Signature progress, such as E-sign 2 of 3
 
-**Transaction Details View (Investors)**
-- Transaction hash displayed as a clickable link
-- Token ID shown for NFT-backed assets
-- Block explorer link for independent verification
+**Loan certificates**
 
-**Audit Trail / Status History**
-- Every token-related action (deploy, transfer, approve) is appended to `actionHistory` and `statusHistory` arrays
-- Each entry includes the actor (`updatedBy`), timestamp (`updatedAt`), and action description
-- Blockchain event metadata (contract address, transaction hash, chain ID) is recorded in audit log entries
+- The token address and the **token ID** for that loan
+- The transaction reference for minting
+- How the loan was verified, and the certificate details
+
+**Transaction details (investors)**
+
+- The transaction reference, often as a link
+- The token ID when the asset is a loan NFT
+- A way to open the same step on a blockchain explorer
+
+**Activity log and the item’s history**
+
+- Creating tokens, transferring them, and approving them appear as actions
+- Each line shows who did it, when, and what happened
+- The token address and the transaction reference are included when the step was on the blockchain
 
 ## Important Notes
 
-**Immutability** — Contract addresses, transaction hashes, and token IDs are permanent blockchain records. They cannot be edited, deleted, or overridden by any party, including platform administrators.
+**These references do not change.** A token address, a transaction reference, and a token ID stay as they were written. No one, including an administrator, can edit or delete them on the blockchain.
 
-**Independent Verification** — Any contract address or transaction hash can be looked up on the Avalanche C-Chain block explorer (Snowtrace or the subnet explorer) to verify the transaction details, timestamp, and participants without relying on the platform.
+**You can check them outside Intain Markets.** Look up the address or the transaction reference on the blockchain explorer for the network the platform uses. That view shows the time and the parties without relying on the screen alone.
 
-**Chain Configuration** — The platform records `chainId` alongside contract addresses so that records unambiguously identify which network (Avalanche C-Chain mainnet, subnet, or testnet) the transaction was executed on.
+**The network is part of the record.** The platform remembers which network the step used, so a reference from a test environment is not confused with a live one.
 
-**Dual Timestamp Assurance** — The platform records both an application-level UTC timestamp (`DateUtils.nowUTC()`) and the blockchain block timestamp for every on-chain event. The application timestamp provides human-readable context; the blockchain timestamp provides cryptographic proof.
+**Two clocks.** The platform time is there so people can read the history. The blockchain time is the one that cannot be altered.
 
-**Token Naming Convention** — FT tokens deployed for credit facility funding notices follow a systematic naming convention derived from the facility name and notice identifier, making them identifiable on-chain even without the platform UI.
+**Names follow the facility.** Tokens for a funding notice are named from the facility and the notice, so you can recognize them on the explorer as well as in Credit Facility.

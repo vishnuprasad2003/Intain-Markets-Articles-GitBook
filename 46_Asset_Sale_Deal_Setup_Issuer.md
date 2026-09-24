@@ -1,121 +1,78 @@
 ---
 title: Asset Sale Deal Setup
-description: Task-based guide for issuers to set up and manage asset sale deals
+description: Issuer checklist to create, configure, and publish an Asset Sale deal
 ---
 
 # Asset Sale Deal Setup
 
 ## Overview
 
-This guide provides issuers with step-by-step instructions for setting up an asset sale deal from start to finish. As an issuer, you create the deal, assign loans, configure sale terms, prepare investor agreements, and publish the deal for underwriter review. This covers all issuer-side tasks in the pre-sale phase.
-
+This is the issuer’s task list for the pre-sale phase: create the deal, assign loans, set terms, attach the sale agreement, and publish for underwriter review. Use this page while you work. For every wizard field and validation, see [Deal Creation & Publishing](34_Deal_Creation_and_Publishing.md).
 
 ![Asset Sale Deal Details — Issuer View](images/46-asset-sale-deal-setup-issuer/deal-details-issuer.png)
 
 ## Who Can Use This
 
-- **Issuers**: All steps in this guide are performed by the issuer role
+- **Issuers** — all steps below
+
+The Arranger / Placement Agent you pick on Basics is the Market Maker who will review the deal. They do not fill this wizard for you.
 
 ## When This Is Used
 
-Use this guide when:
-- You want to sell a portfolio of loans through the Asset Sale module
-- You need to set up a new deal and assign loans from your inventory
-- You are preparing a deal for underwriter review and investor distribution
-- You need to manage deal documents and investor agreements
+Use this when you are selling a loan portfolio and need a deal in **Draft**, then **Pending Review**. Do not use this for repayment — that starts only after the deal is **Active**. If you only need to fix a Draft deal, skip Create Deal and open the existing Deal ID.
 
 ## Step-by-Step Process
 
-### Step 1: Create a New Deal
+### 1. Create the deal
 
-1. Navigate to **Asset Sale** from the left sidebar menu
-2. The Asset Sale dashboard shows all your deals organized by status
-3. Click **Create Deal** to open the deal creation wizard
-4. Enter the required deal details:
-   - **Deal Name**: A descriptive name for the deal
-   - **Description**: Summary of the deal's purpose and contents
-   - **Key Dates**: Relevant dates for the deal timeline
-5. Click **Save** to create the deal in **Draft** status
+Open **Asset Sale** → **Create Deal**. Complete **Basics**:
 
-### Step 2: Assign Loans to the Deal
+- **Deal Name** (required) and **Arranger / Placement Agent** (required)
+- **Sale Route** — Marketed or Bilateral
+- **Target Settlement Date**, **Governing Law**
+- **Buyer Visibility** — All investors or Selected
+- **Servicing Setup** and **Servicing Fee**
 
-You can assign loans individually or by pool:
+Click **Next**. The first Next creates the deal, assigns a Deal ID, and saves **Draft**.
 
-**Option A — Assign Individual Loans**
-1. Open the deal from the dashboard
-2. Navigate to the loan assignment section
-3. Browse available loans and select the ones to include
-4. Confirm the loan assignment
+### 2. Assign loans
 
-**Option B — Assign by Pool**
-1. Open the deal from the dashboard
-2. Select **Assign by Pool**
-3. Choose the pool whose loans you want to assign
-4. All loans in the pool are mapped to the deal
+On **Pool Selection**, add minted loans one by one (**Assets**) or map one or more pools (**Pools**). Only loans with NFT minted status can be assigned. Remove rows with **Delete** if you added the wrong assets. At least one loan is required before publish.
 
-### Step 3: Configure Sale Terms
+### 3. Set sale terms
 
-1. Navigate to the sale terms section within the deal
-2. Configure pricing methodology and sale price
-3. Set recourse options:
-   - **With Recourse**: Issuer retains liability for loan defaults
-   - **Without Recourse**: Risk transfers fully to the investor
-   - **Limited Recourse**: Partial risk retention by the issuer
-4. Define settlement terms and timeline
-5. Save the sale terms configuration
+On **Sale Terms**, set purchase price basis (Par / Premium / Discount), price, cutoff date, settlement date, minimum pool size, and commit window. Add a recourse profile only if the sale uses recourse. Optionally upload the sale agreement PDF — if you skip it, a signed file can be added later.
 
-### Step 4: Upload Deal Documents
+Click **Submit**. You land on deal details. Status is still **Draft**.
 
-1. Navigate to the documents section
-2. Upload supporting documents:
-   - Offering memorandum
-   - Loan tape files
-   - Legal documentation
-   - Any other relevant deal documents
-3. All uploaded documents become available to the underwriter and investors after publication
+### 4. Publish
 
-### Step 5: Prepare Investor Agreements
+On deal details, confirm loans, terms, servicing, and documents. Click **Publish**. Status becomes **Pending Review**. You cannot edit loans or sale terms while the underwriter is reviewing.
 
-1. Navigate to the agreements section
-2. Upload the sale agreement document
-3. Choose the signature method:
-   - **Adobe Sign**: Electronic signature workflow — the platform manages routing and signing
-   - **Manual Upload**: Upload pre-signed agreement documents
-4. The agreement template applies to all investors in the deal
+### 5. Watch the result
 
-### Step 6: Publish the Deal
+| Underwriter action | Your next step |
+|--------------------|----------------|
+| **Approve** | Deal becomes **Published**. Investors can commit. |
+| **Reject** | Deal returns to **Draft**. Fix the package and publish again. |
+| **Cancel** | Deal is **Cancelled**. It is not reactivated. |
 
-1. Review the complete deal package:
-   - Loans assigned
-   - Sale terms configured
-   - Documents uploaded
-   - Agreement template ready
-2. Click **Publish** to submit the deal for underwriter review
-3. The deal status changes from **Draft** to **Pending Review**
-4. The underwriter is notified and can begin their review
-
-### Step 7: Monitor Deal Progress
-
-After publishing:
-1. Monitor the deal status in your Asset Sale dashboard
-2. If approved, the deal becomes **Published** and is visible to investors
-3. If rejected, review the underwriter's feedback and revise the deal as needed
-4. Track investor commitments and agreement signing progress
+Track commitments and agreement signing on the same deal page after publication.
 
 ## Rules & Validations
 
-- You must assign at least one loan before publishing
-- Sale terms must be configured before publishing (unless marked optional)
-- Only deals in Draft status can be edited
-- After publishing, deal fundamentals cannot be changed
-- Cancelled deals cannot be reactivated
-- Loan assignment changes are locked after the deal is published
+- Deal Name and Arranger are required to leave Basics.
+- Dates must stay in order: cutoff ≤ settlement ≤ target settlement.
+- Only **Draft** deals can be fully edited.
+- After publish, loans and sale terms are locked.
+- Cancelled deals cannot re-enter the live path.
+- Replacement Right cannot be enabled on a single-asset bilateral deal.
+- The wizard restores a session draft if you leave and return before Submit.
 
 ## What Happens Next
 
-After the deal is published and approved:
-- Investors can view and commit to the deal
-- The underwriter manages investor allocation
-- Investor agreements are signed
-- The deal proceeds to settlement
-- See **Investor Commitment & Allocation** (article 35) for the next phase
+The underwriter allocates investors. You can see commitments on deal details but you do not set allocation. After agreements are signed, you confirm bank-wire receipt (or watch stablecoin escrow) during settlement.
+
+If the underwriter asks for a different pool or price, expect a reject to **Draft** — you cannot patch those fields while the deal is in **Pending Review**. Keep the Deal ID; do not create a second deal unless you intend to cancel the first.
+
+See [Investor Commitment & Allocation](35_Investor_Commitment_and_Allocation.md). After the deal is **Active**, use [Repayment Initiation](47_Repayment_Initiation_Issuer.md).
