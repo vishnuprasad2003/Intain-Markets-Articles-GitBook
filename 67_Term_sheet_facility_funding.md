@@ -5,6 +5,8 @@ description: Complete guide to the credit facility workflow from term sheet to f
 
 # Term Sheet, Facility & Funding Statuses
 
+→ Back to [Credit Facilities Overview](16_Credit_Facilities_Overview.md) · [Term Sheet Workflow](18_Term_Sheet_Workflow.md)
+
 ## Overview
 
 This guide walks through a credit facility from the first proposal to the moment funds are paid. The work happens in three phases: the term sheet, the facility (also called the master commitment), and funding. Each phase has to finish before the next one starts. Borrowers propose terms and request draws. The facility agent reviews and sets up the facility. Lenders approve the facility and pay the draws.

@@ -133,3 +133,7 @@ The deal must be Active. Upload the latest loan tape and save the field mapping.
 **Why can’t I burn my NFT?**
 
 Confirm repayment receipt first. Open Investment Operations, then Confirm Repayment Receipt. Return to Asset Analysis, then Receivables, to burn.
+
+---
+
+→ See [Enabled vs Disabled Actions](69_Enabled_vs_Disabled_actions.md) · [Why Approvals Exist](71_Why_approvals_exist.md)

@@ -7,6 +7,8 @@ description: >-
 
 # Asset Sale Statuses
 
+→ Back to [Asset Sale Deal Lifecycle & Statuses](33_Asset_Sale_Deal_Lifecycle_and_Statuses.md)
+
 ## Overview
 
 This is the status lookup for Asset Sale deals. For the story of how a deal moves through these states, see [Deal Lifecycle & Statuses](33_Asset_Sale_Deal_Lifecycle_and_Statuses.md).

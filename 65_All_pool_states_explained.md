@@ -5,6 +5,8 @@ description: Understand all possible pool statuses and what each means
 
 # All Pool States Explained
 
+→ Back to [Pools Overview](05_Pools_Overview.md) · [Pool Lifecycle & Statuses](06_Pool_Lifecycle_and_Statuses.md)
+
 ## Overview
 
 This reference lists pool statuses and the loan statuses you see inside a pool. The label can differ by role. The status tells you which actions are available and whether the pool can still be edited.

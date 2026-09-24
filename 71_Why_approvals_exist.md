@@ -55,20 +55,3 @@ At most approval points there are three choices:
 | **Reject**          | The item should not continue  | It stays rejected. The submitter can create a new item                                                                         |
 
 Some steps have only two choices. A pool mandate is accept or reject. A lender either approves and e-signs a master commitment, or does not.
-
-## Key Principles to Understand
-
-Approvals are there so a party can review risk before they are bound. The reviewer sees the details needed for that decision in one place.
-
-The platform applies the split itself. You cannot approve an item you are not allowed to approve, even if you can see it.
-
-An approval also starts the next step:
-
-* An approved term sheet creates a master commitment in **Draft**, filled from the term sheet.
-* An approved funding request creates a funding notice in **Pending Token Generated**.
-* An approved asset sale deal becomes visible to investors for commitment.
-* The first lender to approve a master commitment makes the facility **Active**, so deal modelling and later funding can start.
-
-Some actions also ask for a one-time password. Issuers confirm NFT minting, NFT transfer, and token approval this way. A paying agent confirms a fund transfer this way. If you cannot complete that check, an emergency access request is available.
-
-Several approvals also require Adobe Sign or ZohoSign. A lender’s approval of a master commitment is a signed commitment, not only a button click.

@@ -17,22 +17,61 @@ description: One-line SEO description (50-160 characters)
 ---
 ```
 
-## Content Quality Standards
+## Content Quality Standards — SHORT, SIMPLE, CONCISE
 
-- **Minimum depth:** 600+ words for process docs (D, L), 500+ words for all others
-- **Specificity:** Use actual field names, status values, dropdown options from the codebase
+> **Golden Rule: If a user won't read it, remove it. Keep only what they need to act.**
+
+### Writing must be
+- **Short and sweet.** One-liners preferred. Every sentence must earn its place.
+- **Plain language.** Write as if explaining to a first-time user, not a developer.
+- **Actionable.** Tell users what to click, what to expect, what it means — nothing else.
+- **No fluff.** Remove all background context, "why it exists" explanations, and philosophy unless it is the literal purpose of the article (Type A only).
+
+### What to REMOVE from every article
+- Backend field names (`installmentNumber`, `BorrowerSigned`, API paths, status codes)
+- System internals (webhooks, middleware, Snowflake, blob storage, rate limiting, code refactoring)
+- Repeated explanations of the same rule or concept in different sections
+- "This section explains…" / "It is important to note…" filler sentences
+- Bullet lists that repeat what a table already says
+- "Impact on Existing Users" sections (merge into the feature description if needed)
+- Long paragraph introductions — get to the point in line one
+
+### What to KEEP
+- Button names, field labels, status names exactly as shown on screen
+- Step-by-step actions (numbered, short)
+- Status tables (who → what → when)
+- Cross-reference links to related articles at the end of each answer or section
+- Screenshots (one per major step)
+
+### Word targets
+- Process articles (Type D, L): 400–600 words maximum
+- All other articles: 200–400 words maximum
+- FAQ answers: 1–4 sentences per answer, then a backlink
+- Status glossary entries: 1–2 sentences per status
+
+### Frontmatter (REQUIRED)
+
+Every `.md` article MUST start with YAML frontmatter:
+
+```yaml
+---
+title: Human-Readable Title
+description: One-line description (50-120 characters)
+---
+```
+
 - **No placeholders:** Never use TODO, TBD, "coming soon", or "[insert content]"
-- **No fiction:** Only document features that exist in the code
-- **Tables:** Use for status definitions, role permissions, field descriptions, comparisons
-- **Cross-references:** Link related articles: `[Settlement](36_Settlement_and_NFT_Transfer.md)`
+- **No fiction:** Only document features that exist in the platform
+- **Tables:** Use for status definitions, role permissions, comparisons
+- **Cross-references:** Add back-links at end of FAQ answers and status articles
 
 ## Writing Tone
 
-- Professional, clear, user-friendly
+- **Short and direct.** No filler. No long intros.
 - Audience: Platform users (non-technical), not developers
-- Explain WHY, not just WHAT
-- Define any technical term on first use
 - Use active voice: "Click Submit" not "The Submit button should be clicked"
+- Skip "why it exists" explanations — just say what to do and what happens
+- Define a technical term only if the user will see it on screen
 
 ## Document Type Compliance
 
@@ -249,13 +288,12 @@ Before writing or editing an article, check `ARTICLE_TAXONOMY.md` for its assign
 
 ---
 
-## Golden MNC Rule
+## Golden Rule
 
-> Not all pages are "how-to". Mature platforms **explain, orient, and justify** — not just instruct.
+> **Simple. Short. Sweet.** If a user won't read it, it should not be there.
 
-1. Use natural, user-friendly language throughout
-2. Provide detailed explanations for complete understanding
-3. Avoid technical jargon unless necessary (define on first use)
-4. Ensure consistency across all document types
-5. Maintain clear structure and organization
-6. Use clear, descriptive titles and headings
+1. Every sentence must be useful to the user right now
+2. One sentence per idea — never pad
+3. Remove repeated explanations, background history, and developer context
+4. Add a back-link at the end of FAQ answers and status glossary entries
+5. Use tables for comparisons; bullets for short lists; paragraphs only when the flow demands it

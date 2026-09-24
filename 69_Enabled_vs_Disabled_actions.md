@@ -5,6 +5,8 @@ description: Understand why actions are enabled or disabled in Intain Markets
 
 # Enabled vs Disabled Actions
 
+→ Back to [Why Approvals Exist](71_Why_approvals_exist.md)
+
 ## Overview
 
 A button is on or off based on your role, the item’s status, and whether earlier steps are finished.

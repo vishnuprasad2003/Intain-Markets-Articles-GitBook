@@ -9,7 +9,7 @@
 * [Login & Navigation](03_Login_and_Navigation.md)
 * [Status & Approval Philosophy](04_Status_and_Approval_Philosophy.md)
 
-## Pools & Loans
+## Asset Onboarding
 
 * [Pools Overview](05_Pools_Overview.md)
 * [Pool Lifecycle & Statuses](06_Pool_Lifecycle_and_Statuses.md)
@@ -122,5 +122,4 @@
 ## Release Notes & Updates
 
 * [New Features](85_New_features.md)
-* [Status or Logic Changes](86_Status_or_logic_changes.md)
 * [Retired Flows](87_Retired_flows.md)

@@ -160,3 +160,7 @@ Use this page when a button is missing or disabled. Match the question to your s
 | You are worried the view will change data | View As is read-only. You cannot save changes                |
 | The data looks unfamiliar                 | You are looking at the platform as another user, for support |
 | You want your own screen back             | Leave View As. Your account is unchanged                     |
+
+---
+
+→ See [Enabled vs Disabled Actions](69_Enabled_vs_Disabled_actions.md) · [Who Can Do What](74_Who_can_do_what.md)

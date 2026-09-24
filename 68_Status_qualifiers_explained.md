@@ -5,6 +5,8 @@ description: Understand status qualifiers that provide additional context about 
 
 # Status + Qualifiers Explained
 
+→ Back to [Status & Approval Philosophy](04_Status_and_Approval_Philosophy.md)
+
 ## Overview
 
 A status tells you where an item sits in its workflow. Many statuses also carry a qualifier — a word such as Pending, In review, or Changes Requested — that tells you who needs to act next. This guide explains those words and what you should do when you see them. The same word can appear on a term sheet, a funding request, a pool, or a deal. The meaning stays the same even when the item type changes.

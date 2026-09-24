@@ -5,6 +5,8 @@ description: Comprehensive reference for all possible loan statuses and what eac
 
 # All Loan States Explained
 
+→ Back to [Loans Overview](10_Loans_Overview.md) · [Loan Lifecycle & Statuses](11_Loan_Lifecycle_and_Statuses.md)
+
 ## Overview
 
 This comprehensive reference guide explains all possible loan statuses in the platform. Loans have multiple status dimensions that track their progression through onboarding, pool mapping, verification, and tokenization. Understanding these statuses helps you know where loans are in their lifecycle, what actions are available, and what to expect next.
