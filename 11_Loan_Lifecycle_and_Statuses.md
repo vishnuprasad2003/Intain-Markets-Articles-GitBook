@@ -1,148 +1,64 @@
 ---
 title: Loan Lifecycle and Statuses
-description: Understand the different stages loans go through and what each status means
+description: Stages loans go through from upload through NFT minting
 ---
 
 # Loan Lifecycle & Statuses
 
-## Overview
+## Lifecycle at a Glance
 
-A loan’s status shows where it is, which actions are available, and what comes next. This guide covers the path from upload through verification and NFT minting.
+```
+Upload tape → Trigger LTS → Map fields → Loan Registry → Map to Pool → Add to Batch → Self Certify / Verify → Mint NFT
+```
 
-## Lifecycle Overview
+## Mapping Status
 
-**Onboarding** — Upload the loan tape, click **Trigger LTS**, match fields, save, then open the Loan Registry.
+| Status | Meaning | Next action |
+|---|---|---|
+| **Unmapped** | In Loan Registry; not in any pool | Map to Pool |
+| **Mapped** | In a pool; included in pool metrics | Add to Batch |
 
-**Pool mapping** — Select loans and click **Map to Pool**. Those loans count in the pool’s metrics.
+## Loan Status Within Pools
 
-**Verification** — Add loans to a batch, then **Self Certify** or send the batch to a verification agent.
+| Status | Meaning | Who decides |
+|---|---|---|
+| **Pending** | Pool shared; market maker not yet accepted | — |
+| **Accepted** | Mandate accepted; loan confirmed in pool | — |
+| **Reconsider** (issuer view) / **Under Reconsider** (others) | Removal requested | Issuer (tick/cross) |
+| **Removed** | Issuer accepted removal; excluded from metrics | Reinstated by issuer |
+| **Reinstated** | Previously removed; back in metrics | — |
 
-**NFT minting** — Open the batch in **Certificates** and click **Mint NFT**.
+> Loan stays in pool calculations during **Reconsider/Under Reconsider** until issuer decides.
 
-## Status Meanings
+## Batch Verification Status
 
-### Loan Mapping Status
+| Status | Meaning | Available actions |
+|---|---|---|
+| **Pending** | Batch not verified; awaiting certification | Self Certify, send to verification agent |
+| **Reviewed** | Verified/certified; ready to mint | Mint NFT |
+| **Verified** | All loans minted | View NFT |
 
-**Unmapped**
+## NFT Status
 
-The loan is in the Loan Registry and is not in a pool. This is the state after you save field mapping.
+| Status | Meaning |
+|---|---|
+| **Not Minted** | No NFT yet |
+| **Minted** | NFT exists; loan can be mapped to a credit facility |
 
-* You can map it to a pool
-* It does not affect any pool’s metrics
-* You can add it to a batch
+## Status Transitions
 
-**Mapped**
+| From | Action | To |
+|---|---|---|
+| (uploaded) | Save Mapping | Unmapped |
+| Unmapped | Map to Pool | Mapped |
+| Mapped | Pool shared, market maker accepts | Accepted |
+| Accepted | Removal requested | Under Reconsider / Reconsider |
+| Reconsider | Issuer accepts (tick) | Removed |
+| Reconsider | Issuer rejects (cross) | Accepted |
+| Removed | Reinstate | Reinstated |
+| (in batch) | Add to Batch | Pending |
+| Pending | Self Certify or verification agent | Reviewed |
+| Reviewed | Mint NFT | Verified |
 
-The loan is in a pool and counts in that pool’s calculations.
-
-* The pool’s Loans tab includes it
-* A market maker or investor can ask for it to be removed
-* The Loan Registry Status column shows **Mapped**
-
-### Loan Status Within Pools
-
-These statuses appear after the pool is shared.
-
-**Pending**
-
-The loan is in a shared pool, and the market maker has not accepted the preview mandate yet.
-
-**Accepted**
-
-The market maker accepted the mandate, so the loan stays in the pool. A market maker or investor can still request removal.
-
-**Under Reconsider / Reconsider**
-
-Someone requested removal. The issuer decides whether to accept or reject that request.
-
-* Market makers and investors see **Under Reconsider**
-* The issuer sees **Reconsider**, with a tick to accept removal and a cross to reject it
-* The loan stays in pool calculations until the issuer decides
-
-**Removed**
-
-The issuer accepted the removal request.
-
-* The loan is left out of pool calculations
-* Metrics update without it
-* It stays visible for tracking
-* It can be reinstated
-
-**Reinstated**
-
-A removed loan is back in the pool and counts in calculations again.
-
-### Batch Verification Status
-
-**Pending**
-
-The batch exists and is not verified yet. Self Certify and the verification agent path are available. NFT minting is off.
-
-**Reviewed**
-
-The batch was self-certified or verified by a verification agent. **View NFT** and **Mint NFT** are on in Certificates.
-
-**Verified**
-
-Every loan in the batch has been minted. Only **View NFT** is on.
-
-### Verification Status
-
-**No** — The batch is not verified yet.
-
-**Certified** — A third-party verification agent verified the batch.
-
-**Self Certified** — The issuer signed in as a verification agent and verified the batch.
-
-**Self Certify (Data Only)** — The issuer used **Self Certify** on the batch directly.
-
-### NFT Loan Status
-
-**Not Minted** — The loan has no NFT yet. It may not be in a reviewed batch, or minting has not been started.
-
-**Minted** — The loan has an NFT and can be used in a credit facility.
-
-## What Each Status Indicates
-
-### Unmapped
-
-The loan is available in the Loan Registry. **Map to Pool** assigns it. It does not affect pool metrics yet.
-
-### Mapped
-
-The loan belongs to one pool and is included in that pool’s metrics. It appears on the pool’s Loans tab. The Loan Registry can show the pool name.
-
-### Under Reconsider / Reconsider
-
-Someone asked to remove the loan. As issuer, use the tick or the cross. Until you decide, the loan still counts in the pool.
-
-### Removed
-
-You accepted a removal request. Metrics no longer include the loan. It remains visible, and you can reinstate it later.
-
-### Pending (batch)
-
-The batch is waiting for verification. Self-certify it or send it to a verification agent. Minting is not available yet.
-
-### Reviewed (batch)
-
-Verification is done. Open Certificates and click **Mint NFT**.
-
-### Verified (batch)
-
-Minting is finished. Loans with NFTs can be mapped to a credit facility.
-
-## Status Transitions Summary
-
-| From       | Action                                    | To                            |
-| ---------- | ----------------------------------------- | ----------------------------- |
-| (Uploaded) | Save Mapping                              | Unmapped                      |
-| Unmapped   | Map to Pool                               | Mapped (shows pool name)      |
-| Mapped     | Pool shared, market maker accepts         | Accepted                      |
-| Accepted   | Market maker or investor requests removal | Under Reconsider / Reconsider |
-| Reconsider | Issuer clicks the tick                    | Removed                       |
-| Reconsider | Issuer clicks the cross                   | Accepted (stays in the pool)  |
-| Removed    | Reinstate                                 | Reinstated                    |
-| (In batch) | Batch created                             | Pending                       |
-| Pending    | Self Certify or verification agent        | Reviewed                      |
-| Reviewed   | Mint NFT                                  | Verified                      |
+→ See [Loans Overview](10_Loans_Overview.md) for how loans are managed on screen.
+→ See [Loan Rejection and Reinstatement](12_Loan_Rejection_and_Reinstatement.md) for how removal requests work.

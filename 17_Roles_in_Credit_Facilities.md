@@ -1,121 +1,80 @@
 ---
 title: Roles in Credit Facilities
 description: >-
-  Guide to Borrower, Facility Agent, Lender, Servicer, and Paying Agent
-  responsibilities in a credit facility
+  Borrower, Facility Agent, Lender, Servicer, and Paying Agent responsibilities in a credit facility
 ---
 
 # Roles in Credit Facilities
 
-## Overview
+In credit facilities, platform roles use different names:
 
-A credit facility uses names that differ from other parts of the platform. The Issuer is the **Borrower**. The Market Maker is the **Facility Agent**. The Investor is the **Lender**. Each role sees different screens and can act only at certain stages.
+| Platform Role | Credit Facility Name |
+|---|---|
+| Issuer | **Borrower** |
+| Market Maker | **Facility Agent** |
+| Investor | **Lender** |
 
-## Roles Covered
-
-| Platform Role | Credit Facility Name | Primary Function                  |
-| ------------- | -------------------- | --------------------------------- |
-| Issuer        | **Borrower**         | Seeks funds                       |
-| Market Maker  | **Facility Agent**   | Reviews and manages the facility  |
-| Investor      | **Lender**           | Approves terms and provides funds |
-| Servicer      | **Servicer**         | Administers the loans             |
-| Paying Agent  | **Paying Agent**     | Named for payment administration  |
-
-## What Each Role Can Do
+## What Each Role Does
 
 ### Borrower (Issuer)
 
-The borrower starts the facility and later requests draws.
+- Create, sign, and submit the term sheet
+- Edit and resubmit when changes are requested
+- Map NFT-minted loans to the active facility
+- Create, submit, and edit funding requests
+- Approve token transfers when a notice is ready to settle
 
-* **Term sheet** — Create the term sheet, enter amounts, rates, tenors, and conditions, and sign with Adobe Sign.
-* **Submit** — Send the signed term sheet to the facility agent. If changes are requested, edit and resubmit.
-* **After approval** — View the master commitment and map loans that already have an NFT.
-* **Funding** — Create a funding request with the draw amount, purpose, and documents. Edit and resubmit if changes are requested.
-* **Token approval** — Approve token transfers when a funding notice is ready to settle.
-* **Monitoring** — Track use, remaining capacity, and past draws.
-
-**Dashboard:** Open **Credit Facility**. You see your term sheets and, under approved term sheets, master commitments. Actions include Submit Term Sheet, Edit Term Sheet (when changes are requested), View Term Sheet, Map Loans, and Create Funding Request.
+**Dashboard:** **Credit Facility** — shows term sheets, master commitments, and funding requests.
 
 ### Facility Agent (Market Maker)
 
-The facility agent sits between the borrower and the lenders.
+- Review term sheets → Approve (creates master commitment), Reject, or Request Changes
+- Configure master commitment: add lenders, set shares, create sub-facilities if needed, submit for lender approval
+- Complete deal modelling after at least one lender approves
+- Review funding requests → Approve (creates funding notice), Reject, or Request Changes
+- Approve each funding notice and e-sign once per lender
 
-* **Term sheet review** — **Approve** (a master commitment is created), **Reject** (final), or **Request Changes** (the borrower can edit and resubmit).
-* **Master commitment** — Add lenders, set participation, create sub-facilities if needed, and send the commitment to lenders.
-* **Deal modelling** — After at least one lender approves, complete deal setup.
-* **Funding request review** — **Approve** (a funding notice is created for each lender), **Reject**, or **Request Changes**.
-* **Funding notices** — E-sign each lender’s notice with Adobe Sign.
-* **Oversight** — Monitor use and compliance.
-
-**Dashboard:** Open **Credit Facility**. **Set-up** lists term sheets and commitments still being configured. **Active Facilities** lists live commitments. Actions include Review Term Sheet, Create Facility, Set Up Deal, Review Funding Request, and E-sign Funding Notice.
+**Dashboard:** **Credit Facility** — **Set-up** tab for pending items; **Active Facilities** tab for live facilities.
 
 ### Lender (Investor)
 
-Lenders provide the capital.
+- Review master commitment (or sub-facility) in **Opportunities** → **Approve & E-Sign**
+- One lender's approval activates the facility
+- Review funding notice after facility agent signs for them
+- Choose payment method, transfer funds, **Confirm and Settle**
 
-* **Master commitment** — In **Opportunities**, review the commitment or sub-facility shared with you, then approve and e-sign with Adobe Sign. One lender’s approval is enough to make the commitment **ACTIVE**.
-* **Participation** — View the facility, your committed amount, and remaining capacity in **Credit Facility**.
-* **Funding notice** — Review the draw allocated to you after the facility agent approves the borrower’s request.
-* **Fund transfer** — Choose the payment method, send the funds, and click **Confirm and Settle**.
-* **Monitoring** — Track your commitments and funding history.
-
-**Dashboard:** **Opportunities** shows commitments waiting for approval. **Credit Facility** shows approved facilities and funding notices. Actions include Review & Approve, Review Funding Notice, and Confirm and Settle.
+**Dashboard:** **Opportunities** for pending approvals; **Credit Facility** for active facilities and notices.
 
 ### Servicer
 
-The servicer handles loan administration after the facility is live and loans are mapped.
-
-* Upload monthly loan tapes
-* Monitor loan performance
-* Provide servicing reports
-* Open deal details for facilities they service
-
-**Dashboard:** The Servicer dashboard lists active deals. From a deal you can view loan data and upload a recurring loan tape.
+- Upload monthly loan tapes for assigned active deals
+- View loan data and deal details
 
 ### Paying Agent
 
-The facility agent names the Paying Agent organization while configuring the master commitment. The Paying Agent does not have a separate Credit Facility dashboard or funding actions. The name is kept on the facility for legal and payment administration records.
+- Named on the master commitment by the facility agent; no separate Credit Facility workflow actions
 
-## Important Access Notes
+## Permission Summary
 
-| Action                                                 | Borrower | Facility Agent | Lender | Servicer | Paying Agent |
-| ------------------------------------------------------ | -------- | -------------- | ------ | -------- | ------------ |
-| Create Term Sheet                                      | ✓        | —              | —      | —        | —            |
-| Sign Term Sheet (Adobe Sign)                           | ✓        | —              | —      | —        | —            |
-| Submit Term Sheet                                      | ✓        | —              | —      | —        | —            |
-| Review Term Sheet                                      | —        | ✓              | —      | —        | —            |
-| Approve, Reject, or Request Changes on Term Sheet      | —        | ✓              | —      | —        | —            |
-| Configure Master Commitment                            | —        | ✓              | —      | —        | —            |
-| Add Lenders                                            | —        | ✓              | —      | —        | —            |
-| Submit Master Commitment for Lender Approval           | —        | ✓              | —      | —        | —            |
-| Approve and E-Sign Master Commitment                   | —        | —              | ✓      | —        | —            |
-| Set Up Deal Modelling                                  | —        | ✓              | —      | —        | —            |
-| Map Loans                                              | ✓        | —              | —      | —        | —            |
-| Create Funding Request                                 | ✓        | —              | —      | —        | —            |
-| Review Funding Request                                 | —        | ✓              | —      | —        | —            |
-| Approve, Reject, or Request Changes on Funding Request | —        | ✓              | —      | —        | —            |
-| E-Sign Funding Notice                                  | —        | ✓              | —      | —        | —            |
-| Review Funding Notice                                  | —        | —              | ✓      | —        | —            |
-| Confirm Fund Transfer                                  | —        | —              | ✓      | —        | —            |
-| Upload Monthly Loan Tapes                              | —        | —              | —      | ✓        | —            |
-| Named on the Master Commitment                         | —        | —              | —      | —        | ✓            |
+| Action | Borrower | Facility Agent | Lender |
+|---|---|---|---|
+| Create / sign / submit term sheet | ✓ | — | — |
+| Approve / reject / request changes on term sheet | — | ✓ | — |
+| Configure facility and add lenders | — | ✓ | — |
+| Approve & e-sign master commitment | — | — | ✓ |
+| Deal modelling | — | ✓ | — |
+| Map loans | ✓ | — | — |
+| Create / submit funding request | ✓ | — | — |
+| Approve / reject funding request | — | ✓ | — |
+| E-sign funding notice | — | ✓ | — |
+| Review notice, transfer funds, settle | — | — | ✓ |
 
-**You see your own actions.** A borrower does not see the facility agent’s review buttons. A lender does not see term sheet creation.
+## Key Notes
 
-**Status controls the buttons.** A borrower can edit a term sheet in **Draft** or **Changes Requested**, not while the facility agent is reviewing it.
+- **Status controls buttons** — borrower cannot edit a term sheet while it is **In review**
+- **Change requests vs rejection** — changes keep the item open; rejection requires a new item
+- **One lender activates the facility** — other lenders can approve later; each is tracked independently
+- **Signatures** — borrower signs term sheet; lenders sign commitment; facility agent signs each lender's notice
 
-**One lender activates the facility.** The first lender approval moves the master commitment to **ACTIVE**. The facility agent can then set up the deal, and the borrower can map loans after that setup is finished.
-
-**Change requests continue the same item.** Rejection does not. After a rejection, start a new term sheet or funding request.
-
-**Signatures** — The borrower signs the term sheet, the lender signs the master commitment, and the facility agent signs each funding notice. These use Adobe Sign.
-
-**Borrower** — Create the term sheet, sign, submit, revise if asked, wait for approval, map loans, create funding requests, approve tokens, and receive funds.
-
-**Facility Agent** — Review term sheets, configure the master commitment, send it to lenders, set up the deal, review funding requests, and e-sign funding notices.
-
-**Lender** — Review the commitment in Opportunities, approve and e-sign, review funding notices, transfer funds, and confirm settlement.
-
-**Servicer** — Open active deals, upload monthly loan tapes, and monitor performance.
-
-**Paying Agent** — Named on the master commitment by the facility agent. There is no separate Credit Facility workflow for this role.
+→ See [Term Sheet Workflow](18_Term_Sheet_Workflow.md) for step-by-step borrower instructions.
+→ See [Facility Approval](58_Facility_Approval.md) for lender approval steps.

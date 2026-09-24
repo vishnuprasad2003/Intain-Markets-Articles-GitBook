@@ -1,101 +1,51 @@
 ---
 title: Login and Navigation
-description: Learn how to log in and navigate the platform effectively
+description: How to log in and navigate the platform
 ---
 
 # Login & Navigation
 
-## Overview
+## Logging In
 
-Signing in and moving around Intain Markets depends on your role. The platform shows the items and actions that match the role you chose for this session.
+1. Go to the Intain Markets login page
+2. **Sign in with Microsoft** (SSO) or enter username + password
+3. If you have multiple roles, select one on the **Select Role** page → dashboard loads for that role
 
-## How to Navigate the Platform
+> To switch roles, log out and sign in again with the other role.
 
-**Login Process** — You can sign in in two ways:
+![Intain Markets Login Page](.gitbook/assets/login-page.png)
+![Role Dropdown on Login Page](.gitbook/assets/role-dropdown.png)
 
-1. **Microsoft Entra SSO** — If your organization uses Microsoft Entra (formerly Azure AD), click **Sign in with Microsoft** on the login page. You complete sign-in with Microsoft. If your account has more than one role, the **Select Role** page asks you to choose one before you enter the platform.
-2. **Direct Login** — Enter your username and password, choose a role you are registered for, and submit. The dashboard matches the role you selected.
+## Dashboard
 
-**Role Selection** — If you have more than one role, pick one for this session. You use one role at a time. To switch, log out and sign in again with the other role.
+Your dashboard shows pools, deals, and items for your role, plus pending actions and recent activity.
 
-**Dashboard Access** — After you sign in, the dashboard shows pools, deals, and other items for your role, plus pending actions and recent activity. Tiles on the dashboard open common tasks.
+![Issuer Dashboard](.gitbook/assets/issuer-dashboard.png)
+![Dashboard - Investor View](.gitbook/assets/Dashboard_Investor.png)
+![Dashboard - Market Maker View](.gitbook/assets/Dashboard_MarketMaker.jpg)
+![Dashboard Notification Panel](.gitbook/assets/Dashboard_Notification_Panel.png)
 
-**Main Navigation** — A left sidebar expands when you hover over it. Depending on your role, it can include:
+## Left Sidebar Navigation
 
-* **Pools** — Pool management and review
-* **Asset Registry / Loan Registry** — Loan onboarding and management
-* **Credit Facility** — Term sheets and master commitments
-* **Asset Sale** — Asset sale deals and settlement
-* **Securitization** — Securitization deals and tranches
-* **Imports** — Loan tape uploads
-* **Batch Verification** — Loan verification batches
-* **Activity Audit** — Activity across the platform
-* Other sections for your role, such as Reports, Payment Settings, and Profile
+Hover the sidebar to expand it. Sections shown depend on your role:
 
-You only see sections that apply to your role.
+| Section | Who sees it |
+|---|---|
+| **Pools** | Issuers, Market Makers, Investors |
+| **Asset Registry / Loan Registry** | Issuers, Servicers |
+| **Credit Facility** | Borrowers, Facility Agents, Lenders |
+| **Asset Sale** | Issuers, Underwriters, Investors |
+| **Imports / Batch Verification** | Issuers, Servicers |
+| **Activity Audit** | Most roles |
 
 ![Issuer Sidebar Navigation](.gitbook/assets/issuer-sidebar-navigation.png)
 
-**Search and Filter** — You can search and filter large lists. Use name, status, or other criteria to find a specific item.
+## Tips
 
-**Notifications** — The notification drawer alerts you when something needs your attention, when a status changes, or when an approval is waiting.
-
-## What You Will See
-
-**Login Page** — The login page offers sign-in with a username and password, Microsoft sign-in, role selection, and sign-up.
-
-![Intain Markets Login Page](.gitbook/assets/login-page.png)
-
-**Role Selection** — The role list includes Issuer, Market Maker, Investor, Servicer, Paying Agent, Rating Agency, and Admin.
-
-![Role Dropdown on Login Page](.gitbook/assets/role-dropdown.png)
-
-**Your Dashboard** — Issuers see pools they created. Market makers and investors see pools shared with them. The dashboard highlights what needs attention.
-
-![Issuer Dashboard](.gitbook/assets/issuer-dashboard.png)
-
-![Dashboard - Investor View](.gitbook/assets/Dashboard_Investor.png)
-
-![Dashboard - Market Maker View](.gitbook/assets/Dashboard_MarketMaker.jpg)
-
-**Dashboard Notifications** — Alerts appear on the dashboard. Open one to see details in a panel on the right.
-
-![Dashboard Notification Panel](.gitbook/assets/Dashboard_Notification_Panel.png)
-
-**Filtered Lists** — Lists such as Pools or Credit Facilities already show items for your role and your organization. You do not see items that were not shared with you.
-
-**Role-Appropriate Actions** — Buttons turn on or off based on your role and the item’s status. A disabled button usually has a tooltip that explains why.
-
-**Notifications** — Alerts cover items that need you, status changes, and approvals. Check them so you do not miss a required step.
-
-**Search and Filter Options** — Search by name, filter by status, or use other criteria when a list is long. You can search and filter large lists.
-
-## Helpful Tips
-
-**Select the Correct Role** — Use Issuer when you create pools. Use Investor when you review pools shared with you.
-
-**Check Your Dashboard First** — It shows pending work and recent activity.
-
-**Use the Sidebar** — Sections are grouped by product. Hover the sidebar to expand it.
-
-**Look for Tooltips** — Hover a disabled button to see why it is off.
-
-**Check Notifications** — They point to updates and actions that are waiting.
-
-**Use Search** — Search is faster than scrolling a long list.
-
-**Understand Role-Based Views** — If you cannot find an item, it may not be shared with you, or you may need a different role.
-
-**Multiple Roles** — Log out and sign in again to switch roles.
-
-**Action Availability** — A button depends on both your role and the item’s status.
-
-**Use Filters** — Narrow a list by status, date, or other criteria.
-
-![IntainMarketsLoginPage](.gitbook/assets/IntainMarketsLoginPage.png)
-
-![Investor Dashboard](.gitbook/assets/investor-dashboard.png)
-
-![Mm Dashboard](.gitbook/assets/mm-dashboard.png)
+- **Check notifications** — they point to pending approvals and status changes
+- **Hover a disabled button** for the tooltip explaining why it is off
+- **Use search / filters** to find items in long lists
+- You only see items shared with your organization or created by you
 
 ![Signup Page](.gitbook/assets/signup-page.png)
+![IntainMarketsLoginPage](.gitbook/assets/IntainMarketsLoginPage.png)

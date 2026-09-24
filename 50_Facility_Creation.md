@@ -1,175 +1,57 @@
 ---
 title: Facility Creation
-description: Learn how facility agents create and configure master commitments
+description: How facility agents configure and submit master commitments for lender approval
 ---
 
 # Facility Creation
 
-## Overview
-
-After a term sheet is approved, a master commitment is automatically created with Draft status. As a facility agent, you configure the master commitment by adding lenders, setting up facility rules, and finalizing the facility structure before submitting to lenders for approval. This guide explains the complete facility creation process.
+After a term sheet is approved, a master commitment is created automatically with **Draft** status. The facility agent configures it and submits for lender approval.
 
 ## Who Can Use This
 
-* **Facility Agents**: Configure master commitments and submit them for lender approval
+**Facility Agents** — after a term sheet has been approved.
 
-## When This Is Used
+## Steps
 
-Use facility creation when:
+1. **Credit Facility → Set-up tab** → find the approved term sheet → open the master commitment dropdown (status: **Draft**) → click **Create Facility**
 
-* A term sheet has been approved and a master commitment has been auto-created
-* You need to add lenders to the facility
-* You want to configure facility rules and parameters
-* You need to create sub-facilities for multiple-lender arrangements
-* You're ready to submit the facility for lender approval
+2. In the **Basic** section: select **Single** or **Multiple** branch
+   - **Single** — one facility with all lenders together
+   - **Multiple** — allows sub-facilities with different lender groups
 
-## Step-by-Step Process
-
-### Step 1: Access the Master Commitment
-
-1. **Navigate to Credit Facility**
-   * Log in to the platform with your Facility Agent credentials
-   * From the left expandable menu, click on **Credit Facility**
-   * The dashboard shows the **Set-up** and **Active Facilities** tabs
-2. **Find the Master Commitment**
-   * In the **Set-up** tab, locate the approved term sheet
-   * Under the term sheet, you'll see the auto-created master commitment as a dropdown
-   * The master commitment shows **Draft** status
-   * The Actions column shows **Create Facility**
-3. **Click Create Facility**
-   * Click **Create Facility** to open the facility configuration popup
-   * This popup has multiple sections to complete
-
-![Create Facility - FA](.gitbook/assets/CreateFacility_FA.png)
-
-### Step 2: Configure Basic Information
-
-1. **Navigate to Basic Section**
-   * The popup shows multiple sections at the top: Basic, Parties & Accounts, Economic & Fees, and more
-   * Start with the **Basic** section
-2. **Select Facility Type**
-   * Choose whether this is a **Single** or **Multiple** branch master commitment
-   * **Single**: One master commitment with all lenders together
-   * **Multiple**: Allows creating sub-facilities with different lender groups
-3. **Enter Basic Details**
-   * Review and update basic facility information
-   * Some fields are pre-populated from the term sheet (read-only)
-   * Enter any additional required information
-
-### Step 3: Set Up Parties and Accounts
-
-1. **Navigate to Parties & Accounts Section**
-   * Click on the **Parties & Accounts** section tab
-2. **Add Lenders**
-   * This is where you add the lenders that will participate in this facility
-   * Click **Add Lender** to add a new lender
-   * Select the lender organization
-   * Enter commitment amount and voting percentage
-   * Repeat for all participating lenders
+3. **Parties & Accounts** → click **Add Lender** → select organisation → enter commitment amount and voting percentage → repeat for all lenders
 
 ![Set Up Lenders](.gitbook/assets/setUpLenders.png)
 
-3. **Configure Account Information**
-   * Enter account details as required
-   * Ensure all lender information is complete
-
-### Step 4: Configure Economic Terms and Fees
-
-1. **Navigate to Economic & Fees Section**
-   * Click on the **Economic & Fees** section tab
-2. **Review Economic Terms**
-   * Review interest rate calculations
-   * Verify pricing index and margin
-   * Configure fee structures
-3. **Set Up Facility Rules**
-   * Configure borrowing limits
-   * Set drawdown frequency rules
-   * Define other facility parameters
+4. **Economic & Fees** → review interest rate, pricing index, margin, fees, borrowing limits, and drawdown frequency
 
 ![Configure Rules](.gitbook/assets/ConfigureRules.png)
 
-### Step 5: Complete Additional Sections
+5. Complete all remaining sections (all data auto-saves as you go)
 
-1. **Navigate Through Remaining Sections**
-   * Complete all remaining sections as required
-   * Each section has specific configuration fields
-   * All data is auto-saved as you enter it
-2. **Verify All Required Fields**
-   * Ensure all mandatory fields are completed
-   * Review each section for accuracy
-
-### Step 6: Create Sub-Facilities (If Multiple Branch)
-
-If you selected **Multiple** in the Basic section:
-
-1. **Navigate to Review & Create Section**
-   * In the final **Review & Create** section, you'll see a **Create Sub-Facility** button
-2. **Create Sub-Facility**
-   * Click **Create Sub-Facility**
-   * A new sub-master commitment is created
-   * All details except lenders are copied from the main facility
+6. **Multiple branch only** — **Review & Create → Create Sub-Facility** → configure each sub-facility; assign lenders from the main facility (no two sub-facilities can share the same lenders)
 
 ![Create Sub-Facility](.gitbook/assets/CreateSubFacility.png)
 
-3. **Switch Between Facilities**
-   * A dropdown appears at the top of the popup
-   * Use this dropdown to switch between the main facility and sub-facilities
-   * Each sub-facility can be configured separately
-4. **Assign Lenders to Sub-Facilities**
-   * Navigate to Parties & Accounts for the sub-facility
-   * Add lenders from those selected in the main facility only
-   * **Important**: No two sub-facilities can have the same lenders
-   * Each lender can only be in one sub-facility
+7. **Review & Create** → verify all settings → click **Create Facility**
+   - Status → **Pending Lender Approval**
+   - Lenders see the facility in their **Opportunities** section
 
-### Step 7: Review and Submit
+![Create Facility - FA](.gitbook/assets/CreateFacility_FA.png)
 
-1. **Navigate to Review & Create Section**
-   * Click on the **Review & Create** section
-   * Review all configured settings
-2. **Verify Configuration**
-   * Check that all lenders are properly assigned
-   * Verify facility rules and parameters
-   * Ensure all required fields are complete
-3. **Click Create Facility**
-   * Click the **Create Facility** button to finalize
-   * Master commitment status changes from **Draft** to **Pending Lender Approval**
-   * The facility is now shared with the selected lenders
-   * Lenders see the facility in their **Opportunities** section
+## After Lender Approval
 
-## Auto-Save Feature
+- Any one lender approval activates the facility → status → **Active**
+- Facility moves to **Active Facilities** tab
+- Facility agent completes deal modelling (**Set Up Deal**)
+- Borrower can then map loans and create funding requests
 
-* All data entered in the Create Facility popup is automatically saved
-* You can exit and return later—your progress is preserved
-* The master commitment remains in **Draft** status until you click Create Facility
-* You can edit any section while in Draft status
+## Key Rules
 
-## Rules & Validations
+- Only Draft commitments can be configured — no editing after submitting for approval
+- At least one lender must be added before submitting
+- Sub-facility lenders must be a subset of main facility lenders
+- Auto-save is active; exit and return at any time while in Draft
 
-* **Only Draft Can Be Edited**: You can only configure master commitments in Draft status. Once submitted for lender approval, you cannot edit.
-* **Lenders Must Be Selected**: You must add at least one lender before submitting for approval.
-* **Sub-Facility Lender Rules**: For multiple-branch facilities:
-  * Sub-facilities can only include lenders selected in the main facility
-  * No two sub-facilities can have the same lenders assigned
-  * Each lender can only belong to one sub-facility
-* **All Fields Required**: All mandatory fields must be completed before you can click Create Facility.
-* **Auto-Save Active**: Data is saved automatically as you enter it. You don't need to manually save.
-
-## What Happens Next
-
-**After Creating Facility:**
-
-* Master commitment status changes to **Pending Lender Approval**
-* Lenders see the facility in their Opportunities section
-* Lenders can Review & Approve the facility
-
-**After Lender Approval:**
-
-* Any one lender approval activates the facility
-* Status changes to **Active**
-* Facility appears in Active Facilities tab
-* You can now set up deal modelling
-
-**After Deal Modelling Complete:**
-
-* Borrower can map loans and create funding requests
-* Funding workflow begins
+→ See [Facility Approval](58_Facility_Approval.md) for the lender approval process.
+→ See [Roles in Credit Facilities](17_Roles_in_Credit_Facilities.md) for role overview.
