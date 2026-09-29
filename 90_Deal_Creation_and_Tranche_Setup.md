@@ -42,7 +42,7 @@ Click **Add Tranche** to define each investment class:
 
 A deal can have multiple tranches. Each tranche is a separate investment class with its own FT token.
 
-![Deal details page — tranches table](images/90-deal-creation-and-tranche-setup/deal-details-tranches.png)
+![Deal details page — tranches table](.gitbook/assets/sec-deal-details-tranches.png)
 *Tranches table — showing Tranche Name, Principal Balance, Class Type, and Interest Rate*
 
 ### FT Token Deployment
@@ -85,7 +85,7 @@ If satisfied, the Issuer **publishes the deal to investors**:
 - Assigned investors can now view the deal and its tranches
 - The Underwriter can now open the Commit phase
 
-![Deal details page — Issuer view](images/90-deal-creation-and-tranche-setup/deal-details-issuer.png)
+![Deal details page — Issuer view](.gitbook/assets/sec-deal-details-issuer.png)
 *Deal details — Issuer review view showing tranche structure and deal terms*
 
 ---

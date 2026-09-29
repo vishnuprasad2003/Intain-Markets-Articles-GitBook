@@ -22,7 +22,7 @@ Created → Awaiting Approval → Open → Closed
 | **Open** | Issuer has published the deal to investors. The deal is live. Underwriter manages Commit and Invest phases. | Investors view, commit, and invest. Paying Agent delivers FTs. |
 | **Closed** | Deal is closed. No new investment activity. | Read-only for all roles. |
 
-![Deal details page — shows current status and deal fields](images/89-securitization-deal-lifecycle/deal-status-view.png)
+![Deal details page — shows current status and deal fields](.gitbook/assets/sec-deal-status-view.png)
 *Deal details page — current status, deal name, and key fields*
 
 ---

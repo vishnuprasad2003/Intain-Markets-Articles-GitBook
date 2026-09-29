@@ -26,7 +26,7 @@ Securitization is one of four product lines alongside **Credit Facilities**, **A
 11. **FT Delivery** — Paying Agent delivers FT tokens to investors (MFA required)
 12. **Ongoing Reporting** — Servicer uploads monthly loan tapes; Investors view monthly portfolio and loan performance reports
 
-![Securitization module — deals list for Issuer](images/88-securitization-overview/securitization-section.png)
+![Securitization module — deals list for Issuer](.gitbook/assets/securitization-section.png)
 *Securitization deals list — Issuer view showing deal IDs, statuses, and tranche counts*
 
 ---

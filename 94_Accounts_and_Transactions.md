@@ -44,7 +44,7 @@ When creating or viewing an account, the following fields are recorded:
 | **Period Month** | Month of the reporting period |
 | **Period Year** | Year of the reporting period |
 
-![Accounts table](images/94-accounts-and-transactions/accounts-table.png)
+![Accounts table](.gitbook/assets/sec-accounts-table.png)
 *Accounts list — showing account types, balances, and period details*
 
 ---

@@ -43,7 +43,7 @@ When an investor opens an Open deal in Commit phase, they see a **Tranche List**
 | **Invested Amount** | Total already invested (0 during Commit phase) |
 | **# Investors** | Number of investors who have committed to this tranche |
 
-![Tranches table showing commitment data](images/91-investor-commitment-phase/tranches-table.png)
+![Tranches table showing commitment data](.gitbook/assets/sec-tranches-table.png)
 *Tranche list — shows available commitments, committed amounts, and investor count per tranche*
 
 ---
