@@ -59,9 +59,6 @@ There is no per-tranche invest action — one click covers the investor's full c
 5. The on-chain transaction is verified
 6. USDC and FT transfer both happen **automatically** — no Paying Agent approval required
 
-![Investor deal view — invest phase](.gitbook/assets/sec-investor-deals-view.png)
-*Investor view of a securitization deal in Invest phase*
-
 ---
 
 ## Settlement Record
