@@ -42,6 +42,17 @@
 * [Lender Approval & Rejection](30_Lender_Approval_and_Rejection.md)
 * [Funds Transfer Confirmation](31_Funds_Transfer_Confirmation.md)
 
+## Securitization
+
+* [Securitization Overview](88_Securitization_Overview.md)
+* [Deal Lifecycle & Statuses](89_Securitization_Deal_Lifecycle_and_Statuses.md)
+* [Deal Creation & Tranche Setup](90_Deal_Creation_and_Tranche_Setup.md)
+* [Investor Commitment Phase](91_Investor_Commitment_Phase.md)
+* [Investment & Settlement](92_Investment_and_Settlement.md)
+* [Token Approval & FT Delivery](93_Token_Approval_and_FT_Delivery.md)
+* [Accounts & Transactions](94_Accounts_and_Transactions.md)
+* [Securitization Roles & Permissions](95_Securitization_Statuses_and_Roles.md)
+
 ## Asset Sale
 
 * [Asset Sale Overview](32_Asset_Sale_Overview.md)
@@ -86,6 +97,7 @@
 * [ESMA Reporting](62_ESMA_Reporting.md)
 * [Asset Sale Investment](63_Asset_Sale_Investment_Investor.md)
 * [Repayment Receipt & NFT Burn](64_Repayment_Receipt_and_NFT_Burn_Investor.md)
+* [Securitization Investment](91_Investor_Commitment_Phase.md)
 
 ## Statuses & Glossary
 

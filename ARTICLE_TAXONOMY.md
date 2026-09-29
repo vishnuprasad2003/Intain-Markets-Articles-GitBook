@@ -1,7 +1,7 @@
 # Intain Markets Articles — Final Taxonomy (v3)
 
 Source of truth for article numbering, Level 1/2 placement, and Document Type (A–L).
-Total: **87 articles**.
+Total: **95 articles**.
 
 ---
 
@@ -143,6 +143,19 @@ Total: **87 articles**.
 | 82 | 82_Why_actions_are_blocked.md | Why actions are blocked | H | existing (was 61) |
 | 83 | 83_Why_cant_I_act.md | Why can’t I act? | H | existing (was 62) |
 | 84 | 84_Asset_Sale_FAQs.md | Asset Sale FAQs | H | NEW |
+
+## Core Product Lines — Securitization (NEW)
+
+| # | Filename | Title | Type | Source |
+|---|----------|-------|------|--------|
+| 88 | 88_Securitization_Overview.md | Securitization Overview | J | NEW |
+| 89 | 89_Securitization_Deal_Lifecycle_and_Statuses.md | Securitization Deal Lifecycle & Statuses | E | NEW |
+| 90 | 90_Deal_Creation_and_Tranche_Setup.md | Deal Creation & Tranche Setup | D | NEW |
+| 91 | 91_Investor_Commitment_Phase.md | Investor Commitment Phase | K | NEW |
+| 92 | 92_Investment_and_Settlement.md | Investment & Settlement | K | NEW |
+| 93 | 93_Token_Approval_and_FT_Delivery.md | Token Approval & FT Delivery | K | NEW |
+| 94 | 94_Accounts_and_Transactions.md | Accounts & Transactions | G | NEW |
+| 95 | 95_Securitization_Statuses_and_Roles.md | Securitization Roles & Permissions | B | NEW |
 
 ## Release Notes & Updates
 

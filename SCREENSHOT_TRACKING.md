@@ -134,6 +134,21 @@ All conceptual — no screenshots needed.
 
 ---
 
+## Securitization Module (88–95)
+
+| Article | Screenshot Status | Image Path |
+|---------|-------------------|------------|
+| 88 Securitization Overview | ✅ Captured | `images/88-securitization-overview/securitization-section.png` |
+| 89 Deal Lifecycle & Statuses | ✅ Captured | `images/89-securitization-deal-lifecycle/deal-status-view.png` |
+| 90 Deal Creation & Tranche Setup | ✅ Captured | `images/90-deal-creation-and-tranche-setup/deal-details-tranches.png` |
+| 91 Investor Commitment Phase | ✅ Asset image | `images/91-investor-commitment-phase/tranches-table.png` |
+| 92 Investment & Settlement | ✅ Asset image | `images/92-investment-and-settlement/investor-deals-view.png` |
+| 93 Token Approval & FT Delivery | ⚠️ No screenshot (no test data for approval/delivery step) | — |
+| 94 Accounts & Transactions | ✅ Asset image | `images/94-accounts-and-transactions/accounts-table.png` |
+| 95 Roles & Permissions | ❌ Not needed (reference/permissions article) | — |
+
+---
+
 ## Summary
 
 | Category | Has Screenshots | Needs Screenshots |
@@ -141,5 +156,6 @@ All conceptual — no screenshots needed.
 | Existing articles (migrated) | 91 images | ~8 updates needed |
 | New Asset Sale articles (32–40) | 0 | ~20 screenshots needed |
 | New Workflow articles (46–47, 56, 63–64) | 0 | ~12 screenshots needed |
+| New Securitization articles (88–95) | 6 | ~2 screenshots needed (93 token delivery, future) |
 | Other updates | — | ~5 screenshots needed |
-| **Total** | **91** | **~45 new screenshots needed** |
+| **Total** | **97** | **~47 new screenshots needed** |
