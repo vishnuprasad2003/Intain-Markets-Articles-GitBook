@@ -15,21 +15,24 @@ This article summarizes what each role can do in a Securitization deal, when act
 
 | Action | Requirement |
 |--------|-------------|
-| Create a deal from a pool | Pool must be in Deal status |
-| View deal details and tranches | Any deal they created |
+| Create a Securitization pool and onboard loans | Asset Registry access |
+| View deal details and tranches | Deal must be in Awaiting Approval or Open status |
+| Review deal and publish to investors | Deal must be in Awaiting Approval status (published by Underwriter) |
 | Approve FT contract per tranche | MFA + on-chain wallet signing required |
 | Close a deal | Deal must be Open |
+
+> The Issuer does **not** create the deal manually — the deal is automatically generated when the Underwriter accepts the pool mandate.
 
 ### Underwriter
 
 | Action | Requirement |
 |--------|-------------|
-| Create a deal from a pool | Pool must be in Deal status |
+| Accept pool mandate → deal auto-created | Pool must be shared by Issuer |
+| Set up deal in Tools tab (tranches, investor assignments) | Deal must be in Created status |
 | Add tranches to a deal | Deal must be in Created status |
 | Delete tranches | Deal must be in Created status |
-| Approve deal (Awaiting Approval → Open) | Deal must be in Awaiting Approval status |
-| Reject deal | Deal must be in Awaiting Approval status |
-| Open Commit phase | Deal must be Open |
+| Publish deal to Issuer (Created → Awaiting Approval) | Tranches must be configured |
+| Open Commit phase | Deal must be Open (published to investors by Issuer) |
 | Switch to Invest phase + select payment mode | Deal must be Open and in Commit phase |
 | View all deal details | Any deal assigned to them |
 
@@ -52,6 +55,15 @@ This article summarizes what each role can do in a Securitization deal, when act
 | Record transactions in ledger | Any Open deal account |
 | View all deal and investor details | Any deal assigned to them |
 
+### Servicer
+
+| Action | Requirement |
+|--------|-------------|
+| Upload monthly loan tapes | Deal must be active post-close |
+| View loan data in Asset Registry | Read access to deal's pool |
+
+> Servicer uploads monthly loan files to keep loan data current for investor reporting and ESMA compliance.
+
 ### Rating Agency
 
 | Action | Requirement |
@@ -59,7 +71,7 @@ This article summarizes what each role can do in a Securitization deal, when act
 | View deal details | Pool/deal must be shared with them |
 | View tranche information | Read-only access |
 
-> **Note:** Rating Agency cannot commit, invest, create deals, manage accounts, or perform any write action.
+> Rating Agency cannot commit, invest, create deals, manage accounts, or perform any write action.
 
 ---
 
@@ -69,14 +81,16 @@ This article summarizes what each role can do in a Securitization deal, when act
 |--------|---------|-------------------|------|--------|
 | Edit deal fields | ✓ | ✗ | ✗ | ✗ |
 | Add/delete tranches (Underwriter) | ✓ | ✗ | ✗ | ✗ |
-| Approve deal (Underwriter) | ✗ | ✓ | ✗ | ✗ |
+| Publish to Issuer (Underwriter) | ✓ | ✗ | ✗ | ✗ |
+| Issuer publishes to investors | ✗ | ✓ | ✗ | ✗ |
 | Open Commit phase (Underwriter) | ✗ | ✗ | ✓ | ✗ |
 | Switch to Invest phase (Underwriter) | ✗ | ✗ | ✓ | ✗ |
 | Investor commit | ✗ | ✗ | ✓ (Commit phase only) | ✗ |
-| Investor invest | ✗ | ✗ | ✓ (Invest phase only) | ✗ |
+| Investor invest (single button, all tranches) | ✗ | ✗ | ✓ (Invest phase only) | ✗ |
 | Issuer FT approval | ✗ | ✗ | ✓ | ✗ |
 | Paying Agent FT delivery | ✗ | ✗ | ✓ | ✗ |
-| Manage accounts/transactions | ✗ | ✗ | ✓ | ✓ (read-only) |
+| Manage accounts/transactions (Paying Agent) | ✗ | ✗ | ✓ | ✓ (read-only) |
+| Upload monthly loan tape (Servicer) | ✗ | ✗ | ✓ | ✓ |
 
 ---
 
@@ -90,6 +104,7 @@ This article summarizes what each role can do in a Securitization deal, when act
 | Second commitment by same investor to same tranche | One commitment per investor per tranche — enforced by system |
 | FT delivery | FT contract not yet approved by Issuer |
 | FT approval | No investors have completed investment in the tranche |
+| Offchain FT delivery | Paying Agent has not approved the investor's bank wire payment |
 
 ---
 

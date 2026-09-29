@@ -102,6 +102,34 @@ The transaction ledger is the primary tool for:
 
 ---
 
+## Servicer Monthly Loan Tape Uploads
+
+After the deal closes, the **Servicer** is responsible for keeping the loan data current. Each month:
+
+1. Servicer navigates to the **Securitization** deal → **Imports** or **Asset Registry** section
+2. Servicer uploads the monthly **loan tape** — an updated file containing current loan balances, payments received, and status for every loan in the pool
+3. The platform ingests and validates the loan tape
+4. Updated loan data becomes available for reporting
+
+Monthly uploads keep the deal's loan data accurate and are required for investor reporting and ESMA compliance.
+
+---
+
+## Investor Monthly Reporting
+
+Once the deal is active and monthly loan tapes are uploaded, investors can view:
+
+- **Portfolio summary** — total invested, FT balance, current tranche performance
+- **Monthly loan performance** — loan-level data for the pool underlying their tranches
+- **Payment history** — principal and interest payments received per period
+- **ESMA compliance reports** — for European regulatory requirements
+
+Investors access reporting through the **Securitization** deal details → **Reports** section.
+
+→ See [ESMA Reporting](62_ESMA_Reporting.md) for regulatory reporting details.
+
+---
+
 ## Related Articles
 
 → See [Token Approval & FT Delivery](93_Token_Approval_and_FT_Delivery.md) for Paying Agent FT delivery responsibilities.  

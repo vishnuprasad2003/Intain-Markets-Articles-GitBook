@@ -47,8 +47,11 @@ This step must be completed **once per tranche**. If a deal has 3 tranches, the 
 After the Issuer has approved the FT contract, the Paying Agent delivers tokens to investors.
 
 **Who:** Paying Agent  
-**When:** After Issuer approves the FT contract for a tranche  
+**When:** After Issuer approves the FT contract — and, for offchain deals, after the Paying Agent has already approved the investor's payment  
 **Required:** MFA (one-time password)
+
+> **Offchain deals:** FTs are delivered **after** the Paying Agent approves the investor's bank wire payment. Approval of the payment and delivery of FTs are two separate steps.  
+> **Onchain deals:** FTs transfer automatically with the USDC payment. The Paying Agent delivery step is not required.
 
 ### Process
 
@@ -56,11 +59,11 @@ After the Issuer has approved the FT contract, the Paying Agent delivers tokens 
 2. Click **Deliver FTs**
 3. Choose delivery scope:
    - **Deliver to all investors** — delivers FTs to every investor who has invested in this tranche
-   - **Deliver to one investor** — select a specific investor by organization ID
+   - **Deliver to one investor** — select a specific investor by organization
 4. Enter your **MFA code** when prompted
 5. Confirm delivery
 
-The platform transfers FT tokens proportional to each investor's invested amount. After delivery, investors can see their FT token balance.
+The platform transfers FT tokens proportional to each investor's invested amount. Investors can see their FT balance after delivery.
 
 ---
 

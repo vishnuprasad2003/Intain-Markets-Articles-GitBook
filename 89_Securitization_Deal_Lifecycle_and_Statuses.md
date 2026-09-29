@@ -5,7 +5,7 @@ description: Deal statuses, lifecycle progression, tranche approval statuses, an
 
 # Securitization Deal Lifecycle & Statuses
 
-A securitization deal moves through four statuses from creation to close. Separately, each tranche tracks its own approval status, and the deal toggles between a Commit phase and an Invest phase to control investor activity.
+A securitization deal moves through four statuses. The deal is automatically created when the Underwriter accepts the pool mandate — it is never created manually by a button click.
 
 ---
 
@@ -15,68 +15,87 @@ A securitization deal moves through four statuses from creation to close. Separa
 Created → Awaiting Approval → Open → Closed
 ```
 
-| Status | Meaning | Who Can Act |
-|--------|---------|-------------|
-| **Created** | Deal has been set up with basic fields. Tranches may or may not be added yet. | Issuer or Underwriter can edit. Underwriter can add/delete tranches. |
-| **Awaiting Approval** | Deal has been submitted for review. No further edits allowed until approved or rejected. | Underwriter reviews and either approves or rejects. |
-| **Open** | Deal is approved and live. Underwriter manages Commit/Invest phases; Investors can participate. | All roles can view. Investors commit and invest. Paying Agent delivers FTs. |
-| **Closed** | Deal has been marked closed. No new investment activity. | Read-only for all roles. |
+| Status | What It Means | Who Acts |
+|--------|--------------|----------|
+| **Created** | Pool mandate accepted; Underwriter is setting up the deal — modeling tranches, assigning investors — via the Tools tab. | Underwriter sets up tranches and publishes to Issuer when ready. |
+| **Awaiting Approval** | Underwriter has published the deal to the Issuer for review. No further edits by the Underwriter until the Issuer acts. | Issuer reviews the tranche structure, terms, and investor assignments. Issuer publishes to investors when satisfied. |
+| **Open** | Issuer has published the deal to investors. The deal is live. Underwriter manages Commit and Invest phases. | Investors view, commit, and invest. Paying Agent delivers FTs. |
+| **Closed** | Deal is closed. No new investment activity. | Read-only for all roles. |
 
-![Deal details showing status and deal information](images/89-securitization-deal-lifecycle/deal-status-view.png)
-*Deal details page — shows current status (Open), deal name, and key fields*
+![Deal details page — shows current status and deal fields](images/89-securitization-deal-lifecycle/deal-status-view.png)
+*Deal details page — current status, deal name, and key fields*
 
 ---
 
 ## Tranche Approval Statuses
 
-Each tranche within a deal tracks its own approval state:
+Each tranche tracks its own approval status independently from the deal:
 
 | Status | Meaning |
 |--------|---------|
-| **Pending** | Tranche has been created but not yet approved by the Underwriter. |
-| **Approved** | Tranche is live and available for investor commitment. |
-| **Rejected** | Tranche was rejected by the Underwriter. It cannot receive commitments. |
+| **Pending** | Tranche created; Issuer has not yet approved the FT contract. |
+| **Approved** | Issuer has approved the FT contract. Investors can commit; Paying Agent can deliver FTs. |
+| **Rejected** | FT contract approval was rejected. Tranche cannot receive commitments. |
 
 Tranches must be **Approved** before investors can commit to them.
 
 ---
 
-## Commit vs Invest Phase
+## Commit Phase vs Invest Phase
 
 The Underwriter controls two sub-phases within an **Open** deal:
 
 ### Commit Phase
 
-- Underwriter opens the Commit phase to start accepting investor interest.
-- Investors can submit commitment amounts to any approved tranche.
-- No funds are transferred in this phase — commitments are non-binding declarations of intent.
-- The Available Commitments counter on each tranche decreases as investors commit.
+- Underwriter opens the Commit phase after the deal is published to investors.
+- Investors commit amounts to tranches — **no funds transfer** in this phase.
+- Available Commitments on each tranche decreases as investors commit.
+- Investors can only commit once per tranche.
 
 ### Invest Phase
 
-- Underwriter switches the deal from Commit to Invest when ready to collect funds.
-- **Payment mode is selected at this point** (offchain or onchain — cannot be changed after).
-- Investors transfer actual funds (bank wire or USDC) and click **Invest** to confirm.
-- The Invested Amount on each tranche increases as investors complete their investment.
-- After investment is confirmed, the Paying Agent delivers FT tokens.
+- Underwriter switches from Commit to Invest when ready to collect funds.
+- **Payment mode is set at this point** (offchain or onchain — cannot be changed after).
+- Investors click a **single Invest button** to invest in all their committed tranches at once.
+- **Offchain:** Investor pays via bank wire → Paying Agent sees the pending payment → approves it → FTs are delivered.
+- **Onchain:** Investor transfers USDC via MetaMask → FT transfer happens automatically on-chain.
 
-> **Note:** The deal cannot go back from Invest phase to Commit phase. The payment mode selected is fixed for the duration of the deal.
+> The deal cannot revert from Invest phase to Commit phase. The payment mode is fixed once set.
 
 ---
 
 ## Payment Mode
 
-| Mode | Description | When Funds Move |
-|------|-------------|----------------|
-| **Offchain** | Investor initiates a bank wire; uploads confirmation document and reference number | After Paying Agent confirms receipt |
-| **Onchain** | Investor connects MetaMask wallet and transfers USDC to escrow contract | Immediately, on-chain via smart contract |
+| Mode | How Payment Works | When FTs Are Delivered |
+|------|------------------|----------------------|
+| **Offchain** | Investor makes a bank wire transfer | After Paying Agent approves the payment |
+| **Onchain** | Investor transfers USDC via MetaMask to the escrow contract | Automatically after on-chain confirmation |
 
-The payment mode applies to all investors in the deal — it cannot be set per-investor.
+The payment mode applies to all investors in the deal — it cannot be set per investor.
+
+---
+
+## Deal Lifecycle Flow
+
+```
+Pool (mandate accepted)
+    ↓ auto-converted
+Created → Underwriter sets up deal in Tools tab
+    ↓ Underwriter publishes
+Awaiting Approval → Issuer reviews deal
+    ↓ Issuer publishes to investors
+Open
+  → Underwriter opens Commit phase → Investors commit
+  → Underwriter switches to Invest phase → Investors invest (single button)
+  → Paying Agent confirms payments → FTs delivered
+    ↓
+Closed
+```
 
 ---
 
 ## Related Articles
 
-→ See [Deal Creation & Tranche Setup](90_Deal_Creation_and_Tranche_Setup.md) for how deals are created and tranches configured.  
+→ See [Deal Creation & Tranche Setup](90_Deal_Creation_and_Tranche_Setup.md) for how the Underwriter builds the deal in the Tools tab.  
 → See [Investor Commitment Phase](91_Investor_Commitment_Phase.md) for investor actions in the Commit phase.  
-→ See [Investment & Settlement](92_Investment_and_Settlement.md) for the Invest phase workflow.
+→ See [Investment & Settlement](92_Investment_and_Settlement.md) for the Invest phase and payment flows.

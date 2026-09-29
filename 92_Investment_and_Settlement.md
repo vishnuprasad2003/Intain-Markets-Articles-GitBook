@@ -1,103 +1,102 @@
 ---
 title: Investment & Settlement
-description: How investors transfer funds and complete their investment in the Invest phase of a Securitization deal, covering both offchain (bank wire) and onchain (stablecoin) payment modes.
+description: How investors use the single Invest button to invest across all committed tranches in the Invest phase, covering both offchain and onchain payment modes.
 ---
 
 # Investment & Settlement
 
-The Invest phase is when investors transfer actual funds and confirm their investment in a securitization tranche. The Underwriter switches the deal from Commit to Invest phase and selects the payment mode — this choice applies to all investors in the deal.
+The Invest phase is when investors transfer actual funds and confirm their investment. A single **Invest** button covers all tranches the investor committed to — there is no need to invest tranche by tranche.
 
 ---
 
 ## Switching to Invest Phase
 
 **Who:** Underwriter  
-**When:** After collecting sufficient investor commitments in the Commit phase
+**When:** After collecting sufficient investor commitments
 
 1. Navigate to the deal details page
 2. Click **Switch to Invest Phase**
 3. Select the **Payment Mode**:
-   - **Offchain** — investors wire funds via traditional bank transfer
-   - **Onchain** — investors transfer USDC stablecoin via MetaMask wallet
+   - **Offchain** — investors transfer via bank wire; Paying Agent approves the payment
+   - **Onchain** — investors transfer USDC via MetaMask; settlement is automatic on-chain
 4. Confirm the switch
 
-> ⚠️ **Important:** The payment mode cannot be changed after switching to Invest phase. All investors in the deal use the same payment method.
+> ⚠️ The payment mode cannot be changed after switching to Invest phase. All investors in the deal use the same payment method.
 
 ---
 
-## Investor Actions in Invest Phase
+## Investor Actions — Single Invest Button
 
-### Offchain (Bank Wire) Flow
+When the deal is in Invest phase, the investor sees an **Invest** button that applies to all their committed tranches simultaneously:
 
-Investors who committed during the Commit phase now transfer funds via bank wire:
+1. Navigate to **Securitization** → click the deal
+2. Click **Invest** (one button for all committed tranches)
+3. Complete the payment step based on payment mode (see below)
+4. Investment is recorded for each committed tranche
 
-1. Obtain the wire transfer details from the deal page
-2. Initiate the bank wire from your financial institution
-3. Return to Intain Markets → navigate to the deal → click **Invest**
-4. In the Invest modal:
-   - Enter the **Wire Reference Number**
-   - Upload your **Payment Confirmation Document**
-5. Click **Confirm & Invest**
+There is no per-tranche invest action — one click covers the investor's full commitment across the deal.
 
-The Paying Agent reviews the wire reference and confirmation document before the investment is marked complete. After confirmation, the Paying Agent delivers FT tokens.
+---
 
-### Onchain (Stablecoin) Flow
+## Offchain Payment Flow (Bank Wire)
 
-Investors use a MetaMask wallet to transfer USDC directly to the deal's escrow contract:
+1. Investor clicks **Invest**
+2. Investor makes a bank wire transfer for the total committed amount (outside of Intain Markets)
+3. The pending transaction appears in the **Paying Agent's dashboard**
+4. Paying Agent reviews the wire details → clicks **Approve**
+5. After Paying Agent approval, the investment is marked complete and FTs are delivered
 
-1. Open the deal in Invest phase → click **Invest**
-2. Connect your MetaMask wallet when prompted
-3. Review the USDC amount to transfer (equals your committed amount)
-4. Confirm the USDC transaction in MetaMask
-5. The on-chain transaction is recorded automatically
-6. Click **Invest** to confirm your investment on Intain Markets
+> The Paying Agent must approve each investor's offchain payment before FTs are released. FTs are not delivered automatically for offchain deals.
 
-The blockchain transaction is verified before marking the investment complete.
+---
 
-![Investor deal view — showing invest options](images/92-investment-and-settlement/investor-deals-view.png)
+## Onchain Payment Flow (USDC via MetaMask)
+
+1. Investor clicks **Invest**
+2. MetaMask wallet connects when prompted
+3. Investor reviews the USDC amount (equal to total committed amount)
+4. Investor confirms the USDC transaction in MetaMask
+5. The on-chain transaction is verified
+6. USDC and FT transfer both happen **automatically** — no Paying Agent approval required
+
+![Investor deal view — invest phase](images/92-investment-and-settlement/investor-deals-view.png)
 *Investor view of a securitization deal in Invest phase*
 
 ---
 
 ## Settlement Record
 
-A settlement record is created for each investor-tranche combination when the investor clicks **Invest**. This record tracks:
+A settlement record is created when the investor clicks **Invest**. It tracks:
 
-- The tranche invested in
-- The amount invested
-- The payment mode used
-- The date of confirmation
-- The status (Pending → Completed)
-
-After investment is confirmed, the **Invested Amount** on the tranche is updated. The tranche's Invested Amount reflects the total from all investors who have completed their investment.
-
----
-
-## After Investment: FT Delivery
-
-Once investment is confirmed, FT tokens are not automatically delivered — they require the following:
-
-1. **Issuer approves the FT contract** for each tranche (MFA required + wallet signing)
-2. **Paying Agent delivers FTs** to each investor (MFA required)
-
-Each investor receives FT tokens proportional to their invested amount.
-
-→ See [Token Approval & FT Delivery](93_Token_Approval_and_FT_Delivery.md) for the full FT delivery workflow.
+- The deal and tranches invested in
+- Total amount invested
+- Payment mode used
+- Date of confirmation
+- Status (Pending → Completed after Paying Agent approval for offchain, or after on-chain confirmation)
 
 ---
 
 ## Rules & Validations
 
-- Investors can only invest up to their committed amount — no investing more than what was committed
-- Wire reference and confirmation document are required for offchain investments
-- MetaMask wallet must hold sufficient USDC balance for onchain investments
-- The deal must be in Invest phase — investing is blocked in Commit phase or any other status
+- Investors can only invest up to their committed amount
 - Investors who did not commit in the Commit phase cannot invest
+- For offchain deals: Paying Agent approval is required before investment is marked complete
+- For onchain deals: the MetaMask wallet must hold sufficient USDC balance
+- The deal must be in Invest phase — investing is blocked in any other status
+
+---
+
+## After Investment: FT Delivery
+
+- **Onchain:** FTs are transferred automatically with the USDC payment
+- **Offchain:** After Paying Agent approves the payment, the Paying Agent delivers FTs separately (MFA required)
+
+→ See [Token Approval & FT Delivery](93_Token_Approval_and_FT_Delivery.md) for the Issuer FT approval and Paying Agent delivery steps.
 
 ---
 
 ## Related Articles
 
 → See [Investor Commitment Phase](91_Investor_Commitment_Phase.md) for the prior Commit phase.  
-→ See [Token Approval & FT Delivery](93_Token_Approval_and_FT_Delivery.md) for what happens after investment.  
+→ See [Token Approval & FT Delivery](93_Token_Approval_and_FT_Delivery.md) for FT delivery after investment.  
 → See [Deal Lifecycle & Statuses](89_Securitization_Deal_Lifecycle_and_Statuses.md) for payment mode details.

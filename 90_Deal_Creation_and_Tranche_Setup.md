@@ -1,101 +1,106 @@
 ---
 title: Deal Creation & Tranche Setup
-description: Step-by-step guide to creating a Securitization deal from a pool and configuring tranches, including FT token deployment, on Intain Markets.
+description: How a Securitization pool becomes a deal after mandate acceptance, and how the Underwriter sets up tranches and publishes to the Issuer on Intain Markets.
 ---
 
 # Deal Creation & Tranche Setup
 
-A securitization deal is created from a pool that has reached **Deal** status (mandate accepted by the Underwriter). Either the **Issuer** or the **Underwriter** can create the deal.
+A securitization deal is **not created manually** — it is automatically generated when the Underwriter accepts the pool mandate. The Underwriter then uses the **Tools tab** inside the deal to model tranches, set terms, and assign investors before publishing to the Issuer.
+
+→ See [Pool Sharing & Mandates](08_Pool_Sharing_and_Mandates.md) for how pools reach mandate acceptance.
 
 ---
 
-## Who Can Create a Deal
+## Step 1: Pool to Deal Conversion
 
-- **Issuer** — can create a deal from any pool they own that is in Deal status
-- **Underwriter** — can create a deal from any pool assigned to them
+1. **Issuer** creates a Securitization pool and onboards loans via the Asset Registry
+2. **Issuer** shares the pool with an Underwriter (mandate request)
+3. **Underwriter** previews the pool and accepts the mandate
+4. The platform **automatically converts the pool into a Deal** in **Created** status
+5. The deal appears in the Underwriter's **Securitization tab**
 
-The pool must be in **Deal** status (mandate accepted). Pools in Preview, Mandate Pending, or Ready for Deal status cannot yet become deals.
-
-→ See [Pool Sharing & Mandates](08_Pool_Sharing_and_Mandates.md) for how pools reach Deal status.
+There is no "Create Deal" button — the conversion happens on mandate acceptance.
 
 ---
 
-## Step 1: Create the Deal
+## Step 2: Underwriter Sets Up the Deal (Tools Tab)
 
-Navigate to the Securitization section → click **Create Deal** → fill in the required fields:
+The Underwriter opens the deal → clicks the **Tools tab** to access deal modeling:
+
+### Tranche Setup
+
+Click **Add Tranche** to define each investment class:
 
 | Field | Description |
 |-------|-------------|
-| **Deal Name** | A descriptive name for the deal |
-| **Currency** | Deal currency (e.g., USD) |
-| **Original Principal Balance** | Total principal balance of all loans in the pool |
-| **No. of Loans** | Number of loans included in the deal |
-| **Closing Date** | Target date for deal closing and FT delivery |
-| **Maturity Date** | Final expected payment date for the deal |
-| **First Payment Date** | Date of the first scheduled payment to investors |
-| **Payment Frequency** | How often payments are made (e.g., Monthly, Quarterly) |
-
-After submission, the deal is in **Created** status.
-
----
-
-## Step 2: Add Tranches
-
-Once the deal is created, the **Underwriter** adds tranches. Each tranche represents a class of investment with its own risk/return profile.
-
-Click **Add Tranche** on the deal details page and fill in:
-
-| Field | Description |
-|-------|-------------|
-| **Tranche Name** | Name of this class (e.g., "Class A Senior") |
-| **Class Type** | Type of tranche (e.g., Senior, Mezzanine, Subordinate) |
+| **Tranche Name** | Name of this class (e.g., "Class A Senior", "Class B Mezzanine") |
+| **Class Type** | Tranche type (Senior, Mezzanine, Subordinate, etc.) |
 | **Principal Balance** | Dollar amount allocated to this tranche |
 | **Interest Rate** | Annual interest rate for this tranche |
-| **Day Count Method** | How interest is calculated (e.g., 30/360, Actual/365) |
+| **Day Count Method** | Interest calculation convention (e.g., 30/360, Actual/365) |
 | **Closing Date** | Closing date specific to this tranche |
 
-![Deal details page showing tranches table](images/90-deal-creation-and-tranche-setup/deal-details-tranches.png)
-*Deal details — Tranches table showing Tranche ID, Name, Principal Balance, Class Type, and Interest Rate*
+A deal can have multiple tranches. Each tranche is a separate investment class with its own FT token.
 
----
+![Deal details page — tranches table](images/90-deal-creation-and-tranche-setup/deal-details-tranches.png)
+*Tranches table — showing Tranche Name, Principal Balance, Class Type, and Interest Rate*
 
-## Step 3: FT Token Deployment
+### FT Token Deployment
 
-When a tranche is created, the platform automatically deploys an ERC-20 Fungible Token (FT) contract on the Avalanche blockchain:
+When a tranche is added, the platform automatically deploys an ERC-20 Fungible Token contract on Avalanche:
 
 - **Token name:** `{Issuer Organization} Securitization Token`
-- **Token symbol:** 2 letters (Issuer) + 2 chars (Deal) + 2 letters (Tranche), e.g., `PI98SE`
-- Each tranche gets its own separate FT contract
-- The FT contract is deployed in **Pending** tranche status — the Issuer must approve it before delivery
+- **Token symbol:** 2 letters (Issuer) + 2 chars (Deal ID) + 2 letters (Tranche), e.g., `PI98SE`
+- One FT contract per tranche
 
-> ⚠️ **Important:** The Issuer must approve each FT contract (MFA required + on-chain wallet signing) before the Paying Agent can deliver tokens to investors. See [Token Approval & FT Delivery](93_Token_Approval_and_FT_Delivery.md).
+> The FT contract starts in **Pending** status. The Issuer must approve it (MFA + on-chain wallet signing) before tokens can be delivered. See [Token Approval & FT Delivery](93_Token_Approval_and_FT_Delivery.md).
+
+### Investor Assignment
+
+Within the Tools tab, the Underwriter assigns specific investors to the deal — determining which investor organizations can view and commit to tranches.
 
 ---
 
-## Step 4: Deal Approval
+## Step 3: Underwriter Publishes to Issuer
 
-Once tranches are set up:
+Once tranche setup and investor assignments are complete, the Underwriter **publishes the deal to the Issuer**:
 
-1. The deal moves to **Awaiting Approval** status
-2. The **Underwriter** reviews the deal and all tranche details
-3. Underwriter clicks **Approve** → deal moves to **Open**
-4. Once Open, the Underwriter can open the Commit phase for investors
+- Deal moves to **Awaiting Approval** status
+- The Issuer receives the deal for review
+- The Underwriter cannot make further edits until the Issuer acts
 
-> The Underwriter can also reject the deal if corrections are needed, returning it to Created status for revision.
+---
+
+## Step 4: Issuer Reviews and Publishes to Investors
+
+The Issuer opens the deal in the Securitization tab and reviews:
+
+- Tranche structure, names, and principal balances
+- Interest rates and day count methods
+- Investor assignments
+
+If satisfied, the Issuer **publishes the deal to investors**:
+
+- Deal moves to **Open** status
+- Assigned investors can now view the deal and its tranches
+- The Underwriter can now open the Commit phase
+
+![Deal details page — Issuer view](images/90-deal-creation-and-tranche-setup/deal-details-issuer.png)
+*Deal details — Issuer review view showing tranche structure and deal terms*
 
 ---
 
 ## Rules & Validations
 
 - Each tranche must have a positive Principal Balance
-- The sum of tranche Principal Balances should align with the deal's Original Principal Balance
-- Tranches can only be deleted by the Underwriter while the deal is in Created status
-- An FT contract is deployed per tranche at creation time — changing tranche details after deployment may require re-approval
+- The Underwriter can delete tranches only while the deal is in **Created** status
+- An FT contract is deployed per tranche at creation — changing tranche details after deployment requires re-approval
+- Investor assignments control which organizations can see and interact with the deal
 
 ---
 
 ## Related Articles
 
 → See [Deal Lifecycle & Statuses](89_Securitization_Deal_Lifecycle_and_Statuses.md) for deal status definitions.  
-→ See [Token Approval & FT Delivery](93_Token_Approval_and_FT_Delivery.md) for the Issuer FT approval step.  
-→ See [Investor Commitment Phase](91_Investor_Commitment_Phase.md) for what happens after the deal goes Open.
+→ See [Investor Commitment Phase](91_Investor_Commitment_Phase.md) for what investors do after the deal goes Open.  
+→ See [Token Approval & FT Delivery](93_Token_Approval_and_FT_Delivery.md) for the Issuer FT approval step.

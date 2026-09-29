@@ -5,13 +5,15 @@ description: How investors commit amounts to securitization tranches during the 
 
 # Investor Commitment Phase
 
-The Commit phase is the first stage of investor participation in a securitization deal. Investors indicate how much they want to invest in each tranche — without transferring funds yet. The Underwriter controls when this phase opens.
+The Commit phase is the first stage of investor participation in a securitization deal. Investors indicate how much they want to invest in each tranche — without transferring funds yet. The deal must be **Open** (published to investors by the Issuer) before this phase can begin.
 
 ---
 
 ## Workflow Overview
 
 ```
+Issuer publishes deal to investors → deal goes Open
+    ↓
 Underwriter opens Commit phase
     ↓
 Investors view deal and available tranches
@@ -22,7 +24,7 @@ Available Commitments on the tranche decreases
     ↓
 Underwriter reviews total commitments
     ↓
-Underwriter switches deal to Invest phase
+Underwriter switches deal to Invest phase (selects payment mode)
 ```
 
 ---
